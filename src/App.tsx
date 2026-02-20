@@ -1,6 +1,8 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Layout } from './components';
+import { ErrorBoundary } from './components/ErrorBoundary';
+import { LoadingSkeleton } from './components/LoadingSkeleton';
 import { ProfileProvider } from './context';
 import { AuthProvider } from './context/AuthContext';
 
@@ -83,20 +85,13 @@ const ProfileGKPlacementDetail = lazy(() => import('./pages/profile/ProfileGKPla
 const ProfileHDPlacementDetail = lazy(() => import('./pages/profile/ProfileHDPlacementDetail'));
 const ProfileHDChannelDetail = lazy(() => import('./pages/profile/ProfileHDChannelDetail'));
 
-function PageLoader() {
-  return (
-    <div className="flex items-center justify-center min-h-[400px]">
-      <div className="text-neutral-400 animate-pulse">Loading...</div>
-    </div>
-  );
-}
-
 function App() {
   return (
+    <ErrorBoundary>
     <AuthProvider>
     <ProfileProvider>
       <BrowserRouter>
-        <Suspense fallback={<PageLoader />}>
+        <Suspense fallback={<LoadingSkeleton variant="page" />}>
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
@@ -183,6 +178,7 @@ function App() {
         </BrowserRouter>
     </ProfileProvider>
     </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

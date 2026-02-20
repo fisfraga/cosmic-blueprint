@@ -30,11 +30,11 @@ const traditions: TraditionConfig[] = [
     tagline: 'The celestial language of WHO you are',
     path: '/planets',
     icon: '☉',
-    colorFrom: 'from-blue-500/15',
-    colorTo: 'to-blue-600/5',
-    borderColor: 'border-blue-500/25',
-    hoverBorder: 'hover:border-blue-400/50',
-    textColor: 'text-blue-300',
+    colorFrom: 'from-air-500/15',
+    colorTo: 'to-air-600/5',
+    borderColor: 'border-air-500/25',
+    hoverBorder: 'hover:border-air-400/50',
+    textColor: 'text-air-300',
     getCount: () => 10 + 12 + 12, // planets + signs + houses
   },
   {
@@ -267,32 +267,32 @@ export function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Astrology */}
-            <div className="bg-gradient-to-br from-blue-500/10 to-blue-600/5 rounded-xl p-5 border border-blue-500/20">
+            <div className="bg-gradient-to-br from-air-500/10 to-air-600/5 rounded-xl p-5 border border-air-500/20">
               <div className="flex items-center gap-2 mb-4">
-                <span className="text-lg text-blue-400">☉</span>
-                <h3 className="font-serif text-base text-blue-300">Astrology</h3>
+                <span className="text-lg text-air-400">☉</span>
+                <h3 className="font-serif text-base text-air-300">Astrology</h3>
               </div>
               <div className="space-y-2">
                 {sunSign && (
-                  <Link to={`/signs/${sunSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-blue-500/10 transition-colors group">
-                    <span className="w-7 h-7 flex items-center justify-center text-base bg-blue-500/20 text-blue-400 rounded-full">{planets.get('sun')?.symbol}</span>
+                  <Link to={`/signs/${sunSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                    <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('sun')?.symbol}</span>
                     <div><p className="text-neutral-500 text-xs">Sun</p><p className="text-white text-sm">{sunSign.name}</p></div>
                   </Link>
                 )}
                 {moonSign && (
-                  <Link to={`/signs/${moonSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-blue-500/10 transition-colors group">
-                    <span className="w-7 h-7 flex items-center justify-center text-base bg-blue-500/20 text-blue-400 rounded-full">{planets.get('moon')?.symbol}</span>
+                  <Link to={`/signs/${moonSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                    <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('moon')?.symbol}</span>
                     <div><p className="text-neutral-500 text-xs">Moon</p><p className="text-white text-sm">{moonSign.name}</p></div>
                   </Link>
                 )}
                 {risingSign && (
-                  <Link to={`/signs/${risingSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-blue-500/10 transition-colors group">
-                    <span className="w-7 h-7 flex items-center justify-center text-xs bg-blue-500/20 text-blue-400 rounded-full font-medium">AC</span>
+                  <Link to={`/signs/${risingSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                    <span className="w-7 h-7 flex items-center justify-center text-xs bg-air-500/20 text-air-400 rounded-full font-medium">AC</span>
                     <div><p className="text-neutral-500 text-xs">Rising</p><p className="text-white text-sm">{risingSign.name}</p></div>
                   </Link>
                 )}
               </div>
-              <Link to="/profile/astrology" className="mt-3 block text-xs text-blue-400 hover:text-blue-300 transition-colors">
+              <Link to="/profile/astrology" className="mt-3 block text-xs text-air-400 hover:text-air-300 transition-colors">
                 Full chart →
               </Link>
             </div>

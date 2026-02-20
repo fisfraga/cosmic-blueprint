@@ -69,14 +69,6 @@ const wisdomTraditionItems = [
   { path: '/hermetic', label: 'Hermetic Laws', icon: '⚚' },
 ];
 
-// Learn Section (Coming Soon)
-const learnItems = [
-  { path: '#', label: 'Getting Started', icon: '📖', soon: true },
-  { path: '#', label: 'Astrology Basics', icon: '☉', soon: true },
-  { path: '#', label: 'HD Fundamentals', icon: '⬡', soon: true },
-  { path: '#', label: 'Gene Keys Journey', icon: '✧', soon: true },
-];
-
 // Mobile nav - quick access
 const mobileNavItems = [
   { path: '/', label: 'Home', icon: '✧' },
@@ -111,7 +103,7 @@ function NavDropdown({
             : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
         }`}
       >
-        <span className="mr-1">{icon}</span>
+        <span className="mr-1" aria-hidden="true">{icon}</span>
         {label}
         <svg
           className={`w-3 h-3 ml-1 transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -138,7 +130,7 @@ function NavDropdown({
                   key={item.path + item.label}
                   className="flex items-center gap-3 px-4 py-2 text-sm text-neutral-600 cursor-not-allowed"
                 >
-                  <span>{item.icon}</span>
+                  <span aria-hidden="true">{item.icon}</span>
                   {item.label}
                   <span className="ml-auto text-xs bg-neutral-800 px-1.5 py-0.5 rounded">Soon</span>
                 </div>
@@ -155,7 +147,7 @@ function NavDropdown({
                     }`
                   }
                 >
-                  <span className="text-lg">{item.icon}</span>
+                  <span className="text-lg" aria-hidden="true">{item.icon}</span>
                   <div className="flex flex-col">
                     <span>{item.label}</span>
                     {item.description && (
@@ -196,7 +188,7 @@ function LibraryDropdown({
             : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
         }`}
       >
-        <span className="mr-1">📚</span>
+        <span className="mr-1" aria-hidden="true">📚</span>
         Library
         <svg
           className={`w-3 h-3 ml-1 transition-transform ${isOpen ? 'rotate-180' : ''}`}
@@ -235,7 +227,7 @@ function LibraryDropdown({
                         }`
                       }
                     >
-                      <span className="w-4 text-center">{item.icon}</span>
+                      <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
                       {item.label}
                     </NavLink>
                   ))}
@@ -259,7 +251,7 @@ function LibraryDropdown({
                         }`
                       }
                     >
-                      <span className="w-4 text-center">{item.icon}</span>
+                      <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
                       {item.label}
                     </NavLink>
                   ))}
@@ -283,7 +275,7 @@ function LibraryDropdown({
                         }`
                       }
                     >
-                      <span className="w-4 text-center">{item.icon}</span>
+                      <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
                       {item.label}
                     </NavLink>
                   ))}
@@ -307,7 +299,7 @@ function LibraryDropdown({
                         }`
                       }
                     >
-                      <span className="w-4 text-center">{item.icon}</span>
+                      <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
                       {item.label}
                     </NavLink>
                   ))}
@@ -342,6 +334,14 @@ export function Layout() {
 
   return (
     <div className="min-h-screen bg-neutral-950 text-neutral-100">
+      {/* Skip navigation link — visible only on keyboard focus */}
+      <a
+        href="#main-content"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-neutral-900 focus:text-white focus:rounded-lg focus:border focus:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+      >
+        Skip to main content
+      </a>
+
       {/* Backdrop for closing dropdowns */}
       {openDropdown && (
         <div
@@ -384,7 +384,7 @@ export function Layout() {
                   }`
                 }
               >
-                <span className="mr-2">🕯</span>
+                <span className="mr-2" aria-hidden="true">🕯</span>
                 Contemplate
               </NavLink>
 
@@ -406,14 +406,6 @@ export function Layout() {
                 onToggle={() => handleDropdownToggle('library')}
               />
 
-              {/* Learn Dropdown */}
-              <NavDropdown
-                label="Learn"
-                icon="📖"
-                items={learnItems}
-                isOpen={openDropdown === 'learn'}
-                onToggle={() => handleDropdownToggle('learn')}
-              />
             </nav>
 
             {/* Right Side: Journal + Profile Selector + User Menu + Search */}
@@ -459,7 +451,7 @@ export function Layout() {
                 }`
               }
             >
-              <span className="mr-1.5">{item.icon}</span>
+              <span className="mr-1.5" aria-hidden="true">{item.icon}</span>
               {item.label}
             </NavLink>
           ))}
@@ -520,7 +512,7 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
@@ -540,7 +532,7 @@ export function Layout() {
                       }`
                     }
                   >
-                    <span>🕯</span>
+                    <span aria-hidden="true">🕯</span>
                     Contemplation Chamber
                   </NavLink>
                   <NavLink
@@ -554,7 +546,7 @@ export function Layout() {
                       }`
                     }
                   >
-                    <span>✧</span>
+                    <span aria-hidden="true">✧</span>
                     Contemplation Journal
                   </NavLink>
                 </div>
@@ -576,7 +568,7 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
@@ -600,7 +592,7 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
@@ -624,7 +616,7 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
@@ -648,7 +640,7 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
@@ -672,29 +664,13 @@ export function Layout() {
                           }`
                         }
                       >
-                        <span>{item.icon}</span>
+                        <span aria-hidden="true">{item.icon}</span>
                         {item.label}
                       </NavLink>
                     ))}
                   </div>
                 </div>
 
-                {/* Learn Section */}
-                <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Learn</p>
-                  <div className="space-y-1">
-                    {learnItems.map((item) => (
-                      <div
-                        key={item.label}
-                        className="flex items-center gap-3 px-3 py-2 rounded-lg text-sm text-neutral-600"
-                      >
-                        <span>{item.icon}</span>
-                        {item.label}
-                        <span className="ml-auto text-xs bg-neutral-800 px-1.5 py-0.5 rounded">Soon</span>
-                      </div>
-                    ))}
-                  </div>
-                </div>
               </div>
             </motion.div>
           </>
@@ -702,7 +678,7 @@ export function Layout() {
       </AnimatePresence>
 
       {/* Main Content */}
-      <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+      <main id="main-content" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <Breadcrumb />
         <AnimatePresence mode="wait">
           <motion.div

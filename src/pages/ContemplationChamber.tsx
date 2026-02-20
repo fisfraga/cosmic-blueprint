@@ -268,6 +268,7 @@ export function ContemplationChamber() {
   const [stepCompleted, setStepCompleted] = useState(false);
   const [selectedEntity, setSelectedEntity] = useState<EntityInfo | null>(null);
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
+  const [copySuccess, setCopySuccess] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
@@ -665,8 +666,6 @@ ${context}`;
       navigate('/pathways');
     }
   };
-
-  const [copySuccess, setCopySuccess] = useState(false);
 
   const buildMarkdownContent = (): string => {
     if (!category || !contemplationType || messages.length === 0) return '';

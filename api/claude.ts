@@ -2,9 +2,89 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 
 const OPENROUTER_BASE_URL = 'https://openrouter.ai/api/v1/chat/completions';
 
+// --- Rate Limiting (in-memory, resets on cold start) ---
+const RATE_LIMIT_MAX = parseInt(process.env.RATE_LIMIT_MAX || '20', 10);
+const RATE_LIMIT_WINDOW_MS = 60_000; // 1 minute
+const MAX_REQUEST_SIZE_BYTES = 50 * 1024; // 50KB
+
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>();
+
+function getClientIp(req: VercelRequest): string {
+  const forwarded = req.headers['x-forwarded-for'];
+  if (typeof forwarded === 'string') return forwarded.split(',')[0].trim();
+  return req.socket?.remoteAddress || 'unknown';
+}
+
+function checkRateLimit(ip: string): { allowed: boolean; retryAfter: number } {
+  const now = Date.now();
+  const entry = rateLimitMap.get(ip);
+
+  if (!entry || now >= entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS });
+    return { allowed: true, retryAfter: 0 };
+  }
+
+  if (entry.count >= RATE_LIMIT_MAX) {
+    const retryAfter = Math.ceil((entry.resetAt - now) / 1000);
+    return { allowed: false, retryAfter };
+  }
+
+  entry.count++;
+  return { allowed: true, retryAfter: 0 };
+}
+
+// --- CORS ---
+const ALLOWED_ORIGINS = [
+  process.env.VITE_APP_URL,
+  'http://localhost:5173',
+  'http://localhost:4173',
+].filter(Boolean) as string[];
+
+function isOriginAllowed(origin: string | undefined): boolean {
+  if (!origin) return false;
+  return ALLOWED_ORIGINS.some((allowed) => origin === allowed || origin.startsWith(allowed));
+}
+
+// --- Handler ---
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+  const origin = req.headers.origin as string | undefined;
+
+  // CORS preflight
+  if (req.method === 'OPTIONS') {
+    if (isOriginAllowed(origin)) {
+      res.setHeader('Access-Control-Allow-Origin', origin!);
+      res.setHeader('Access-Control-Allow-Methods', 'POST, OPTIONS');
+      res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+      res.setHeader('Access-Control-Max-Age', '86400');
+    }
+    return res.status(204).end();
+  }
+
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  // CORS origin check
+  if (origin && !isOriginAllowed(origin)) {
+    return res.status(403).json({ error: 'Origin not allowed' });
+  }
+
+  if (isOriginAllowed(origin)) {
+    res.setHeader('Access-Control-Allow-Origin', origin!);
+  }
+
+  // Rate limiting
+  const clientIp = getClientIp(req);
+  const { allowed, retryAfter } = checkRateLimit(clientIp);
+  if (!allowed) {
+    res.setHeader('Retry-After', String(retryAfter));
+    return res.status(429).json({ error: 'Too many requests. Please try again later.' });
+  }
+
+  // Request size check
+  const bodyStr = JSON.stringify(req.body);
+  if (bodyStr.length > MAX_REQUEST_SIZE_BYTES) {
+    return res.status(413).json({ error: 'Request body too large (max 50KB)' });
   }
 
   const apiKey = process.env.OPENROUTER_API_KEY;
@@ -75,6 +155,7 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
       let sseBuffer = '';
 
       try {
+        // eslint-disable-next-line no-constant-condition
         while (true) {
           const { done, value } = await reader.read();
           if (done) break;

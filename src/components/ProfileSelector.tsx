@@ -7,14 +7,16 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
+import type { ProfileMeta } from '../types';
 
 interface ProfileSelectorProps {
   compact?: boolean;
 }
 
 export function ProfileSelector({ compact = false }: ProfileSelectorProps) {
-  const { profile, allProfiles, switchProfile, canAddMore } = useProfile();
+  const { profile, allProfiles, switchProfile, removeProfile, canAddMore } = useProfile();
   const [isOpen, setIsOpen] = useState(false);
+  const [pendingDelete, setPendingDelete] = useState<ProfileMeta | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
   // Close dropdown when clicking outside
@@ -22,6 +24,7 @@ export function ProfileSelector({ compact = false }: ProfileSelectorProps) {
     function handleClickOutside(event: MouseEvent) {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsOpen(false);
+        setPendingDelete(null);
       }
     }
     document.addEventListener('mousedown', handleClickOutside);
@@ -49,6 +52,13 @@ export function ProfileSelector({ compact = false }: ProfileSelectorProps) {
       'Sibling': 'bg-cyan-500/20 text-cyan-400',
     };
     return badges[relationship] || 'bg-neutral-500/20 text-neutral-400';
+  };
+
+  const handleDeleteConfirm = () => {
+    if (pendingDelete) {
+      removeProfile(pendingDelete.id);
+      setPendingDelete(null);
+    }
   };
 
   return (
@@ -97,31 +107,47 @@ export function ProfileSelector({ compact = false }: ProfileSelectorProps) {
             {/* Profile List */}
             <div className="max-h-64 overflow-y-auto">
               {allProfiles.map((p) => (
-                <button
+                <div
                   key={p.id}
-                  onClick={() => {
-                    switchProfile(p.id);
-                    setIsOpen(false);
-                  }}
-                  className={`w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800 transition-colors ${
+                  className={`group w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800 transition-colors ${
                     p.id === profile.id ? 'bg-neutral-800/50' : ''
                   }`}
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-medium">
+                  <button
+                    onClick={() => {
+                      switchProfile(p.id);
+                      setIsOpen(false);
+                    }}
+                    className="flex items-center gap-3 flex-1 min-w-0"
+                  >
+                    <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-sm font-medium flex-shrink-0">
                       {p.name.charAt(0).toUpperCase()}
                     </div>
-                    <div className="text-left">
-                      <p className="text-white font-medium text-sm">{p.name}</p>
+                    <div className="text-left min-w-0">
+                      <p className="text-white font-medium text-sm truncate">{p.name}</p>
                       <p className="text-neutral-500 text-xs">{p.relationship || 'Unknown'}</p>
                     </div>
+                  </button>
+                  <div className="flex items-center gap-1">
+                    {p.id === profile.id && (
+                      <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                      </svg>
+                    )}
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setPendingDelete(p);
+                      }}
+                      className="p-1 rounded text-neutral-600 opacity-0 group-hover:opacity-100 hover:text-red-400 hover:bg-neutral-700 transition-all"
+                      aria-label={`Delete ${p.name}'s profile`}
+                    >
+                      <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16" />
+                      </svg>
+                    </button>
                   </div>
-                  {p.id === profile.id && (
-                    <svg className="w-4 h-4 text-purple-400" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                    </svg>
-                  )}
-                </button>
+                </div>
               ))}
             </div>
 
@@ -152,6 +178,46 @@ export function ProfileSelector({ compact = false }: ProfileSelectorProps) {
               </Link>
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Delete Confirmation Modal */}
+      <AnimatePresence>
+        {pendingDelete && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/60 z-[60]"
+              onClick={() => setPendingDelete(null)}
+            />
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl z-[70] p-6"
+            >
+              <h3 className="text-white font-medium mb-2">Delete Profile</h3>
+              <p className="text-neutral-400 text-sm mb-6">
+                Delete {pendingDelete.name}&apos;s profile? This cannot be undone.
+              </p>
+              <div className="flex justify-end gap-3">
+                <button
+                  onClick={() => setPendingDelete(null)}
+                  className="px-4 py-2 text-sm text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
+                >
+                  Cancel
+                </button>
+                <button
+                  onClick={handleDeleteConfirm}
+                  className="px-4 py-2 text-sm text-white bg-red-600 hover:bg-red-500 rounded-lg transition-colors"
+                >
+                  Delete Profile
+                </button>
+              </div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </div>

@@ -1,3 +1,4 @@
+export { ErrorBoundary } from './ErrorBoundary';
 export { Layout } from './Layout';
 export { EntityCard } from './EntityCard';
 export { CelestialMandala } from './CelestialMandala';
