@@ -5,6 +5,7 @@ import { loadSessions, deleteSession } from '../services/sessions';
 import type { SavedSession } from '../services/sessions';
 import { useAuth } from '../context/AuthContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
+import { formatSessionAsTanaPaste, copyToClipboard } from '../services/tanaSync';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -132,6 +133,7 @@ interface SessionCardProps {
 
 function SessionCard({ session, onDelete }: SessionCardProps) {
   const navigate = useNavigate();
+  const [copied, setCopied] = useState(false);
   const styles = getCategoryStyles(session.category);
 
   const lastAssistantMessage = [...session.messages]
@@ -154,6 +156,15 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
 
   const handleResume = () => {
     navigate('/contemplate', { state: { resumeSessionId: session.id } });
+  };
+
+  const handleCopyTana = async () => {
+    const paste = formatSessionAsTanaPaste(session);
+    const ok = await copyToClipboard(paste);
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    }
   };
 
   const formattedType = formatContemplationType(session.contemplationType);
@@ -218,7 +229,7 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
         </p>
       )}
 
-      {/* Footer: stats + resume button */}
+      {/* Footer: stats + action buttons */}
       <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-800/60">
         <div className="flex items-center gap-3 text-xs text-neutral-500">
           <span>{userMessageCount} {userMessageCount === 1 ? 'exchange' : 'exchanges'}</span>
@@ -226,12 +237,27 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
           <span>{formatRelativeTime(session.updatedAt)}</span>
         </div>
 
-        <button
-          onClick={handleResume}
-          className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 text-xs font-medium text-amber-300 transition-all hover:bg-amber-500/20 hover:border-amber-400/50"
-        >
-          Resume →
-        </button>
+        <div className="flex items-center gap-2">
+          <button
+            onClick={handleCopyTana}
+            aria-label="Copy as Tana Paste"
+            title="Copy Tana Paste format"
+            className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
+              copied
+                ? 'border-emerald-700/50 bg-emerald-900/30 text-emerald-400'
+                : 'border-neutral-700 bg-neutral-800/50 text-neutral-400 hover:text-purple-400 hover:border-neutral-600'
+            }`}
+          >
+            {copied ? '✓ Copied' : '⟐ Tana'}
+          </button>
+
+          <button
+            onClick={handleResume}
+            className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 text-xs font-medium text-amber-300 transition-all hover:bg-amber-500/20 hover:border-amber-400/50"
+          >
+            Resume →
+          </button>
+        </div>
       </div>
     </motion.article>
   );

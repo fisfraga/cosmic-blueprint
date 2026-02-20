@@ -114,6 +114,43 @@ Tailwind config (`tailwind.config.js`) defines color scales for: `fire`, `earth`
 - HD Gates and Gene Keys share 1-64 numbering via I Ching hexagrams
 - Gene Keys operate on a frequency spectrum: Shadow → Gift → Siddhi
 
+## Git Workflow
+
+Repository: **https://github.com/fisfraga/cosmic-blueprint** (private)
+
+### After each sprint
+```bash
+git add .
+git commit -m "feat: Sprint X — brief description
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>"
+git push origin main
+```
+
+### Commit types
+- `feat:` — new feature or sprint completion
+- `fix:` — bug fix
+- `chore:` — dependency/config/tooling changes
+- `docs:` — documentation only
+- `refactor:` — code restructuring without behavior change
+
+Always include `Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>` footer.
+
+CI runs automatically on every push — check GitHub Actions tab for build status.
+
+## Tana Sync
+
+To push insights or sessions to the Tana ILOS workspace (`Nd-vpOR3Vvg3`):
+
+Use the Tana MCP tools in Claude Code:
+```
+mcp__tana-local__import_tana_paste
+  parentNodeId: Nd-vpOR3Vvg3_CAPTURE_INBOX
+  content: [Tana Paste formatted content from tanaSync.ts utilities]
+```
+
+Tana Paste export buttons are available directly in the `/insights` and `/sessions` pages of the app for manual clipboard-based export.
+
 ## Key Reference Files
 
 - `_Data/Cosmic Copilot Data/CONTEXT.md` — Full project vision and philosophy

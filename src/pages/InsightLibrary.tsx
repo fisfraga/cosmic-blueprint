@@ -5,6 +5,7 @@ import { loadInsights, deleteInsight } from '../services/insights';
 import type { SavedInsight } from '../services/insights';
 import { useAuth } from '../context/AuthContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
+import { formatInsightAsTanaPaste, copyToClipboard } from '../services/tanaSync';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -116,6 +117,7 @@ interface InsightCardProps {
 
 function InsightCard({ insight, onDelete }: InsightCardProps) {
   const [expanded, setExpanded] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const styles = getCategoryStyles(insight.category);
 
@@ -125,6 +127,15 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
     );
     if (confirmed) {
       onDelete(insight.id);
+    }
+  };
+
+  const handleCopyTana = async () => {
+    const paste = formatInsightAsTanaPaste(insight);
+    const ok = await copyToClipboard(paste);
+    if (ok) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
     }
   };
 
@@ -147,11 +158,26 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
         styles.borderTop,
       ].join(' ')}
     >
-      {/* Top row: category label + delete button */}
+      {/* Top row: category label + action buttons */}
       <div className="flex items-start justify-between gap-2">
         <span className={`text-xs font-semibold uppercase tracking-wide ${styles.text}`}>
           {styles.label}
         </span>
+
+        <div className="flex items-center gap-1">
+          {/* Copy Tana Paste button */}
+          <button
+            onClick={handleCopyTana}
+            aria-label="Copy as Tana Paste"
+            title="Copy Tana Paste format"
+            className={`flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors ${
+              copied
+                ? 'text-emerald-400 bg-emerald-900/30'
+                : 'text-neutral-500 hover:text-purple-400 hover:bg-neutral-800'
+            }`}
+          >
+            {copied ? '✓ Copied' : '⟐ Tana'}
+          </button>
 
         <button
           onClick={handleDeleteClick}
@@ -173,6 +199,7 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
           </svg>
           Delete
         </button>
+        </div>
       </div>
 
       {/* Content */}
