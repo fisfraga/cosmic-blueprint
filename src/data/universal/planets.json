@@ -1,0 +1,202 @@
+[
+  {
+    "id": "sun",
+    "type": "planet",
+    "name": "Sun",
+    "symbol": "☉",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FYS7Ei7RV-wfA.png?alt=media&token=80458899-ce96-4d8e-b544-daca84f73bbb",
+    "cycleDuration": "1 year through zodiac",
+    "archetype": "The Sovereign, Core Identity, Divine Self",
+    "functionAndMeaning": "Your essential nature and life force. The Sun represents your soul's purpose, creative vitality, and authentic self-expression. It is the central organizing principle of your consciousness - what you are here to become and embody. The Sun illuminates your path of self-realization.",
+    "contemplationQuestions": [
+      "What makes me feel most alive and authentic?",
+      "How do I shine my unique light in the world?",
+      "What is my soul calling me to become?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 4,
+    "signsRuled": ["leo"],
+    "giftExpression": "Authentic leadership, creative radiance, generous heart, inspiring presence, clear sense of purpose, confident self-expression, vital life force",
+    "shadowExpression": "Ego inflation, narcissism, need for constant attention, arrogance, inability to see others' perspectives, domineering behavior, pride that blocks growth"
+  },
+  {
+    "id": "moon",
+    "type": "planet",
+    "name": "Moon",
+    "symbol": "☽",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FmzXvUXWm9UYR.png?alt=media&token=459e5106-8bc2-46f2-a1a3-26d38e64526b",
+    "cycleDuration": "28 days (12-13 cycles per year)",
+    "archetype": "The Mother, Emotional Nature, Inner World",
+    "functionAndMeaning": "Your emotional body and unconscious patterns. The Moon represents your instinctive responses, nurturing needs, and how you process feelings. It governs your inner sanctuary, ancestral memory, and the cyclical rhythms of your psyche. The Moon shows how you feel safe and nourished.",
+    "contemplationQuestions": [
+      "What do I need to feel emotionally secure?",
+      "How do I honor my changing moods and cycles?",
+      "What ancestral patterns am I healing?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 4,
+    "signsRuled": ["cancer"],
+    "giftExpression": "Deep empathy, intuitive wisdom, emotional intelligence, nurturing presence, psychic sensitivity, ancestral healing, natural rhythms",
+    "shadowExpression": "Moodiness, emotional manipulation, clinging to the past, victim consciousness, inability to self-soothe, projecting emotions onto others, fear of change"
+  },
+  {
+    "id": "mercury",
+    "type": "planet",
+    "name": "Mercury",
+    "symbol": "☿",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FNYl6en8qi9xK.png?alt=media&token=334fcf5b-2544-4ea1-8f94-77baaf024ef3",
+    "cycleDuration": "88 days (4.1 cycles per year)",
+    "archetype": "The Messenger, Mind, Communication",
+    "functionAndMeaning": "Your thinking processes and communication style. Mercury represents how you gather, process, and share information. It governs learning, speaking, writing, and all forms of mental connection. Mercury is the bridge between inner knowing and outer expression.",
+    "contemplationQuestions": [
+      "How do I best learn and process information?",
+      "What wants to be communicated through me?",
+      "How can I bridge understanding between different perspectives?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 2,
+    "signsRuled": ["gemini", "virgo"],
+    "giftExpression": "Clear communication, quick wit, adaptability, learning ability, intellectual curiosity, mental agility, bridging understanding",
+    "shadowExpression": "Mental restlessness, gossip, superficial thinking, communication breakdowns, information overload, nervous anxiety, scattered focus"
+  },
+  {
+    "id": "venus",
+    "type": "planet",
+    "name": "Venus",
+    "symbol": "♀",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FUZs7BKQd3hv4.png?alt=media&token=98648272-b969-437b-b78a-6b5e10373eb4",
+    "cycleDuration": "225 days (1.6 per year)",
+    "archetype": "The Lover, Beauty, Values",
+    "functionAndMeaning": "Your capacity for love, beauty, and attraction. Venus represents your values, aesthetic sense, and how you relate to others. It governs romance, artistry, pleasure, and what brings harmony to your life. Venus shows how you give and receive love.",
+    "contemplationQuestions": [
+      "What do I truly value in life and relationships?",
+      "How do I express and receive love?",
+      "What brings beauty and harmony to my world?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 2,
+    "signsRuled": ["taurus", "libra"],
+    "giftExpression": "Aesthetic beauty, harmonious relationships, artistic creativity, diplomatic grace, appreciation of life's pleasures, loving kindness, natural magnetism",
+    "shadowExpression": "Vanity, superficiality, codependency, materialism, avoiding conflict at all costs, people-pleasing, jealousy in relationships"
+  },
+  {
+    "id": "mars",
+    "type": "planet",
+    "name": "Mars",
+    "symbol": "♂",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F94RdusKcQPd9.png?alt=media&token=f566a6bf-7d6a-4380-bbd7-10ea9fc0cf05",
+    "cycleDuration": "2 years",
+    "archetype": "The Warrior, Will, Action",
+    "functionAndMeaning": "Your drive, passion, and assertive energy. Mars represents how you pursue desires, defend boundaries, and take action. It governs courage, sexuality, competition, and the warrior spirit within. Mars is your motivating force and vital energy.",
+    "contemplationQuestions": [
+      "How do I channel my anger and passion constructively?",
+      "What am I willing to fight for?",
+      "How do I honor my desires while respecting others?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 2,
+    "signsRuled": ["aries", "scorpio"],
+    "giftExpression": "Courageous action, healthy assertiveness, passionate pursuit, protective strength, dynamic leadership, warrior spirit, constructive anger, vital energy, decisive initiative",
+    "shadowExpression": "Aggression, impatience, anger outbursts, domination, reckless impulsiveness, violence, destructive competition, bullying behavior, inability to control temper"
+  },
+  {
+    "id": "jupiter",
+    "type": "planet",
+    "name": "Jupiter",
+    "symbol": "♃",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F42pvQ9P1SEzp.png?alt=media&token=af91ef1a-7654-4d71-8c72-d438539d4b11",
+    "cycleDuration": "12 years",
+    "archetype": "The Sage, Expansion, Wisdom",
+    "functionAndMeaning": "Your capacity for growth, wisdom, and higher understanding. Jupiter represents your philosophical nature, teaching abilities, and quest for meaning. It governs expansion, optimism, foreign cultures, and spiritual seeking. Jupiter shows how you grow and share wisdom.",
+    "contemplationQuestions": [
+      "What principles guide my life?",
+      "How do I share my wisdom and expand my understanding?",
+      "What higher purpose calls to me?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 2,
+    "signsRuled": ["sagittarius", "pisces"],
+    "giftExpression": "Generous spirit, philosophical wisdom, cultural bridge-building, inspiring teaching, ethical leadership, natural abundance, expansive vision",
+    "shadowExpression": "Overindulgence, dogmatism, false optimism, excess, judgmental attitudes, spiritual bypassing, unrealistic expectations"
+  },
+  {
+    "id": "saturn",
+    "type": "planet",
+    "name": "Saturn",
+    "symbol": "♄",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F3iRw8u8j9rNZ.png?alt=media&token=d87b912b-352a-4bdf-8401-299157f80243",
+    "cycleDuration": "29.5 years",
+    "archetype": "The Teacher, Structure, Mastery",
+    "functionAndMeaning": "Your relationship with responsibility, discipline, and mastery. Saturn represents life lessons, limitations that foster growth, and the development of inner authority. It governs maturity, commitment, and the patient building of lasting structures. Saturn is your inner wise elder.",
+    "contemplationQuestions": [
+      "What structures support my highest growth?",
+      "How do I transform limitations into wisdom?",
+      "What legacy am I building through patient effort?"
+    ],
+    "planetType": "Traditional Planet",
+    "planetImportance": 4,
+    "signsRuled": ["capricorn", "aquarius"],
+    "giftExpression": "Practical wisdom, disciplined mastery, reliable leadership, patient building, authentic authority, structural integrity, mature responsibility",
+    "shadowExpression": "Rigidity, pessimism, harsh self-criticism, fear of failure, authoritarian control, depression from limitations, perfectionism"
+  },
+  {
+    "id": "uranus",
+    "type": "planet",
+    "name": "Uranus",
+    "symbol": "♅",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FZ6NNlgjFzfn4.png?alt=media&token=daf076e4-5202-47bc-be57-24eef14ded5b",
+    "cycleDuration": "84 years",
+    "archetype": "The Rebel, Innovation, Liberation",
+    "functionAndMeaning": "Your need for freedom, originality, and breakthrough. Uranus represents revolutionary change, humanitarian vision, and technological innovation. It governs sudden insights, rebellion against limitation, and your unique genius. Uranus awakens consciousness to new possibilities.",
+    "contemplationQuestions": [
+      "How do I express my unique genius?",
+      "What outdated patterns am I ready to revolutionize?",
+      "How can I serve collective awakening?"
+    ],
+    "planetType": "Modern Planet",
+    "planetImportance": 1,
+    "signsRuled": ["aquarius"],
+    "giftExpression": "Visionary innovation, humanitarian service, authentic individuality, breakthrough insights, progressive leadership, revolutionary consciousness, freedom advocacy",
+    "shadowExpression": "Chaotic rebellion, detachment from feeling, shocking behavior for its own sake, restless instability, rejection of all structure, erratic changes"
+  },
+  {
+    "id": "neptune",
+    "type": "planet",
+    "name": "Neptune",
+    "symbol": "♆",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FswbpdQp_y9uk.png?alt=media&token=44daf0fe-5dfd-4487-8bbe-b45f132364b7",
+    "cycleDuration": "165 years",
+    "archetype": "The Mystic, Transcendence, Dreams",
+    "functionAndMeaning": "Your connection to the divine, imagination, and transcendent love. Neptune represents spiritual yearning, artistic inspiration, and the dissolution of ego boundaries. It governs dreams, intuition, compassion, and mystical experience. Neptune connects you to universal consciousness.",
+    "contemplationQuestions": [
+      "How do I connect with the divine in daily life?",
+      "What illusions am I ready to release?",
+      "How does spirit express through my creativity?"
+    ],
+    "planetType": "Modern Planet",
+    "planetImportance": 1,
+    "signsRuled": ["pisces"],
+    "giftExpression": "Divine compassion, artistic inspiration, spiritual devotion, healing presence, transcendent love, mystical awareness, universal connection",
+    "shadowExpression": "Escapism, delusion, victim consciousness, addiction, spiritual bypassing, boundary confusion, martyrdom complex"
+  },
+  {
+    "id": "pluto",
+    "type": "planet",
+    "name": "Pluto",
+    "symbol": "♇",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2Fs2qTuH8yg1sP.png?alt=media&token=492ea57a-7417-4d8b-aa01-4fbb185669ae",
+    "cycleDuration": "248 years",
+    "archetype": "The Transformer, Death/Rebirth, Power",
+    "functionAndMeaning": "Your capacity for deep transformation and regeneration. Pluto represents the cycles of death and rebirth, psychological depths, and hidden power. It governs transformation, healing trauma, and evolutionary growth. Pluto reveals what must die for new life to emerge.",
+    "contemplationQuestions": [
+      "What parts of me are ready to die and be reborn?",
+      "How do I transform pain into wisdom?",
+      "What hidden powers am I developing?"
+    ],
+    "planetType": "Modern Planet",
+    "planetImportance": 1,
+    "signsRuled": ["scorpio"],
+    "giftExpression": "Profound healing, transformative power, psychological insight, regenerative capacity, evolutionary wisdom, depth perception, authentic empowerment",
+    "shadowExpression": "Obsessive control, destructive behavior, power struggles, fear of transformation, underground manipulation, vindictiveness, compulsive patterns"
+  }
+]

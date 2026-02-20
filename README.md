@@ -1,0 +1,57 @@
+# 🌟 Cosmic Copilot
+
+Astrology Knowledge Graph Explorer - An interactive web application for exploring astrological entities and their relationships.
+
+## Tech Stack
+
+- **React 18** - UI framework
+- **TypeScript** - Type safety
+- **Vite** - Build tool and dev server
+- **Tailwind CSS** - Styling
+- **D3.js** - Data visualization
+- **Framer Motion** - Animations
+- **Zustand** - State management
+- **React Router** - Navigation
+- **Anthropic Claude API** - AI integration
+
+## Getting Started
+
+1. Install dependencies:
+```bash
+npm install
+```
+
+2. Start development server:
+```bash
+npm run dev
+```
+
+3. Build for production:
+```bash
+npm run build
+```
+
+## Project Structure
+
+```
+cosmic-copilot/
+├── src/
+│   ├── components/     # React components
+│   ├── data/          # JSON data files
+│   ├── hooks/         # Custom React hooks
+│   ├── stores/        # Zustand state stores
+│   ├── styles/        # Global styles and themes
+│   ├── types/         # TypeScript definitions
+│   └── utils/         # Helper functions
+├── public/            # Static assets
+└── [data files]       # JSON data files (planets.json, signs.json, etc.)
+```
+
+## Documentation
+
+- [System Architecture](./cosmic-copilot-system-architecture.md)
+- [Data Schema](./cosmic-copilot-data-schema.md)
+
+## Development
+
+This project is designed for Claude Code development. The architecture document provides comprehensive guidance for implementation.

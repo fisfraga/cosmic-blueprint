@@ -1,0 +1,2306 @@
+[
+  {
+    "id": "gk-1",
+    "type": "gene-key",
+    "name": "Gene Key 1: Beauty",
+    "symbol": "1",
+    "keyNumber": 1,
+    "shadow": {
+      "name": "Entropy",
+      "keyExpression": "The tendency toward disorder, decay, and the gradual running down of creative life force when disconnected from source",
+      "description": "The shadow of Entropy manifests as a deep-seated fear of life's natural creative pulse. At this frequency, individuals either collapse into depression or frantically try to escape their inner emptiness through constant activity. This shadow speaks to the universal fear of death and decay - the knowledge that everything eventually runs down. When we operate from Entropy, we either succumb to this fear or fight against it, never finding peace.",
+      "repressiveNature": "Depressive - mental and emotional collapse rooted in fear, a frozen low-frequency state where life loses its luster and meaning drains away, leaving one feeling bed-ridden or simply going through the motions without any spark",
+      "reactiveNature": "Frenetic - wild urge to escape uncomfortable feelings through hyperactivity, becoming engaged in elaborate schemes or locked in monotonous patterns that quickly undermine health and wellbeing"
+    },
+    "gift": {
+      "name": "Freshness",
+      "keyExpression": "The capacity to see everything with new eyes, bringing creative vitality and originality to each moment",
+      "description": "The gift of Freshness emerges when we stop fighting or fleeing from life's natural rhythms. This is the quality of perpetual renewal - the ability to approach each moment, each person, each situation as though encountering it for the first time. Freshness is the antidote to entropy; it is the creative fire that keeps life vital and meaningful. Those embodying this gift bring an infectious enthusiasm and originality that awakens others from their habitual patterns."
+    },
+    "siddhi": {
+      "name": "Beauty",
+      "keyExpression": "The recognition that all of existence is an expression of divine creative perfection",
+      "description": "The siddhi of Beauty represents the ultimate realization that everything in existence is beautiful - not through the eyes of preference or aesthetic judgment, but through the recognition that all form is a manifestation of divine consciousness. This is syntropy - the opposite of entropy - where creation continuously evolves toward greater harmony and complexity. At this frequency, one becomes a vessel for the Promethean fire of pure creativity, channeling beauty into the world."
+    },
+    "programmingPartnerId": "gk-2",
+    "codonRingId": "ring-of-fire",
+    "aminoAcidId": "lysine",
+    "physiology": "Liver",
+    "hdGateId": "gate-1",
+    "iChingHexagram": 1,
+    "tropicalSignId": "scorpio",
+    "degreeStart": 223.625,
+    "degreeEnd": 229.25,
+    "url": "https://genekeys.com/gene-key-1/",
+    "description": "Gene Key 1: Entropy → Freshness → Beauty. This key invites contemplation on the transformation from Entropy to Beauty through the gift of Freshness.",
+    "image": "/images/gene-keys/keys/gk-1.png"
+  },
+  {
+    "id": "gk-2",
+    "type": "gene-key",
+    "name": "Gene Key 2: Unity",
+    "symbol": "2",
+    "keyNumber": 2,
+    "shadow": {
+      "name": "Dislocation",
+      "keyExpression": "Feeling lost, disconnected, fear of separation, interference frequency",
+      "description": "The shadow of Dislocation manifests as a profound sense of being lost in the world, disconnected from the underlying intelligence that guides all life. At this frequency, individuals experience themselves as separate from the cosmic matrix, leading to a deep existential anxiety. This dislocation creates an interference pattern that blocks the natural flow of synchronicity and guidance that is always available.",
+      "repressiveNature": "Lost - out of alignment with universal destiny, materialism, selfishness, no sense of spiritual dimension, misery and suffering without cosmic connection",
+      "reactiveNature": "Regimented - enforcement of external rhythm or structure over life, unresolved anger, describes many world religions that put themselves between individual and Divine"
+    },
+    "gift": {
+      "name": "Orientation",
+      "keyExpression": "Synchronicity, harmony, magnetic attractor field, panache, mineral magnetism",
+      "description": "The gift of Orientation emerges when we begin to trust the intelligent flow of life. This gift represents the capacity to sense the underlying direction and purpose in all events. Those with this gift active become living magnets, naturally attracting the right people, circumstances, and opportunities through their deep attunement to universal rhythms. Orientation brings an elegance and panache to life - a sense of style that comes from being aligned with something greater."
+    },
+    "siddhi": {
+      "name": "Unity",
+      "keyExpression": "Enlightenment, divine feminine, oneness, receptive, divine logic",
+      "description": "The siddhi of Unity represents the highest flowering of the divine feminine principle - the realization that all of existence is one seamless tapestry of consciousness. At this frequency, the illusion of separation completely dissolves, revealing that there has only ever been One. This is the state of enlightenment where the individual merges back into the cosmic womb, becoming a pure vessel for divine intelligence to move through the world."
+    },
+    "programmingPartnerId": "gk-1",
+    "codonRingId": "ring-of-water",
+    "aminoAcidId": "phenylalanine",
+    "physiology": "Sternum",
+    "hdGateId": "gate-2",
+    "iChingHexagram": 2,
+    "tropicalSignId": "taurus",
+    "degreeStart": 58.125,
+    "degreeEnd": 63.75,
+    "url": "https://genekeys.com/gene-key-2/",
+    "description": "Gene Key 2: Dislocation → Orientation → Unity. This key invites contemplation on the transformation from Dislocation to Unity through the gift of Orientation.",
+    "image": "/images/gene-keys/keys/gk-2.png"
+  },
+  {
+    "id": "gk-3",
+    "type": "gene-key",
+    "name": "Gene Key 3: Innocence",
+    "symbol": "3",
+    "keyNumber": 3,
+    "shadow": {
+      "name": "Chaos",
+      "keyExpression": "Disorder, confusion, mutation, breakdown, survival fear",
+      "description": "The shadow of Chaos represents the fear of the unknown and the terror of change that lives deep within human DNA. This shadow carries the collective memory of mutation - the constant threat of genetic instability that could either destroy us or propel us forward. At this frequency, individuals experience life as fundamentally unsafe, leading to either desperate attempts to control everything or a collapse into confusion and disorientation.",
+      "repressiveNature": "Rigid control - attempting to prevent chaos through rigid structures and systems, living in constant anxiety about change and instability",
+      "reactiveNature": "Scattered chaos - collapsing into disorder, unable to maintain any structure or consistency, overwhelmed by constant change"
+    },
+    "gift": {
+      "name": "Innovation",
+      "keyExpression": "Creativity, breakthrough, fresh solutions, adaptability, evolutionary catalyst",
+      "description": "The gift of Innovation emerges when we embrace chaos as the creative matrix from which all new forms arise. Rather than fearing mutation, those with this gift active see every moment of disorder as pregnant with possibility. Innovation is the capacity to surf the waves of change, finding creative solutions where others see only problems. This gift brings a childlike delight in experimentation and the courage to try new approaches."
+    },
+    "siddhi": {
+      "name": "Innocence",
+      "keyExpression": "Childlike wonder, spontaneity, original nature, primordial purity",
+      "description": "The siddhi of Innocence is the return to our original nature before conditioning - the state of pure spontaneity that exists prior to fear. At this frequency, one moves through life with the wonder and freshness of a child, responding to each moment without the weight of past experience. Innocence is not naivety but wisdom so deep that it appears simple - the recognition that life itself is an endless creative play."
+    },
+    "programmingPartnerId": "gk-50",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Navel",
+    "hdGateId": "gate-3",
+    "iChingHexagram": 3,
+    "tropicalSignId": "taurus",
+    "degreeStart": 30,
+    "degreeEnd": 35.625,
+    "url": "https://genekeys.com/gene-key-3/",
+    "description": "Gene Key 3: Chaos → Innovation → Innocence. This key invites contemplation on the transformation from Chaos to Innocence through the gift of Innovation.",
+    "image": "/images/gene-keys/keys/gk-3.png"
+  },
+  {
+    "id": "gk-4",
+    "type": "gene-key",
+    "name": "Gene Key 4: Forgiveness",
+    "symbol": "4",
+    "keyNumber": 4,
+    "shadow": {
+      "name": "Intolerance",
+      "keyExpression": "Judgement, mental rigidity, fixed opinions, narrow-mindedness, fear of ambiguity",
+      "description": "The shadow of Intolerance arises from the mind's desperate attempt to create certainty in an uncertain universe. At this frequency, the mind builds walls of rigid opinion and fixed belief to protect itself from the terror of not knowing. This leads to a fundamental inability to accept others as they are, whether expressed through dogmatic righteousness or aggressive attacks on those who think differently.",
+      "repressiveNature": "Dogmatic certainty - creating rigid belief systems, refusing to consider alternative views, mental fortress against uncertainty",
+      "reactiveNature": "Judgmental attack - aggressively defending positions, attacking those with different views, intolerance manifesting as hatred"
+    },
+    "gift": {
+      "name": "Understanding",
+      "keyExpression": "Mental clarity, wisdom, comprehension, open-minded inquiry, genuine tolerance",
+      "description": "The gift of Understanding dawns when the mind relaxes its grip on certainty and opens to genuine inquiry. This is the capacity to hold multiple perspectives simultaneously without needing to choose between them. Understanding brings a natural mental clarity that can penetrate complex situations and see the logic inherent in seemingly contradictory positions. Those with this gift active become bridges between different worldviews."
+    },
+    "siddhi": {
+      "name": "Forgiveness",
+      "keyExpression": "Universal pardon, compassion, dissolution of judgement, perfect unfolding",
+      "description": "The siddhi of Forgiveness represents the complete dissolution of judgment itself. At this frequency, one sees that everything that has ever happened is part of a perfect unfolding - that every apparent wrong was necessary for the evolution of consciousness. Forgiveness at this level is not an act but a state of being, a continuous recognition that there is nothing and no one to forgive because life itself is innocent."
+    },
+    "programmingPartnerId": "gk-49",
+    "codonRingId": "ring-of-union",
+    "aminoAcidId": "valine",
+    "physiology": "Neocortex",
+    "hdGateId": "gate-4",
+    "iChingHexagram": 4,
+    "tropicalSignId": "leo",
+    "degreeStart": 123.875,
+    "degreeEnd": 129.5,
+    "url": "https://genekeys.com/gene-key-4/",
+    "description": "Gene Key 4: Intolerance → Understanding → Forgiveness. This key invites contemplation on the transformation from Intolerance to Forgiveness through the gift of Understanding.",
+    "image": "/images/gene-keys/keys/gk-4.png"
+  },
+  {
+    "id": "gk-5",
+    "type": "gene-key",
+    "name": "Gene Key 5: Timelessness",
+    "symbol": "5",
+    "keyNumber": 5,
+    "shadow": {
+      "name": "Impatience",
+      "keyExpression": "Restlessness, anxiety about time, rushing, frustration, fear of mortality",
+      "description": "The shadow of Impatience is rooted in the deep fear of mortality that haunts humanity. When we feel that time is running out, we either rush frantically to accomplish things before it's too late, or we collapse into resigned hopelessness. This shadow creates a constant undercurrent of anxiety and restlessness, making it impossible to truly rest in the present moment. Impatience is ultimately a war against the natural rhythms of life.",
+      "repressiveNature": "Resigned waiting - passive frustration, feeling stuck, suppressed impatience manifesting as depression or apathy",
+      "reactiveNature": "Frantic rushing - constant busyness, addiction to activity, unable to be still, exhausting self and others"
+    },
+    "gift": {
+      "name": "Patience",
+      "keyExpression": "Natural timing, presence, trust in process, rhythm, sustainability",
+      "description": "The gift of Patience flowers when we surrender to the natural timing of life. This is not passive waiting but an active trust in the organic unfolding of events. Those with Patience understand that everything has its season - that rushing only creates resistance. This gift brings a deep sustainability to all endeavors, knowing that what is built with patience endures. Patience attunes us to life's natural rhythms and cycles."
+    },
+    "siddhi": {
+      "name": "Timelessness",
+      "keyExpression": "Eternal present, transcendence of linear time, liberation from mortality, supreme effortlessness",
+      "description": "The siddhi of Timelessness is the complete liberation from the illusion of linear time. At this frequency, one discovers that there is only ever this eternal moment - that past and future are constructs of the mind. In timelessness, the fear of death dissolves because one recognizes that what we truly are was never born and can never die. Life becomes a seamless flow of supreme effortlessness."
+    },
+    "programmingPartnerId": "gk-35",
+    "codonRingId": "ring-of-light",
+    "aminoAcidId": "threonine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-5",
+    "iChingHexagram": 5,
+    "tropicalSignId": "scorpio",
+    "degreeStart": 235,
+    "degreeEnd": 240.625,
+    "url": "https://genekeys.com/gene-key-5/",
+    "description": "Gene Key 5: Impatience → Patience → Timelessness. This key invites contemplation on the transformation from Impatience to Timelessness through the gift of Patience.",
+    "image": "/images/gene-keys/keys/gk-5.png"
+  },
+  {
+    "id": "gk-6",
+    "type": "gene-key",
+    "name": "Gene Key 6: Peace",
+    "symbol": "6",
+    "keyNumber": 6,
+    "shadow": {
+      "name": "Conflict",
+      "keyExpression": "Emotional volatility, battle of sexes, defensiveness, war",
+      "description": "The shadow of Conflict runs deep in human history - it is the pattern of emotional reactivity that has fueled wars between individuals, genders, nations, and religions. At this frequency, we are caught in cycles of emotional volatility, either suppressing our feelings until they explode or expressing them without regard for timing or impact. Conflict arises when emotional energy has no healthy channel for expression.",
+      "repressiveNature": "Over-attentive - maintaining peace at any cost regardless of personal compromise, people pleasers who sweep conflict under the carpet, deeply false nature invoking unconscious distrust",
+      "reactiveNature": "Tactless - unable to contain emotions, lack of emotional tact and timing, always finding themselves in difficult situations, lashing out and storming away, assuming problem is always in others"
+    },
+    "gift": {
+      "name": "Diplomacy",
+      "keyExpression": "Emotional maturity, tactful honesty, right timing, dissolving barriers",
+      "description": "The gift of Diplomacy emerges from emotional maturity - the capacity to feel deeply while choosing wisely how and when to express those feelings. True diplomacy is not suppression but timing, finding the moment when truth can be heard rather than triggering defensiveness. Those with this gift active become natural peacemakers, able to dissolve barriers between people and help transform conflict into understanding through their emotional wisdom."
+    },
+    "siddhi": {
+      "name": "Peace",
+      "keyExpression": "Ultimate emptiness, transcendence of duality, rainbow body, body of glory",
+      "description": "The siddhi of Peace is the ultimate transcendence of all duality and conflict. At this frequency, one becomes an embodiment of peace itself - not as an achievement but as a recognition of what has always been present beneath the turbulence of emotions. This is the peace that passes understanding, the stillness at the heart of the storm. In Tibetan tradition, this state manifests as the rainbow body - the complete transformation of conflict into pure light."
+    },
+    "programmingPartnerId": "gk-36",
+    "codonRingId": "ring-of-alchemy",
+    "aminoAcidId": "glycine",
+    "physiology": "Mesenteric Plexus (Lumbar Ganglia)",
+    "hdGateId": "gate-6",
+    "iChingHexagram": 6,
+    "tropicalSignId": "virgo",
+    "degreeStart": 153.875,
+    "degreeEnd": 159.5,
+    "url": "https://genekeys.com/gene-key-6/",
+    "description": "Gene Key 6: Conflict → Diplomacy → Peace. This key invites contemplation on the transformation from Conflict to Peace through the gift of Diplomacy.",
+    "image": "/images/gene-keys/keys/gk-6.png"
+  },
+  {
+    "id": "gk-7",
+    "type": "gene-key",
+    "name": "Gene Key 7: Virtue",
+    "symbol": "7",
+    "keyNumber": 7,
+    "shadow": {
+      "name": "Division",
+      "keyExpression": "Hierarchy, power struggles, elitism, separation of leaders and followers",
+      "description": "The shadow of Division creates artificial hierarchies that separate people into leaders and followers, the powerful and the powerless. At this frequency, we either grasp for power over others or give our power away completely. This shadow has shaped human societies throughout history, creating structures of dominance and submission that prevent the emergence of true collaborative leadership.",
+      "repressiveNature": "Subservient - giving away power to others, following without questioning, unable to take initiative, victim mentality",
+      "reactiveNature": "Authoritarian - need to control and dominate others, seeing relationships in terms of power and hierarchy, unable to share leadership"
+    },
+    "gift": {
+      "name": "Guidance",
+      "keyExpression": "Natural leadership, democratic spirit, empowering others, finding your role",
+      "description": "The gift of Guidance represents a new model of leadership - one that empowers rather than controls. Those with this gift active understand that true leadership is about helping each person find their unique role and contribution. Guidance brings a democratic spirit that sees the leader as one who serves the whole, not one who dominates from above. This gift helps groups self-organize around shared purpose."
+    },
+    "siddhi": {
+      "name": "Virtue",
+      "keyExpression": "Servant leadership, humility, natural authority, virtue is its own reward",
+      "description": "The siddhi of Virtue represents the flowering of servant leadership - authority that arises naturally from inner purity rather than external position. At this frequency, one leads by example rather than command, inspiring others through the quality of their being rather than the force of their will. Virtue is its own reward - those who embody it have no need for recognition because integrity itself brings fulfillment."
+    },
+    "programmingPartnerId": "gk-13",
+    "codonRingId": "ring-of-union",
+    "aminoAcidId": "valine",
+    "physiology": "Diaphragm",
+    "hdGateId": "gate-7",
+    "iChingHexagram": 7,
+    "tropicalSignId": "leo",
+    "degreeStart": 129.5,
+    "degreeEnd": 135.125,
+    "url": "https://genekeys.com/gene-key-7/",
+    "description": "Gene Key 7: Division → Guidance → Virtue. This key invites contemplation on the transformation from Division to Virtue through the gift of Guidance.",
+    "image": "/images/gene-keys/keys/gk-7.png"
+  },
+  {
+    "id": "gk-8",
+    "type": "gene-key",
+    "name": "Gene Key 8: Exquisiteness",
+    "symbol": "8",
+    "keyNumber": 8,
+    "shadow": {
+      "name": "Mediocrity",
+      "keyExpression": "Conformity, fear of standing out, comparing yourself to others, losing your uniqueness",
+      "description": "The shadow of Mediocrity is the great leveler - the fear-based tendency to blend in, to not stand out, to measure ourselves against others and always come up short. At this frequency, we either suppress our uniqueness to fit in, or we try too hard to be different, which is just another form of inauthenticity. Mediocrity robs us of our creative birthright by convincing us that we have nothing special to offer.",
+      "repressiveNature": "Self-effacing - hiding your light, making yourself smaller, afraid to express your uniqueness, blending into the background",
+      "reactiveNature": "Trying too hard - forcing originality, being different for the sake of being different, attention-seeking behavior, compensating for feelings of ordinariness"
+    },
+    "gift": {
+      "name": "Style",
+      "keyExpression": "Individuality, creative self-expression, originality, breaking the mold",
+      "description": "The gift of Style emerges when we stop trying to be different and simply allow our natural uniqueness to express itself. True style cannot be copied or manufactured - it arises from the authentic expression of who we are. Those with this gift active bring a creative originality to everything they do, not through effort but through the natural overflow of their inner uniqueness. Style breaks the mold by being itself."
+    },
+    "siddhi": {
+      "name": "Exquisiteness",
+      "keyExpression": "Diamond of the self, perfection in imperfection, unique essence",
+      "description": "The siddhi of Exquisiteness reveals the diamond nature of the self - the recognition that each being is a unique facet of the infinite, irreplaceable and perfect in their imperfection. At this frequency, one's very presence becomes a work of art, a living expression of the divine creativity that animates all existence. Exquisiteness sees that every detail of creation is crafted with sublime care."
+    },
+    "programmingPartnerId": "gk-14",
+    "codonRingId": "ring-of-water",
+    "aminoAcidId": "phenylalanine",
+    "physiology": "Thyroid (Adam's Apple)",
+    "hdGateId": "gate-8",
+    "iChingHexagram": 8,
+    "tropicalSignId": "taurus",
+    "degreeStart": 45,
+    "degreeEnd": 50.625,
+    "url": "https://genekeys.com/gene-key-8/",
+    "description": "Gene Key 8: Mediocrity → Style → Exquisiteness. This key invites contemplation on the transformation from Mediocrity to Exquisiteness through the gift of Style.",
+    "image": "/images/gene-keys/keys/gk-8.png"
+  },
+  {
+    "id": "gk-9",
+    "type": "gene-key",
+    "name": "Gene Key 9: Invincibility",
+    "symbol": "9",
+    "keyNumber": 9,
+    "shadow": {
+      "name": "Inertia",
+      "keyExpression": "Inability to act, feeling stuck, overwhelm, paralysis by analysis",
+      "description": "The shadow of Inertia manifests as the inability to get things moving or to sustain momentum once started. At this frequency, we either remain frozen in indecision and endless planning, or we scatter our energy across too many projects, never completing anything. Inertia is the enemy of manifestation - it keeps our dreams forever in the realm of potential, never becoming reality.",
+      "repressiveNature": "Paralyzed - frozen in place, unable to make decisions or take action, waiting for the perfect moment that never comes, stuck in planning without doing",
+      "reactiveNature": "Scattered - starting many things but finishing nothing, jumping from one thing to another, unable to sustain focus, frittering energy away"
+    },
+    "gift": {
+      "name": "Determination",
+      "keyExpression": "Focus, perseverance, precision, power of small steps",
+      "description": "The gift of Determination harnesses the power of focused attention and persistent small steps. This is the understanding that great things are accomplished not through grand gestures but through consistent, daily effort. Those with this gift active have the capacity to maintain focus over long periods, chipping away at large goals with precision and patience. Determination transforms dreams into tangible reality through the power of accumulated small actions."
+    },
+    "siddhi": {
+      "name": "Invincibility",
+      "keyExpression": "Indestructible essence, spiritual warrior, power of the infinitesimal",
+      "description": "The siddhi of Invincibility reveals that our true essence cannot be harmed, diminished, or destroyed. At this frequency, one becomes a spiritual warrior whose power lies not in force but in the invincible nature of consciousness itself. This is the power of the infinitesimal - the recognition that even the smallest point contains the whole, and that what we truly are is beyond all threat."
+    },
+    "programmingPartnerId": "gk-16",
+    "codonRingId": "ring-of-light",
+    "aminoAcidId": "threonine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-9",
+    "iChingHexagram": 9,
+    "tropicalSignId": "scorpio",
+    "degreeStart": 229.25,
+    "degreeEnd": 234.875,
+    "url": "https://genekeys.com/gene-key-9/",
+    "description": "Gene Key 9: Inertia → Determination → Invincibility. This key invites contemplation on the transformation from Inertia to Invincibility through the gift of Determination.",
+    "image": "/images/gene-keys/keys/gk-9.png"
+  },
+  {
+    "id": "gk-10",
+    "type": "gene-key",
+    "name": "Gene Key 10: Being",
+    "symbol": "10",
+    "keyNumber": 10,
+    "shadow": {
+      "name": "Self-Obsession",
+      "keyExpression": "Self-consciousness, narcissism, constant self-monitoring, worrying about how you appear",
+      "description": "The shadow of Self-Obsession traps us in an endless loop of self-consciousness - constantly monitoring how we appear, what others think, and whether we're measuring up. At this frequency, the sense of self becomes a burden rather than a gift. We either hide ourselves away in false humility or demand constant attention and validation. Both extremes stem from the same root: identification with a separate self that feels fundamentally insecure.",
+      "repressiveNature": "Self-effacing - hiding yourself, being overly humble, making yourself invisible, fear of being seen",
+      "reactiveNature": "Narcissistic - constant need for attention and validation, making everything about you, inability to see beyond your own concerns"
+    },
+    "gift": {
+      "name": "Naturalness",
+      "keyExpression": "Authenticity, unselfconscious presence, being yourself, comfortable in your own skin",
+      "description": "The gift of Naturalness is the blessed relief of forgetting yourself. When we stop constantly monitoring and adjusting how we appear, we relax into authentic presence. Those with this gift active are comfortable in their own skin - not because they've perfected themselves, but because they've stopped trying. Naturalness is magnetic because it gives others permission to also be themselves."
+    },
+    "siddhi": {
+      "name": "Being",
+      "keyExpression": "Pure presence, natural state, being at ease, no self-consciousness",
+      "description": "The siddhi of Being is the complete dissolution of self-consciousness into pure presence. At this frequency, there is no longer anyone watching or being watched - just the simple miracle of being. This is our natural state before the mind created the story of a separate self. Being is not something we do or achieve; it is what remains when all doing and achieving fall away."
+    },
+    "programmingPartnerId": "gk-15",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Chest (Heart)",
+    "hdGateId": "gate-10",
+    "iChingHexagram": 10,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 240,
+    "degreeEnd": 245.625,
+    "url": "https://genekeys.com/gene-key-10/",
+    "description": "Gene Key 10: Self-Obsession → Naturalness → Being. This key invites contemplation on the transformation from Self-Obsession to Being through the gift of Naturalness.",
+    "image": "/images/gene-keys/keys/gk-10.png"
+  },
+  {
+    "id": "gk-11",
+    "type": "gene-key",
+    "name": "Gene Key 11: Light",
+    "symbol": "11",
+    "keyNumber": 11,
+    "shadow": {
+      "name": "Obscurity",
+      "keyExpression": "Not seeing clearly, confusion, lost in the fog, unable to envision possibilities",
+      "description": "The shadow of Obscurity clouds our inner vision, making it impossible to see the way forward. At this frequency, we either sink into hopeless pessimism where no better future seems possible, or we escape into fantasy, creating beautiful visions that have no connection to reality. Obscurity is the fog of confusion that separates us from the natural light of clarity that is always available.",
+      "repressiveNature": "Hopeless - seeing only problems, no vision for how things could be better, pessimism, darkness obscuring the light",
+      "reactiveNature": "Fantasist - lost in unrealistic visions, disconnected from reality, unable to ground ideals in practical action"
+    },
+    "gift": {
+      "name": "Idealism",
+      "keyExpression": "Vision, inspiration, seeing the highest possibility, catalyzing others",
+      "description": "The gift of Idealism is the capacity to see the highest possibility in any situation. This is not escapist fantasy but grounded vision - the ability to perceive what wants to emerge and to inspire others toward that possibility. Those with this gift active become catalysts for transformation, holding a vision of what could be while staying connected to what is. Idealism lights the way forward."
+    },
+    "siddhi": {
+      "name": "Light",
+      "keyExpression": "Pure radiance, light of Eden, illumination of consciousness",
+      "description": "The siddhi of Light is the recognition that consciousness itself is luminous - that we are made of the same light that illuminates all perception. At this frequency, one becomes a beacon of clarity, their very presence dispelling the fog of confusion in others. This is the light of Eden, the original radiance of creation that has never been extinguished, only temporarily obscured."
+    },
+    "programmingPartnerId": "gk-12",
+    "codonRingId": "ring-of-light",
+    "aminoAcidId": "threonine",
+    "physiology": "Pituitary Gland",
+    "hdGateId": "gate-11",
+    "iChingHexagram": 11,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 240.625,
+    "degreeEnd": 246.25,
+    "url": "https://genekeys.com/gene-key-11/",
+    "description": "Gene Key 11: Obscurity → Idealism → Light. This key invites contemplation on the transformation from Obscurity to Light through the gift of Idealism.",
+    "image": "/images/gene-keys/keys/gk-11.png"
+  },
+  {
+    "id": "gk-12",
+    "type": "gene-key",
+    "name": "Gene Key 12: Purity",
+    "symbol": "12",
+    "keyNumber": 12,
+    "shadow": {
+      "name": "Vanity",
+      "keyExpression": "Surface focus, concern with image, trying to appear pure or spiritual, false righteousness",
+      "description": "The shadow of Vanity is preoccupation with surface appearance rather than inner substance. At this frequency, we become obsessed with how we look - either constantly criticizing ourselves or carefully cultivating an image of perfection. Spiritual vanity is particularly insidious: the attempt to appear pure, enlightened, or holy while the heart remains closed. Vanity keeps us trapped in a hall of mirrors.",
+      "repressiveNature": "Self-deprecating - focusing on your flaws, unable to see your beauty, rejecting compliments, harsh self-judgment",
+      "reactiveNature": "Vain - obsessed with appearance and image, trying to appear better than you are, spiritual materialism, false purity"
+    },
+    "gift": {
+      "name": "Discrimination",
+      "keyExpression": "Discernment, knowing what serves, clarity of choice, refinement",
+      "description": "The gift of Discrimination is the capacity to discern what truly serves from what merely appears to serve. This is not judgment but clarity - the ability to see through surface appearances to the essence beneath. Those with this gift active develop refined taste in all areas of life, naturally gravitating toward what is pure and true while gently releasing what is not. Discrimination is the razor's edge of discernment."
+    },
+    "siddhi": {
+      "name": "Purity",
+      "keyExpression": "Pure heart, innocence, unstained essence, pristine awareness",
+      "description": "The siddhi of Purity is the recognition that our essential nature has never been stained by any experience or action. At this frequency, one becomes transparent - there is nothing to hide because there is nothing impure. Purity is not about being morally perfect but about having a heart so open that nothing sticks to it. Like water, which remains itself regardless of what passes through, pure awareness is unstained by all phenomena."
+    },
+    "programmingPartnerId": "gk-11",
+    "codonRingId": "the-ring-of-secrets-(the-ring-of-trials)",
+    "aminoAcidId": "none-(terminator-codon)",
+    "physiology": "Thyroid",
+    "hdGateId": "gate-12",
+    "iChingHexagram": 12,
+    "tropicalSignId": "gemini",
+    "degreeStart": 75.125,
+    "degreeEnd": 80.75,
+    "url": "https://genekeys.com/gene-key-12/",
+    "description": "Gene Key 12: Vanity → Discrimination → Purity. This key invites contemplation on the transformation from Vanity to Purity through the gift of Discrimination.",
+    "image": "/images/gene-keys/keys/gk-12.png"
+  },
+  {
+    "id": "gk-13",
+    "type": "gene-key",
+    "name": "Gene Key 13: Empathy",
+    "symbol": "13",
+    "keyNumber": 13,
+    "shadow": {
+      "name": "Discord",
+      "keyExpression": "Not hearing others, misunderstanding, talking past each other, breakdown of communication",
+      "description": "The shadow of Discord arises when we fail to truly listen to one another. At this frequency, communication breaks down - we talk past each other, caught up in our own stories and unable to hear the story of another. Discord manifests either as silent suffering where truth remains unspoken, or as aggressive talking over others in the desperate need to be heard. Both forms create separation and misunderstanding.",
+      "repressiveNature": "Silent suffering - unable to voice truth, swallowing feelings, not speaking up, passive-aggressive communication",
+      "reactiveNature": "Hectoring - talking over others, not listening, imposing your view, aggressive communication, needing to be heard at any cost"
+    },
+    "gift": {
+      "name": "Discernment",
+      "keyExpression": "Deep listening, hearing beneath words, understanding essence, witnessing",
+      "description": "The gift of Discernment is the art of deep listening - hearing not just words but the essence that seeks expression through them. Those with this gift active become natural listeners, able to witness others without judgment and to hear what is really being communicated beneath the surface. Discernment in listening creates a safe space where truth can emerge, transforming discord into understanding."
+    },
+    "siddhi": {
+      "name": "Empathy",
+      "keyExpression": "Complete unity, listening through love, feeling all beings as yourself",
+      "description": "The siddhi of Empathy is the complete dissolution of the barrier between self and other. At this frequency, one feels all beings as oneself - their joy, their suffering, their hopes and fears become directly known. This is not sympathy from a distance but unity so complete that the question of whether to help no longer arises; one simply responds as naturally as the left hand helps the right."
+    },
+    "programmingPartnerId": "gk-7",
+    "codonRingId": "ring-of-purification",
+    "aminoAcidId": "glutamine",
+    "physiology": "Amygdala",
+    "hdGateId": "gate-13",
+    "iChingHexagram": 13,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 279.5,
+    "degreeEnd": 285.125,
+    "url": "https://genekeys.com/gene-key-13/",
+    "description": "Gene Key 13: Discord → Discernment → Empathy. This key invites contemplation on the transformation from Discord to Empathy through the gift of Discernment.",
+    "image": "/images/gene-keys/keys/gk-13.png"
+  },
+  {
+    "id": "gk-14",
+    "type": "gene-key",
+    "name": "Gene Key 14: Bounteousness",
+    "symbol": "14",
+    "keyNumber": 14,
+    "shadow": {
+      "name": "Compromise",
+      "keyExpression": "Selling out, betraying your values, sacrificing quality for expedience, scarcity mentality",
+      "description": "The shadow of Compromise arises from a scarcity mentality that sees resources as limited and success as requiring sacrifice of integrity. At this frequency, we either sabotage our own prosperity, feeling unworthy of abundance, or we grasp and hoard, willing to compromise our values for material gain. Both patterns stem from the fear that there isn't enough and that we must somehow cheat life to get our share.",
+      "repressiveNature": "Self-sabotaging - unable to accept prosperity, feeling unworthy, blocking your own success, poverty consciousness",
+      "reactiveNature": "Greedy - grasping for more, never satisfied, willing to compromise integrity for gain, exploitative"
+    },
+    "gift": {
+      "name": "Competence",
+      "keyExpression": "Mastery, skill, excellence, stewardship of resources",
+      "description": "The gift of Competence is the natural result of aligning our skills with what we love. When we become excellent at something through devotion rather than compromise, prosperity follows naturally. Those with this gift active become masterful stewards of resources - skilled at directing energy, time, and money toward what truly matters. Competence attracts abundance because excellence is magnetic."
+    },
+    "siddhi": {
+      "name": "Bounteousness",
+      "keyExpression": "Radiating prosperity, overflow, abundance as natural state, cornucopia",
+      "description": "The siddhi of Bounteousness is the recognition that the universe is infinitely abundant and that our natural state is overflow. At this frequency, one becomes a cornucopia - a living source of blessing that enriches everything it touches. Bounteousness is not about having more but about being a channel for the infinite generosity of existence itself. What flows through us can never be depleted."
+    },
+    "programmingPartnerId": "gk-8",
+    "codonRingId": "ring-of-fire",
+    "aminoAcidId": "lysine",
+    "physiology": "Small Intestine",
+    "hdGateId": "gate-14",
+    "iChingHexagram": 14,
+    "tropicalSignId": "scorpio",
+    "degreeStart": 210,
+    "degreeEnd": 215.625,
+    "url": "https://genekeys.com/gene-key-14/",
+    "description": "Gene Key 14: Compromise → Competence → Bounteousness. This key invites contemplation on the transformation from Compromise to Bounteousness through the gift of Competence.",
+    "image": "/images/gene-keys/keys/gk-14.png"
+  },
+  {
+    "id": "gk-15",
+    "type": "gene-key",
+    "name": "Gene Key 15: Florescence",
+    "symbol": "15",
+    "keyNumber": 15,
+    "shadow": {
+      "name": "Dullness",
+      "keyExpression": "Loss of vitality, monotony, feeling dead inside, going through the motions",
+      "description": "The shadow of Dullness is the loss of the life force that makes existence sparkle. At this frequency, we either resign ourselves to a gray, monotonous existence, or we desperately seek external stimulation to feel alive. Dullness is the deadening of the senses that happens when we disconnect from the natural rhythms and diversity of life. It is the inability to see the extraordinary within the ordinary.",
+      "repressiveNature": "Resigned - accepting a dull life, giving up on joy, suppressing life force, numb and disconnected",
+      "reactiveNature": "Frenetic - desperately seeking stimulation, addicted to excitement, unable to find satisfaction, restless"
+    },
+    "gift": {
+      "name": "Magnetism",
+      "keyExpression": "Natural attraction, drawing people and resources, charisma, life force vitality",
+      "description": "The gift of Magnetism arises when we reconnect with our life force and allow it to flow freely. Those with this gift active have a natural charisma that draws people and resources toward them without effort. This magnetism comes not from trying to be attractive but from being fully alive - engaged with existence in a way that makes everything more vivid and interesting. Vitality itself is magnetic."
+    },
+    "siddhi": {
+      "name": "Florescence",
+      "keyExpression": "Eternally flowering spring, continuous renewal, beauty of diversity, celebration of life",
+      "description": "The siddhi of Florescence is the state of eternal spring - continuous renewal and flowering without end. At this frequency, one embodies the principle that life is always creating new forms, always celebrating itself through infinite diversity. Florescence sees that every being, every moment, every experience is a unique flower in the garden of existence, never to be repeated and utterly precious."
+    },
+    "programmingPartnerId": "gk-10",
+    "codonRingId": "ring-of-seeking",
+    "aminoAcidId": "serine",
+    "physiology": "Liver",
+    "hdGateId": "gate-15",
+    "iChingHexagram": 15,
+    "tropicalSignId": "gemini",
+    "degreeStart": 80.75,
+    "degreeEnd": 86.375,
+    "url": "https://genekeys.com/gene-key-15/",
+    "description": "Gene Key 15: Dullness → Magnetism → Florescence. This key invites contemplation on the transformation from Dullness to Florescence through the gift of Magnetism.",
+    "image": "/images/gene-keys/keys/gk-15.png"
+  },
+  {
+    "id": "gk-16",
+    "type": "gene-key",
+    "name": "Gene Key 16: Mastery",
+    "symbol": "16",
+    "keyNumber": 16,
+    "shadow": {
+      "name": "Indifference",
+      "keyExpression": "Apathy, diffusion of responsibility, pipe dreams, fear of being different",
+      "description": "The shadow of Indifference is the collective apathy that allows injustice and suffering to continue. At this frequency, we either convince ourselves that nothing can be done and retreat into passive acceptance, or we become obsessed with techniques and systems that give the illusion of control while avoiding genuine engagement. Indifference is the denial of our natural enthusiasm and the skills we came here to share.",
+      "repressiveNature": "Gullible - becoming victims of mass propaganda, using excuses that nothing can be done, burying head in sand, fostering individual weakness and powerlessness",
+      "reactiveNature": "Self-deluded - obsessed with structure and techniques, building mental walls, convinced by own propaganda, huge anger seething behind walls"
+    },
+    "gift": {
+      "name": "Versatility",
+      "keyExpression": "Talent, genius, interchangeable skills, sustainability, true prosperity",
+      "description": "The gift of Versatility is the natural expression of our multifaceted genius. Those with this gift active discover that they have many talents, and more importantly, that these skills are transferable across different fields. Versatility brings sustainable prosperity because it allows us to adapt and contribute in multiple ways. This is not scattered dilettantism but integrated capability that serves the whole."
+    },
+    "siddhi": {
+      "name": "Mastery",
+      "keyExpression": "Magical genius, miracle siddhis, divine blueprints, mastery of all fields",
+      "description": "The siddhi of Mastery reveals that at the deepest level, all skills are one skill - the capacity to channel divine intelligence. At this frequency, one becomes a master of any field they turn their attention to, not through years of practice but through direct access to the underlying blueprints of creation. This is magical genius - the ability to perform what appears miraculous because one operates from unity consciousness."
+    },
+    "programmingPartnerId": "gk-9",
+    "codonRingId": "ring-of-prosperity",
+    "aminoAcidId": "cysteine",
+    "physiology": "Parathyroid",
+    "hdGateId": "gate-16",
+    "iChingHexagram": 16,
+    "tropicalSignId": "gemini",
+    "degreeStart": 60,
+    "degreeEnd": 65.625,
+    "url": "https://genekeys.com/gene-key-16/",
+    "description": "Gene Key 16: Indifference → Versatility → Mastery. This key invites contemplation on the transformation from Indifference to Mastery through the gift of Versatility.",
+    "image": "/images/gene-keys/keys/gk-16.png"
+  },
+  {
+    "id": "gk-17",
+    "type": "gene-key",
+    "name": "Gene Key 17: Omniscience",
+    "symbol": "17",
+    "keyNumber": 17,
+    "shadow": {
+      "name": "Opinion",
+      "keyExpression": "Fixed views, mental rigidity, ideological identification, short-sightedness",
+      "description": "The shadow of Opinion traps us in a narrow corridor of perception, where we mistake our limited viewpoint for the whole truth. At this frequency, we either blindly adopt others' opinions without thinking, or we become rigidly attached to our own views, unable to see beyond them. Opinion is the enemy of true understanding because it stops inquiry and creates ideological walls between people.",
+      "repressiveNature": "Follower mentality - adopting others' opinions without critical thinking, going along with consensus, afraid to think independently",
+      "reactiveNature": "Opinionated - rigidly attached to own views, argumentative, needing to be right, ideological warfare"
+    },
+    "gift": {
+      "name": "Far-Sightedness",
+      "keyExpression": "Vision, seeing patterns, long-term perspective, strategic thinking",
+      "description": "The gift of Far-Sightedness opens when we release our attachment to being right and begin to see the bigger picture. This is the capacity to perceive patterns across time, to think strategically, and to hold a vision that extends beyond immediate concerns. Those with this gift active become natural visionaries, able to see where current trends are leading and to guide others toward better outcomes."
+    },
+    "siddhi": {
+      "name": "Omniscience",
+      "keyExpression": "All-seeing eye, divine perception, knowing all things, ultimate perspective",
+      "description": "The siddhi of Omniscience is the dissolution of all limited perspectives into the all-seeing eye of universal awareness. At this frequency, one perceives from the perspective of totality - knowing without needing to know, seeing without looking. This is divine perception that arises not from accumulating information but from becoming transparent to the intelligence that already knows all things."
+    },
+    "programmingPartnerId": "gk-18",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Pituitary Gland",
+    "hdGateId": "gate-17",
+    "iChingHexagram": 17,
+    "tropicalSignId": "aries",
+    "degreeStart": 5.625,
+    "degreeEnd": 11.25,
+    "url": "https://genekeys.com/gene-key-17/",
+    "description": "Gene Key 17: Opinion →  → Omniscience. This key invites contemplation on the transformation from Opinion to Omniscience through the gift of .",
+    "image": "/images/gene-keys/keys/gk-17.png"
+  },
+  {
+    "id": "gk-18",
+    "type": "gene-key",
+    "name": "Gene Key 18: Perfection",
+    "symbol": "18",
+    "keyNumber": 18,
+    "shadow": {
+      "name": "Judgement",
+      "keyExpression": "Critical mind, finding fault, perfectionism, condemning what is wrong",
+      "description": "The shadow of Judgement is the critical eye that sees what's wrong before seeing what's right. At this frequency, the mind becomes fixated on flaws - either turning this criticism inward in harsh self-judgment, or outward in chronic fault-finding with others and the world. Judgment creates separation and prevents the very healing it claims to seek, because it cannot accept things as they are.",
+      "repressiveNature": "Self-critical - harsh inner judge, never good enough, constant self-improvement projects, punishing yourself",
+      "reactiveNature": "Critical of others - finding fault everywhere, complaining, blaming, trying to fix others and the world"
+    },
+    "gift": {
+      "name": "Integrity",
+      "keyExpression": "Wholeness, alignment, healing presence, correcting patterns",
+      "description": "The gift of Integrity transforms the critical faculty into a healing presence. This is the capacity to perceive what is out of alignment and to gently correct it - not through judgment but through natural attunement to wholeness. Those with this gift active become natural healers, their very presence helping patterns to self-correct. Integrity means being whole, and from that wholeness, we can help others find their own."
+    },
+    "siddhi": {
+      "name": "Perfection",
+      "keyExpression": "Everything is perfect, healing power of mind, flawlessness in all",
+      "description": "The siddhi of Perfection is the revolutionary perception that everything is already perfect, including all apparent imperfection. At this frequency, one sees that what we call flaws are actually integral to a greater pattern of beauty. This is not passive acceptance but active recognition that the universe is continuously healing itself, and that our presence, rooted in this understanding, participates in that healing."
+    },
+    "programmingPartnerId": "gk-17",
+    "codonRingId": "ring-of-matter",
+    "aminoAcidId": "alanine",
+    "physiology": "Lymphatic System",
+    "hdGateId": "gate-18",
+    "iChingHexagram": 18,
+    "tropicalSignId": "virgo",
+    "degreeStart": 165.125,
+    "degreeEnd": 170.75,
+    "url": "https://genekeys.com/gene-key-18/",
+    "description": "Gene Key 18: Judgement → Integrity → Perfection. This key invites contemplation on the transformation from Judgement to Perfection through the gift of Integrity.",
+    "image": "/images/gene-keys/keys/gk-18.png"
+  },
+  {
+    "id": "gk-19",
+    "type": "gene-key",
+    "name": "Gene Key 19: Sacrifice",
+    "symbol": "19",
+    "keyNumber": 19,
+    "shadow": {
+      "name": "Co-dependence",
+      "keyExpression": "Needing to be needed, losing yourself in others, unable to say no, enmeshment",
+      "description": "The shadow of Co-dependence arises from a deep fear of being alone and unsupported. At this frequency, we lose ourselves in relationships, either becoming needy and clinging, or controlling others through our caretaking. Co-dependence creates enmeshed relationships where boundaries blur and both parties lose their authentic selves. It is the attempt to meet spiritual needs through emotional dependence on others.",
+      "repressiveNature": "Needy - constant need for reassurance and attention, clinging, fear of abandonment, victim mentality",
+      "reactiveNature": "Controlling through care - manipulating through giving, creating dependence, martyrdom, guilt-tripping"
+    },
+    "gift": {
+      "name": "Sensitivity",
+      "keyExpression": "Feeling deeply, energetic awareness, attuned to needs, responsive service",
+      "description": "The gift of Sensitivity transforms emotional vulnerability into a powerful capacity for attunement. Those with this gift active feel deeply and can sense the needs of others with great accuracy. This sensitivity, when healthy, becomes the foundation for true service - responding to what is actually needed rather than what will create dependence. Sensitivity is the capacity to feel the pulse of life in all its subtle gradations."
+    },
+    "siddhi": {
+      "name": "Sacrifice",
+      "keyExpression": "Giving yourself completely, future human being, surrender to divine will",
+      "description": "The siddhi of Sacrifice represents the complete giving of oneself to the whole. This is not the ego's sacrifice that expects reward, but the natural flowering of a heart that recognizes no separation. At this frequency, service becomes effortless because there is no sense of sacrifice - giving is receiving, and the boundaries between self and other have dissolved. This is the emergence of the future human being who lives for all."
+    },
+    "programmingPartnerId": "gk-33",
+    "codonRingId": "ring-of-gaia",
+    "aminoAcidId": "isoleucine",
+    "physiology": "Body Hair",
+    "hdGateId": "gate-19",
+    "iChingHexagram": 19,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 273.875,
+    "degreeEnd": 279.5,
+    "url": "https://genekeys.com/gene-key-19/",
+    "description": "Gene Key 19:  → Sensitivity → Sacrifice. This key invites contemplation on the transformation from  to Sacrifice through the gift of Sensitivity.",
+    "image": "/images/gene-keys/keys/gk-19.png"
+  },
+  {
+    "id": "gk-20",
+    "type": "gene-key",
+    "name": "Gene Key 20: Presence",
+    "symbol": "20",
+    "keyNumber": 20,
+    "shadow": {
+      "name": "Superficiality",
+      "keyExpression": "Living on the surface, avoiding depth, restlessness, busy mind",
+      "description": "The shadow of Superficiality keeps us skimming across the surface of life, never diving into the depths of the present moment. At this frequency, we either become numb and disconnected, mechanically going through the motions, or we fill every moment with activity and stimulation to avoid the stillness that might reveal what lies beneath. Superficiality is the avoidance of the profound intimacy of being.",
+      "repressiveNature": "Disconnected - cut off from inner life, no self-awareness, going through motions mechanically, numb",
+      "reactiveNature": "Hyperactive - constant mental activity, unable to be still, addicted to stimulation, scattered attention"
+    },
+    "gift": {
+      "name": "Self",
+      "keyExpression": "Self-awareness, witness consciousness, observing without identifying",
+      "description": "The gift of Self-Assurance is the awakening of witness consciousness - the capacity to observe our own experience without being lost in it. This is the beginning of true self-awareness, where we discover that we are not our thoughts, emotions, or circumstances, but the awareness that perceives them. Those with this gift active bring a quality of presence to their interactions that helps others also become more conscious."
+    },
+    "siddhi": {
+      "name": "Presence",
+      "keyExpression": "Sacred OM, eternal now, pure being, divine witnessing",
+      "description": "The siddhi of Presence is the complete absorption into the eternal now - the recognition that there is only ever this moment, and that this moment contains everything. At this frequency, one becomes the sacred OM, the vibration of pure being that underlies all existence. Presence is not something we do but what we are when we stop doing. It is the divine witnessing itself through human form."
+    },
+    "programmingPartnerId": "gk-34",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Brain Stem (Medulla)",
+    "hdGateId": "gate-20",
+    "iChingHexagram": 20,
+    "tropicalSignId": "taurus",
+    "degreeStart": 50.625,
+    "degreeEnd": 56.25,
+    "url": "https://genekeys.com/gene-key-20/",
+    "description": "Gene Key 20: Superficiality → Self → Presence. This key invites contemplation on the transformation from Superficiality to Presence through the gift of Self.",
+    "image": "/images/gene-keys/keys/gk-20.png"
+  },
+  {
+    "id": "gk-21",
+    "type": "gene-key",
+    "name": "Gene Key 21: Valour",
+    "symbol": "21",
+    "keyNumber": 21,
+    "shadow": {
+      "name": "Control",
+      "keyExpression": "Need to control, power struggles, domination, fear of chaos",
+      "description": "The shadow of Control emerges from a deep fear of chaos and powerlessness. At this frequency, we either suppress our power through rigid self-control, becoming tightly wound and unable to let go, or we project it outward in attempts to dominate and control others. Control is the ego's attempt to create safety in an uncertain world, but it inevitably creates the very resistance and chaos it fears.",
+      "repressiveNature": "Controlled - suppressing impulses, rigid self-control, afraid to let go, bottled up tension",
+      "reactiveNature": "Controlling - need to dominate others, power trips, micromanaging, unable to delegate or trust"
+    },
+    "gift": {
+      "name": "Authority",
+      "keyExpression": "Natural authority, taking control, responsibility, decisiveness",
+      "description": "The gift of Authority is the healthy expression of power that comes from inner alignment rather than external domination. Those with this gift active have a natural capacity to take charge of situations, make decisions, and lead others - not through force but through the clarity of their presence. True authority is responsibility accepted, the willingness to stand at the helm and steer with integrity."
+    },
+    "siddhi": {
+      "name": "Valour",
+      "keyExpression": "Noble life, spiritual warrior, courage in face of death, noble sacrifice",
+      "description": "The siddhi of Valour is the courage that arises when the fear of death has been transcended. At this frequency, one becomes a spiritual warrior - not fighting against life but for the highest values with complete willingness to sacrifice the small self for what is true. Valour is nobility of spirit, the capacity to live and die for something greater than personal survival."
+    },
+    "programmingPartnerId": "gk-48",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Lungs",
+    "hdGateId": "gate-21",
+    "iChingHexagram": 21,
+    "tropicalSignId": "aries",
+    "degreeStart": 11.25,
+    "degreeEnd": 16.875,
+    "url": "https://genekeys.com/gene-key-21/",
+    "description": "Gene Key 21: Control → Authority → Valour. This key invites contemplation on the transformation from Control to Valour through the gift of Authority.",
+    "image": "/images/gene-keys/keys/gk-21.png"
+  },
+  {
+    "id": "gk-22",
+    "type": "gene-key",
+    "name": "Gene Key 22: Grace",
+    "symbol": "22",
+    "keyNumber": 22,
+    "shadow": {
+      "name": "Dishonour",
+      "keyExpression": "Shame, loss of dignity, ungraceful conduct, crude behavior",
+      "description": "The shadow of Dishonour manifests when we lose touch with our inherent dignity and worth. At this frequency, we either carry deep shame that prevents us from holding our head high, or we act without honor, behaving crudely and lacking the natural elegance that comes from self-respect. Dishonour is the forgetting of our divine nature, leading to ungraceful conduct that demeans ourselves and others.",
+      "repressiveNature": "Ashamed - carrying shame, feeling dishonored, unable to hold head high, self-degrading",
+      "reactiveNature": "Dishonorable - acting without integrity, crude and coarse, lacking dignity, shameless"
+    },
+    "gift": {
+      "name": "Graciousness",
+      "keyExpression": "Grace under pressure, elegance, poise, handling difficulty beautifully",
+      "description": "The gift of Graciousness is the capacity to handle life's challenges with elegance and poise. Those with this gift active maintain their dignity even in difficult circumstances, responding to pressure with composure rather than reactivity. Graciousness transforms every situation through the beauty of its response, demonstrating that how we meet life's challenges is as important as the outcomes we achieve."
+    },
+    "siddhi": {
+      "name": "Grace",
+      "keyExpression": "Divine grace, beauty in all things, transformation of suffering, great mother",
+      "description": "The siddhi of Grace is the recognition that divine beauty permeates all of existence, including suffering. At this frequency, one becomes a vessel for the Great Mother's unconditional love, transforming pain into beauty through the simple act of presence. Grace is not earned but received - it is the blessing that descends when the heart opens fully to life exactly as it is."
+    },
+    "programmingPartnerId": "gk-47",
+    "codonRingId": "ring-of-divinity",
+    "aminoAcidId": "proline",
+    "physiology": "Solar Plexus (Cranial Ganglia)",
+    "hdGateId": "gate-22",
+    "iChingHexagram": 22,
+    "tropicalSignId": "aquarius",
+    "degreeStart": 309.5,
+    "degreeEnd": 315.125,
+    "url": "https://genekeys.com/gene-key-22/",
+    "description": "Gene Key 22: Dishonour → Graciousness → Grace. This key invites contemplation on the transformation from Dishonour to Grace through the gift of Graciousness.",
+    "image": "/images/gene-keys/keys/gk-22.png"
+  },
+  {
+    "id": "gk-23",
+    "type": "gene-key",
+    "name": "Gene Key 23: Quintessence",
+    "symbol": "23",
+    "keyNumber": 23,
+    "shadow": {
+      "name": "Complexity",
+      "keyExpression": "Over-complication, mental confusion, making things harder than necessary",
+      "description": "The shadow of Complexity traps the mind in endless elaboration, making things far more difficult than they need to be. At this frequency, we either become overwhelmed by complexity and give up, or we actively create unnecessary complications through over-thinking and intellectual obscurity. Complexity is the mind's way of avoiding the profound simplicity that lies at the heart of all understanding.",
+      "repressiveNature": "Confused - unable to understand, overwhelmed by complexity, giving up, mental fog",
+      "reactiveNature": "Convoluted - creating unnecessary complexity, over-thinking, intellectual obscurity, making things complicated"
+    },
+    "gift": {
+      "name": "Simplicity",
+      "keyExpression": "Making things simple, cutting to the essence, clear communication, elegant solutions",
+      "description": "The gift of Simplicity is the capacity to cut through complexity and find the essential core of any matter. Those with this gift active can take the most convoluted situations and reduce them to their fundamental elements, making understanding accessible to all. Simplicity in communication has the power to transmit deep truths in ways that resonate universally. This gift creates elegant solutions that others marvel at for their obvious rightness."
+    },
+    "siddhi": {
+      "name": "Quintessence",
+      "keyExpression": "Essential nature, alchemy of simplicity, distilled wisdom, pure essence",
+      "description": "The siddhi of Quintessence is the direct perception of the essential nature of all things - the fifth element that underlies the four. At this frequency, one's words become alchemical, distilling complex truths into their pure essence. Quintessence is the transmission of awakening through simplicity so profound it penetrates all defenses and awakens recognition in the heart of the listener."
+    },
+    "programmingPartnerId": "gk-43",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Throat (Thyroid)",
+    "hdGateId": "gate-23",
+    "iChingHexagram": 23,
+    "tropicalSignId": "taurus",
+    "degreeStart": 39.5,
+    "degreeEnd": 45.125,
+    "url": "https://genekeys.com/gene-key-23/",
+    "description": "Gene Key 23: Complexity → Simplicity → Quintessence. This key invites contemplation on the transformation from Complexity to Quintessence through the gift of Simplicity.",
+    "image": "/images/gene-keys/keys/gk-23.png"
+  },
+  {
+    "id": "gk-24",
+    "type": "gene-key",
+    "name": "Gene Key 24: Silence",
+    "symbol": "24",
+    "keyNumber": 24,
+    "shadow": {
+      "name": "Addiction",
+      "keyExpression": "Compulsive behavior, mental obsession, unable to stop thinking, addictive patterns",
+      "description": "The shadow of Addiction manifests as the mind's inability to stop its compulsive movement. At this frequency, we become trapped in mental loops, obsessively returning to the same thoughts, or we use external substances and activities to try to quiet the relentless mental chatter. Addiction in all its forms is ultimately an addiction to thinking - the desperate attempt to find peace through mental activity that only creates more noise.",
+      "repressiveNature": "Obsessive - stuck on certain thoughts, ruminating, mental loops, cannot let go of ideas",
+      "reactiveNature": "Addicted - compulsive behaviors, addicted to substances or activities, using external things to quiet the mind"
+    },
+    "gift": {
+      "name": "Invention",
+      "keyExpression": "Creative innovation, mental clarity, breakthrough insights, original thinking",
+      "description": "The gift of Invention arises when the mind's restless energy is channeled into creative innovation. Those with this gift active experience breakthrough insights that emerge from allowing thoughts to flow rather than trying to stop them. Invention transforms mental obsession into original thinking, using the mind's natural inventiveness to discover new solutions and create new forms."
+    },
+    "siddhi": {
+      "name": "Silence",
+      "keyExpression": "Ultimate addiction, divine silence, cessation of mental movement, pure stillness",
+      "description": "The siddhi of Silence is the ultimate addiction - complete absorption in the divine stillness that underlies all mental movement. At this frequency, the mind finally finds what it has always been seeking and comes to rest in pure awareness. Silence is not the absence of sound but the presence of that which cannot be disturbed by any noise. It is the peace that the mind has been searching for through all its restless activity."
+    },
+    "programmingPartnerId": "gk-44",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Neocortex",
+    "hdGateId": "gate-24",
+    "iChingHexagram": 24,
+    "tropicalSignId": "taurus",
+    "degreeStart": 35.625,
+    "degreeEnd": 41.25,
+    "url": "https://genekeys.com/gene-key-24/",
+    "description": "Gene Key 24: Addiction → Invention → Silence. This key invites contemplation on the transformation from Addiction to Silence through the gift of Invention.",
+    "image": "/images/gene-keys/keys/gk-24.png"
+  },
+  {
+    "id": "gk-25",
+    "type": "gene-key",
+    "name": "Gene Key 25: Universal Love",
+    "symbol": "25",
+    "keyNumber": 25,
+    "shadow": {
+      "name": "Constriction",
+      "keyExpression": "Resistance to life, feeling constricted, unable to accept, chronic tension",
+      "description": "The shadow of Constriction is the chronic holding pattern that results from resistance to life as it is. At this frequency, we either fight constantly against reality, exhausting ourselves in futile rebellion, or we collapse into resigned acceptance that breeds resentment. Constriction manifests as physical and emotional tension - the body's way of saying no to life while the heart secretly longs to say yes.",
+      "repressiveNature": "Resigned - giving up, passive acceptance that breeds resentment, victim mentality",
+      "reactiveNature": "Resistant - constantly fighting against reality, unable to accept anything, rebellious"
+    },
+    "gift": {
+      "name": "Acceptance",
+      "keyExpression": "Accepting what is, letting go of resistance, allowing life to be as it is",
+      "description": "The gift of Acceptance is the profound release that comes when we stop fighting with reality. This is not passive resignation but active embracing - meeting life exactly as it is with an open heart. Those with this gift active demonstrate that acceptance is the doorway to transformation, that by allowing what is, we create space for change. Acceptance relaxes the body, opens the heart, and frees energy that was bound in resistance."
+    },
+    "siddhi": {
+      "name": "Universal Love",
+      "keyExpression": "Love for all beings, myth of sacred wound, unconditional acceptance",
+      "description": "The siddhi of Universal Love is the discovery that our deepest wounds become portals to infinite compassion. At this frequency, the heart opens so completely that it embraces all of existence without condition. This love is not personal but cosmic - the recognition that every being is equally deserving of love, and that the love we feel for one is the same love we feel for all. Universal Love is the healing balm for the world's suffering."
+    },
+    "programmingPartnerId": "gk-46",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Heart",
+    "hdGateId": "gate-25",
+    "iChingHexagram": 25,
+    "tropicalSignId": "aries",
+    "degreeStart": 0,
+    "degreeEnd": 5.625,
+    "url": "https://genekeys.com/gene-key-25/",
+    "description": "Gene Key 25: Constriction → Acceptance → . This key invites contemplation on the transformation from Constriction to  through the gift of Acceptance.",
+    "image": "/images/gene-keys/keys/gk-25.png"
+  },
+  {
+    "id": "gk-26",
+    "type": "gene-key",
+    "name": "Gene Key 26: Invisibility",
+    "symbol": "26",
+    "keyNumber": 26,
+    "shadow": {
+      "name": "Pride",
+      "keyExpression": "Ego inflation, arrogance, need to be seen as special, false humility",
+      "description": "The shadow of Pride inflates the ego's need to be seen as special or superior. At this frequency, we either broadcast our accomplishments and demand recognition, or we hide our pride behind false humility, secretly craving the acknowledgment we pretend not to need. Pride is the ego's compensation for a deep sense of unworthiness - the more inflated we appear, the more hollow we feel inside.",
+      "repressiveNature": "False humility - hiding pride behind apparent modesty, seeking recognition through self-deprecation, reverse pride",
+      "reactiveNature": "Arrogant - openly prideful, needing to be seen as superior, looking down on others, boastful"
+    },
+    "gift": {
+      "name": "Artfulness",
+      "keyExpression": "Strategic manipulation, skillful means, sales genius, timing and positioning",
+      "description": "The gift of Artfulness is the capacity to influence outcomes through skillful timing and positioning. Those with this gift active understand the art of presentation - how to package ideas and offerings in ways that resonate. Artfulness is not manipulation but skillful means, using strategy in service of good outcomes. This gift brings natural sales ability and the capacity to persuade others through authentic influence."
+    },
+    "siddhi": {
+      "name": "Invisibility",
+      "keyExpression": "Sacred trickster, disappearing into oneness, formless presence, divine play",
+      "description": "The siddhi of Invisibility is the complete dissolution of personal identity into the cosmic play. At this frequency, one becomes a sacred trickster - present yet absent, visible yet formless. Invisibility is not hiding but transcending, becoming so transparent that one's actions appear to arise from nowhere. The ego disappears into oneness, and what remains is pure divine play, effortlessly accomplishing without a sense of doer."
+    },
+    "programmingPartnerId": "gk-45",
+    "codonRingId": "ring-of-light",
+    "aminoAcidId": "threonine",
+    "physiology": "Thymus Gland",
+    "hdGateId": "gate-26",
+    "iChingHexagram": 26,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 240.625,
+    "degreeEnd": 246.25,
+    "url": "https://genekeys.com/gene-key-26/",
+    "description": "Gene Key 26: Pride → Artfulness → Invisibility. This key invites contemplation on the transformation from Pride to Invisibility through the gift of Artfulness.",
+    "image": "/images/gene-keys/keys/gk-26.png"
+  },
+  {
+    "id": "gk-27",
+    "type": "gene-key",
+    "name": "Gene Key 27: Selflessness",
+    "symbol": "27",
+    "keyNumber": 27,
+    "shadow": {
+      "name": "Selfishness",
+      "keyExpression": "Taking without giving, hoarding, only caring about self, exploiting others",
+      "description": "The shadow of Selfishness arises from a perceived scarcity of love and nourishment. At this frequency, we either take without giving, hoarding resources out of fear that there won't be enough, or we become guilty about having natural needs and over-give to compensate. Selfishness is not about healthy self-care but about the fear-driven belief that caring for self and caring for others are in conflict.",
+      "repressiveNature": "Guilty - feeling bad about natural self-interest, unable to receive, over-giving to compensate for guilt",
+      "reactiveNature": "Greedy - taking without giving, exploiting others, hoarding resources, unable to share"
+    },
+    "gift": {
+      "name": "Altruism",
+      "keyExpression": "Caring for others, nurturing, selfless service, natural giving",
+      "description": "The gift of Altruism is the natural overflow of care that arises when our own needs are met. Those with this gift active become nurturers - naturally attending to the needs of others without losing themselves in the process. Altruism recognizes that giving and receiving are one flow, and that by nourishing others, we nourish ourselves. This gift creates communities of mutual care and support."
+    },
+    "siddhi": {
+      "name": "Selflessness",
+      "keyExpression": "Food of the gods, complete self-giving, nourishing all beings, sacrifice without sacrifice",
+      "description": "The siddhi of Selflessness is the complete dissolution of the boundary between giving and receiving. At this frequency, one becomes food for the gods - utterly consumed by love and continuously replenished by it. This is sacrifice without sacrifice, because the sense of a separate self that could lose something has dissolved. What remains is pure nourishment flowing through human form to all beings."
+    },
+    "programmingPartnerId": "gk-28",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-27",
+    "iChingHexagram": 27,
+    "tropicalSignId": "taurus",
+    "degreeStart": 30,
+    "degreeEnd": 35.625,
+    "url": "https://genekeys.com/gene-key-27/",
+    "description": "Gene Key 27: Selfishness → Altruism → Selflessness. This key invites contemplation on the transformation from Selfishness to Selflessness through the gift of Altruism.",
+    "image": "/images/gene-keys/keys/gk-27.png"
+  },
+  {
+    "id": "gk-28",
+    "type": "gene-key",
+    "name": "Gene Key 28: Immortality",
+    "symbol": "28",
+    "keyNumber": 28,
+    "shadow": {
+      "name": "Purposelessness",
+      "keyExpression": "No meaning in life, existential emptiness, going through motions, fear of death",
+      "description": "The shadow of Purposelessness is the existential crisis that haunts humanity - the terrifying possibility that life has no inherent meaning. At this frequency, we either collapse into resigned emptiness, going through the motions without genuine engagement, or we frantically search for purpose, trying one thing after another but never finding what we seek. Purposelessness is the shadow of death touching our lives.",
+      "repressiveNature": "Resigned - giving up on finding meaning, accepting emptiness as inevitable, going through motions without engagement",
+      "reactiveNature": "Frantic - desperately seeking purpose, trying everything, unable to commit to anything, restless searching"
+    },
+    "gift": {
+      "name": "Totality",
+      "keyExpression": "Playing full out, complete engagement, embracing all of life, no holding back",
+      "description": "The gift of Totality transforms the fear of meaninglessness into full engagement with life. Those with this gift active discover that purpose is not found but created through the quality of our presence. By bringing ourselves completely to whatever we do, holding nothing back, we discover that life becomes meaningful through our total participation in it. Totality is playing full out, regardless of outcome."
+    },
+    "siddhi": {
+      "name": "Immortality",
+      "keyExpression": "Embracing the dark side, deathless essence, eternal life, beyond life and death",
+      "description": "The siddhi of Immortality comes from fully embracing the dark side of existence - including death itself. At this frequency, one discovers that by dying to the fear of death, eternal life is revealed. This is not bodily immortality but the recognition that what we truly are is beyond birth and death. By facing the ultimate fear completely, we discover the deathless essence that was always present."
+    },
+    "programmingPartnerId": "gk-27",
+    "codonRingId": "ring-of-illusion",
+    "aminoAcidId": "asparaginic-acid",
+    "physiology": "Kidneys",
+    "hdGateId": "gate-28",
+    "iChingHexagram": 28,
+    "tropicalSignId": "libra",
+    "degreeStart": 195.125,
+    "degreeEnd": 200.75,
+    "url": "https://genekeys.com/gene-key-28/",
+    "description": "Gene Key 28: Purposelessness → Totality → Immortality. This key invites contemplation on the transformation from Purposelessness to Immortality through the gift of Totality.",
+    "image": "/images/gene-keys/keys/gk-28.png"
+  },
+  {
+    "id": "gk-29",
+    "type": "gene-key",
+    "name": "Gene Key 29: Devotion",
+    "symbol": "29",
+    "keyNumber": 29,
+    "shadow": {
+      "name": "Half-Heartedness",
+      "keyExpression": "Not fully committed, hedging bets, one foot out the door, unable to say yes",
+      "description": "The shadow of Half-Heartedness keeps one foot out the door in every commitment. At this frequency, we either remain timidly uncommitted, always keeping escape routes open, or we commit impulsively only to quit when things get challenging. Half-heartedness is the fear of fully saying yes to anything, protecting ourselves from potential disappointment by never being fully in.",
+      "repressiveNature": "Timid - afraid to commit, always keeping escape routes open, unable to take the leap, paralyzed by fear",
+      "reactiveNature": "Impulsive - committing rashly without thought, jumping in and out of commitments, serial quitter"
+    },
+    "gift": {
+      "name": "Commitment",
+      "keyExpression": "Full engagement, staying power, following through, sacred yes",
+      "description": "The gift of Commitment is the capacity to say yes fully and follow through despite challenges. Those with this gift active understand that true power comes from staying the course, that the magic happens when we continue beyond the point where others would give up. Commitment transforms half-hearted attempts into sacred vows, bringing staying power to relationships, projects, and spiritual paths."
+    },
+    "siddhi": {
+      "name": "Devotion",
+      "keyExpression": "Leaping into the void, complete surrender, total dedication, divine marriage",
+      "description": "The siddhi of Devotion is the complete surrender of the separate self into the arms of the beloved - whether that beloved is a person, a path, or the divine itself. At this frequency, commitment becomes total dedication, a leap into the void with no thought of return. Devotion is the divine marriage, the union of the individual will with universal will, where following through is no longer effort but ecstasy."
+    },
+    "programmingPartnerId": "gk-30",
+    "codonRingId": "ring-of-union",
+    "aminoAcidId": "valine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-29",
+    "iChingHexagram": 29,
+    "tropicalSignId": "leo",
+    "degreeStart": 135.125,
+    "degreeEnd": 140.75,
+    "url": "https://genekeys.com/gene-key-29/",
+    "description": "Gene Key 29:  → Commitment → Devotion. This key invites contemplation on the transformation from  to Devotion through the gift of Commitment.",
+    "image": "/images/gene-keys/keys/gk-29.png"
+  },
+  {
+    "id": "gk-30",
+    "type": "gene-key",
+    "name": "Gene Key 30: Rapture",
+    "symbol": "30",
+    "keyNumber": 30,
+    "shadow": {
+      "name": "Desire",
+      "keyExpression": "Craving, never satisfied, chasing after experiences, addictive seeking",
+      "description": "The shadow of Desire is the endless craving that keeps us forever reaching for the next experience. At this frequency, we are caught in a cycle of wanting - either numbing ourselves to desire through suppression, or lustfully chasing one thing after another, never satisfied. Desire at this level is not life-affirming but life-draining, an exhausting pursuit of fulfillment that always lies just out of reach.",
+      "repressiveNature": "Numb - suppressing desire, cutting off from wanting, resignation, deadness",
+      "reactiveNature": "Lustful - insatiable craving, chasing one experience after another, never satisfied, addictive patterns"
+    },
+    "gift": {
+      "name": "Lightness",
+      "keyExpression": "Joy, playfulness, not taking things too seriously, buoyancy of spirit",
+      "description": "The gift of Lightness transforms heavy desire into joyful play. Those with this gift active discover that by not taking desires so seriously, by holding them lightly, joy naturally arises. Lightness is the buoyancy of spirit that comes from releasing the grip of craving and allowing life to be a playful dance rather than a desperate chase. This gift brings humor, spontaneity, and infectious good spirits."
+    },
+    "siddhi": {
+      "name": "Rapture",
+      "keyExpression": "Celestial fire, divine intoxication, ecstatic union, bliss body",
+      "description": "The siddhi of Rapture is the fulfillment of all desire in ecstatic union with the divine. At this frequency, the celestial fire that was sought through external experiences is discovered within. Rapture is divine intoxication - the bliss that arises when the seeker dissolves into that which was always being sought. The body becomes a vessel for ecstasy, desire transformed into devotion."
+    },
+    "programmingPartnerId": "gk-29",
+    "codonRingId": "ring-of-purification",
+    "aminoAcidId": "glutamine",
+    "physiology": "Solar Plexus/Digestion",
+    "hdGateId": "gate-30",
+    "iChingHexagram": 30,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 290.75,
+    "degreeEnd": 296.375,
+    "url": "https://genekeys.com/gene-key-30/",
+    "description": "Gene Key 30: Desire → Lightness → Rapture. This key invites contemplation on the transformation from Desire to Rapture through the gift of Lightness.",
+    "image": "/images/gene-keys/keys/gk-30.png"
+  },
+  {
+    "id": "gk-31",
+    "type": "gene-key",
+    "name": "Gene Key 31: Humility",
+    "symbol": "31",
+    "keyNumber": 31,
+    "shadow": {
+      "name": "Arrogance",
+      "keyExpression": "Know-it-all attitude, imposing views on others, not listening, superiority complex",
+      "description": "The shadow of Arrogance manifests in the voice - either suppressed or imposed. At this frequency, we either close our throats and believe we have nothing worth saying, or we become bombastic, talking over others and imposing our views without listening. Arrogance is the inflation of our voice at the expense of others, or the deflation that silences our unique contribution to the whole.",
+      "repressiveNature": "Voiceless - unable to speak up, throat closed, swallowing words, believing you have nothing to say",
+      "reactiveNature": "Loud - imposing your voice on others, talking over people, need to be heard at any cost, bombastic"
+    },
+    "gift": {
+      "name": "Leadership",
+      "keyExpression": "Speaking truth, inspiring others, leading by example, voice of authority",
+      "description": "The gift of Leadership arises when the voice finds its natural authority. Those with this gift active speak truth in ways that inspire and guide others, leading not through dominance but through the clarity and integrity of their communication. True leadership is about lending your voice to what wants to emerge, becoming a spokesperson for something greater than personal opinion."
+    },
+    "siddhi": {
+      "name": "Humility",
+      "keyExpression": "Sounding your truth, bowing to the greater, recognition of insignificance, servant of the whole",
+      "description": "The siddhi of Humility is the paradox of leadership - the recognition that true authority comes from bowing to something greater. At this frequency, one's voice becomes a pure channel for universal truth, with no personal agenda to distort the message. Humility is not self-deprecation but the genuine recognition of our place in the vast cosmic order - significant as part of the whole, insignificant as separate individuals."
+    },
+    "programmingPartnerId": "gk-41",
+    "codonRingId": "ring-of-no-return",
+    "aminoAcidId": "tyrosine",
+    "physiology": "Throat/Thyroid",
+    "hdGateId": "gate-31",
+    "iChingHexagram": 31,
+    "tropicalSignId": "cancer",
+    "degreeStart": 110.75,
+    "degreeEnd": 116.375,
+    "url": "https://genekeys.com/gene-key-31/",
+    "description": "Gene Key 31: Arrogance → Leadership → Humility. This key invites contemplation on the transformation from Arrogance to Humility through the gift of Leadership.",
+    "image": "/images/gene-keys/keys/gk-31.png"
+  },
+  {
+    "id": "gk-32",
+    "type": "gene-key",
+    "name": "Gene Key 32: Veneration",
+    "symbol": "32",
+    "keyNumber": 32,
+    "shadow": {
+      "name": "Failure",
+      "keyExpression": "Fear of failing, anticipating failure, giving up too soon, learned helplessness",
+      "description": "The shadow of Failure is the deep-seated fear of not being good enough, of being found wanting. At this frequency, we either become defeatist, expecting failure and giving up before truly trying, or we drive ourselves compulsively to avoid the shame of failing. Both patterns stem from the same wound - the belief that our worth depends on our success, and that failure would reveal our fundamental inadequacy.",
+      "repressiveNature": "Defeatist - expecting to fail, giving up before trying, learned helplessness, no confidence",
+      "reactiveNature": "Driven - desperate to avoid failure, working compulsively, unable to rest, perfectionism"
+    },
+    "gift": {
+      "name": "Preservation",
+      "keyExpression": "Conserving what works, honoring tradition, maintaining continuity, stewardship",
+      "description": "The gift of Preservation transforms the fear of failure into wise stewardship of what has proven value. Those with this gift active understand the importance of conserving what works, of honoring tradition and maintaining continuity. Preservation is not resistance to change but discernment about what is worth keeping, what has stood the test of time, and what forms the foundation for future growth."
+    },
+    "siddhi": {
+      "name": "Veneration",
+      "keyExpression": "Ancestral reverence, honoring all lineages, recognizing the sacred in tradition, continuity of consciousness",
+      "description": "The siddhi of Veneration is the deep reverence for the continuity of consciousness that flows through all lineages. At this frequency, one recognizes that we stand on the shoulders of ancestors, that we are links in an unbroken chain of awareness stretching back through time. Veneration honors the sacred in all traditions, seeing the golden thread of truth that runs through every culture and every age."
+    },
+    "programmingPartnerId": "gk-42",
+    "codonRingId": "ring-of-illusion",
+    "aminoAcidId": "asparaginic-acid",
+    "physiology": "Spleen",
+    "hdGateId": "gate-32",
+    "iChingHexagram": 32,
+    "tropicalSignId": "libra",
+    "degreeStart": 183.875,
+    "degreeEnd": 189.5,
+    "url": "https://genekeys.com/gene-key-32/",
+    "description": "Gene Key 32: Failure → Preservation → Veneration. This key invites contemplation on the transformation from Failure to Veneration through the gift of Preservation.",
+    "image": "/images/gene-keys/keys/gk-32.png"
+  },
+  {
+    "id": "gk-33",
+    "type": "gene-key",
+    "name": "Gene Key 33: Revelation",
+    "symbol": "33",
+    "keyNumber": 33,
+    "shadow": {
+      "name": "Forgetting",
+      "keyExpression": "Unconsciousness, going through life on autopilot, losing yourself, amnesia of essence",
+      "description": "The shadow of Forgetting is the amnesia that veils our true nature. At this frequency, we move through life unconsciously, either completely lost in the dream of separation or scattered across so many distractions that we never touch our depths. Forgetting is the human condition - we forget who we are, where we came from, and why we're here, sleepwalking through an existence rich with meaning we cannot perceive.",
+      "repressiveNature": "Absent - completely lost in unconsciousness, no self-awareness, sleepwalking through life, dissociated",
+      "reactiveNature": "Scattered - jumping from one thing to another, unable to sustain attention, constant distraction, fragmented"
+    },
+    "gift": {
+      "name": "Mindfulness",
+      "keyExpression": "Present moment awareness, remembering to remember, conscious attention, wakefulness",
+      "description": "The gift of Mindfulness is the practice of remembering to remember - the cultivation of present moment awareness that gradually lifts the veil of forgetting. Those with this gift active develop the capacity to sustain conscious attention, to witness their experience without being lost in it. Mindfulness creates gaps in the dream through which reality can shine."
+    },
+    "siddhi": {
+      "name": "Revelation",
+      "keyExpression": "Final revelation, remembering who you are, unveiling truth, apocalypse of consciousness",
+      "description": "The siddhi of Revelation is the final remembering - the apocalypse (unveiling) of consciousness where we remember who we truly are. At this frequency, the forgetting is complete - not in the sense of being lost, but in the sense that there is no longer anyone to forget or remember. This is the ultimate revelation: that what we sought was always present, hidden only by the seeker."
+    },
+    "programmingPartnerId": "gk-19",
+    "codonRingId": "the-ring-of-trials-(ring-of-secrets)",
+    "aminoAcidId": "none-(terminator-codon)",
+    "physiology": "Throat/Thyroid",
+    "hdGateId": "gate-33",
+    "iChingHexagram": 33,
+    "tropicalSignId": "cancer",
+    "degreeStart": 116.375,
+    "degreeEnd": 122,
+    "url": "https://genekeys.com/gene-key-33/",
+    "description": "Gene Key 33: Forgetting → Mindfulness → Revelation. This key invites contemplation on the transformation from Forgetting to Revelation through the gift of Mindfulness.",
+    "image": "/images/gene-keys/keys/gk-33.png"
+  },
+  {
+    "id": "gk-34",
+    "type": "gene-key",
+    "name": "Gene Key 34: Majesty",
+    "symbol": "34",
+    "keyNumber": 34,
+    "shadow": {
+      "name": "Force",
+      "keyExpression": "Using power to dominate, forcing outcomes, aggression, violence",
+      "description": "The shadow of Force is the misuse of the tremendous power encoded in this key. At this frequency, we either give our power away and become victims, or we use aggression and force to dominate others. Force is power disconnected from wisdom and love - the raw beast without the beauty, the sword without the heart. It creates what it fears: more resistance, more conflict, more need to force.",
+      "repressiveNature": "Powerless - giving power away, victim mentality, unable to assert, collapsed",
+      "reactiveNature": "Forceful - using aggression to get your way, dominating others, violence, bulldozing"
+    },
+    "gift": {
+      "name": "Strength",
+      "keyExpression": "Inner power, backbone, standing firm, self-mastery",
+      "description": "The gift of Strength is the integration of power with presence. Those with this gift active have backbone - they can stand firm in the face of opposition without needing to force outcomes. True strength is self-mastery, the capacity to channel raw power toward constructive ends. This is the warrior who has learned when to fight and when to yield, when to advance and when to retreat."
+    },
+    "siddhi": {
+      "name": "Majesty",
+      "keyExpression": "Beauty of the beast, raw power in service of love, divine sovereignty, awesome presence",
+      "description": "The siddhi of Majesty is raw power in service of the divine - the beauty of the beast fully awakened. At this frequency, one embodies a presence so awesome it commands respect without force, so powerful it needs no display. Majesty is divine sovereignty, the recognition that true power flows from alignment with universal will rather than from domination of others."
+    },
+    "programmingPartnerId": "gk-20",
+    "codonRingId": "ring-of-destiny",
+    "aminoAcidId": "asparagine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-34",
+    "iChingHexagram": 34,
+    "tropicalSignId": "scorpio",
+    "degreeStart": 215.625,
+    "degreeEnd": 221.25,
+    "url": "https://genekeys.com/gene-key-34/",
+    "description": "Gene Key 34: Force → Strength → Majesty. This key invites contemplation on the transformation from Force to Majesty through the gift of Strength.",
+    "image": "/images/gene-keys/keys/gk-34.png"
+  },
+  {
+    "id": "gk-35",
+    "type": "gene-key",
+    "name": "Gene Key 35: Boundlessness",
+    "symbol": "35",
+    "keyNumber": 35,
+    "shadow": {
+      "name": "Hunger",
+      "keyExpression": "Insatiable craving, never enough, restless dissatisfaction, existential hunger",
+      "description": "The shadow of Hunger is the existential craving that can never be satisfied through external experience. At this frequency, we either resign ourselves to the impossibility of fulfillment, or we become ravenous, consuming one experience after another in a futile attempt to fill the void. Hunger at this level is not physical but spiritual - the soul's longing for something it cannot name.",
+      "repressiveNature": "Resigned - giving up on fulfillment, accepting that hunger can never be satisfied, resigned to emptiness",
+      "reactiveNature": "Ravenous - insatiable craving, consuming experiences, never satisfied, addictive seeking"
+    },
+    "gift": {
+      "name": "Adventure",
+      "keyExpression": "Seeking new experiences, exploratory spirit, pushing boundaries, pioneering",
+      "description": "The gift of Adventure transforms existential hunger into an exploratory spirit that delights in the journey rather than fixating on the destination. Those with this gift active bring a pioneering energy to life, pushing boundaries and seeking new experiences not from craving but from genuine curiosity. Adventure recognizes that life itself is the reward, and every experience adds to the richness of being."
+    },
+    "siddhi": {
+      "name": "Boundlessness",
+      "keyExpression": "Wormholes and miracles, infinite possibilities, transcending limitations, miracle consciousness",
+      "description": "The siddhi of Boundlessness is the discovery that what we truly hunger for is not any particular experience but the infinite itself. At this frequency, all limitations dissolve and one perceives the wormholes of possibility that exist in every moment. Boundlessness is miracle consciousness - the recognition that reality is far stranger and more magnificent than we imagined, and that nothing is truly impossible."
+    },
+    "programmingPartnerId": "gk-5",
+    "codonRingId": "ring-of-miracles",
+    "aminoAcidId": "tryptophan",
+    "physiology": "Thyroid/Parathyroid",
+    "hdGateId": "gate-35",
+    "iChingHexagram": 35,
+    "tropicalSignId": "gemini",
+    "degreeStart": 65.625,
+    "degreeEnd": 71.25,
+    "url": "https://genekeys.com/gene-key-35/",
+    "description": "Gene Key 35: Hunger → Adventure → Boundlessness. This key invites contemplation on the transformation from Hunger to Boundlessness through the gift of Adventure.",
+    "image": "/images/gene-keys/keys/gk-35.png"
+  },
+  {
+    "id": "gk-36",
+    "type": "gene-key",
+    "name": "Gene Key 36: Compassion",
+    "symbol": "36",
+    "keyNumber": 36,
+    "shadow": {
+      "name": "Turbulence",
+      "keyExpression": "Emotional chaos, crisis addiction, drama, restlessness, nervousness",
+      "description": "The shadow of Turbulence is the emotional chaos that results from resisting the full depth of human feeling. At this frequency, we either numb ourselves to avoid the intensity, or we become addicted to crisis and drama, mistaking turbulence for aliveness. Turbulence is the storm that arises when emotional energy has no healthy channel - it builds pressure until it explodes or implodes.",
+      "repressiveNature": "Numb - suppressing emotions, cutting off from feeling, appearing calm while dead inside, emotional shutdown",
+      "reactiveNature": "Dramatic - addicted to crisis and intensity, creating emotional chaos, unable to be at peace, stirring up drama"
+    },
+    "gift": {
+      "name": "Humanity",
+      "keyExpression": "Emotional maturity, embracing the full human experience, authenticity, vulnerability",
+      "description": "The gift of Humanity is the emotional maturity that comes from embracing the full spectrum of human feeling. Those with this gift active are not afraid of their emotions or others' - they can sit with grief, anger, fear, and joy without losing center. Humanity is the capacity to be authentically vulnerable, to share the messy truth of being human rather than hiding behind a mask of false calm."
+    },
+    "siddhi": {
+      "name": "Compassion",
+      "keyExpression": "Becoming human, feeling all suffering as your own, universal heart, divine empathy",
+      "description": "The siddhi of Compassion is the complete opening of the heart to feel all suffering as one's own. At this frequency, the boundaries between self and other dissolve in the fire of universal love. This is not pity from above but empathy so complete that the distinction between helper and helped disappears. Compassion is the recognition that to be truly human is to feel the heart of humanity."
+    },
+    "programmingPartnerId": "gk-6",
+    "codonRingId": "ring-of-divinity",
+    "aminoAcidId": "proline",
+    "physiology": "Solar Plexus",
+    "hdGateId": "gate-36",
+    "iChingHexagram": 36,
+    "tropicalSignId": "aquarius",
+    "degreeStart": 315.125,
+    "degreeEnd": 320.75,
+    "url": "https://genekeys.com/gene-key-36/",
+    "description": "Gene Key 36: Turbulence → Humanity → Compassion. This key invites contemplation on the transformation from Turbulence to Compassion through the gift of Humanity.",
+    "image": "/images/gene-keys/keys/gk-36.png"
+  },
+  {
+    "id": "gk-37",
+    "type": "gene-key",
+    "name": "Gene Key 37: Tenderness",
+    "symbol": "37",
+    "keyNumber": 37,
+    "shadow": {
+      "name": "Weakness",
+      "keyExpression": "Fear-based vulnerability, codependent patterns, manipulation through appearing weak",
+      "description": "The shadow of Weakness arises in family and community dynamics when vulnerability becomes a tool for manipulation rather than genuine connection. At this frequency, we either become subservient, accepting an inferior position and playing small, or we use apparent weakness to control others through guilt and obligation. Both patterns undermine the natural equality that should exist in loving relationships.",
+      "repressiveNature": "Subservient - accepting inferior position, unable to claim power, playing small, doormat",
+      "reactiveNature": "Manipulative - using apparent weakness to control, playing victim to get needs met, passive-aggressive"
+    },
+    "gift": {
+      "name": "Equality",
+      "keyExpression": "Treating all as equals, democratic spirit, mutual respect, no hierarchy",
+      "description": "The gift of Equality transforms family and community dynamics through genuine mutual respect. Those with this gift active naturally create environments where everyone is valued equally, where hierarchy gives way to collaboration. Equality is the recognition that every being deserves dignity, and that healthy relationships are built on reciprocity rather than power dynamics."
+    },
+    "siddhi": {
+      "name": "Tenderness",
+      "keyExpression": "Family alchemy, gentle strength, soft power, nurturing presence",
+      "description": "The siddhi of Tenderness is the highest flowering of family love - a gentle strength that nurtures without smothering, that protects without controlling. At this frequency, one becomes a source of soft power that transforms relationships through pure presence. Tenderness is family alchemy, the capacity to create sacred space where every being can bloom into their fullest expression."
+    },
+    "programmingPartnerId": "gk-40",
+    "codonRingId": "ring-of-divinity",
+    "aminoAcidId": "proline",
+    "physiology": "Solar Plexus (Dorsal Ganglia)",
+    "hdGateId": "gate-37",
+    "iChingHexagram": 37,
+    "tropicalSignId": "aquarius",
+    "degreeStart": 300,
+    "degreeEnd": 305.625,
+    "url": "https://genekeys.com/gene-key-37/",
+    "description": "Gene Key 37: Weakness → Equality → Tenderness. This key invites contemplation on the transformation from Weakness to Tenderness through the gift of Equality.",
+    "image": "/images/gene-keys/keys/gk-37.png"
+  },
+  {
+    "id": "gk-38",
+    "type": "gene-key",
+    "name": "Gene Key 38: Honour",
+    "symbol": "38",
+    "keyNumber": 38,
+    "shadow": {
+      "name": "Struggle",
+      "keyExpression": "Fighting everything, seeing life as battle, exhausting yourself, adversarial stance",
+      "description": "The shadow of Struggle turns life into a constant battle. At this frequency, we either collapse in the face of difficulty with no fight left, or we become combative, fighting everything and everyone, exhausting ourselves in pointless battles. Struggle is the warrior energy disconnected from purpose - fighting without knowing what we're fighting for or when to lay down our weapons.",
+      "repressiveNature": "Giving up - collapsing in the face of difficulty, no fight left, resigned to defeat, broken spirit",
+      "reactiveNature": "Combative - fighting everything and everyone, seeing enemies everywhere, exhausting yourself in pointless battles, oppositional"
+    },
+    "gift": {
+      "name": "Perseverance",
+      "keyExpression": "Persistence, fighting spirit, not giving up, warrior energy",
+      "description": "The gift of Perseverance channels the fighting spirit toward worthy causes with sustainable effort. Those with this gift active know how to persist through difficulty without burning out, how to fight for what matters without fighting against everything. Perseverance is the warrior wisdom that conserves energy for the battles that count and knows when to rest between them."
+    },
+    "siddhi": {
+      "name": "Honour",
+      "keyExpression": "Warrior of light, impeccable integrity, spiritual warrior, noble conduct",
+      "description": "The siddhi of Honour is the complete embodiment of the spiritual warrior - one who fights not for personal gain but for truth, beauty, and goodness. At this frequency, every action is impeccable, guided by integrity rather than ego. Honour is the nobility of spirit that would rather die than betray its principles, the warrior of light who serves something greater than self."
+    },
+    "programmingPartnerId": "gk-39",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Adrenals",
+    "hdGateId": "gate-38",
+    "iChingHexagram": 38,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 251.25,
+    "degreeEnd": 256.875,
+    "url": "https://genekeys.com/gene-key-38/",
+    "description": "Gene Key 38: Struggle → Perseverance → Honour. This key invites contemplation on the transformation from Struggle to Honour through the gift of Perseverance.",
+    "image": "/images/gene-keys/keys/gk-38.png"
+  },
+  {
+    "id": "gk-39",
+    "type": "gene-key",
+    "name": "Gene Key 39: Liberation",
+    "symbol": "39",
+    "keyNumber": 39,
+    "shadow": {
+      "name": "Provocation",
+      "keyExpression": "Being provocative, pushing buttons, creating unnecessary tension, antagonizing others",
+      "description": "The shadow of Provocation creates tension without purpose. At this frequency, we either become easily provocable, allowing others to push our buttons and losing our center, or we become provocative ourselves, creating conflict and antagonizing others for the drama it generates. Provocation is the misuse of a powerful energy that, properly channeled, can catalyze profound transformation.",
+      "repressiveNature": "Provocable - easily triggered, reactive, allowing others to push your buttons, no emotional resilience",
+      "reactiveNature": "Provocative - deliberately pushing others' buttons, creating conflict, unable to leave well enough alone, antagonistic"
+    },
+    "gift": {
+      "name": "Dynamism",
+      "keyExpression": "Catalytic energy, creating pressure for change, dynamic tension, breakthrough energy",
+      "description": "The gift of Dynamism transforms provocative energy into a catalytic force for breakthrough. Those with this gift active create dynamic tension that propels growth rather than conflict. They know how to apply pressure in ways that serve evolution rather than destruction. Dynamism is the energy of positive disruption, shaking up stagnant systems to create space for the new."
+    },
+    "siddhi": {
+      "name": "Liberation",
+      "keyExpression": "Tension of transcendence, complete freedom, breaking all chains, absolute release",
+      "description": "The siddhi of Liberation is complete freedom from all bondage - physical, emotional, mental, and spiritual. At this frequency, the tension that once bound us becomes the very force that breaks all chains. Liberation is absolute release into the infinite, the recognition that we were never actually bound except by our own belief in limitation."
+    },
+    "programmingPartnerId": "gk-38",
+    "codonRingId": "ring-of-seeking",
+    "aminoAcidId": "serine",
+    "physiology": "Adrenals",
+    "hdGateId": "gate-39",
+    "iChingHexagram": 39,
+    "tropicalSignId": "cancer",
+    "degreeStart": 90,
+    "degreeEnd": 95.625,
+    "url": "https://genekeys.com/gene-key-39/",
+    "description": "Gene Key 39: Provocation → Dynamism → Liberation. This key invites contemplation on the transformation from Provocation to Liberation through the gift of Dynamism.",
+    "image": "/images/gene-keys/keys/gk-39.png"
+  },
+  {
+    "id": "gk-40",
+    "type": "gene-key",
+    "name": "Gene Key 40: Divine Will",
+    "symbol": "40",
+    "keyNumber": 40,
+    "shadow": {
+      "name": "Exhaustion",
+      "keyExpression": "Burnout, pushing too hard, depleted will, chronic fatigue",
+      "description": "The shadow of Exhaustion results from the misuse of will - either depleting it through overexertion or allowing it to atrophy through resignation. At this frequency, we either push relentlessly until we burn out, or we give up entirely, collapsing into depression with no will left. Exhaustion is the will disconnected from its source, trying to accomplish through personal effort what can only be done through alignment.",
+      "repressiveNature": "Resigned - giving up, no will left, collapsed, unable to make effort, depression",
+      "reactiveNature": "Driven - pushing relentlessly, unable to rest, working yourself to exhaustion, burnout"
+    },
+    "gift": {
+      "name": "Resolve",
+      "keyExpression": "Determination, willpower, seeing things through, commitment to completion",
+      "description": "The gift of Resolve is sustainable willpower - the capacity to see things through without burning out. Those with this gift active know how to tap into a deeper source of determination that doesn't depend on adrenaline or force. Resolve is commitment to completion that flows from purpose rather than compulsion, effort balanced with rest, will aligned with wisdom."
+    },
+    "siddhi": {
+      "name": "Divine Will",
+      "keyExpression": "Will to surrender, alignment with cosmic will, instrument of divine purpose",
+      "description": "The siddhi of Divine Will is the ultimate paradox - the will to surrender. At this frequency, personal will aligns so completely with cosmic will that there is no longer any sense of effort or doership. One becomes an instrument of divine purpose, accomplishing through surrender what could never be achieved through striving. Divine Will moves mountains without moving a muscle."
+    },
+    "programmingPartnerId": "gk-37",
+    "codonRingId": "ring-of-alchemy",
+    "aminoAcidId": "glycine",
+    "physiology": "Stomach",
+    "hdGateId": "gate-40",
+    "iChingHexagram": 40,
+    "tropicalSignId": "leo",
+    "degreeStart": 140.75,
+    "degreeEnd": 146.375,
+    "url": "https://genekeys.com/gene-key-40/",
+    "description": "Gene Key 40: Exhaustion → Resolve → . This key invites contemplation on the transformation from Exhaustion to  through the gift of Resolve.",
+    "image": "/images/gene-keys/keys/gk-40.png"
+  },
+  {
+    "id": "gk-41",
+    "type": "gene-key",
+    "name": "Gene Key 41: Emanation",
+    "symbol": "41",
+    "keyNumber": 41,
+    "shadow": {
+      "name": "Fantasy",
+      "keyExpression": "Living in imagination, escapist fantasies, unrealistic expectations, disappointment",
+      "description": "The shadow of Fantasy keeps us lost in imagination rather than present with reality. At this frequency, we either cut off from dreams entirely and resign ourselves to gray existence, or we escape into fantasy, creating unrealistic expectations that lead to chronic disappointment. Fantasy at this level is avoidance of the creative challenge of bringing imagination into form.",
+      "repressiveNature": "Repressed imagination - cutting off from dreams and desires, no sense of possibility, resigned to gray reality",
+      "reactiveNature": "Escapist - lost in fantasy, unable to be present with reality, living in imagination, chronic disappointment when reality doesn't match"
+    },
+    "gift": {
+      "name": "Anticipation",
+      "keyExpression": "Sensing what's coming, reading potential, feeling into the future, expectancy",
+      "description": "The gift of Anticipation transforms fantasy into creative sensing of potential. Those with this gift active can feel into the future, reading what wants to emerge and anticipating possibilities before they manifest. Anticipation is the positive use of imagination - not escapist fantasy but creative expectancy that helps birth new realities."
+    },
+    "siddhi": {
+      "name": "Emanation",
+      "keyExpression": "Prime emanation, source of all beginnings, original impulse, divine creativity",
+      "description": "The siddhi of Emanation is the recognition that we are the source of all beginnings. At this frequency, one becomes a fountain of divine creativity, emanating possibilities into existence through the sheer power of consciousness. Emanation is the prime creative impulse that preceded the universe, now flowing through human awareness to continue the work of creation."
+    },
+    "programmingPartnerId": "gk-31",
+    "codonRingId": "ring-of-origin",
+    "aminoAcidId": "methionine-(initiator)",
+    "physiology": "Adrenals",
+    "hdGateId": "gate-41",
+    "iChingHexagram": 41,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 270,
+    "degreeEnd": 275.625,
+    "url": "https://genekeys.com/gene-key-41/",
+    "description": "Gene Key 41: Fantasy → Anticipation → Emanation. This key invites contemplation on the transformation from Fantasy to Emanation through the gift of Anticipation.",
+    "image": "/images/gene-keys/keys/gk-41.png"
+  },
+  {
+    "id": "gk-42",
+    "type": "gene-key",
+    "name": "Gene Key 42: Celebration",
+    "symbol": "42",
+    "keyNumber": 42,
+    "shadow": {
+      "name": "Expectation",
+      "keyExpression": "Attached to outcomes, disappointed when reality doesn't match expectations, grasping",
+      "description": "The shadow of Expectation binds our happiness to specific outcomes. At this frequency, we either cut off from desire entirely to protect ourselves from disappointment, or we grasp at expectations, suffering when reality fails to match our demands. Expectation is the root of much human suffering - the gap between what we want and what is.",
+      "repressiveNature": "No expectations - cutting off from desire to avoid disappointment, resigned to disappointment, cynical",
+      "reactiveNature": "High expectations - constant disappointment, grasping for specific outcomes, unable to accept what is, demanding"
+    },
+    "gift": {
+      "name": "Detachment",
+      "keyExpression": "Non-attachment, letting go, witnessing, equanimity",
+      "description": "The gift of Detachment is the freedom that comes from holding outcomes lightly. Those with this gift active can engage fully with life while maintaining equanimity about results. Detachment is not indifference but wise non-attachment - the capacity to give everything to the process without clinging to the outcome. This brings a profound peace that cannot be disturbed by circumstances."
+    },
+    "siddhi": {
+      "name": "Celebration",
+      "keyExpression": "Letting go of living and dying, celebrating existence, pure joy, gratitude for being",
+      "description": "The siddhi of Celebration is the pure joy that arises when all expectations are released - including expectations about life and death themselves. At this frequency, existence is celebrated for its own sake, without needing it to be any particular way. Celebration is gratitude so complete that every moment becomes a gift, every breath a cause for rejoicing."
+    },
+    "programmingPartnerId": "gk-32",
+    "codonRingId": "ring-of-life-and-death",
+    "aminoAcidId": "leucine",
+    "physiology": "Sacral Plexus",
+    "hdGateId": "gate-42",
+    "iChingHexagram": 42,
+    "tropicalSignId": "aries",
+    "degreeStart": 22.5,
+    "degreeEnd": 28.125,
+    "url": "https://genekeys.com/gene-key-42/",
+    "description": "Gene Key 42: Expectation → Detachment → Celebration. This key invites contemplation on the transformation from Expectation to Celebration through the gift of Detachment.",
+    "image": "/images/gene-keys/keys/gk-42.png"
+  },
+  {
+    "id": "gk-43",
+    "type": "gene-key",
+    "name": "Gene Key 43: Epiphany",
+    "symbol": "43",
+    "keyNumber": 43,
+    "shadow": {
+      "name": "Deafness",
+      "keyExpression": "Not hearing, mental dullness, missing the point, unable to receive insight",
+      "description": "The shadow of Deafness blocks the channels through which insight enters consciousness. At this frequency, we either become mentally dull, unable to grasp obvious truths, or we become know-it-alls, so convinced we already understand that we cannot hear anything new. Deafness is the closure of the inner ear that normally receives the subtle transmissions of wisdom.",
+      "repressiveNature": "Dull - mentally slow, unable to grasp insights, missing obvious truths, impenetrable",
+      "reactiveNature": "Know-it-all - already think you know everything, closed to new insights, deaf to wisdom, mental rigidity"
+    },
+    "gift": {
+      "name": "Insight",
+      "keyExpression": "Penetrating understanding, seeing through complexity, mental clarity, aha moments",
+      "description": "The gift of Insight is the capacity to pierce through complexity and grasp the essential truth. Those with this gift active experience frequent aha moments, sudden clarities that illuminate previously confusing situations. Insight is penetrating understanding that doesn't accumulate information but directly perceives meaning. It cuts through confusion like a blade through fog."
+    },
+    "siddhi": {
+      "name": "Epiphany",
+      "keyExpression": "Breakthrough, sudden illumination, lightning flash of truth, revelation",
+      "description": "The siddhi of Epiphany is the lightning flash of total understanding - not gradual learning but sudden illumination that transforms everything in an instant. At this frequency, truth reveals itself completely, leaving no room for doubt or question. Epiphany is breakthrough consciousness, the moment when the veil drops and reality stands naked in its stunning simplicity."
+    },
+    "programmingPartnerId": "gk-23",
+    "codonRingId": "ring-of-destiny",
+    "aminoAcidId": "asparagine",
+    "physiology": "Inner Ear",
+    "hdGateId": "gate-43",
+    "iChingHexagram": 43,
+    "tropicalSignId": "libra",
+    "degreeStart": 200.75,
+    "degreeEnd": 206.375,
+    "url": "https://genekeys.com/gene-key-43/",
+    "description": "Gene Key 43: Deafness → Insight → Epiphany. This key invites contemplation on the transformation from Deafness to Epiphany through the gift of Insight.",
+    "image": "/images/gene-keys/keys/gk-43.png"
+  },
+  {
+    "id": "gk-44",
+    "type": "gene-key",
+    "name": "Gene Key 44: Synarchy",
+    "symbol": "44",
+    "keyNumber": 44,
+    "shadow": {
+      "name": "Interference",
+      "keyExpression": "Karmic entanglement, toxic relationships, interfering with others, enmeshment",
+      "description": "The shadow of Interference creates unhealthy patterns in relationships and group dynamics. At this frequency, we either isolate ourselves to avoid the pain of entanglement, or we become enmeshed in others' lives, interfering where we don't belong and creating karmic drama. Interference is the distortion of natural connection into toxic dependency or inappropriate involvement.",
+      "repressiveNature": "Isolated - avoiding relationships to avoid interference, cutting off, unable to connect, lonely",
+      "reactiveNature": "Interfering - getting overly involved in others' business, enmeshed, toxic relationships, karmic drama"
+    },
+    "gift": {
+      "name": "Teamwork",
+      "keyExpression": "Collaboration, group synergy, knowing your role, cooperative spirit",
+      "description": "The gift of Teamwork transforms interference into healthy collaboration. Those with this gift active understand how to work with others in ways that enhance rather than diminish, knowing their role and respecting others' boundaries. Teamwork creates group synergy where the whole becomes greater than the sum of its parts through genuine cooperation."
+    },
+    "siddhi": {
+      "name": "Synarchy",
+      "keyExpression": "Karmic relationships, divine order, sacred hierarchy, enlightened governance",
+      "description": "The siddhi of Synarchy is the recognition of divine order underlying all relationships and organizations. At this frequency, one perceives the sacred hierarchy that governs reality - not hierarchy of domination but of function, where each being serves according to their nature and gift. Synarchy is enlightened governance, the coordination of many into one purpose through love rather than control."
+    },
+    "programmingPartnerId": "gk-24",
+    "codonRingId": "the-ring-of-the-illuminati",
+    "aminoAcidId": "glutamic-acid",
+    "physiology": "Immune System",
+    "hdGateId": "gate-44",
+    "iChingHexagram": 44,
+    "tropicalSignId": "libra",
+    "degreeStart": 206.375,
+    "degreeEnd": 212,
+    "url": "https://genekeys.com/gene-key-44/",
+    "description": "Gene Key 44: Interference → Teamwork → Synarchy. This key invites contemplation on the transformation from Interference to Synarchy through the gift of Teamwork.",
+    "image": "/images/gene-keys/keys/gk-44.png"
+  },
+  {
+    "id": "gk-45",
+    "type": "gene-key",
+    "name": "Gene Key 45: Communion",
+    "symbol": "45",
+    "keyNumber": 45,
+    "shadow": {
+      "name": "Dominance",
+      "keyExpression": "Power struggles, needing to be in charge, controlling groups, alpha behavior",
+      "description": "The shadow of Dominance corrupts group leadership into power struggle. At this frequency, we either become submissive, always deferring to others and unable to contribute our leadership, or we dominate, needing to control the group and engaging in alpha wars for supremacy. Dominance is the ego's need to be on top, which prevents the true magic that can happen when groups collaborate.",
+      "repressiveNature": "Submissive - always deferring to others, unable to claim leadership, following, doormat in groups",
+      "reactiveNature": "Dominating - needing to control the group, power struggles, unable to share leadership, alpha wars"
+    },
+    "gift": {
+      "name": "Synergy",
+      "keyExpression": "Group magic, collective genius, whole greater than parts, gathering energy",
+      "description": "The gift of Synergy creates group magic where the whole becomes far greater than the sum of its parts. Those with this gift active know how to gather and focus collective energy, catalyzing breakthroughs that no individual could achieve alone. Synergy is the alchemy of collaboration, transforming individual contributions into collective genius."
+    },
+    "siddhi": {
+      "name": "Communion",
+      "keyExpression": "Cosmic communion, gathering of souls, divine assembly, universal family",
+      "description": "The siddhi of Communion is the gathering of souls in recognition of their essential unity. At this frequency, groups become divine assemblies, gatherings where the boundaries between individual and collective dissolve in shared presence. Communion is cosmic reunion, the recognition that we are all members of one universal family, temporarily appearing as separate beings."
+    },
+    "programmingPartnerId": "gk-26",
+    "codonRingId": "ring-of-prosperity",
+    "aminoAcidId": "cysteine",
+    "physiology": "Thyroid",
+    "hdGateId": "gate-45",
+    "iChingHexagram": 45,
+    "tropicalSignId": "gemini",
+    "degreeStart": 71.25,
+    "degreeEnd": 76.875,
+    "url": "https://genekeys.com/gene-key-45/",
+    "description": "Gene Key 45: Dominance → Synergy → Communion. This key invites contemplation on the transformation from Dominance to Communion through the gift of Synergy.",
+    "image": "/images/gene-keys/keys/gk-45.png"
+  },
+  {
+    "id": "gk-46",
+    "type": "gene-key",
+    "name": "Gene Key 46: Ecstasy",
+    "symbol": "46",
+    "keyNumber": 46,
+    "shadow": {
+      "name": "Seriousness",
+      "keyExpression": "Taking life too seriously, worrying, the weight of existence",
+      "description": "The shadow of Seriousness weighs down the body and spirit with the heaviness of constant worry. At this frequency, we either become frigid, hiding from the sensual richness of life, or we adopt a forced frivolity that masks deep anger and dissatisfaction. Seriousness is the forgetting that life is ultimately play, that the universe delights in itself through us.",
+      "repressiveNature": "Frigid - hiding from life out of fear of your own body, losing touch with the juiciness of life",
+      "reactiveNature": "Frivolous - pretending to enjoy life while harboring huge anger that explodes when the facade breaks"
+    },
+    "gift": {
+      "name": "Delight",
+      "keyExpression": "Being in the right place at the right time, synchronicity, serendipity",
+      "description": "The gift of Delight is the natural response of the body when it is aligned with the flow of life. Those with this gift active find themselves in the right place at the right time, experiencing synchronicity as a regular occurrence. Delight arises when we stop trying to control life and simply enjoy the ride, trusting the body's natural wisdom to guide us."
+    },
+    "siddhi": {
+      "name": "Ecstasy",
+      "keyExpression": "Orgasmic inner world, swooping upon life with delight, bodily rapture",
+      "description": "The siddhi of Ecstasy is the complete liberation of the body into the play of existence. At this frequency, the body becomes a vessel for rapture, experiencing life as an ongoing orgasm of awareness. Ecstasy is not a peak experience but a continuous state, the natural condition of a body free from the weight of seriousness, swooping upon life with uncontainable delight."
+    },
+    "programmingPartnerId": "gk-25",
+    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "aminoAcidId": "alanine",
+    "physiology": "Blood",
+    "hdGateId": "gate-46",
+    "iChingHexagram": 46,
+    "tropicalSignId": "virgo",
+    "degreeStart": 159.5,
+    "degreeEnd": 165.125,
+    "url": "https://genekeys.com/gene-key-46/",
+    "description": "Gene Key 46: Seriousness → Delight → Ecstasy. This key invites contemplation on the transformation from Seriousness to Ecstasy through the gift of Delight.",
+    "image": "/images/gene-keys/keys/gk-46.png"
+  },
+  {
+    "id": "gk-47",
+    "type": "gene-key",
+    "name": "Gene Key 47: Transfiguration",
+    "symbol": "47",
+    "keyNumber": 47,
+    "shadow": {
+      "name": "Oppression",
+      "keyExpression": "The magic mirror of suffering, mental anguish, your suffering is yours to own",
+      "description": "The shadow of Oppression is the heaviest of all shadows - the crushing weight of mental suffering that can drive one to despair. At this frequency, we either collapse into hopelessness, overwhelmed by the mind's capacity for anguish, or we externalize our oppression, becoming dogmatic and projecting our suffering onto others. Oppression is the shadow that must be faced directly.",
+      "repressiveNature": "Hopeless - mental collapse where the mind is overwhelmed, giving up all hope that life can get better",
+      "reactiveNature": "Dogmatic - externalizing oppression by projecting onto others, using mind to control environment through rigid viewpoints"
+    },
+    "gift": {
+      "name": "Transmutation",
+      "keyExpression": "The Royal Art, alchemy as natural destiny, transforming lead into gold",
+      "description": "The gift of Transmutation is the Royal Art of alchemy - the capacity to transform suffering into wisdom, lead into gold. Those with this gift active understand that the very intensity of mental suffering contains the seeds of profound breakthrough. Transmutation is living dangerously, willingly entering the fire of transformation knowing that what emerges will be purified."
+    },
+    "siddhi": {
+      "name": "Transfiguration",
+      "keyExpression": "The Rainbow Body, complete transformation, turning back into light",
+      "description": "The siddhi of Transfiguration is the complete transformation of human consciousness into its original luminous nature. At this frequency, the crucifixion of the ego becomes resurrection of the soul. The body itself becomes transparent to light, manifesting what Tibetan traditions call the Rainbow Body. Transfiguration is turning back into a star, returning to the light from which we came."
+    },
+    "programmingPartnerId": "gk-22",
+    "codonRingId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "aminoAcidId": "glycine",
+    "physiology": "Neocortex",
+    "hdGateId": "gate-47",
+    "iChingHexagram": 47,
+    "tropicalSignId": "virgo",
+    "degreeStart": 150,
+    "degreeEnd": 155.625,
+    "url": "https://genekeys.com/gene-key-47/",
+    "description": "Gene Key 47: Oppression → Transmutation → Transfiguration. This key invites contemplation on the transformation from Oppression to Transfiguration through the gift of Transmutation.",
+    "image": "/images/gene-keys/keys/gk-47.png"
+  },
+  {
+    "id": "gk-48",
+    "type": "gene-key",
+    "name": "Gene Key 48: Wisdom",
+    "symbol": "48",
+    "keyNumber": 48,
+    "shadow": {
+      "name": "Inadequacy",
+      "keyExpression": "The bottomless black hole, the primal fear that we are inherently inadequate",
+      "description": "The shadow of Inadequacy is one of humanity's deepest wounds - the primal fear that we are fundamentally not enough. At this frequency, we either become bland, too afraid to look within, or we become unscrupulous, feeding inadequacy in others to hide our own. Inadequacy is the bottomless black hole that swallows self-worth and keeps us forever seeking external validation.",
+      "repressiveNature": "Bland - the repressive nature forms the collective blandness of mass consciousness, too afraid to look into the fear within",
+      "reactiveNature": "Unscrupulous - feeding the general sense of inadequacy in others, using knowledge to manipulate fears while hiding behind the system"
+    },
+    "gift": {
+      "name": "Resourcefulness",
+      "keyExpression": "The light at the bottom of the well, trusting in the unknown, free energy",
+      "description": "The gift of Resourcefulness discovers the light at the bottom of the well of inadequacy. Those with this gift active learn to trust in the unknown, finding that when they reach the end of their known resources, new ones appear. Resourcefulness is the discovery that we have access to infinite resources when we stop clinging to what we think we know."
+    },
+    "siddhi": {
+      "name": "Wisdom",
+      "keyExpression": "The beyondness of being and not being, wise because you do not know you are wise",
+      "description": "The siddhi of Wisdom is the most elusive of all siddhis - you are wise because you do not know you are wise. At this frequency, knowledge dissolves into direct knowing, the mind surrenders to the mystery it can never comprehend. Wisdom is the beyondness of being and not being, the recognition that true knowledge is unknowing, and that the deepest well contains the purest light."
+    },
+    "programmingPartnerId": "gk-21",
+    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "aminoAcidId": "alanine",
+    "physiology": "Lymphatic System (Spleen)",
+    "hdGateId": "gate-48",
+    "iChingHexagram": 48,
+    "tropicalSignId": "virgo",
+    "degreeStart": 170.75,
+    "degreeEnd": 176.375,
+    "url": "https://genekeys.com/gene-key-48/",
+    "description": "Gene Key 48: Inadequacy → Resourcefulness → Wisdom. This key invites contemplation on the transformation from Inadequacy to Wisdom through the gift of Resourcefulness.",
+    "image": "/images/gene-keys/keys/gk-48.png"
+  },
+  {
+    "id": "gk-49",
+    "type": "gene-key",
+    "name": "Gene Key 49: Rebirth",
+    "symbol": "49",
+    "keyNumber": 49,
+    "shadow": {
+      "name": "Reaction",
+      "keyExpression": "Reaping the whirlwind, emotional cutting off, the fuel of rejection",
+      "description": "The shadow of Reaction creates cycles of emotional upheaval that seem beyond our control. At this frequency, we either shut down emotionally, becoming inert and numb, or we react explosively, rejecting others before they can reject us. Reaction is the whirlwind we reap from seeds of unconscious emotional patterns planted long ago.",
+      "repressiveNature": "Inert - repression of proper emotional functioning resulting in shutting-down or dampening of emotional chemistry",
+      "reactiveNature": "Rejecting - rejecting before feeling rejection, pushing others away at first sniff of someone coming too close"
+    },
+    "gift": {
+      "name": "Revolution",
+      "keyExpression": "The silent revolution, radical reform, the genetic filtering process",
+      "description": "The gift of Revolution transforms reactive emotional energy into the power to create genuine change. Those with this gift active become agents of transformation, catalyzing shifts in relationships, organizations, and society. This is the silent revolution - change that happens not through force but through the natural evolution of consciousness becoming aware of itself."
+    },
+    "siddhi": {
+      "name": "Rebirth",
+      "keyExpression": "The forking of the species, mystical divorce, the Phoenix rising",
+      "description": "The siddhi of Rebirth is the complete transformation of the emotional body into its highest expression. At this frequency, one becomes the Phoenix rising from the ashes of the old self, demonstrating that death and rebirth are continuous processes. Rebirth is the mystical divorce from all that no longer serves, creating space for entirely new forms to emerge."
+    },
+    "programmingPartnerId": "gk-4",
+    "codonRingId": "the-ring-of-the-whirlwind-(49,-55)",
+    "aminoAcidId": "histidine",
+    "physiology": "Solar Plexus",
+    "hdGateId": "gate-49",
+    "iChingHexagram": 49,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 285.125,
+    "degreeEnd": 290.75,
+    "url": "https://genekeys.com/gene-key-49/",
+    "description": "Gene Key 49: Reaction → Revolution → Rebirth. This key invites contemplation on the transformation from Reaction to Rebirth through the gift of Revolution.",
+    "image": "/images/gene-keys/keys/gk-49.png"
+  },
+  {
+    "id": "gk-50",
+    "type": "gene-key",
+    "name": "Gene Key 50: Harmony",
+    "symbol": "50",
+    "keyNumber": 50,
+    "shadow": {
+      "name": "Corruption",
+      "keyExpression": "Lost in transcription, data corruption, distortion of values",
+      "description": "The shadow of Corruption occurs when the values and structures meant to protect become instruments of harm. At this frequency, we either become overwhelmed by responsibility and collapse under the weight, or we become irresponsible, taking advantage of hierarchical positions for personal gain. Corruption is the distortion of sacred trust into exploitation.",
+      "repressiveNature": "Overloaded - victims of hierarchy, overwhelmed with the weight of the world and responsibility of protecting those closest to them",
+      "reactiveNature": "Irresponsible - taking advantage of hierarchy, expressing unconscious anger either up at leaders or down to those below"
+    },
+    "gift": {
+      "name": "Equilibrium",
+      "keyExpression": "The nature of self-organizing intelligence, the blueprint for social harmony",
+      "description": "The gift of Equilibrium brings the understanding of how living systems naturally self-organize toward balance. Those with this gift active perceive the blueprint for social harmony - how communities can function in ways that serve all members. Equilibrium is the natural state of healthy systems, requiring only the removal of corrupting influences to manifest."
+    },
+    "siddhi": {
+      "name": "Harmony",
+      "keyExpression": "The music of the spheres, cosmic order, divine orchestration",
+      "description": "The siddhi of Harmony is the perception of the cosmic order that underlies all apparent chaos. At this frequency, one hears the music of the spheres - the divine orchestration that coordinates all of existence in perfect harmony. This is not imposed order but organic balance, the way the universe naturally tends toward beauty when interference is removed."
+    },
+    "programmingPartnerId": "gk-3",
+    "codonRingId": "the-ring-of-the-illuminati-(44,-50)",
+    "aminoAcidId": "glutamic-acid",
+    "physiology": "Immune System",
+    "hdGateId": "gate-50",
+    "iChingHexagram": 50,
+    "tropicalSignId": "libra",
+    "degreeStart": 189.5,
+    "degreeEnd": 195.125,
+    "url": "https://genekeys.com/gene-key-50/",
+    "description": "Gene Key 50: Corruption → Equilibrium → Harmony. This key invites contemplation on the transformation from Corruption to Harmony through the gift of Equilibrium.",
+    "image": "/images/gene-keys/keys/gk-50.png"
+  },
+  {
+    "id": "gk-51",
+    "type": "gene-key",
+    "name": "Gene Key 51: Awakening",
+    "symbol": "51",
+    "keyNumber": 51,
+    "shadow": {
+      "name": "Agitation",
+      "keyExpression": "Portal of fears, lack of trust, competitiveness, restless electrical energy, shocking events",
+      "description": "The shadow of Agitation is restless electrical energy seeking discharge. At this frequency, we either become cowardly, shrinking from life and ruled by fear, or we become hostile, projecting our inner agitation onto the world through competition and aggression. Agitation is the shock of awakening not yet integrated, the lightning seeking ground.",
+      "repressiveNature": "Cowardly - steadily losing hope in life, shutting down and turning inward, highly depressive with little enthusiasm, repression of powerful nature, fear ruling life, preferring self-pity over facing fear",
+      "reactiveNature": "Hostile - result of fearless rage and deep futility, bringing outer shock into the world, no respect for human beings, drawn to competitive spheres, throwing self into dangerous situations, profound agitation projected onto others"
+    },
+    "gift": {
+      "name": "Initiative",
+      "keyExpression": "Creative independence, stirring good fortune, competitive spirit, first to do things, path of heart",
+      "description": "The gift of Initiative channels agitated energy into creative pioneering. Those with this gift active are the first to do things, the ones who stir good fortune through bold action. Initiative is the capacity to take creative risks from the heart rather than from fear, transforming electrical restlessness into the spark that ignites new possibilities."
+    },
+    "siddhi": {
+      "name": "Awakening",
+      "keyExpression": "Thunder of giving, permanent mutation, end of evolution, collective awakening, pure consciousness",
+      "description": "The siddhi of Awakening is the thunderbolt that permanently transforms consciousness. At this frequency, one becomes an agent of collective awakening, their very presence catalyzing shifts in others. Awakening is not gradual but sudden - the lightning flash that illuminates everything at once, revealing the pure consciousness that was always present beneath the agitation."
+    },
+    "programmingPartnerId": "gk-57",
+    "codonRingId": "ring-of-humanity",
+    "aminoAcidId": "arginine",
+    "physiology": "Gall Bladder",
+    "hdGateId": "gate-51",
+    "iChingHexagram": 51,
+    "tropicalSignId": "aries",
+    "degreeStart": 16.875,
+    "degreeEnd": 22.5,
+    "url": "https://genekeys.com/gene-key-51/",
+    "description": "Gene Key 51: Agitation → Initiative → Awakening. This key invites contemplation on the transformation from Agitation to Awakening through the gift of Initiative.",
+    "image": "/images/gene-keys/keys/gk-51.png"
+  },
+  {
+    "id": "gk-52",
+    "type": "gene-key",
+    "name": "Gene Key 52: Stillness",
+    "symbol": "52",
+    "keyNumber": 52,
+    "shadow": {
+      "name": "Stress",
+      "keyExpression": "Phenotype of fear, collective pressure, inability to keep still, flight or fight response, fear manifesting physically",
+      "description": "The shadow of Stress is fear manifesting in the body as chronic pressure and tension. At this frequency, we either collapse under stress, becoming stuck and depressed, or we become restlessly active, unable to sit still and burning ourselves out trying to escape the inner pressure. Stress is the body's expression of unresolved fear, the constant hum of threat that modern life imposes.",
+      "repressiveNature": "Stuck - physically, emotionally and mentally collapsed under pressure, never really getting off the ground, deep feeling of being stuck, depression and apathy, adrenal system can atrophy, only means of lifting free is finding way to serve others",
+      "reactiveNature": "Restless - unable to sit still, trying to escape fear through activity, projecting frustration and anger onto others, over-stimulation of adrenal glands, burning themselves out in life, need to confront and embrace deep fear"
+    },
+    "gift": {
+      "name": "Restraint",
+      "keyExpression": "Ecological torque, patience, non-interference, seed of destiny, power of pausing",
+      "description": "The gift of Restraint discovers the extraordinary power of pausing. Those with this gift active understand that sometimes the wisest action is no action, that patience and non-interference allow life to unfold with greater wisdom than our interventions. Restraint is the capacity to hold energy without discharging it, building pressure that can be directed toward our highest destiny."
+    },
+    "siddhi": {
+      "name": "Stillness",
+      "keyExpression": "Stilling of the wave, spaceless space, black hole, still-point of existence, transcending frequency",
+      "description": "The siddhi of Stillness is the complete cessation of inner movement - the still-point at the center of all existence. At this frequency, one becomes a black hole of consciousness, so still that all stress collapses into peace. Stillness is not the absence of activity but the presence of that which never moves, the eternal background against which all movement appears."
+    },
+    "programmingPartnerId": "gk-58",
+    "codonRingId": "ring-of-seeking",
+    "aminoAcidId": "serine",
+    "physiology": "Perineum",
+    "hdGateId": "gate-52",
+    "iChingHexagram": 52,
+    "tropicalSignId": "cancer",
+    "degreeStart": 95.625,
+    "degreeEnd": 101.25,
+    "url": "https://genekeys.com/gene-key-52/",
+    "description": "Gene Key 52: Stress → Restraint → Stillness. This key invites contemplation on the transformation from Stress to Stillness through the gift of Restraint.",
+    "image": "/images/gene-keys/keys/gk-52.png"
+  },
+  {
+    "id": "gk-53",
+    "type": "gene-key",
+    "name": "Gene Key 53: Superabundance",
+    "symbol": "53",
+    "keyNumber": 53,
+    "shadow": {
+      "name": "Immaturity",
+      "keyExpression": "Fear at source, unsustainable growth, greed-driven expansion, collective immaturity",
+      "description": "The shadow of Immaturity is the fear that prevents us from growing up fully. At this frequency, we either become solemn and fixed, repressing our natural impulse for new beginnings, or we become fickle, starting many things but never following through. Immaturity at the collective level drives unsustainable expansion - growth without wisdom, development without depth.",
+      "repressiveNature": "Solemn - incredible vital energy to begin new things is repressed, becoming fixed into single activity for whole life, deep sadness as though might implode, enormous pressure to be serious, find it near impossible to embrace new things, end lives with great sorrow",
+      "reactiveNature": "Fickle - never sitting still long enough to evolve, moving from one thing to next without following through, beginning new things without commitment, escaping greatest fear of being trapped, lives may look exciting but lack real depth or fulfillment"
+    },
+    "gift": {
+      "name": "Expansion",
+      "keyExpression": "Transcending and including, fractal growth, evolutionary impulse, sustainable development",
+      "description": "The gift of Expansion brings the wisdom of sustainable growth - expansion that transcends and includes rather than leaving things behind. Those with this gift active embody the evolutionary impulse in its mature form, knowing when to begin anew and when to deepen what already exists. Expansion in this sense is fractal - growing in complexity while maintaining essential simplicity."
+    },
+    "siddhi": {
+      "name": "Superabundance",
+      "keyExpression": "End of evolution, endless beginnings, consciousness never changes, emptiness beyond expansion",
+      "description": "The siddhi of Superabundance is the paradox of fullness and emptiness. At this frequency, one realizes that consciousness itself never changes - that all evolution happens within the unchanging field of awareness. Superabundance is endless beginnings arising from infinite emptiness, the recognition that there is no final destination because each ending is a new beginning."
+    },
+    "programmingPartnerId": "gk-54",
+    "codonRingId": "ring-of-seeking",
+    "aminoAcidId": "serine",
+    "physiology": "Urogenital",
+    "hdGateId": "gate-53",
+    "iChingHexagram": 53,
+    "tropicalSignId": "cancer",
+    "degreeStart": 101.25,
+    "degreeEnd": 106.875,
+    "url": "https://genekeys.com/gene-key-53/",
+    "description": "Gene Key 53: Immaturity → Expansion → Superabundance. This key invites contemplation on the transformation from Immaturity to Superabundance through the gift of Expansion.",
+    "image": "/images/gene-keys/keys/gk-53.png"
+  },
+  {
+    "id": "gk-54",
+    "type": "gene-key",
+    "name": "Gene Key 54: Ascension",
+    "symbol": "54",
+    "keyNumber": 54,
+    "shadow": {
+      "name": "Greed",
+      "keyExpression": "The drive for material accumulation, addiction to status, insatiable desire",
+      "description": "The shadow of Greed is the misdirection of kundalini energy toward material accumulation. At this frequency, we either become unambitious, giving up on our aspirations, or we become insatiably greedy, accumulating wealth and status that never satisfy. Greed is the spiritual drive for ascension misunderstood and channeled into endless material pursuit.",
+      "repressiveNature": "Un-ambitious - repression of ambition, beginning things with ardour but becoming disillusioned and giving up",
+      "reactiveNature": "Greedy - obsession with material accumulation, insatiable urge that never escapes its own low frequency"
+    },
+    "gift": {
+      "name": "Aspiration",
+      "keyExpression": "Material and spiritual liquidity, networking, holistic ambition",
+      "description": "The gift of Aspiration channels ambition toward higher purposes. Those with this gift active understand that material and spiritual wealth are not opposed but can flow together. Aspiration is the drive to rise, transformed from greed into genuine service. It creates networks and business models that serve the whole while meeting individual needs."
+    },
+    "siddhi": {
+      "name": "Ascension",
+      "keyExpression": "Physical alchemy, the serpent power, vaporization into spiritual essence",
+      "description": "The siddhi of Ascension is the complete rising of the serpent power through all the energy centers. At this frequency, the physical body becomes transmuted, vaporizing into its spiritual essence. Ascension is not escape from matter but the fulfillment of matter's purpose - the alchemical wedding of heaven and earth in human form."
+    },
+    "programmingPartnerId": "gk-53",
+    "codonRingId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "aminoAcidId": "serine",
+    "physiology": "Tailbone",
+    "hdGateId": "gate-54",
+    "iChingHexagram": 54,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 256.875,
+    "degreeEnd": 262.5,
+    "url": "https://genekeys.com/gene-key-54/",
+    "description": "Gene Key 54: Greed → Aspiration → Ascension. This key invites contemplation on the transformation from Greed to Ascension through the gift of Aspiration.",
+    "image": "/images/gene-keys/keys/gk-54.png"
+  },
+  {
+    "id": "gk-55",
+    "type": "gene-key",
+    "name": "Gene Key 55: Freedom",
+    "symbol": "55",
+    "keyNumber": 55,
+    "shadow": {
+      "name": "Victimization",
+      "keyExpression": "Victim consciousness, complaining, blaming, disempowerment",
+      "description": "The shadow of Victimization keeps us trapped in cycles of complaint and blame. At this frequency, we either make ourselves the central victim of our own drama, disempowering ourselves with every complaint, or we externalize by blaming others, firing arrows that remove our responsibility. Victimization is the resistance to the pivoting of awareness that could set us free.",
+      "repressiveNature": "Complaining - making oneself the central victim within one's own drama, dis-empowering oneself with every complaint",
+      "reactiveNature": "Blaming - externalizing complaints by specifically blaming something or someone else, firing arrows that remove self-responsibility"
+    },
+    "gift": {
+      "name": "Freedom",
+      "keyExpression": "The pivoting of awareness, the dragonfly emerging, vaporization of victim consciousness",
+      "description": "The gift of Freedom is the pivoting of awareness from victim to creator. Like the dragonfly emerging from the nymph, this transformation is complete and irreversible. Those with this gift active have found the inner switch that transforms complaint into creativity, blame into responsibility. Freedom begins the moment we stop waiting for circumstances to change and change ourselves instead."
+    },
+    "siddhi": {
+      "name": "Freedom",
+      "keyExpression": "The dragonfly's dream, the Great Change, planetary awakening",
+      "description": "The siddhi of Freedom is total liberation - not freedom from something but the freedom that is our essential nature. At this frequency, victim consciousness completely vaporizes, revealing the boundless awareness that was always present. This Freedom is not individual but collective, part of the Great Change that is awakening humanity to its true nature."
+    },
+    "programmingPartnerId": "gk-59",
+    "codonRingId": "the-ring-of-the-whirlwind-(49,-55)",
+    "aminoAcidId": "histidine",
+    "physiology": "Solar Plexus (Dorsal Ganglia)",
+    "hdGateId": "gate-55",
+    "iChingHexagram": 55,
+    "tropicalSignId": "capricorn",
+    "degreeStart": 296.375,
+    "degreeEnd": 302,
+    "url": "https://genekeys.com/gene-key-55/",
+    "description": "Gene Key 55: Victimization → Freedom → Freedom. This key invites contemplation on the transformation from Victimization to Freedom through the gift of Freedom.",
+    "image": "/images/gene-keys/keys/gk-55.png"
+  },
+  {
+    "id": "gk-56",
+    "type": "gene-key",
+    "name": "Gene Key 56: Intoxication",
+    "symbol": "56",
+    "keyNumber": 56,
+    "shadow": {
+      "name": "Distraction",
+      "keyExpression": "The world mask, addiction to external stimulation, inability to focus",
+      "description": "The shadow of Distraction scatters our attention across endless external stimulation. At this frequency, we either collapse into numbness, under-stimulated and sullen, or we become addicted to constant input, unable to stop consuming experiences, images, and stories. Distraction is the world mask we wear to avoid facing ourselves.",
+      "repressiveNature": "Sullen - being under-stimulated, collapsing of spirit into numbness, losing sight of true aspirations",
+      "reactiveNature": "Overstimulated - constant need to maintain movement, satisfying the eyes, harbouring fantasies, unable to stop"
+    },
+    "gift": {
+      "name": "Enrichment",
+      "keyExpression": "Turning within, the art of self-discipline, transmuting low frequencies into joy",
+      "description": "The gift of Enrichment transforms distraction into nourishment. Those with this gift active learn the art of turning within, finding that true enrichment comes not from more stimulation but from deeper presence. Enrichment is the capacity to extract profound meaning from simple experiences, transmuting low frequencies into genuine joy through mindful attention."
+    },
+    "siddhi": {
+      "name": "Intoxication",
+      "keyExpression": "Divine indulgence, spiritual ecstasy beyond the senses",
+      "description": "The siddhi of Intoxication is the ultimate enrichment - divine ecstasy that needs no external stimulus. At this frequency, one becomes drunk on existence itself, intoxicated by the sheer miracle of being. This is not escapism but the direct experience of the sacred in every moment, spiritual ecstasy that transcends and includes all sensory pleasure."
+    },
+    "programmingPartnerId": "gk-60",
+    "codonRingId": "the-ring-of-trials-(12,-33,-56)",
+    "aminoAcidId": "none-(terminator-codon)",
+    "physiology": "Thyroid/Parathyroid",
+    "hdGateId": "gate-56",
+    "iChingHexagram": 56,
+    "tropicalSignId": "cancer",
+    "degreeStart": 106.875,
+    "degreeEnd": 112.5,
+    "url": "https://genekeys.com/gene-key-56/",
+    "description": "Gene Key 56: Distraction → Enrichment → Intoxication. This key invites contemplation on the transformation from Distraction to Intoxication through the gift of Enrichment.",
+    "image": "/images/gene-keys/keys/gk-56.png"
+  },
+  {
+    "id": "gk-57",
+    "type": "gene-key",
+    "name": "Gene Key 57: Clarity",
+    "symbol": "57",
+    "keyNumber": 57,
+    "shadow": {
+      "name": "Unease",
+      "keyExpression": "The fear-band frequencies, anxiety about the future, chronic worry",
+      "description": "The shadow of Unease is the low-level anxiety that pervades modern consciousness. At this frequency, we either become hesitant, suppressing our intuition and losing alignment with the present moment, or we become impetuous, making quick decisions rooted in fear that only create more unease. Unease is the continuous background hum of worry about what might happen.",
+      "repressiveNature": "Hesitant - suppressing intuition with the power of the mind, losing all true alignment to the power of the now",
+      "reactiveNature": "Impetuous - reacting to unease through making quick decisions rooted in fear, failing to bring an end to fear"
+    },
+    "gift": {
+      "name": "Intuition",
+      "keyExpression": "Entering the synfield, trusting the guidance system, feminine wisdom",
+      "description": "The gift of Intuition transforms unease into a finely-tuned guidance system. Those with this gift active learn to trust the subtle knowings that arise from the body's wisdom, entering the synfield where past, present, and future meet. Intuition is feminine wisdom - receptive, subtle, and incredibly accurate when we learn to trust it."
+    },
+    "siddhi": {
+      "name": "Clarity",
+      "keyExpression": "The art of softness, the gentle wind, attunement to Divine Presence",
+      "description": "The siddhi of Clarity is the complete dissolution of unease into transparent awareness. At this frequency, one becomes like the gentle wind - soft, penetrating, and utterly clear. Clarity is not knowing through force but through receptivity, the art of softness that perceives truth by becoming transparent to it. This is attunement to the Divine Presence that pervades all things."
+    },
+    "programmingPartnerId": "gk-51",
+    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "aminoAcidId": "alanine",
+    "physiology": "Cranial Ganglia (Belly)",
+    "hdGateId": "gate-57",
+    "iChingHexagram": 57,
+    "tropicalSignId": "virgo",
+    "degreeStart": 176.375,
+    "degreeEnd": 182,
+    "url": "https://genekeys.com/gene-key-57/",
+    "description": "Gene Key 57: Unease → Intuition → Clarity. This key invites contemplation on the transformation from Unease to Clarity through the gift of Intuition.",
+    "image": "/images/gene-keys/keys/gk-57.png"
+  },
+  {
+    "id": "gk-58",
+    "type": "gene-key",
+    "name": "Gene Key 58: Bliss",
+    "symbol": "58",
+    "keyNumber": 58,
+    "shadow": {
+      "name": "Dissatisfaction",
+      "keyExpression": "Chronic discomfort, seeking fulfillment externally, the drive to improve",
+      "description": "The shadow of Dissatisfaction is the chronic sense that something is not quite right. Uniquely, this shadow cannot be repressed - it is vitality itself seeking expression. At this frequency, we constantly interfere, trying to improve things, seeking satisfaction in the future that the present cannot provide. Dissatisfaction is the divine discontent that can either torment us or drive us toward awakening.",
+      "repressiveNature": "None - The 58th Shadow is the only aspect of our genetic makeup that cannot be repressed, as it signifies vitality itself which is outside our control",
+      "reactiveNature": "Interfering - constantly trying to find fulfillment in the future, attempting to recreate moments of joy, never escaping discomfort"
+    },
+    "gift": {
+      "name": "Vitality",
+      "keyExpression": "The joy of service, life force, sustainable energy",
+      "description": "The gift of Vitality transforms chronic dissatisfaction into sustainable life force. Those with this gift active discover that true vitality comes not from satisfying desires but from channeling energy into joyful service. Vitality is the gift of abundant life force that flows naturally when we stop fighting against what is and start working with it."
+    },
+    "siddhi": {
+      "name": "Bliss",
+      "keyExpression": "Beyond focus, continuous waves of love, unfocused awareness",
+      "description": "The siddhi of Bliss is the end of dissatisfaction - not through finding what we sought but through the dissolution of the seeker. At this frequency, life becomes continuous waves of love, an unfocused awareness that rests in the bliss of simply being. Bliss is not a peak experience but our natural state, revealed when the search for satisfaction finally ends."
+    },
+    "programmingPartnerId": "gk-52",
+    "codonRingId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "aminoAcidId": "serine",
+    "physiology": "Perineum",
+    "hdGateId": "gate-58",
+    "iChingHexagram": 58,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 245.625,
+    "degreeEnd": 251.25,
+    "url": "https://genekeys.com/gene-key-58/",
+    "description": "Gene Key 58: Dissatisfaction → Vitality → Bliss. This key invites contemplation on the transformation from Dissatisfaction to Bliss through the gift of Vitality.",
+    "image": "/images/gene-keys/keys/gk-58.png"
+  },
+  {
+    "id": "gk-59",
+    "type": "gene-key",
+    "name": "Gene Key 59: Transparency",
+    "symbol": "59",
+    "keyNumber": 59,
+    "shadow": {
+      "name": "Dishonesty",
+      "keyExpression": "Hidden agendas, strategic manipulation, inability to be vulnerable, sexual shame, genetic barriers",
+      "description": "The shadow of Dishonesty is the fear-based pattern that prevents true intimacy through deception and hidden agendas. This shadow operates through the sexual energy, creating barriers between people through manipulation, seduction without love, or the repression of natural affection. Dishonesty here isn't just about lying with words—it's about the inability to be genuinely vulnerable, to show one's true self without strategic positioning.",
+      "repressiveNature": "Timid - afraid to be honest about feelings and needs, hiding true self behind a mask of politeness, unable to express sexual or emotional truth",
+      "reactiveNature": "Provocative - using honesty as a weapon, being brutally honest without sensitivity, shocking others, using sexuality manipulatively"
+    },
+    "gift": {
+      "name": "Intimacy",
+      "keyExpression": "Honesty in relationships, breaking down genetic barriers, merging of awareness, sexual openness, authentic connection",
+      "description": "The gift of Intimacy is the courage to be completely honest in relationship, allowing genuine connection at all levels. Those with this gift active have the ability to break through emotional and energetic barriers, creating deep bonds through radical honesty. This gift transforms sexuality from a power dynamic into a spiritual communion, allowing two auras to genuinely merge. Intimacy here means the willingness to be seen completely, without masks or hidden agendas."
+    },
+    "siddhi": {
+      "name": "Transparency",
+      "keyExpression": "The dragon in your genome, seeing through all veils, becoming invisible, aura dissolution, complete openness",
+      "description": "The siddhi of Transparency is the complete dissolution of all barriers between self and other—a state where one becomes so open there is nothing left to hide. At this frequency, the individual becomes invisible in the sense that there is no separate self creating resistance. This is the awakening of what Richard Rudd calls 'the dragon in your genome'—the kundalini force that burns away all pretense. In Transparency, one's presence becomes a field of truth that invites others into their own authenticity."
+    },
+    "programmingPartnerId": "gk-55",
+    "codonRingId": "the-ring-of-union-(4,-7,-29,-59)",
+    "aminoAcidId": "valine",
+    "physiology": "Sacral Plexus (Sexual Organs)",
+    "hdGateId": "gate-59",
+    "iChingHexagram": 59,
+    "tropicalSignId": "leo",
+    "degreeStart": 146.375,
+    "degreeEnd": 152,
+    "url": "https://genekeys.com/gene-key-59/",
+    "description": "Gene Key 59: Dishonesty → Intimacy → Transparency. This key invites contemplation on the transformation from Dishonesty to Transparency through the gift of Intimacy.",
+    "image": "/images/gene-keys/keys/gk-59.png"
+  },
+  {
+    "id": "gk-60",
+    "type": "gene-key",
+    "name": "Gene Key 60: Justice",
+    "symbol": "60",
+    "keyNumber": 60,
+    "shadow": {
+      "name": "Limitation",
+      "keyExpression": "Feeling trapped, impatience with structure, inability to accept constraints, fighting boundaries, restriction",
+      "description": "The shadow of Limitation is the experience of being trapped by circumstances, structure, or physical laws. At this frequency, we either collapse into resignation, accepting our restrictions as permanent, or we rigidly fight against all limitations, unable to work creatively within constraints. This shadow reflects a fundamental misunderstanding about the nature of form—that limitation is not punishment but the very vessel through which evolution occurs.",
+      "repressiveNature": "Resigned - giving up in face of limitations, accepting restriction without attempting to work creatively within it, defeated by circumstances",
+      "reactiveNature": "Rigid - becoming overly attached to structure and form, unable to adapt when circumstances change, fighting all limitations"
+    },
+    "gift": {
+      "name": "Realism",
+      "keyExpression": "Accepting the present moment, working with limitation, practical innovation, creative constraint, grounded presence",
+      "description": "The gift of Realism is the ability to work creatively and even joyfully within limitations. Those with this gift understand that constraints are not obstacles but creative parameters—the very boundaries that give form to innovation. Realism brings a grounded, practical approach to life, accepting what cannot be changed while finding surprising possibilities within what can. This is the gift of the inventor who works with available materials, the artist who embraces their medium's limits."
+    },
+    "siddhi": {
+      "name": "Justice",
+      "keyExpression": "The cracking of the vessel, Divine law manifesting through form, cosmic order, evolutionary leap, mutation",
+      "description": "The siddhi of Justice is the realization that all limitation serves cosmic order—that the laws governing form are expressions of Divine wisdom. At this frequency, one sees how justice operates perfectly throughout existence, how every constraint ultimately serves evolution. The 'cracking of the vessel' refers to the mutation that occurs when limitation is fully accepted—the quantum leap that transcends previous boundaries. Justice here is not punishment but the perfect calibration of growth through form."
+    },
+    "programmingPartnerId": "gk-56",
+    "codonRingId": "the-ring-of-gaia-(19,-60,-61)",
+    "aminoAcidId": "isoleucine",
+    "physiology": "Colon",
+    "hdGateId": "gate-60",
+    "iChingHexagram": 60,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 262.5,
+    "degreeEnd": 268.125,
+    "url": "https://genekeys.com/gene-key-60/",
+    "description": "Gene Key 60: Limitation → Realism → Justice. This key invites contemplation on the transformation from Limitation to Justice through the gift of Realism.",
+    "image": "/images/gene-keys/keys/gk-60.png"
+  },
+  {
+    "id": "gk-61",
+    "type": "gene-key",
+    "name": "Gene Key 61: Sanctity",
+    "symbol": "61",
+    "keyNumber": 61,
+    "shadow": {
+      "name": "Psychosis",
+      "keyExpression": "Pressure of why, mental defection, mass consciousness, loss of contact with reality, worship traps, existential pressure",
+      "description": "The shadow of Psychosis is the overwhelming pressure of the eternal question 'Why?' that can fragment consciousness when resisted. This is one of the most intense shadows, creating mental instability when people either shut down the questioning impulse or become obsessed with finding definitive answers. At this frequency, the mind can lose contact with reality, either through disenchantment and depression or through fanaticism and delusion.",
+      "repressiveNature": "Disenchanted - turning away from existential pressure, giving up on deep questions, hiding from the terror of the unknown, remaining inwardly unfulfilled despite external comfort",
+      "reactiveNature": "Fanatical - becoming obsessed by the question, frozen on a single answer, building rigid belief systems, becoming missionary in propagation while insecurity bubbles as anger beneath"
+    },
+    "gift": {
+      "name": "Inspiration",
+      "keyExpression": "God is pressure, creative path, destroying delusion, releasing trapped energy, loosening mental constructs, inner knowing",
+      "description": "The gift of Inspiration transmutes the crushing pressure of existential questioning into creative breakthrough. Those with this gift active learn to surf the waves of inner pressure rather than being drowned by them. They understand that 'God is pressure'—that the very intensity pushing against consciousness is the force of awakening itself. Inspiration here is the flash of insight that comes when mental constructs are loosened, releasing the trapped energy of suppressed questioning into creative action."
+    },
+    "siddhi": {
+      "name": "Sanctity",
+      "keyExpression": "Entering the unknowable, inner truth, living mystery, divine vehicle, holiness essence, sacred presence",
+      "description": "The siddhi of Sanctity is the complete surrender to mystery—the state where one becomes a living vessel for the sacred without needing to understand it. At this frequency, the pressure of 'why' dissolves into the simple holiness of 'what is.' This is not the holiness of religious doctrine but the intrinsic sanctity of existence itself. One who embodies Sanctity becomes a walking answer to the question—not through words but through presence, radiating the peace that comes from entering the unknowable."
+    },
+    "programmingPartnerId": "gk-62",
+    "codonRingId": "ring-of-gaia",
+    "aminoAcidId": "isoleucine",
+    "physiology": "Pineal Gland",
+    "hdGateId": "gate-61",
+    "iChingHexagram": 61,
+    "tropicalSignId": "sagittarius",
+    "degreeStart": 262.5,
+    "degreeEnd": 268.125,
+    "url": "https://genekeys.com/gene-key-61/",
+    "description": "Gene Key 61: Psychosis → Inspiration → Sanctity. This key invites contemplation on the transformation from Psychosis to Sanctity through the gift of Inspiration.",
+    "image": "/images/gene-keys/keys/gk-61.png"
+  },
+  {
+    "id": "gk-62",
+    "type": "gene-key",
+    "name": "Gene Key 62: Impeccability",
+    "symbol": "62",
+    "keyNumber": 62,
+    "shadow": {
+      "name": "Intellect",
+      "keyExpression": "Mental domination, endless analysis, fear of imprecision, obsessive detail, intellectual attack",
+      "description": "The shadow of Intellect is the mind's attempt to control reality through analysis, categorization, and verbal precision. At this frequency, the intellect becomes a prison rather than a tool—either obsessing over minute details to avoid deeper feelings, or using intellectual prowess as a weapon to attack others. This shadow reflects the fear that life cannot be trusted without mental control, leading to endless analysis that never resolves into wisdom.",
+      "repressiveNature": "Obsessive - turning inward into obsession with small details as a way to avoid suffering, becoming lost in the mundane, held prisoner by the endless spinning of the mind",
+      "reactiveNature": "Pedantic - using intellect to attack everything and everyone, delighting in finding facts that disprove and disempower others, utterly unable to switch off the questioning mind"
+    },
+    "gift": {
+      "name": "Precision",
+      "keyExpression": "Heart leads mind, intelligence strikes balance, divine language, accurate expression, clarity of communication",
+      "description": "The gift of Precision is the intellect in service to the heart—the ability to express truth with exact, economical language. Those with this gift active understand that true intelligence requires balance between analysis and synthesis, between detail and big picture. Precision here is not pedantic but elegant—finding exactly the right word, the most accurate description, the clearest communication. When the heart leads the mind, the intellect becomes a beautiful instrument of truth."
+    },
+    "siddhi": {
+      "name": "Impeccability",
+      "keyExpression": "Cosmometry, language of perfection, death of ego, divine proportion, beyond reproach, sacred geometry of expression",
+      "description": "The siddhi of Impeccability is the complete alignment of word and being—where every expression reflects divine truth with perfect accuracy. At this frequency, language becomes cosmometry—the sacred geometry of sound that creates reality. Impeccability is not moral perfection but ontological precision: the death of the ego that distorts communication, leaving only the clear channel of Divine expression. One who embodies Impeccability speaks only truth, and their words carry the power of creation."
+    },
+    "programmingPartnerId": "gk-61",
+    "codonRingId": "ring-of-no-return",
+    "aminoAcidId": "tyrosine",
+    "physiology": "Throat/Thyroid",
+    "hdGateId": "gate-62",
+    "iChingHexagram": 62,
+    "tropicalSignId": "cancer",
+    "degreeStart": 106.875,
+    "degreeEnd": 112.5,
+    "url": "https://genekeys.com/gene-key-62/",
+    "description": "Gene Key 62: Intellect → Precision → Impeccability. This key invites contemplation on the transformation from Intellect to Impeccability through the gift of Precision.",
+    "image": "/images/gene-keys/keys/gk-62.png"
+  },
+  {
+    "id": "gk-63",
+    "type": "gene-key",
+    "name": "Gene Key 63: Truth",
+    "symbol": "63",
+    "keyNumber": 63,
+    "shadow": {
+      "name": "Doubt",
+      "keyExpression": "Chronic questioning, self-doubt, suspicion of others, distrust of life, seeking logical certainty",
+      "description": "The shadow of Doubt is the endless questioning that never arrives at rest—the mind's demand for logical proof before it can relax. At this frequency, doubt either turns inward as crippling self-doubt and comparison, or projects outward as suspicion and distrust of others. This shadow reflects the fear that life cannot be trusted without complete understanding, creating a prison of endless analysis that prevents both action and peace.",
+      "repressiveNature": "Self-Doubt - turning doubt inward through comparison and inadequacy, hiding from deeper questions, going the traditional route while remaining inwardly unfulfilled and restless",
+      "reactiveNature": "Suspicion - projecting doubt onto the world and others, transforming self-doubt into anger, creating destructive feedback loops in relationships through chronic distrust"
+    },
+    "gift": {
+      "name": "Inquiry",
+      "keyExpression": "Ladder of self inquiry, yoga path, harnessing doubt, progression through levels, inner quest, questioning as path",
+      "description": "The gift of Inquiry transforms doubt into a spiritual practice—the systematic investigation of reality that leads to wisdom. Those with this gift active understand that questioning itself is the path, that truth is revealed through honest investigation rather than belief. Inquiry here is not skeptical dismissal but genuine openness—using the sharp edge of doubt to cut through illusion. This is the gift of the scientist, philosopher, or yogi who questions everything, including the questioner."
+    },
+    "siddhi": {
+      "name": "Truth",
+      "keyExpression": "Truth is every step, doubt is truth, eternal moment, everywhere and everything, ultimate relaxation, absolute knowing",
+      "description": "The siddhi of Truth is the complete resolution of doubt—not through finding answers but through recognizing that Truth is present in every moment, including the moment of doubting. At this frequency, one realizes that doubt itself is truth seeking itself, that the questioner and the question are one. This brings the ultimate relaxation—the end of seeking because truth is seen to be everywhere and everything. One who embodies Truth has no need to convince anyone; their presence is self-evident."
+    },
+    "programmingPartnerId": "gk-64",
+    "codonRingId": "ring-of-divinity",
+    "aminoAcidId": "proline",
+    "physiology": "Pineal Gland",
+    "hdGateId": "gate-63",
+    "iChingHexagram": 63,
+    "tropicalSignId": "aquarius",
+    "degreeStart": 303.875,
+    "degreeEnd": 309.5,
+    "url": "https://genekeys.com/gene-key-63/",
+    "description": "Gene Key 63: Doubt → Inquiry → Truth. This key invites contemplation on the transformation from Doubt to Truth through the gift of Inquiry.",
+    "image": "/images/gene-keys/keys/gk-63.png"
+  },
+  {
+    "id": "gk-64",
+    "type": "gene-key",
+    "name": "Gene Key 64: Illumination",
+    "symbol": "64",
+    "keyNumber": 64,
+    "shadow": {
+      "name": "Confusion",
+      "keyExpression": "Lost in the labyrinth, mental overload, inability to synthesize, overwhelmed by possibilities, fragmented thinking",
+      "description": "The shadow of Confusion is the experience of being lost in the labyrinth of the mind—overwhelmed by possibilities, unable to synthesize the fragments into coherent meaning. At this frequency, we either shut down imagination altogether, reducing everything to simplistic explanations, or we become obsessively lost in complexity, spinning endlessly without resolution. This shadow reflects the challenge of having access to infinite mental content without the organizing principle to make sense of it.",
+      "repressiveNature": "Simplistic - reducing everything to simple explanations to avoid complexity, shutting down imagination, dismissing what cannot be easily categorized",
+      "reactiveNature": "Obsessive - becoming lost in complexity, unable to stop analyzing, mental spinning without resolution, overwhelmed by the stream of images and possibilities"
+    },
+    "gift": {
+      "name": "Imagination",
+      "keyExpression": "Bridging past and future, creative synthesis, the gift of the poet and visionary, weaving meaning from chaos",
+      "description": "The gift of Imagination transforms mental chaos into creative vision—the ability to see patterns in the noise and weave meaning from apparently random fragments. Those with this gift active have access to the vast library of human memory and possibility, and they can select and synthesize these elements into new wholes. This is the gift of the poet, artist, and visionary who can bridge past and future, drawing from the archetypal depths to create works that speak to the collective imagination."
+    },
+    "siddhi": {
+      "name": "Illumination",
+      "keyExpression": "The Aurora, the field of infinite imagination, Divine Mind, light of consciousness, cosmic vision",
+      "description": "The siddhi of Illumination is the complete awakening of consciousness to its own infinite creative potential—the Aurora, the light that illuminates all possibility. At this frequency, one becomes a conduit for Divine Mind, where imagination is no longer personal but cosmic. Illumination reveals that consciousness itself is the light in which all images appear and dissolve. One who embodies Illumination lives in continuous creative revelation, where every moment is fresh and luminous with meaning."
+    },
+    "programmingPartnerId": "gk-63",
+    "codonRingId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "aminoAcidId": "glycine",
+    "physiology": "Pineal Gland",
+    "hdGateId": "gate-64",
+    "iChingHexagram": 64,
+    "tropicalSignId": "leo",
+    "degreeStart": 146.375,
+    "degreeEnd": 152,
+    "url": "https://genekeys.com/gene-key-64/",
+    "description": "Gene Key 64: Confusion → Imagination → Illumination. This key invites contemplation on the transformation from Confusion to Illumination through the gift of Imagination.",
+    "image": "/images/gene-keys/keys/gk-64.png"
+  }
+]

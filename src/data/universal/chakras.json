@@ -1,0 +1,289 @@
+[
+  {
+    "id": "chakra-1-root",
+    "type": "chakra",
+    "name": "Root Chakra",
+    "number": 1,
+    "sanskritName": "Muladhara",
+    "symbol": "⊕",
+    "location": "Base of spine, perineum",
+    "color": "Red",
+    "colorHex": "#C41E3A",
+    "element": "Earth",
+    "frequency": 396,
+    "seed_mantra": "LAM",
+    "alchemicalSubstance": "Sulphur",
+    "relatedHouses": [4],
+    "relatedSigns": ["cancer"],
+    "relatedHDCenters": ["root-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Foundation",
+    "lifeTheme": "Belonging, safety, ancestral patterns, physical survival, roots",
+    "description": "The Root Chakra is the foundation of the entire energy system — the connection to earth, body, ancestry, and the instinctive knowing that we belong here. It governs our sense of safety in the physical world and our relationship to family patterns and cultural inheritance. The 4th astrological house corresponds directly to this energy: our roots, home, and the foundation upon which all life is built.",
+    "alchemyNote": "Sun in the 4th house activates the Root chakra — this person's solar purpose is rooted in ancestry, family, and the home as sacred foundation.",
+    "constricted": {
+      "name": "Fear",
+      "expression": "Survival anxiety, hypervigilance, inability to feel safe or grounded. Repeating ancestral trauma patterns without awareness. Physical contraction, disconnection from body, financial panic, territorial aggression or complete withdrawal.",
+      "blockingBelief": "The world is not safe. I do not belong. I must fight to survive or there is nothing solid to stand on."
+    },
+    "flowing": {
+      "name": "Groundedness",
+      "expression": "A deep, embodied sense of safety that comes not from external circumstances but from full inhabitation of the physical form. The capacity to stay rooted through change — to be moved without being swept away. Ancient strength inherited from all ancestors who survived and thrived."
+    },
+    "radiant": {
+      "name": "Presence",
+      "expression": "The recognition that the body itself is sacred ground — that the Earth and the self are not separate. Pure presence: the past no longer dictates, the future holds no terror, and this moment is complete. One becomes a stable, loving presence for all life."
+    },
+    "bodyCorrelates": "Spine base, legs, feet, bones, adrenal glands, large intestine",
+    "affirmation": "I am rooted in the Earth. I am safe in my body. My foundations are solid.",
+    "contemplativeQuestion": "What would it mean to feel truly at home in your body, your family line, and the Earth herself?",
+    "keywords": ["foundation", "safety", "roots", "ancestry", "survival", "grounding", "body", "earth", "belonging"]
+  },
+  {
+    "id": "chakra-2-sacral",
+    "type": "chakra",
+    "name": "Sacral Chakra",
+    "number": 2,
+    "sanskritName": "Svadhisthana",
+    "symbol": "☽",
+    "location": "Lower abdomen, 2 inches below navel",
+    "color": "Orange",
+    "colorHex": "#FF6B35",
+    "element": "Water",
+    "frequency": 417,
+    "seed_mantra": "VAM",
+    "alchemicalSubstance": "mixed (Sulphur-Sal bridge)",
+    "relatedHouses": [3, 5],
+    "relatedSigns": ["gemini", "leo"],
+    "relatedHDCenters": ["sacral-center", "spleen-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Creator",
+    "lifeTheme": "Creativity, self-expression, pleasure, sexuality, playfulness, emotional intelligence",
+    "description": "The Sacral Chakra governs the life force of creativity and pleasure — the drive to create, to connect, to play. In Stefano's astrological alchemy, the 3rd house (intellect, communication, curiosity) and 5th house (creativity, self-expression, joy) both correspond here. This is where the mind becomes playful and where we discover what delights us. It is also the center of sexual energy understood as pure creative vitality.",
+    "alchemyNote": "Sun in the 3rd house activates the Sacral chakra through the mind — intellect as creative force. Sun in the 5th activates it through expression — play, art, romance as life purpose.",
+    "constricted": {
+      "name": "Shame",
+      "expression": "Creative inhibition, sexual guilt, numbness to pleasure, addictive seeking of stimulation to fill an inner void. Fear of judgment stifles authentic expression. Charisma weaponized or hidden. Inability to receive joy without guilt.",
+      "blockingBelief": "My desires are shameful. My creativity is not worthy. I must earn the right to enjoy life."
+    },
+    "flowing": {
+      "name": "Vitality",
+      "expression": "A bubbling, irrepressible life force that expresses naturally through creativity, connection, and play. The capacity to engage with life with fresh enthusiasm. Healthy sexuality as sacred energy. The joy of making things — art, children, ideas, gardens — as authentic self-expression."
+    },
+    "radiant": {
+      "name": "Ecstasy",
+      "expression": "The recognition that existence itself is an act of cosmic creativity — that by fully inhabiting one's creative life force, one participates in the universe's own delight in creating. Pure vitality flowing without restriction, sourced directly from the creative impulse of the cosmos."
+    },
+    "bodyCorrelates": "Reproductive organs, hips, lower back, kidneys, bladder, lymphatic system",
+    "affirmation": "I create freely and joyfully. My life force flows with ease. I am worthy of pleasure.",
+    "contemplativeQuestion": "What would you create if you knew no one could judge you? What brings you pure, uncomplicated delight?",
+    "keywords": ["creativity", "pleasure", "sexuality", "play", "joy", "self-expression", "vitality", "curiosity", "flow"]
+  },
+  {
+    "id": "chakra-3-solar-plexus",
+    "type": "chakra",
+    "name": "Solar Plexus Chakra",
+    "number": 3,
+    "sanskritName": "Manipura",
+    "symbol": "△",
+    "location": "Upper abdomen, navel to sternum",
+    "color": "Yellow",
+    "colorHex": "#FFD700",
+    "element": "Fire",
+    "frequency": 528,
+    "seed_mantra": "RAM",
+    "alchemicalSubstance": "Sulphur-Sal transition",
+    "relatedHouses": [2, 6],
+    "relatedSigns": ["taurus", "virgo"],
+    "relatedHDCenters": ["solar-plexus-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Warrior / Servant",
+    "lifeTheme": "Personal power, self-worth through work and resources, discipline, service, health",
+    "description": "The Solar Plexus governs the relationship between inner power and outer manifestation. In Stefano's system, the 2nd house (resources, values, self-worth expressed through material reality) and the 6th house (work, health, routines, service) both map here. This is where intention becomes action in the practical world. The refinement of power: from raw will through discipline to genuine capability.",
+    "alchemyNote": "Sun in the 2nd house activates Solar Plexus through self-worth and material values. Sun in the 6th activates it through devotion to work and service as the path of mastery.",
+    "constricted": {
+      "name": "Powerlessness / Control",
+      "expression": "Either collapse of personal power (victim consciousness, inability to assert needs, over-service to others at own expense) or its opposite: domination, manipulation, using resources as control. The Solar Plexus out of balance either gives everything away or withholds everything.",
+      "blockingBelief": "I am not powerful enough. OR: I must control everything to feel safe. My worth equals my productivity."
+    },
+    "flowing": {
+      "name": "Empowerment",
+      "expression": "Personal power that arises from genuine competence built through committed practice. The satisfaction of mastery — knowing one has developed real skill through dedicated work. Healthy boundaries. The ability to stand in one's truth without aggression or submission. Service from fullness, not depletion."
+    },
+    "radiant": {
+      "name": "Radiance",
+      "expression": "Complete dissolution of the separation between will and flow — action that arises naturally from being, requiring no force. The solar plexus blazes like the sun: power so integrated it becomes warmth and light freely given, not something to be managed or protected."
+    },
+    "bodyCorrelates": "Stomach, liver, gallbladder, pancreas, small intestine, middle back",
+    "affirmation": "I am capable and empowered. My work is my devotion. I stand in my authentic power.",
+    "contemplativeQuestion": "What is the difference between genuine personal power and the need to control? Where are you being called to step more fully into your authority?",
+    "keywords": ["power", "will", "self-worth", "discipline", "service", "mastery", "work", "health", "manifestation"]
+  },
+  {
+    "id": "chakra-4-heart",
+    "type": "chakra",
+    "name": "Heart Chakra",
+    "number": 4,
+    "sanskritName": "Anahata",
+    "symbol": "✦",
+    "location": "Center of chest",
+    "color": "Green",
+    "colorHex": "#228B22",
+    "element": "Air",
+    "frequency": 639,
+    "seed_mantra": "YAM",
+    "alchemicalSubstance": "Sal (integration center)",
+    "relatedHouses": [1, 7],
+    "relatedSigns": ["aries", "libra"],
+    "relatedHDCenters": ["g-center", "heart-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Lover / The Bridge",
+    "lifeTheme": "Love, relationships, identity, self-acceptance, union, balance, the bridge between matter and spirit",
+    "description": "The Heart Chakra is the center of the system — the bridge between the three lower (earth/body/matter) chakras and the three upper (spirit/mind/cosmos) chakras. In Stefano's astrological system, the 1st house (self, identity, how we enter the world) and the 7th house (relationships, partnership, the other as mirror) both correspond here. The Heart holds both self-love and love for the other simultaneously — these are not separate. The G-Center in Human Design (identity, love, direction) resonates most strongly with this chakra.",
+    "alchemyNote": "Sun in the 1st house activates the Heart through the self — the solar purpose is expressed through identity and authentic presence. Sun in the 7th activates it through relationship — the other as the path to love and self-understanding.",
+    "constricted": {
+      "name": "Grief / Conditional Love",
+      "expression": "The closing of the heart in response to pain — building walls, conditional love, love as transaction. Or the opposite: heart so open it has no boundaries, losing oneself entirely in others. Grief that becomes identity. The belief that to love fully is to be destroyed.",
+      "blockingBelief": "Love is dangerous. If I open fully I will be hurt. OR: I must give myself away completely to be worthy of love."
+    },
+    "flowing": {
+      "name": "Compassion",
+      "expression": "Love that does not require anything in return because it recognizes its own wholeness. The capacity to be with another's pain without being consumed by it. Healthy self-love and love for others as expressions of the same movement. Boundaries from love rather than fear."
+    },
+    "radiant": {
+      "name": "Unity",
+      "expression": "The direct recognition that separation is an illusion — that the boundary between self and other, self and cosmos, is a temporary contraction of the same infinite love. The heart becomes a portal through which universal love flows without obstruction into all of life."
+    },
+    "bodyCorrelates": "Heart, lungs, thymus, arms, hands, circulatory system",
+    "affirmation": "I am open to love. I love myself and others freely. Love flows through me without condition.",
+    "contemplativeQuestion": "Where is your heart still protected? What would it mean to love without conditions — including loving yourself?",
+    "keywords": ["love", "compassion", "relationships", "identity", "unity", "acceptance", "balance", "bridge", "connection"]
+  },
+  {
+    "id": "chakra-5-throat",
+    "type": "chakra",
+    "name": "Throat Chakra",
+    "number": 5,
+    "sanskritName": "Vishuddha",
+    "symbol": "○",
+    "location": "Throat, neck",
+    "color": "Light Blue",
+    "colorHex": "#87CEEB",
+    "element": "Ether / Sound",
+    "frequency": 741,
+    "seed_mantra": "HAM",
+    "alchemicalSubstance": "Sal-Mercurius transition",
+    "relatedHouses": [8, 12],
+    "relatedSigns": ["scorpio", "pisces"],
+    "relatedHDCenters": ["throat-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Alchemist / The Mystic",
+    "lifeTheme": "Authentic expression, transformation, truth, sexuality as mystery, dissolution, spiritual depth",
+    "description": "The Throat Chakra governs authentic expression — the capacity to speak one's truth. But in Stefano's astrological alchemy, the correspondence is deeper: the 8th house (transformation, death/rebirth, sexuality as mystery, shared resources, the occult) and 12th house (dissolution, spirituality, the unconscious, retreat, hidden enemies within and without) both map to the Throat. This reveals that authentic speech is intimately linked to transformation and to what must die for truth to emerge. The Throat is the gateway between the personal (heart) and the transpersonal (third eye).",
+    "alchemyNote": "Sun in the 8th house activates the Throat through transformation and depth — the solar purpose requires going into darkness and bringing back truth. Sun in the 12th activates it through dissolution — the purpose is found in surrender, spirituality, and what lies beyond the veil.",
+    "constricted": {
+      "name": "Silence / Lies",
+      "expression": "Inability to express truth — whether through fear of conflict, trauma that silenced the voice, or lies maintained to preserve comfort. The throat closes around what cannot be said. Alternatively: speaking to control, words used as weapons or manipulations. The 8th house shadow: sexuality as power play; the 12th: spiritual bypassing.",
+      "blockingBelief": "My truth is dangerous. If I say what I really mean, I will be destroyed. OR: The truth must be managed and controlled to be safe."
+    },
+    "flowing": {
+      "name": "Authentic Voice",
+      "expression": "The capacity to speak from the depth of one's direct experience without filtering for approval. The integration of what has been transformed becoming available as wisdom that can be offered. Sexuality as sacred mystery. Spiritual depth as lived reality, not concept."
+    },
+    "radiant": {
+      "name": "Truth",
+      "expression": "Speech that arises directly from stillness — words that are not constructed but revealed. The throat becomes an instrument through which the cosmos speaks into form. What is said carries the power of transformation for the listener. Complete integration of all that has been alchemized in the lower centers."
+    },
+    "bodyCorrelates": "Throat, neck, thyroid, parathyroid, jaw, mouth, tongue, ears",
+    "affirmation": "I speak my truth with clarity and courage. My voice is sacred. I express myself authentically.",
+    "contemplativeQuestion": "What truth are you not yet speaking? What has been transformed in you that wants to become your authentic voice?",
+    "keywords": ["truth", "expression", "transformation", "voice", "authentic", "alchemy", "depth", "mystery", "surrender"]
+  },
+  {
+    "id": "chakra-6-third-eye",
+    "type": "chakra",
+    "name": "Third Eye Chakra",
+    "number": 6,
+    "sanskritName": "Ajna",
+    "symbol": "◇",
+    "location": "Between the eyebrows, center of forehead",
+    "color": "Indigo",
+    "colorHex": "#4B0082",
+    "element": "Light",
+    "frequency": 852,
+    "seed_mantra": "OM",
+    "alchemicalSubstance": "Mercurius",
+    "relatedHouses": [9, 11],
+    "relatedSigns": ["sagittarius", "aquarius"],
+    "relatedHDCenters": ["ajna-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Sage / The Visionary",
+    "lifeTheme": "Intuition, higher mind, philosophy, expansion, ideals, collective vision, seeing beyond appearances",
+    "description": "The Third Eye Chakra governs intuition and the capacity to see beyond the surface of reality into pattern, meaning, and higher truth. In Stefano's astrological alchemy, the 9th house (philosophy, higher education, travel, spiritual expansion, faith) and the 11th house (ideals, collective vision, humanitarian purpose, groups and communities) both correspond here. This is the Mercurial mind at its highest — not analyzing but perceiving directly. The Ajna Center in Human Design (the mental awareness center) resonates here.",
+    "alchemyNote": "Sun in the 9th house activates the Third Eye through wisdom-seeking and expansion — the solar purpose is found in the quest for higher truth. Sun in the 11th activates it through collective vision — the purpose is to see the ideal society and work toward it.",
+    "constricted": {
+      "name": "Illusion",
+      "expression": "The higher mind disconnected from embodied wisdom creates beautiful illusions mistaken for truth. Spiritual narcissism — the certainty of one's own vision without humility. The 9th house shadow: dogma, fanaticism; the 11th: utopian thinking that bypasses human reality. Overthinking, analysis paralysis, living entirely in the world of ideas.",
+      "blockingBelief": "My understanding is superior. I can see what others cannot. OR: I cannot trust my own perception of reality."
+    },
+    "flowing": {
+      "name": "Wisdom",
+      "expression": "Direct perception of truth that has been earned through experience and refined by genuine seeking. The capacity to hold multiple perspectives simultaneously without losing one's center. Intuition grounded in life experience. The philosophical mind that seeks to serve through understanding."
+    },
+    "radiant": {
+      "name": "Illumination",
+      "expression": "The Third Eye fully open perceives reality directly as it is — not through concepts, beliefs, or frameworks, but as immediate direct knowing. The mind becomes transparent to light. Perception is no longer divided from the perceived. Understanding comes not from analysis but from a clarity that arises from complete stillness."
+    },
+    "bodyCorrelates": "Brain, pineal gland, pituitary gland, eyes, sinuses, nervous system",
+    "affirmation": "I trust my intuition. I see clearly beyond appearances. My inner knowing guides me.",
+    "contemplativeQuestion": "What is your intuition telling you that your rational mind keeps overriding? What truth are you already seeing that you haven't yet allowed yourself to acknowledge?",
+    "keywords": ["intuition", "wisdom", "vision", "perception", "philosophy", "insight", "clarity", "higher mind", "idealism"]
+  },
+  {
+    "id": "chakra-7-crown",
+    "type": "chakra",
+    "name": "Crown Chakra",
+    "number": 7,
+    "sanskritName": "Sahasrara",
+    "symbol": "☀",
+    "location": "Top of the head",
+    "color": "Violet / White",
+    "colorHex": "#9B59B6",
+    "element": "Cosmic Consciousness",
+    "frequency": 963,
+    "seed_mantra": "AH",
+    "alchemicalSubstance": "Mercurius (transcendent)",
+    "relatedHouses": [10],
+    "relatedSigns": ["capricorn"],
+    "relatedHDCenters": ["head-center"],
+    "relatedGates": [],
+    "relatedNumerology": [],
+    "archetype": "The Purpose / The Channel",
+    "lifeTheme": "Life purpose, vocation, public calling, connection to the divine, highest expression in the world",
+    "description": "The Crown Chakra is the connection point between the individual and universal consciousness — the place where personal identity opens into something larger. In Stefano's astrological alchemy, the 10th house corresponds directly: the Midheaven, public life, career, vocation, the highest expression of purpose in the world. The Crown is not only mystical — it is eminently practical in this mapping. Your purpose in the world IS your connection to the cosmic. The Head Center in Human Design (inspiration, mental pressure) resonates here.",
+    "alchemyNote": "Sun in the 10th house activates the Crown chakra — this person's solar purpose is expressed through their public vocation and contribution to the world. Their career IS their spiritual practice. The Midheaven shows the specific form the Crown takes in this lifetime.",
+    "constricted": {
+      "name": "Disconnection / Spiritual Ego",
+      "expression": "Either complete disconnection from any sense of larger purpose (meaninglessness, nihilism, feeling that nothing matters), or spiritual ego that uses 'cosmic connection' to bypass personal accountability. The Crown unintegrated creates either collapse into pure materialism or flight into pure transcendence — both avoiding the integration of purpose in actual lived life.",
+      "blockingBelief": "My life has no higher purpose. OR: I am beyond ordinary human concerns — my spiritual nature exempts me from them."
+    },
+    "flowing": {
+      "name": "Purpose",
+      "expression": "A living sense of connection to something larger than the personal self — a direction that feels both freely chosen and cosmically destined. The capacity to bring spiritual depth into practical action in the world. Career as calling. Vocation aligned with essence."
+    },
+    "radiant": {
+      "name": "Enlightenment",
+      "expression": "The complete dissolution of the boundary between individual and universal. What remains is not the absence of personality but its transparent clarity — the individual as a pure expression of the universal. The crown opens fully and the cosmic flows through without obstruction into purposeful action in the world."
+    },
+    "bodyCorrelates": "Crown of head, brain, pineal gland, central nervous system",
+    "affirmation": "I am aligned with my highest purpose. The universe guides and supports me. I am one with all that is.",
+    "contemplativeQuestion": "What is the specific way your soul is designed to contribute to the world? What would it mean for your career and public life to be an expression of your connection to the sacred?",
+    "keywords": ["purpose", "vocation", "spirituality", "connection", "divine", "mission", "transcendence", "enlightenment", "calling"]
+  }
+]

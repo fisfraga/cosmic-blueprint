@@ -1,0 +1,127 @@
+[
+  {
+    "id": "hd-strategy-wait-to-respond",
+    "type": "hd-strategy",
+    "name": "Wait to Respond",
+    "symbol": "⟳",
+    "description": "The strategy for Generators and Manifesting Generators is to wait for something in their environment to respond to before taking action. This doesn't mean waiting passively—it means staying engaged with life while tuning into what naturally draws a Sacral response.",
+    "hdTypeIds": [
+      "hd-type-generator",
+      "hd-type-manifesting-generator"
+    ],
+    "practicalGuidance": "Notice the sounds your Sacral makes—the 'uh-huh' (yes) or 'uhn-uhn' (no). These gut responses are your guidance system. Put yourself in environments where you can encounter things to respond to. Ask yes/no questions when you need clarity.",
+    "signOfCorrectness": "When you're responding correctly, you'll feel satisfaction, energy, and flow. Work feels like play, and you end the day tired but fulfilled.",
+    "signOfIncorrectness": "Initiating without a Sacral response leads to frustration, exhaustion, and feeling stuck. You may find yourself in situations that drain rather than energize you.",
+    "keywords": [
+      "Sacral response",
+      "Gut knowing",
+      "Uh-huh/Uhn-uhn",
+      "Magnetism",
+      "Flow"
+    ],
+    "examples": [
+      "Someone asks if you want to help with a project—you wait and notice your gut response before answering",
+      "You see a job posting and feel your Sacral 'light up'—that's something to respond to",
+      "A friend suggests a restaurant and you notice an immediate gut 'no'—honor that"
+    ],
+    "commonMisunderstandings": [
+      "Waiting to respond doesn't mean being passive—it means staying engaged while waiting for resonance",
+      "Response can come from anything in your environment—a conversation, an email, seeing something",
+      "The response is instantaneous—it's the initial gut reaction, not what you think about later"
+    ],
+    "image": "/images/human-design/types/hd-strategy-wait-to-respond.png"
+  },
+  {
+    "id": "hd-strategy-inform",
+    "type": "hd-strategy",
+    "name": "Inform Before Acting",
+    "symbol": "↗",
+    "description": "The strategy for Manifestors is to inform those who will be impacted before taking action. This isn't asking permission—it's simply letting others know what you're about to do. This reduces resistance and creates peace.",
+    "hdTypeIds": [
+      "hd-type-manifestor"
+    ],
+    "practicalGuidance": "Before you act on an impulse, pause and ask: 'Who will be affected by this?' Then let them know what you're planning. A simple 'I'm going to...' is usually enough. This isn't about getting approval—it's about reducing the friction you naturally encounter.",
+    "signOfCorrectness": "When you inform consistently, you experience peace. People give you space, resistance dissolves, and you feel the freedom to create impact.",
+    "signOfIncorrectness": "Acting without informing leads to anger—both yours and others'. You may feel controlled, meet constant resistance, and experience conflict.",
+    "keywords": [
+      "Initiation",
+      "Impact",
+      "Peace",
+      "Independence",
+      "Informing"
+    ],
+    "examples": [
+      "Before leaving for the store: 'I'm heading out for groceries'",
+      "Before starting a new project: 'I'm going to reorganize the living room this weekend'",
+      "Before making a decision: 'I've decided to take the new job'"
+    ],
+    "commonMisunderstandings": [
+      "Informing is not asking permission—it's a courtesy that reduces resistance",
+      "You don't need approval to act—you just need to let impacted people know",
+      "The more you inform, the more freedom you'll actually experience"
+    ],
+    "image": "/images/human-design/types/hd-strategy-inform.png"
+  },
+  {
+    "id": "hd-strategy-wait-for-invitation",
+    "type": "hd-strategy",
+    "name": "Wait for the Invitation",
+    "symbol": "✧",
+    "description": "The strategy for Projectors is to wait for recognition and invitation before sharing their wisdom and guidance, especially in the big areas of life: career, relationships, and where to live. This ensures their gifts are truly seen and received.",
+    "hdTypeIds": [
+      "hd-type-projector"
+    ],
+    "practicalGuidance": "Focus on studying and mastering what interests you—this is how you become recognized. Wait for others to explicitly invite your input before offering guidance. In small daily matters, wait for recognition (someone acknowledging you) before engaging deeply. Save your energy for the right invitations.",
+    "signOfCorrectness": "When you wait for and receive genuine invitations, you experience success. Your guidance lands, you feel valued, and doors open naturally.",
+    "signOfIncorrectness": "Pushing your wisdom without invitation leads to bitterness. You may feel unseen, unappreciated, and exhausted from trying to prove your value.",
+    "keywords": [
+      "Recognition",
+      "Invitation",
+      "Guidance",
+      "Wisdom",
+      "Success"
+    ],
+    "examples": [
+      "Someone asks 'What do you think about my project?'—this is an invitation to share",
+      "A company reaches out to interview you—this is an invitation to explore",
+      "A friend says 'I could really use your advice'—this is recognition and invitation"
+    ],
+    "commonMisunderstandings": [
+      "Waiting for invitation applies mainly to big life decisions, not every small interaction",
+      "Recognition often comes before the invitation—being seen for who you are",
+      "You can create conditions for invitations by being visible and cultivating mastery"
+    ],
+    "image": "/images/human-design/types/hd-strategy-wait-for-invitation.png"
+  },
+  {
+    "id": "hd-strategy-lunar-cycle",
+    "type": "hd-strategy",
+    "name": "Wait a Lunar Cycle",
+    "symbol": "☽",
+    "description": "The strategy for Reflectors is to wait through an entire lunar cycle (approximately 28-29 days) before making major decisions. As the Moon moves through all 64 gates, Reflectors experience all possible perspectives, gaining unique clarity about what's truly right for them.",
+    "hdTypeIds": [
+      "hd-type-reflector"
+    ],
+    "practicalGuidance": "For significant decisions, give yourself a full Moon cycle. Track how you feel about the decision at different times. Talk it through with trusted advisors throughout the month. Notice patterns in how the decision feels across different lunar phases. Pay attention to your environment—you need healthy spaces and people around you.",
+    "signOfCorrectness": "When you honor the lunar cycle, you experience surprise and delight. Decisions feel clear and aligned, and you become a wise evaluator for your community.",
+    "signOfIncorrectness": "Making decisions too quickly leads to disappointment. You may feel lost, invisible, or like you don't belong anywhere.",
+    "keywords": [
+      "Moon cycle",
+      "Surprise",
+      "Reflection",
+      "Community",
+      "Evaluation"
+    ],
+    "examples": [
+      "Before accepting a job offer, give yourself 28 days to feel into it",
+      "Before moving to a new place, spend at least a month considering it",
+      "Before ending a relationship, wait a full cycle to ensure clarity"
+    ],
+    "commonMisunderstandings": [
+      "This applies to major decisions, not everyday choices",
+      "You're not waiting passively—you're actively sampling the decision from all perspectives",
+      "The lunar cycle gives you access to your own clarity, not others' opinions"
+    ],
+    "image": "/images/human-design/types/hd-strategy-lunar-cycle.png"
+  }
+]

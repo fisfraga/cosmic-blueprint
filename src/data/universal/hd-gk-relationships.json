@@ -1,0 +1,3074 @@
+[
+  {
+    "id": "gate-1-corresponds-gk-1",
+    "sourceId": "gate-1",
+    "targetId": "gk-1",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-1-in-g-center",
+    "sourceId": "gate-1",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-1-in-scorpio",
+    "sourceId": "gate-1",
+    "targetId": "scorpio",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-1-connects-gate-8",
+    "sourceId": "gate-1",
+    "targetId": "gate-8",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-2-corresponds-gk-2",
+    "sourceId": "gate-2",
+    "targetId": "gk-2",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-2-in-g-center",
+    "sourceId": "gate-2",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-2-in-taurus",
+    "sourceId": "gate-2",
+    "targetId": "taurus",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-2-connects-gate-14",
+    "sourceId": "gate-2",
+    "targetId": "gate-14",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-3-corresponds-gk-3",
+    "sourceId": "gate-3",
+    "targetId": "gk-3",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-3-in-sacral-center",
+    "sourceId": "gate-3",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-3-in-aries/taurus",
+    "sourceId": "gate-3",
+    "targetId": "aries/taurus",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-3-connects-gate-60",
+    "sourceId": "gate-3",
+    "targetId": "gate-60",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-4-corresponds-gk-4",
+    "sourceId": "gate-4",
+    "targetId": "gk-4",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-4-in-ajna-center",
+    "sourceId": "gate-4",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-4-in-leo",
+    "sourceId": "gate-4",
+    "targetId": "leo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-4-connects-gate-63",
+    "sourceId": "gate-4",
+    "targetId": "gate-63",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-5-corresponds-gk-5",
+    "sourceId": "gate-5",
+    "targetId": "gk-5",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-5-in-sacral-center",
+    "sourceId": "gate-5",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-5-in-sagittarius",
+    "sourceId": "gate-5",
+    "targetId": "sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-5-connects-gate-15",
+    "sourceId": "gate-5",
+    "targetId": "gate-15",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-6-corresponds-gk-6",
+    "sourceId": "gate-6",
+    "targetId": "gk-6",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-6-in-emotional solar plexus-center",
+    "sourceId": "gate-6",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-6-in-virgo",
+    "sourceId": "gate-6",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-6-connects-gate-59",
+    "sourceId": "gate-6",
+    "targetId": "gate-59",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-7-corresponds-gk-7",
+    "sourceId": "gate-7",
+    "targetId": "gk-7",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-7-in-g-center",
+    "sourceId": "gate-7",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-7-in-leo",
+    "sourceId": "gate-7",
+    "targetId": "leo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-7-connects-gate-31",
+    "sourceId": "gate-7",
+    "targetId": "gate-31",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-8-corresponds-gk-8",
+    "sourceId": "gate-8",
+    "targetId": "gk-8",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-8-in-throat-center",
+    "sourceId": "gate-8",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-8-in-taurus/gemini",
+    "sourceId": "gate-8",
+    "targetId": "taurus/gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-8-connects-gate-1",
+    "sourceId": "gate-8",
+    "targetId": "gate-1",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-9-corresponds-gk-9",
+    "sourceId": "gate-9",
+    "targetId": "gk-9",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-9-in-sacral-center",
+    "sourceId": "gate-9",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-9-in-sagittarius",
+    "sourceId": "gate-9",
+    "targetId": "sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-9-connects-gate-52",
+    "sourceId": "gate-9",
+    "targetId": "gate-52",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-10-corresponds-gk-10",
+    "sourceId": "gate-10",
+    "targetId": "gk-10",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-10-in-g-center",
+    "sourceId": "gate-10",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-10-in-sagittarius/capricorn",
+    "sourceId": "gate-10",
+    "targetId": "sagittarius/capricorn",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-10-connects-gate-34",
+    "sourceId": "gate-10",
+    "targetId": "gate-34",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-11-corresponds-gk-11",
+    "sourceId": "gate-11",
+    "targetId": "gk-11",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-11-in-ajna-center",
+    "sourceId": "gate-11",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-11-in-sagittarius",
+    "sourceId": "gate-11",
+    "targetId": "sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-11-connects-gate-56",
+    "sourceId": "gate-11",
+    "targetId": "gate-56",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-12-corresponds-gk-12",
+    "sourceId": "gate-12",
+    "targetId": "gk-12",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-12-in-throat-center",
+    "sourceId": "gate-12",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-12-in-gemini",
+    "sourceId": "gate-12",
+    "targetId": "gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-12-connects-gate-22",
+    "sourceId": "gate-12",
+    "targetId": "gate-22",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-13-corresponds-gk-13",
+    "sourceId": "gate-13",
+    "targetId": "gk-13",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-13-in-g-center",
+    "sourceId": "gate-13",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-13-in-aquarius",
+    "sourceId": "gate-13",
+    "targetId": "aquarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-13-connects-gate-33",
+    "sourceId": "gate-13",
+    "targetId": "gate-33",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-14-corresponds-gk-14",
+    "sourceId": "gate-14",
+    "targetId": "gk-14",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-14-in-sacral-center",
+    "sourceId": "gate-14",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-14-in-scorpio/sagittarius",
+    "sourceId": "gate-14",
+    "targetId": "scorpio/sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-14-connects-gate-2",
+    "sourceId": "gate-14",
+    "targetId": "gate-2",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-15-corresponds-gk-15",
+    "sourceId": "gate-15",
+    "targetId": "gk-15",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-15-in-g-center",
+    "sourceId": "gate-15",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-15-in-gemini/cancer",
+    "sourceId": "gate-15",
+    "targetId": "gemini/cancer",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-15-connects-gate-5",
+    "sourceId": "gate-15",
+    "targetId": "gate-5",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-16-corresponds-gk-16",
+    "sourceId": "gate-16",
+    "targetId": "gk-16",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-16-in-throat-center",
+    "sourceId": "gate-16",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-16-in-gemini",
+    "sourceId": "gate-16",
+    "targetId": "gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-16-connects-gate-48",
+    "sourceId": "gate-16",
+    "targetId": "gate-48",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-17-corresponds-gk-17",
+    "sourceId": "gate-17",
+    "targetId": "gk-17",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-17-in-ajna-center",
+    "sourceId": "gate-17",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-17-in-aries",
+    "sourceId": "gate-17",
+    "targetId": "aries",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-17-connects-gate-62",
+    "sourceId": "gate-17",
+    "targetId": "gate-62",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-18-corresponds-gk-18",
+    "sourceId": "gate-18",
+    "targetId": "gk-18",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-18-in-spleen-center",
+    "sourceId": "gate-18",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-18-in-libra",
+    "sourceId": "gate-18",
+    "targetId": "libra",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-18-connects-gate-58",
+    "sourceId": "gate-18",
+    "targetId": "gate-58",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-19-corresponds-gk-19",
+    "sourceId": "gate-19",
+    "targetId": "gk-19",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-19-in-root-center",
+    "sourceId": "gate-19",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-19-in-aquarius",
+    "sourceId": "gate-19",
+    "targetId": "aquarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-19-connects-gate-49",
+    "sourceId": "gate-19",
+    "targetId": "gate-49",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-20-corresponds-gk-20",
+    "sourceId": "gate-20",
+    "targetId": "gk-20",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-20-in-throat-center",
+    "sourceId": "gate-20",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-20-in-gemini",
+    "sourceId": "gate-20",
+    "targetId": "gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-20-connects-gate-57",
+    "sourceId": "gate-20",
+    "targetId": "gate-57",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-21-corresponds-gk-21",
+    "sourceId": "gate-21",
+    "targetId": "gk-21",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-21-in-heart-center",
+    "sourceId": "gate-21",
+    "targetId": "heart-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-21-in-aries",
+    "sourceId": "gate-21",
+    "targetId": "aries",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-21-connects-gate-45",
+    "sourceId": "gate-21",
+    "targetId": "gate-45",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-22-corresponds-gk-22",
+    "sourceId": "gate-22",
+    "targetId": "gk-22",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-22-in-emotional solar plexus-center",
+    "sourceId": "gate-22",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-22-in-pisces",
+    "sourceId": "gate-22",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-22-connects-gate-12",
+    "sourceId": "gate-22",
+    "targetId": "gate-12",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-23-corresponds-gk-23",
+    "sourceId": "gate-23",
+    "targetId": "gk-23",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-23-in-throat-center",
+    "sourceId": "gate-23",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-23-in-taurus",
+    "sourceId": "gate-23",
+    "targetId": "taurus",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-23-connects-gate-43",
+    "sourceId": "gate-23",
+    "targetId": "gate-43",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-24-corresponds-gk-24",
+    "sourceId": "gate-24",
+    "targetId": "gk-24",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-24-in-ajna-center",
+    "sourceId": "gate-24",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-24-in-taurus",
+    "sourceId": "gate-24",
+    "targetId": "taurus",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-24-connects-gate-61",
+    "sourceId": "gate-24",
+    "targetId": "gate-61",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-25-corresponds-gk-25",
+    "sourceId": "gate-25",
+    "targetId": "gk-25",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-25-in-g-center",
+    "sourceId": "gate-25",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-25-in-pisces",
+    "sourceId": "gate-25",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-25-connects-gate-51",
+    "sourceId": "gate-25",
+    "targetId": "gate-51",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-26-corresponds-gk-26",
+    "sourceId": "gate-26",
+    "targetId": "gk-26",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-26-in-heart-center",
+    "sourceId": "gate-26",
+    "targetId": "heart-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-26-in-sagittarius",
+    "sourceId": "gate-26",
+    "targetId": "sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-26-connects-gate-44",
+    "sourceId": "gate-26",
+    "targetId": "gate-44",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-27-corresponds-gk-27",
+    "sourceId": "gate-27",
+    "targetId": "gk-27",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-27-in-sacral-center",
+    "sourceId": "gate-27",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-27-in-taurus",
+    "sourceId": "gate-27",
+    "targetId": "taurus",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-27-connects-gate-50",
+    "sourceId": "gate-27",
+    "targetId": "gate-50",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-28-corresponds-gk-28",
+    "sourceId": "gate-28",
+    "targetId": "gk-28",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-28-in-spleen-center",
+    "sourceId": "gate-28",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-28-in-scorpio",
+    "sourceId": "gate-28",
+    "targetId": "scorpio",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-28-connects-gate-38",
+    "sourceId": "gate-28",
+    "targetId": "gate-38",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-29-corresponds-gk-29",
+    "sourceId": "gate-29",
+    "targetId": "gk-29",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-29-in-sacral-center",
+    "sourceId": "gate-29",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-29-in-leo/virgo",
+    "sourceId": "gate-29",
+    "targetId": "leo/virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-29-connects-gate-46",
+    "sourceId": "gate-29",
+    "targetId": "gate-46",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-30-corresponds-gk-30",
+    "sourceId": "gate-30",
+    "targetId": "gk-30",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-30-in-emotional solar plexus-center",
+    "sourceId": "gate-30",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-30-in-aquarius/pisces",
+    "sourceId": "gate-30",
+    "targetId": "aquarius/pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-30-connects-gate-41",
+    "sourceId": "gate-30",
+    "targetId": "gate-41",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-31-corresponds-gk-31",
+    "sourceId": "gate-31",
+    "targetId": "gk-31",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-31-in-throat-center",
+    "sourceId": "gate-31",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-31-in-leo",
+    "sourceId": "gate-31",
+    "targetId": "leo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-31-connects-gate-7",
+    "sourceId": "gate-31",
+    "targetId": "gate-7",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-32-corresponds-gk-32",
+    "sourceId": "gate-32",
+    "targetId": "gk-32",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-32-in-spleen-center",
+    "sourceId": "gate-32",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-32-in-libra",
+    "sourceId": "gate-32",
+    "targetId": "libra",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-32-connects-gate-54",
+    "sourceId": "gate-32",
+    "targetId": "gate-54",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-33-corresponds-gk-33",
+    "sourceId": "gate-33",
+    "targetId": "gk-33",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-33-in-throat-center",
+    "sourceId": "gate-33",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-33-in-leo",
+    "sourceId": "gate-33",
+    "targetId": "leo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-33-connects-gate-13",
+    "sourceId": "gate-33",
+    "targetId": "gate-13",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-34-corresponds-gk-34",
+    "sourceId": "gate-34",
+    "targetId": "gk-34",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-34-in-sacral-center",
+    "sourceId": "gate-34",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-34-in-sagittarius",
+    "sourceId": "gate-34",
+    "targetId": "sagittarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-34-connects-gate-10",
+    "sourceId": "gate-34",
+    "targetId": "gate-10",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-35-corresponds-gk-35",
+    "sourceId": "gate-35",
+    "targetId": "gk-35",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-35-in-throat-center",
+    "sourceId": "gate-35",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-35-in-gemini",
+    "sourceId": "gate-35",
+    "targetId": "gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-35-connects-gate-36",
+    "sourceId": "gate-35",
+    "targetId": "gate-36",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-36-corresponds-gk-36",
+    "sourceId": "gate-36",
+    "targetId": "gk-36",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-36-in-emotional solar plexus-center",
+    "sourceId": "gate-36",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-36-in-pisces",
+    "sourceId": "gate-36",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-36-connects-gate-35",
+    "sourceId": "gate-36",
+    "targetId": "gate-35",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-37-corresponds-gk-37",
+    "sourceId": "gate-37",
+    "targetId": "gk-37",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-37-in-emotional solar plexus-center",
+    "sourceId": "gate-37",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-37-in-pisces",
+    "sourceId": "gate-37",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-37-connects-gate-40",
+    "sourceId": "gate-37",
+    "targetId": "gate-40",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-38-corresponds-gk-38",
+    "sourceId": "gate-38",
+    "targetId": "gk-38",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-38-in-root-center",
+    "sourceId": "gate-38",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-38-in-capricorn",
+    "sourceId": "gate-38",
+    "targetId": "capricorn",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-38-connects-gate-28",
+    "sourceId": "gate-38",
+    "targetId": "gate-28",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-39-corresponds-gk-39",
+    "sourceId": "gate-39",
+    "targetId": "gk-39",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-39-in-root-center",
+    "sourceId": "gate-39",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-39-in-cancer",
+    "sourceId": "gate-39",
+    "targetId": "cancer",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-39-connects-gate-55",
+    "sourceId": "gate-39",
+    "targetId": "gate-55",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-40-corresponds-gk-40",
+    "sourceId": "gate-40",
+    "targetId": "gk-40",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-40-in-heart-center",
+    "sourceId": "gate-40",
+    "targetId": "heart-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-40-in-virgo",
+    "sourceId": "gate-40",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-40-connects-gate-37",
+    "sourceId": "gate-40",
+    "targetId": "gate-37",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-41-corresponds-gk-41",
+    "sourceId": "gate-41",
+    "targetId": "gk-41",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-41-in-root-center",
+    "sourceId": "gate-41",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-41-in-aquarius",
+    "sourceId": "gate-41",
+    "targetId": "aquarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-41-connects-gate-30",
+    "sourceId": "gate-41",
+    "targetId": "gate-30",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-42-corresponds-gk-42",
+    "sourceId": "gate-42",
+    "targetId": "gk-42",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-42-in-sacral-center",
+    "sourceId": "gate-42",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-42-in-aries",
+    "sourceId": "gate-42",
+    "targetId": "aries",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-42-connects-gate-53",
+    "sourceId": "gate-42",
+    "targetId": "gate-53",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-43-corresponds-gk-43",
+    "sourceId": "gate-43",
+    "targetId": "gk-43",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-43-in-ajna-center",
+    "sourceId": "gate-43",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-43-in-scorpio",
+    "sourceId": "gate-43",
+    "targetId": "scorpio",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-43-connects-gate-23",
+    "sourceId": "gate-43",
+    "targetId": "gate-23",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-44-corresponds-gk-44",
+    "sourceId": "gate-44",
+    "targetId": "gk-44",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-44-in-spleen-center",
+    "sourceId": "gate-44",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-44-in-scorpio",
+    "sourceId": "gate-44",
+    "targetId": "scorpio",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-44-connects-gate-26",
+    "sourceId": "gate-44",
+    "targetId": "gate-26",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-45-corresponds-gk-45",
+    "sourceId": "gate-45",
+    "targetId": "gk-45",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-45-in-throat-center",
+    "sourceId": "gate-45",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-45-in-gemini",
+    "sourceId": "gate-45",
+    "targetId": "gemini",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-45-connects-gate-21",
+    "sourceId": "gate-45",
+    "targetId": "gate-21",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-46-corresponds-gk-46",
+    "sourceId": "gate-46",
+    "targetId": "gk-46",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-46-in-g-center",
+    "sourceId": "gate-46",
+    "targetId": "g-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-46-in-virgo",
+    "sourceId": "gate-46",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-46-connects-gate-29",
+    "sourceId": "gate-46",
+    "targetId": "gate-29",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-47-corresponds-gk-47",
+    "sourceId": "gate-47",
+    "targetId": "gk-47",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-47-in-ajna-center",
+    "sourceId": "gate-47",
+    "targetId": "ajna-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-47-in-virgo",
+    "sourceId": "gate-47",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-47-connects-gate-64",
+    "sourceId": "gate-47",
+    "targetId": "gate-64",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-48-corresponds-gk-48",
+    "sourceId": "gate-48",
+    "targetId": "gk-48",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-48-in-spleen-center",
+    "sourceId": "gate-48",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-48-in-libra",
+    "sourceId": "gate-48",
+    "targetId": "libra",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-48-connects-gate-16",
+    "sourceId": "gate-48",
+    "targetId": "gate-16",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-49-corresponds-gk-49",
+    "sourceId": "gate-49",
+    "targetId": "gk-49",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-49-in-emotional solar plexus-center",
+    "sourceId": "gate-49",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-49-in-aquarius",
+    "sourceId": "gate-49",
+    "targetId": "aquarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-49-connects-gate-19",
+    "sourceId": "gate-49",
+    "targetId": "gate-19",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-50-corresponds-gk-50",
+    "sourceId": "gate-50",
+    "targetId": "gk-50",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-50-in-spleen-center",
+    "sourceId": "gate-50",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-50-in-libra/scorpio",
+    "sourceId": "gate-50",
+    "targetId": "libra/scorpio",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-50-connects-gate-27",
+    "sourceId": "gate-50",
+    "targetId": "gate-27",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-51-corresponds-gk-51",
+    "sourceId": "gate-51",
+    "targetId": "gk-51",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-51-in-heart-center",
+    "sourceId": "gate-51",
+    "targetId": "heart-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-51-in-aries",
+    "sourceId": "gate-51",
+    "targetId": "aries",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-51-connects-gate-25",
+    "sourceId": "gate-51",
+    "targetId": "gate-25",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-52-corresponds-gk-52",
+    "sourceId": "gate-52",
+    "targetId": "gk-52",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-52-in-root-center",
+    "sourceId": "gate-52",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-52-in-cancer",
+    "sourceId": "gate-52",
+    "targetId": "cancer",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-52-connects-gate-9",
+    "sourceId": "gate-52",
+    "targetId": "gate-9",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-53-corresponds-gk-53",
+    "sourceId": "gate-53",
+    "targetId": "gk-53",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-53-in-root-center",
+    "sourceId": "gate-53",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-53-in-cancer",
+    "sourceId": "gate-53",
+    "targetId": "cancer",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-53-connects-gate-42",
+    "sourceId": "gate-53",
+    "targetId": "gate-42",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-54-corresponds-gk-54",
+    "sourceId": "gate-54",
+    "targetId": "gk-54",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-54-in-root-center",
+    "sourceId": "gate-54",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-54-in-capricorn",
+    "sourceId": "gate-54",
+    "targetId": "capricorn",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-54-connects-gate-32",
+    "sourceId": "gate-54",
+    "targetId": "gate-32",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-55-corresponds-gk-55",
+    "sourceId": "gate-55",
+    "targetId": "gk-55",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-55-in-emotional solar plexus-center",
+    "sourceId": "gate-55",
+    "targetId": "emotional solar plexus-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-55-in-pisces",
+    "sourceId": "gate-55",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-55-connects-gate-39",
+    "sourceId": "gate-55",
+    "targetId": "gate-39",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-56-corresponds-gk-56",
+    "sourceId": "gate-56",
+    "targetId": "gk-56",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-56-in-throat-center",
+    "sourceId": "gate-56",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-56-in-cancer/leo",
+    "sourceId": "gate-56",
+    "targetId": "cancer/leo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-56-connects-gate-11",
+    "sourceId": "gate-56",
+    "targetId": "gate-11",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-57-corresponds-gk-57",
+    "sourceId": "gate-57",
+    "targetId": "gk-57",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-57-in-spleen-center",
+    "sourceId": "gate-57",
+    "targetId": "spleen-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-57-in-libra",
+    "sourceId": "gate-57",
+    "targetId": "libra",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-57-connects-gate-20",
+    "sourceId": "gate-57",
+    "targetId": "gate-20",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-58-corresponds-gk-58",
+    "sourceId": "gate-58",
+    "targetId": "gk-58",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-58-in-root-center",
+    "sourceId": "gate-58",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-58-in-capricorn",
+    "sourceId": "gate-58",
+    "targetId": "capricorn",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-58-connects-gate-18",
+    "sourceId": "gate-58",
+    "targetId": "gate-18",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-59-corresponds-gk-59",
+    "sourceId": "gate-59",
+    "targetId": "gk-59",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-59-in-sacral-center",
+    "sourceId": "gate-59",
+    "targetId": "sacral-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-59-in-virgo",
+    "sourceId": "gate-59",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-59-connects-gate-6",
+    "sourceId": "gate-59",
+    "targetId": "gate-6",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-60-corresponds-gk-60",
+    "sourceId": "gate-60",
+    "targetId": "gk-60",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-60-in-root-center",
+    "sourceId": "gate-60",
+    "targetId": "root-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-60-in-capricorn/aquarius",
+    "sourceId": "gate-60",
+    "targetId": "capricorn/aquarius",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-60-connects-gate-3",
+    "sourceId": "gate-60",
+    "targetId": "gate-3",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-61-corresponds-gk-61",
+    "sourceId": "gate-61",
+    "targetId": "gk-61",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-61-in-head-center",
+    "sourceId": "gate-61",
+    "targetId": "head-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-61-in-capricorn",
+    "sourceId": "gate-61",
+    "targetId": "capricorn",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-61-connects-gate-24",
+    "sourceId": "gate-61",
+    "targetId": "gate-24",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-62-corresponds-gk-62",
+    "sourceId": "gate-62",
+    "targetId": "gk-62",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-62-in-throat-center",
+    "sourceId": "gate-62",
+    "targetId": "throat-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-62-in-cancer",
+    "sourceId": "gate-62",
+    "targetId": "cancer",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-62-connects-gate-17",
+    "sourceId": "gate-62",
+    "targetId": "gate-17",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-63-corresponds-gk-63",
+    "sourceId": "gate-63",
+    "targetId": "gk-63",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-63-in-head-center",
+    "sourceId": "gate-63",
+    "targetId": "head-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-63-in-pisces",
+    "sourceId": "gate-63",
+    "targetId": "pisces",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-63-connects-gate-4",
+    "sourceId": "gate-63",
+    "targetId": "gate-4",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gate-64-corresponds-gk-64",
+    "sourceId": "gate-64",
+    "targetId": "gk-64",
+    "relationshipType": "GATE_CORRESPONDS_TO_GK"
+  },
+  {
+    "id": "gate-64-in-head-center",
+    "sourceId": "gate-64",
+    "targetId": "head-center",
+    "relationshipType": "GATE_IN_CENTER"
+  },
+  {
+    "id": "gate-64-in-virgo",
+    "sourceId": "gate-64",
+    "targetId": "virgo",
+    "relationshipType": "GATE_IN_SIGN"
+  },
+  {
+    "id": "gate-64-connects-gate-47",
+    "sourceId": "gate-64",
+    "targetId": "gate-47",
+    "relationshipType": "GATE_CONNECTS_TO"
+  },
+  {
+    "id": "gk-1-partner-gk-2",
+    "sourceId": "gk-1",
+    "targetId": "gk-2",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-1-in-ring-of-fire",
+    "sourceId": "gk-1",
+    "targetId": "ring-of-fire",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-1-encodes-lysine",
+    "sourceId": "gk-1",
+    "targetId": "lysine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-1-corresponds-gate-1",
+    "sourceId": "gk-1",
+    "targetId": "gate-1",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-2-partner-gk-1",
+    "sourceId": "gk-2",
+    "targetId": "gk-1",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-2-in-ring-of-water",
+    "sourceId": "gk-2",
+    "targetId": "ring-of-water",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-2-encodes-phenylalanine",
+    "sourceId": "gk-2",
+    "targetId": "phenylalanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-2-corresponds-gate-2",
+    "sourceId": "gk-2",
+    "targetId": "gate-2",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-3-partner-gk-50",
+    "sourceId": "gk-3",
+    "targetId": "gk-50",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-3-in-ring-of-life-and-death",
+    "sourceId": "gk-3",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-3-encodes-leucine",
+    "sourceId": "gk-3",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-3-corresponds-gate-3",
+    "sourceId": "gk-3",
+    "targetId": "gate-3",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-4-partner-gk-49",
+    "sourceId": "gk-4",
+    "targetId": "gk-49",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-4-in-ring-of-union",
+    "sourceId": "gk-4",
+    "targetId": "ring-of-union",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-4-encodes-valine",
+    "sourceId": "gk-4",
+    "targetId": "valine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-4-corresponds-gate-4",
+    "sourceId": "gk-4",
+    "targetId": "gate-4",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-5-partner-gk-35",
+    "sourceId": "gk-5",
+    "targetId": "gk-35",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-5-in-ring-of-light",
+    "sourceId": "gk-5",
+    "targetId": "ring-of-light",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-5-encodes-threonine",
+    "sourceId": "gk-5",
+    "targetId": "threonine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-5-corresponds-gate-5",
+    "sourceId": "gk-5",
+    "targetId": "gate-5",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-6-partner-gk-36",
+    "sourceId": "gk-6",
+    "targetId": "gk-36",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-6-in-ring-of-alchemy",
+    "sourceId": "gk-6",
+    "targetId": "ring-of-alchemy",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-6-encodes-glycine",
+    "sourceId": "gk-6",
+    "targetId": "glycine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-6-corresponds-gate-6",
+    "sourceId": "gk-6",
+    "targetId": "gate-6",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-7-partner-gk-13",
+    "sourceId": "gk-7",
+    "targetId": "gk-13",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-7-in-ring-of-union",
+    "sourceId": "gk-7",
+    "targetId": "ring-of-union",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-7-encodes-valine",
+    "sourceId": "gk-7",
+    "targetId": "valine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-7-corresponds-gate-7",
+    "sourceId": "gk-7",
+    "targetId": "gate-7",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-8-partner-gk-14",
+    "sourceId": "gk-8",
+    "targetId": "gk-14",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-8-in-ring-of-water",
+    "sourceId": "gk-8",
+    "targetId": "ring-of-water",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-8-encodes-phenylalanine",
+    "sourceId": "gk-8",
+    "targetId": "phenylalanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-8-corresponds-gate-8",
+    "sourceId": "gk-8",
+    "targetId": "gate-8",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-9-partner-gk-16",
+    "sourceId": "gk-9",
+    "targetId": "gk-16",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-9-in-ring-of-light",
+    "sourceId": "gk-9",
+    "targetId": "ring-of-light",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-9-encodes-threonine",
+    "sourceId": "gk-9",
+    "targetId": "threonine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-9-corresponds-gate-9",
+    "sourceId": "gk-9",
+    "targetId": "gate-9",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-10-partner-gk-15",
+    "sourceId": "gk-10",
+    "targetId": "gk-15",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-10-in-ring-of-humanity",
+    "sourceId": "gk-10",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-10-encodes-arginine",
+    "sourceId": "gk-10",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-10-corresponds-gate-10",
+    "sourceId": "gk-10",
+    "targetId": "gate-10",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-11-partner-gk-12",
+    "sourceId": "gk-11",
+    "targetId": "gk-12",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-11-in-ring-of-light",
+    "sourceId": "gk-11",
+    "targetId": "ring-of-light",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-11-encodes-threonine",
+    "sourceId": "gk-11",
+    "targetId": "threonine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-11-corresponds-gate-11",
+    "sourceId": "gk-11",
+    "targetId": "gate-11",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-12-partner-gk-11",
+    "sourceId": "gk-12",
+    "targetId": "gk-11",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-12-in-the-ring-of-secrets-(the-ring-of-trials)",
+    "sourceId": "gk-12",
+    "targetId": "the-ring-of-secrets-(the-ring-of-trials)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-12-encodes-none-(terminator-codon)",
+    "sourceId": "gk-12",
+    "targetId": "none-(terminator-codon)",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-12-corresponds-gate-12",
+    "sourceId": "gk-12",
+    "targetId": "gate-12",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-13-partner-gk-7",
+    "sourceId": "gk-13",
+    "targetId": "gk-7",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-13-in-ring-of-purification",
+    "sourceId": "gk-13",
+    "targetId": "ring-of-purification",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-13-encodes-glutamine",
+    "sourceId": "gk-13",
+    "targetId": "glutamine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-13-corresponds-gate-13",
+    "sourceId": "gk-13",
+    "targetId": "gate-13",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-14-partner-gk-8",
+    "sourceId": "gk-14",
+    "targetId": "gk-8",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-14-in-ring-of-fire",
+    "sourceId": "gk-14",
+    "targetId": "ring-of-fire",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-14-encodes-lysine",
+    "sourceId": "gk-14",
+    "targetId": "lysine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-14-corresponds-gate-14",
+    "sourceId": "gk-14",
+    "targetId": "gate-14",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-15-partner-gk-10",
+    "sourceId": "gk-15",
+    "targetId": "gk-10",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-15-in-ring-of-seeking",
+    "sourceId": "gk-15",
+    "targetId": "ring-of-seeking",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-15-encodes-serine",
+    "sourceId": "gk-15",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-15-corresponds-gate-15",
+    "sourceId": "gk-15",
+    "targetId": "gate-15",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-16-partner-gk-9",
+    "sourceId": "gk-16",
+    "targetId": "gk-9",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-16-in-ring-of-prosperity",
+    "sourceId": "gk-16",
+    "targetId": "ring-of-prosperity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-16-encodes-cysteine",
+    "sourceId": "gk-16",
+    "targetId": "cysteine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-16-corresponds-gate-16",
+    "sourceId": "gk-16",
+    "targetId": "gate-16",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-17-partner-gk-18",
+    "sourceId": "gk-17",
+    "targetId": "gk-18",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-17-in-ring-of-humanity",
+    "sourceId": "gk-17",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-17-encodes-arginine",
+    "sourceId": "gk-17",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-17-corresponds-gate-17",
+    "sourceId": "gk-17",
+    "targetId": "gate-17",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-18-partner-gk-17",
+    "sourceId": "gk-18",
+    "targetId": "gk-17",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-18-in-ring-of-matter",
+    "sourceId": "gk-18",
+    "targetId": "ring-of-matter",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-18-encodes-alanine",
+    "sourceId": "gk-18",
+    "targetId": "alanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-18-corresponds-gate-18",
+    "sourceId": "gk-18",
+    "targetId": "gate-18",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-19-partner-gk-33",
+    "sourceId": "gk-19",
+    "targetId": "gk-33",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-19-in-ring-of-gaia",
+    "sourceId": "gk-19",
+    "targetId": "ring-of-gaia",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-19-encodes-isoleucine",
+    "sourceId": "gk-19",
+    "targetId": "isoleucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-19-corresponds-gate-19",
+    "sourceId": "gk-19",
+    "targetId": "gate-19",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-20-partner-gk-34",
+    "sourceId": "gk-20",
+    "targetId": "gk-34",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-20-in-ring-of-life-and-death",
+    "sourceId": "gk-20",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-20-encodes-leucine",
+    "sourceId": "gk-20",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-20-corresponds-gate-20",
+    "sourceId": "gk-20",
+    "targetId": "gate-20",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-21-partner-gk-48",
+    "sourceId": "gk-21",
+    "targetId": "gk-48",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-21-in-ring-of-humanity",
+    "sourceId": "gk-21",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-21-encodes-arginine",
+    "sourceId": "gk-21",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-21-corresponds-gate-21",
+    "sourceId": "gk-21",
+    "targetId": "gate-21",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-22-partner-gk-47",
+    "sourceId": "gk-22",
+    "targetId": "gk-47",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-22-in-ring-of-divinity",
+    "sourceId": "gk-22",
+    "targetId": "ring-of-divinity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-22-encodes-proline",
+    "sourceId": "gk-22",
+    "targetId": "proline",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-22-corresponds-gate-22",
+    "sourceId": "gk-22",
+    "targetId": "gate-22",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-23-partner-gk-43",
+    "sourceId": "gk-23",
+    "targetId": "gk-43",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-23-in-ring-of-life-and-death",
+    "sourceId": "gk-23",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-23-encodes-leucine",
+    "sourceId": "gk-23",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-23-corresponds-gate-23",
+    "sourceId": "gk-23",
+    "targetId": "gate-23",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-24-partner-gk-44",
+    "sourceId": "gk-24",
+    "targetId": "gk-44",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-24-in-ring-of-life-and-death",
+    "sourceId": "gk-24",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-24-encodes-leucine",
+    "sourceId": "gk-24",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-24-corresponds-gate-24",
+    "sourceId": "gk-24",
+    "targetId": "gate-24",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-25-partner-gk-46",
+    "sourceId": "gk-25",
+    "targetId": "gk-46",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-25-in-ring-of-humanity",
+    "sourceId": "gk-25",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-25-encodes-arginine",
+    "sourceId": "gk-25",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-25-corresponds-gate-25",
+    "sourceId": "gk-25",
+    "targetId": "gate-25",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-26-partner-gk-45",
+    "sourceId": "gk-26",
+    "targetId": "gk-45",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-26-in-ring-of-light",
+    "sourceId": "gk-26",
+    "targetId": "ring-of-light",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-26-encodes-threonine",
+    "sourceId": "gk-26",
+    "targetId": "threonine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-26-corresponds-gate-26",
+    "sourceId": "gk-26",
+    "targetId": "gate-26",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-27-partner-gk-28",
+    "sourceId": "gk-27",
+    "targetId": "gk-28",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-27-in-ring-of-life-and-death",
+    "sourceId": "gk-27",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-27-encodes-leucine",
+    "sourceId": "gk-27",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-27-corresponds-gate-27",
+    "sourceId": "gk-27",
+    "targetId": "gate-27",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-28-partner-gk-27",
+    "sourceId": "gk-28",
+    "targetId": "gk-27",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-28-in-ring-of-illusion",
+    "sourceId": "gk-28",
+    "targetId": "ring-of-illusion",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-28-encodes-asparaginic-acid",
+    "sourceId": "gk-28",
+    "targetId": "asparaginic-acid",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-28-corresponds-gate-28",
+    "sourceId": "gk-28",
+    "targetId": "gate-28",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-29-partner-gk-30",
+    "sourceId": "gk-29",
+    "targetId": "gk-30",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-29-in-ring-of-union",
+    "sourceId": "gk-29",
+    "targetId": "ring-of-union",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-29-encodes-valine",
+    "sourceId": "gk-29",
+    "targetId": "valine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-29-corresponds-gate-29",
+    "sourceId": "gk-29",
+    "targetId": "gate-29",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-30-partner-gk-29",
+    "sourceId": "gk-30",
+    "targetId": "gk-29",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-30-in-ring-of-purification",
+    "sourceId": "gk-30",
+    "targetId": "ring-of-purification",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-30-encodes-glutamine",
+    "sourceId": "gk-30",
+    "targetId": "glutamine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-30-corresponds-gate-30",
+    "sourceId": "gk-30",
+    "targetId": "gate-30",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-31-partner-gk-41",
+    "sourceId": "gk-31",
+    "targetId": "gk-41",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-31-in-ring-of-no-return",
+    "sourceId": "gk-31",
+    "targetId": "ring-of-no-return",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-31-encodes-tyrosine",
+    "sourceId": "gk-31",
+    "targetId": "tyrosine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-31-corresponds-gate-31",
+    "sourceId": "gk-31",
+    "targetId": "gate-31",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-32-partner-gk-42",
+    "sourceId": "gk-32",
+    "targetId": "gk-42",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-32-in-ring-of-illusion",
+    "sourceId": "gk-32",
+    "targetId": "ring-of-illusion",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-32-encodes-asparaginic-acid",
+    "sourceId": "gk-32",
+    "targetId": "asparaginic-acid",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-32-corresponds-gate-32",
+    "sourceId": "gk-32",
+    "targetId": "gate-32",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-33-partner-gk-19",
+    "sourceId": "gk-33",
+    "targetId": "gk-19",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-33-in-the-ring-of-trials-(ring-of-secrets)",
+    "sourceId": "gk-33",
+    "targetId": "the-ring-of-trials-(ring-of-secrets)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-33-encodes-none-(terminator-codon)",
+    "sourceId": "gk-33",
+    "targetId": "none-(terminator-codon)",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-33-corresponds-gate-33",
+    "sourceId": "gk-33",
+    "targetId": "gate-33",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-34-partner-gk-20",
+    "sourceId": "gk-34",
+    "targetId": "gk-20",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-34-in-ring-of-destiny",
+    "sourceId": "gk-34",
+    "targetId": "ring-of-destiny",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-34-encodes-asparagine",
+    "sourceId": "gk-34",
+    "targetId": "asparagine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-34-corresponds-gate-34",
+    "sourceId": "gk-34",
+    "targetId": "gate-34",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-35-partner-gk-5",
+    "sourceId": "gk-35",
+    "targetId": "gk-5",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-35-in-ring-of-miracles",
+    "sourceId": "gk-35",
+    "targetId": "ring-of-miracles",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-35-encodes-tryptophan",
+    "sourceId": "gk-35",
+    "targetId": "tryptophan",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-35-corresponds-gate-35",
+    "sourceId": "gk-35",
+    "targetId": "gate-35",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-36-partner-gk-6",
+    "sourceId": "gk-36",
+    "targetId": "gk-6",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-36-in-ring-of-divinity",
+    "sourceId": "gk-36",
+    "targetId": "ring-of-divinity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-36-encodes-proline",
+    "sourceId": "gk-36",
+    "targetId": "proline",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-36-corresponds-gate-36",
+    "sourceId": "gk-36",
+    "targetId": "gate-36",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-37-partner-gk-40",
+    "sourceId": "gk-37",
+    "targetId": "gk-40",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-37-in-ring-of-divinity",
+    "sourceId": "gk-37",
+    "targetId": "ring-of-divinity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-37-encodes-proline",
+    "sourceId": "gk-37",
+    "targetId": "proline",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-37-corresponds-gate-37",
+    "sourceId": "gk-37",
+    "targetId": "gate-37",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-38-partner-gk-39",
+    "sourceId": "gk-38",
+    "targetId": "gk-39",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-38-in-ring-of-humanity",
+    "sourceId": "gk-38",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-38-encodes-arginine",
+    "sourceId": "gk-38",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-38-corresponds-gate-38",
+    "sourceId": "gk-38",
+    "targetId": "gate-38",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-39-partner-gk-38",
+    "sourceId": "gk-39",
+    "targetId": "gk-38",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-39-in-ring-of-seeking",
+    "sourceId": "gk-39",
+    "targetId": "ring-of-seeking",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-39-encodes-serine",
+    "sourceId": "gk-39",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-39-corresponds-gate-39",
+    "sourceId": "gk-39",
+    "targetId": "gate-39",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-40-partner-gk-37",
+    "sourceId": "gk-40",
+    "targetId": "gk-37",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-40-in-ring-of-alchemy",
+    "sourceId": "gk-40",
+    "targetId": "ring-of-alchemy",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-40-encodes-glycine",
+    "sourceId": "gk-40",
+    "targetId": "glycine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-40-corresponds-gate-40",
+    "sourceId": "gk-40",
+    "targetId": "gate-40",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-41-partner-gk-31",
+    "sourceId": "gk-41",
+    "targetId": "gk-31",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-41-in-ring-of-origin",
+    "sourceId": "gk-41",
+    "targetId": "ring-of-origin",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-41-encodes-methionine-(initiator)",
+    "sourceId": "gk-41",
+    "targetId": "methionine-(initiator)",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-41-corresponds-gate-41",
+    "sourceId": "gk-41",
+    "targetId": "gate-41",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-42-partner-gk-32",
+    "sourceId": "gk-42",
+    "targetId": "gk-32",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-42-in-ring-of-life-and-death",
+    "sourceId": "gk-42",
+    "targetId": "ring-of-life-and-death",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-42-encodes-leucine",
+    "sourceId": "gk-42",
+    "targetId": "leucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-42-corresponds-gate-42",
+    "sourceId": "gk-42",
+    "targetId": "gate-42",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-43-partner-gk-23",
+    "sourceId": "gk-43",
+    "targetId": "gk-23",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-43-in-ring-of-destiny",
+    "sourceId": "gk-43",
+    "targetId": "ring-of-destiny",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-43-encodes-asparagine",
+    "sourceId": "gk-43",
+    "targetId": "asparagine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-43-corresponds-gate-43",
+    "sourceId": "gk-43",
+    "targetId": "gate-43",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-44-partner-gk-24",
+    "sourceId": "gk-44",
+    "targetId": "gk-24",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-44-in-the-ring-of-the-illuminati",
+    "sourceId": "gk-44",
+    "targetId": "the-ring-of-the-illuminati",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-44-encodes-glutamic-acid",
+    "sourceId": "gk-44",
+    "targetId": "glutamic-acid",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-44-corresponds-gate-44",
+    "sourceId": "gk-44",
+    "targetId": "gate-44",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-45-partner-gk-26",
+    "sourceId": "gk-45",
+    "targetId": "gk-26",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-45-in-ring-of-prosperity",
+    "sourceId": "gk-45",
+    "targetId": "ring-of-prosperity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-45-encodes-cysteine",
+    "sourceId": "gk-45",
+    "targetId": "cysteine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-45-corresponds-gate-45",
+    "sourceId": "gk-45",
+    "targetId": "gate-45",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-46-partner-gk-25",
+    "sourceId": "gk-46",
+    "targetId": "gk-25",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-46-in-the-ring-of-matter-(18,-46,-48,-57)",
+    "sourceId": "gk-46",
+    "targetId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-46-encodes-alanine",
+    "sourceId": "gk-46",
+    "targetId": "alanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-46-corresponds-gate-46",
+    "sourceId": "gk-46",
+    "targetId": "gate-46",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-47-partner-gk-22",
+    "sourceId": "gk-47",
+    "targetId": "gk-22",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-47-in-the-ring-of-alchemy-(6,-40,-47,-64)",
+    "sourceId": "gk-47",
+    "targetId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-47-encodes-glycine",
+    "sourceId": "gk-47",
+    "targetId": "glycine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-47-corresponds-gate-47",
+    "sourceId": "gk-47",
+    "targetId": "gate-47",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-48-partner-gk-21",
+    "sourceId": "gk-48",
+    "targetId": "gk-21",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-48-in-the-ring-of-matter-(18,-46,-48,-57)",
+    "sourceId": "gk-48",
+    "targetId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-48-encodes-alanine",
+    "sourceId": "gk-48",
+    "targetId": "alanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-48-corresponds-gate-48",
+    "sourceId": "gk-48",
+    "targetId": "gate-48",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-49-partner-gk-4",
+    "sourceId": "gk-49",
+    "targetId": "gk-4",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-49-in-the-ring-of-the-whirlwind-(49,-55)",
+    "sourceId": "gk-49",
+    "targetId": "the-ring-of-the-whirlwind-(49,-55)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-49-encodes-histidine",
+    "sourceId": "gk-49",
+    "targetId": "histidine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-49-corresponds-gate-49",
+    "sourceId": "gk-49",
+    "targetId": "gate-49",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-50-partner-gk-3",
+    "sourceId": "gk-50",
+    "targetId": "gk-3",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-50-in-the-ring-of-the-illuminati-(44,-50)",
+    "sourceId": "gk-50",
+    "targetId": "the-ring-of-the-illuminati-(44,-50)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-50-encodes-glutamic-acid",
+    "sourceId": "gk-50",
+    "targetId": "glutamic-acid",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-50-corresponds-gate-50",
+    "sourceId": "gk-50",
+    "targetId": "gate-50",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-51-partner-gk-57",
+    "sourceId": "gk-51",
+    "targetId": "gk-57",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-51-in-ring-of-humanity",
+    "sourceId": "gk-51",
+    "targetId": "ring-of-humanity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-51-encodes-arginine",
+    "sourceId": "gk-51",
+    "targetId": "arginine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-51-corresponds-gate-51",
+    "sourceId": "gk-51",
+    "targetId": "gate-51",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-52-partner-gk-58",
+    "sourceId": "gk-52",
+    "targetId": "gk-58",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-52-in-ring-of-seeking",
+    "sourceId": "gk-52",
+    "targetId": "ring-of-seeking",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-52-encodes-serine",
+    "sourceId": "gk-52",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-52-corresponds-gate-52",
+    "sourceId": "gk-52",
+    "targetId": "gate-52",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-53-partner-gk-54",
+    "sourceId": "gk-53",
+    "targetId": "gk-54",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-53-in-ring-of-seeking",
+    "sourceId": "gk-53",
+    "targetId": "ring-of-seeking",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-53-encodes-serine",
+    "sourceId": "gk-53",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-53-corresponds-gate-53",
+    "sourceId": "gk-53",
+    "targetId": "gate-53",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-54-partner-gk-53",
+    "sourceId": "gk-54",
+    "targetId": "gk-53",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-54-in-the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "sourceId": "gk-54",
+    "targetId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-54-encodes-serine",
+    "sourceId": "gk-54",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-54-corresponds-gate-54",
+    "sourceId": "gk-54",
+    "targetId": "gate-54",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-55-partner-gk-59",
+    "sourceId": "gk-55",
+    "targetId": "gk-59",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-55-in-the-ring-of-the-whirlwind-(49,-55)",
+    "sourceId": "gk-55",
+    "targetId": "the-ring-of-the-whirlwind-(49,-55)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-55-encodes-histidine",
+    "sourceId": "gk-55",
+    "targetId": "histidine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-55-corresponds-gate-55",
+    "sourceId": "gk-55",
+    "targetId": "gate-55",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-56-partner-gk-60",
+    "sourceId": "gk-56",
+    "targetId": "gk-60",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-56-in-the-ring-of-trials-(12,-33,-56)",
+    "sourceId": "gk-56",
+    "targetId": "the-ring-of-trials-(12,-33,-56)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-56-encodes-none-(terminator-codon)",
+    "sourceId": "gk-56",
+    "targetId": "none-(terminator-codon)",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-56-corresponds-gate-56",
+    "sourceId": "gk-56",
+    "targetId": "gate-56",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-57-partner-gk-51",
+    "sourceId": "gk-57",
+    "targetId": "gk-51",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-57-in-the-ring-of-matter-(18,-46,-48,-57)",
+    "sourceId": "gk-57",
+    "targetId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-57-encodes-alanine",
+    "sourceId": "gk-57",
+    "targetId": "alanine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-57-corresponds-gate-57",
+    "sourceId": "gk-57",
+    "targetId": "gate-57",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-58-partner-gk-52",
+    "sourceId": "gk-58",
+    "targetId": "gk-52",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-58-in-the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "sourceId": "gk-58",
+    "targetId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-58-encodes-serine",
+    "sourceId": "gk-58",
+    "targetId": "serine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-58-corresponds-gate-58",
+    "sourceId": "gk-58",
+    "targetId": "gate-58",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-59-partner-gk-55",
+    "sourceId": "gk-59",
+    "targetId": "gk-55",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-59-in-the-ring-of-union-(4,-7,-29,-59)",
+    "sourceId": "gk-59",
+    "targetId": "the-ring-of-union-(4,-7,-29,-59)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-59-encodes-valine",
+    "sourceId": "gk-59",
+    "targetId": "valine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-59-corresponds-gate-59",
+    "sourceId": "gk-59",
+    "targetId": "gate-59",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-60-partner-gk-56",
+    "sourceId": "gk-60",
+    "targetId": "gk-56",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-60-in-the-ring-of-gaia-(19,-60,-61)",
+    "sourceId": "gk-60",
+    "targetId": "the-ring-of-gaia-(19,-60,-61)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-60-encodes-isoleucine",
+    "sourceId": "gk-60",
+    "targetId": "isoleucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-60-corresponds-gate-60",
+    "sourceId": "gk-60",
+    "targetId": "gate-60",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-61-partner-gk-62",
+    "sourceId": "gk-61",
+    "targetId": "gk-62",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-61-in-ring-of-gaia",
+    "sourceId": "gk-61",
+    "targetId": "ring-of-gaia",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-61-encodes-isoleucine",
+    "sourceId": "gk-61",
+    "targetId": "isoleucine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-61-corresponds-gate-61",
+    "sourceId": "gk-61",
+    "targetId": "gate-61",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-62-partner-gk-61",
+    "sourceId": "gk-62",
+    "targetId": "gk-61",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-62-in-ring-of-no-return",
+    "sourceId": "gk-62",
+    "targetId": "ring-of-no-return",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-62-encodes-tyrosine",
+    "sourceId": "gk-62",
+    "targetId": "tyrosine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-62-corresponds-gate-62",
+    "sourceId": "gk-62",
+    "targetId": "gate-62",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-63-partner-gk-64",
+    "sourceId": "gk-63",
+    "targetId": "gk-64",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-63-in-ring-of-divinity",
+    "sourceId": "gk-63",
+    "targetId": "ring-of-divinity",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-63-encodes-proline",
+    "sourceId": "gk-63",
+    "targetId": "proline",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-63-corresponds-gate-63",
+    "sourceId": "gk-63",
+    "targetId": "gate-63",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  },
+  {
+    "id": "gk-64-partner-gk-63",
+    "sourceId": "gk-64",
+    "targetId": "gk-63",
+    "relationshipType": "GK_PROGRAMMING_PARTNER"
+  },
+  {
+    "id": "gk-64-in-the-ring-of-alchemy-(6,-40,-47,-64)",
+    "sourceId": "gk-64",
+    "targetId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "relationshipType": "GK_IN_CODON_RING"
+  },
+  {
+    "id": "gk-64-encodes-glycine",
+    "sourceId": "gk-64",
+    "targetId": "glycine",
+    "relationshipType": "GK_ENCODES_AMINO_ACID"
+  },
+  {
+    "id": "gk-64-corresponds-gate-64",
+    "sourceId": "gk-64",
+    "targetId": "gate-64",
+    "relationshipType": "GK_CORRESPONDS_TO_GATE"
+  }
+]

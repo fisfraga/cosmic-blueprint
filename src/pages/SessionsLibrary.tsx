@@ -1,0 +1,436 @@
+import { useState, useEffect } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { loadSessions, deleteSession } from '../services/sessions';
+import type { SavedSession } from '../services/sessions';
+import { useAuth } from '../context/AuthContext';
+import type { ContemplationCategory } from '../services/contemplation/context';
+
+// ─── Types ───────────────────────────────────────────────────────────────────
+
+type FilterCategory = 'all' | ContemplationCategory;
+
+interface FilterOption {
+  value: FilterCategory;
+  label: string;
+}
+
+// ─── Constants ────────────────────────────────────────────────────────────────
+
+const FILTER_OPTIONS: FilterOption[] = [
+  { value: 'all', label: 'All' },
+  { value: 'astrology', label: 'Astrology' },
+  { value: 'humanDesign', label: 'Human Design' },
+  { value: 'geneKeys', label: 'Gene Keys' },
+  { value: 'crossSystem', label: 'Cross-System' },
+  { value: 'lifeOS', label: 'Life OS' },
+  { value: 'alchemy', label: 'Alchemy' },
+];
+
+const CATEGORY_STYLES: Record<
+  ContemplationCategory,
+  { borderTop: string; text: string; label: string; icon: string }
+> = {
+  astrology: {
+    borderTop: 'border-t-blue-500',
+    text: 'text-blue-400',
+    label: 'Astrology',
+    icon: '☉',
+  },
+  humanDesign: {
+    borderTop: 'border-t-amber-500',
+    text: 'text-amber-400',
+    label: 'Human Design',
+    icon: '⬡',
+  },
+  geneKeys: {
+    borderTop: 'border-t-purple-500',
+    text: 'text-purple-400',
+    label: 'Gene Keys',
+    icon: '✧',
+  },
+  crossSystem: {
+    borderTop: 'border-t-cyan-500',
+    text: 'text-cyan-400',
+    label: 'Cross-System',
+    icon: '✦',
+  },
+  lifeOS: {
+    borderTop: 'border-t-neutral-700',
+    text: 'text-neutral-400',
+    label: 'Life OS',
+    icon: '⚙',
+  },
+  alchemy: {
+    borderTop: 'border-t-rose-500',
+    text: 'text-rose-400',
+    label: 'Alchemy',
+    icon: '⚗️',
+  },
+};
+
+// ─── Helpers ──────────────────────────────────────────────────────────────────
+
+function formatRelativeTime(isoString: string): string {
+  const now = Date.now();
+  const then = new Date(isoString).getTime();
+  const diffMs = now - then;
+
+  if (diffMs < 0) return 'just now';
+
+  const diffSeconds = Math.floor(diffMs / 1000);
+  if (diffSeconds < 60) return 'just now';
+
+  const diffMinutes = Math.floor(diffSeconds / 60);
+  if (diffMinutes < 60) {
+    return diffMinutes === 1 ? '1 minute ago' : `${diffMinutes} minutes ago`;
+  }
+
+  const diffHours = Math.floor(diffMinutes / 60);
+  if (diffHours < 24) {
+    return diffHours === 1 ? '1 hour ago' : `${diffHours} hours ago`;
+  }
+
+  const diffDays = Math.floor(diffHours / 24);
+  if (diffDays < 30) {
+    return diffDays === 1 ? '1 day ago' : `${diffDays} days ago`;
+  }
+
+  const diffMonths = Math.floor(diffDays / 30);
+  if (diffMonths < 12) {
+    return diffMonths === 1 ? '1 month ago' : `${diffMonths} months ago`;
+  }
+
+  const diffYears = Math.floor(diffMonths / 12);
+  return diffYears === 1 ? '1 year ago' : `${diffYears} years ago`;
+}
+
+function formatContemplationType(type: string): string {
+  return type
+    .replace(/([A-Z])/g, ' $1')
+    .replace(/^./, (str) => str.toUpperCase())
+    .trim();
+}
+
+function getCategoryStyles(category: ContemplationCategory) {
+  return (
+    CATEGORY_STYLES[category] ?? {
+      borderTop: 'border-t-neutral-700',
+      text: 'text-neutral-400',
+      label: category,
+      icon: '✦',
+    }
+  );
+}
+
+// ─── Session Card ─────────────────────────────────────────────────────────────
+
+interface SessionCardProps {
+  session: SavedSession;
+  onDelete: (id: string) => void;
+}
+
+function SessionCard({ session, onDelete }: SessionCardProps) {
+  const navigate = useNavigate();
+  const styles = getCategoryStyles(session.category);
+
+  const lastAssistantMessage = [...session.messages]
+    .reverse()
+    .find((m) => m.role === 'assistant');
+
+  const previewText = lastAssistantMessage?.content
+    ? lastAssistantMessage.content.slice(0, 180) +
+      (lastAssistantMessage.content.length > 180 ? '…' : '')
+    : null;
+
+  const handleDeleteClick = () => {
+    const confirmed = window.confirm(
+      'Delete this session? This action cannot be undone.'
+    );
+    if (confirmed) {
+      onDelete(session.id);
+    }
+  };
+
+  const handleResume = () => {
+    navigate('/contemplate', { state: { resumeSessionId: session.id } });
+  };
+
+  const formattedType = formatContemplationType(session.contemplationType);
+  const userMessageCount = session.messages.filter((m) => m.role === 'user').length;
+
+  return (
+    <motion.article
+      layout
+      initial={{ opacity: 0, y: 16 }}
+      animate={{ opacity: 1, y: 0 }}
+      exit={{ opacity: 0, y: -8, scale: 0.97 }}
+      transition={{ duration: 0.22 }}
+      className={[
+        'relative flex flex-col gap-3 rounded-lg border border-neutral-800',
+        'bg-neutral-900/50 p-5 border-t-2',
+        styles.borderTop,
+      ].join(' ')}
+    >
+      {/* Top row: icon + category label + delete */}
+      <div className="flex items-start justify-between gap-2">
+        <div className="flex items-center gap-2">
+          <span className="text-base" aria-hidden="true">{styles.icon}</span>
+          <span className={`text-xs font-semibold uppercase tracking-wide ${styles.text}`}>
+            {styles.label}
+          </span>
+        </div>
+
+        <button
+          onClick={handleDeleteClick}
+          aria-label="Delete session"
+          className="flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors text-neutral-500 hover:text-red-400 hover:bg-neutral-800"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+            className="h-3.5 w-3.5 shrink-0"
+            aria-hidden="true"
+          >
+            <path
+              fillRule="evenodd"
+              d="M8.75 1A2.75 2.75 0 006 3.75v.443c-.795.077-1.584.176-2.365.298a.75.75 0 10.23 1.482l.149-.022.841 10.518A2.75 2.75 0 007.596 19h4.807a2.75 2.75 0 002.742-2.53l.841-10.52.149.023a.75.75 0 00.23-1.482A41.03 41.03 0 0014 4.193V3.75A2.75 2.75 0 0011.25 1h-2.5zM10 4c.84 0 1.673.025 2.5.075V3.75c0-.69-.56-1.25-1.25-1.25h-2.5c-.69 0-1.25.56-1.25 1.25v.325C8.327 4.025 9.16 4 10 4zM8.58 7.72a.75.75 0 00-1.5.06l.3 7.5a.75.75 0 101.5-.06l-.3-7.5zm4.34.06a.75.75 0 10-1.5-.06l-.3 7.5a.75.75 0 101.5.06l.3-7.5z"
+              clipRule="evenodd"
+            />
+          </svg>
+          Delete
+        </button>
+      </div>
+
+      {/* Type + focus entity */}
+      <div>
+        <p className="text-sm font-medium text-neutral-100">{formattedType}</p>
+        {session.focusEntity && (
+          <p className="text-xs text-neutral-400 mt-0.5">{session.focusEntity.name}</p>
+        )}
+      </div>
+
+      {/* Message preview */}
+      {previewText && (
+        <p className="text-sm leading-relaxed text-neutral-300 line-clamp-3">
+          {previewText}
+        </p>
+      )}
+
+      {/* Footer: stats + resume button */}
+      <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-800/60">
+        <div className="flex items-center gap-3 text-xs text-neutral-500">
+          <span>{userMessageCount} {userMessageCount === 1 ? 'exchange' : 'exchanges'}</span>
+          <span>·</span>
+          <span>{formatRelativeTime(session.updatedAt)}</span>
+        </div>
+
+        <button
+          onClick={handleResume}
+          className="rounded-lg bg-amber-500/10 border border-amber-500/30 px-3 py-1.5 text-xs font-medium text-amber-300 transition-all hover:bg-amber-500/20 hover:border-amber-400/50"
+        >
+          Resume →
+        </button>
+      </div>
+    </motion.article>
+  );
+}
+
+// ─── Empty State ──────────────────────────────────────────────────────────────
+
+function EmptyState() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, scale: 0.96 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3 }}
+      className="mx-auto max-w-md"
+    >
+      <div className="rounded-2xl border border-neutral-800 bg-gradient-to-br from-purple-950/40 via-neutral-900/60 to-amber-950/30 p-10 text-center shadow-xl">
+        <div className="mb-4 text-5xl" role="img" aria-label="Spiral">
+          🌀
+        </div>
+        <h2 className="mb-2 text-xl font-semibold text-neutral-100">
+          No Sessions Yet
+        </h2>
+        <p className="mb-6 text-sm leading-relaxed text-neutral-400">
+          Your contemplation sessions are saved automatically as you explore.
+          Start a session to begin building your personal archive.
+        </p>
+        <Link
+          to="/contemplate"
+          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-600 to-purple-600 px-5 py-2.5 text-sm font-medium text-white shadow-md transition-opacity hover:opacity-90"
+        >
+          Enter Contemplation Chamber
+        </Link>
+      </div>
+    </motion.div>
+  );
+}
+
+// ─── Filter Bar ───────────────────────────────────────────────────────────────
+
+interface FilterBarProps {
+  active: FilterCategory;
+  counts: Record<FilterCategory, number>;
+  onChange: (value: FilterCategory) => void;
+}
+
+function FilterBar({ active, counts, onChange }: FilterBarProps) {
+  return (
+    <div className="flex flex-wrap gap-2" role="tablist" aria-label="Filter by category">
+      {FILTER_OPTIONS.map((opt) => {
+        const isActive = active === opt.value;
+        const count = counts[opt.value] ?? 0;
+
+        return (
+          <button
+            key={opt.value}
+            role="tab"
+            aria-selected={isActive}
+            onClick={() => onChange(opt.value)}
+            className={[
+              'flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all',
+              isActive
+                ? 'border-amber-500/60 bg-amber-500/10 text-amber-300'
+                : 'border-neutral-700 bg-neutral-800/50 text-neutral-400 hover:border-neutral-600 hover:text-neutral-200',
+            ].join(' ')}
+          >
+            {opt.label}
+            {count > 0 && (
+              <span
+                className={[
+                  'rounded-full px-1.5 py-px text-[10px] font-semibold',
+                  isActive ? 'bg-amber-500/20 text-amber-300' : 'bg-neutral-700 text-neutral-400',
+                ].join(' ')}
+              >
+                {count}
+              </span>
+            )}
+          </button>
+        );
+      })}
+    </div>
+  );
+}
+
+// ─── Main Page ────────────────────────────────────────────────────────────────
+
+export function SessionsLibrary() {
+  const { user } = useAuth();
+  const [sessions, setSessions] = useState<SavedSession[]>([]);
+  const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
+
+  useEffect(() => {
+    setSessions(loadSessions());
+  }, []);
+
+  const handleDelete = (id: string) => {
+    deleteSession(id);
+    setSessions((prev) => prev.filter((s) => s.id !== id));
+  };
+
+  const filtered =
+    activeFilter === 'all'
+      ? sessions
+      : sessions.filter((s) => s.category === activeFilter);
+
+  const counts = FILTER_OPTIONS.reduce<Record<FilterCategory, number>>(
+    (acc, opt) => {
+      acc[opt.value] =
+        opt.value === 'all'
+          ? sessions.length
+          : sessions.filter((s) => s.category === opt.value).length;
+      return acc;
+    },
+    {} as Record<FilterCategory, number>
+  );
+
+  return (
+    <div className="min-h-screen bg-neutral-950 px-4 py-10">
+      <div className="mx-auto max-w-3xl">
+        {/* ── Page Header ── */}
+        <motion.header
+          initial={{ opacity: 0, y: -12 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mb-8 flex flex-col gap-1"
+        >
+          <div className="flex items-start justify-between gap-4">
+            <div className="flex items-center gap-3">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-purple-600 to-amber-500 text-xl shadow-lg">
+                🌀
+              </div>
+              <div>
+                <h1 className="text-2xl font-bold tracking-tight text-neutral-100">
+                  Contemplation Sessions
+                </h1>
+                <p className="text-sm text-neutral-400">
+                  Your saved conversations from the Contemplation Chamber
+                </p>
+              </div>
+            </div>
+
+            <div className="flex shrink-0 flex-col items-end gap-1.5">
+              <span className="text-sm text-neutral-400">
+                {sessions.length}{' '}
+                {sessions.length === 1 ? 'session' : 'sessions'}
+              </span>
+              {user && (
+                <span className="flex items-center gap-1 rounded-full border border-emerald-700/50 bg-emerald-900/30 px-2.5 py-0.5 text-[11px] text-emerald-400">
+                  <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                  Sync enabled
+                </span>
+              )}
+            </div>
+          </div>
+        </motion.header>
+
+        {/* ── Content ── */}
+        {sessions.length === 0 ? (
+          <EmptyState />
+        ) : (
+          <div className="flex flex-col gap-6">
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.1, duration: 0.25 }}
+            >
+              <FilterBar
+                active={activeFilter}
+                counts={counts}
+                onChange={setActiveFilter}
+              />
+            </motion.div>
+
+            {filtered.length === 0 ? (
+              <motion.p
+                key="no-results"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                className="py-12 text-center text-sm text-neutral-500"
+              >
+                No sessions in this category yet.
+              </motion.p>
+            ) : (
+              <motion.div layout className="flex flex-col gap-4">
+                <AnimatePresence mode="popLayout">
+                  {filtered.map((session) => (
+                    <SessionCard
+                      key={session.id}
+                      session={session}
+                      onDelete={handleDelete}
+                    />
+                  ))}
+                </AnimatePresence>
+              </motion.div>
+            )}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+}
+
+export default SessionsLibrary;

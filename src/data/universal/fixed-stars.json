@@ -1,0 +1,412 @@
+[
+  {
+    "id": "regulus",
+    "type": "fixed-star",
+    "name": "Regulus",
+    "alternateNames": ["Cor Leonis", "Heart of the Lion", "Alpha Leonis"],
+    "constellation": "Leo",
+    "magnitude": 1.35,
+    "zodiacPosition": {
+      "sign": "virgo",
+      "degree": 0,
+      "minute": 0,
+      "note": "Precessed into Virgo in 2012"
+    },
+    "nature": ["Mars", "Jupiter"],
+    "isBehenian": true,
+    "isRoyalStar": true,
+    "royalStarTitle": "Watcher of the North",
+    "archetype": "The Heart of the King",
+    "keywords": ["Royalty", "Success", "Ambition", "Leadership", "Fame", "Honor"],
+    "giftExpression": "Noble leadership, success through integrity, rise to prominence, military honors, courage, generosity, fame that endures. Bestows the ability to achieve great worldly success when one maintains honor and avoids revenge.",
+    "shadowExpression": "Downfall through arrogance, revenge leading to ruin, abuse of power, pride before the fall. Regulus gives great success but can take it all away if one acts with cruelty or seeks vengeance.",
+    "traditionalMeaning": "The most royal of all fixed stars. Promises success, high honors, and fame, but only if one avoids revenge. The condition of Regulus is clear: success comes through noble action, and revenge brings total ruin, often losing everything gained.",
+    "bodyAssociation": "Heart",
+    "contemplationQuestions": [
+      "How do I lead with both power and integrity?",
+      "Where might pride be setting me up for a fall?",
+      "Can I release the desire for revenge to protect my gains?"
+    ]
+  },
+  {
+    "id": "aldebaran",
+    "type": "fixed-star",
+    "name": "Aldebaran",
+    "alternateNames": ["Eye of the Bull", "Alpha Tauri", "The Follower"],
+    "constellation": "Taurus",
+    "magnitude": 0.85,
+    "zodiacPosition": {
+      "sign": "gemini",
+      "degree": 9,
+      "minute": 47
+    },
+    "nature": ["Mars"],
+    "isBehenian": true,
+    "isRoyalStar": true,
+    "royalStarTitle": "Watcher of the East",
+    "archetype": "The Eye of Illumination",
+    "keywords": ["Integrity", "Honor", "Courage", "Eloquence", "Wealth", "Intelligence"],
+    "giftExpression": "Success through integrity, eloquence and persuasive speech, military honors, courage in facing challenges, material wealth combined with spiritual depth, high intelligence.",
+    "shadowExpression": "Success that comes at the cost of integrity leads to downfall. Violence, danger, and loss when honor is compromised. Can indicate fevers, violent death if afflicted.",
+    "traditionalMeaning": "A star of great honor and material success, but only when integrity is maintained. Aldebaran tests the soul: those who maintain honor receive its blessings; those who compromise face severe consequences.",
+    "bodyAssociation": "Left eye",
+    "contemplationQuestions": [
+      "Where am I being tested to maintain my integrity?",
+      "How can I use my voice and influence with honor?",
+      "What am I willing to sacrifice for truth?"
+    ]
+  },
+  {
+    "id": "antares",
+    "type": "fixed-star",
+    "name": "Antares",
+    "alternateNames": ["Heart of the Scorpion", "Alpha Scorpii", "Rival of Mars"],
+    "constellation": "Scorpius",
+    "magnitude": 1.09,
+    "zodiacPosition": {
+      "sign": "sagittarius",
+      "degree": 9,
+      "minute": 46
+    },
+    "nature": ["Mars", "Jupiter"],
+    "isBehenian": true,
+    "isRoyalStar": true,
+    "royalStarTitle": "Watcher of the West",
+    "archetype": "The Heart of the Scorpion",
+    "keywords": ["Intensity", "Strategy", "Obsession", "Transformation", "War", "Passion"],
+    "giftExpression": "Strategic brilliance, passionate pursuit of goals, transformative power, success in military or competitive endeavors, magnetic intensity, depth of purpose.",
+    "shadowExpression": "Self-destruction through obsession, violence and recklessness, getting caught in destructive cycles, extremism, fanatical behavior, danger from own intensity.",
+    "traditionalMeaning": "The rival of Mars in redness and intensity. A star of great power that can bring success or destruction depending on how its fierce energy is channeled. Associated with war, strategy, and the cycles of death and rebirth.",
+    "bodyAssociation": "Heart, back",
+    "contemplationQuestions": [
+      "Where is my intensity serving me, and where is it destructive?",
+      "How can I transform my obsessions into focused power?",
+      "What needs to die in me so something new can be born?"
+    ]
+  },
+  {
+    "id": "fomalhaut",
+    "type": "fixed-star",
+    "name": "Fomalhaut",
+    "alternateNames": ["Mouth of the Fish", "Alpha Piscis Austrini", "The Solitary One"],
+    "constellation": "Piscis Austrinus",
+    "magnitude": 1.16,
+    "zodiacPosition": {
+      "sign": "pisces",
+      "degree": 3,
+      "minute": 52
+    },
+    "nature": ["Venus", "Mercury"],
+    "isBehenian": true,
+    "isRoyalStar": true,
+    "royalStarTitle": "Watcher of the South",
+    "archetype": "The Mystical Dreamer",
+    "keywords": ["Dreams", "Idealism", "Mysticism", "Fame", "Magic", "Transcendence"],
+    "giftExpression": "Poetic and mystical gifts, fame through artistic or spiritual work, magical abilities, connection to the divine, idealistic vision that inspires others, success through dreams.",
+    "shadowExpression": "Addiction and escapism, unrealistic idealism leading to disappointment, getting lost in dreams without grounding, susceptibility to deception, spiritual bypassing.",
+    "traditionalMeaning": "The most mystical of the Royal Stars. Grants success through idealistic and spiritual pursuits but requires that dreams be grounded in reality. Associated with magic, poetry, and the arts.",
+    "bodyAssociation": "Feet",
+    "contemplationQuestions": [
+      "How can I ground my dreams in practical reality?",
+      "Where might idealism be blinding me to truth?",
+      "What is my relationship with the magical and mystical?"
+    ]
+  },
+  {
+    "id": "spica",
+    "type": "fixed-star",
+    "name": "Spica",
+    "alternateNames": ["Alpha Virginis", "Ear of Wheat", "Azimech"],
+    "constellation": "Virgo",
+    "magnitude": 0.97,
+    "zodiacPosition": {
+      "sign": "libra",
+      "degree": 23,
+      "minute": 50
+    },
+    "nature": ["Venus", "Mars"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Harvest Gift",
+    "keywords": ["Abundance", "Gifts", "Success", "Protection", "Brilliance", "Harvest"],
+    "giftExpression": "Natural gifts and talents, success and wealth, protection from harm, brilliance in chosen field, abundance through service, scientific or artistic aptitude, good fortune.",
+    "shadowExpression": "Taking gifts for granted, squandering natural talents, over-reliance on luck rather than effort. Generally a fortunate star with few negative indications when well-placed.",
+    "traditionalMeaning": "Considered the most fortunate fixed star in the heavens. Brings success, riches, honor, and fame. Those with Spica prominent are said to be 'born lucky' with natural protection and gifts.",
+    "bodyAssociation": "Left hand",
+    "contemplationQuestions": [
+      "What natural gifts have I been given to cultivate?",
+      "How can I harvest the abundance available to me?",
+      "Am I honoring my talents through dedicated effort?"
+    ]
+  },
+  {
+    "id": "algol",
+    "type": "fixed-star",
+    "name": "Algol",
+    "alternateNames": ["Beta Persei", "Demon Star", "Caput Algol", "Ra's al-Ghul"],
+    "constellation": "Perseus",
+    "magnitude": 2.12,
+    "zodiacPosition": {
+      "sign": "taurus",
+      "degree": 26,
+      "minute": 10
+    },
+    "nature": ["Saturn", "Jupiter"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Severed Head / The Feminine Rage",
+    "keywords": ["Intensity", "Transformation", "Shadow Work", "Power", "Danger", "Passion"],
+    "giftExpression": "Extraordinary personal power when shadow is integrated, ability to face and transform the darkest aspects of self, courage to confront evil, protection against curses and enemies, raw primal energy channeled constructively.",
+    "shadowExpression": "Violence, loss of head (metaphorically or literally), misfortune, danger from women or feminine rage, obsession, destructive passions, decapitation imagery, accidents.",
+    "traditionalMeaning": "The most feared fixed star in traditional astrology, representing the severed head of Medusa. Yet this star also holds great power for those willing to do shadow work. It represents the feminine power that has been demonized and, when reclaimed, becomes a source of tremendous strength.",
+    "bodyAssociation": "Head, throat",
+    "contemplationQuestions": [
+      "What parts of myself have I 'severed' or rejected?",
+      "How can I reclaim my shadow as a source of power?",
+      "What rage or intensity am I afraid to acknowledge?"
+    ]
+  },
+  {
+    "id": "sirius",
+    "type": "fixed-star",
+    "name": "Sirius",
+    "alternateNames": ["Alpha Canis Majoris", "Dog Star", "Sothis", "The Scorcher"],
+    "constellation": "Canis Major",
+    "magnitude": -1.46,
+    "zodiacPosition": {
+      "sign": "cancer",
+      "degree": 14,
+      "minute": 5
+    },
+    "nature": ["Jupiter", "Mars"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Brilliant One",
+    "keywords": ["Brilliance", "Fame", "Honor", "Guardianship", "Devotion", "Ambition"],
+    "giftExpression": "Great fame and honor, success beyond normal expectations, high ambition realized, custodianship and guardianship roles, devotion to a cause, brilliance that illuminates others.",
+    "shadowExpression": "Danger from dogs or animal attacks (traditionally), burnout from excessive ambition, fame that burns too bright, danger from fire or heat, rashness in pursuit of honor.",
+    "traditionalMeaning": "The brightest star in the sky, Sirius was sacred to many ancient cultures including Egypt where it heralded the Nile's flood. It brings fame, honor, and success but can also indicate danger from excessive heat or intensity.",
+    "bodyAssociation": "Face, eyes",
+    "contemplationQuestions": [
+      "What am I devoted to with Sirius-like intensity?",
+      "How brightly am I willing to shine?",
+      "What responsibility comes with my visibility?"
+    ]
+  },
+  {
+    "id": "vega",
+    "type": "fixed-star",
+    "name": "Vega",
+    "alternateNames": ["Alpha Lyrae", "The Falling Eagle", "Wega"],
+    "constellation": "Lyra",
+    "magnitude": 0.03,
+    "zodiacPosition": {
+      "sign": "capricorn",
+      "degree": 15,
+      "minute": 19
+    },
+    "nature": ["Venus", "Mercury"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Celestial Musician",
+    "keywords": ["Music", "Art", "Charm", "Magic", "Refinement", "Idealism"],
+    "giftExpression": "Musical and artistic genius, natural charm and charisma, magical abilities, refined taste, idealistic nature, success in the arts, beneficence and grace.",
+    "shadowExpression": "Pretentiousness, vanity about artistic abilities, superficiality, lasciviousness, using charm for manipulation, fleeting rather than lasting success.",
+    "traditionalMeaning": "Associated with Orpheus's lyre, Vega grants artistic gifts, especially in music. Those with prominent Vega often have refined, artistic natures and natural magnetism. One of the most beautiful and benefic stars.",
+    "bodyAssociation": "Ears, voice",
+    "contemplationQuestions": [
+      "How does beauty express through me?",
+      "What is my relationship with music and art?",
+      "How can I use my natural charm in service of good?"
+    ]
+  },
+  {
+    "id": "arcturus",
+    "type": "fixed-star",
+    "name": "Arcturus",
+    "alternateNames": ["Alpha Boötis", "Guardian of the Bear", "The Knee of Arctophylax"],
+    "constellation": "Boötes",
+    "magnitude": -0.05,
+    "zodiacPosition": {
+      "sign": "libra",
+      "degree": 24,
+      "minute": 14
+    },
+    "nature": ["Mars", "Jupiter"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Pathfinder",
+    "keywords": ["Pioneering", "Leadership", "Prosperity", "Navigation", "Justice", "Exploration"],
+    "giftExpression": "Success through navigation and pioneering, prosperity through journeys, leadership abilities, talent for finding new paths, success in law and justice, renown through exploration.",
+    "shadowExpression": "Restlessness, inability to settle, prosperity followed by loss if one becomes complacent, legal troubles, quarrels during travels.",
+    "traditionalMeaning": "A star of journeys and pioneering. Those with Arcturus prominent often find their fortune through exploration, whether physical, intellectual, or spiritual. It grants success but also confers a certain restlessness.",
+    "bodyAssociation": "Knees, thighs",
+    "contemplationQuestions": [
+      "What new paths am I being called to explore?",
+      "How do I balance the call to explore with the need to settle?",
+      "Where is my pioneering spirit leading me?"
+    ]
+  },
+  {
+    "id": "capella",
+    "type": "fixed-star",
+    "name": "Capella",
+    "alternateNames": ["Alpha Aurigae", "The Little She-Goat", "Alhajoth"],
+    "constellation": "Auriga",
+    "magnitude": 0.08,
+    "zodiacPosition": {
+      "sign": "gemini",
+      "degree": 21,
+      "minute": 51
+    },
+    "nature": ["Mars", "Mercury"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Nurturer's Star",
+    "keywords": ["Curiosity", "Learning", "Nurturing", "Honor", "Wealth", "Public Favor"],
+    "giftExpression": "Love of learning and intellectual curiosity, nurturing abilities, public favor and honors, success through education, wealth through persistent effort, connection to nature.",
+    "shadowExpression": "Restlessness and scattered attention, eccentricity, trouble with domestic matters, inconsistency, meddling in others' affairs.",
+    "traditionalMeaning": "Associated with the goat Amalthea who nurtured Zeus. Capella grants a curious, active mind with a love of learning. It bestows honors and public success, especially through intellectual or educational pursuits.",
+    "bodyAssociation": "Left shoulder",
+    "contemplationQuestions": [
+      "What is my relationship with continuous learning?",
+      "How do I nurture others through sharing knowledge?",
+      "Where does curiosity lead me to grow?"
+    ]
+  },
+  {
+    "id": "polaris",
+    "type": "fixed-star",
+    "name": "Polaris",
+    "alternateNames": ["Alpha Ursae Minoris", "North Star", "Cynosure", "Lodestar"],
+    "constellation": "Ursa Minor",
+    "magnitude": 1.98,
+    "zodiacPosition": {
+      "sign": "gemini",
+      "degree": 28,
+      "minute": 34
+    },
+    "nature": ["Saturn", "Venus"],
+    "isBehenian": false,
+    "isRoyalStar": false,
+    "archetype": "The Guiding Light",
+    "keywords": ["Guidance", "Direction", "Purpose", "Steadfastness", "Navigation", "Constancy"],
+    "giftExpression": "Ability to guide others, steady and reliable nature, sense of true direction in life, constancy of purpose, ability to remain fixed while others waver, spiritual guidance.",
+    "shadowExpression": "Chronic illness or spiritual sickness if one loses their sense of direction, disconnection from purpose, being a guide who cannot find their own way.",
+    "traditionalMeaning": "The North Star has guided travelers for millennia. In the chart, it indicates one who can guide others, who has a strong sense of direction and purpose. It also warns of the consequences of losing one's guiding star.",
+    "bodyAssociation": "Spine, alignment",
+    "contemplationQuestions": [
+      "What is my North Star - my guiding purpose?",
+      "How do I remain constant when all around me changes?",
+      "Who am I meant to guide, and toward what?"
+    ]
+  },
+  {
+    "id": "procyon",
+    "type": "fixed-star",
+    "name": "Procyon",
+    "alternateNames": ["Alpha Canis Minoris", "The Little Dog Star", "Before the Dog"],
+    "constellation": "Canis Minor",
+    "magnitude": 0.34,
+    "zodiacPosition": {
+      "sign": "cancer",
+      "degree": 25,
+      "minute": 47
+    },
+    "nature": ["Mercury", "Mars"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Swift Messenger",
+    "keywords": ["Speed", "Success", "Activity", "Faithfulness", "Opportunity", "Alertness"],
+    "giftExpression": "Quick success and good fortune, alertness to opportunities, faithful nature, success through activity and speed, good timing, ability to seize the moment.",
+    "shadowExpression": "Violence from or toward dogs (traditionally), sudden changes of fortune, petulance, illness from overactivity, opportunities lost through hesitation.",
+    "traditionalMeaning": "Rising before Sirius, Procyon heralds opportunity. It grants quick success and good fortune to those who are alert and ready to act. Associated with faithfulness and quick thinking.",
+    "bodyAssociation": "Left thigh",
+    "contemplationQuestions": [
+      "How alert am I to the opportunities presenting themselves?",
+      "Do I act swiftly when the moment is right?",
+      "What does faithful devotion mean in my life?"
+    ]
+  },
+  {
+    "id": "deneb-algedi",
+    "type": "fixed-star",
+    "name": "Deneb Algedi",
+    "alternateNames": ["Delta Capricorni", "Tail of the Goat"],
+    "constellation": "Capricornus",
+    "magnitude": 2.87,
+    "zodiacPosition": {
+      "sign": "aquarius",
+      "degree": 23,
+      "minute": 33
+    },
+    "nature": ["Saturn", "Jupiter"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Wise Administrator",
+    "keywords": ["Justice", "Law", "Wisdom", "Authority", "Integrity", "Governance"],
+    "giftExpression": "Success in law and justice, wise governance, integrity in positions of authority, ability to maintain order, wisdom gained through experience, trustworthiness.",
+    "shadowExpression": "Sorrow and affliction if integrity is compromised, downfall through abuse of authority, legal troubles, excessive rigidity.",
+    "traditionalMeaning": "A star of justice and law. Those with Deneb Algedi prominent often find themselves in positions of authority where integrity is essential. It grants wisdom and success in governance but demands ethical conduct.",
+    "bodyAssociation": "Knees",
+    "contemplationQuestions": [
+      "How do I exercise authority with wisdom?",
+      "What role does justice play in my life path?",
+      "How can I govern my own life with integrity?"
+    ]
+  },
+  {
+    "id": "pleiades",
+    "type": "fixed-star",
+    "name": "Alcyone (The Pleiades)",
+    "alternateNames": ["Eta Tauri", "The Seven Sisters", "The Weeping Sisters"],
+    "constellation": "Taurus",
+    "magnitude": 2.87,
+    "zodiacPosition": {
+      "sign": "gemini",
+      "degree": 0,
+      "minute": 0
+    },
+    "nature": ["Moon", "Mars"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Weeping Sisters",
+    "keywords": ["Ambition", "Sorrow", "Mysticism", "Sight", "Travel", "Judgment"],
+    "giftExpression": "Ambition and striving for eminence, mystical and psychic abilities, connection to feminine wisdom traditions, sharp judgment, success through travel, keen eyesight.",
+    "shadowExpression": "Sorrow and tears, blindness or eye trouble, eminence followed by disgrace, something to weep about, tragedy especially related to sight or vision.",
+    "traditionalMeaning": "The Pleiades are one of the most significant star clusters in mythology. They bring ambition and potential for eminence, but also carry a strong signature of sorrow. They were used to test eyesight in ancient times, linking them to both physical and spiritual vision.",
+    "bodyAssociation": "Eyes, right shoulder",
+    "contemplationQuestions": [
+      "What am I striving toward, and what might I lose in the pursuit?",
+      "How do I relate to the sorrows that come with ambition?",
+      "What is my relationship with mystical vision and insight?"
+    ]
+  },
+  {
+    "id": "alphecca",
+    "type": "fixed-star",
+    "name": "Alphecca",
+    "alternateNames": ["Alpha Coronae Borealis", "Gemma", "The Bright One of the Crown"],
+    "constellation": "Corona Borealis",
+    "magnitude": 2.23,
+    "zodiacPosition": {
+      "sign": "scorpio",
+      "degree": 12,
+      "minute": 18
+    },
+    "nature": ["Venus", "Mercury"],
+    "isBehenian": true,
+    "isRoyalStar": false,
+    "archetype": "The Crown Jewel",
+    "keywords": ["Honor", "Artistic Ability", "Poetry", "Love", "Recognition", "Grace"],
+    "giftExpression": "Artistic and poetic gifts, honor and recognition for creative work, natural grace and dignity, success in love affairs, literary talent, cultured refinement.",
+    "shadowExpression": "Love sorrows and disappointments, artistic gifts unrecognized, vanity about creative abilities, being passed over for honors deserved.",
+    "traditionalMeaning": "The jewel in Ariadne's crown, granted by Dionysus. Alphecca bestows artistic gifts, especially in poetry and literature, along with natural dignity and grace. It also carries themes of love's sorrows and joys.",
+    "bodyAssociation": "Crown of head",
+    "contemplationQuestions": [
+      "What crowning achievement am I working toward?",
+      "How do my creative gifts serve love and beauty?",
+      "What dignity do I bring to my artistic expression?"
+    ]
+  }
+]

@@ -1,0 +1,166 @@
+[
+  {
+    "id": "activation-sequence",
+    "type": "gk-sequence",
+    "name": "Activation Sequence",
+    "symbol": "△",
+    "sequenceOrder": 1,
+    "theme": "Discovering Your Purpose",
+    "primaryQuestion": "What is your purpose in life?",
+    "description": "The Activation Sequence is the primary genetic sequence in your Hologenetic Profile. It describes a series of three leaps in awareness that unfold in your life as you activate the higher purpose within your DNA. These inner realisations are called your Challenge, your Breakthrough and your Core Stability.",
+    "spheres": [
+      "life-work",
+      "evolution",
+      "radiance",
+      "purpose"
+    ],
+    "pathways": [
+      "challenge",
+      "breakthrough",
+      "core-stability"
+    ],
+    "keywords": [
+      "Purpose",
+      "Genius",
+      "Foundation",
+      "Physical grounding"
+    ],
+    "contemplationFocus": "Physical plane - grounding awareness in the body",
+    "transformation": "Catalyses a mutation deep within your DNA, unlocking the true genius inside you",
+    "practicalGuidance": "The Activation Sequence serves a powerful purpose in orienting you physically into your body, into the centre of your inner world. It is a celebration of the beauty and dignity of your aloneness.",
+    "primeGifts": [
+      {
+        "sphere": "Life's Work",
+        "planet": "Sun (Natal)",
+        "description": "Your core creative expression and gift to the world"
+      },
+      {
+        "sphere": "Evolution",
+        "planet": "Earth (Natal)",
+        "description": "Your path of growth and transformation"
+      },
+      {
+        "sphere": "Radiance",
+        "planet": "Sun (Design)",
+        "description": "Your health and vitality expression"
+      },
+      {
+        "sphere": "Purpose",
+        "planet": "Earth (Design)",
+        "description": "Your higher calling and reason for being"
+      }
+    ],
+    "image": "/images/gene-keys/sequences/activation-sequence.png"
+  },
+  {
+    "id": "venus-sequence",
+    "type": "gk-sequence",
+    "name": "Venus Sequence",
+    "symbol": "♀",
+    "sequenceOrder": 2,
+    "theme": "Opening Your Heart",
+    "primaryQuestion": "How fulfilling are your relationships?",
+    "description": "The Venus Sequence is the primary genetic sequence for unlocking deep core emotional patterns in your life. As the central axis of the Golden Path, it is an inner contemplative journey into the dynamics of your specific emotional wounding patterns, inherited through your ancestral DNA.",
+    "spheres": [
+      "attraction",
+      "iq",
+      "eq",
+      "sq",
+      "core-stability"
+    ],
+    "pathways": [
+      "dharma",
+      "karma",
+      "culture"
+    ],
+    "keywords": [
+      "Heart",
+      "Relationships",
+      "Emotional patterns",
+      "Ancestral healing"
+    ],
+    "contemplationFocus": "Emotional realm - navigating the astral body",
+    "transformation": "Leads to the permanent opening of your heart through understanding ancestral patterns",
+    "practicalGuidance": "The Venus Sequence outlines a natural pathway of six Gene Keys which govern all your emotional patterns in this life. As your awareness begins to understand and observe the Shadow aspects, you will begin to transform low frequency patterns into higher frequency Gifts.",
+    "coreSpheres": [
+      {
+        "sphere": "Attraction",
+        "planet": "Mars (Natal)",
+        "description": "How you attract and are attracted to others"
+      },
+      {
+        "sphere": "IQ",
+        "planet": "Venus (Natal)",
+        "description": "Your mental intelligence in relationships"
+      },
+      {
+        "sphere": "EQ",
+        "planet": "Mars (Design)",
+        "description": "Your emotional intelligence and sensitivity"
+      },
+      {
+        "sphere": "SQ",
+        "planet": "Venus (Design)",
+        "description": "Your spiritual intelligence and higher love"
+      },
+      {
+        "sphere": "Core Stability",
+        "planet": "Moon (Natal)",
+        "description": "Your emotional foundation and inner security"
+      }
+    ],
+    "image": "/images/gene-keys/sequences/venus-sequence.png"
+  },
+  {
+    "id": "pearl-sequence",
+    "type": "gk-sequence",
+    "name": "Pearl Sequence",
+    "symbol": "○",
+    "sequenceOrder": 3,
+    "theme": "Releasing Your Prosperity",
+    "primaryQuestion": "How integrated are you into your community?",
+    "description": "The Pearl Sequence is the third and final sequence comprising the Golden Path, the primary genetic sequence for opening up our mental awareness to operate on a higher plane. Its purpose is to open your mind to a transcendent view of the universe.",
+    "spheres": [
+      "vocation",
+      "culture",
+      "brand",
+      "pearl"
+    ],
+    "pathways": [
+      "initiative",
+      "growth"
+    ],
+    "keywords": [
+      "Prosperity",
+      "Service",
+      "Community",
+      "Mental clarity"
+    ],
+    "contemplationFocus": "Mental plane - clarifying vision",
+    "transformation": "Opens your mind to see the inherent simplicity of life and align your resources with it",
+    "practicalGuidance": "The Pearl allows us to find our closest allies and work together in service to our community and a higher goal. The great secret of the Pearl Sequence is the power of philanthropy as a world view.",
+    "coreSpheres": [
+      {
+        "sphere": "Vocation",
+        "planet": "Jupiter (Natal)",
+        "description": "Your sacred calling and service to the world"
+      },
+      {
+        "sphere": "Culture",
+        "planet": "Saturn (Natal)",
+        "description": "The community and culture you create or join"
+      },
+      {
+        "sphere": "Brand",
+        "planet": "Same as Life's Work",
+        "description": "How you are known and your contribution brand"
+      },
+      {
+        "sphere": "Pearl",
+        "planet": "Calculated point",
+        "description": "Your ultimate prosperity and contribution"
+      }
+    ],
+    "image": "/images/gene-keys/sequences/pearl-sequence.png"
+  }
+]

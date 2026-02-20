@@ -1,0 +1,200 @@
+[
+  {
+    "id": "hd-authority-emotional",
+    "type": "hd-authority",
+    "name": "Emotional Authority",
+    "symbol": "☀︎",
+    "alternativeNames": [
+      "Solar Plexus Authority",
+      "Emotional Solar Plexus"
+    ],
+    "description": "Emotional Authority is the most common inner authority, found in approximately 50% of the population. Those with this authority have a defined Solar Plexus Center, which creates an emotional wave that moves through highs and lows over time. Clarity comes from riding the wave and making decisions when emotionally neutral.",
+    "centerId": "solar-plexus-center",
+    "decisionProcess": "Wait through your emotional wave before making important decisions. Don't decide in the high of enthusiasm or the low of doubt. Sleep on it. Give yourself time—there is no truth in the now for you. When you've experienced the decision from multiple emotional states and feel calm clarity, you're ready.",
+    "percentage": "~50%",
+    "keywords": [
+      "Emotional wave",
+      "Patience",
+      "Time",
+      "Clarity through waiting",
+      "No truth in the now"
+    ],
+    "practicalGuidance": "Track your emotional patterns. Notice that your feelings about decisions change over time. Ask yourself: 'Have I felt this from both emotional highs and lows?' When you feel calm and clear—not excited, not doubtful—that's when to decide.",
+    "timeframe": "Hours to days depending on the significance of the decision",
+    "signs": {
+      "correct": "Decisions feel solid over time. You don't regret choices made with emotional clarity.",
+      "incorrect": "Impulsive decisions during emotional highs or lows lead to regret when the wave passes."
+    },
+    "image": "/images/human-design/authorities/hd-authority-emotional.png"
+  },
+  {
+    "id": "hd-authority-sacral",
+    "type": "hd-authority",
+    "name": "Sacral Authority",
+    "symbol": "◉",
+    "alternativeNames": [
+      "Gut Authority",
+      "Sacral Response"
+    ],
+    "description": "Sacral Authority belongs to Generators and Manifesting Generators who have a defined Sacral Center but undefined Solar Plexus. The Sacral speaks through sounds and sensations—an immediate gut response of 'uh-huh' (yes) or 'uhn-uhn' (no). This is the most instinctual and in-the-moment authority.",
+    "centerId": "sacral-center",
+    "decisionProcess": "Listen to your gut. When presented with something, notice if there's an 'uh-huh' (rising, opening, energizing sensation) or 'uhn-uhn' (contracting, closing, draining sensation). The Sacral responds in the moment—trust that initial response. If you're unsure, have someone ask you yes/no questions.",
+    "percentage": "~35%",
+    "keywords": [
+      "Gut response",
+      "Uh-huh/Uhn-uhn",
+      "In the moment",
+      "Sounds",
+      "Life force"
+    ],
+    "practicalGuidance": "Pay attention to the sounds you naturally make. When someone asks if you want something, notice if your body opens or closes. Practice responding to yes/no questions and trusting your gut. The mind may second-guess—the Sacral knows.",
+    "timeframe": "Immediate—the response is available in the moment",
+    "signs": {
+      "correct": "Following gut responses leads to satisfaction and sustained energy.",
+      "incorrect": "Overriding the Sacral with mental justifications leads to frustration and exhaustion."
+    },
+    "image": "/images/human-design/authorities/hd-authority-sacral.png"
+  },
+  {
+    "id": "hd-authority-splenic",
+    "type": "hd-authority",
+    "name": "Splenic Authority",
+    "symbol": "◇",
+    "alternativeNames": [
+      "Intuitive Authority",
+      "Instinctual Authority"
+    ],
+    "description": "Splenic Authority comes from a defined Spleen Center with undefined Sacral and Solar Plexus. The Spleen is the oldest awareness center, governing survival instincts, intuition, and bodily knowing. It speaks quietly and only once—in the moment.",
+    "centerId": "spleen-center",
+    "decisionProcess": "Trust your spontaneous intuitive hits. The Spleen speaks softly and doesn't repeat itself. It's a knowing that comes as a subtle sensation, a quiet 'yes' or 'no' in the body. This isn't emotional or mental—it's primal instinct. If you miss it, wait for another moment.",
+    "percentage": "~11%",
+    "keywords": [
+      "Intuition",
+      "Instinct",
+      "Spontaneous",
+      "Survival",
+      "In the moment"
+    ],
+    "practicalGuidance": "Cultivate awareness of subtle body sensations. The Spleen might speak as a shiver, a slight feeling of wrongness, or a quiet pull toward something. It's easy to miss or override with the mind. Practice trusting these subtle signals.",
+    "timeframe": "Immediate—the hit comes once in the moment",
+    "signs": {
+      "correct": "Following intuitive hits leads to safety, well-being, and being in the right place at the right time.",
+      "incorrect": "Ignoring or missing splenic hits can lead to unhealthy situations, wrong timing, or danger."
+    },
+    "image": "/images/human-design/authorities/hd-authority-splenic.png"
+  },
+  {
+    "id": "hd-authority-ego",
+    "type": "hd-authority",
+    "name": "Ego Authority",
+    "symbol": "♡",
+    "alternativeNames": [
+      "Heart Authority",
+      "Ego Manifested",
+      "Ego Projected"
+    ],
+    "description": "Ego Authority comes from a defined Heart/Ego Center connected to the Throat (Ego Manifested) or G Center (Ego Projected). The Heart Center is about willpower, self-worth, and material promises. Decisions are correct when they serve your heart's desires and what you truly want.",
+    "centerId": "heart-center",
+    "decisionProcess": "Ask yourself: 'What do I want?' Listen to what your heart truly desires—not what you should want or what others want for you. Your will is your guide. If your heart is in it, you have the willpower to follow through. If not, you'll eventually quit.",
+    "percentage": "~1%",
+    "keywords": [
+      "Willpower",
+      "Desire",
+      "What I want",
+      "Self-worth",
+      "Commitment"
+    ],
+    "practicalGuidance": "Get in touch with your genuine desires. When considering something, ask: 'Do I really want this? Is my heart in it?' Listen for what you want to say rather than what you think you should say. Your heart voice often starts with 'I want...' or 'I will...'",
+    "timeframe": "Can be immediate or may need time to feel into heart's desire",
+    "signs": {
+      "correct": "Following heart's desires gives you willpower to complete things. You feel self-worth and material stability.",
+      "incorrect": "Overcommitting or making promises your heart isn't in leads to broken commitments and depleted willpower."
+    },
+    "image": "/images/human-design/authorities/hd-authority-ego.png"
+  },
+  {
+    "id": "hd-authority-self-projected",
+    "type": "hd-authority",
+    "name": "Self-Projected Authority",
+    "symbol": "⬡",
+    "alternativeNames": [
+      "G Center Authority",
+      "Identity Authority"
+    ],
+    "description": "Self-Projected Authority is found in Projectors with the G Center connected to the Throat, but with undefined Sacral, Solar Plexus, Spleen, and Heart Centers. Clarity comes from speaking your truth and listening to what you say. Your identity and direction reveal themselves through expression.",
+    "centerId": "g-center",
+    "decisionProcess": "Talk it through with trusted others who can listen without agenda. As you speak, pay attention to what you say and how you feel saying it. Your truth reveals itself through expression. You're not seeking advice—you're seeking to hear yourself.",
+    "percentage": "~3%",
+    "keywords": [
+      "Identity",
+      "Direction",
+      "Speaking truth",
+      "Self-expression",
+      "Being heard"
+    ],
+    "practicalGuidance": "Find trusted sounding boards—people who can listen without trying to influence you. When considering a decision, talk about it and notice: Do you sound authentic? Does what you're saying feel aligned? Your voice and words carry your truth.",
+    "timeframe": "Usually needs a conversation or time to express and hear yourself",
+    "signs": {
+      "correct": "When speaking your truth, you feel aligned and clear about your direction.",
+      "incorrect": "Making decisions without expressing them, or following others' advice over your own knowing, leads to identity confusion."
+    },
+    "image": "/images/human-design/authorities/hd-authority-self-projected.png"
+  },
+  {
+    "id": "hd-authority-mental",
+    "type": "hd-authority",
+    "name": "Mental Authority (None/Sounding Board)",
+    "symbol": "◯",
+    "alternativeNames": [
+      "No Inner Authority",
+      "Environmental Authority",
+      "Outer Authority"
+    ],
+    "description": "Mental Projectors have no defined centers below the Throat. Without traditional inner authority, they find clarity through their environment and by talking things through over time. Their authority is essentially outer—relying on the right people and places to mirror their truth.",
+    "centerId": null,
+    "decisionProcess": "Talk through decisions with different people over time. Notice how you feel in different environments when considering the decision. Pay attention to what comes out of your mouth—not to get advice, but to hear yourself process. The right environment and people help you find clarity.",
+    "percentage": "~3%",
+    "keywords": [
+      "Sounding board",
+      "Environment",
+      "Talking it through",
+      "Time",
+      "Trusted others"
+    ],
+    "practicalGuidance": "Cultivate a network of trusted sounding boards. When making decisions, discuss them with different people in different environments. Don't ask for advice—just talk and listen to yourself. Notice how different spaces make you feel about decisions.",
+    "timeframe": "Extended—may need multiple conversations over time",
+    "signs": {
+      "correct": "The right environments and conversations bring natural clarity. Decisions feel right when processed this way.",
+      "incorrect": "Rushing decisions or being in wrong environments leads to unclear, regrettable choices."
+    },
+    "image": "/images/human-design/authorities/hd-authority-mental.png"
+  },
+  {
+    "id": "hd-authority-lunar",
+    "type": "hd-authority",
+    "name": "Lunar Authority",
+    "symbol": "☽",
+    "alternativeNames": [
+      "Lunar Cycle Authority",
+      "Moon Authority"
+    ],
+    "description": "Lunar Authority is unique to Reflectors, who have no defined centers. Over a 28-29 day lunar cycle, the Moon activates all 64 gates, allowing Reflectors to sample every possible perspective. Major decisions require waiting through this complete cycle to gain true clarity.",
+    "centerId": null,
+    "decisionProcess": "For significant decisions, wait a full lunar cycle (28-29 days). Track how you feel about the decision at different times as the Moon moves through the gates. Talk with trusted advisors throughout. Notice patterns and when clarity emerges.",
+    "percentage": "~1%",
+    "keywords": [
+      "Lunar cycle",
+      "28 days",
+      "All perspectives",
+      "Patience",
+      "Moon transits"
+    ],
+    "practicalGuidance": "Track the Moon and notice how your sense of a decision changes. Keep a journal. Talk to trusted people at different points in the cycle. By the end of the full Moon cycle, you'll have experienced the decision from every angle and can move forward with clarity.",
+    "timeframe": "Full lunar cycle (28-29 days) for major decisions",
+    "signs": {
+      "correct": "Decisions made after a full cycle feel clear and aligned. Life brings delightful surprises.",
+      "incorrect": "Rushing decisions leads to disappointment and feeling lost or disconnected."
+    },
+    "image": "/images/human-design/authorities/hd-authority-lunar.png"
+  }
+]

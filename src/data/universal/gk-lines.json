@@ -1,0 +1,169 @@
+[
+  {
+    "id": "gk-line-1",
+    "type": "gk-line",
+    "name": "Line 1 - The Investigator",
+    "symbol": "1",
+    "lineNumber": 1,
+    "archetype": "Investigator",
+    "trigram": "Lower",
+    "trigramPosition": "Bottom",
+    "theme": "Foundation & Research",
+    "keywords": [
+      "Foundation",
+      "Research",
+      "Introspection",
+      "Security",
+      "Deep study"
+    ],
+    "description": "Line 1 is the foundation line, creating the base upon which all else is built. In Gene Keys, this line brings a contemplative, research-oriented quality to any Gene Key it touches. Those with Line 1 have an innate need to understand things deeply before moving forward.",
+    "gift": "The Gift of Line 1 is the capacity for deep research and laying solid foundations. When operating at the Gift frequency, Line 1 brings thoroughness, reliability, and the ability to create security through knowledge.",
+    "shadow": "At the Shadow frequency, Line 1 can manifest as excessive insecurity, over-research to the point of never acting, and a tendency to become lost in details rather than trusting intuition.",
+    "inGeneKeys": "When a Gene Key appears with Line 1, it indicates that the contemplation should be approached from a foundational, investigative perspective. The journey begins with introspection and building understanding from the ground up.",
+    "contemplationTheme": "What foundation am I building? What do I need to understand more deeply before I can move forward?",
+    "practicalGuidance": "Take time to research and understand before acting. Build security through knowledge. Trust that a solid foundation will support all future growth.",
+    "image": "/images/gene-keys/lines/gk-line-1.png"
+  },
+  {
+    "id": "gk-line-2",
+    "type": "gk-line",
+    "name": "Line 2 - The Hermit",
+    "symbol": "2",
+    "lineNumber": 2,
+    "archetype": "Hermit",
+    "trigram": "Lower",
+    "trigramPosition": "Middle",
+    "theme": "Natural Gifts & Calling",
+    "keywords": [
+      "Natural talent",
+      "Calling",
+      "Solitude",
+      "Projection",
+      "Being called out"
+    ],
+    "description": "Line 2 represents natural gifts that often go unrecognized by the person who has them. In Gene Keys, this line brings a quality of effortless talent and the paradox of needing to be called out by others to recognize one's own gifts.",
+    "gift": "The Gift of Line 2 is natural, unstudied talent. When operating at the Gift frequency, Line 2 brings an ease and grace to the Gene Key's expression, often appearing effortless to others.",
+    "shadow": "At the Shadow frequency, Line 2 can manifest as shyness, withdrawal, fear of being seen, or conversely, projection of one's gifts onto others while denying them in oneself.",
+    "inGeneKeys": "When a Gene Key appears with Line 2, it suggests that the energy of this key may already be naturally present but unrecognized. The journey involves accepting the call to share one's natural gifts.",
+    "contemplationTheme": "What natural gifts do I possess that I may not fully recognize? Who is calling me to share my talents?",
+    "practicalGuidance": "Allow yourself periods of solitude to develop your natural talents. Be open to being called out by life. Trust that your gifts will be recognized when the time is right.",
+    "image": "/images/gene-keys/lines/gk-line-2.png"
+  },
+  {
+    "id": "gk-line-3",
+    "type": "gk-line",
+    "name": "Line 3 - The Martyr",
+    "symbol": "3",
+    "lineNumber": 3,
+    "archetype": "Martyr",
+    "trigram": "Lower",
+    "trigramPosition": "Top",
+    "theme": "Trial & Error Learning",
+    "keywords": [
+      "Experience",
+      "Adaptation",
+      "Trial and error",
+      "Resilience",
+      "Learning through mistakes"
+    ],
+    "description": "Line 3 is the line of experiential learning, where wisdom comes through direct engagement with life and learning from mistakes. In Gene Keys, this line brings a quality of adaptability and the courage to learn through experience.",
+    "gift": "The Gift of Line 3 is adaptability and the wisdom gained through direct experience. When operating at the Gift frequency, Line 3 brings resilience, practical knowledge, and the ability to share lessons learned.",
+    "shadow": "At the Shadow frequency, Line 3 can manifest as repeated mistakes without learning, martyrdom, pessimism, or being stuck in patterns of self-sabotage.",
+    "inGeneKeys": "When a Gene Key appears with Line 3, it indicates that the path of transformation will involve hands-on learning and possible mistakes. The journey embraces the learning process itself.",
+    "contemplationTheme": "What am I learning through my experiences? How can I transform my mistakes into wisdom?",
+    "practicalGuidance": "Embrace your experiences, including mistakes, as essential to your growth. Share the wisdom you've gained through trial and error. Trust the process of experiential learning.",
+    "image": "/images/gene-keys/lines/gk-line-3.png"
+  },
+  {
+    "id": "gk-line-4",
+    "type": "gk-line",
+    "name": "Line 4 - The Opportunist",
+    "symbol": "4",
+    "lineNumber": 4,
+    "archetype": "Opportunist",
+    "trigram": "Upper",
+    "trigramPosition": "Bottom",
+    "theme": "Network & Relationships",
+    "keywords": [
+      "Network",
+      "Community",
+      "Opportunity",
+      "Influence",
+      "Friendship"
+    ],
+    "description": "Line 4 is the line of relationships and networks, where transformation occurs through connections with others. In Gene Keys, this line brings a quality of social intelligence and the ability to influence through personal bonds.",
+    "gift": "The Gift of Line 4 is the capacity to build meaningful relationships and create opportunities through network. When operating at the Gift frequency, Line 4 brings friendship, influence, and the ability to be a beneficial presence in community.",
+    "shadow": "At the Shadow frequency, Line 4 can manifest as manipulation, over-dependency on others, fear of being alone, or using relationships for personal gain.",
+    "inGeneKeys": "When a Gene Key appears with Line 4, it suggests that relationships and community will play a key role in the transformation. The journey involves building meaningful connections.",
+    "contemplationTheme": "How do my relationships support my growth? What opportunities are emerging through my network?",
+    "practicalGuidance": "Cultivate genuine friendships and meaningful connections. Allow opportunities to arise naturally through your network. Be generous with your influence and resources.",
+    "image": "/images/gene-keys/lines/gk-line-4.png"
+  },
+  {
+    "id": "gk-line-5",
+    "type": "gk-line",
+    "name": "Line 5 - The Heretic",
+    "symbol": "5",
+    "lineNumber": 5,
+    "archetype": "Heretic",
+    "trigram": "Upper",
+    "trigramPosition": "Middle",
+    "theme": "Universalization & Projection",
+    "keywords": [
+      "Universal",
+      "Projection field",
+      "Savior complex",
+      "Practical solutions",
+      "Leader"
+    ],
+    "description": "Line 5 carries a universal quality and attracts projections from others. In Gene Keys, this line brings the capacity to deliver practical solutions that benefit the collective, while navigating the projections placed upon it.",
+    "gift": "The Gift of Line 5 is the ability to offer universal solutions and practical wisdom that benefits many. When operating at the Gift frequency, Line 5 brings leadership, practical genius, and the capacity to meet collective needs.",
+    "shadow": "At the Shadow frequency, Line 5 can manifest as savior complex, paranoia about projections, running from responsibility, or failing to meet the expectations that come with the projection field.",
+    "inGeneKeys": "When a Gene Key appears with Line 5, it indicates that the expression of this key will have universal implications. The journey involves accepting the responsibility that comes with influence.",
+    "contemplationTheme": "What practical solutions am I called to offer? How can I serve the collective through my unique gifts?",
+    "practicalGuidance": "Accept the projections placed on you as part of your path. Deliver practical, universal solutions. Remember that your reputation is built on meeting real needs.",
+    "image": "/images/gene-keys/lines/gk-line-5.png"
+  },
+  {
+    "id": "gk-line-6",
+    "type": "gk-line",
+    "name": "Line 6 - The Role Model",
+    "symbol": "6",
+    "lineNumber": 6,
+    "archetype": "Role Model",
+    "trigram": "Upper",
+    "trigramPosition": "Top",
+    "theme": "Transition & Integration",
+    "keywords": [
+      "Role model",
+      "Objectivity",
+      "Transition",
+      "Wisdom",
+      "Three phases of life"
+    ],
+    "description": "Line 6 carries the quality of the wise elder who has integrated life experience into embodied wisdom. In Gene Keys, this line brings a quality of overview, objectivity, and the potential to serve as a living example.",
+    "gift": "The Gift of Line 6 is the capacity to embody wisdom and serve as a role model for others. When operating at the Gift frequency, Line 6 brings objectivity, trust, and the ability to inspire through authentic living.",
+    "shadow": "At the Shadow frequency, Line 6 can manifest as aloofness, disconnection from practical life, disillusionment, or an inability to commit to anything.",
+    "inGeneKeys": "When a Gene Key appears with Line 6, it suggests a journey of integration across life phases. The path moves from initial trial, through retreat and contemplation, to eventual emergence as a living example.",
+    "contemplationTheme": "What phase of integration am I in? How can I embody the wisdom I have gained?",
+    "practicalGuidance": "Trust the three phases of your journey: engagement, retreat, and emergence. Maintain objectivity while staying connected to life. Allow yourself to become a living example of integrated wisdom.",
+    "lifePhases": {
+      "phase1": {
+        "name": "Trial Phase",
+        "ageRange": "0-30",
+        "description": "A period of experiential learning similar to Line 3, where wisdom is gained through direct engagement with life."
+      },
+      "phase2": {
+        "name": "Retreat Phase",
+        "ageRange": "30-50",
+        "description": "A period of withdrawal and contemplation, processing life experience and developing objectivity and wisdom."
+      },
+      "phase3": {
+        "name": "Role Model Phase",
+        "ageRange": "50+",
+        "description": "Emergence as a living example, sharing integrated wisdom with the world through authentic being."
+      }
+    },
+    "image": "/images/gene-keys/lines/gk-line-6.png"
+  }
+]

@@ -1,0 +1,402 @@
+[
+  {
+    "id": "arginine",
+    "type": "amino-acid",
+    "name": "Arginine",
+    "symbol": "Arg",
+    "abbreviation": "R",
+    "aminoAcidType": "Conditional",
+    "chemicalNature": "Positively charged, basic amino acid with long side chain containing multiple nitrogen groups",
+    "physiologicalRole": "Plays a crucial role in immune function, wound healing, and the production of nitric oxide, which relaxes blood vessels and improves circulation. Supports the body's ability to release growth hormone, aids in protein synthesis, and helps remove ammonia from the body through the urea cycle.",
+    "consciousnessQuality": "Embodies humanity's capacity for heart-centered trust and healing the sacred wound. Just as it enables nitric oxide to relax constriction in blood vessels, this amino acid governs our ability to release defensive patterns and allow love to circulate freely through the collective human experience.",
+    "codonRingId": "ring-of-humanity",
+    "geneKeyIds": [
+      "gk-10",
+      "gk-17",
+      "gk-21",
+      "gk-25",
+      "gk-38",
+      "gk-51"
+    ],
+    "description": "As the biochemical foundation for circulation, growth, and immune response, Arginine mirrors the evolutionary leap available when we trust our heart's innate authority rather than external validation.",
+    "image": "/images/gene-keys/amino-acids/arginine.png"
+  },
+  {
+    "id": "phenylalanine",
+    "type": "amino-acid",
+    "name": "Phenylalanine",
+    "symbol": "Phe",
+    "abbreviation": "F",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Aromatic, nonpolar amino acid with a benzene ring structure",
+    "physiologicalRole": "A precursor to tyrosine and subsequently to neurotransmitters like dopamine, norepinephrine, and epinephrine, which regulate mood, motivation, and stress response. Also produces melanin for skin pigmentation and plays a role in the structure of proteins throughout the body.",
+    "consciousnessQuality": "Embodies the feminine principle of receptive depth and authentic feeling. Like water that takes the shape of its container while maintaining its essential nature, this amino acid facilitates the journey to self-realization through emotional fluidity.",
+    "codonRingId": "ring-of-water",
+    "geneKeyIds": [
+      "gk-2",
+      "gk-8"
+    ],
+    "description": "Its aromatic structure reflects the eternal dance between inner depth (Water) and outer radiance (Fire), enabling the soul to navigate between introspection and expression.",
+    "image": "/images/gene-keys/amino-acids/phenylalanine.png"
+  },
+  {
+    "id": "aspartic-acid",
+    "type": "amino-acid",
+    "name": "Aspartic Acid",
+    "symbol": "Asp",
+    "abbreviation": "D",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Negatively charged, acidic amino acid with polar side chain",
+    "physiologicalRole": "Serves as an excitatory neurotransmitter in the central nervous system, playing a key role in neural signaling and cognitive function. Participates in the citric acid cycle for energy production and helps protect the liver by assisting in ammonia removal.",
+    "consciousnessQuality": "Governs the paradox of death and renewal that humanity fears most. Its role in energy production and waste removal mirrors the consciousness work of recognizing that 'death' is actually transformation - breaking down old patterns to liberate energy for new life.",
+    "codonRingId": "ring-of-illusion",
+    "geneKeyIds": [
+      "gk-28",
+      "gk-32"
+    ],
+    "description": "This amino acid enables us to face the ultimate illusion: that postponing full engagement with life somehow protects us, when in truth, embracing mortality awakens us to presence.",
+    "image": "/images/gene-keys/amino-acids/aspartic-acid.png"
+  },
+  {
+    "id": "threonine",
+    "type": "amino-acid",
+    "name": "Threonine",
+    "symbol": "Thr",
+    "abbreviation": "T",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Polar, uncharged amino acid with hydroxyl group, capable of phosphorylation",
+    "physiologicalRole": "Critical for protein balance in the body, supporting the formation of collagen, elastin, and tooth enamel. Aids in liver function, lipotropic activity (fat metabolism), and immune function through antibody production. Its hydroxyl group makes it a target for phosphorylation, a key mechanism for cellular signaling.",
+    "consciousnessQuality": "Through its unique capacity for phosphorylation - the cellular mechanism for capturing and storing light energy as ATP - Threonine literally governs how consciousness crystallizes into biological form.",
+    "codonRingId": "ring-of-light",
+    "geneKeyIds": [
+      "gk-5",
+      "gk-9",
+      "gk-11",
+      "gk-26"
+    ],
+    "description": "This amino acid embodies the alchemical process of stepping down higher frequencies into material structure, enabling the DNA to act as an antenna for light and transform photonic information into cellular intelligence.",
+    "image": "/images/gene-keys/amino-acids/threonine.png"
+  },
+  {
+    "id": "glutamine",
+    "type": "amino-acid",
+    "name": "Glutamine",
+    "symbol": "Gln",
+    "abbreviation": "Q",
+    "aminoAcidType": "Conditional",
+    "chemicalNature": "Polar, uncharged amino acid with amide group, most abundant free amino acid in the body",
+    "physiologicalRole": "Serves as primary fuel for cells of the immune system and intestinal lining, making it essential for gut health and immune function. Acts as a nitrogen shuttle, transporting ammonia safely between tissues for detoxification.",
+    "consciousnessQuality": "Governs the profound purification cycles through which consciousness processes and releases accumulated emotional and karmic residue. Its role in safely transporting cellular waste mirrors the spiritual work of relinquishing desire-patterns and metabolizing the past.",
+    "codonRingId": "ring-of-purification",
+    "geneKeyIds": [
+      "gk-13",
+      "gk-30"
+    ],
+    "description": "Just as glutamine becomes essential during stress to prevent the body from consuming itself, this amino acid teaches that purification is not punishment but the loving act of clearing space for what wants to emerge.",
+    "image": "/images/gene-keys/amino-acids/glutamine.png"
+  },
+  {
+    "id": "serine",
+    "type": "amino-acid",
+    "name": "Serine",
+    "symbol": "Ser",
+    "abbreviation": "S",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Polar, uncharged amino acid with hydroxyl group, highly reactive and important for enzyme active sites",
+    "physiologicalRole": "Crucial for brain and central nervous system function, participating in the synthesis of neurotransmitters and the myelin sheaths that protect nerve fibers. Plays a key role in cellular metabolism and energy production.",
+    "consciousnessQuality": "As the most abundant amino acid in enzyme active sites - literally the molecular trigger for biochemical change - Serine embodies the evolutionary pressure that drives all seeking and growth.",
+    "codonRingId": "ring-of-seeking",
+    "geneKeyIds": [
+      "gk-15",
+      "gk-39",
+      "gk-52",
+      "gk-53",
+      "gk-54",
+      "gk-58"
+    ],
+    "description": "This amino acid teaches that seeking itself is sacred: the discomfort that drives growth is not a problem to solve but the engine of transformation, the molecular manifestation of the soul's refusal to settle for anything less than its full expression.",
+    "image": "/images/gene-keys/amino-acids/serine.png"
+  },
+  {
+    "id": "cysteine",
+    "type": "amino-acid",
+    "name": "Cysteine",
+    "symbol": "Cys",
+    "abbreviation": "C",
+    "aminoAcidType": "Conditional",
+    "chemicalNature": "Polar amino acid containing sulfur (thiol group), capable of forming disulfide bonds",
+    "physiologicalRole": "Its sulfur-containing structure allows it to form disulfide bridges that stabilize protein structure. It is a precursor to glutathione, the body's master antioxidant that protects cells from oxidative damage.",
+    "consciousnessQuality": "Through its unique ability to form sulfur bonds that link separate molecules into functional wholes, Cysteine governs the consciousness of synergy - how individual elements multiply their value through right relationship.",
+    "codonRingId": "ring-of-prosperity",
+    "geneKeyIds": [
+      "gk-16",
+      "gk-45"
+    ],
+    "description": "This amino acid teaches that true prosperity flows from purification and protection of resources, not hoarding. Its role in metabolizing diverse fuel sources mirrors the spiritual principle that abundance activates when we learn to recognize and utilize the gifts already present.",
+    "image": "/images/gene-keys/amino-acids/cysteine.png"
+  },
+  {
+    "id": "proline",
+    "type": "amino-acid",
+    "name": "Proline",
+    "symbol": "Pro",
+    "abbreviation": "P",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Unique cyclic structure (imino acid), creates kinks in protein chains, abundant in collagen",
+    "physiologicalRole": "Its distinctive ring structure makes it essential for collagen formation, providing the flexibility and resilience needed in connective tissue, skin, and blood vessels. Supports wound healing and cardiovascular health.",
+    "consciousnessQuality": "As the amino acid that creates intentional 'kinks' and flexibility in the rigid structure of proteins - Proline embodies the divine paradox of strength through vulnerability and resilience through tenderness.",
+    "codonRingId": "ring-of-divinity",
+    "geneKeyIds": [
+      "gk-22",
+      "gk-36",
+      "gk-37",
+      "gk-63"
+    ],
+    "description": "This amino acid teaches that true divinity is found in the wound, in the place where the structure bends to accommodate suffering with compassion, transforming pain into the very ligament that binds humanity in equality and redemption.",
+    "image": "/images/gene-keys/amino-acids/proline.png"
+  },
+  {
+    "id": "tyrosine",
+    "type": "amino-acid",
+    "name": "Tyrosine",
+    "symbol": "Tyr",
+    "abbreviation": "Y",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Aromatic amino acid with polar hydroxyl group on benzene ring, capable of phosphorylation",
+    "physiologicalRole": "The precursor to critical neurotransmitters (dopamine, norepinephrine, epinephrine) that regulate mood, motivation, and stress response, as well as thyroid hormones that control metabolism. Also produces melanin for pigmentation.",
+    "consciousnessQuality": "Embodies the consciousness threshold where inner knowing must be spoken into existence or remain dormant. Its role in stress response and cognitive clarity under pressure mirrors the initiation of the throat center - the point of no return.",
+    "codonRingId": "ring-of-no-return",
+    "geneKeyIds": [
+      "gk-31",
+      "gk-62"
+    ],
+    "description": "This amino acid teaches that authentic expression is not optional luxury but metabolic necessity: what remains unspoken becomes toxic, while truth articulated transforms individual insight into collective evolution.",
+    "image": "/images/gene-keys/amino-acids/tyrosine.png"
+  },
+  {
+    "id": "asparagine",
+    "type": "amino-acid",
+    "name": "Asparagine",
+    "symbol": "Asn",
+    "abbreviation": "N",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Polar, uncharged amino acid with amide group, similar to aspartic acid but with amide instead of carboxyl",
+    "physiologicalRole": "Plays a key role in protein synthesis and the proper function of the nervous system, particularly in the development and function of brain and nerve cells. Important for the synthesis of glycoproteins which are crucial for cell-to-cell communication.",
+    "consciousnessQuality": "Governs the exquisite synchronicity where individual destiny (evolution) meets collective unfoldment (involution). Its role in nervous system equilibrium and developmental timing reflects the consciousness of sacred choreography.",
+    "codonRingId": "ring-of-destiny",
+    "geneKeyIds": [
+      "gk-34",
+      "gk-43"
+    ],
+    "description": "This amino acid teaches that destiny is not predetermined fate but the recognition of perfect timing - the moment when your unique evolutionary trajectory intersects with the involutionary current of consciousness returning to source.",
+    "image": "/images/gene-keys/amino-acids/asparagine.png"
+  },
+  {
+    "id": "tryptophan",
+    "type": "amino-acid",
+    "name": "Tryptophan",
+    "symbol": "Trp",
+    "abbreviation": "W",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Aromatic amino acid with large indole ring structure, largest and most complex of all amino acids",
+    "physiologicalRole": "The sole precursor to serotonin (regulating mood, sleep, and appetite) and melatonin (governing circadian rhythms and cellular repair). Also produces niacin (vitamin B3), essential for DNA repair and energy metabolism.",
+    "consciousnessQuality": "As the rarest yet most architecturally complex amino acid, whose derivatives orchestrate consciousness states from sleep to mystical experience, Tryptophan embodies the miracle of boundless possibility emerging from the smallest seed.",
+    "codonRingId": "ring-of-miracles",
+    "geneKeyIds": [
+      "gk-35"
+    ],
+    "description": "This amino acid teaches that miracles are not violations of nature but the recognition that scarcity and limitation are themselves illusions: the smallest, rarest element, when properly activated, can reorganize entire systems.",
+    "image": "/images/gene-keys/amino-acids/tryptophan.png"
+  },
+  {
+    "id": "alanine",
+    "type": "amino-acid",
+    "name": "Alanine",
+    "symbol": "Ala",
+    "abbreviation": "A",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Simple, small, nonpolar amino acid with methyl side chain, highly abundant in proteins",
+    "physiologicalRole": "Serves as a major carrier of nitrogen and carbon between tissues, particularly shuttling amino groups from muscle to liver through the glucose-alanine cycle. One of the primary amino acids used to synthesize glucose when needed.",
+    "consciousnessQuality": "Governs the fundamental integration of spirit into matter through proper metabolic development. Its role in the glucose-alanine cycle mirrors the consciousness work of grounding higher awareness into physical, emotional, and mental health.",
+    "codonRingId": "ring-of-matter",
+    "geneKeyIds": [
+      "gk-18",
+      "gk-46",
+      "gk-48",
+      "gk-57"
+    ],
+    "description": "This amino acid teaches that spiritual awakening without physical, emotional, and mental integration leads to dissociation - true transformation requires that spirit penetrate matter at every developmental phase.",
+    "image": "/images/gene-keys/amino-acids/alanine.png"
+  },
+  {
+    "id": "glycine",
+    "type": "amino-acid",
+    "name": "Glycine",
+    "symbol": "Gly",
+    "abbreviation": "G",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Smallest and simplest amino acid with just a hydrogen as side chain, highly flexible, achiral (no handedness)",
+    "physiologicalRole": "Essential for collagen synthesis (one-third of collagen is glycine), supports central nervous system function as an inhibitory neurotransmitter promoting calmness. Also required for the synthesis of heme, creatine, and glutathione.",
+    "consciousnessQuality": "Embodies the alchemical principle that the most fundamental elements enable the most profound transformations. Its unique lack of chirality mirrors its role in consciousness: the capacity to return to zero-point.",
+    "codonRingId": "ring-of-alchemy",
+    "geneKeyIds": [
+      "gk-6",
+      "gk-40",
+      "gk-47",
+      "gk-64"
+    ],
+    "description": "This amino acid teaches that transmutation happens not through complexity but through radical simplification - by dissolving back to the essential, we release what binds us and enable peace to reorganize matter itself.",
+    "image": "/images/gene-keys/amino-acids/glycine.png"
+  },
+  {
+    "id": "lysine",
+    "type": "amino-acid",
+    "name": "Lysine",
+    "symbol": "Lys",
+    "abbreviation": "K",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Positively charged, basic amino acid with long side chain terminating in amino group",
+    "physiologicalRole": "Critical for protein synthesis, calcium absorption, and the formation of collagen, elastin, and antibodies. Supports the production of carnitine, which transports fatty acids into mitochondria for energy production.",
+    "consciousnessQuality": "Embodies the consciousness of divine combustion - the sacred flame that transforms stored potential into radiant expression. Its role in converting fat into cellular fire mirrors how genius manifests through warm, abundant beauty.",
+    "codonRingId": "ring-of-fire",
+    "geneKeyIds": [
+      "gk-1",
+      "gk-14"
+    ],
+    "description": "This amino acid teaches that true fire is not destructive but generative - the metabolic warmth that creates bountifulness, the creative heat that forges beauty from raw material.",
+    "image": "/images/gene-keys/amino-acids/lysine.png"
+  },
+  {
+    "id": "isoleucine",
+    "type": "amino-acid",
+    "name": "Isoleucine",
+    "symbol": "Ile",
+    "abbreviation": "I",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Branched-chain amino acid (BCAA), nonpolar, hydrophobic with unique branched structure",
+    "physiologicalRole": "One of three branched-chain amino acids crucial for muscle metabolism, providing energy directly to muscle tissue during exercise and stress. Regulates blood sugar levels and supports hemoglobin formation for oxygen transport.",
+    "consciousnessQuality": "Governs the consciousness of planetary interconnection and systemic unity. Its role in maintaining glucose homeostasis throughout the body mirrors Gaia consciousness - the recognition that all beings share one metabolic field.",
+    "codonRingId": "ring-of-gaia",
+    "geneKeyIds": [
+      "gk-19",
+      "gk-60",
+      "gk-61"
+    ],
+    "description": "This amino acid teaches that individual health is inseparable from collective health: the same molecular signature that enables our cells to share resources equitably also encodes the template for humanity to recognize our fundamental unity.",
+    "image": "/images/gene-keys/amino-acids/isoleucine.png"
+  },
+  {
+    "id": "valine",
+    "type": "amino-acid",
+    "name": "Valine",
+    "symbol": "Val",
+    "abbreviation": "V",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Branched-chain amino acid (BCAA), nonpolar, hydrophobic, important for protein structure",
+    "physiologicalRole": "Essential for muscle metabolism, tissue repair, and maintaining nitrogen balance. As one of three branched-chain amino acids, it provides energy directly to muscles and supports mental vigor and emotional calm.",
+    "consciousnessQuality": "Governs the consciousness of purified union - the capacity for authentic relationship free from projection and manipulation. Its role in maintaining equilibrium mirrors knowing when to merge and when to maintain boundaries.",
+    "codonRingId": "ring-of-union",
+    "geneKeyIds": [
+      "gk-4",
+      "gk-7",
+      "gk-29",
+      "gk-59"
+    ],
+    "description": "This amino acid teaches that true union is not fusion but coordination - separate elements maintaining their integrity while functioning as a unified whole, enabling relationships to become vehicles for mutual evolution.",
+    "image": "/images/gene-keys/amino-acids/valine.png"
+  },
+  {
+    "id": "leucine",
+    "type": "amino-acid",
+    "name": "Leucine",
+    "symbol": "Leu",
+    "abbreviation": "L",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Branched-chain amino acid (BCAA), nonpolar, hydrophobic, most abundant BCAA",
+    "physiologicalRole": "The most abundant branched-chain amino acid, playing a central role in protein synthesis and muscle growth. It activates mTOR signaling pathway, regulating cell growth and proliferation throughout the body.",
+    "consciousnessQuality": "As the amino acid that most powerfully activates protein synthesis and growth pathways, Leucine embodies the consciousness of illuminated truth that dispels darkness and ignorance.",
+    "codonRingId": "ring-of-the-illuminati",
+    "geneKeyIds": [
+      "gk-3",
+      "gk-20",
+      "gk-23",
+      "gk-24",
+      "gk-27",
+      "gk-42"
+    ],
+    "description": "This amino acid teaches that true illumination is not esoteric secret knowledge but the natural radiance that emerges when consciousness fully inhabits and expresses through biological form.",
+    "image": "/images/gene-keys/amino-acids/leucine.png"
+  },
+  {
+    "id": "histidine",
+    "type": "amino-acid",
+    "name": "Histidine",
+    "symbol": "His",
+    "abbreviation": "H",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Aromatic amino acid with imidazole ring, capable of acting as both acid and base (buffer)",
+    "physiologicalRole": "Essential for growth and tissue repair, particularly in children. Precursor to histamine, which regulates immune response, gastric acid secretion, and neurotransmission. Its imidazole ring allows it to act as a pH buffer.",
+    "consciousnessQuality": "Through its unique capacity to buffer pH and serve as both acid and base, Histidine embodies the consciousness of rapid transformation - the whirlwind that disrupts stagnation and catalyzes change.",
+    "codonRingId": "ring-of-the-whirlwind",
+    "geneKeyIds": [
+      "gk-41",
+      "gk-44"
+    ],
+    "description": "This amino acid teaches that transformation often comes as disruption - the whirlwind that appears chaotic but is actually reorganizing matter and consciousness to a higher order of coherence.",
+    "image": "/images/gene-keys/amino-acids/histidine.png"
+  },
+  {
+    "id": "methionine",
+    "type": "amino-acid",
+    "name": "Methionine",
+    "symbol": "Met",
+    "abbreviation": "M",
+    "aminoAcidType": "Essential",
+    "chemicalNature": "Sulfur-containing amino acid, nonpolar, hydrophobic, serves as the start codon",
+    "physiologicalRole": "The universal start codon for protein synthesis - every protein begins with methionine. Contains sulfur essential for antioxidant function. Precursor to SAM (S-adenosylmethionine), the body's primary methyl donor for DNA methylation and gene expression.",
+    "consciousnessQuality": "As the universal initiator of all protein synthesis and the source of methyl groups that regulate gene expression, Methionine embodies the consciousness of origin - the moment of creation from which all else unfolds.",
+    "codonRingId": "ring-of-origin",
+    "geneKeyIds": [
+      "gk-49",
+      "gk-55"
+    ],
+    "description": "This amino acid teaches that every creation begins from a single point of origin - the primal impulse that contains within it the blueprint for everything that will unfold.",
+    "image": "/images/gene-keys/amino-acids/methionine.png"
+  },
+  {
+    "id": "glutamic-acid",
+    "type": "amino-acid",
+    "name": "Glutamic Acid",
+    "symbol": "Glu",
+    "abbreviation": "E",
+    "aminoAcidType": "Non-essential",
+    "chemicalNature": "Negatively charged, acidic amino acid with carboxyl group on side chain",
+    "physiologicalRole": "The most abundant neurotransmitter in the nervous system, essential for learning and memory. Serves as a metabolic hub connecting amino acid metabolism, energy production, and nitrogen handling throughout the body.",
+    "consciousnessQuality": "As the brain's primary excitatory neurotransmitter and the metabolic hub connecting multiple pathways, Glutamic Acid embodies the consciousness of passage between life and death, the threshold where transformation occurs.",
+    "codonRingId": "ring-of-life-and-death",
+    "geneKeyIds": [
+      "gk-50"
+    ],
+    "description": "This amino acid teaches that the boundary between life and death is not a wall but a membrane - a passage through which consciousness continuously flows, transforming but never ending.",
+    "image": "/images/gene-keys/amino-acids/glutamic-acid.png"
+  },
+  {
+    "id": "stop-codon",
+    "type": "amino-acid",
+    "name": "Stop Codon",
+    "symbol": "Stop",
+    "abbreviation": "*",
+    "aminoAcidType": "Terminator",
+    "chemicalNature": "Three specific RNA sequences (UAA, UAG, UGA) that do not code for any amino acid but signal the termination of protein synthesis",
+    "physiologicalRole": "Acts as molecular punctuation, telling the ribosome when to release a completed protein chain and halt translation. Without these termination signals, proteins would continue growing indefinitely, becoming nonfunctional or toxic.",
+    "consciousnessQuality": "Governs the consciousness of sacred endings and the hero's journey that requires releasing what we've built. Its role in terminating translation mirrors the spiritual trials that test whether we can stop, let go, and unplug.",
+    "codonRingId": "ring-of-trials",
+    "geneKeyIds": [
+      "gk-12",
+      "gk-33",
+      "gk-56"
+    ],
+    "description": "This non-amino-acid teaches the profound wisdom that creation includes completion: the capacity to recognize when the work is done, to release attachment to doing, and to trust the silence that follows.",
+    "image": "/images/gene-keys/amino-acids/stop-codon.png"
+  }
+]

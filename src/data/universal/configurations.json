@@ -1,0 +1,155 @@
+[
+  {
+    "id": "grand-trine",
+    "type": "configuration",
+    "name": "Grand Trine",
+    "shape": "Perfect triangle",
+    "requiredAspectIds": [
+      "trine"
+    ],
+    "requiredAspectCount": 3,
+    "orbRange": "6-8°",
+    "nature": "Harmonious",
+    "keyword": "Grace",
+    "elementalPattern": "Three planets in same element (all Fire, Earth, Air, or Water)",
+    "explanation": "The Sacred Triangle of Natural Flow. This divine geometry creates effortless harmony where three planets in the same element form a perfect equilateral triangle. The Grand Trine represents natural talent, inherited blessings, and areas where life flows with remarkable ease. It harmoniously declares 'You are naturally gifted in these ways - how will you share this grace?'",
+    "impact": "Creates natural ease and talent in combining planetary energies within the same element. Can lead to complacency if gifts are taken for granted. Often represents areas of life that feel effortless and where success comes naturally, but may lack the motivation to develop further.",
+    "integrationPractice": "Cultivate conscious appreciation for your natural gifts while avoiding complacency. Set purposeful goals to direct this flowing energy. Share your talents in service to others rather than taking them for granted.",
+    "image": "/images/astrology/configurations/grand-trine.png"
+  },
+  {
+    "id": "grand-cross",
+    "type": "configuration",
+    "name": "Grand Cross (Grand Square)",
+    "shape": "Perfect cross",
+    "requiredAspectIds": [
+      "square",
+      "opposition"
+    ],
+    "requiredAspectCount": 6,
+    "orbRange": "6-8°",
+    "nature": "Challenging",
+    "keyword": "Challenge",
+    "elementalPattern": "Four planets in the same modality (all Cardinal, Fixed, or Mutable)",
+    "explanation": "The Sacred Cross of Cosmic Initiation. This powerful mandala creates maximum tension and transformation potential, like a cosmic crucible that forges spiritual strength through challenge. The Grand Cross represents divine tests that develop unshakeable character and profound wisdom. It declares 'Through trial by fire, you shall become a beacon for others navigating similar storms.'",
+    "impact": "Creates intense life challenges and constant pressure that drives significant growth and transformation. Often manifests as feeling pulled in four directions simultaneously, but develops extraordinary resilience and problem-solving abilities. Attracts life lessons that promote awareness through conflict.",
+    "integrationPractice": "Embrace the challenges as opportunities for mastery. Find the center point of balance within the cross. Use your hard-won wisdom to guide others through similar difficulties.",
+    "image": "/images/astrology/configurations/grand-cross.png"
+  },
+  {
+    "id": "stellium",
+    "type": "configuration",
+    "name": "Stellium",
+    "shape": "Cluster concentration",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Flipefraga%40gmail.com%2Fuploads%2FMn0eGH2Ep35j.png?alt=media&token=091d2a48-a28e-4375-938e-6769732a37e6",
+    "requiredAspectIds": [
+      "conjunction"
+    ],
+    "requiredAspectCount": 3,
+    "orbRange": "Within same sign or house boundaries",
+    "nature": "Neutral",
+    "keyword": "Intensity",
+    "elementalPattern": "Concentrated energy in one sign/element or house theme",
+    "explanation": "The Sacred Gathering of Cosmic Forces. This powerful concentration creates a focal point where multiple planetary energies merge their influence, like a cosmic spotlight illuminating one area of life. The Stellium represents destiny calling through concentrated attention and amplified experiences. It announces 'Here lies your primary theater of growth and expression.'",
+    "impact": "Intensifies the energies of the involved planets and makes the sign or house extremely prominent in the person's life. Often manifests as overwhelming focus in one area while other areas may feel neglected. Creates both gifts and challenges through concentrated energy.",
+    "integrationPractice": "Honor the intensity while maintaining balance in other life areas. Use the concentrated power purposefully rather than being overwhelmed by it. Develop the qualities needed to handle such focused energy responsibly."
+  },
+  {
+    "id": "t-square",
+    "type": "configuration",
+    "name": "T-Square",
+    "shape": "T-shaped formation",
+    "requiredAspectIds": [
+      "opposition",
+      "square"
+    ],
+    "requiredAspectCount": 3,
+    "orbRange": "6-8°",
+    "nature": "Challenging",
+    "keyword": "Tension",
+    "elementalPattern": "Three planets in the same modality, with the focal planet receiving pressure",
+    "explanation": "The Sacred Arrow of Focused Purpose. This dynamic configuration creates a pressure cooker of energy that demands release through the focal planet. The T-Square generates constant motion and restless energy, like divine discontent that refuses to let you settle for mediocrity. It states 'This tension is fuel for your breakthrough - where will you direct this powerful force?'",
+    "impact": "Creates constant internal tension and restless energy that seeks expression through the focal planet. Often manifests as 'ants in your pants' feeling, driving achievement and action. The missing fourth point becomes the release valve for accumulated pressure.",
+    "integrationPractice": "Channel the tension into productive action through the focal planet. Find healthy outlets for the constant energy. Develop the qualities of the missing fourth point to create balance.",
+    "image": "/images/astrology/configurations/t-square.png"
+  },
+  {
+    "id": "yod",
+    "type": "configuration",
+    "name": "Yod (Finger of God)",
+    "shape": "Narrow isosceles triangle",
+    "requiredAspectIds": [
+      "sextile",
+      "quincunx"
+    ],
+    "requiredAspectCount": 3,
+    "orbRange": "3° (stricter orb required)",
+    "nature": "Karmic",
+    "keyword": "Destiny",
+    "elementalPattern": "Two planets in sextile supporting one focal planet requiring adjustment",
+    "explanation": "The Sacred Finger of Divine Purpose. This mystical configuration points directly at a planet that carries special destiny and spiritual mission. The Yod represents cosmic appointment - you have been chosen for a specific purpose that requires conscious development. It declares 'This is your appointed path - will you accept the responsibility of your calling?'",
+    "impact": "Creates a sense of destiny or special mission focused through the apex planet. Often manifests as feeling chosen or appointed for something significant, but requiring constant adjustment and fine-tuning. The focal planet becomes a channel for unique expression and service.",
+    "integrationPractice": "Accept the responsibility of your special calling. Use the supporting sextile planets to develop the focal planet's expression. Embrace the ongoing adjustment process as part of your spiritual evolution.",
+    "image": "/images/astrology/configurations/yod.png"
+  },
+  {
+    "id": "kite",
+    "type": "configuration",
+    "name": "Kite",
+    "shape": "Kite formation",
+    "requiredAspectIds": [
+      "trine",
+      "sextile",
+      "opposition"
+    ],
+    "requiredAspectCount": 6,
+    "orbRange": "3-6°",
+    "nature": "Harmonious",
+    "keyword": "Direction",
+    "elementalPattern": "Grand Trine in one element with complementary element support",
+    "explanation": "The Sacred Arrow of Purposeful Grace. This configuration adds direction and motivation to the flowing energy of a Grand Trine, like adding a rudder to a powerful current. The Kite transforms natural talent into focused achievement through conscious effort. It proclaims 'Your gifts have found their compass - now sail toward your true destination.'",
+    "impact": "Provides both the natural talent of a Grand Trine and the motivation to use it purposefully. The focal planet (opposite the trine) becomes the point of directed expression. Creates locomotive energy that drives accomplishment through natural ability.",
+    "integrationPractice": "Use the focal planet to direct your natural talents toward meaningful goals. Allow the sextile energies to provide supportive motivation. Channel your flowing gifts into concrete achievements.",
+    "image": "/images/astrology/configurations/kite.png"
+  },
+  {
+    "id": "mystic-rectangle",
+    "type": "configuration",
+    "name": "Mystic Rectangle",
+    "shape": "Rectangle formation",
+    "requiredAspectIds": [
+      "trine",
+      "sextile",
+      "opposition"
+    ],
+    "requiredAspectCount": 6,
+    "orbRange": "5° (10° for Sun, Moon, Ascendant)",
+    "nature": "Harmonious",
+    "keyword": "Balance",
+    "elementalPattern": "Mixture of Earth & Water OR Fire & Air elements",
+    "explanation": "The Sacred Geometry of Cosmic Equilibrium. This rare and beautiful configuration creates perfect balance between complementary elements, like a divine dance between opposing forces that creates harmony through tension. The Mystic Rectangle represents mastery through balanced integration of polarities. It sings 'In the marriage of opposites, divine harmony is born.'",
+    "impact": "Creates harmonious balance between opposing forces with supportive energy from complementary elements. Often manifests as natural ability to see multiple perspectives and create win-win solutions. Provides both ease and energetic motivation through balanced tension.",
+    "integrationPractice": "Consciously work with the opposing forces to create higher synthesis. Use the supportive sextile and trine energies to maintain balance. Serve as a bridge-builder between different perspectives and approaches.",
+    "image": "/images/astrology/configurations/mystic-rectangle.png"
+  },
+  {
+    "id": "cradle",
+    "type": "configuration",
+    "name": "Cradle",
+    "shape": "Cradle or bowl with handle",
+    "requiredAspectIds": [
+      "sextile",
+      "trine",
+      "opposition"
+    ],
+    "requiredAspectCount": 5,
+    "orbRange": "5-8°",
+    "nature": "Harmonious",
+    "keyword": "Support",
+    "elementalPattern": "Mixed complementary elements creating supportive structure",
+    "explanation": "The Sacred Vessel of Divine Support. This nurturing configuration creates a protective container where planets support each other in a harmonious embrace. The Cradle represents being held by cosmic forces while navigating challenges. It whispers 'You are supported from all sides - trust in the divine safety net.'",
+    "impact": "Creates a sense of being supported and protected while dealing with the tension of the opposition. Often manifests as having natural allies and resources that appear when needed. The harmonious aspects provide a safety net for taking risks.",
+    "integrationPractice": "Trust in the support system that surrounds you. Use the flowing energies to soften the edges of conflict. Allow yourself to be held while you grow through challenges.",
+    "image": "/images/astrology/configurations/cradle.png"
+  }
+]

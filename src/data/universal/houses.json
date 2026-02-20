@@ -1,0 +1,325 @@
+[
+  {
+    "id": "house-1",
+    "type": "house",
+    "name": "1st House",
+    "houseNumber": 1,
+    "houseType": "Angular",
+    "worldHalf": "inner",
+    "worldHalfTheme": "The Self — who you are entering the world",
+    "rulingSignId": "aries",
+    "rulingPlanetId": "mars",
+    "lifeAreaFocus": [
+      "Self",
+      "Identity",
+      "Physical Body",
+      "First Impressions",
+      "Appearance",
+      "Personal Initiatives"
+    ],
+    "meaningAndRepresentation": "The Temple of Self. This is the house of your physical body, personality, and the way you naturally present yourself to the world. The 1st House represents your rising sign energy and how you instinctively approach new beginnings. It asks 'Who am I becoming?'",
+    "contemplationQuestions": [
+      "How do I naturally present myself to others?",
+      "What first impressions do I make?",
+      "How do I approach new beginnings?"
+    ],
+    "image": "/images/astrology/houses/house-1.png"
+  },
+  {
+    "id": "house-2",
+    "type": "house",
+    "name": "2nd House",
+    "houseNumber": 2,
+    "houseType": "Succedent",
+    "worldHalf": "inner",
+    "worldHalfTheme": "Your Resources — what you value and possess",
+    "rulingSignId": "taurus",
+    "rulingPlanetId": "venus",
+    "lifeAreaFocus": [
+      "Money",
+      "Possessions",
+      "Values",
+      "Self-Worth",
+      "Material Security",
+      "Talents"
+    ],
+    "meaningAndRepresentation": "The Treasury of Resources. This is where you build material security and discover what you truly value. The 2nd House governs your relationship with money, possessions, and the talents you can use to generate abundance. It asks 'What do I value and how do I sustain myself?'",
+    "contemplationQuestions": [
+      "What do I truly value beyond material possessions?",
+      "How do I relate to money and security?",
+      "What natural talents can I cultivate?"
+    ],
+    "image": "/images/astrology/houses/house-2.png"
+  },
+  {
+    "id": "house-3",
+    "type": "house",
+    "name": "3rd House",
+    "houseNumber": 3,
+    "houseType": "Cadent",
+    "worldHalf": "inner",
+    "worldHalfTheme": "Your Mind — how you communicate and connect locally",
+    "rulingSignId": "gemini",
+    "rulingPlanetId": "mercury",
+    "lifeAreaFocus": [
+      "Communication",
+      "Learning",
+      "Siblings",
+      "Short Trips",
+      "Neighbors",
+      "Early Education",
+      "Mental Processing"
+    ],
+    "meaningAndRepresentation": "The Chamber of Communication. This is where you learn, communicate, and connect with your immediate environment. The 3rd House governs siblings, neighbors, short journeys, and how you process and share information. It curiously asks 'How do I think and share my thoughts?'",
+    "contemplationQuestions": [
+      "How do I best learn and process information?",
+      "What is my relationship with siblings and neighbors?",
+      "How do I communicate my ideas?"
+    ],
+    "image": "/images/astrology/houses/house-3.png"
+  },
+  {
+    "id": "house-4",
+    "type": "house",
+    "name": "4th House",
+    "houseNumber": 4,
+    "houseType": "Angular",
+    "worldHalf": "inner",
+    "worldHalfTheme": "Your Roots — family, ancestry, private foundation",
+    "rulingSignId": "cancer",
+    "rulingPlanetId": "moon",
+    "lifeAreaFocus": [
+      "Home",
+      "Family",
+      "Roots",
+      "Emotional Foundation",
+      "Ancestry",
+      "Private Life",
+      "Inner Security"
+    ],
+    "meaningAndRepresentation": "The Root of Being. This is your emotional foundation, ancestral inheritance, and the concept of home. The 4th House governs family of origin, private life, and the inner sanctuary you create for yourself. It tenderly asks 'Where do I find belonging and security?'",
+    "contemplationQuestions": [
+      "What does home mean to me?",
+      "How do my roots influence who I am today?",
+      "What emotional patterns do I carry from family?"
+    ],
+    "image": "/images/astrology/houses/house-4.png"
+  },
+  {
+    "id": "house-5",
+    "type": "house",
+    "name": "5th House",
+    "houseNumber": 5,
+    "houseType": "Succedent",
+    "worldHalf": "inner",
+    "worldHalfTheme": "Your Creative Fire — self-expression and joy",
+    "rulingSignId": "leo",
+    "rulingPlanetId": "sun",
+    "lifeAreaFocus": [
+      "Creativity",
+      "Romance",
+      "Children",
+      "Self-Expression",
+      "Joy",
+      "Play",
+      "Hobbies",
+      "Risk-Taking"
+    ],
+    "meaningAndRepresentation": "The Playground of the Heart. This is where you express your creative essence, experience romance, and discover what brings you joy. The 5th House governs children (biological and creative), pleasure, and the courage to be authentically yourself. It joyfully asks 'What makes my heart sing?'",
+    "contemplationQuestions": [
+      "How do I express my creativity?",
+      "What brings me genuine joy and pleasure?",
+      "How do I approach romance and play?"
+    ],
+    "image": "/images/astrology/houses/house-5.png"
+  },
+  {
+    "id": "house-6",
+    "type": "house",
+    "name": "6th House",
+    "houseNumber": 6,
+    "houseType": "Cadent",
+    "worldHalf": "inner",
+    "worldHalfTheme": "Your Daily Craft — health, routine, service",
+    "rulingSignId": "virgo",
+    "rulingPlanetId": "mercury",
+    "lifeAreaFocus": [
+      "Health",
+      "Daily Routines",
+      "Work",
+      "Service",
+      "Pets",
+      "Skills Development",
+      "Habits"
+    ],
+    "meaningAndRepresentation": "The Temple of Sacred Service. This is where you refine your skills, serve others, and maintain your physical vessel through daily practices. The 6th House governs health, work environment, routines, and the art of humble service. It diligently asks 'How do I serve and improve myself?'",
+    "contemplationQuestions": [
+      "What daily practices support my wellbeing?",
+      "How do I serve others in practical ways?",
+      "What skills am I developing?"
+    ],
+    "image": "/images/astrology/houses/house-6.png"
+  },
+  {
+    "id": "house-7",
+    "type": "house",
+    "name": "7th House",
+    "houseNumber": 7,
+    "houseType": "Angular",
+    "worldHalf": "outer",
+    "worldHalfTheme": "The Other — partnerships and how you meet the world",
+    "rulingSignId": "libra",
+    "rulingPlanetId": "venus",
+    "lifeAreaFocus": [
+      "Partnerships",
+      "Marriage",
+      "Contracts",
+      "Open Enemies",
+      "One-on-One Relationships",
+      "Balance"
+    ],
+    "meaningAndRepresentation": "The Mirror of Partnership. This is where you meet yourself through relationship with others, forming committed bonds and learning to balance give and take. The 7th House governs marriage, business partnerships, and all significant one-on-one relationships. It relationally asks 'How do I partner and find balance with others?'",
+    "contemplationQuestions": [
+      "What qualities do I seek in partners?",
+      "How do I maintain balance in relationships?",
+      "What do my relationships teach me about myself?"
+    ],
+    "image": "/images/astrology/houses/house-7.png"
+  },
+  {
+    "id": "house-8",
+    "type": "house",
+    "name": "8th House",
+    "houseNumber": 8,
+    "houseType": "Succedent",
+    "worldHalf": "outer",
+    "worldHalfTheme": "Shared Depths — transformation through merging",
+    "rulingSignId": "scorpio",
+    "rulingPlanetId": "pluto",
+    "lifeAreaFocus": [
+      "Transformation",
+      "Shared Resources",
+      "Intimacy",
+      "Death/Rebirth",
+      "Inheritance",
+      "Psychology",
+      "Occult"
+    ],
+    "meaningAndRepresentation": "The Crucible of Transformation. This is where you experience the deepest merging with others and undergo psychological death and rebirth. The 8th House governs shared resources, intimacy, inheritance, and the mysteries of transformation. It intensely asks 'What must die for me to be reborn?'",
+    "contemplationQuestions": [
+      "What am I being asked to transform?",
+      "How do I relate to shared resources and intimacy?",
+      "What psychological depths am I exploring?"
+    ],
+    "image": "/images/astrology/houses/house-8.png"
+  },
+  {
+    "id": "house-9",
+    "type": "house",
+    "name": "9th House",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FMaDApAXx_RTw.png?alt=media&token=30d0fdf6-2896-4753-aa3e-ed848186641a",
+    "houseNumber": 9,
+    "houseType": "Cadent",
+    "worldHalf": "outer",
+    "worldHalfTheme": "Expanding Horizons — philosophy, travel, meaning",
+    "rulingSignId": "sagittarius",
+    "rulingPlanetId": "jupiter",
+    "lifeAreaFocus": [
+      "Higher Learning",
+      "Philosophy",
+      "Religion",
+      "Foreign Cultures",
+      "Publishing",
+      "Teaching",
+      "Long Journeys"
+    ],
+    "meaningAndRepresentation": "The Temple of Infinite Wisdom. This is where you expand your consciousness through higher learning, spiritual seeking, and cultural exploration. The 9th House governs your relationship with truth, meaning, and the teacher within you. It enthusiastically asks 'What wisdom am I here to learn and share?'",
+    "contemplationQuestions": [
+      "What beliefs serve my highest evolution?",
+      "How do I balance seeking truth with living truth?",
+      "What cultural or spiritual traditions call to my soul?"
+    ]
+  },
+  {
+    "id": "house-10",
+    "type": "house",
+    "name": "10th House",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FsT4rkZFD8a5A.png?alt=media&token=7bb7b224-2a09-447e-a58d-270d3b8c9db2",
+    "houseNumber": 10,
+    "houseType": "Angular",
+    "worldHalf": "outer",
+    "worldHalfTheme": "Your Legacy — career, public purpose, vocation",
+    "rulingSignId": "capricorn",
+    "rulingPlanetId": "saturn",
+    "lifeAreaFocus": [
+      "Career",
+      "Reputation",
+      "Authority",
+      "Public Image",
+      "Life Purpose",
+      "Achievement",
+      "Legacy"
+    ],
+    "meaningAndRepresentation": "The Mountain Peak of Mastery. This is where you climb toward your highest achievement, building a legacy that serves beyond your lifetime. The 10th House governs career, reputation, and how you contribute to society's structure. It majestically asks 'What am I here to master and contribute to the collective?'",
+    "contemplationQuestions": [
+      "How do I balance personal ambition with service to the whole?",
+      "What form of mastery is my soul seeking?",
+      "How do I use worldly success as a platform for consciousness?"
+    ]
+  },
+  {
+    "id": "house-11",
+    "type": "house",
+    "name": "11th House",
+    "houseNumber": 11,
+    "houseType": "Succedent",
+    "worldHalf": "outer",
+    "worldHalfTheme": "The Collective — community, vision, the future",
+    "rulingSignId": "aquarius",
+    "rulingPlanetId": "uranus",
+    "lifeAreaFocus": [
+      "Friendships",
+      "Groups",
+      "Hopes",
+      "Dreams",
+      "Social Causes",
+      "Collective Vision",
+      "Humanitarian Service"
+    ],
+    "meaningAndRepresentation": "The Circle of Future Visioning. This is where you connect with kindred spirits, contribute to collective evolution, and plant seeds for humanity's future. The 11th House governs friendship, group consciousness, and your role in social transformation. It inspiringly asks 'How do I serve the collective awakening?'",
+    "contemplationQuestions": [
+      "What communities align with my soul's mission?",
+      "How do I contribute to positive social change?",
+      "What vision of the future lives within my heart?"
+    ],
+    "image": "/images/astrology/houses/house-11.png"
+  },
+  {
+    "id": "house-12",
+    "type": "house",
+    "name": "12th House",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FmlTuCyZuKSip.png?alt=media&token=b962b257-40ba-490a-8034-d261de041050",
+    "houseNumber": 12,
+    "houseType": "Cadent",
+    "worldHalf": "outer",
+    "worldHalfTheme": "The Unseen — spirit, dissolution, the unconscious",
+    "rulingSignId": "pisces",
+    "rulingPlanetId": "neptune",
+    "lifeAreaFocus": [
+      "Spirituality",
+      "Subconscious",
+      "Dreams",
+      "Karma",
+      "Surrender",
+      "Compassion",
+      "Hidden Strengths",
+      "Service"
+    ],
+    "meaningAndRepresentation": "The Ocean of Divine Compassion. This is where you dissolve the boundaries of ego and merge with universal love, accessing your hidden spiritual gifts. The 12th House governs the subconscious, spiritual transcendence, and your connection to the collective unconscious. It tenderly asks 'How do I surrender to love and serve from my highest compassion?'",
+    "contemplationQuestions": [
+      "What is my soul's relationship with the Divine?",
+      "How do I serve from ego-less compassion?",
+      "What patterns am I releasing from this and past lifetimes?"
+    ]
+  }
+]

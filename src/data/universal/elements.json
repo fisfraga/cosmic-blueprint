@@ -1,0 +1,235 @@
+[
+  {
+    "id": "fire",
+    "type": "element",
+    "name": "Fire",
+    "symbol": "🜂",
+    "elementCategory": "Classical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FlhMdoCBzel_v.png?alt=media&token=687888c3-600a-4088-8a04-f33cfcf23af1",
+    "coreQuality": "Active, dynamic, initiating energy. The spark of creation and pure life force. Represents enthusiasm, courage, inspiration, and the drive to manifest. Fire transforms through action and burns away what no longer serves.",
+    "corePrinciple": "I Act: The force of pure being and divine spark",
+    "zodiacSignIds": ["aries", "leo", "sagittarius"],
+    "modalityExpression": {
+      "cardinal": "Cardinal Fire (initiation)",
+      "fixed": "Fixed Fire (radiance)",
+      "mutable": "Mutable Fire (expansion)"
+    },
+    "keyTraits": ["Enthusiastic", "Impulsive", "Honest", "Independent", "Passionate", "Courageous"],
+    "recognitionPattern": [
+      "Do you thrive on exercise and physical activity?",
+      "Are you outspoken, sometimes saying things that get you in trouble?",
+      "Do people tell you you're too intense or need to turn your volume down?",
+      "Do you fight for the underdog or love to debate?"
+    ],
+    "shadowSide": "Can become egotistical, angry, or self-destructive. Prone to burnout, indulgence, and inability to stop. May rationalize anything or embellish the truth.",
+    "elementDynamics": "Harmonizes with Air (ideas to action). Challenges Water (can overwhelm sensitivity). Competes with Earth (both want control).",
+    "balancingPractice": {
+      "toIncrease": "Start with 10 minutes daily physical exercise - dancing, running, or vigorous walking. Practice speaking one uncomfortable truth per day. Take on a cause you believe in.",
+      "toDecrease": "Develop a daily 'stop practice' - set 3 timers throughout the day to pause completely for 2 minutes. Practice counting to 5 before responding in conversations."
+    }
+  },
+  {
+    "id": "earth",
+    "type": "element",
+    "name": "Earth",
+    "symbol": "🜃",
+    "elementCategory": "Classical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FVfSzRT_46oTn.png?alt=media&token=838e992d-255e-45f8-aa42-b2b6a108e726",
+    "coreQuality": "Stable, grounding, materializing energy. The foundation of manifestation and physical reality. Represents practicality, patience, endurance, and the wisdom of natural cycles. Earth transforms through steady building and patient cultivation.",
+    "corePrinciple": "I Have: The force of manifestation and material form",
+    "zodiacSignIds": ["taurus", "virgo", "capricorn"],
+    "modalityExpression": {
+      "fixed": "Fixed Earth (accumulation)",
+      "mutable": "Mutable Earth (refinement)",
+      "cardinal": "Cardinal Earth (achievement)"
+    },
+    "keyTraits": ["Practical", "Dependable", "Methodical", "Sensual", "Loyal", "Perfectionist"],
+    "recognitionPattern": [
+      "Is saving money important to you?",
+      "Do you clean when upset?",
+      "Are you thorough and deliberate in your work?",
+      "Do people consider you reliable and grounded?"
+    ],
+    "shadowSide": "Can become controlling, critical, or workaholic. Prone to worry, stubbornness, and hoarding. May judge self harshly and hold back feelings.",
+    "elementDynamics": "Flows with Water (mutual nourishment). Challenges Fire (competing for control). Grounds Air (provides structure for ideas).",
+    "balancingPractice": {
+      "toIncrease": "Create one daily ritual you complete without fail (making bed, balancing checkbook). Cook one meal from scratch weekly. Tend to one plant or small garden area.",
+      "toDecrease": "Allow yourself one unplanned hour weekly where you follow impulses. Practice leaving one task unfinished overnight. Skip one routine step on purpose."
+    }
+  },
+  {
+    "id": "air",
+    "type": "element",
+    "name": "Air",
+    "symbol": "🜁",
+    "elementCategory": "Classical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FU2mRirW38Fcv.png?alt=media&token=46e888a2-8404-4d39-b15a-9c7e44d61dc6",
+    "coreQuality": "Mental, communicative, connecting energy. The realm of ideas, thoughts, and social exchange. Represents curiosity, intellect, objectivity, and the power of perspective. Air transforms through understanding and mental synthesis.",
+    "corePrinciple": "I Think: The force of consciousness and mental connection",
+    "zodiacSignIds": ["gemini", "libra", "aquarius"],
+    "modalityExpression": {
+      "mutable": "Mutable Air (learning)",
+      "cardinal": "Cardinal Air (relating)",
+      "fixed": "Fixed Air (innovating)"
+    },
+    "keyTraits": ["Curious", "Talkative", "Social", "Detached", "Adaptable", "Observant"],
+    "recognitionPattern": [
+      "Do you find words easily and talk frequently?",
+      "Do you get bored with people and want to move on?",
+      "Are you easily distracted by external stimuli?",
+      "Do you value harmony, even at personal cost?"
+    ],
+    "shadowSide": "Can become indecisive, superficial, or codependent. Prone to gossip, lying by omission, and scattered thinking. May appear flaky or detached.",
+    "elementDynamics": "Energizes with Fire (dynamic duo). Challenges Earth (too ungrounded). Can overwhelm Water (too much talking).",
+    "balancingPractice": {
+      "toIncrease": "Read for 15 minutes daily on varied topics. Start conversations with 3 strangers weekly. Write one page of stream-of-consciousness journaling each morning.",
+      "toDecrease": "Practice 5 minutes of silent meditation daily - no words, no mental commentary. Complete one task fully before starting another. Spend one hour weekly in nature without devices."
+    }
+  },
+  {
+    "id": "water",
+    "type": "element",
+    "name": "Water",
+    "symbol": "🜄",
+    "elementCategory": "Classical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FH0z0LNrTskVY.png?alt=media&token=7bf5f159-2e88-41ef-8eab-827f6141a109",
+    "coreQuality": "Emotional, intuitive, flowing energy. The depths of feeling and psychic sensitivity. Represents compassion, imagination, healing, and the wisdom of the heart. Water transforms through feeling and dissolving boundaries.",
+    "corePrinciple": "I Feel: The force of emotion and intuitive wisdom",
+    "zodiacSignIds": ["cancer", "scorpio", "pisces"],
+    "modalityExpression": {
+      "cardinal": "Cardinal Water (nurturing)",
+      "fixed": "Fixed Water (transforming)",
+      "mutable": "Mutable Water (transcending)"
+    },
+    "keyTraits": ["Emotional", "Intuitive", "Private", "Sensitive", "Empathic", "Imaginative"],
+    "recognitionPattern": [
+      "Do you cry easily?",
+      "Do you become non-verbal when upset?",
+      "Is private time essential for you?",
+      "Do you have immediate gut reactions to people?"
+    ],
+    "shadowSide": "Can lose boundaries, become depressed, or develop addictions. Prone to wallowing, hypochondria, and carrying past wounds. May become cold and withdrawn.",
+    "elementDynamics": "Flows with Earth (mutual nourishment). Confused by Fire (opposing impulses). Needs space from Air (too much stimulation).",
+    "balancingPractice": {
+      "toIncrease": "Watch one movie that makes you cry monthly. Spend 10 minutes daily feeling without trying to fix or change emotions. Practice saying 'I feel...' statements.",
+      "toDecrease": "Set emotional boundaries - limit processing time to 20 minutes daily. Practice one physical activity that requires full presence (martial arts, climbing). State needs directly rather than hoping others intuit them."
+    }
+  },
+  {
+    "id": "sulphur",
+    "type": "element",
+    "name": "Sulphur",
+    "symbol": "🜍",
+    "elementCategory": "Alchemical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FHSRDNuhNbfwA.png?alt=media&token=577601ba-71ca-47d2-b748-b2049748de08",
+    "coreQuality": "Contracting, materializing, action-oriented energy. The force that brings spirit into matter through direct will and immediate action. Represents the power to manifest, create tangible results, and express pure initiative. Sulphur transforms through decisive action and material embodiment.",
+    "corePrinciple": "Contraction, Manifestation, Will",
+    "zodiacSignIds": ["aries", "taurus", "gemini", "cancer"],
+    "modalityExpression": {
+      "cardinal": "Sulphuric Fire",
+      "fixed": "Sulphuric Earth",
+      "mutable": "Sulphuric Air",
+      "cardinal_water": "Sulphuric Water"
+    },
+    "keyTraits": ["Willful", "Manifesting", "Contracting", "Immediate", "Tangible", "Decisive"],
+    "recognitionPattern": [
+      "Do you prefer immediate action over planning?",
+      "Is your will strong and directed?",
+      "Do you materialize ideas quickly?",
+      "Are you drawn to tangible, concrete results?"
+    ],
+    "shadowSide": "Can become domineering or impatient. May force outcomes rather than allow organic development. Risk of burning out through excessive will.",
+    "elementDynamics": "Activates Earth's potential, focuses Fire's energy, precipitates Water's feelings, grounds Air's concepts.",
+    "balancingPractice": {
+      "toIncrease": "Take immediate action on one idea daily before overthinking. Practice saying 'I want' clearly three times daily. Transform one thought into physical creation weekly.",
+      "toDecrease": "Implement one 'waiting period' - delay action on desires for 24 hours. Practice asking 'What wants to emerge?' rather than forcing outcomes. Cultivate one long-term project requiring patience."
+    }
+  },
+  {
+    "id": "salt",
+    "type": "element",
+    "name": "Salt",
+    "symbol": "🜔",
+    "elementCategory": "Alchemical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FfqODKn7n0ZSe.png?alt=media&token=ad9142ca-f3f3-4274-895e-48f3cc8c5db9",
+    "coreQuality": "Integrating, stabilizing, wisdom-oriented energy. The force that creates sustainable balance between opposing forces through conscious mediation. Represents the power to crystallize wisdom, maintain equilibrium, and create lasting forms. Salt transforms through integration and conscious balance.",
+    "corePrinciple": "Integration, Balance, Crystallization",
+    "zodiacSignIds": ["leo", "virgo", "libra", "scorpio"],
+    "modalityExpression": {
+      "fixed_fire": "Salt Fire",
+      "mutable_earth": "Salt Earth",
+      "cardinal_air": "Salt Air",
+      "fixed_water": "Salt Water"
+    },
+    "keyTraits": ["Balanced", "Wise", "Crystallizing", "Mediating", "Sustainable", "Conscious"],
+    "recognitionPattern": [
+      "Do you naturally see both sides of conflicts?",
+      "Can you hold opposing truths simultaneously?",
+      "Do you help others find middle ground?",
+      "Are you drawn to creating lasting, stable forms?"
+    ],
+    "shadowSide": "Can become rigid in pursuit of balance. May over-intellectualize rather than feel. Risk of spiritual bypassing or false neutrality.",
+    "elementDynamics": "Stabilizes Fire's enthusiasm, grounds Air's ideas, contains Water's emotions, refines Earth's manifestation.",
+    "balancingPractice": {
+      "toIncrease": "Practice holding two opposing viewpoints for 5 minutes without choosing sides. Create one sustainable routine that balances work and rest. Mediate one conflict monthly.",
+      "toDecrease": "Make three quick decisions daily without weighing all options. Choose one strong position and advocate for it fully. Allow yourself to experience extremes without immediately seeking center."
+    }
+  },
+  {
+    "id": "mercury-alchemical",
+    "type": "element",
+    "name": "Mercury (Alchemical)",
+    "symbol": "☿",
+    "elementCategory": "Alchemical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FjgrZSppFLBNs.png?alt=media&token=16c38099-156d-4331-b942-80a6d4b1838e",
+    "coreQuality": "Expanding, elevating, consciousness-oriented energy. The force that lifts awareness beyond material limitations through vision and higher understanding. Represents the power to transcend, innovate, and connect with universal wisdom. Mercury transforms through elevation of consciousness and visionary insight.",
+    "corePrinciple": "Expansion, Consciousness, Vision",
+    "zodiacSignIds": ["sagittarius", "capricorn", "aquarius", "pisces"],
+    "modalityExpression": {
+      "mutable_fire": "Mercurial Fire",
+      "cardinal_earth": "Mercurial Earth",
+      "fixed_air": "Mercurial Air",
+      "mutable_water": "Mercurial Water"
+    },
+    "keyTraits": ["Visionary", "Expanding", "Transcendent", "Innovative", "Conscious", "Fluid"],
+    "recognitionPattern": [
+      "Do you see patterns others miss?",
+      "Are you drawn to higher meanings and purposes?",
+      "Do you naturally synthesize different perspectives?",
+      "Can you shift between different states of consciousness?"
+    ],
+    "shadowSide": "Can become ungrounded or lost in abstraction. May avoid practical realities. Risk of spiritual inflation or disconnection from humanity.",
+    "elementDynamics": "Elevates Earth's density, expands Fire's vision, connects Air's thoughts to higher meaning, transcends Water's personal emotions.",
+    "balancingPractice": {
+      "toIncrease": "Spend 10 minutes daily contemplating larger patterns in your life. Practice seeing everyday events as metaphors. Connect with one transcendent experience weekly (music, nature, meditation).",
+      "toDecrease": "Complete one mundane task daily with full attention. Ground insights by explaining them to someone in practical terms. Commit to one earthly responsibility that requires regular attention."
+    }
+  },
+  {
+    "id": "aether",
+    "type": "element",
+    "name": "Aether",
+    "symbol": "𝓠",
+    "elementCategory": "Classical",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F8XuMdIFr0NYM.png?alt=media&token=d6c08b5b-98f9-4e4c-b4bd-9fb3cf4a0597",
+    "coreQuality": "Transcendent, unifying, spiritual energy. The quintessence that permeates and connects all other elements. Represents divine consciousness, cosmic order, and the sacred space where all polarities unite. Aether transforms through transcendence and spiritual awakening.",
+    "corePrinciple": "I Unite: The force of divine consciousness and cosmic integration",
+    "zodiacSignIds": [],
+    "modalityExpression": {
+      "beyond": "Beyond modalities - the eternal, unchanging backdrop against which all modal expressions occur."
+    },
+    "keyTraits": ["Witnessing", "Spacious", "Unified", "Transcendent", "Essential", "Conscious"],
+    "recognitionPattern": [
+      "Do you naturally observe life from a detached, witnessing perspective?",
+      "Can you sense the underlying unity beneath apparent differences?",
+      "Do you feel most authentic in states of pure awareness or meditation?",
+      "Are you drawn to the spaces between things rather than the things themselves?"
+    ],
+    "shadowSide": "Can become dissociated from physical reality or human concerns. Risk of spiritual bypassing, avoiding earthly responsibilities through transcendent escape. May struggle with embodiment or practical manifestation.",
+    "elementDynamics": "Contains and transcends all other elements. Provides the space for Fire's action, Air's thought, Water's feeling, and Earth's form. Enables transformation between elements while remaining unchanged itself.",
+    "balancingPractice": {
+      "toIncrease": "Practice daily witness consciousness meditation - observe thoughts and feelings without identification. Spend time in liminal spaces (dawn, dusk, thresholds). Cultivate awareness of the space between breaths.",
+      "toDecrease": "Engage in dense physical activities requiring full body presence (weightlifting, gardening). Practice identifying strongly with one role or perspective for set periods. Commit to specific, measurable earthly goals."
+    }
+  }
+]

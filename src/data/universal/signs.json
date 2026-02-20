@@ -1,0 +1,324 @@
+[
+  {
+    "id": "aries",
+    "type": "sign",
+    "name": "Aries",
+    "symbol": "♈︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FfEdc-6IYARQR.png?alt=media&token=b10070f3-b5e2-4803-8a49-87bd112ca858",
+    "orderInZodiac": 1,
+    "dateRange": "March 21 - April 19",
+    "keyPhrase": "I AM",
+    "signModality": "Cardinal",
+    "elementId": "fire",
+    "alchemicalElementId": "sulphur",
+    "substancePolarity": "yang",
+    "rulingPlanetIds": [
+      "mars"
+    ],
+    "houseRuled": "house-1",
+    "opposingSignId": "libra",
+    "characteristicsAndQualities": "The Warrior Pioneer. Pure initiating fire energy that says 'I AM.' Aries embodies courage, spontaneity, and the raw life force of new beginnings. This archetype brings the gift of fearless action and the willingness to blaze new trails. The eternal child of the zodiac, forever ready to start fresh adventures.",
+    "traits": "The Warrior, Initiator, Confrontational",
+    "bodyPart": "Head",
+    "decanIds": [
+      "aries-1-cassiopeia",
+      "aries-2-cetus",
+      "aries-3-perseus"
+    ]
+  },
+  {
+    "id": "taurus",
+    "type": "sign",
+    "name": "Taurus",
+    "symbol": "♉︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FFFnpiZpkEZD5.png?alt=media&token=c8e50391-d5ff-4e80-9fb8-313f490c8ae9",
+    "orderInZodiac": 2,
+    "dateRange": "April 20 - May 20",
+    "keyPhrase": "I HAVE",
+    "signModality": "Fixed",
+    "elementId": "earth",
+    "alchemicalElementId": "sulphur",
+    "substancePolarity": "yang",
+    "rulingPlanetIds": [
+      "venus"
+    ],
+    "houseRuled": "house-2",
+    "opposingSignId": "scorpio",
+    "characteristicsAndQualities": "The Sacred Builder. Grounding earth energy that says 'I HAVE.' Taurus embodies stability, sensuality, and the power to manifest beauty in physical form. This archetype brings patience, determination, and appreciation for life's pleasures. The gardener of the zodiac, cultivating lasting value and natural abundance.",
+    "traits": "Practical, Slow & Steady, Musical",
+    "bodyPart": "Neck, Throat",
+    "decanIds": [
+      "taurus-1-orion",
+      "taurus-2-eridanus",
+      "taurus-3-auriga"
+    ]
+  },
+  {
+    "id": "gemini",
+    "type": "sign",
+    "name": "Gemini",
+    "symbol": "♊︎",
+    "orderInZodiac": 3,
+    "dateRange": "May 21 - June 20",
+    "keyPhrase": "I THINK",
+    "signModality": "Mutable",
+    "elementId": "air",
+    "alchemicalElementId": "sulphur",
+    "substancePolarity": "yang",
+    "rulingPlanetIds": [
+      "mercury"
+    ],
+    "houseRuled": "house-3",
+    "opposingSignId": "sagittarius",
+    "characteristicsAndQualities": "The Cosmic Messenger. Curious air energy that says 'I THINK.' Gemini embodies communication, versatility, and the gift of connecting diverse ideas and people. This archetype brings mental agility, social grace, and the ability to see multiple perspectives. The eternal student of the zodiac, weaving webs of understanding.",
+    "traits": "Communication, Curious, Speedy Intellectual",
+    "bodyPart": "Lungs, Arms, Fingers",
+    "decanIds": [
+      "gemini-1-lepus",
+      "gemini-2-canis-major",
+      "gemini-3-canis-minor"
+    ]
+  },
+  {
+    "id": "cancer",
+    "type": "sign",
+    "name": "Cancer",
+    "symbol": "♋︎",
+    "orderInZodiac": 4,
+    "dateRange": "June 21 - July 22",
+    "keyPhrase": "I FEEL",
+    "signModality": "Cardinal",
+    "elementId": "water",
+    "alchemicalElementId": "sulphur",
+    "substancePolarity": "yang",
+    "rulingPlanetIds": [
+      "moon"
+    ],
+    "houseRuled": "house-4",
+    "opposingSignId": "capricorn",
+    "characteristicsAndQualities": "The Divine Mother. Nurturing water energy that says 'I FEEL.' Cancer embodies emotional depth, intuitive wisdom, and the power to create safe sanctuary. This archetype brings protective love, psychic sensitivity, and connection to ancestral memory. The keeper of the heart, offering unconditional care and belonging.",
+    "traits": "The healer, Home-maker, Emotional",
+    "bodyPart": "Stomach, Breasts",
+    "decanIds": [
+      "cancer-1-ursa-minor",
+      "cancer-2-ursa-major",
+      "cancer-3-argo-navis"
+    ]
+  },
+  {
+    "id": "leo",
+    "type": "sign",
+    "name": "Leo",
+    "symbol": "♌︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FtzMt94zVQN73.png?alt=media&token=1c05342f-01f9-4e37-8f88-4451d14b0d8f",
+    "orderInZodiac": 5,
+    "dateRange": "July 23 - August 22",
+    "keyPhrase": "I SHINE",
+    "signModality": "Fixed",
+    "elementId": "fire",
+    "alchemicalElementId": "salt",
+    "substancePolarity": "bridge",
+    "rulingPlanetIds": [
+      "sun"
+    ],
+    "houseRuled": "house-5",
+    "opposingSignId": "aquarius",
+    "characteristicsAndQualities": "The Radiant Creator. Expressive fire energy that says 'I WILL.' Leo embodies creative self-expression, generous leadership, and the courage to shine authentically. This archetype brings dramatic flair, warm-hearted loyalty, and the gift of inspiring others. The performer of the zodiac, celebrating life as sacred theater.",
+    "traits": "Center of Attention, Dramatic, Happy",
+    "bodyPart": "Heart, Spine",
+    "decanIds": [
+      "leo-1-hydra",
+      "leo-2-crater",
+      "leo-3-corvus"
+    ]
+  },
+  {
+    "id": "virgo",
+    "type": "sign",
+    "name": "Virgo",
+    "symbol": "♍︎",
+    "orderInZodiac": 6,
+    "dateRange": "August 23 - September 22",
+    "keyPhrase": "I ANALYZE",
+    "signModality": "Mutable",
+    "elementId": "earth",
+    "alchemicalElementId": "salt",
+    "substancePolarity": "bridge",
+    "rulingPlanetIds": [
+      "mercury"
+    ],
+    "houseRuled": "house-6",
+    "opposingSignId": "pisces",
+    "characteristicsAndQualities": "The Sacred Servant. Analytical earth energy that says 'I ANALYZE.' Virgo embodies practical wisdom, healing service, and the art of continuous refinement. This archetype brings discernment, devotion to improvement, and connection to Earth's healing rhythms. The healer of the zodiac, purifying and perfecting with love.",
+    "traits": "Perfectionist, Serving, Analytical",
+    "bodyPart": "Intestines",
+    "decanIds": [
+      "virgo-1-coma-berenices",
+      "virgo-2-centaurus",
+      "virgo-3-bootes"
+    ]
+  },
+  {
+    "id": "libra",
+    "type": "sign",
+    "name": "Libra",
+    "symbol": "♎︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F0-dx1dsiHHT8.png?alt=media&token=07ade79b-1efd-448c-8c05-c3737353f9fe",
+    "orderInZodiac": 7,
+    "dateRange": "September 23 - October 22",
+    "keyPhrase": "WE BALANCE / I BALANCE",
+    "signModality": "Cardinal",
+    "elementId": "air",
+    "alchemicalElementId": "salt",
+    "substancePolarity": "bridge",
+    "rulingPlanetIds": [
+      "venus"
+    ],
+    "houseRuled": "house-7",
+    "opposingSignId": "aries",
+    "characteristicsAndQualities": "The Divine Diplomat. Harmonizing air energy that says 'I BALANCE.' Libra embodies justice, beauty, and the art of creating equilibrium through relationship. This archetype brings aesthetic refinement, social grace, and the ability to see all sides. The peacemaker of the zodiac, weaving harmony from opposing forces.",
+    "traits": "Peacemaker, Relationships, Artistic",
+    "bodyPart": "Bladder",
+    "decanIds": [
+      "libra-1-crux",
+      "libra-2-lupus",
+      "libra-3-corona-borealis"
+    ]
+  },
+  {
+    "id": "scorpio",
+    "type": "sign",
+    "name": "Scorpio",
+    "symbol": "♏︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FhLn1kx5_SLyW.png?alt=media&token=f038090e-82cf-4015-8d72-173e54329b32",
+    "orderInZodiac": 8,
+    "dateRange": "October 23 - November 21",
+    "keyPhrase": "I DESIRE",
+    "signModality": "Fixed",
+    "elementId": "water",
+    "alchemicalElementId": "salt",
+    "substancePolarity": "bridge",
+    "rulingPlanetIds": [
+      "pluto",
+      "mars"
+    ],
+    "houseRuled": "house-8",
+    "opposingSignId": "taurus",
+    "characteristicsAndQualities": "The Phoenix Transformer. Intense water energy that says 'I DESIRE.' Scorpio embodies emotional depth, transformative power, and the courage to face life's mysteries. This archetype brings psychological insight, passionate intensity, and the gift of regeneration. The alchemist of the zodiac, transmuting poison into medicine.",
+    "traits": "Intense, Investigator, Sexual",
+    "bodyPart": "Genitals",
+    "decanIds": [
+      "scorpio-1-hercules",
+      "scorpio-2-ophiuchus",
+      "scorpio-3-serpens"
+    ]
+  },
+  {
+    "id": "sagittarius",
+    "type": "sign",
+    "name": "Sagittarius",
+    "symbol": "♐︎",
+    "orderInZodiac": 9,
+    "dateRange": "November 22 - December 21",
+    "keyPhrase": "I SEEK / I SEE",
+    "signModality": "Mutable",
+    "elementId": "fire",
+    "alchemicalElementId": "mercury-alchemical",
+    "substancePolarity": "yin",
+    "rulingPlanetIds": [
+      "jupiter"
+    ],
+    "houseRuled": "house-9",
+    "opposingSignId": "gemini",
+    "characteristicsAndQualities": "The Eternal Seeker. Adventurous fire energy that says 'I SEE.' Sagittarius embodies philosophical wisdom, cultural exploration, and the quest for ultimate truth. This archetype brings optimistic vision, teaching gifts, and the courage to expand horizons. The philosopher of the zodiac, shooting arrows toward meaning.",
+    "traits": "Professional Student, Endless Optimist, Freedom Seeker",
+    "bodyPart": "Thighs",
+    "decanIds": [
+      "sagittarius-1-lyra",
+      "sagittarius-2-ara",
+      "sagittarius-3-draco"
+    ]
+  },
+  {
+    "id": "capricorn",
+    "type": "sign",
+    "name": "Capricorn",
+    "symbol": "♑︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F0thQkF89Iem4.png?alt=media&token=50ae5467-441e-4aed-9530-b203622b7bec",
+    "orderInZodiac": 10,
+    "dateRange": "December 22 - January 19",
+    "keyPhrase": "I USE",
+    "signModality": "Cardinal",
+    "elementId": "earth",
+    "alchemicalElementId": "mercury-alchemical",
+    "substancePolarity": "yin",
+    "rulingPlanetIds": [
+      "saturn"
+    ],
+    "houseRuled": "house-10",
+    "opposingSignId": "cancer",
+    "characteristicsAndQualities": "The Mountain Climber. Ambitious earth energy that says 'I USE.' Capricorn embodies responsible leadership, disciplined achievement, and the wisdom of patient mastery. This archetype brings practical authority, long-term vision, and reverence for tradition. The elder of the zodiac, building legacies that endure.",
+    "traits": "Ambitious, Leader, Conservative",
+    "bodyPart": "Knees",
+    "decanIds": [
+      "capricorn-1-sagitta",
+      "capricorn-2-aquila",
+      "capricorn-3-delphinus"
+    ]
+  },
+  {
+    "id": "aquarius",
+    "type": "sign",
+    "name": "Aquarius",
+    "symbol": "♒︎",
+    "orderInZodiac": 11,
+    "dateRange": "January 20 - February 18",
+    "keyPhrase": "I KNOW",
+    "signModality": "Fixed",
+    "elementId": "air",
+    "alchemicalElementId": "mercury-alchemical",
+    "substancePolarity": "yin",
+    "rulingPlanetIds": [
+      "uranus",
+      "saturn"
+    ],
+    "houseRuled": "house-11",
+    "opposingSignId": "leo",
+    "characteristicsAndQualities": "The Water Bearer. Revolutionary air energy that says 'I KNOW.' Aquarius embodies humanitarian vision, innovative thinking, and the gift of collective awakening. This archetype brings progressive ideals, scientific curiosity, and friendship with the future. The visionary of the zodiac, pouring out wisdom for humanity's evolution.",
+    "traits": "Humanitarian, Revolutionary, Eccentric",
+    "bodyPart": "Calves",
+    "decanIds": [
+      "aquarius-1-piscis-austrinus",
+      "aquarius-2-pegasus",
+      "aquarius-3-cygnus"
+    ]
+  },
+  {
+    "id": "pisces",
+    "type": "sign",
+    "name": "Pisces",
+    "symbol": "♓︎",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FAwVWJLgfrw5D.png?alt=media&token=e5b2effa-c26f-4538-b309-c69790192e82",
+    "orderInZodiac": 12,
+    "dateRange": "February 19 - March 20",
+    "keyPhrase": "I DREAM / I BELIEVE",
+    "signModality": "Mutable",
+    "elementId": "water",
+    "alchemicalElementId": "mercury-alchemical",
+    "substancePolarity": "yin",
+    "rulingPlanetIds": [
+      "neptune",
+      "jupiter"
+    ],
+    "houseRuled": "house-12",
+    "opposingSignId": "virgo",
+    "characteristicsAndQualities": "The Mystic Dreamer. Transcendent water energy that says 'I BELIEVE.' Pisces embodies spiritual compassion, artistic imagination, and the dissolution of ego boundaries. This archetype brings divine connection, healing empathy, and surrender to the flow of life. The mystic of the zodiac, swimming in the ocean of universal love.",
+    "traits": "Mystic, Dreamer Poet, Idealistic",
+    "bodyPart": "Feet",
+    "decanIds": [
+      "pisces-1-band",
+      "pisces-2-andromeda",
+      "pisces-3-cepheus"
+    ]
+  }
+]

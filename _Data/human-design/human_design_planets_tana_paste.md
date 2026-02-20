@@ -1,0 +1,121 @@
+%%tana%%
+- Human Design Planets #[[Planet System]]
+  - **Sun** #[[Planet]]
+    - Symbol:: ☉
+    - Archetype:: **Father**
+    - Primary Theme:: **Life Force and Personality Expression**
+    - Keywords:: Self, purpose, vitality, core identity, yang force
+    - Description:: Represents our core energy and primary yang force - our __'self'__ as well as what we __'do'__ and the theme of our incarnation. ^^70% of neutrinos^^ that condition us come from the Sun, making it the **dominant programming influence**.
+    - Personality Expression:: How we express our __'light'__ in the world - our conscious identity and life purpose
+    - Design Expression:: Genetic themes inherited from our Father - unconscious life force that drives us
+  - **Earth** #[[Planet]]
+    - Symbol:: ⊕
+    - Archetype:: **Mother**
+    - Primary Theme:: **Grounding and Balance**
+    - Keywords:: Grounding, balance, foundation, support, yin force
+    - Description:: Represents how we concretize or bring into form, and how we ground and balance the Sun's energy within our bodies. Always operates with Sun and located **opposite in the Mandala**, providing primary yin balance.
+    - Personality Expression:: Conscious balance when we integrate Personality correctly in our life
+    - Design Expression:: Unconscious stability when we come to grips with the world of form - backbone of our stability
+  - **Moon** #[[Planet]]
+    - Symbol:: ☽
+    - Archetype:: **Eldest Daughter**
+    - Primary Theme:: **Driving Force**
+    - Keywords:: Drive, motivation, emotional fuel, movement, reflected light
+    - Description:: Represents what moves us - the **driving force** in our design. The pull of the Moon is powerful, always there, willing to embody the Sun's energy. Makes possible the Earth's task to drive and move form, ensuring evolution.
+    - Personality Expression:: The __reflected light__ that others see in our inner nature brought to surface and displayed
+    - Design Expression:: The unconscious driving force that moves us through life experiences
+  - **North Node** #[[Planet]]
+    - Symbol:: ☊
+    - Archetype:: **Future Direction**
+    - Primary Theme:: **Future Direction and Environment**
+    - Keywords:: Future, direction, evolution, growth, maturity, environment
+    - Description:: Represents the **mature stage** of experiencing life, shifting from South Node at ^^Uranus Opposition^^ (38-43 years). Movement into North Node signals letting go of what no longer serves and retaining what does.
+    - Personality Expression:: Not who you are, but frames what your Personality thinks about the world and itself
+    - Design Expression:: Frames your relationship to environment and people in it - future environmental direction
+  - **South Node** #[[Planet]]
+    - Symbol:: ☋
+    - Archetype:: **Past Direction**
+    - Primary Theme:: **Past Direction and Environment**
+    - Keywords:: Past, talents, karma, gifts, immaturity, development
+    - Description:: Represents **developmental stage** of experiencing life and immaturity until ^^Uranus Opposition^^. In 9-centered bodies, transition from South to North Node symbolizes mid-life entry into adulthood.
+    - Personality Expression:: Developmental stage perspective on world and self
+    - Design Expression:: Past environmental influences and immature relationship patterns that must be transcended
+  - **Mercury** #[[Planet]]
+    - Symbol:: ☿
+    - Archetype:: **Eldest Son**
+    - Primary Theme:: **Communication and Thinking**
+    - Keywords:: Communication, mind, quick thinking, expansion of consciousness
+    - Description:: Represents expansion of human consciousness and need to communicate. ^^Closest to Sun^^, metaphorically has its ear. Programs Personality Crystal from entry into body until birth.
+    - Personality Expression:: What you need to communicate in this life - conscious communication themes
+    - Design Expression:: Unconscious communication - often don't know why we're telling something to someone
+  - **Venus** #[[Planet]]
+    - Symbol:: ♀
+    - Archetype:: **Youngest Daughter**
+    - Primary Theme:: **Values and Morals**
+    - Keywords:: Love, values, beauty, morals, natural laws, right and wrong
+    - Description:: Establishes our values and represents **morals and natural laws** for how we deal with each other and the world. Represents love, beauty, and moral questions. ^^Values established in Venus become laws in Jupiter^^.
+    - Personality Expression:: Conscious moral clarity and values - what you know is right and wrong
+    - Design Expression:: Unconscious values and moral compass that guides behavior without awareness
+  - **Mars** #[[Planet]]
+    - Symbol:: ♂
+    - Archetype:: **Youngest Son**
+    - Primary Theme:: **Immature Energy and Transformation**
+    - Keywords:: Action, energy, drive, immaturity, transformation, momentum
+    - Description:: Energetically **immature** and free of responsibility. Passive until ignited, then powerful force. Can result in mindless outbursts when basic inhibitions are overwhelmed. Over time refines into powerful mature wisdom about correct energy use.
+    - Personality Expression:: Conscious use of energy and action - how you consciously express power
+    - Design Expression:: Unconscious energy patterns and immature expressions that transform over time
+  - **Jupiter** #[[Planet]]
+    - Symbol:: ♃
+    - Archetype:: **The Law Giver**
+    - Primary Theme:: **Law and Protection**
+    - Keywords:: Law, expansion, protection, wisdom, outer development, generosity
+    - Description:: ^^Second most influential object^^ after Sun. Logos for universe defining outer development in 11+ year cycles and relationship to other and whole. Each person imprinted with focused theme of what is correct - their **personal law**.
+    - Personality Expression:: Conscious understanding of your personal law and relationship to universal order
+    - Design Expression:: Unconscious law that governs your life - deep obedience brings good fortune, breaking it brings consequences
+  - **Saturn** #[[Planet]]
+    - Symbol:: ♄
+    - Archetype:: **The Judge**
+    - Primary Theme:: **Discipline and Consequences**
+    - Keywords:: Discipline, structure, limits, lessons, consequences, judgment
+    - Description:: Where you must deal with **consequences** of your actions. Ancient yin force representing the judge - where you pay for incorrectness when not following your own laws and morals. Expectant taskmaster without praise.
+    - Personality Expression:: Conscious awareness of limitations and need for discipline in specific areas
+    - Design Expression:: Unconscious patterns where consequences manifest - if Saturn leaves you alone, you're living correctly
+  - **Uranus** #[[Planet]]
+    - Symbol:: ♅
+    - Archetype:: **The Mutator**
+    - Primary Theme:: **Unusualness, Chaos and Order**
+    - Keywords:: Unusual, chaos, innovation, breakthrough, mutation, life cycles
+    - Description:: Where you express your **unusualness**. Evolutionary mutative force that transformed our understanding and extended life span to ^^84 years^^. Introduced tripartite life process: subjective youth, objective mid-life, transcendent older age.
+    - Personality Expression:: Conscious expression of your unique and unusual qualities
+    - Design Expression:: Unconscious mutative force creating breakthrough and evolutionary change in your life
+  - **Neptune** #[[Planet]]
+    - Symbol:: ♆
+    - Archetype:: **The Mystic**
+    - Primary Theme:: **Illusion and Spirituality**
+    - Keywords:: Spirituality, illusion, dreams, transcendence, veiling, surrender
+    - Description:: Great teacher demanding **total acceptance**. Veils potential in any gate, disturbing not-self as you cannot see through veil or limitations. ^^Surrender and leave it alone^^ allows potential magic to emerge from behind veil.
+    - Personality Expression:: Conscious spiritual ideals and illusions you must learn to navigate
+    - Design Expression:: Unconscious spiritual influence and veiled potential that emerges through surrender
+  - **Pluto** #[[Planet]]
+    - Symbol:: ♇
+    - Archetype:: **The Truth Teller**
+    - Primary Theme:: **Truth and Transformation**
+    - Keywords:: Truth, transformation, power, regeneration, subconscious, rebirth
+    - Description:: Brings forces of subconscious to surface, represents **rebirth**. The __'truth teller'__ bringing hidden truths to surface for direct confrontation. Wherever Pluto appears is your Truth. Deepest lesson is finding light within darkness.
+    - Personality Expression:: Conscious confrontation with deep truths and transformation themes
+    - Design Expression:: Unconscious truth that must surface for transformation - mystery that takes lifetime to explore
+  - **Planetary Relationships** #[[Planet System]]
+    - **Sun-Earth Partnership** #[[Planet Relationship]]
+      - Description:: Always operate together, located **opposite each other** in Mandala. Sun provides yang life force while Earth provides yin grounding and balance.
+    - **Nodal Axis Transition** #[[Planet Relationship]]
+      - Description:: South Node represents immaturity and development until ^^Uranus Opposition^^ (38-43 years), then transition to North Node representing maturity and future direction.
+    - **Values-Law-Judgment Chain** #[[Planet Relationship]]
+      - Description:: Values established in **Venus** become laws in **Jupiter**, and any retribution for breaking personal laws takes place through **Saturn**.
+    - **Activation Authority** #[[Planet Relationship]]
+      - Description:: Only these ^^13 celestial bodies^^ can activate gates in Human Design. Other objects filter neutrino stream but do not open gates.
+  - **Programming Influence** #[[Planet System]]
+    - **Neutrino Conditioning** #[[Programming]]
+      - Sun Dominance:: ^^70% of conditioning neutrinos^^ come from Sun
+      - Local Programming:: All planets act as local programming agents of our solar system
+      - Birth Imprinting:: Locations at time of birth determine how they influence and __'flavor'__ our experience of definition
+      - Total Activations:: **26 total activations** - 13 Design and 13 Personality positions

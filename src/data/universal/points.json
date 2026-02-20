@@ -1,0 +1,154 @@
+[
+  {
+    "id": "north-node",
+    "type": "point",
+    "name": "North Node",
+    "symbol": "☊",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FuLJamUgo77oc.png?alt=media&token=d02ae580-ff2d-4311-9fca-d60e81f23df3",
+    "cycleDuration": "18.6 years retrograde motion",
+    "archetype": "The Soul's Evolutionary Direction, Future Self, Dharmic Path",
+    "functionAndMeaning": "Your soul's intended growth direction in this lifetime. The North Node represents the qualities, experiences, and consciousness you're meant to develop. It points toward your dharmic path - often feeling unfamiliar or challenging because it requires you to stretch beyond past-life patterns. This is your cosmic GPS toward soul evolution.",
+    "contemplationQuestions": [
+      "What qualities is my soul calling me to develop?",
+      "How can I move toward my growth edge with courage?",
+      "What unfamiliar territory is my dharma asking me to explore?"
+    ],
+    "planetType": "Key Astro Point",
+    "planetImportance": 2,
+    "giftExpression": "Courageous soul growth, dharmic alignment, evolutionary leadership, conscious development of new capacities, spiritual pioneering",
+    "shadowExpression": "Avoiding growth challenges, clinging to South Node comfort zone, fear of the unknown, resistance to soul evolution, spiritual stagnation"
+  },
+  {
+    "id": "south-node",
+    "type": "point",
+    "name": "South Node",
+    "symbol": "☋",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FCbQIcmNqdbNr.png?alt=media&token=fdd6484b-d86f-4a92-b8d0-aec31ae022a8",
+    "cycleDuration": "18.6 years retrograde motion",
+    "archetype": "The Soul's Inherited Gifts, Past Mastery, Karmic Comfort Zone",
+    "functionAndMeaning": "Your soul's accumulated wisdom and natural talents from past experiences. The South Node represents what you've already mastered and can easily access - your gift treasury. While these are your superpowers, over-relying on them can keep you from North Node growth. The art is using South Node gifts to serve North Node evolution.",
+    "contemplationQuestions": [
+      "What natural gifts do I possess?",
+      "How can I use my inherent talents to serve my soul's growth?",
+      "What patterns am I ready to transform while honoring my gifts?"
+    ],
+    "planetType": "Astro Point",
+    "planetImportance": 2,
+    "giftExpression": "Mastery in service of evolution, natural talents supporting dharmic path, wisdom integration, effortless expertise, karmic gifts",
+    "shadowExpression": "Over-reliance on past patterns, avoiding growth challenges, spiritual bypassing through natural talents, karmic loops, comfort zone addiction"
+  },
+  {
+    "id": "lilith",
+    "type": "point",
+    "name": "Lilith",
+    "symbol": "⚸",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F8y9SuVBFCl5Y.png?alt=media&token=ffe3c9a8-9370-4424-af74-5a003d56a000",
+    "cycleDuration": "8.85 years",
+    "archetype": "The Wild Feminine, Primal Power, Shadow Sovereignty",
+    "functionAndMeaning": "Your raw, untamed feminine power and the parts of yourself that refuse to be controlled or diminished. Lilith represents your primal instincts, sexual sovereignty, and the wild wisdom that emerges when you refuse to be domesticated. This energy transcends gender - it's about reclaiming your authentic power and saying 'no' to diminishment.",
+    "contemplationQuestions": [
+      "Where do I give my power away to please others?",
+      "What wild aspects of myself am I ready to reclaim?",
+      "How can I express my authentic power with wisdom?"
+    ],
+    "planetType": "Astro Point",
+    "planetImportance": 0.5,
+    "giftExpression": "Authentic sovereignty, healthy boundaries, primal wisdom, fearless authenticity, sacred wildness, sexual empowerment, untamed creativity",
+    "shadowExpression": "Destructive rebellion, manipulation, victim consciousness, suppressed rage, sexual power games, vindictive behavior, chaotic wildness"
+  },
+  {
+    "id": "chiron",
+    "type": "point",
+    "name": "Chiron",
+    "symbol": "⚷",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FztxglbG4g3oF.png?alt=media&token=01bac671-5bf3-4a41-9862-1ec47d0e70cf",
+    "cycleDuration": "50-51 years",
+    "archetype": "The Wounded Healer, Sacred Wound, Healing Mastery",
+    "functionAndMeaning": "Your core soul wound that becomes your greatest healing gift. Chiron represents the area where you experience ongoing sensitivity and challenge, yet through embracing this wound with compassion, you develop profound healing abilities. Your deepest pain becomes your medicine - for yourself and others who carry similar wounds.",
+    "contemplationQuestions": [
+      "What wound has been my greatest teacher?",
+      "How has my pain developed into wisdom?",
+      "How can I serve others through my own healing journey?"
+    ],
+    "planetType": "Astro Point",
+    "planetImportance": 0.5,
+    "giftExpression": "Compassionate healing presence, wisdom through experience, helping others heal similar wounds, transformed pain into medicine, wounded healer mastery",
+    "shadowExpression": "Playing victim to the wound, avoiding healing work, projecting pain onto others, spiritual bypassing, chronic wounds, martyrdom"
+  },
+  {
+    "id": "part-of-fortune",
+    "type": "point",
+    "name": "Part of Fortune",
+    "symbol": "🜨",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FHyd8n8d2exbz.png?alt=media&token=76c8562f-d2ca-4bd2-80fb-07d02d30c256",
+    "cycleDuration": "Calculated (Sun, Moon, and ASC)",
+    "archetype": "The Prosperity Point, Material Blessing, Integrated Success",
+    "functionAndMeaning": "The sweet spot where your spirit (Sun), soul (Moon), and personality (Ascendant) harmoniously combine to create material and spiritual abundance. The Part of Fortune shows where you can find natural success, prosperity, and joy when you integrate all parts of yourself authentically.",
+    "contemplationQuestions": [
+      "How can I align my spirit, emotions, and personality for authentic success?",
+      "Where do I find natural prosperity and joy?",
+      "What integration brings me the greatest fulfillment?"
+    ],
+    "planetType": "Astro Point",
+    "planetImportance": 0.5,
+    "giftExpression": "Holistic success, integrated abundance, natural prosperity, joy through authentic expression, aligned manifestation, harmonious achievement",
+    "shadowExpression": "Chasing external success without inner alignment, material focus without spiritual integration, compartmentalized living, fortune seeking without authenticity"
+  },
+  {
+    "id": "vertex",
+    "type": "point",
+    "name": "Vertex",
+    "symbol": "Vx",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F9cFsGT2s10Ax.png?alt=media&token=2c160a86-702b-4467-9d9d-9276e2493570",
+    "cycleDuration": "Calculated (time and location)",
+    "archetype": "The Magnetic Destiny Point, Fated Encounters, Soul Magnetism",
+    "functionAndMeaning": "Your electromagnetic point of destiny where significant soul encounters and fated experiences are drawn to you. The Vertex represents what you magnetically attract when you're aligned with your authentic path - often bringing people and experiences that catalyze major life changes or soul recognition moments.",
+    "contemplationQuestions": [
+      "What types of people and experiences do I magnetically attract?",
+      "How do fated encounters serve my soul's evolution?",
+      "What is my energy field calling into my life?"
+    ],
+    "planetType": "Astro Point",
+    "planetImportance": 0.5,
+    "giftExpression": "Conscious magnetism, embracing destined connections, soul recognition, aligned attraction, evolutionary encounters, destiny acceptance",
+    "shadowExpression": "Avoiding destined encounters, resistance to fated changes, unconscious magnetism, victimhood around attractions, fear of destiny"
+  },
+  {
+    "id": "ascendant",
+    "type": "point",
+    "name": "Ascendant",
+    "symbol": "ASC",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FfjTI0eXE995O.png?alt=media&token=6940844d-2f3e-4e93-9005-b78def18c2ed",
+    "cycleDuration": "24 hours",
+    "archetype": "The Persona, Life Approach, Soul's Chosen Mask",
+    "functionAndMeaning": "The energetic signature you radiate and how you spontaneously approach life. Your Ascendant is the soul's chosen costume for this incarnation - the energy you embody to navigate the world and initiate new experiences. It's your first impression and your instinctive way of engaging with life.",
+    "contemplationQuestions": [
+      "How do others first experience my energy?",
+      "What approach to life feels most natural to me?",
+      "How does my outer presentation serve my soul's journey?"
+    ],
+    "planetType": "Key Astro Point",
+    "planetImportance": 3,
+    "giftExpression": "Authentic self-presentation, conscious persona choice, natural life approach, inspiring first impressions, aligned energy radiation, spontaneous authenticity",
+    "shadowExpression": "False personas that hide authentic self, reactive responses, unconscious projection, mask becoming prison, identity confusion"
+  },
+  {
+    "id": "midheaven",
+    "type": "point",
+    "name": "Midheaven",
+    "symbol": "MC",
+    "image": "https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2FLsL83m5mPkgP.png?alt=media&token=43ecbcf6-8325-448b-acd6-7ed98b4db65d",
+    "cycleDuration": "24 hours",
+    "archetype": "The Calling, Public Purpose, Highest Achievement",
+    "functionAndMeaning": "Your soul's calling in the public sphere and how you're meant to contribute to collective evolution. The Midheaven represents your highest potential achievement, career fulfillment, and the legacy you're here to build. It's where your private development meets public service.",
+    "contemplationQuestions": [
+      "What is my soul's calling in the world?",
+      "How am I meant to serve the collective?",
+      "What legacy do I want to leave through my work and public contribution?"
+    ],
+    "planetType": "Key Astro Point",
+    "planetImportance": 3,
+    "giftExpression": "Aligned public service, authentic authority, meaningful career, inspiring leadership, purposeful achievement, legacy consciousness, vocational mastery",
+    "shadowExpression": "Ego-driven ambition, public image over authentic calling, avoiding public responsibility, career disconnected from purpose, status obsession"
+  }
+]

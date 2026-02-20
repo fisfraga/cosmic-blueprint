@@ -1,0 +1,359 @@
+# Human Design - Tribal Defense Circuit Gates (Enhanced) - FINAL
+
+## GATE KEY
+Gates contained in this document: 6, 19, 21, 26, 27, 32, 37, 40, 44, 45, 49, 50, 54, 59
+Total gates: 14
+
+## DEFENSE CIRCUIT GATES
+
+%%tana%%
+
+- Gate 59 - Dispersion #gate
+  - Number:: 59
+  - Name:: The Gate of Sexuality
+  - Archetype Name:: The Intimacy Catalyst
+  - Archetype Action:: being honest and vulnerable
+  - Center:: [[Sacral Center #center]]
+  - I Ching Hexagram:: Dispersion
+  - Keywords:: Sexuality, aura breaker, bonding strategies, intimacy, barriers, union, vulnerability, honesty
+  - Human Design Definition:: The ability to break down barriers to achieve union
+  - Core Theme:: The sexual energy to bond with a mate
+  - Tropical Sign:: Virgo
+  - Gene Keys Shadow:: Dishonesty
+  - Gene Keys Gift:: Intimacy
+  - Gene Keys Siddhi:: Transparency
+  - Description:: Generates genetic strategies for sexual bonding and creating new life. Known as "aura breaker," defines ways we penetrate or break through barriers to intimacy to create offspring or enter creative ventures with others. Lines describe ways humanity approaches bonding as genetic strategies singularly focused on selecting best partner for viable offspring.
+  - High Frequency Expression:: Being honest and vulnerable to create authentic intimacy. Breaking down barriers through genuine openness while being discerning about who has earned the right to vulnerability.
+  - Low Frequency Expression:: Avoiding vulnerability with dishonesty and lying. Using vulnerability as manipulation or sharing indiscriminately without healthy boundaries.
+  - Focus:: The ability to break down barriers to achieve union. Each line represents different genetic strategy for intimacy, and only real choice is to enter relationships through Authority.
+  - Circuit Role:: Initiates intimate bonds within the tribe through vulnerability and authentic connection, creating foundation for tribal continuation.
+  - Comments:: Tribal intimacy is warm and deeply felt - intimacy beyond words intensified by sensitivity through touch, taste and smell. Unless paying attention to Authority and understanding genetic strategies, intimacy can bring confusion, conflict, and unproductive unions.
+  - Affirmations::
+    - I create intimacy through vulnerability
+    - I initiate others into the ways of healthy and sustainable relationships
+    - I give birth to new life
+
+- Gate 6 - Conflict #gate
+  - Number:: 6
+  - Name:: The Gate of Friction
+  - Archetype Name:: The Peacemaker
+  - Archetype Action:: use conflict as a gateway into peace
+  - Center:: [[Solar Plexus Center #center]]
+  - I Ching Hexagram:: Conflict
+  - Keywords:: Friction, conflict, progress, growth, emotional awareness, pH, boundary, creating inner peace, conflict resolution, emotional empowerment
+  - Human Design Definition:: The fundamental design component of progress. The law that growth cannot exist without friction
+  - Core Theme:: Fear of intimacy
+  - Tropical Sign:: Virgo
+  - Gene Keys Shadow:: Conflict
+  - Gene Keys Gift:: Diplomacy
+  - Gene Keys Siddhi:: Peace
+  - Description:: Fundamental design component of progress with law that growth cannot exist without friction. Generates all three modes of emotional awareness: feelings, moods and sensitivity. Powerful motorized combination on wave designed to create friction producing heat essential for growth and fertility.
+  - High Frequency Expression:: Using conflict as a doorway into inner peace. Taking full responsibility for emotions before confronting others and engaging only in necessary confrontation for growth.
+  - Low Frequency Expression:: Emotional volatility or reactivity that creates chaos. Fighting for things that don't matter or projecting unresolved emotions onto others.
+  - Focus:: The friction created when stepping into another person's aura is mechanic. If conflict resolved or resonance reached, opening allows intimacy to proceed. Gate of your pH establishing boundary between outside and inside body.
+  - Circuit Role:: Creates necessary friction for tribal growth and determines who to allow into intimate tribal bonds through emotional discernment.
+  - Comments:: Kind of diaphragm that either opens to intimacy or closes. Determines who to be intimate with, when, and bonding role you will play. Fear associated with 6th gate is fear of intimacy, which is why looks to Gate 59 with ability to break down barriers.
+  - Affirmations::
+    - I create clarity and stability by honoring my emotions
+    - I take full responsibility for my emotions and this paves the way for peaceful relationships
+    - I am not available to take on emotional projection from others
+
+- Gate 27 - Nourishment #gate
+  - Number:: 27
+  - Name:: The Gate of Caring
+  - Archetype Name:: The Empowered Caretaker
+  - Archetype Action:: care for others from abundant overflow
+  - Center:: [[Sacral Center #center]]
+  - I Ching Hexagram:: Nourishment
+  - Keywords:: Caring, nourishment, altruism, nurturing, compassion, quality of life, radical self-responsibility, caretaking
+  - Human Design Definition:: The enhancement of the quality and the substance of all activities through caring
+  - Core Theme:: Nourishment and protection for survival
+  - Tropical Sign:: Taurus
+  - Gene Keys Shadow:: Selfishness
+  - Gene Keys Gift:: Altruism
+  - Gene Keys Siddhi:: Selflessness
+  - Description:: Energy focused on maintaining and enhancing quality of life through power to care for weak, sick and young. Tremendous potential for altruism present, exemplified in life of Mother Teresa. Role is to nourish and nurture through power of compassion.
+  - High Frequency Expression:: Finding balance between self-care and caring for others. Taking responsibility for own values, needs, beliefs, thoughts, feelings, and actions to ensure healthy relationships and caring from overflow.
+  - Low Frequency Expression:: Taking incorrect responsibility for other people's needs. Self-sacrificing and caring for others to prove worthiness of safety, love, belonging, and support.
+  - Focus:: The enhancement of quality and substance of all activities through caring. Must care for yourself first to have energy and resources to care for others, then let Authority guide where and when you commit energy.
+  - Circuit Role:: Provides nourishment and care for tribal members, ensuring the weak, sick, and young are properly cared for within tribal structure.
+  - Comments:: Nourishment given without awareness is waste of precious resources. Each line represents way to connect to and care for Tribe according to different levels of need. Without Gate 50, may lack instinct and values to set healthy boundaries.
+  - Affirmations::
+    - I give from the overflow
+    - My boundaries are magic
+    - I take care of others with deep love and joy
+
+- Gate 50 - The Cauldron #gate
+  - Number:: 50
+  - Name:: The Gate of Values
+  - Archetype Name:: The Tuning Fork
+  - Archetype Action:: to transform the frequency of your groups by living your values
+  - Center:: [[Spleen Center #center]]
+  - I Ching Hexagram:: The Cauldron
+  - Keywords:: Values, guardian, laws, historical continuity, tribal lawmaker, integrity, harmony, collective empowerment
+  - Human Design Definition:: The value of historical continuity whose traditional values serve and enrich the present and the future
+  - Core Theme:: Fear of responsibility
+  - Tropical Sign:: Libra/Scorpio
+  - Gene Keys Shadow:: Corruption
+  - Gene Keys Gift:: Equilibrium
+  - Gene Keys Siddhi:: Harmony
+  - Description:: Each act of intimacy resulting in birth demands offspring be nurtured into adulthood. Mystical name is the Guardian. As Tribal lawmaker, establishes what is right or wrong. How and where rules for caring become source of moral conditioning for children.
+  - High Frequency Expression:: Harmonizing group vibration to frequency rooted in values and beliefs that serve everyone. Instinctive knowing that groups are only as healthy as each member and easily spotting fears that corrupt a group.
+  - Low Frequency Expression:: Staying in groups despite sensing their corrupt nature. Living out of fear, anger, and poor boundaries and being easily persuaded into incorrect values and beliefs by unhealthy groups.
+  - Focus:: The value of historical continuity whose traditional values serve and enrich present and future. Guard values and integrity of Tribal law and structures upholding community well-being.
+  - Circuit Role:: Establishes and maintains tribal values, laws, and moral structures that ensure tribal continuity and well-being across generations.
+  - Comments:: At core of Tribe's defenses lies Spleen's fear-driven mandate to maintain viability by protecting and guiding young. Instinctual awareness scrutinizes which values or laws are corrupt, unjust, unnecessary or need to be changed. Without Gate 27, may try to physically care for others when not correct.
+  - Affirmations::
+    - I live according to my values
+    - I know which groups are healthy and which ones aren't
+    - I harmonize groups to a higher frequency
+
+- Gate 54 - The Marrying Maiden #gate
+  - Number:: 54
+  - Name:: The Gate of Drive
+  - Archetype Name:: The Prosperity Seeker
+  - Archetype Action:: create prosperity as a path to enlightenment
+  - Center:: [[Root Center #center]]
+  - I Ching Hexagram:: The Marrying Maiden
+  - Keywords:: Drive, ambition, transformation, mundane, spiritual aspirations, fuel, material mastery, spiritual growth
+  - Human Design Definition:: Interaction in its mundane social context but also one's mystical and cosmic relationships
+  - Core Theme:: Pressure to achieve, rise up, and transform. In this context, pressure is not necessarily a problem. It's really about acting from the amount of pressure that is correct for you
+  - Tropical Sign:: Capricorn
+  - Gene Keys Shadow:: Greed
+  - Gene Keys Gift:: Aspiration
+  - Gene Keys Siddhi:: Ascension
+  - Description:: Provides humanity with fuel and ambition to transform Tribe's material direction and standing among other tribes. Supplies energy for most mundane ambitions and highest spiritual aspirations that may be hidden within them. Only when mastered instincts to thrive on mundane plane is spiritual transformation possible.
+  - High Frequency Expression:: Ambition and drive with inner knowing that all paths lead to the Divine. Empowered to master the material plane (time, money, resources) as a path to spiritual growth.
+  - Low Frequency Expression:: Blind ambition that takes you nowhere and leaves you feeling bitter. Prone to giving up too quickly when results aren't instant.
+  - Focus:: Interaction in mundane social context but also mystical and cosmic relationships. Live spiritual ideals through mundane plane where ambition is fulfillment of personal potential.
+  - Circuit Role:: Provides driving force for tribal transformation and material advancement, fueling ambitions that elevate tribal standing and resources.
+  - Comments:: Inner drive to 'rise up' provides impetus for transformation for those around as well, leveling playing field for others to compete on equal terms. Drive needs direction so naturally look to Gate 32 to channel ambitions toward lasting value.
+  - Affirmations::
+    - Mastering the material plane is my spiritual path
+    - I am ambitious AF
+    - I love to create prosperity for myself and others
+
+- Gate 32 - Duration #gate
+  - Number:: 32
+  - Name:: The Gate of Continuity
+  - Archetype Name:: The Success Oracle
+  - Archetype Action:: sense and lead successful community change
+  - Center:: [[Spleen Center #center]]
+  - I Ching Hexagram:: Duration
+  - Keywords:: Continuity, duration, endurance, adaptation, evaluation, fear of failure, change, success and failure, foresight
+  - Human Design Definition:: The only thing which endures is change
+  - Core Theme:: Fear of failure
+  - Tropical Sign:: Libra
+  - Gene Keys Shadow:: Failure
+  - Gene Keys Gift:: Preservation
+  - Gene Keys Siddhi:: Veneration
+  - Description:: Awareness focused on constant evaluation as instinctive recognition of what can and cannot be transformed. Underlying fear of failure can put brakes on runaway ambition. Ability to adapt yet maintain true nature is Spleen's contribution to material continuity of Tribe.
+  - High Frequency Expression:: Guiding community into its highest potential. Seeing the big picture, sensing what needs to change, and being in healthy relationship with both success and failure to lead family, friends, and community into well-being.
+  - Low Frequency Expression:: Using fear as fuel for unhealthy relationships and community dynamics such as codependency, hierarchy, and pressuring others to conform. Isolating from family, friends, or community due to belief that you must go through life alone.
+  - Focus:: The only thing which endures is change. Great deal rests on what is recognized and valued, thereby encouraged and retained by Tribe.
+  - Circuit Role:: Evaluates what can and cannot be transformed within the tribe, ensuring adaptation while maintaining tribal essence and continuity.
+  - Comments:: Gate of prolonged indecision. Apt to find yourself agonizing over balance between what works successfully (conservatism) and opening to unknown risks (fear of failure) that accompany transformation. Without Gate 54, senses lack of consistent source of fuel or drive.
+  - Affirmations::
+    - I know what it takes to succeed
+    - I love how life is always changing
+    - Success is when everyone in the community is thriving
+
+- Gate 44 - Coming to Meet #gate
+  - Number:: 44
+  - Name:: The Gate of Alertness
+  - Archetype Name:: The Pattern Interrupter
+  - Archetype Action:: to practice forgiveness and learn from mistakes
+  - Center:: [[Spleen Center #center]]
+  - I Ching Hexagram:: Coming to Meet
+  - Keywords:: Alertness, memory, patterns, survival intelligence, spontaneous interaction, seeing patterns, the past, transformation, possibility
+  - Human Design Definition:: The success of any interaction is based on the absence of any preconditions
+  - Core Theme:: Fear of the past
+  - Tropical Sign:: Scorpio
+  - Gene Keys Shadow:: Interference
+  - Gene Keys Gift:: Teamwork
+  - Gene Keys Siddhi:: Synarchy
+  - Description:: Gate of memory remembering patterns for living that successfully provided for material needs. Memory is integral and consistently trustworthy part of survival intelligence as species. Instinctually alert in every moment for correct spontaneous relationship or interaction.
+  - High Frequency Expression:: Practicing forgiveness and learning from mistakes. Deep knowing that every moment, including memory, holds potential for healing and transformation. Guiding others to break painful patterns from the past.
+  - Low Frequency Expression:: Being afraid to repeat mistakes from the past and using those mistakes as a reason not to move forward. Internal resistance to mistakes prevents transformation, learning, and growth.
+  - Focus:: The success of any interaction is based on absence of any preconditions. What you remember or transmit shapes Tribe's material orientation and eventually strengthens ego presence and power in world.
+  - Circuit Role:: Remembers successful survival patterns for the tribe and helps break destructive patterns through learning from past experiences.
+  - Comments:: Control the way Gate 26 acts in terms of selling, defending or fighting for tribe. Where tribal propaganda can be found. Help Tribe allay fears of past by remembering that material security and health go hand in hand.
+  - Affirmations::
+    - Healing is always possible
+    - I help others break unhealthy patterns of the past
+    - I can lead a horse to water but cannot make them drink
+
+- Gate 26 - The Taming Power of the Great #gate
+  - Number:: 26
+  - Name:: The Gate of the Egoist
+  - Archetype Name:: The Sacred Salesperson
+  - Archetype Action:: believe in an abundant future for everyone
+  - Center:: [[Heart Center #center]]
+  - I Ching Hexagram:: The Taming Power of the Great
+  - Keywords:: Egoist, manipulation, memory, salesperson, exaggeration, persuasion, seeing a brighter future, selling, integrity
+  - Human Design Definition:: The maximization of the power of memory applied to the nurturing of continuity
+  - Core Theme:: To be the best
+  - Tropical Sign:: Sagittarius
+  - Gene Keys Shadow:: Pride
+  - Gene Keys Gift:: Artfulness
+  - Gene Keys Siddhi:: Invisibility
+  - Description:: Where memory is manipulated or past selectively remembered to persuade or distract from fears. Line between truth and lie blurs, and potential and possibility transformed into reality and 'sold' to public for a price. Natural salesperson actually expected to exaggerate.
+  - High Frequency Expression:: Being a champion for dreams that come true. Trusting in abundance of life and empowered to sell a brighter future to tribe with integrity.
+  - Low Frequency Expression:: Manipulating or controlling others for own gain. Using memory manipulation and selective remembering to persuade or distract from fears.
+  - Focus:: The maximization of power of memory applied to nurturing of continuity. Innate ability to manipulate memory coupled with energy of ego designed to withstand rejection.
+  - Circuit Role:: Uses memory and persuasion to sell the tribe on its potential and possibilities, defending and promoting tribal interests.
+  - Comments:: Waiting to be recognized and only making promises you can keep allows maintaining influence with others. Staying in integrity through Strategy and Authority strengthens ego and physical heart's health.
+  - Affirmations::
+    - My integrity is my most valuable asset
+    - Selling is service when it is in everyone's best interest
+    - I trust in the abundance of life and am unattached to outcomes
+
+- Gate 19 - Approach #gate
+  - Number:: 19
+  - Name:: The Gate of Wanting
+  - Archetype Name:: The Sensitive Soul
+  - Archetype Action:: be sensitive to the needs of others (without sacrificing yourself)
+  - Center:: [[Root Center #center]]
+  - I Ching Hexagram:: Approach
+  - Keywords:: Wanting, approach, interrelatedness, basic resources, need, spirit, sensitivity, being attuned to needs, community empowerment
+  - Human Design Definition:: That all things are interrelated is apparent and manifested through the action of approach
+  - Core Theme:: The pressure to be sensitive to basic needs
+  - Tropical Sign:: Aquarius
+  - Gene Keys Shadow:: Co-Dependence
+  - Gene Keys Gift:: Sensitivity
+  - Gene Keys Siddhi:: Sacrifice
+  - Description:: Fuels two essential human mandates - need to have access to basic resources like food and shelter, and need for spirit. These mandates set up to interact or bond with others in specific ways. When everyone has enough, experience life as one healthy community.
+  - High Frequency Expression:: Being sensitive to needs of others while maintaining proper self-care. Believing individuals, communities, and collective thrive when basic needs are met. Loving being around emotionally healthy people.
+  - Low Frequency Expression:: Not understanding your own needs and putting your needs last. When not taking time for own needs, easily becoming overwhelmed by energetic input of others.
+  - Focus:: That all things are interrelated is apparent and manifested through action of approach. Alert and sensitive to which resources being withheld from family, community and global community.
+  - Circuit Role:: Senses tribal needs and approaches with sensitivity to ensure all basic resources are available for tribal well-being.
+  - Comments:: Know what is needed and look to Gate 49 to fulfill those needs. Consequences of turning Root pressure inward include oversensitivity, addiction to being needed, or personal neediness.
+  - Affirmations::
+    - I have a kismet connection with animals
+    - Every action is an attempt to meet a need
+    - I am a portal between the conscious and unconscious
+
+- Gate 49 - Revolution #gate
+  - Number:: 49
+  - Name:: The Gate of Principles
+  - Archetype Name:: The Revolution Ringleader
+  - Archetype Action:: leads revolutions by living your principles
+  - Center:: [[Solar Plexus Center #center]]
+  - I Ching Hexagram:: Revolution
+  - Keywords:: Principles, revolution, acceptance, rejection, hierarchy, transformation, being a leader in relationships, being revolutionary
+  - Human Design Definition:: Ideally the transformation of forms based on the highest principles and not simply for power
+  - Core Theme:: Fear of Nature
+  - Tropical Sign:: Aquarius
+  - Gene Keys Shadow:: Reaction
+  - Gene Keys Gift:: Revolution
+  - Gene Keys Siddhi:: Rebirth
+  - Description:: Principles of acceptance and rejection, marriage and divorce, ultimately revolution are direct result of living with Tribal hierarchies influenced by emotional wave. Places you at top of hierarchies so feel need to be obeyed.
+  - High Frequency Expression:: Leading people through rocky times. Deeply understanding that flow is natural state of all energy and having emotional sense of when it's time for change, renewal, and revolution.
+  - Low Frequency Expression:: Believing there is a right way and wrong way to do life. Becoming rigid and settling for nothing less than perfect. Ruthlessly cutting people out of life when they don't live up to perfect standards.
+  - Focus:: Ideally the transformation of forms based on highest principles and not simply for power. Social agenda for change and reformation, particularly focused on food and food distribution.
+  - Circuit Role:: Leads tribal transformation and revolution based on principles, determining who to accept or reject from tribal community.
+  - Comments:: People you accept into circle are those willing to stand by and support your principles; rest you inclined to reject. Revolution either avoided by filling needs or entered into as necessary evil and last resort.
+  - Affirmations::
+    - I take the lead during rocky times
+    - I am a revolutionary
+    - My principles lead the way
+
+- Gate 37 - The Family #gate
+  - Number:: 37
+  - Name:: The Gate of Friendship
+  - Archetype Name:: The Boundaries Master
+  - Archetype Action:: healthy communication and maintaining strong boundaries
+  - Center:: [[Solar Plexus Center #center]]
+  - I Ching Hexagram:: The Family
+  - Keywords:: Friendship, family, community, bargains, warmth, nurturing, touch, holding people together, equality, emotional resources
+  - Human Design Definition:: The manifestation macro- and micro-cosmically of the organic nature of communities
+  - Core Theme:: Fear of tradition
+  - Tropical Sign:: Pisces
+  - Gene Keys Shadow:: Weakness
+  - Gene Keys Gift:: Equality
+  - Gene Keys Siddhi:: Tenderness
+  - Description:: Most communal gate in BodyGraph. When power recognized by others, can hold both family and community together with warmth, friendliness and nurturing nature. Ability to make emotional connection with others through touch and sensitivity sensing their accessibility.
+  - High Frequency Expression:: Having strong family bonds through strong communication and healthy boundaries. Believing all people are worthy of respect and treating everyone as valuable part of family, community, or friend circle.
+  - Low Frequency Expression:: Sacrificing yourself to make sure family stays together or hiding behind emotions. When not taking responsibility for emotions, projecting emotions onto others by being cruel or mean on purpose.
+  - Focus:: The manifestation macro and micro-cosmically of organic nature of communities. Gate of the mouth so planning, gathering and preparing of food often play central role in gatherings.
+  - Circuit Role:: Holds tribal community together through emotional bonds, warmth, and nurturing while maintaining healthy boundaries.
+  - Comments:: In bargain between Gates 37 and 40, Gate 40 is willing provider and you are distributor of its assets and skills. Without Gate 40, looking for those who can deliver resources needed by community.
+  - Affirmations::
+    - I value family, community, and togetherness
+    - I am a relational magician
+    - I maintain clear and strong boundaries
+
+- Gate 40 - Deliverance #gate
+  - Number:: 40
+  - Name:: The Gate of Aloneness
+  - Archetype Name:: The Liberated Altruist
+  - Archetype Action:: balance your heart of service with your personal needs
+  - Center:: [[Heart Center #center]]
+  - I Ching Hexagram:: Deliverance
+  - Keywords:: Aloneness, deliverance, transition, independence, work, willpower, service, community, boundaries, balance, work and rest
+  - Human Design Definition:: The point of transition between struggle and liberation
+  - Core Theme:: The will to provide
+  - Tropical Sign:: Virgo
+  - Gene Keys Shadow:: Exhaustion
+  - Gene Keys Gift:: Resolve
+  - Gene Keys Siddhi:: Divine Will
+  - Description:: One of three gates of aloneness carrying sense of being alone even when in group. This aloneness is beginning of individuation process - need to separate from Tribe. Desire within for wholeness expressed as strong independence.
+  - High Frequency Expression:: Balancing heart of service with need for alone time, rest and relaxation. Understanding boundaries are beautiful and being empowered to dedicate vast amounts of energy in service to community with proper boundaries in place.
+  - Low Frequency Expression:: Using force rather than natural energy to get things done, especially for others. Believing serving others is how one proves worth in society and having weak or porous boundaries leading to burnout from over-giving.
+  - Focus:: The point of transition between struggle and liberation. Love of work and when involved in work correct for you, derive great satisfaction from delivering what promised to appreciative Tribe.
+  - Circuit Role:: Provides willing service and resources to the tribe while maintaining necessary independence and boundaries for sustainable contribution.
+  - Comments:: Willing to work and exert ego's willpower to provide for family or community, but they get access to earned resources only if they keep their side of bargain showing appreciation and loyalty.
+  - Affirmations::
+    - I balance my heart of service with deep self care
+    - My boundaries are beautiful
+    - I give when my heart is truly in it
+
+- Gate 21 - Biting Through #gate
+  - Number:: 21
+  - Name:: The Gate of the Hunter/Huntress
+  - Archetype Name:: The Resource Manager
+  - Archetype Action:: understand, value, and respect all resources
+  - Center:: [[Heart Center #center]]
+  - I Ching Hexagram:: Biting Through
+  - Keywords:: Hunter, control, power, interference, material resources, authority, control, taking charge, managing resources
+  - Human Design Definition:: The justified and necessary use of power in overcoming deliberate and persistent interference
+  - Core Theme:: To be in control of circumstances
+  - Tropical Sign:: Aries
+  - Gene Keys Shadow:: Control
+  - Gene Keys Gift:: Authority
+  - Gene Keys Siddhi:: Valor
+  - Description:: Needs to be in control of its domain. To apply strength and will of ego to ensure Tribal survival, must have control over something or someone. In modern world, energy translates into responsibilities of police, managing director or president.
+  - High Frequency Expression:: Understanding, respecting, and valuing all resources. Energy management balancing yin and yang, masculine and feminine, push and pull. Easily managing mundane resources of family, community, or company in empowering way.
+  - Low Frequency Expression:: Controlling others to appease ego, fearing own power and authority, or having feelings of low self-worth due to people-pleasing.
+  - Focus:: The justified and necessary use of power in overcoming deliberate and persistent interference. Successful when can control own material resources, where you live, what you wear, whom you work for.
+  - Circuit Role:: Controls and manages tribal resources and territory, ensuring tribal survival through proper resource management and territorial control.
+  - Comments:: Destined to serve others because in Tribal bargain all must benefit if you are to benefit. Must wait until offered control. Do not like being told what to do or having people looking over shoulder.
+  - Affirmations::
+    - I understand and respect the value of all resources
+    - I control what I can and let go of the rest
+    - I balance masculine and feminine energy with ease
+
+- Gate 45 - Gathering Together #gate
+  - Number:: 45
+  - Name:: The Gate of the Gatherer
+  - Archetype Name:: The Money Steward
+  - Archetype Action:: effectively and equitably manage resources, especially money
+  - Center:: [[Throat Center #center]]
+  - I Ching Hexagram:: Gathering Together
+  - Keywords:: Gatherer, dominance, possession, authority, manifestation, protection, leadership, money, wellbeing, distribution of resources
+  - Human Design Definition:: The natural and generally beneficial attraction of like forces
+  - Core Theme:: Leading through education
+  - Tropical Sign:: Gemini
+  - Gene Keys Shadow:: Dominance
+  - Gene Keys Gift:: Synergy
+  - Gene Keys Siddhi:: Communion
+  - Description:: Gate of dominance, gate of Master/Mistress or King/Queen. Single voice of Tribe saying "I have" and deeply possessive gate of manifestation and action. Here to protect Tribe's material resources as natural authority and guide.
+  - High Frequency Expression:: Leadership through money and wellbeing. Mastering managing, using, and distributing material resources (especially money) in service to family, friends, and community. Fully aware of both spiritual and mundane power that money holds and wielding it with equity.
+  - Low Frequency Expression:: Hoarding money or resources. Trying to knock others down so that you may rise up. Unconsciously staying broke in attempt to prove spiritual worthiness.
+  - Focus:: The natural and generally beneficial attraction of like forces. Ability to gather people together to manifest what tribe needs, expand community, and bring harmony to those around.
+  - Circuit Role:: Gathers and distributes tribal resources as natural authority, protecting and manifesting what the tribe needs for prosperity and expansion.
+  - Comments:: Not really here to work. When what you 'have' is used on behalf of those you protect, there is peace in kingdom. Own the land but must give Gate 21 permission to hunt on it while demanding best piece of meat in bargain.
+  - Affirmations::
+    - I easily manage material resources
+    - When everyone's needs are met – including my own – the whole kingdom thrives
+    - The mundane and the spiritual are one and the same

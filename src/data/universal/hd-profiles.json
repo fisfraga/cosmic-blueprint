@@ -1,0 +1,446 @@
+[
+  {
+    "id": "hd-profile-1-3",
+    "type": "hd-profile",
+    "name": "1/3 Investigator/Martyr",
+    "symbol": "1/3",
+    "personalityLine": 1,
+    "designLine": 3,
+    "personalityLineId": "hd-line-1",
+    "designLineId": "hd-line-3",
+    "description": "The 1/3 Profile combines the conscious need to investigate and build a solid foundation (Line 1) with the unconscious process of learning through trial and error (Line 3). This creates a person who researches deeply but ultimately learns most through direct experience.",
+    "lifeTheme": "Building secure foundations through investigation and experiential discovery",
+    "keywords": [
+      "Researcher",
+      "Experiential learner",
+      "Resilient",
+      "Foundation-builder",
+      "Practical wisdom"
+    ],
+    "gifts": [
+      "Deep capacity for both research AND direct experience",
+      "Builds solid foundations through what actually works",
+      "Practical wisdom gained through investigation and trial",
+      "Resilience combined with thorough understanding",
+      "Can verify research through real-world testing"
+    ],
+    "challenges": [
+      "Tension between need for security and chaotic experiences",
+      "May feel destabilized by the trial and error process",
+      "Can over-research to avoid experiential learning",
+      "May judge themselves harshly for 'mistakes'",
+      "Inner conflict between knowing and discovering"
+    ],
+    "relationshipStyle": "Needs partners who understand both their investigative nature and their experimental life path. May have relationships that serve as learning experiences.",
+    "careerGuidance": "Excel in fields that combine research with hands-on application. Often become experts through both study AND practical experience.",
+    "practicalGuidance": "Honor both aspects: research to build your foundation, but know that your deepest learning comes through direct experience. Your 'mistakes' are actually verifying or disproving your research. Trust both processes.",
+    "image": "/images/human-design/profiles/hd-profile-1-3.png"
+  },
+  {
+    "id": "hd-profile-1-4",
+    "type": "hd-profile",
+    "name": "1/4 Investigator/Opportunist",
+    "symbol": "1/4",
+    "personalityLine": 1,
+    "designLine": 4,
+    "personalityLineId": "hd-line-1",
+    "designLineId": "hd-line-4",
+    "description": "The 1/4 Profile combines the conscious drive to investigate and establish secure foundations (Line 1) with the unconscious need to externalize through networks and relationships (Line 4). These are researchers who share their knowledge through their community.",
+    "lifeTheme": "Building foundations of knowledge and sharing them through networks",
+    "keywords": [
+      "Researcher",
+      "Networker",
+      "Teacher",
+      "Foundation for others",
+      "Influential expert"
+    ],
+    "gifts": [
+      "Deep knowledge that benefits their network",
+      "Natural ability to teach what they've researched",
+      "Opportunities come through sharing expertise",
+      "Provides stable foundation for others",
+      "Influence through genuine knowledge"
+    ],
+    "challenges": [
+      "May hesitate to share until they feel 'expert enough'",
+      "Dependency on network for opportunities",
+      "Can become isolated in research mode",
+      "Tension between solitary study and social sharing",
+      "May over-rely on relationships for security"
+    ],
+    "relationshipStyle": "Friendships and close connections are essential. Partners are often found through their network. They teach and share knowledge within relationships.",
+    "careerGuidance": "Thrive as educators, consultants, or experts who work through personal networks. Opportunities come through who they know.",
+    "practicalGuidance": "Research deeply, then share through your network. Your knowledge is meant to be externalized and to benefit others. Cultivate relationships where you can teach and influence. Trust that opportunities will come through your connections.",
+    "image": "/images/human-design/profiles/hd-profile-1-4.png"
+  },
+  {
+    "id": "hd-profile-2-4",
+    "type": "hd-profile",
+    "name": "2/4 Hermit/Opportunist",
+    "symbol": "2/4",
+    "personalityLine": 2,
+    "designLine": 4,
+    "personalityLineId": "hd-line-2",
+    "designLineId": "hd-line-4",
+    "description": "The 2/4 Profile combines the conscious need for alone time and natural talents (Line 2) with the unconscious networking and relationship orientation (Line 4). These individuals have natural gifts that their network calls forth and helps them share.",
+    "lifeTheme": "Natural talents called out and shared through close networks",
+    "keywords": [
+      "Natural talent",
+      "Called out",
+      "Network-dependent",
+      "Selective hermit",
+      "Influential gifts"
+    ],
+    "gifts": [
+      "Natural talents that others recognize and call forth",
+      "Strong network supports and shares their gifts",
+      "Selective engagement preserves authenticity",
+      "Opportunities flow through genuine friendships",
+      "Can influence others through natural abilities"
+    ],
+    "challenges": [
+      "Tension between hermit needs and network demands",
+      "May resist being called out for their gifts",
+      "Dependency on others to recognize their talents",
+      "Can hide gifts from even close friends",
+      "Balance between alone time and relationship maintenance"
+    ],
+    "relationshipStyle": "Need partners who respect their alone time while also being part of their intimate network. Close friends are essential but limited in number.",
+    "careerGuidance": "Natural talents often become careers when called out by the right people. Work through close connections rather than cold networking.",
+    "practicalGuidance": "Honor your need for solitude while maintaining your important friendships. Wait for your network to call you out for opportunities. Your talents are real—let others help you see and share them.",
+    "image": "/images/human-design/profiles/hd-profile-2-4.png"
+  },
+  {
+    "id": "hd-profile-2-5",
+    "type": "hd-profile",
+    "name": "2/5 Hermit/Heretic",
+    "symbol": "2/5",
+    "personalityLine": 2,
+    "designLine": 5,
+    "personalityLineId": "hd-line-2",
+    "designLineId": "hd-line-5",
+    "description": "The 2/5 Profile combines the conscious need for solitude and natural talents (Line 2) with the unconscious projection field and universalizing capacity (Line 5). These individuals have natural gifts that others project savior expectations onto.",
+    "lifeTheme": "Natural talents that can provide practical solutions for the collective",
+    "keywords": [
+      "Natural talent",
+      "Projection field",
+      "Hermit savior",
+      "Universal solutions",
+      "Reputation-sensitive"
+    ],
+    "gifts": [
+      "Natural talents that can solve collective problems",
+      "Attractive projection field draws opportunities",
+      "Can universalize personal gifts for wider benefit",
+      "Solitude develops unique perspective",
+      "Charisma combined with authentic ability"
+    ],
+    "challenges": [
+      "Heavy projection expectations from strangers",
+      "Tension between hermit needs and savior projections",
+      "Reputation vulnerable when projections aren't met",
+      "May hide to avoid projection field",
+      "Paranoia about others' expectations"
+    ],
+    "relationshipStyle": "May attract partners who project savior expectations. Need relationships that honor both their solitary nature and their impact potential.",
+    "careerGuidance": "Natural talents can become vehicles for providing practical solutions. Must manage expectations and protect reputation.",
+    "practicalGuidance": "Honor your hermit needs—develop your talents in solitude. Be selective about which projections you engage with. When you do step out, offer practical solutions. Protect your reputation by not over-promising.",
+    "image": "/images/human-design/profiles/hd-profile-2-5.png"
+  },
+  {
+    "id": "hd-profile-3-5",
+    "type": "hd-profile",
+    "name": "3/5 Martyr/Heretic",
+    "symbol": "3/5",
+    "personalityLine": 3,
+    "designLine": 5,
+    "personalityLineId": "hd-line-3",
+    "designLineId": "hd-line-5",
+    "description": "The 3/5 Profile combines the conscious trial and error process (Line 3) with the unconscious projection field (Line 5). These are experiential learners whose discoveries can become practical solutions for the collective. They learn through experience and are expected to save others.",
+    "lifeTheme": "Learning through experience to provide practical solutions for others",
+    "keywords": [
+      "Experiential wisdom",
+      "Savior projections",
+      "Resilient",
+      "Practical solutions",
+      "Transformative"
+    ],
+    "gifts": [
+      "Wisdom gained through direct experience",
+      "Can transform personal trials into collective solutions",
+      "Resilience combined with influence",
+      "Practical knowledge that actually works",
+      "Charismatic despite (or because of) their journey"
+    ],
+    "challenges": [
+      "Trial and error combined with heavy projections",
+      "Reputation can suffer from experimental nature",
+      "Others may judge their 'mistakes'",
+      "Pressure to be a savior while still learning",
+      "Can feel like perpetual testing ground"
+    ],
+    "relationshipStyle": "Relationships often serve as learning experiences. Partners may project savior expectations. Bonds made and broken as part of the journey.",
+    "careerGuidance": "Career often involves transformation and providing solutions based on personal experience. May change directions multiple times.",
+    "practicalGuidance": "Embrace your experimental nature—your trials become the wisdom others need. Manage expectations carefully. Share solutions that you've actually tested. Your reputation grows through authentic, practical wisdom.",
+    "image": "/images/human-design/profiles/hd-profile-3-5.png"
+  },
+  {
+    "id": "hd-profile-3-6",
+    "type": "hd-profile",
+    "name": "3/6 Martyr/Role Model",
+    "symbol": "3/6",
+    "personalityLine": 3,
+    "designLine": 6,
+    "personalityLineId": "hd-line-3",
+    "designLineId": "hd-line-6",
+    "description": "The 3/6 Profile combines the conscious trial and error process (Line 3) with the unconscious three-part life journey toward role model status (Line 6). The first 30 years are intensely experimental, followed by observation, then embodied wisdom.",
+    "lifeTheme": "Learning through experience to become a wise role model",
+    "keywords": [
+      "Experiential learner",
+      "Role model",
+      "Three-part journey",
+      "Wisdom through trials",
+      "Trusted leader"
+    ],
+    "gifts": [
+      "Deep experiential wisdom earned through trials",
+      "Eventual objectivity and leadership",
+      "Authentic role model based on lived experience",
+      "Trustworthy because they've 'been there'",
+      "Transformation from chaos to wisdom"
+    ],
+    "challenges": [
+      "Intense trial and error, especially first 30 years",
+      "May feel like they'll never 'arrive'",
+      "Double experimental process can be exhausting",
+      "Long journey to role model status",
+      "May be impatient for the third phase"
+    ],
+    "relationshipStyle": "Early relationships often experimental. May need time on the 'roof' to gain perspective. Later relationships more stable and wise.",
+    "careerGuidance": "Career path often unconventional, especially early on. True calling may not emerge until after the observation period.",
+    "practicalGuidance": "Trust your long process. The first phase is meant to be experimental—don't judge yourself. The observation period brings perspective. When you step into role model, you'll have unmatched authenticity because you've lived it.",
+    "image": "/images/human-design/profiles/hd-profile-3-6.png"
+  },
+  {
+    "id": "hd-profile-4-6",
+    "type": "hd-profile",
+    "name": "4/6 Opportunist/Role Model",
+    "symbol": "4/6",
+    "personalityLine": 4,
+    "designLine": 6,
+    "personalityLineId": "hd-line-4",
+    "designLineId": "hd-line-6",
+    "description": "The 4/6 Profile combines the conscious network orientation (Line 4) with the unconscious three-part life journey (Line 6). Opportunities come through relationships throughout life, while the background process moves toward becoming a trusted role model.",
+    "lifeTheme": "Influence through networks, becoming a wise role model over time",
+    "keywords": [
+      "Network leader",
+      "Role model",
+      "Three-part journey",
+      "Trusted guide",
+      "Influential wisdom"
+    ],
+    "gifts": [
+      "Strong network that grows over lifetime",
+      "Eventual role model status brings trust",
+      "Opportunities flow through connections at every phase",
+      "Can influence and guide their community",
+      "Combines relationship skills with wisdom"
+    ],
+    "challenges": [
+      "First 30 years include trial and error (Line 6 process)",
+      "Dependency on network while also needing roof time",
+      "May struggle with observation period isolation",
+      "Balancing network engagement with three-part process",
+      "Patience required for role model emergence"
+    ],
+    "relationshipStyle": "Friendships essential throughout life. May experience relationship trials in first phase. Becomes a trusted guide in relationships later.",
+    "careerGuidance": "Career opportunities come through network at every stage. Later becomes a role model and mentor within their professional community.",
+    "practicalGuidance": "Cultivate your network through all phases of life. Trust the three-part process happening in the background. Your connections will recognize and support your role model emergence.",
+    "image": "/images/human-design/profiles/hd-profile-4-6.png"
+  },
+  {
+    "id": "hd-profile-4-1",
+    "type": "hd-profile",
+    "name": "4/1 Opportunist/Investigator",
+    "symbol": "4/1",
+    "personalityLine": 4,
+    "designLine": 1,
+    "personalityLineId": "hd-line-4",
+    "designLineId": "hd-line-1",
+    "description": "The 4/1 Profile combines the conscious network orientation (Line 4) with the unconscious need for foundation and investigation (Line 1). These individuals share through their network while being unconsciously driven to build solid foundations of knowledge.",
+    "lifeTheme": "Sharing knowledge through networks with a foundation of deep expertise",
+    "keywords": [
+      "Network expert",
+      "Fixed foundation",
+      "Influential teacher",
+      "Stable base",
+      "Authority through knowledge"
+    ],
+    "gifts": [
+      "Solid foundation of knowledge shared through network",
+      "Authority status earned through genuine expertise",
+      "Stable and reliable for their connections",
+      "Can teach and influence from secure base",
+      "Opportunities come through demonstrated knowledge"
+    ],
+    "challenges": [
+      "Very fixed foundation can resist change",
+      "May struggle when network challenges their knowledge",
+      "Can become rigid in their expertise",
+      "Dependency on network combined with need for security",
+      "May over-research before sharing"
+    ],
+    "relationshipStyle": "Friendships provide opportunities. Partners value their stability and expertise. May be very fixed in relationship patterns.",
+    "careerGuidance": "Become an authority in their field through deep study. Share expertise through their professional network. Very stable career path once established.",
+    "practicalGuidance": "Build your foundation of knowledge—it's your security. Share through your network from a place of genuine expertise. Your stability and reliability are valued. Be open to updating your foundation when evidence demands it.",
+    "image": "/images/human-design/profiles/hd-profile-4-1.png"
+  },
+  {
+    "id": "hd-profile-5-1",
+    "type": "hd-profile",
+    "name": "5/1 Heretic/Investigator",
+    "symbol": "5/1",
+    "personalityLine": 5,
+    "designLine": 1,
+    "personalityLineId": "hd-line-5",
+    "designLineId": "hd-line-1",
+    "description": "The 5/1 Profile combines the conscious projection field and universalizing capacity (Line 5) with the unconscious need for investigation and secure foundation (Line 1). These individuals provide practical solutions backed by solid research.",
+    "lifeTheme": "Providing practical solutions grounded in thorough investigation",
+    "keywords": [
+      "Researched solutions",
+      "Savior with substance",
+      "Influential expert",
+      "Practical wisdom",
+      "Grounded charisma"
+    ],
+    "gifts": [
+      "Solutions backed by genuine expertise",
+      "Charisma grounded in real knowledge",
+      "Can meet projections with substance",
+      "Universal applications based on solid foundation",
+      "Reputation supported by actual research"
+    ],
+    "challenges": [
+      "Projection field creates high expectations",
+      "May never feel 'researched enough' to help",
+      "Tension between savior role and insecurity",
+      "Paranoia about being 'found out'",
+      "Can hide behind research to avoid projections"
+    ],
+    "relationshipStyle": "Others project savior expectations. Partners may rely heavily on their expertise. Need relationships that see beyond the projection.",
+    "careerGuidance": "Called to provide solutions in their area of expertise. Reputation depends on genuine knowledge. Can become influential authorities.",
+    "practicalGuidance": "Let your research support your solutions. You can meet projections because you've done the homework. Don't hide behind investigation—your knowledge is meant to help others. Manage expectations while standing in your expertise.",
+    "image": "/images/human-design/profiles/hd-profile-5-1.png"
+  },
+  {
+    "id": "hd-profile-5-2",
+    "type": "hd-profile",
+    "name": "5/2 Heretic/Hermit",
+    "symbol": "5/2",
+    "personalityLine": 5,
+    "designLine": 2,
+    "personalityLineId": "hd-line-5",
+    "designLineId": "hd-line-2",
+    "description": "The 5/2 Profile combines the conscious projection field (Line 5) with the unconscious natural talents and hermit needs (Line 2). These individuals have natural gifts that others project savior expectations onto, yet they need solitude to restore.",
+    "lifeTheme": "Natural talents meeting collective expectations while honoring hermit needs",
+    "keywords": [
+      "Natural savior",
+      "Hermit with projections",
+      "Talented problem-solver",
+      "Selective engagement",
+      "Reluctant hero"
+    ],
+    "gifts": [
+      "Natural talents that can solve problems",
+      "Charisma combined with genuine ability",
+      "Solitude develops unique perspectives",
+      "Can provide practical solutions from innate gifts",
+      "Selective engagement preserves authenticity"
+    ],
+    "challenges": [
+      "Heavy projections while needing to withdraw",
+      "Others may not respect hermit needs",
+      "May not recognize their own problem-solving gifts",
+      "Reputation dependent on meeting expectations",
+      "Can feel pulled between hiding and saving"
+    ],
+    "relationshipStyle": "Need partners who respect solitude while understanding the projection field. May resist relationship demands that pull them from hermit time.",
+    "careerGuidance": "Natural gifts often become the basis for providing solutions. Need career flexibility for hermit time. Called out for their talents.",
+    "practicalGuidance": "Honor your hermit needs—you need solitude to restore. Your natural talents can meet projections, but be selective. Others will call you out when it's time to engage. Protect your alone time fiercely.",
+    "image": "/images/human-design/profiles/hd-profile-5-2.png"
+  },
+  {
+    "id": "hd-profile-6-2",
+    "type": "hd-profile",
+    "name": "6/2 Role Model/Hermit",
+    "symbol": "6/2",
+    "personalityLine": 6,
+    "designLine": 2,
+    "personalityLineId": "hd-line-6",
+    "designLineId": "hd-line-2",
+    "description": "The 6/2 Profile combines the conscious three-part life journey toward role model (Line 6) with the unconscious natural talents and hermit orientation (Line 2). The three phases unfold while natural gifts develop in the background.",
+    "lifeTheme": "Becoming a wise role model while honoring natural talents and need for solitude",
+    "keywords": [
+      "Natural role model",
+      "Talented hermit",
+      "Three-part journey",
+      "Called-out wisdom",
+      "Authentic leader"
+    ],
+    "gifts": [
+      "Natural talents that mature through the three phases",
+      "Authentic role model with innate abilities",
+      "Solitude develops unique wisdom",
+      "Eventually called out to share accumulated gifts",
+      "Trust earned through lived experience and natural talent"
+    ],
+    "challenges": [
+      "Trial and error phase while having hermit needs",
+      "May resist being called out, even for role model duties",
+      "Three-part process can feel isolating",
+      "May not recognize their own natural gifts",
+      "Balancing observation period with hermit tendency"
+    ],
+    "relationshipStyle": "Early relationships experimental. Need for solitude throughout. Later relationships honor their role model status and natural gifts.",
+    "careerGuidance": "Natural talents develop through the three phases. Eventually called out to share wisdom. Need career flexibility for hermit time.",
+    "practicalGuidance": "Trust your three-part process while honoring your hermit needs. Your natural gifts are developing through every phase. When called out to be a role model, your authentic talents will shine.",
+    "image": "/images/human-design/profiles/hd-profile-6-2.png"
+  },
+  {
+    "id": "hd-profile-6-3",
+    "type": "hd-profile",
+    "name": "6/3 Role Model/Martyr",
+    "symbol": "6/3",
+    "personalityLine": 6,
+    "designLine": 3,
+    "personalityLineId": "hd-line-6",
+    "designLineId": "hd-line-3",
+    "description": "The 6/3 Profile combines the conscious three-part life journey (Line 6) with the unconscious trial and error process (Line 3). This creates a double experimental process—intensely experiential in the first 30 years, eventually leading to profound wisdom.",
+    "lifeTheme": "Intense experiential learning leading to authentic role model wisdom",
+    "keywords": [
+      "Double experiential",
+      "Resilient wisdom",
+      "Authentic role model",
+      "Trial and triumph",
+      "Earned trust"
+    ],
+    "gifts": [
+      "Profound wisdom earned through intense experience",
+      "Most authentic role model—they've truly 'been there'",
+      "Resilience developed through double trial process",
+      "Eventually gains objectivity about their journey",
+      "Can guide others through what they've survived"
+    ],
+    "challenges": [
+      "First 30 years can feel extremely chaotic",
+      "Double experimental process is exhausting",
+      "May feel they'll never gain stability",
+      "Bonds constantly made and broken",
+      "Long wait for wisdom and recognition"
+    ],
+    "relationshipStyle": "Early relationships intensely experimental. Bonds made and broken as part of learning. Later relationships stable and wise.",
+    "careerGuidance": "Career path unconventional and changeable, especially early. True role model status emerges from professional experience and trials.",
+    "practicalGuidance": "Your first 30 years are meant to be intensely experimental—don't judge yourself. The observation period brings perspective on all you've experienced. When you step into role model status, no one will doubt your authenticity—you've earned it.",
+    "image": "/images/human-design/profiles/hd-profile-6-3.png"
+  }
+]

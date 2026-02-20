@@ -1,0 +1,238 @@
+%%tana%%
+- Codon Rings
+  - The Ring of Humanity #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-01-04T20%3A08%3A44.828Z-Humanity-1024x409-1.jpg?alt=media&token=41e1206e-4944-4e51-9445-744c7851be3d)
+    - Primary Themes::
+      - Sacred wound and human suffering
+      - Trust in the authority of the heart
+      - Archetypal human journey (wounded → battle → surrender → awakening)
+      - Love and human bonding
+    - Description:: The Sacred wound at the heart of humanity and the reason for all of our suffering can be unlocked by the Gene Keys that make up this Codon Ring. As one of the most complex codon groups, each of the six Gene Keys in this group represent an archetypal aspect of the human story, together encapsulating all the mythic elements of what it means to be a human being. Wounded from the outset (25), you must do battle with your shadows (38), overcomes the limitations of your mind (17), surrender your need to control life (21) and find your true self (10) before you can awaken (51). You can see from this very profound grouping how deeply bonded we humans are by the same basic dramas. Many of the Gene Keys in this codon group concern love and the human capacity to trust in the authority of the heart. The very blueprints of our human destiny and the future evolution of humankind lie coiled within this ring, along with the six essential human attributes truly natural and inherent to our species.
+    - Gene Keys:: 
+      - [[Gene Key 10 – Self-Obsession - Naturalness - Being^aLauSD_IylwZ]]
+      - [[Gene Key 17 – Opinion - Far-sightedness - Omniscience^I62ky66-DAnO]]
+      - [[Gene Key 21 – Control - Authority - Valour^YrTphGt8b_XZ]]
+      - [[Gene Key 25 – Constriction - Acceptance - Universal Love^92AZvG0k2Ovz]]
+      - [[Gene Key 38 – Struggle - Perseverance - Honour^B9msiprH6JBP]]
+      - [[Gene Key 51 – Agitation - Initiative - Awakening^PNzeWWBRLuHf]]
+    - Amino Acid:: [[Arginine^msu2ArOdQIoA]]
+  - The Ring of Water #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T20%3A52%3A32.127Z-image.png?alt=media&token=8e30ab42-7a8a-4da5-a838-60adc81de11c)
+    - Connected Codon Ring:: [[The Ring of Fire #codon ring]]
+    - Connection Type:: Polarity (Eternal Genetic Knot)
+    - Primary Themes::
+      - Great feminine principle (yin)
+      - Journey to self-realization
+      - Mystical figure-of-eight with Ring of Fire
+      - Balancing opposing forces
+    - Description:: The Ring of Water draws humans along their inevitable journey to self-realization. This is the great feminine ring, made of two of the prime feminine Gene Keys in the human genome. The Ring of Water forms a kind of eternal genetic knot with its polarity, the Ring of Fire. These two chemical families move us along the trajectory of our destinies, ensuring that our genetic material finds its opposite match. Even deep with the body, these chemical families set the primal blueprint for the balance of all the opposing forces inside us. It is in the crossfire of these two Codon Rings that the mystical figure-of-eight is forged within each of us. This eternal love knot deep within our planetary gene pool sets each man and each woman squarely on the human journey.
+    - Gene Keys:: 
+      - [[Gene Key 02 – Dislocation - Orientation - Unity^MIFjCMKAE5UP]]
+      - [[Gene Key 08 – Mediocrity - Style - Exquisiteness^CAlwCEhuKgVx]]
+    - Amino Acid:: [[Phenylalanine^vzeotRazTGBx]]
+  - The Ring of Illusion #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2024-12-27T21%3A16%3A03.194Z-Readout-Illusion-0000000-1024x409.jpg?alt=media&token=244955ca-a101-468e-89b2-63a994e2d11b)
+    - Primary Themes::
+      - Illusion of death and mortality
+      - Primal fear patterns
+      - Postponing life for future purpose
+      - Living totally in the present moment
+    - Description:: This binary genetic codon group is based on the illusion of death. It is coded to guide humanity through the veils of primal fear, fear of death itself, and the fears of dying unfulfilled. At the shadow level these two Gene Keys caused human beings to keep postponing their lives, seeking a sense of purpose in the future. Yet at its core, this codon ring carries the potential for humanity to break the illusion of death all together. It is through the simple understanding that – True Purpose is giving oneself one hundred percent to every moment and living totally in the present, that such an illusion is broken.
+    - Gene Keys:: 
+      - [[Gene Key 28 – Purposelessness - Totality - Immortality^IKyGdf4AdgHo]]
+      - [[Gene Key 32 – Failure - Preservation - Veneration^RvwMmVoGfaYU]]
+    - Amino Acid:: [[Asparaginic Acid^NJRf7lG-61yR]]
+  - The Ring of Light #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-05T20%3A32%3A13.999Z-image.png?alt=media&token=a3ac7332-8c5a-46b5-a754-1ad39584da3b)
+    - Primary Themes::
+      - Capturing, storing, and transmuting light
+      - Magnetic frequency of the aura
+      - Consciously raising DNA frequency
+      - Core message of Gene Keys transmission
+    - Description:: The Ring of Light forms a set of four chemical codes whose ultimate role is to determine the blueprint of how your body captures, stores, and transmutes light waves into energy. Through the magnetism of your living aura, you draw in or limit the frequencies of light deep into the cellular structure of your body. If you live your life out of fear, magnetically speaking you limit the amount of light that ‘touches’ your DNA. The more open-hearted you are, the more you magnetise higher frequencies into that very same DNA. It is only at certain frequencies that particular codes can be activated. This codon ring addresses the central message of the entire Gene Keys transmission – that you as a human being wield the power to consciously or unconsciously raise or lower the frequency of light entering your body, thereby altering your reality through the medium of your DNA.
+    - Gene Keys:: 
+      - [[Gene Key 05 – Impatience - Patience - Timelessness^StEvPmatkJuE]]
+      - [[Gene Key 09 – Inertia - Determination - Invincibility^YJvgZQYvt8u-]]
+      - [[Gene Key 11 – Obscurity - Idealism - Light^z1lOVB_OcUg8]]
+      - [[Gene Key 26 – Pride - Artfulness - Invisibility^lf98fD6q54PL]]
+    - Amino Acid:: [[Threonine^CQSKi5WxPvQV]]
+  - The Ring of Purification #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T20%3A49%3A02.276Z-image.png?alt=media&token=d1a97ce5-67d1-43ba-94ff-0dff2c25900e)
+    - Primary Themes::
+      - Progressive cycles of cleansing
+      - Relinquishing the hold of desire
+      - Processing the past
+      - Gut health and emotional digestion
+    - Description:: The Ring of Purification guides humanity to evolve through progressive cycles of cleansing and purification. It takes us on a journey through the purifying fires of consciousness where our beings begin to relinquish the hold of desire. As one of the great human genetic battlefields, there is now a large body of scientific evidence linking its amino acid, glutamine, to various functions and malfunctions in our gut. Symbolically, one might draw a connection between how effectively we human beings process our past and how effectively our body eliminates waste.
+    - Gene Keys:: 
+      - [[Gene Key 13 – Discord - Discernment - Empathy^rFSpp3txt5jb]]
+      - [[Gene Key 30 – Desire - Lightness - Rapture^m6wpaJ68ptKh]]
+    - Amino Acid:: [[Glutamine^5JsqwFlOdJcR]]
+  - The Ring of Seeking #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T15%3A46%3A18.194Z-image.png?alt=media&token=19bb89e0-62ca-4019-aec8-08997c6c6c27)
+    - Primary Themes::
+      - Evolutionary pressure and movement
+      - Dissatisfaction driving spiritual aspiration
+      - Turning inward to unlock vitality
+      - Creative force when pressure releases
+    - Description:: This Codon Ring is the great pressure codon inside human DNA. Each of the 6 Gene Keys within this group drives an aspect of human evolutionary movement. In the shadow frequency this pressure creates stress and fear. In the higher frequencies this pressure generates creativity and aspiration to rise up to greater spiritual awakening. Together these six pressures drive you to seek answers that can bring an end to the longing inside you. All seeking is therefore partially rooted in dissatisfaction, and all seeking eventually lead you inwards. It is this turning in that unlocks the huge reservoirs of vitality that are available to you when you relax enough. As you see that all seeking is simply life looking for itself, you begin to stop seeking. As the pressure within you falls away, the vital energy becomes clearer and more radiant within you.
+    - Gene Keys:: 
+      - [[Gene Key 15 – Dullness - Magnetism - Florescence^c1y1S9_77bHd]]
+      - [[Gene Key 39 – Provocation - Dynamism - Liberation^D0WL7h2NMQZ2]]
+      - [[Gene Key 52 – Stress - Restraint - Stillness^GMwaVycVxGim]]
+      - [[Gene Key 53 – Immaturity - Expansion - Superabundance^9uYEK2Xy3Alz]]
+      - [[Gene Key 54 – Greed - Aspiration - Ascension^DpfLZm9Ncvbm]]
+      - [[Gene Key 58 – Dissatisfaction - Vitality - Bliss^_STxK0ZiFbpO]]
+    - Amino Acid:: [[Serine^KJPEeXRB1SGe]]
+  - The Ring of Prosperity #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T15%3A27%3A04.848Z-image.png?alt=media&token=f17e819a-fa50-4321-9d5c-4ea22efe70c2)
+    - Primary Themes::
+      - Activating true prosperity and abundance
+      - Group synergy and collective genius
+      - Diversifying and uniting resources
+      - The mystical Guilds
+    - Description:: This codon ring is the master program in your DNA for activating true prosperity. This ring produces a high frequency generating vast abundance across the gene pools. The Ring of Prosperity shows that the more we diversify and unite our resources, the more successful and efficient we will become. Through the fusion of human talent coupled with the power of group synergy, anything becomes possible. Which leads to the mystical secrets of the Guilds – the genetic groupings of genius that when brought together can liberate prosperity exponentially throughout our civilisation.
+    - Gene Keys:: 
+      - [[Gene Key 16 – Indifference - Versatility - Mastery^3Iu5S2WpgaFT]]
+      - [[Gene Key 45 – Dominance - Synergy - Communion^F7xdWvGolp4l]]
+    - Amino Acid:: [[Cysteine^TfnOZhmOxMKr]]
+  - The Ring of Divinity #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T14%3A53%3A46.613Z-image.png?alt=media&token=18fc20d0-9985-4722-84ff-73b4922294f4)
+    - Primary Themes::
+      - Christ consciousness and divine archetypes
+      - Equality in suffering and redemption
+      - Transformation through emotional challenges
+      - Doubt, humanity, grace, and truth
+    - Description:: Deeply connected to the true meaning of the Christ consciousness, the Ring of Divinity and its four genetic archetypes have the capacity to awaken the highest consciousness inside you, and will bring the eventual manifestation of the full Divine Being into the world. The Ring of Divinity reveals a great Truth (63) — all humans are made equal in this suffering (the 37th Gift of Equality). Doubt makes us human (The 36th Gift of Humanity) and leads us to a certain Graciousness (the 22nd Gift) in respect of how we treat others. Because of its connection to the 22nd Gene Key, this codon ring has much to do with the transformation of human awareness through suffering. It will bring intense emotional experiences and challenges to your life, but ultimately this codon group is about Redemption.
+    - Gene Keys:: 
+      - [[Gene Key 22 – Dishonour - Graciousness - Grace^l6g4m_sVcBTC]]
+      - [[Gene Key 36 – Turbulence - Humanity - Compassion^2xvlAVwNLL_8]]
+      - [[Gene Key 37 – Weakness - Equality - Tenderness^h7-rDaJoO1Cx]]
+      - [[Gene Key 63 – Doubt - Inquiry - Truth^IYS_HuQT8CXZ]]
+    - Amino Acid:: [[Proline^RNmZfDG1CYpN]]
+  - The Ring of No Return #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T16%3A07%3A31.168Z-image.png?alt=media&token=d15a3b3f-ea05-4800-b04e-1c95f290fe58)
+    - Primary Themes::
+      - Throat center initiation
+      - Leap from 4th causal to 5th buddhic body
+      - Speaking higher truth
+      - From worship to embodiment
+    - Description:: This mysteriously named codon, the Ring of No Return, refers to the evolutionary process that takes place when higher consciousness reaches the throat centre in human beings. The throat centre is where the greatest human initiation occurs. This is the great leap from the 4th causal body into the 5th buddhic body. Once you begin to speak your truth and the higher involutionary currents begin to use your voice to transmit their truths, there is No Return. At this point you have broken away from the lower realms forever, taking the leap from worship to embodiment.
+    - Gene Keys:: 
+      - [[Gene Key 31 – Arrogance - Leadership - Humility^mhdrT2NwGQ74]]
+      - [[Gene Key 62 – Intellect - Precision - Impeccability^5HPuerwg1ttB]]
+    - Amino Acid:: [[Tyrosine^4VPbiZZcqaHb]]
+  - The Ring of Destiny #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T20%3A43%3A02.523Z-image.png?alt=media&token=088e0be9-a8e2-42e7-b9b5-d9f152fca5a1)
+    - Primary Themes::
+      - Evolution + Involution meeting
+      - Spirit entering matter as divinity
+      - Secret of timing
+      - Chance and love dancing together
+    - Description::
+      -
+      - It is through the Ring of Destiny that the two great forces of evolution and involution come together. Human destiny is caught between the polarity of these two Gene Keys, with the 34th representing the human urge to evolve and become more, and the 43rd representing the Divine urge to involve and dive down into the world of form. In the Ring of Destiny the epiphany of the higher planes encounters and infuses the majestic of the body on the lower planes. The result is pure fusion, as spirit enters matter and imbues it with divinity. The secret of this codon ring is the secret of timing, and down through the ages it has whispered a great truth into the ears of those whose insight is developed enough to hear it — life is a mystery in which chance and love are dancing together.
+    - Gene Keys:: 
+      - [[Gene Key 34 – Force - Strength - Majesty^yZxjA3H3hS8p]]
+      - [[Gene Key 43 – Deafness - Insight - Epiphany^hWbKlpnjQjuF]]
+    - Amino Acid:: [[Asparagine^YgrjZ0y4bxKD]]
+  - The Ring of Miracles #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T20%3A47%3A04.727Z-image.png?alt=media&token=965c33b5-78ca-45b8-a8b6-3cfe73961cdf)
+    - Primary Themes::
+      - Boundlessness and childlike possibility
+      - Breaking the laws of form
+      - Manifesting the miraculous
+      - Freedom from limiting beliefs
+    - Description:: As the single heart of the Ring of Miracles, the 35th Gene Key brings the miraculous into the world. It opens up all kinds of possibilities to those who allow their minds to become like a child’s. To the child, anything seems possible — this is the state of boundlessness. To activate such streams of miracles, you have to break free from the beliefs and limitations imposed on your mind by the world and those around you. Throughout history, men have flown, ascended and dematerialized right before people’s eyes. Anything is possible in the Ring of Miracles. It asks us to break the laws of form and to manifest miracles so that people can expand their awareness and open their hearts to a greater mode of being.
+    - Gene Keys:: [[Gene Key 35 – Hunger - Adventure - Boundlessness^tAKXG4-3lNe5]]
+    - Amino Acid:: [[Tryptophan^mfkTegQ8cIme]]
+  - The Ring of Matter #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T15%3A33%3A02.138Z-image.png?alt=media&token=28ef4353-9455-4f36-8095-754d6fffd84e)
+    - Primary Themes::
+      - Incarnation from conception to age 21
+      - Spirit penetrating matter
+      - Physical, emotional, mental health infrastructure
+      - Developmental phases and imprinting
+    - Description:: The Ring of Matter and its 4 specific Gene Keys program the human developmental process of incarnation from the point of conception to the age of 21. It is through this codon ring that spirit first penetrates into the world of matter and releases its true radiance. Throughout each of these cycles, the Codon Ring of Matter and its associated Gene Keys play a crucial role through continued testing of the outer environment. Essentially, these Gene Keys are looking for constant biofeedback so that the child can orient itself in the world in a healthy manner. The three phases – physical, emotional and mental – are governed by the 46th, 48th, and 18th Gene Keys respectively, whereas the 57th Gene Key lays down even deeper seeds of these three phases through the three trimesters during gestation. Thus this codon ring is of huge importance at the developmental level as it governs the very infrastructure of our physical, emotional and mental health.
+    - Gene Keys:: 
+      - [[Gene Key 18 – Judgement - Integrity - Perfection^hcrUa-yAP_ui]]
+      - [[Gene Key 46 – Seriousness - Delight - Ecstasy^3ryXHW3zny44]]
+      - [[Gene Key 48 – Inadequacy - Resourcefulness - Wisdom^GcpLGgd50xYe]]
+      - [[Gene Key 57 – Unease - Intuition - Clarity^WKsiev5BKT7m]]
+    - Amino Acid:: [[Alanine^ka9UtZLA_8hX]]
+  - The Ring of Alchemy #[[codon ring]]
+    - Codon Ring Image::
+      -  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T15%3A34%3A18.382Z-image.png?alt=media&token=e5d3481c-a270-4ddf-b97e-92b7a120793b)  #img
+        - Image Type:: [[Codon Ring^yV_NFgiwLZgm]]
+        - Gene Keys::
+          - [[Gene Key 06 – Conflict - Diplomacy - Peace^UkmjHiR35Vx4]]
+          - [[Gene Key 40 – Exhaustion - Resolve - Divine Will^1UxMIm72DxTS]]
+          - [[Gene Key 47 – Oppression - Transmutation - Transfiguration^mIqttYFYHwAz]]
+          - [[Gene Key 64 – Confusion - Imagination - Illumination^aPdAy08ZjHSG]]
+    - Primary Themes::
+      - DNA transmutation and transformation
+      - Karmic release and subtle body manifestation
+      - Peace on earth through alchemical process
+      - Breaking barriers in relationships and communities
+    - Description:: This very powerful genetic grouping, known as the Ring of Alchemy, plays a pivotal role in the transformation of the human species. Each of these four Gene Keys will transmute your DNA so that there is no longer any interference in your physical body. This is a very powerful genetic grouping; the 6th Gift is breaking down the barriers in human relationships, the 40th Gift is forging this new openness into our communities, the 47th Gift is allowing us to transform our old ways and the 64th Gift is opening us to a fresh set of possibilities for living in a new way. This is the job of this codon ring, to activate a process of karmic release that allows your highest subtle bodies to manifest directly through your physical body. By transforming our old ways and opening us to a fresh set of possibilities, these deep alchemical process will gradually bring peace to earth.
+    - Gene Keys:: 
+      - [[Gene Key 06 – Conflict - Diplomacy - Peace^UkmjHiR35Vx4]]
+      - [[Gene Key 40 – Exhaustion - Resolve - Divine Will^1UxMIm72DxTS]]
+      - [[Gene Key 47 – Oppression - Transmutation - Transfiguration^mIqttYFYHwAz]]
+      - [[Gene Key 64 – Confusion - Imagination - Illumination^aPdAy08ZjHSG]]
+    - Amino Acid:: [[Glysine^LbGNv9aCnixW]]
+  - The Ring of Fire #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2025-10-03T20%3A37%3A24.472Z-image.png?alt=media&token=fc0ac45d-285a-4313-b3e5-7703f1927f06)
+    - Connected Codon Ring:: [[The Ring of Water #codon ring]]
+    - Connection Type:: Polarity (Eternal Genetic Knot)
+    - Primary Themes::
+      - Divine fire and creative power
+      - Beauty and bounteousness (Siddhic union)
+      - Genius, freshness, and newness
+      - Fully engaged or fully at rest
+    - Description:: When the inner divine fire is released through your DNA, you become capable of miraculous power. The Codon Ring of Fire unites the two Siddhis of Beauty and Bounteousness. As such, it represents the energetic gem at the heart of creation and the purpose of existence itself — to create that which is endlessly beautiful and to imbue it with the awareness of this endless beauty. Genius is intimately connected to this idea of freshness and newness. When your fire is burning, everyone wants to gather around you and partake of your warmth and inspiration. But when your fire dies to a mere flicker, it is as though you become unnoticeable. If you then try to rekindle your creativity through force of will, you will only end up making huge compromises, both with yourself and with others. For the Ring of Fire, life is either fully engaged or completely at rest.
+    - Gene Keys:: 
+      - [[Gene Key 01 – Entropy - Freshness - Beauty^qkDhFKatmtW8]]
+      - [[Gene Key 14 – Compromise - Competence - Bounteousness^Y_FQlbfp1rQ4]]
+    - Amino Acid:: [[Lysine^HY4qncAYXWJH]]
+  - The Ring of Gaia #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2024-12-27T21%3A49%3A54.869Z-Readout-Gaia-0000000-1024x409.jpg?alt=media&token=aa7721e8-34ba-426a-96dd-164360483cf7)
+    - Primary Themes::
+      - Planetary consciousness and unity
+      - All beings sharing one destiny
+      - Ecosystem awareness across life forms
+      - Quantum unity and inner truth
+    - Description:: The Ring of Gaia holds the blueprint that all beings that share this planet earth will eventually once again live in union. This genetic grouping allows (or prevents) awareness to move between different life forms and connect all beings on earth along the same initiatory journey. Through the Ring of Gaia we can see how our ecosystem — the living, breathing diversity of the blue/green planet and all its life forms — is destined to discover its own inner truth as one entity. This codon ring shows that evolution is a force that is breaking out from inside us, and that to unlock its secrets we have only to look inward. All life forms, whether sentient or inanimate, are designed to experience quantum unity and discover its destiny together as one entity. The Ring of Gaia contains the wisdom that everything, from the tiniest nanoparticle to the cosmos itself has the same shining jewel of inner truth at its core.
+    - Gene Keys:: 
+      - [[Gene Key 19 – Co-dependence - Sensitivity - Sacrifice^kCzume3LYHCh]]
+      - [[Gene Key 60 – Limitation - Realism - Justice^JDKnrZEu4ymi]]
+      - [[Gene Key 61 – Psychosis - Inspiration - Sanctity^H11FFxUrEJGb]]
+    - Amino Acid:: [[Isoleucine^hQRYhW0DTRoV]]
+  - The Ring of Trials #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2024-12-27T21%3A39%3A50.253Z-Trials-1024x409-1-1.jpg?alt=media&token=8824b2e4-20e1-407f-a91e-48c45dfa22a2)
+    - Primary Themes::
+      - Stop codons sealing energy leaks
+      - Hero's journey and mythical trials
+      - Unplugging from outer senses
+      - Testing humanity toward self-realization
+    - Description:: The 3 Gene Keys that make up this unique codon group are related to what science terms the 'stop' or 'terminator' codons. Behaving as a seal that closes up the places where we leak energy, such chemical punctuation marks have an unusual role of importance within the totality of the genetic code itself. When activated, this codon ring begins to unplug humanity from the illusory world of the outer senses. On a purely archetypal level, the three stop codons of this Ring of Trials, lay out the great dramatic script of evolution itself, testing human beings on their road to self realization. Every human awakening must arouse the hero or heroine inside, and that inner being must face its mythical trials.
+    - Gene Keys:: 
+      - [[Gene Key 12 – Vanity - Discrimination - Purity^gOXRXJEoM8BV]]
+      - [[Gene Key 33 – Forgetting - Mindfulness - Revelation^bVGyoVJ2tLyk]]
+      - [[Gene Key 56 – Distraction - Enrichment - Intoxication^VT9x2OZKKpTq]]
+    - Amino Acid:: [[Terminator (Stop Codon)^JozbH9-AOJ-P]]
+  - The Ring of Union #[[codon ring]]
+    - Codon Ring Image::  ![](https://firebasestorage.googleapis.com/v0/b/tagr-prod.appspot.com/o/notespace%2Ffis%40fisfraga.com%2Fuploads%2F2024-12-27T20%3A40%3A22.797Z-ring%20union.jpg?alt=media&token=389a54ea-a4f0-44a1-a42c-c4e3ee21f1db)
+    - Primary Themes::
+      - Purifying human relationships
+      - Collective leadership emergence
+      - Transformation of sexuality and gender
+      - Virtue, forgiveness, devotion, transparency
+    - Description:: The ultimate role of the Ring of Union is in the purification of human relationships across our planet. Containing the collective codes to bring the human family into realization of its state of higher union, these four Gene Keys have long governed human relationship patterns (and their dysfunction) on our planet. The combined dynamic of virtue with forgiveness, devotion and transparency, sets the stage for a completely new phenomenon to be seeded in humanity — collective leadership. This Codon Ring is currently undergoing a great deal of spontaneous mutation in our DNA and is directly responsible for a huge shift in the way in which we humans relate, particularly through our sexuality and gender.
+    - Gene Keys:: 
+      - [[Gene Key 04 – Intolerance - Understanding - Forgiveness^Nz6vWnn9d3wv]]
+      - [[Gene Key 07 – Division - Guidance - Virtue^RCAcIuEgHNCM]]
+      - [[Gene Key 29 – Half-heartedness - Commitment - Devotion^gKtsiLmdvBTe]]
+      - [[Gene Key 59 – Dishonesty - Intimacy - Transparency^waswaFJzUAnL]]
+    - Amino Acid:: [[Valine^dCLAczxduBuc]]
+    -

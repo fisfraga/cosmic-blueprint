@@ -1,0 +1,1277 @@
+[
+  {
+    "id": "hd-determination-appetite",
+    "type": "hd-variable",
+    "name": "Appetite",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 1,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "The Appetite determination relates to eating based on hunger signals and selective food choices. This is about eating what your body craves in the moment, following genuine appetite rather than schedules or plans.",
+    "physicalApplication": "Eat only when genuinely hungry. Let your body's natural appetite guide what and when you eat. Be selective about food—your body knows what it needs.",
+    "keywords": [
+      "Hunger",
+      "Selectivity",
+      "Craving",
+      "Instinct"
+    ],
+    "environmentalSupport": "Private or quiet eating environments where you can tune into your body's signals without distraction",
+    "challenges": [
+      "Eating on schedule when not hungry",
+      "Social pressure to eat",
+      "Ignoring appetite signals"
+    ],
+    "practicalGuidance": "Pay attention to what your body actually wants to eat. Don't force meals when you're not hungry. Your appetite is intelligent—trust it.",
+    "image": "/images/human-design/variables/hd-determination-appetite.png"
+  },
+  {
+    "id": "hd-determination-taste",
+    "type": "hd-variable",
+    "name": "Taste",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 2,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Taste determination means your body processes food best when you can fully taste and savor it. Eating should be a sensory experience where you're present with flavors.",
+    "physicalApplication": "Eat slowly and mindfully, savoring each bite. Choose foods with distinct, satisfying flavors. Avoid eating while distracted—taste needs your full attention.",
+    "keywords": [
+      "Flavor",
+      "Savoring",
+      "Mindful eating",
+      "Sensory"
+    ],
+    "environmentalSupport": "Calm, pleasant environments where you can focus on the eating experience without rushing",
+    "challenges": [
+      "Eating too quickly",
+      "Distracted eating",
+      "Bland or monotonous foods"
+    ],
+    "practicalGuidance": "Your digestion works best when you truly taste your food. Make meals an experience. If you can't taste it properly, your body won't process it optimally.",
+    "image": "/images/human-design/variables/hd-determination-taste.png"
+  },
+  {
+    "id": "hd-determination-thirst",
+    "type": "hd-variable",
+    "name": "Thirst",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 3,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Thirst determination indicates that hydration plays a crucial role in your digestion. Water and liquid intake are essential partners to your food consumption.",
+    "physicalApplication": "Drink water before, during, or after meals as your body indicates. Pay attention to thirst signals. Soups, broths, and water-rich foods support your digestion.",
+    "keywords": [
+      "Hydration",
+      "Liquids",
+      "Water",
+      "Fluidity"
+    ],
+    "environmentalSupport": "Access to clean water and an awareness of your body's hydration needs throughout the day",
+    "challenges": [
+      "Ignoring thirst",
+      "Dehydration",
+      "Separating eating from drinking artificially"
+    ],
+    "practicalGuidance": "Your relationship with water is key to your wellbeing. Stay hydrated and include liquid-rich foods. Don't ignore thirst signals—they're connected to your overall digestion.",
+    "image": "/images/human-design/variables/hd-determination-thirst.png"
+  },
+  {
+    "id": "hd-determination-touch",
+    "type": "hd-variable",
+    "name": "Touch",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 4,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Touch determination means texture matters profoundly for your digestion. The physical feel of food—crunchy, smooth, chewy—impacts how well you process it.",
+    "physicalApplication": "Pay attention to food textures. Notice which textures feel satisfying versus off-putting. Vary textures in your meals for optimal satisfaction.",
+    "keywords": [
+      "Texture",
+      "Mouthfeel",
+      "Physical sensation",
+      "Tactile"
+    ],
+    "environmentalSupport": "Foods prepared with attention to texture, environments where you can physically engage with your food",
+    "challenges": [
+      "Ignoring textural preferences",
+      "Forcing foods with unpleasant textures",
+      "Not varying texture enough"
+    ],
+    "practicalGuidance": "Texture is your guide. If a food texture feels wrong, your body is telling you something. Experiment with different textures to find what supports your digestion best.",
+    "image": "/images/human-design/variables/hd-determination-touch.png"
+  },
+  {
+    "id": "hd-determination-sound",
+    "type": "hd-variable",
+    "name": "Sound",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 5,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Sound determination indicates that the auditory environment during eating affects your digestion. Sounds of food (crunching, sizzling) and ambient noise matter.",
+    "physicalApplication": "Notice how different sound environments affect your eating experience. Some need silence to eat well; others digest better with pleasant background sounds.",
+    "keywords": [
+      "Audio",
+      "Silence",
+      "Ambiance",
+      "Acoustic"
+    ],
+    "environmentalSupport": "Control over your auditory environment during meals—whether that means quiet or specific types of sound",
+    "challenges": [
+      "Jarring or stressful sounds during meals",
+      "Unable to control eating environment acoustics"
+    ],
+    "practicalGuidance": "Pay attention to how sounds affect your eating. Create an auditory environment that supports your digestion, whether that's silence, music, or natural sounds.",
+    "image": "/images/human-design/variables/hd-determination-sound.png"
+  },
+  {
+    "id": "hd-determination-light",
+    "type": "hd-variable",
+    "name": "Light",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 6,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Light determination means lighting conditions during eating affect your digestion. Natural light, dim light, or specific lighting conditions optimize your food processing.",
+    "physicalApplication": "Notice how different lighting affects your eating. Some digest best in natural daylight; others prefer softer, dimmer lighting during meals.",
+    "keywords": [
+      "Illumination",
+      "Natural light",
+      "Ambiance",
+      "Visual"
+    ],
+    "environmentalSupport": "Control over lighting during meals—access to natural light or ability to adjust artificial lighting",
+    "challenges": [
+      "Harsh artificial lighting during meals",
+      "Eating in complete darkness",
+      "Ignoring how light affects appetite"
+    ],
+    "practicalGuidance": "Lighting isn't just about seeing your food—it affects your entire digestive process. Experiment with different lighting conditions to find what supports you best.",
+    "image": "/images/human-design/variables/hd-determination-light.png"
+  },
+  {
+    "id": "hd-determination-open-taste",
+    "type": "hd-variable",
+    "name": "Open Taste",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 2,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Open Taste is the receptive version of taste determination. You're designed to be exposed to a wide variety of flavors and cuisines. Dietary openness supports your digestion.",
+    "physicalApplication": "Explore diverse cuisines and flavors. Be adventurous with food. Your body thrives on variety rather than routine eating patterns.",
+    "keywords": [
+      "Variety",
+      "Adventure",
+      "Exploration",
+      "Diversity"
+    ],
+    "environmentalSupport": "Access to diverse food options, cultural variety in cuisine, social eating situations that expose you to new foods",
+    "challenges": [
+      "Dietary restriction or monotony",
+      "Fear of new foods",
+      "Limited food access"
+    ],
+    "practicalGuidance": "Your digestion is stimulated by novelty. Don't get stuck in food ruts. Let others introduce you to new flavors and cuisines—your body loves the variety.",
+    "image": "/images/human-design/variables/hd-determination-open-taste.png"
+  },
+  {
+    "id": "hd-determination-nervous",
+    "type": "hd-variable",
+    "name": "Nervous",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 1,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Nervous determination indicates that your nervous system state directly affects digestion. You need to feel safe and calm to eat well—or may eat better with slight stimulation.",
+    "physicalApplication": "Notice your nervous system state before eating. Create conditions that help you feel safe. Some process food better with gentle movement or mild activity around meals.",
+    "keywords": [
+      "Calm",
+      "Safety",
+      "Nervous system",
+      "Regulation"
+    ],
+    "environmentalSupport": "Eating environments that feel safe and regulate your nervous system appropriately",
+    "challenges": [
+      "Eating while stressed or anxious",
+      "High-pressure dining situations",
+      "Ignoring body stress signals"
+    ],
+    "practicalGuidance": "Your nervous system and digestion are deeply connected. Don't eat when you're stressed if you can help it. Find what calms your system before meals.",
+    "image": "/images/human-design/variables/hd-determination-nervous.png"
+  },
+  {
+    "id": "hd-determination-high-sound",
+    "type": "hd-variable",
+    "name": "High Sound",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 5,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "High Sound determination means you digest best with active, vibrant sound environments. Bustling restaurants, conversation, or lively atmospheres support your eating.",
+    "physicalApplication": "Eat in social or lively environments. Background activity, conversation, and ambient sound actually support your digestion rather than distract from it.",
+    "keywords": [
+      "Social",
+      "Lively",
+      "Active",
+      "Stimulating"
+    ],
+    "environmentalSupport": "Busy cafes, family dinners, social eating situations with conversation and ambient activity",
+    "challenges": [
+      "Eating in isolation or silence",
+      "Overly quiet dining environments",
+      "Lack of social eating opportunities"
+    ],
+    "practicalGuidance": "You're designed for communal eating. The energy of others and ambient activity actually helps you digest. Seek out social meals when possible.",
+    "image": "/images/human-design/variables/hd-determination-high-sound.png"
+  },
+  {
+    "id": "hd-determination-direct-light",
+    "type": "hd-variable",
+    "name": "Direct Light",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 6,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Direct Light determination indicates you need bright, direct lighting to eat optimally. Outdoor eating in daylight or well-lit spaces support your digestion.",
+    "physicalApplication": "Eat in well-lit environments. Outdoor meals in natural light are ideal. Avoid dim, dark eating spaces when possible.",
+    "keywords": [
+      "Brightness",
+      "Daylight",
+      "Outdoor",
+      "Clarity"
+    ],
+    "environmentalSupport": "Outdoor dining, bright restaurants, spaces with abundant natural light during meals",
+    "challenges": [
+      "Dim restaurants",
+      "Eating at night in low light",
+      "Windowless eating spaces"
+    ],
+    "practicalGuidance": "Light energizes your digestion. Seek bright environments for meals. If eating at night, ensure good lighting. Consider breakfast or lunch as your main meals.",
+    "image": "/images/human-design/variables/hd-determination-direct-light.png"
+  },
+  {
+    "id": "hd-determination-wet",
+    "type": "hd-variable",
+    "name": "Wet",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 3,
+    "color": 3,
+    "colorName": "Kitchens",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Wet determination indicates a need for hot, cooked, wet foods. Soups, stews, steamed vegetables, and warm beverages support your digestion best.",
+    "physicalApplication": "Emphasize cooked, moist foods. Soups, stews, porridges, and steamed dishes are ideal. Avoid excessive raw or dry foods.",
+    "keywords": [
+      "Cooked",
+      "Moist",
+      "Warm",
+      "Steamed"
+    ],
+    "environmentalSupport": "Access to home cooking, warm meal preparation, quality soups and stews",
+    "challenges": [
+      "Cold, raw diets",
+      "Dry, processed foods",
+      "Lack of cooking access"
+    ],
+    "practicalGuidance": "Your body processes wet, cooked foods best. Invest in warm meal preparation. Soups can be medicine for you—make them a dietary staple.",
+    "image": "/images/human-design/variables/hd-determination-wet.png"
+  },
+  {
+    "id": "hd-determination-dry",
+    "type": "hd-variable",
+    "name": "Dry",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 3,
+    "color": 4,
+    "colorName": "Mountains",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Dry determination indicates you process food best when it's dry, raw, or minimally processed. Fresh fruits, vegetables, nuts, and dried foods support your digestion.",
+    "physicalApplication": "Include raw and dry foods—salads, fresh fruits, nuts, dehydrated foods. You don't need everything cooked and warm; your body handles raw well.",
+    "keywords": [
+      "Raw",
+      "Fresh",
+      "Dry",
+      "Unprocessed"
+    ],
+    "environmentalSupport": "Access to fresh produce, quality raw foods, minimal processing in food preparation",
+    "challenges": [
+      "Heavy, wet meals",
+      "Over-cooked foods",
+      "Lack of fresh options"
+    ],
+    "practicalGuidance": "Your digestion works well with raw and dry foods. Don't force yourself to eat hot meals if your body prefers fresh, raw options. Listen to that preference.",
+    "image": "/images/human-design/variables/hd-determination-dry.png"
+  },
+  {
+    "id": "hd-determination-hot",
+    "type": "hd-variable",
+    "name": "Hot",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 4,
+    "color": 3,
+    "colorName": "Kitchens",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Hot determination means you need your food at warm or hot temperatures. Cold foods slow your digestion; warmth activates it.",
+    "physicalApplication": "Eat warm and hot foods. Avoid cold drinks with meals. Let refrigerated food come to room temperature or warm it before eating.",
+    "keywords": [
+      "Warm",
+      "Heated",
+      "Temperature",
+      "Thermal"
+    ],
+    "environmentalSupport": "Kitchen access for warming food, avoiding excessive refrigerated meals, warm beverage habits",
+    "challenges": [
+      "Cold foods and drinks",
+      "Raw food diets",
+      "Eating straight from the refrigerator"
+    ],
+    "practicalGuidance": "Temperature matters for you. Don't eat cold leftovers straight from the fridge. Take time to warm your food—your body will thank you.",
+    "image": "/images/human-design/variables/hd-determination-hot.png"
+  },
+  {
+    "id": "hd-determination-cold",
+    "type": "hd-variable",
+    "name": "Cold",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 4,
+    "color": 4,
+    "colorName": "Mountains",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Cold determination indicates that cold or room temperature foods work well for your digestion. You don't need everything heated—cool and raw foods support you.",
+    "physicalApplication": "Include cold and room temperature foods. Salads, cold beverages, chilled dishes, and raw foods can be primary rather than occasional.",
+    "keywords": [
+      "Cool",
+      "Fresh",
+      "Chilled",
+      "Raw"
+    ],
+    "environmentalSupport": "Access to fresh, cold foods, quality salads and raw preparations, cold beverage options",
+    "challenges": [
+      "Forcing hot meals",
+      "Avoiding cold foods",
+      "Over-heating food"
+    ],
+    "practicalGuidance": "Your body doesn't need everything warm. Cold foods and drinks can actually support your digestion. Trust this even if it goes against common dietary advice.",
+    "image": "/images/human-design/variables/hd-determination-cold.png"
+  },
+  {
+    "id": "hd-determination-calm",
+    "type": "hd-variable",
+    "name": "Calm",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 1,
+    "color": 5,
+    "colorName": "Valleys",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Left",
+    "description": "Calm determination means you need peaceful, serene environments to eat well. Stress during eating directly impairs your digestion.",
+    "physicalApplication": "Create calm eating environments. Avoid eating while stressed, working, or in conflict. Peace is essential for your digestive process.",
+    "keywords": [
+      "Peace",
+      "Serenity",
+      "Relaxed",
+      "Gentle"
+    ],
+    "environmentalSupport": "Quiet dining spaces, absence of conflict or stress during meals, mindful eating practices",
+    "challenges": [
+      "Eating during stressful situations",
+      "Working lunches",
+      "Family conflict at meals"
+    ],
+    "practicalGuidance": "Your nervous system must be calm for optimal digestion. If stressed, consider skipping a meal rather than eating in that state. Peace first, food second.",
+    "image": "/images/human-design/variables/hd-determination-calm.png"
+  },
+  {
+    "id": "hd-determination-alternating",
+    "type": "hd-variable",
+    "name": "Alternating",
+    "symbol": "⚙",
+    "category": "Determination",
+    "categoryDescription": "How your body is designed to take in and process food and nutrition",
+    "tone": 2,
+    "color": 6,
+    "colorName": "Shores",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Left",
+    "description": "Alternating determination indicates your dietary needs shift in cycles. Sometimes you need one type of food; other times, the opposite. Flexibility is key.",
+    "physicalApplication": "Don't lock yourself into rigid dietary rules. Notice how your needs shift over days, weeks, or seasons. What works now may not work later—and that's correct for you.",
+    "keywords": [
+      "Flexible",
+      "Cyclical",
+      "Adaptive",
+      "Variable"
+    ],
+    "environmentalSupport": "Dietary freedom, access to variety, permission to change eating patterns",
+    "challenges": [
+      "Rigid diets",
+      "Fixed meal plans",
+      "Judgment about changing preferences"
+    ],
+    "practicalGuidance": "Your body's needs naturally alternate. One week you might crave hot foods; the next, cold. Trust these shifts—they're intelligent. Don't force consistency.",
+    "image": "/images/human-design/variables/hd-determination-alternating.png"
+  },
+  {
+    "id": "hd-cognition-smell",
+    "type": "hd-variable",
+    "name": "Smell",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 1,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Smell cognition means you literally perceive information through scent and metaphorically through 'sniffing out' what's correct. Your sense of smell guides awareness.",
+    "mentalApplication": "Trust your nose—both literally and figuratively. When something 'smells off,' pay attention. Your olfactory sense is connected to deep intuitive knowing.",
+    "keywords": [
+      "Scent",
+      "Instinct",
+      "Sensing",
+      "Alertness"
+    ],
+    "perceptionStrength": "Ability to sense what's 'off' or 'right' before logic confirms it",
+    "challenges": [
+      "Ignoring gut instincts",
+      "Overriding subtle sensing with logic",
+      "Environments with artificial scents"
+    ],
+    "practicalGuidance": "Your cognition works through scent awareness. Notice how smells affect your perception. When you sense something is 'off,' investigate before dismissing it.",
+    "image": "/images/human-design/variables/hd-cognition-smell.png"
+  },
+  {
+    "id": "hd-cognition-taste",
+    "type": "hd-variable",
+    "name": "Taste",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 2,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Taste cognition means you perceive information through discernment and selection. You have refined taste in ideas, people, and experiences—and should trust it.",
+    "mentalApplication": "Trust your taste. When something doesn't 'taste right'—an idea, a person, a decision—honor that discrimination. Your selectivity is intelligent.",
+    "keywords": [
+      "Discernment",
+      "Selection",
+      "Refinement",
+      "Quality"
+    ],
+    "perceptionStrength": "Ability to distinguish quality and appropriateness in subtle ways",
+    "challenges": [
+      "Forced acceptance of poor quality",
+      "Overriding taste to please others",
+      "Not trusting your selectivity"
+    ],
+    "practicalGuidance": "Your cognition is discriminating. You naturally taste what's quality versus mediocre. Trust this even when others don't understand your selectivity.",
+    "image": "/images/human-design/variables/hd-cognition-taste.png"
+  },
+  {
+    "id": "hd-cognition-outer-vision",
+    "type": "hd-variable",
+    "name": "Outer Vision",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 3,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Outer Vision cognition means you perceive through watching the external world. You're designed to observe patterns, movement, and visual information in your environment.",
+    "mentalApplication": "Watch what's happening around you. Your visual perception of external events gives you information. You learn by observing rather than just thinking.",
+    "keywords": [
+      "Observation",
+      "Watching",
+      "External focus",
+      "Visual awareness"
+    ],
+    "perceptionStrength": "Ability to notice what's happening in your environment and spot visual patterns",
+    "challenges": [
+      "Too much inward focus",
+      "Ignoring visual cues",
+      "Not looking around enough"
+    ],
+    "practicalGuidance": "Keep your eyes on the external world. Your cognition works through watching. If you need clarity, look around—the visual environment holds information for you.",
+    "image": "/images/human-design/variables/hd-cognition-outer-vision.png"
+  },
+  {
+    "id": "hd-cognition-inner-vision",
+    "type": "hd-variable",
+    "name": "Inner Vision",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 4,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Inner Vision cognition means you perceive through internal visualization. Closing your eyes, imagining, and inner seeing are how you process information.",
+    "mentalApplication": "Close your eyes to think. Visualize scenarios internally. Your cognition works best when you turn inward and see with your mind's eye.",
+    "keywords": [
+      "Visualization",
+      "Imagination",
+      "Inner seeing",
+      "Mental imagery"
+    ],
+    "perceptionStrength": "Ability to visualize, imagine, and see possibilities internally",
+    "challenges": [
+      "Too much external stimulation",
+      "Not taking time to visualize",
+      "Dismissing imagination as unproductive"
+    ],
+    "practicalGuidance": "Your cognition needs inner space. Close your eyes, visualize, imagine. Major decisions deserve internal visualization time—your inner vision shows you possibilities.",
+    "image": "/images/human-design/variables/hd-cognition-inner-vision.png"
+  },
+  {
+    "id": "hd-cognition-feeling",
+    "type": "hd-variable",
+    "name": "Feeling",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 5,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Feeling cognition means you perceive through emotional and physical feeling states. Your body's feelings carry information—sensations, emotions, and felt sense guide you.",
+    "mentalApplication": "Check how things feel in your body. Emotions and physical sensations are data. When making decisions, notice what you feel rather than just what you think.",
+    "keywords": [
+      "Sensation",
+      "Emotion",
+      "Body wisdom",
+      "Felt sense"
+    ],
+    "perceptionStrength": "Ability to sense through feeling states what the mind alone cannot know",
+    "challenges": [
+      "Ignoring feelings as 'irrational'",
+      "Over-reliance on logic",
+      "Disconnection from body"
+    ],
+    "practicalGuidance": "Your cognition is feeling-based. When you need to know something, ask yourself: 'How does this feel?' Your feelings carry intelligent information.",
+    "image": "/images/human-design/variables/hd-cognition-feeling.png"
+  },
+  {
+    "id": "hd-cognition-touch",
+    "type": "hd-variable",
+    "name": "Touch",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 6,
+    "color": 1,
+    "colorName": "Security",
+    "arrow": "Left",
+    "arrowPosition": "Top Left",
+    "description": "Touch cognition means you perceive through physical contact and tactile sensation. You need to touch, hold, and physically engage to truly know something.",
+    "mentalApplication": "Get hands-on. Touch and handle things. Your cognition works through physical contact—abstract thinking isn't your primary mode. Make things tangible.",
+    "keywords": [
+      "Tactile",
+      "Hands-on",
+      "Physical",
+      "Contact"
+    ],
+    "perceptionStrength": "Ability to know things through direct physical engagement and touch",
+    "challenges": [
+      "Too much abstract thinking",
+      "Distance from physical engagement",
+      "Not enough hands-on activity"
+    ],
+    "practicalGuidance": "Your cognition is tactile. If you can't touch it, you can't fully know it. Get your hands on things. Physical engagement is how you learn and process.",
+    "image": "/images/human-design/variables/hd-cognition-touch.png"
+  },
+  {
+    "id": "hd-cognition-peripheral-outer-vision",
+    "type": "hd-variable",
+    "name": "Peripheral Outer Vision",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 3,
+    "color": 2,
+    "colorName": "Uncertainty",
+    "arrow": "Right",
+    "arrowPosition": "Top Left",
+    "description": "Peripheral Outer Vision means you perceive what's happening at the edges of your awareness. You catch things in your peripheral vision—metaphorically and literally.",
+    "mentalApplication": "Don't focus too hard. Soften your gaze and notice what's happening at the edges. Important information comes to you peripherally, not through direct focus.",
+    "keywords": [
+      "Peripheral",
+      "Side awareness",
+      "Soft focus",
+      "Indirect seeing"
+    ],
+    "perceptionStrength": "Ability to catch important information that others miss by being peripherally aware",
+    "challenges": [
+      "Too narrow a focus",
+      "Missing peripheral signals",
+      "Over-concentration"
+    ],
+    "practicalGuidance": "Your cognition works at the edges. If you focus too hard, you miss things. Soften your visual and mental attention—let information come to your periphery.",
+    "image": "/images/human-design/variables/hd-cognition-peripheral-outer-vision.png"
+  },
+  {
+    "id": "hd-cognition-focused-inner-vision",
+    "type": "hd-variable",
+    "name": "Focused Inner Vision",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 4,
+    "color": 2,
+    "colorName": "Uncertainty",
+    "arrow": "Right",
+    "arrowPosition": "Top Left",
+    "description": "Focused Inner Vision means you perceive through concentrated internal visualization. Deep, focused meditation and single-pointed inner seeing serve your cognition.",
+    "mentalApplication": "Focus your inner vision with intention. Concentrated visualization, meditation, and deliberate mental imagery are your cognitive tools.",
+    "keywords": [
+      "Concentration",
+      "Meditation",
+      "Focused visualization",
+      "Single-pointed"
+    ],
+    "perceptionStrength": "Ability to penetrate deeply through concentrated inner focus",
+    "challenges": [
+      "Scattered attention",
+      "Lack of focus time",
+      "External interruptions during inner work"
+    ],
+    "practicalGuidance": "Your cognition needs concentrated inner time. Find ways to focus your inner vision without distraction. Deep meditation and visualization serve you.",
+    "image": "/images/human-design/variables/hd-cognition-focused-inner-vision.png"
+  },
+  {
+    "id": "hd-cognition-acceptance",
+    "type": "hd-variable",
+    "name": "Acceptance",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 5,
+    "color": 2,
+    "colorName": "Uncertainty",
+    "arrow": "Right",
+    "arrowPosition": "Top Left",
+    "description": "Acceptance cognition means you perceive by allowing and accepting what is. Non-resistance and receptivity open your awareness. Fighting reality closes your cognition.",
+    "mentalApplication": "Accept what's happening before trying to change it. Your cognition opens through acceptance and closes through resistance. Receive before you react.",
+    "keywords": [
+      "Receptivity",
+      "Allowance",
+      "Non-resistance",
+      "Opening"
+    ],
+    "perceptionStrength": "Ability to perceive truth by accepting rather than resisting",
+    "challenges": [
+      "Fighting against reality",
+      "Resistance to what is",
+      "Premature judgment"
+    ],
+    "practicalGuidance": "Your cognition works through acceptance. When you resist, you can't perceive clearly. Accept first, then respond. Resistance blinds; acceptance illuminates.",
+    "image": "/images/human-design/variables/hd-cognition-acceptance.png"
+  },
+  {
+    "id": "hd-cognition-sensation",
+    "type": "hd-variable",
+    "name": "Sensation",
+    "symbol": "👁",
+    "category": "Cognition",
+    "categoryDescription": "How you are designed to perceive and take in information from the world",
+    "tone": 6,
+    "color": 2,
+    "colorName": "Uncertainty",
+    "arrow": "Right",
+    "arrowPosition": "Top Left",
+    "description": "Sensation cognition means you perceive through pure sensory experience. Raw sensation—before interpretation—is your cognitive gateway. Stay with sensation.",
+    "mentalApplication": "Notice pure sensation before you label it. Your cognition works at the level of raw sensory input, before the mind interprets. Stay sensory.",
+    "keywords": [
+      "Sensory",
+      "Raw experience",
+      "Pre-conceptual",
+      "Direct perception"
+    ],
+    "perceptionStrength": "Ability to perceive reality through direct sensation without mental overlay",
+    "challenges": [
+      "Jumping to interpretation too quickly",
+      "Mental overlay on experience",
+      "Ignoring sensory input"
+    ],
+    "practicalGuidance": "Your cognition lives in sensation. Before you think about something, feel it as sensation. This raw sensory awareness is your truest perception.",
+    "image": "/images/human-design/variables/hd-cognition-sensation.png"
+  },
+  {
+    "id": "hd-environment-caves",
+    "type": "hd-variable",
+    "name": "Caves",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 1,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Caves environment means you thrive in enclosed, protected spaces with limited entry points. You need to feel contained and secure in your physical environment.",
+    "physicalApplication": "Create nest-like spaces. Work in rooms with doors that close. Have your back to a wall. Limit how people can enter your space. Containment supports you.",
+    "keywords": [
+      "Enclosed",
+      "Protected",
+      "Private",
+      "Contained"
+    ],
+    "idealCharacteristics": [
+      "Single entrance",
+      "Enclosed feeling",
+      "Back to wall",
+      "Private spaces",
+      "Controlled access"
+    ],
+    "challenges": [
+      "Open floor plans",
+      "Multiple entry points",
+      "Exposed positions",
+      "Public environments"
+    ],
+    "practicalGuidance": "Your success depends on feeling contained. If your environment is too open, you can't function optimally. Create cave-like spaces wherever you work and live.",
+    "image": "/images/human-design/variables/hd-environment-caves.png"
+  },
+  {
+    "id": "hd-environment-markets",
+    "type": "hd-variable",
+    "name": "Markets",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 2,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Markets environment means you thrive where there's exchange and selection happening. Busy places with variety, options, and commerce suit you.",
+    "physicalApplication": "Position yourself where exchange happens. Coffee shops, marketplaces, co-working spaces with activity. You need options and flow around you.",
+    "keywords": [
+      "Exchange",
+      "Commerce",
+      "Variety",
+      "Activity"
+    ],
+    "idealCharacteristics": [
+      "Commercial activity",
+      "Lots of options",
+      "People coming and going",
+      "Exchange of goods/ideas",
+      "Selective variety"
+    ],
+    "challenges": [
+      "Isolation",
+      "Single-option environments",
+      "Stagnant places",
+      "No variety or exchange"
+    ],
+    "practicalGuidance": "You need to be where selection and exchange happen. Markets—literal or metaphorical—energize your system. Don't isolate yourself from activity.",
+    "image": "/images/human-design/variables/hd-environment-markets.png"
+  },
+  {
+    "id": "hd-environment-kitchens",
+    "type": "hd-variable",
+    "name": "Kitchens",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 3,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Kitchens environment means you thrive where transformation and preparation happen. Spaces where things are made, cooked, or transformed support your functioning.",
+    "physicalApplication": "Work in spaces where things are being created or transformed. Literal kitchens, labs, workshops, studios. The energy of transformation supports you.",
+    "keywords": [
+      "Transformation",
+      "Preparation",
+      "Creation",
+      "Processing"
+    ],
+    "idealCharacteristics": [
+      "Things being made",
+      "Transformation happening",
+      "Productive activity",
+      "Creation in process",
+      "Warm, active spaces"
+    ],
+    "challenges": [
+      "Finished, static environments",
+      "Nothing being made",
+      "Purely consumption spaces",
+      "Inactive areas"
+    ],
+    "practicalGuidance": "You need to be where transformation happens. The kitchen is literal—and metaphorical. Work where things are being created, prepared, or changed.",
+    "image": "/images/human-design/variables/hd-environment-kitchens.png"
+  },
+  {
+    "id": "hd-environment-mountains",
+    "type": "hd-variable",
+    "name": "Mountains",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 4,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Mountains environment means you thrive with elevated perspective and overview. High places—physically or metaphorically—support your success.",
+    "physicalApplication": "Get up high. Upper floors, hills, elevated positions. You need to see the big picture literally—overview and perspective support your functioning.",
+    "keywords": [
+      "Elevation",
+      "Overview",
+      "Perspective",
+      "Height"
+    ],
+    "idealCharacteristics": [
+      "High vantage points",
+      "Upper floors",
+      "Hills or mountains",
+      "Wide views",
+      "Elevated positions"
+    ],
+    "challenges": [
+      "Basement positions",
+      "No overview",
+      "Flat, limited views",
+      "Ground level confinement"
+    ],
+    "practicalGuidance": "Height matters for you. Get to upper floors, find hills, seek elevation. When you can't see the overview, you can't function optimally. Perspective is essential.",
+    "image": "/images/human-design/variables/hd-environment-mountains.png"
+  },
+  {
+    "id": "hd-environment-valleys",
+    "type": "hd-variable",
+    "name": "Valleys",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 5,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Valleys environment means you thrive in lower, acoustically contained spaces. Sound carries to you; you're designed to receive what flows down.",
+    "physicalApplication": "Position yourself in lower areas where sound and energy collect. Ground floors, valleys, places where things naturally flow toward you.",
+    "keywords": [
+      "Acoustic",
+      "Low position",
+      "Receiving",
+      "Sound"
+    ],
+    "idealCharacteristics": [
+      "Lower positions",
+      "Sound-collecting spaces",
+      "Valleys or dips",
+      "Acoustic environments",
+      "Where things flow to"
+    ],
+    "challenges": [
+      "Windy heights",
+      "Sound-dispersed environments",
+      "Positions above the action"
+    ],
+    "practicalGuidance": "You're designed to be in valleys—places where things collect and flow to you. Sound matters. Position yourself to receive rather than to overlook.",
+    "image": "/images/human-design/variables/hd-environment-valleys.png"
+  },
+  {
+    "id": "hd-environment-shores",
+    "type": "hd-variable",
+    "name": "Shores",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 6,
+    "color": 1,
+    "colorName": "Caves",
+    "arrow": "Left",
+    "arrowPosition": "Bottom Right",
+    "description": "Shores environment means you thrive at boundaries and transitions. Where two things meet—land and water, inside and outside—you function optimally.",
+    "physicalApplication": "Position yourself at edges and transitions. Doorways, waterfronts, boundaries between environments. You're designed for threshold spaces.",
+    "keywords": [
+      "Transitions",
+      "Edges",
+      "Boundaries",
+      "Between spaces"
+    ],
+    "idealCharacteristics": [
+      "Where elements meet",
+      "Threshold positions",
+      "Transition zones",
+      "Edge spaces",
+      "Boundary areas"
+    ],
+    "challenges": [
+      "Purely interior or exterior positions",
+      "Far from transitions",
+      "Deep in one environment"
+    ],
+    "practicalGuidance": "You belong at shores—where things meet. Seek boundary positions, transitional spaces, edges. You function best where two environments touch.",
+    "image": "/images/human-design/variables/hd-environment-shores.png"
+  },
+  {
+    "id": "hd-environment-selective-caves",
+    "type": "hd-variable",
+    "name": "Selective Caves",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 1,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Right",
+    "description": "Selective Caves environment means you need enclosed spaces but with careful selection. Not just any cave—the right enclosed space specifically suits you.",
+    "physicalApplication": "Be selective about your enclosed spaces. The cave matters—choose carefully where you contain yourself. Quality of enclosure matters as much as enclosure itself.",
+    "keywords": [
+      "Selective containment",
+      "Quality space",
+      "Chosen enclosure",
+      "Particular privacy"
+    ],
+    "idealCharacteristics": [
+      "Carefully chosen private spaces",
+      "High-quality enclosure",
+      "Specifically selected rooms",
+      "Particular about space"
+    ],
+    "challenges": [
+      "Any random enclosed space",
+      "Forced containment",
+      "Non-selected private areas"
+    ],
+    "practicalGuidance": "You need enclosure, but you're selective. Not any cave will do—you need to choose your enclosed spaces carefully. Quality and fit matter.",
+    "image": "/images/human-design/variables/hd-environment-selective-caves.png"
+  },
+  {
+    "id": "hd-environment-blending-shores",
+    "type": "hd-variable",
+    "name": "Blending Shores",
+    "symbol": "🏠",
+    "category": "Environment",
+    "categoryDescription": "The type of physical environment that supports your success and wellbeing",
+    "tone": 6,
+    "color": 2,
+    "colorName": "Markets",
+    "arrow": "Right",
+    "arrowPosition": "Bottom Right",
+    "description": "Blending Shores environment means you thrive where environments blur together. Not sharp boundaries but gradual transitions where things blend.",
+    "physicalApplication": "Seek spaces where inside and outside blend, where transitions are gradual rather than sharp. Screened porches, open-plan spaces with flow.",
+    "keywords": [
+      "Blending",
+      "Gradual transitions",
+      "Soft boundaries",
+      "Flow"
+    ],
+    "idealCharacteristics": [
+      "Gradual transitions",
+      "Blended spaces",
+      "Soft boundaries",
+      "Environments that flow together"
+    ],
+    "challenges": [
+      "Sharp divisions",
+      "Hard boundaries",
+      "Abrupt transitions"
+    ],
+    "practicalGuidance": "You need environments that blend. Seek gradual transitions, soft boundaries, spaces where inside and outside connect rather than separate.",
+    "image": "/images/human-design/variables/hd-environment-blending-shores.png"
+  },
+  {
+    "id": "hd-motivation-fear",
+    "type": "hd-variable",
+    "name": "Fear",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 1,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Fear motivation means your mind is naturally motivated by security concerns. You're designed to think about survival, safety, and what could go wrong.",
+    "mentalApplication": "Your mind naturally focuses on potential dangers and survival. This isn't neurosis—it's your design. Use this awareness to prepare and protect.",
+    "keywords": [
+      "Security",
+      "Survival",
+      "Protection",
+      "Preparation"
+    ],
+    "healthyExpression": "Intelligent preparation, realistic risk assessment, protective planning",
+    "unhealthyExpression": "Anxiety, paranoia, over-worry, paralysis from fear",
+    "challenges": [
+      "Letting fear become anxiety rather than preparation",
+      "Over-focusing on worst cases",
+      "Not balancing fear with action"
+    ],
+    "practicalGuidance": "Your mind is wired for fear-based thinking—and that's okay. The key is channeling this into healthy preparation rather than anxious worry. Fear is fuel for smart planning.",
+    "image": "/images/human-design/variables/hd-motivation-fear.png"
+  },
+  {
+    "id": "hd-motivation-hope",
+    "type": "hd-variable",
+    "name": "Hope",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 2,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Hope motivation means your mind is naturally motivated by possibility and positive outcomes. You're designed to think about what could go right.",
+    "mentalApplication": "Your mind naturally focuses on possibilities and positive futures. This optimistic orientation is your design. Use it to envision and create.",
+    "keywords": [
+      "Possibility",
+      "Optimism",
+      "Positive futures",
+      "Vision"
+    ],
+    "healthyExpression": "Constructive optimism, possibility thinking, inspiring vision",
+    "unhealthyExpression": "Denial of problems, unrealistic expectations, hope without action",
+    "challenges": [
+      "Ignoring real problems in favor of hope",
+      "Disappointment when hope doesn't materialize",
+      "Being seen as naive"
+    ],
+    "practicalGuidance": "Your mind naturally gravitates toward hope and possibility. This is a gift—use it for vision and inspiration while staying grounded in reality.",
+    "image": "/images/human-design/variables/hd-motivation-hope.png"
+  },
+  {
+    "id": "hd-motivation-desire",
+    "type": "hd-variable",
+    "name": "Desire",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 3,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Desire motivation means your mind is naturally motivated by want and craving. You're designed to think about what you desire and want to attain.",
+    "mentalApplication": "Your mind naturally focuses on desires and wants. This craving nature is your design—use it as fuel for achievement rather than frustration.",
+    "keywords": [
+      "Want",
+      "Craving",
+      "Attraction",
+      "Longing"
+    ],
+    "healthyExpression": "Motivated pursuit, clear goals, passionate engagement",
+    "unhealthyExpression": "Constant craving, never satisfied, attachment suffering",
+    "challenges": [
+      "Desire becoming obsession",
+      "Never feeling satisfied",
+      "Attachment to outcomes"
+    ],
+    "practicalGuidance": "Your mind is motivated by desire. Rather than fighting this, channel it. Let desire fuel your pursuits while practicing letting go when needed.",
+    "image": "/images/human-design/variables/hd-motivation-desire.png"
+  },
+  {
+    "id": "hd-motivation-guilt",
+    "type": "hd-variable",
+    "name": "Guilt",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 4,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Guilt motivation means your mind is naturally motivated by conscience and moral consideration. You're designed to think about right and wrong, should and shouldn't.",
+    "mentalApplication": "Your mind naturally focuses on ethical considerations and conscience. This moral awareness is your design—use it for integrity, not self-punishment.",
+    "keywords": [
+      "Conscience",
+      "Ethics",
+      "Morality",
+      "Responsibility"
+    ],
+    "healthyExpression": "Ethical living, moral courage, responsible action, integrity",
+    "unhealthyExpression": "Chronic guilt, self-punishment, moral perfectionism, shame",
+    "challenges": [
+      "Turning guilt inward destructively",
+      "Moral perfectionism",
+      "Judging self and others"
+    ],
+    "practicalGuidance": "Your mind is wired for guilt and moral awareness. Channel this into ethical living rather than self-punishment. Conscience is a guide, not a weapon.",
+    "image": "/images/human-design/variables/hd-motivation-guilt.png"
+  },
+  {
+    "id": "hd-motivation-innocence",
+    "type": "hd-variable",
+    "name": "Innocence",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 5,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Innocence motivation means your mind is naturally motivated by purity and uncorrupted truth. You're designed to think with beginner's mind and fresh perspective.",
+    "mentalApplication": "Your mind naturally seeks innocence and pure perception. This fresh perspective is your design—use it to see what others miss through jaded eyes.",
+    "keywords": [
+      "Purity",
+      "Fresh perspective",
+      "Beginner's mind",
+      "Uncorrupted"
+    ],
+    "healthyExpression": "Fresh eyes, wonder, unbiased perception, seeing truth simply",
+    "unhealthyExpression": "Naivety, denial of complexity, refusal to mature",
+    "challenges": [
+      "Being taken advantage of",
+      "Seeming naive",
+      "Not developing necessary cynicism"
+    ],
+    "practicalGuidance": "Your mind is motivated by innocence. This gives you fresh eyes—don't let the world corrupt this. Your naive perspective often sees truths others miss.",
+    "image": "/images/human-design/variables/hd-motivation-innocence.png"
+  },
+  {
+    "id": "hd-motivation-need",
+    "type": "hd-variable",
+    "name": "Need",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 6,
+    "color": 1,
+    "colorName": "Fear",
+    "arrow": "Left",
+    "arrowPosition": "Top Right",
+    "description": "Need motivation means your mind is naturally motivated by necessity and what must be done. You're designed to think about requirements and essentials.",
+    "mentalApplication": "Your mind naturally focuses on what's needed and necessary. This practical orientation is your design—use it for prioritization and essentialism.",
+    "keywords": [
+      "Necessity",
+      "Requirements",
+      "Essential",
+      "Must-have"
+    ],
+    "healthyExpression": "Clear priorities, essentialism, meeting true needs, practical focus",
+    "unhealthyExpression": "Feeling needy, scarcity mindset, confusing wants with needs",
+    "challenges": [
+      "Never feeling needs are met",
+      "Scarcity thinking",
+      "Over-focusing on lack"
+    ],
+    "practicalGuidance": "Your mind is motivated by need. Use this for clarity about what's truly necessary. Distinguish real needs from false ones and focus on what matters.",
+    "image": "/images/human-design/variables/hd-motivation-need.png"
+  },
+  {
+    "id": "hd-motivation-communal-desire",
+    "type": "hd-variable",
+    "name": "Communal Desire",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 3,
+    "color": 2,
+    "colorName": "Hope",
+    "arrow": "Right",
+    "arrowPosition": "Top Right",
+    "description": "Communal Desire motivation means your mind is motivated by shared wants and collective needs. You think about what the group desires, not just yourself.",
+    "mentalApplication": "Your mind naturally focuses on what others want and need. This transpersonal desire is your design—use it for service and contribution.",
+    "keywords": [
+      "Collective want",
+      "Shared desire",
+      "Group needs",
+      "Service"
+    ],
+    "healthyExpression": "Service orientation, meeting collective needs, contribution to others",
+    "unhealthyExpression": "Losing yourself in others' wants, people-pleasing, boundary loss",
+    "challenges": [
+      "Not knowing your own desires",
+      "Over-identifying with others' wants",
+      "Neglecting self"
+    ],
+    "practicalGuidance": "Your mind is motivated by what others need. This is beautiful—but don't lose yourself. Serve others while maintaining clarity about your own needs.",
+    "image": "/images/human-design/variables/hd-motivation-communal-desire.png"
+  },
+  {
+    "id": "hd-motivation-personal-need",
+    "type": "hd-variable",
+    "name": "Personal Need",
+    "symbol": "🧠",
+    "category": "Motivation",
+    "categoryDescription": "What naturally motivates your mind's focus and attention",
+    "tone": 6,
+    "color": 2,
+    "colorName": "Hope",
+    "arrow": "Right",
+    "arrowPosition": "Top Right",
+    "description": "Personal Need motivation means your mind is focused on individual, personal necessities. You're designed to be clear about what you specifically need.",
+    "mentalApplication": "Your mind naturally focuses on your personal needs. This self-awareness is your design—use it for self-care and clear communication of needs.",
+    "keywords": [
+      "Self-awareness",
+      "Personal necessity",
+      "Individual needs",
+      "Self-care"
+    ],
+    "healthyExpression": "Clear self-knowledge, appropriate self-care, communicating needs",
+    "unhealthyExpression": "Selfishness, inability to see others' needs, isolation",
+    "challenges": [
+      "Seeming selfish",
+      "Difficulty relating to others' needs",
+      "Isolation"
+    ],
+    "practicalGuidance": "Your mind is motivated by personal need. Know what you need and communicate it clearly. This isn't selfish—it's honest self-awareness.",
+    "image": "/images/human-design/variables/hd-motivation-personal-need.png"
+  }
+]

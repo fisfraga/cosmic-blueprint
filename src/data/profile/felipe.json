@@ -1,0 +1,245 @@
+{
+  "id": "felipe-fraga",
+  "name": "Felipe Fraga",
+  "relationship": "Me",
+  "dateOfBirth": "1994-10-18",
+  "timeOfBirth": "08:10",
+  "cityOfBirth": "Rio de Janeiro, Brazil",
+  "coordinates": {
+    "latitude": -22.9068,
+    "longitude": -43.1729,
+    "timezone": "America/Sao_Paulo"
+  },
+  "placements": [
+    { "id": "sun", "profileId": "felipe-fraga", "planetId": "sun", "signId": "libra", "houseId": "house-12", "degree": 24, "minute": 48, "retrograde": false, "dignityId": "fall", "fullName": "Sun in Libra", "shortName": "Sun ♎" },
+    { "id": "moon", "profileId": "felipe-fraga", "planetId": "moon", "signId": "aries", "houseId": "house-5", "degree": 12, "minute": 47, "retrograde": false, "fullName": "Moon in Aries", "shortName": "Moon ♈" },
+    { "id": "ascendant", "profileId": "felipe-fraga", "planetId": "ascendant", "signId": "scorpio", "houseId": "house-1", "degree": 26, "minute": 52, "retrograde": false, "fullName": "Ascendant in Scorpio", "shortName": "ASC ♏" },
+    { "id": "midheaven", "profileId": "felipe-fraga", "planetId": "midheaven", "signId": "leo", "houseId": "house-10", "degree": 13, "minute": 31, "retrograde": false, "fullName": "Midheaven in Leo", "shortName": "MC ♌" },
+    { "id": "mercury", "profileId": "felipe-fraga", "planetId": "mercury", "signId": "scorpio", "houseId": "house-12", "degree": 0, "minute": 59, "retrograde": true, "fullName": "Mercury in Scorpio", "shortName": "Mercury ♏" },
+    { "id": "venus", "profileId": "felipe-fraga", "planetId": "venus", "signId": "scorpio", "houseId": "house-12", "degree": 17, "minute": 28, "retrograde": true, "dignityId": "detriment", "fullName": "Venus in Scorpio", "shortName": "Venus ♏" },
+    { "id": "mars", "profileId": "felipe-fraga", "planetId": "mars", "signId": "leo", "houseId": "house-9", "degree": 7, "minute": 32, "retrograde": false, "isChartRuler": "traditional", "fullName": "Mars in Leo", "shortName": "Mars ♌" },
+    { "id": "jupiter", "profileId": "felipe-fraga", "planetId": "jupiter", "signId": "scorpio", "houseId": "house-12", "degree": 18, "minute": 36, "retrograde": false, "fullName": "Jupiter in Scorpio", "shortName": "Jupiter ♏" },
+    { "id": "saturn", "profileId": "felipe-fraga", "planetId": "saturn", "signId": "pisces", "houseId": "house-4", "degree": 6, "minute": 5, "retrograde": true, "fullName": "Saturn in Pisces", "shortName": "Saturn ♓" },
+    { "id": "uranus", "profileId": "felipe-fraga", "planetId": "uranus", "signId": "capricorn", "houseId": "house-3", "degree": 22, "minute": 30, "retrograde": false, "fullName": "Uranus in Capricorn", "shortName": "Uranus ♑" },
+    { "id": "neptune", "profileId": "felipe-fraga", "planetId": "neptune", "signId": "capricorn", "houseId": "house-3", "degree": 20, "minute": 38, "retrograde": false, "fullName": "Neptune in Capricorn", "shortName": "Neptune ♑" },
+    { "id": "pluto", "profileId": "felipe-fraga", "planetId": "pluto", "signId": "scorpio", "houseId": "house-12", "degree": 26, "minute": 42, "retrograde": false, "dignityId": "domicile", "isChartRuler": "modern", "fullName": "Pluto in Scorpio", "shortName": "Pluto ♏" },
+    { "id": "north-node", "profileId": "felipe-fraga", "planetId": "north-node", "signId": "scorpio", "houseId": "house-12", "degree": 15, "minute": 43, "retrograde": true, "fullName": "North Node in Scorpio", "shortName": "NN ♏" },
+    { "id": "south-node", "profileId": "felipe-fraga", "planetId": "south-node", "signId": "taurus", "houseId": "house-6", "degree": 15, "minute": 43, "retrograde": true, "fullName": "South Node in Taurus", "shortName": "SN ♉" },
+    { "id": "chiron", "profileId": "felipe-fraga", "planetId": "chiron", "signId": "virgo", "houseId": "house-11", "degree": 20, "minute": 18, "retrograde": false, "fullName": "Chiron in Virgo", "shortName": "Chiron ♍" },
+    { "id": "lilith", "profileId": "felipe-fraga", "planetId": "lilith", "signId": "taurus", "houseId": "house-6", "degree": 21, "minute": 32, "retrograde": false, "fullName": "Lilith in Taurus", "shortName": "Lilith ♉" },
+    { "id": "part-of-fortune", "profileId": "felipe-fraga", "planetId": "part-of-fortune", "signId": "taurus", "houseId": "house-6", "degree": 14, "minute": 51, "retrograde": false, "fullName": "Part of Fortune in Taurus", "shortName": "PoF ♉" },
+    { "id": "vertex", "profileId": "felipe-fraga", "planetId": "vertex", "signId": "aries", "houseId": "house-6", "degree": 24, "minute": 29, "retrograde": false, "fullName": "Vertex in Aries", "shortName": "Vx ♈" }
+  ],
+  "housePositions": [
+    { "id": "hp-1", "profileId": "felipe-fraga", "houseId": "house-1", "signId": "scorpio", "degree": 26, "minute": 52 },
+    { "id": "hp-2", "profileId": "felipe-fraga", "houseId": "house-2", "signId": "sagittarius", "degree": 23, "minute": 32 },
+    { "id": "hp-3", "profileId": "felipe-fraga", "houseId": "house-3", "signId": "capricorn", "degree": 17, "minute": 49 },
+    { "id": "hp-4", "profileId": "felipe-fraga", "houseId": "house-4", "signId": "aquarius", "degree": 13, "minute": 31 },
+    { "id": "hp-5", "profileId": "felipe-fraga", "houseId": "house-5", "signId": "pisces", "degree": 13, "minute": 48 },
+    { "id": "hp-6", "profileId": "felipe-fraga", "houseId": "house-6", "signId": "aries", "degree": 19, "minute": 41 },
+    { "id": "hp-7", "profileId": "felipe-fraga", "houseId": "house-7", "signId": "taurus", "degree": 26, "minute": 52 },
+    { "id": "hp-8", "profileId": "felipe-fraga", "houseId": "house-8", "signId": "gemini", "degree": 23, "minute": 32 },
+    { "id": "hp-9", "profileId": "felipe-fraga", "houseId": "house-9", "signId": "cancer", "degree": 17, "minute": 49 },
+    { "id": "hp-10", "profileId": "felipe-fraga", "houseId": "house-10", "signId": "leo", "degree": 13, "minute": 31 },
+    { "id": "hp-11", "profileId": "felipe-fraga", "houseId": "house-11", "signId": "virgo", "degree": 13, "minute": 48 },
+    { "id": "hp-12", "profileId": "felipe-fraga", "houseId": "house-12", "signId": "libra", "degree": 19, "minute": 41 }
+  ],
+  "aspects": {
+    "planetary": [
+      { "id": "asp-1", "profileId": "felipe-fraga", "aspectId": "conjunction", "planet1Id": "sun", "placement1Id": "sun", "planet2Id": "mercury", "placement2Id": "mercury", "orbDegree": 6, "orbMinute": 11, "direction": "Applying", "fullName": "Sun Conjunction Mercury" },
+      { "id": "asp-2", "profileId": "felipe-fraga", "aspectId": "trine", "planet1Id": "moon", "placement1Id": "moon", "planet2Id": "mars", "placement2Id": "mars", "orbDegree": 5, "orbMinute": 15, "direction": "Separating", "fullName": "Moon Trine Mars" },
+      { "id": "asp-3", "profileId": "felipe-fraga", "aspectId": "conjunction", "planet1Id": "venus", "placement1Id": "venus", "planet2Id": "jupiter", "placement2Id": "jupiter", "orbDegree": 1, "orbMinute": 8, "direction": "Separating", "fullName": "Venus Conjunction Jupiter" },
+      { "id": "asp-4", "profileId": "felipe-fraga", "aspectId": "trine", "planet1Id": "mercury", "placement1Id": "mercury", "planet2Id": "saturn", "placement2Id": "saturn", "orbDegree": 5, "orbMinute": 6, "direction": "Separating", "fullName": "Mercury Trine Saturn" },
+      { "id": "asp-5", "profileId": "felipe-fraga", "aspectId": "square", "planet1Id": "sun", "placement1Id": "sun", "planet2Id": "uranus", "placement2Id": "uranus", "orbDegree": 2, "orbMinute": 18, "direction": "Separating", "fullName": "Sun Square Uranus" },
+      { "id": "asp-6", "profileId": "felipe-fraga", "aspectId": "conjunction", "planet1Id": "uranus", "placement1Id": "uranus", "planet2Id": "neptune", "placement2Id": "neptune", "orbDegree": 1, "orbMinute": 51, "direction": "Separating", "fullName": "Uranus Conjunction Neptune" }
+    ],
+    "other": []
+  },
+  "configurations": [
+    { "id": "cfg-1", "profileId": "felipe-fraga", "configurationId": "stellium", "placementIds": ["mercury", "venus", "jupiter", "pluto"], "fullName": "Stellium in Scorpio (12th House)" }
+  ],
+  "elementalAnalysis": {
+    "id": "ea-1",
+    "profileId": "felipe-fraga",
+    "fire": 2,
+    "earth": 2,
+    "air": 1,
+    "water": 5,
+    "firePlanetIds": ["moon", "mars"],
+    "earthPlanetIds": ["uranus", "neptune"],
+    "airPlanetIds": ["sun"],
+    "waterPlanetIds": ["mercury", "venus", "jupiter", "saturn", "pluto"],
+    "dominant": "water",
+    "deficient": "air"
+  },
+  "chartRulers": {
+    "traditional": "mars",
+    "modern": "pluto"
+  },
+  "geneKeysProfile": {
+    "lifesWork": {
+      "sphereName": "Life's Work",
+      "geneKeyId": "gk-32",
+      "geneKeyNumber": 32,
+      "line": 5,
+      "planetarySource": "Natal Sun"
+    },
+    "evolution": {
+      "sphereName": "Evolution",
+      "geneKeyId": "gk-42",
+      "geneKeyNumber": 42,
+      "line": 5,
+      "planetarySource": "Natal Earth"
+    },
+    "radiance": {
+      "sphereName": "Radiance",
+      "geneKeyId": "gk-56",
+      "geneKeyNumber": 56,
+      "line": 1,
+      "planetarySource": "Pre-Natal / Design Sun"
+    },
+    "purpose": {
+      "sphereName": "Purpose",
+      "geneKeyId": "gk-60",
+      "geneKeyNumber": 60,
+      "line": 1,
+      "planetarySource": "Pre-Natal / Design Earth"
+    },
+    "attraction": {
+      "sphereName": "Attraction",
+      "geneKeyId": "gk-5",
+      "geneKeyNumber": 5,
+      "line": 5,
+      "planetarySource": "Pre-Natal / Design Moon"
+    },
+    "iq": {
+      "sphereName": "IQ",
+      "geneKeyId": "gk-1",
+      "geneKeyNumber": 1,
+      "line": 5,
+      "planetarySource": "Natal Venus"
+    },
+    "eq": {
+      "sphereName": "EQ",
+      "geneKeyId": "gk-31",
+      "geneKeyNumber": 31,
+      "line": 6,
+      "planetarySource": "Natal Mars"
+    },
+    "sq": {
+      "sphereName": "SQ",
+      "geneKeyId": "gk-40",
+      "geneKeyNumber": 40,
+      "line": 4,
+      "planetarySource": "Pre-Natal / Design Venus"
+    },
+    "core": {
+      "sphereName": "Core",
+      "geneKeyId": "gk-16",
+      "geneKeyNumber": 16,
+      "line": 6,
+      "planetarySource": "Pre-Natal / Design Mars"
+    },
+    "vocation": {
+      "sphereName": "Vocation",
+      "geneKeyId": "gk-16",
+      "geneKeyNumber": 16,
+      "line": 6,
+      "planetarySource": "Pre-Natal / Design Mars"
+    },
+    "culture": {
+      "sphereName": "Culture",
+      "geneKeyId": "gk-28",
+      "geneKeyNumber": 28,
+      "line": 4,
+      "planetarySource": "Pre-Natal / Design Jupiter"
+    },
+    "pearl": {
+      "sphereName": "Pearl",
+      "geneKeyId": "gk-1",
+      "geneKeyNumber": 1,
+      "line": 6,
+      "planetarySource": "Natal Jupiter"
+    },
+    "brand": {
+      "sphereName": "Brand",
+      "geneKeyId": "gk-32",
+      "geneKeyNumber": 32,
+      "line": 5,
+      "planetarySource": "Natal Sun"
+    },
+    "relating": {
+      "sphereName": "Relating",
+      "geneKeyId": "gk-50",
+      "geneKeyNumber": 50,
+      "line": 5,
+      "planetarySource": "Natal Mercury"
+    },
+    "creativity": {
+      "sphereName": "Creativity",
+      "geneKeyId": "gk-61",
+      "geneKeyNumber": 61,
+      "line": 4,
+      "planetarySource": "Pre-Natal / Design Uranus"
+    },
+    "stability": {
+      "sphereName": "Stability",
+      "geneKeyId": "gk-63",
+      "geneKeyNumber": 63,
+      "line": 1,
+      "planetarySource": "Pre-Natal / Design Saturn"
+    },
+    "coreIdentity": {
+      "sun": { "geneKeyId": "gk-32", "geneKeyNumber": 32, "line": 5, "sphereName": "Life's Work" },
+      "moon": { "geneKeyId": "gk-21", "geneKeyNumber": 21, "line": 4, "sphereName": "Emotional Core" },
+      "mercury": { "geneKeyId": "gk-50", "geneKeyNumber": 50, "line": 5, "sphereName": "Relating" },
+      "ascendant": { "geneKeyId": "gk-44", "geneKeyNumber": 44, "line": 4, "sphereName": "Aura" }
+    }
+  },
+  "humanDesignProfile": {
+    "type": "Generator",
+    "strategy": "Wait to Respond",
+    "authority": "Emotional",
+    "profile": "5/1",
+    "definition": "Quadruple Split",
+    "incarnationCross": "Left Angle Cross of Limitation (32/42 | 56/60)",
+    "personalityGates": [
+      { "gateId": "gate-32", "gateNumber": 32, "line": 5, "isPersonality": true, "planet": "Sun" },
+      { "gateId": "gate-42", "gateNumber": 42, "line": 5, "isPersonality": true, "planet": "Earth" },
+      { "gateId": "gate-1", "gateNumber": 1, "line": 2, "isPersonality": true, "planet": "North Node" },
+      { "gateId": "gate-2", "gateNumber": 2, "line": 2, "isPersonality": true, "planet": "South Node" },
+      { "gateId": "gate-21", "gateNumber": 21, "line": 4, "isPersonality": true, "planet": "Moon" },
+      { "gateId": "gate-50", "gateNumber": 50, "line": 5, "isPersonality": true, "planet": "Mercury" },
+      { "gateId": "gate-1", "gateNumber": 1, "line": 5, "isPersonality": true, "planet": "Venus" },
+      { "gateId": "gate-31", "gateNumber": 31, "line": 6, "isPersonality": true, "planet": "Mars" },
+      { "gateId": "gate-1", "gateNumber": 1, "line": 6, "isPersonality": true, "planet": "Jupiter" },
+      { "gateId": "gate-37", "gateNumber": 37, "line": 1, "isPersonality": true, "planet": "Saturn" },
+      { "gateId": "gate-61", "gateNumber": 61, "line": 2, "isPersonality": true, "planet": "Uranus" },
+      { "gateId": "gate-54", "gateNumber": 54, "line": 6, "isPersonality": true, "planet": "Neptune" },
+      { "gateId": "gate-14", "gateNumber": 14, "line": 3, "isPersonality": true, "planet": "Pluto" }
+    ],
+    "designGates": [
+      { "gateId": "gate-56", "gateNumber": 56, "line": 1, "isPersonality": false, "planet": "Sun" },
+      { "gateId": "gate-60", "gateNumber": 60, "line": 1, "isPersonality": false, "planet": "Earth" },
+      { "gateId": "gate-43", "gateNumber": 43, "line": 4, "isPersonality": false, "planet": "North Node" },
+      { "gateId": "gate-23", "gateNumber": 23, "line": 4, "isPersonality": false, "planet": "South Node" },
+      { "gateId": "gate-5", "gateNumber": 5, "line": 5, "isPersonality": false, "planet": "Moon" },
+      { "gateId": "gate-52", "gateNumber": 52, "line": 3, "isPersonality": false, "planet": "Mercury" },
+      { "gateId": "gate-40", "gateNumber": 40, "line": 4, "isPersonality": false, "planet": "Venus" },
+      { "gateId": "gate-16", "gateNumber": 16, "line": 6, "isPersonality": false, "planet": "Mars" },
+      { "gateId": "gate-28", "gateNumber": 28, "line": 4, "isPersonality": false, "planet": "Jupiter" },
+      { "gateId": "gate-63", "gateNumber": 63, "line": 1, "isPersonality": false, "planet": "Saturn" },
+      { "gateId": "gate-61", "gateNumber": 61, "line": 4, "isPersonality": false, "planet": "Uranus" },
+      { "gateId": "gate-61", "gateNumber": 61, "line": 2, "isPersonality": false, "planet": "Neptune" },
+      { "gateId": "gate-14", "gateNumber": 14, "line": 1, "isPersonality": false, "planet": "Pluto" }
+    ],
+    "definedCenterIds": ["sacral-center", "g-center", "throat-center", "spleen-center", "ajna-center", "root-center", "heart-center", "solar-plexus-center"],
+    "definedChannelIds": ["channel-43-23", "channel-2-14", "channel-37-40", "channel-32-54"],
+    "coreIdentity": {
+      "sun": { "gateId": "gate-32", "gateNumber": 32, "line": 5, "centerName": "Spleen" },
+      "moon": { "gateId": "gate-21", "gateNumber": 21, "line": 4, "centerName": "Heart" },
+      "mercury": { "gateId": "gate-50", "gateNumber": 50, "line": 5, "centerName": "Spleen" },
+      "ascendant": { "gateId": "gate-44", "gateNumber": 44, "line": 4, "centerName": "Spleen" }
+    }
+  }
+}

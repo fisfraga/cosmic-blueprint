@@ -1,0 +1,243 @@
+[
+  {
+    "id": "hd-type-generator",
+    "type": "hd-type",
+    "name": "Generator",
+    "symbol": "G",
+    "description": "Generators are the life force of the planet, representing approximately 37% of the population. They have a defined Sacral Center, which gives them consistent access to life force energy for work and creation. Their aura is open and enveloping, drawing life toward them.",
+    "percentage": "~37%",
+    "auraType": "Open and enveloping",
+    "auraDescription": "The Generator's aura is like a warm embrace that draws experiences and people toward them. It's designed to attract the right opportunities for response.",
+    "strategyId": "hd-strategy-wait-to-respond",
+    "signatureEmotion": "Satisfaction",
+    "notSelfEmotion": "Frustration",
+    "role": "To master what they love through committed response",
+    "definedCenters": [
+      "sacral-center"
+    ],
+    "keywords": [
+      "Life force",
+      "Response",
+      "Work",
+      "Mastery",
+      "Satisfaction",
+      "Building"
+    ],
+    "gifts": [
+      "Sustainable life force energy for work they love",
+      "Deep capacity for mastery through commitment",
+      "Natural magnetism that draws opportunities",
+      "Ability to know what's correct through gut response",
+      "Power to sustain and build over time"
+    ],
+    "challenges": [
+      "Initiating rather than waiting to respond",
+      "Saying yes when the gut says no",
+      "Quitting before achieving mastery",
+      "Feeling stuck or frustrated when not responding correctly",
+      "Giving away energy to things that don't light them up"
+    ],
+    "notSelfBehavior": "When Generators initiate rather than respond, or say yes to things their Sacral doesn't genuinely respond to, they experience frustration. This can manifest as feeling stuck, exhausted, or trapped in situations that drain rather than fulfill them.",
+    "signatureBehavior": "When living correctly, Generators experience deep satisfaction in their work and life. They feel energized by what they do, experience mastery and flow, and go to bed tired but fulfilled.",
+    "practicalGuidance": "Pay attention to your gut response - the 'uh-huh' (yes) and 'uhn-uhn' (no) sounds. Wait for something in your environment to respond to before taking action. Notice what lights you up and what drains you.",
+    "famousExamples": [
+      "Albert Einstein",
+      "Dalai Lama",
+      "Mozart",
+      "Elvis Presley"
+    ],
+    "image": "/images/human-design/types/hd-type-generator.png"
+  },
+  {
+    "id": "hd-type-manifesting-generator",
+    "type": "hd-type",
+    "name": "Manifesting Generator",
+    "symbol": "MG",
+    "description": "Manifesting Generators combine the sustainable energy of Generators with a connection to the Throat Center that allows them to initiate and manifest. They make up about 33% of the population. They are multi-passionate beings designed to move quickly and efficiently.",
+    "percentage": "~33%",
+    "auraType": "Open and enveloping",
+    "auraDescription": "Like pure Generators, MGs have an open, enveloping aura that draws life toward them. However, their connection to manifestation adds a dynamic quality that can move energy more quickly.",
+    "strategyId": "hd-strategy-wait-to-respond",
+    "signatureEmotion": "Satisfaction",
+    "notSelfEmotion": "Frustration and Anger",
+    "role": "To find shortcuts and efficient paths while mastering multiple passions",
+    "definedCenters": [
+      "sacral-center"
+    ],
+    "keywords": [
+      "Multi-passionate",
+      "Speed",
+      "Efficiency",
+      "Response",
+      "Shortcuts",
+      "Energy"
+    ],
+    "gifts": [
+      "Ability to do multiple things simultaneously",
+      "Finding faster, more efficient ways to accomplish goals",
+      "Sustainable energy combined with manifestation power",
+      "Quick learning and adaptation",
+      "Natural ability to skip unnecessary steps"
+    ],
+    "challenges": [
+      "Skipping steps that are actually necessary",
+      "Starting many things without completing them",
+      "Moving too fast for others to follow",
+      "Impatience with slower processes",
+      "Not informing others before taking action"
+    ],
+    "notSelfBehavior": "When MGs initiate without responding, or fail to inform others of their actions, they experience both frustration and anger. They may feel trapped, misunderstood, or constantly starting over.",
+    "signatureBehavior": "When living correctly, MGs experience satisfaction through efficiently pursuing multiple passions. They find joy in the dance of responding, informing, and then acting on what lights them up.",
+    "practicalGuidance": "Wait to respond like a Generator, but also inform others before you act (like a Manifestor). Embrace your multi-passionate nature - you don't have to choose just one thing. Trust your ability to skip steps, but verify with your Sacral response.",
+    "famousExamples": [
+      "Angelina Jolie",
+      "Jimi Hendrix",
+      "Marie Curie",
+      "Clint Eastwood"
+    ],
+    "image": "/images/human-design/types/hd-type-manifesting-generator.png"
+  },
+  {
+    "id": "hd-type-projector",
+    "type": "hd-type",
+    "name": "Projector",
+    "symbol": "P",
+    "description": "Projectors are the guides and advisors of humanity, making up about 20% of the population. They have no consistent access to Sacral energy, making them non-energy types. Their genius lies in understanding and guiding others' energy rather than doing the work themselves.",
+    "percentage": "~20%",
+    "auraType": "Focused and absorbing",
+    "auraDescription": "The Projector's aura is penetrating and focused, designed to see deeply into others. It can feel intense to those being 'seen' but offers profound insight and recognition.",
+    "strategyId": "hd-strategy-wait-for-invitation",
+    "signatureEmotion": "Success",
+    "notSelfEmotion": "Bitterness",
+    "role": "To guide and direct the energy of others when recognized and invited",
+    "definedCenters": [],
+    "keywords": [
+      "Guide",
+      "Recognition",
+      "Invitation",
+      "Wisdom",
+      "Efficiency",
+      "Seeing"
+    ],
+    "gifts": [
+      "Deep capacity to see and understand others",
+      "Natural wisdom about systems and efficiency",
+      "Ability to guide energy for optimal results",
+      "Insight into the talents and potential of others",
+      "Mastery through studying rather than doing"
+    ],
+    "challenges": [
+      "Giving advice without being invited",
+      "Working like a Generator and burning out",
+      "Not being recognized for their gifts",
+      "Bitterness when contributions aren't valued",
+      "Over-identifying with what they absorb from others"
+    ],
+    "notSelfBehavior": "When Projectors push their guidance on others without invitation, or try to work like Generators, they become bitter. They may feel unseen, unappreciated, and exhausted from trying to prove their value.",
+    "signatureBehavior": "When living correctly, Projectors experience success - being recognized, invited, and valued for their guidance. They feel fulfilled when their insights make a difference and their wisdom is appreciated.",
+    "practicalGuidance": "Study what fascinates you and become an expert. Wait for recognition and invitation before offering guidance, especially in big life areas (career, relationships, where to live). Rest frequently and don't try to keep up with Generator energy.",
+    "famousExamples": [
+      "Barack Obama",
+      "Princess Diana",
+      "Marilyn Monroe",
+      "Nelson Mandela"
+    ],
+    "image": "/images/human-design/types/hd-type-projector.png"
+  },
+  {
+    "id": "hd-type-manifestor",
+    "type": "hd-type",
+    "name": "Manifestor",
+    "symbol": "M",
+    "description": "Manifestors are the initiators of humanity, making up only about 8% of the population. They have a defined Throat Center with a motor connection, giving them the unique ability to initiate and make things happen independently. They are designed to have impact.",
+    "percentage": "~8%",
+    "auraType": "Closed and repelling",
+    "auraDescription": "The Manifestor's aura is closed and can feel pushing or repelling to others. This is not personal - it's designed to give them the space and independence they need to initiate.",
+    "strategyId": "hd-strategy-inform",
+    "signatureEmotion": "Peace",
+    "notSelfEmotion": "Anger",
+    "role": "To initiate and have impact while informing those affected",
+    "definedCenters": [
+      "throat-center"
+    ],
+    "keywords": [
+      "Initiation",
+      "Impact",
+      "Independence",
+      "Informing",
+      "Peace",
+      "Power"
+    ],
+    "gifts": [
+      "Ability to initiate and start new things",
+      "Natural capacity to have impact",
+      "Independence and self-sufficiency",
+      "Power to catalyze change",
+      "Freedom to act on creative urges"
+    ],
+    "challenges": [
+      "Feeling controlled or constrained by others",
+      "Forgetting to inform and facing resistance",
+      "Being perceived as angry or intimidating",
+      "Struggling with collaboration and teamwork",
+      "Managing the impact they have on others"
+    ],
+    "notSelfBehavior": "When Manifestors don't inform others before acting, they encounter resistance and anger. They may feel controlled, trapped, or constantly in conflict with those around them.",
+    "signatureBehavior": "When living correctly, Manifestors experience peace. They inform those who will be impacted, receive the space they need, and feel the freedom to initiate and create impact.",
+    "practicalGuidance": "Inform others before you act - not asking permission, but letting them know what you're going to do. This simple practice eliminates most of the resistance you encounter. Honor your need for independence and alone time.",
+    "famousExamples": [
+      "Maya Angelou",
+      "Johnny Depp",
+      "George W. Bush",
+      "Adolf Hitler"
+    ],
+    "image": "/images/human-design/types/hd-type-manifestor.png"
+  },
+  {
+    "id": "hd-type-reflector",
+    "type": "hd-type",
+    "name": "Reflector",
+    "symbol": "R",
+    "description": "Reflectors are the rarest type, making up only about 1% of the population. They have no defined centers, making them completely open to conditioning and deeply connected to the lunar cycle. They are the mirrors of society, sampling and reflecting the health of their communities.",
+    "percentage": "~1%",
+    "auraType": "Resistant and sampling",
+    "auraDescription": "The Reflector's aura is resistant and sampling - it takes in and reflects the energy around them while maintaining a protective quality. They taste everything but are not defined by anything.",
+    "strategyId": "hd-strategy-lunar-cycle",
+    "signatureEmotion": "Surprise",
+    "notSelfEmotion": "Disappointment",
+    "role": "To mirror and evaluate the health of their community",
+    "definedCenters": [],
+    "keywords": [
+      "Mirror",
+      "Lunar cycle",
+      "Surprise",
+      "Community",
+      "Reflection",
+      "Evaluation"
+    ],
+    "gifts": [
+      "Ability to sample and reflect all energies",
+      "Deep wisdom about community health",
+      "Objectivity and fairness in evaluation",
+      "Sensitivity to environment and people",
+      "Potential for profound wisdom about human nature"
+    ],
+    "challenges": [
+      "Not knowing who they truly are",
+      "Taking in unhealthy environments",
+      "Making decisions too quickly",
+      "Identifying with conditioning rather than their true nature",
+      "Finding the right community and environment"
+    ],
+    "notSelfBehavior": "When Reflectors make decisions too quickly or live in unhealthy environments, they experience deep disappointment. They may feel invisible, lost, or like they don't belong anywhere.",
+    "signatureBehavior": "When living correctly, Reflectors experience surprise - the wonder and delight of life's variety. They feel valued as wise evaluators and enjoy the ever-changing nature of their experience.",
+    "practicalGuidance": "Wait a full lunar cycle (28-29 days) for major decisions. Pay close attention to your environment - you need to be around healthy people and places. Find trusted others to talk through decisions with over time. Honor your need to be different each day.",
+    "famousExamples": [
+      "Sandra Bullock",
+      "Fyodor Dostoevsky",
+      "H.G. Wells",
+      "Ammachi"
+    ],
+    "image": "/images/human-design/types/hd-type-reflector.png"
+  }
+]

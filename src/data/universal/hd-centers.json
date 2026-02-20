@@ -1,0 +1,201 @@
+[
+  {
+    "id": "head-center",
+    "type": "hd-center",
+    "name": "Head Center",
+    "symbol": "△",
+    "centerType": "Pressure",
+    "biologicalCorrelate": "Pineal Gland",
+    "definedMeaning": "Consistent access to inspiration and mental pressure to think",
+    "undefinedMeaning": "Wisdom about what questions are worth pursuing",
+    "gateIds": [
+      "gate-64",
+      "gate-61",
+      "gate-63"
+    ],
+    "colorScheme": "yellow",
+    "description": "The Head Center is a pressure center that creates mental pressure to understand and make sense of life.",
+    "image": "/images/human-design/centers/head-center.png"
+  },
+  {
+    "id": "ajna-center",
+    "type": "hd-center",
+    "name": "Ajna Center",
+    "symbol": "△",
+    "centerType": "Awareness",
+    "biologicalCorrelate": "Pituitary Gland",
+    "definedMeaning": "Consistent way of conceptualizing and processing information",
+    "undefinedMeaning": "Wisdom about different ways of thinking and mental flexibility",
+    "gateIds": [
+      "gate-47",
+      "gate-24",
+      "gate-4",
+      "gate-17",
+      "gate-43",
+      "gate-11"
+    ],
+    "colorScheme": "green",
+    "description": "The Ajna Center is the center of conceptualization, processing, and mental awareness.",
+    "image": "/images/human-design/centers/ajna-center.png"
+  },
+  {
+    "id": "throat-center",
+    "type": "hd-center",
+    "name": "Throat Center",
+    "symbol": "□",
+    "centerType": "Communication",
+    "biologicalCorrelate": "Thyroid and Parathyroid",
+    "definedMeaning": "Consistent way of expressing and manifesting",
+    "undefinedMeaning": "Wisdom about when and how to speak",
+    "gateIds": [
+      "gate-62",
+      "gate-23",
+      "gate-56",
+      "gate-35",
+      "gate-12",
+      "gate-45",
+      "gate-33",
+      "gate-8",
+      "gate-31",
+      "gate-20",
+      "gate-16"
+    ],
+    "colorScheme": "brown",
+    "description": "The Throat Center is the center of communication, expression, and manifestation.",
+    "image": "/images/human-design/centers/throat-center.png"
+  },
+  {
+    "id": "g-center",
+    "type": "hd-center",
+    "name": "G Center",
+    "symbol": "◇",
+    "centerType": "Identity",
+    "biologicalCorrelate": "Liver and Blood",
+    "definedMeaning": "Consistent sense of identity, direction, and love",
+    "undefinedMeaning": "Wisdom about identity and direction, able to sample many paths",
+    "gateIds": [
+      "gate-1",
+      "gate-2",
+      "gate-7",
+      "gate-10",
+      "gate-13",
+      "gate-15",
+      "gate-25",
+      "gate-46"
+    ],
+    "colorScheme": "amber",
+    "description": "The G Center is the center of identity, love, and direction in life.",
+    "image": "/images/human-design/centers/g-center.png"
+  },
+  {
+    "id": "heart-center",
+    "type": "hd-center",
+    "name": "Heart Center",
+    "symbol": "△",
+    "centerType": "Motor",
+    "biologicalCorrelate": "Heart, Stomach, Gallbladder, Thymus",
+    "definedMeaning": "Consistent access to willpower and self-worth",
+    "undefinedMeaning": "Wisdom about what is truly worth commitment",
+    "gateIds": [
+      "gate-21",
+      "gate-51",
+      "gate-26",
+      "gate-40"
+    ],
+    "colorScheme": "red",
+    "description": "The Heart Center is a motor center associated with willpower, ego, and self-worth.",
+    "image": "/images/human-design/centers/heart-center.png"
+  },
+  {
+    "id": "sacral-center",
+    "type": "hd-center",
+    "name": "Sacral Center",
+    "symbol": "□",
+    "centerType": "Motor",
+    "biologicalCorrelate": "Ovaries and Testes",
+    "definedMeaning": "Consistent access to life force, work energy, and sexuality",
+    "undefinedMeaning": "Wisdom about when enough is enough",
+    "gateIds": [
+      "gate-5",
+      "gate-14",
+      "gate-29",
+      "gate-59",
+      "gate-9",
+      "gate-3",
+      "gate-42",
+      "gate-27",
+      "gate-34"
+    ],
+    "colorScheme": "orange",
+    "description": "The Sacral Center is the powerful motor that provides life force energy for Generators.",
+    "image": "/images/human-design/centers/sacral-center.png"
+  },
+  {
+    "id": "solar-plexus-center",
+    "type": "hd-center",
+    "name": "Solar Plexus Center",
+    "symbol": "△",
+    "centerType": "Motor",
+    "biologicalCorrelate": "Lungs, Kidneys, Pancreas, Nervous System",
+    "definedMeaning": "Consistent emotional wave; clarity comes over time",
+    "undefinedMeaning": "Wisdom about emotions; can sense emotional field of others",
+    "gateIds": [
+      "gate-6",
+      "gate-37",
+      "gate-22",
+      "gate-36",
+      "gate-30",
+      "gate-55",
+      "gate-49"
+    ],
+    "colorScheme": "gold",
+    "description": "The Solar Plexus is both a motor and awareness center, governing emotions and feelings.",
+    "image": "/images/human-design/centers/solar-plexus-center.png"
+  },
+  {
+    "id": "spleen-center",
+    "type": "hd-center",
+    "name": "Spleen Center",
+    "symbol": "△",
+    "centerType": "Awareness",
+    "biologicalCorrelate": "Spleen, Lymphatic System, T-cells",
+    "definedMeaning": "Consistent access to intuition and survival instincts",
+    "undefinedMeaning": "Wisdom about health and safety; can sense others fears",
+    "gateIds": [
+      "gate-48",
+      "gate-57",
+      "gate-44",
+      "gate-50",
+      "gate-32",
+      "gate-28",
+      "gate-18"
+    ],
+    "colorScheme": "brown",
+    "description": "The Spleen Center is the oldest awareness center, governing intuition, health, and survival.",
+    "image": "/images/human-design/centers/spleen-center.png"
+  },
+  {
+    "id": "root-center",
+    "type": "hd-center",
+    "name": "Root Center",
+    "symbol": "□",
+    "centerType": "Pressure",
+    "biologicalCorrelate": "Adrenal Glands",
+    "definedMeaning": "Consistent way of handling stress and pressure",
+    "undefinedMeaning": "Wisdom about pressure; can amplify stress from environment",
+    "gateIds": [
+      "gate-58",
+      "gate-38",
+      "gate-54",
+      "gate-53",
+      "gate-60",
+      "gate-52",
+      "gate-19",
+      "gate-39",
+      "gate-41"
+    ],
+    "colorScheme": "brown",
+    "description": "The Root Center is a motor and pressure center, providing adrenaline fuel and drive.",
+    "image": "/images/human-design/centers/root-center.png"
+  }
+]

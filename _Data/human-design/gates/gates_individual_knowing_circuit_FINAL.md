@@ -1,0 +1,459 @@
+# Human Design - Individual Knowing Circuit Gates (Enhanced) - FINAL
+
+## GATE KEY
+Gates contained in this document: 1, 2, 3, 8, 12, 14, 20, 22, 23, 24, 28, 38, 39, 43, 55, 57, 60, 61
+Total gates: 18
+
+## INDIVIDUAL KNOWING CIRCUIT GATES
+
+%%tana%%
+
+- Gate 1 - The Creative #gate
+  - Number:: 1
+  - Name:: The Gate of Self-Expression
+  - Archetype Name:: The Divine Creative
+  - Archetype Action:: connect with and honor natural creative cycles
+  - Center:: [[G Center #center]]
+  - I Ching Hexagram:: The Creative
+  - Keywords:: creativity, self-expression, individuality, authentic nature, creative cycles, inspiration, making marks
+  - Human Design Definition:: Creation as a primal force. The energy potential to manifest inspiration without limitation.
+  - Core Theme:: Capacity for creativity and authentic self-expression
+  - Tropical Sign:: Scorpio
+  - Gene Keys Shadow:: Entropy
+  - Gene Keys Gift:: Freshness
+  - Gene Keys Siddhi:: Beauty
+  - Description:: The drive and deep need to focus on expressing oneself in unique and creative ways. Not concerned with being best, but with living out true creative nature and authentic individuality. Creativity inspires others by example, and for impact to be felt must be seen or heard. Must honor natural creative cycles including the lows which are equally important as the highs.
+  - High Frequency Expression:: Deep honoring of natural creative cycles, understanding that creative lows are equally sacred as highs. Leading by example through authentic self-expression, trusting the creative process without forcing outcomes.
+  - Low Frequency Expression:: Resisting creative ebbs and flows, believing you should be creative all the time, making low feelings mean something is wrong. Trying to force creativity or comparing yourself to others.
+  - Focus:: Creation as a primal force expressing without limitation. When happily absorbed in "your own thing," attracting attention of others without awareness.
+  - Circuit Role:: Initiates individual creative expression that can potentially mutate collective understanding through authentic self-expression and example.
+  - Comments:: Often drawn to people with Gate 8 because they're better equipped to promote the work. The low feelings are a critical part of the creative process and become creative fuel when allowed naturally.
+  - Affirmations::
+    - I honor my natural creative cycles
+    - I am a creative powerhouse
+    - I surrender to the highs and lows of creativity
+
+- Gate 2 - The Receptive #gate
+  - Number:: 2
+  - Name:: The Gate of the Direction of the Self
+  - Archetype Name:: The Receptive Feminine
+  - Archetype Action:: remain receptive to the abundance of life
+  - Center:: [[G Center #center]]
+  - I Ching Hexagram:: The Receptive
+  - Keywords:: higher knowing, direction, receptivity, Magnetic Monopole, love and beauty, visionary overview, abundance
+  - Human Design Definition:: Receptivity as the primal base through which any response is determined. The root of action.
+  - Core Theme:: Receptivity, direction, and vision for resources and abundance
+  - Tropical Sign:: Taurus
+  - Gene Keys Shadow:: Dislocation
+  - Gene Keys Gift:: Orientation
+  - Gene Keys Siddhi:: Unity
+  - Description:: Higher knowing rooted in direction of self toward love and beauty via Magnetic Monopole. Focused on movement in time through space with innate sense of inner direction not based on geographic location. Visionary providing plan for new way forward with capacity to receive abundance of life.
+  - High Frequency Expression:: Trusting in the abundance of life, being open to receiving gifts and opportunities. Having clear inner direction and vision, being magnetically attractive to resources and support.
+  - Low Frequency Expression:: Spending resources recklessly due to fear and anxiety about needs being met. Doubting ability to receive abundance, having no faith in capacity for receiving.
+  - Focus:: Cannot change direction through mind or will - if others not going your direction, may part ways. Motor and fuel come from Sacral through Gate 14.
+  - Circuit Role:: Provides visionary direction for individual knowing and mutation, ensuring resources flow toward innovation and new possibilities.
+  - Comments:: Likened to key of vehicle that starts engine for Driver. Not here to do the work but to provide direction and receive support for the vision.
+  - Affirmations::
+    - I trust in the abundance of life
+    - I choose to receive everything life offers me
+    - I am a magnet for abundance
+
+- Gate 3 - Difficulty at the Beginning #gate
+  - Number:: 3
+  - Name:: The Gate of Ordering
+  - Archetype Name:: The Sacred Fool
+  - Archetype Action:: playfully create order out of chaos
+  - Center:: [[Sacral Center #center]]
+  - I Ching Hexagram:: Difficulty at the Beginning
+  - Keywords:: ordering, transcending confusion, new beginnings, mutation, innovation, taking leaps of faith, play, transformation
+  - Human Design Definition:: The fundamental challenge of initiation is to transcend confusion and establish order.
+  - Core Theme:: Bringing order to constantly changing circumstances and new beginnings
+  - Tropical Sign:: Aries/Taurus
+  - Gene Keys Shadow:: Chaos
+  - Gene Keys Gift:: Innovation
+  - Gene Keys Siddhi:: Innocence
+  - Description:: Function is to transcend confusion and establish order so something new and potentially viable can take hold in world. Connection to unique Individual knowing, personal innovation, and potential for significant contribution. Creates innovative ways to overcome obstacles with light-hearted touch.
+  - High Frequency Expression:: Playfully transforming chaos into order, seeing difficulties as opportunities for innovation. Having patience for the mutative timing and enjoying the creative process of bringing something new into being.
+  - Low Frequency Expression:: Feeling disempowered by chaos and confusion, struggling with the unpredictable nature of mutation. Frustration with God about living in a chaotic world.
+  - Focus:: The fundamental challenge of initiation is to transcend confusion and establish order. Waiting for right moment for something mutative can feel like forever - requires patience.
+  - Circuit Role:: Transforms creative pressure and inspiration into viable forms and innovations that can take hold in the world through individual mutation.
+  - Comments:: On-off creative pulse prevails here, and potential for something new is neither logical nor experiential. Cannot predict, control or rush the mutative moment.
+  - Affirmations::
+    - Play, curiosity, and wonder are my north star
+    - I am tenacious AF
+    - I overcome obstacles by playing
+
+- Gate 8 - Holding Together #gate
+  - Number:: 8
+  - Name:: The Gate of Contribution
+  - Archetype Name:: The Rebel With A Cause
+  - Archetype Action:: make a contribution by being radically authentic
+  - Center:: [[Throat Center #center]]
+  - I Ching Hexagram:: Holding Together
+  - Keywords:: contribution, public display, promoting innovation, leadership by example, group goals, authenticity, self-expression
+  - Human Design Definition:: The basic worth realized in contributing individual efforts to group goals.
+  - Core Theme:: Unique self-expression and authentic contribution
+  - Tropical Sign:: Taurus/Gemini
+  - Gene Keys Shadow:: Mediocrity
+  - Gene Keys Gift:: Style
+  - Gene Keys Siddhi:: Exquisiteness
+  - Description:: Says "I know I can contribute, or not." Contribution comes through public display of Individual lifestyle or by empowering and promoting others. Drawn toward what is novel and innovative. Leadership path of recognizing and displaying what is mutative.
+  - High Frequency Expression:: Making authentic contribution through being yourself, empowering others to be authentic. Leading by example through unique style and individual expression.
+  - Low Frequency Expression:: Worrying about how individual expression will impact relationships, feeling purposeless under external conditioning and pressure. Being inauthentic to please others.
+  - Focus:: The basic worth realized in contributing individual efforts to group goals. Once you get people's attention, all you can do is lead by example.
+  - Circuit Role:: Expresses and promotes individual innovations and mutations, helping unique insights reach the collective through authentic self-expression.
+  - Comments:: Must be recognized and invited to publicly display what you know to be of future value. Leadership path can be lonely but essential for mutation.
+  - Affirmations::
+    - I stay true to my individual expression
+    - My unique style cannot be replicated because it comes from the inside
+    - I make a contribution by being my authentic self
+
+- Gate 12 - Standstill #gate
+  - Number:: 12
+  - Name:: The Gate of Caution
+  - Archetype Name:: The Artisan of Life
+  - Archetype Action:: express emotion through poetry and the Art of Life
+  - Center:: [[Throat Center #center]]
+  - I Ching Hexagram:: Standstill
+  - Keywords:: caution, restraint, articulation, vocal vibration, timing, creative expression, artistic expression, discernment
+  - Human Design Definition:: The quality of restraint and the importance of meditation and inaction in confronting temptation.
+  - Core Theme:: Discriminating taste and refined artistic expression
+  - Tropical Sign:: Gemini
+  - Gene Keys Shadow:: Vanity
+  - Gene Keys Gift:: Discrimination
+  - Gene Keys Siddhi:: Purity
+  - Description:: Articulate, mutative and moody voice of Individual restrained by natural caution. Caution keeps you silent until mood tells you that you really have something to say in unique, transformative way. Making life your greatest work of art through refined expression.
+  - High Frequency Expression:: Expressing emotions through art and refined language, having impeccable taste and discriminating judgment. Making life itself a work of art through conscious choices.
+  - Low Frequency Expression:: Using words as weapons, holding people to impossible standards of perfection. Having superiority complex because of refined palate in life.
+  - Focus:: The quality of restraint and importance of meditation and inaction. Vocal vibration or tone speaks louder than choice of words.
+  - Circuit Role:: Provides artistic and refined expression for individual knowing, translating insights into beautiful and transformative forms of communication.
+  - Comments:: Standing still until in mood to express creatively gives message time to mature. Greatest impact as "stranger of consequence" - translate joys and sorrows, then withdraw.
+  - Affirmations::
+    - I transform my emotions into poetry and art
+    - My life is my art
+    - I have impeccable taste
+
+- Gate 14 - Possession in Great Measure #gate
+  - Number:: 14
+  - Name:: The Gate of Power Skills
+  - Archetype Name:: The Prosperity Lumen
+  - Archetype Action:: follow your dreams to create true prosperity
+  - Center:: [[Sacral Center #center]]
+  - I Ching Hexagram:: Possession in Great Measure
+  - Keywords:: power skills, material resources, wealth generation, empowering others, resource management, prosperity, dream work, inspiration
+  - Human Design Definition:: The accumulation and retention of power through skilled interaction, coupling grace with control.
+  - Core Theme:: Generating resources to empower direction in life
+  - Tropical Sign:: Scorpio/Sagittarius
+  - Gene Keys Shadow:: Compromise
+  - Gene Keys Gift:: Competence
+  - Gene Keys Siddhi:: Bounteousness
+  - Description:: Empowers direction for individual and humanity through distribution of available resources. Makes sure mutation is supported and shows how to invest resources to expand horizons. Fertile power at its most exalted. Creates prosperity by doing work you love.
+  - High Frequency Expression:: Creating prosperity by following dreams and doing work you love. Skillfully managing resources to empower others and support innovation and creativity.
+  - Low Frequency Expression:: Fear that you won't be able to make dreams come true, feeling stuck doing things you hate for money. Getting trapped in compromise and scarcity thinking.
+  - Focus:: The accumulation and retention of power through skilled interaction. When aligned with design and doing work you love, will generate wealth and power.
+  - Circuit Role:: Provides the material resources and power needed to support individual mutations and innovations, ensuring visionary direction has practical backing.
+  - Comments:: Resources not directly for own use, but yours to manage to empower others, support creativity, charitable activities, or leaders with vision.
+  - Affirmations::
+    - I am prosperous
+    - My life is abundant
+    - I make money doing what I love
+
+- Gate 20 - Contemplation #gate
+  - Number:: 20
+  - Name:: The Gate of the Now
+  - Archetype Name:: The Voice of Alchemy
+  - Archetype Action:: be present and speak truth in the now
+  - Center:: [[Throat Center #center]]
+  - I Ching Hexagram:: Contemplation
+  - Keywords:: now focus, existential awareness, present moment, survival as yourself, right action, contemplation, alchemy
+  - Human Design Definition:: Recognition and awareness in the now which transforms understanding into right action.
+  - Core Theme:: Instantaneous clarity and action in the present moment
+  - Tropical Sign:: Gemini
+  - Gene Keys Shadow:: Superficiality
+  - Gene Keys Gift:: Self Assurance
+  - Gene Keys Siddhi:: Presence
+  - Description:: Purely existential gate keeping you focused in present and supporting capacity to survive as yourself. When expression properly timed, awareness transformed into words or actions impacting others. Has capacity to transform understanding into right action.
+  - High Frequency Expression:: Being present and speaking truth in the now, trusting that everything needed exists in the present moment. Allowing highest potential to be revealed in Divine Timing.
+  - Low Frequency Expression:: Making choices according to mind instead of inner wisdom, inability to be still in present moment. Giving into pressure to give unsolicited or incorrect advice.
+  - Focus:: Recognition and awareness in the now which transforms understanding into right action. Energy frequency must be totally absorbed in present moment.
+  - Circuit Role:: Transforms individual insights and awareness into immediate action and expression, speaking truth that emerges from present-moment knowing.
+  - Comments:: Rarely time to mentally consider what bubbles up - what you say or do suddenly there for everyone to witness. Often see when not looking, hear when not listening.
+  - Affirmations::
+    - I live in the present moment
+    - I speak truth in the now
+    - I am self assured
+
+- Gate 22 - Grace #gate
+  - Number:: 22
+  - Name:: The Gate of Openness
+  - Archetype Name:: The Graceful Gaze
+  - Archetype Action:: offer grace to yourself and others
+  - Center:: [[Solar Plexus Center #center]]
+  - I Ching Hexagram:: Grace
+  - Keywords:: openness, grace, charm, emotional listening, social attraction, mood-dependent, beauty, emotional understanding
+  - Human Design Definition:: A quality of behavior best suited in handling mundane and trivial situations.
+  - Core Theme:: Fear of silence and emotional openness
+  - Tropical Sign:: Pisces
+  - Gene Keys Shadow:: Dishonor
+  - Gene Keys Gift:: Graciousness
+  - Gene Keys Siddhi:: Grace
+  - Description:: Combines potential for emotional openness through listening with social grace and charm highly attractive to others when in right mood. When mood changes, dramatically different side may be experienced. Offers grace to yourself and others in all emotional states.
+  - High Frequency Expression:: Offering grace to yourself and others, seeing full range of emotions as simply human. Recognizing the beauty and abundance in all emotional experiences including difficult ones.
+  - Low Frequency Expression:: Believing you don't deserve beauty, love, or grace in life. Repressing emotions, living from emotional reactivity and ignoring responsibility through blame and victimization.
+  - Focus:: A quality of behavior best suited in handling mundane situations. Unique emotional awareness comes over time as you move into depths along emotional wave.
+  - Circuit Role:: Provides emotional grace and openness that allows individual knowing to be received and accepted, creating attractive quality that draws others to unique insights.
+  - Comments:: Listen to others until they complete what they're saying, making what you have to say naturally come second. This is grace in action and key to empowerment.
+  - Affirmations::
+    - I have everything I need to thrive
+    - I transform shame with grace
+    - I am open to the full spectrum of my emotions
+
+- Gate 23 - Splitting Apart #gate
+  - Number:: 23
+  - Name:: The Gate of Assimilation
+  - Archetype Name:: The Alchemical Wordsmith
+  - Archetype Action:: communicate radical ideas
+  - Center:: [[Throat Center #center]]
+  - I Ching Hexagram:: Splitting Apart
+  - Keywords:: assimilation, amorality, diversity acceptance, language translation, mutation communication, words, speaking truth, transformation
+  - Human Design Definition:: Amorality. The awareness and understanding which leads to the acceptance of diversity.
+  - Core Theme:: Communicating individual insights and radical ideas
+  - Tropical Sign:: Taurus
+  - Gene Keys Shadow:: Complexity
+  - Gene Keys Gift:: Simplicity
+  - Gene Keys Siddhi:: Quintessence
+  - Description:: Where inspiration as inner knowing is finally translated into language. Amorality, acceptance of diversity, and ability to cut through mental intolerance opens way for mutation to take hold. Communicates radical ideas and initiates transformation with words alone.
+  - High Frequency Expression:: Using voice to communicate radical ideas, being recognized for ability to initiate transformation with words. Getting to the point, simplifying complex ideas, not wasting time.
+  - Low Frequency Expression:: Holding back out of fear of being too weird, worrying people don't care what you have to say. Talking at people who aren't ready to listen instead of trusting right timing.
+  - Focus:: Amorality and awareness that leads to acceptance of diversity. Expression initiates us into new ways of thinking with unique voice saying "I know."
+  - Circuit Role:: Translates individual knowing and insights into language that can assimilate new ways of thinking, breaking down mental barriers to mutation.
+  - Comments:: If unique perspective truly to be of value, must wait for right timing to speak and explain in simple, accessible way. Over time genius will be recognized.
+  - Affirmations::
+    - I make things simple and clear
+    - I get right to the point and don't mince words
+    - My words are magic
+
+- Gate 24 - The Return #gate
+  - Number:: 24
+  - Name:: The Gate of Rationalization
+  - Archetype Name:: The Silent Mystic
+  - Archetype Action:: create transformation through silence
+  - Center:: [[Ajna Center #center]]
+  - I Ching Hexagram:: The Return
+  - Keywords:: rationalization, transformation, renewal, individual knowing, mental review, silence, wise rationalization, mental renewal
+  - Human Design Definition:: The natural and spontaneous process of transformation and renewal.
+  - Core Theme:: Fear of ignorance and need for mental renewal
+  - Tropical Sign:: Taurus
+  - Gene Keys Shadow:: Addiction
+  - Gene Keys Gift:: Invention
+  - Gene Keys Siddhi:: Silence
+  - Description:: Function is to take unique inspiration of Gate 61 and turn it into rational concept for communication. Returns to same territory repeatedly, pondering thought considered inspiring until brought into form. Creates transformation through silence and contemplation.
+  - High Frequency Expression:: Using silence wisely for transformation and renewal, allowing mystical inspiration to become rational understanding. Mastering the pause between giving and receiving.
+  - Low Frequency Expression:: Avoiding silence with buffering or unnecessary noise, beating yourself up for needing to revisit ideas repeatedly. Struggling to find balance between giving and receiving.
+  - Focus:: The natural and spontaneous process of transformation and renewal. One moment knowing is not there, next moment it is.
+  - Circuit Role:: Processes and rationalizes individual mystical insights, making them comprehensible and communicable for practical application and sharing.
+  - Comments:: To use individual mind to greatest advantage, give yourself time to return and review. Resolution often appears on its own in moment of silence.
+  - Affirmations::
+    - I make space for silence
+    - I trust my knowing
+    - I love to find the sacred by looking at things from many angles
+
+- Gate 28 - Preponderance of the Great #gate
+  - Number:: 28
+  - Name:: The Gate of the Game Player
+  - Archetype Name:: The Darkness Whisperer
+  - Archetype Action:: face the darkness in life with courage
+  - Center:: [[Spleen Center #center]]
+  - I Ching Hexagram:: Preponderance of the Great
+  - Keywords:: game player, risk assessment, meaning in life, transitoriness of power, death awareness, risk, shadow, courage
+  - Human Design Definition:: The transitoriness of power and influence.
+  - Core Theme:: Fear of death and purposelessness
+  - Tropical Sign:: Scorpio
+  - Gene Keys Shadow:: Purposelessness
+  - Gene Keys Gift:: Totality
+  - Gene Keys Siddhi:: Immortality
+  - Description:: Deepest fear is that life might end before knowing what makes it worth living. Energy stubbornly focused on listening with awareness to intuit which risks make you feel alive. Faces darkness of life with courage and finds meaning in struggle.
+  - High Frequency Expression:: Facing darkness of life with courage and tenacity, finding deep joy in overcoming obstacles. Using fear as wisdom and allowing it to guide conscious risk-taking.
+  - Low Frequency Expression:: Fear of dying before finding purpose in life, avoiding stillness and silence. Attempting to dispel fear with risky behavior, getting lost in depression and meaninglessness.
+  - Focus:: The transitoriness of power and influence. With Splenic awareness alerting to danger, willing to take risks others wouldn't.
+  - Circuit Role:: Provides courage and willingness to take meaningful risks for individual knowing and mutation, assessing what is worth fighting for and investing in.
+  - Comments:: Will spontaneously meet and confront own fears of death one at a time. Awareness helps determine who or what to invest energy in.
+  - Affirmations::
+    - I face the darkness of life with courage and tenacity
+    - I transform challenges into meaning and purpose
+    - I alchemize shadows into light
+
+- Gate 38 - Opposition #gate
+  - Number:: 38
+  - Name:: The Gate of the Fighter
+  - Archetype Name:: The Purposeful Fighter
+  - Archetype Action:: fight for things that have meaning and purpose
+  - Center:: [[Root Center #center]]
+  - I Ching Hexagram:: Opposition
+  - Keywords:: fighter, opposition, individual integrity, purposeful struggle, fierce independence, perseverance, making meaning, struggle, discernment
+  - Human Design Definition:: The ability to preserve individual integrity through opposition to detrimental forces.
+  - Core Theme:: Pressure to find or struggle for purpose in life
+  - Tropical Sign:: Capricorn
+  - Gene Keys Shadow:: Struggle
+  - Gene Keys Gift:: Perseverance
+  - Gene Keys Siddhi:: Honor
+  - Description:: Exerts pressure to discover value of one's life. Must be reason to exist, purpose, and something to love that elevates struggle beyond surviving. Capable of forcefully confronting adversity. Fights for things that have meaning and purpose.
+  - High Frequency Expression:: Fighting for a purpose and enjoying the pressure to evolve. Finding the right amount of struggle that leads to meaning rather than suffering, discerning what is worth fighting for.
+  - Low Frequency Expression:: Fighting for the sake of fighting, believing life is meant to be an unhealthy struggle. Putting unnecessary pressure on yourself and forgetting your divine nature.
+  - Focus:: The ability to preserve individual integrity through opposition to detrimental forces. Purpose enhanced when stand up for those who can't stand up for themselves.
+  - Circuit Role:: Provides the fighting spirit and integrity needed to protect and preserve individual knowing and mutation against forces that would suppress uniqueness.
+  - Comments:: Actually enjoy a good fight. Determination to persevere empowers others to discern which individuating struggles have value. One of three gates of deafness.
+  - Affirmations::
+    - I have a warrior's spirit
+    - I love a good challenge
+    - I fight for the things that are worth fighting for
+
+- Gate 39 - Obstruction #gate
+  - Number:: 39
+  - Name:: The Gate of Provocation
+  - Archetype Name:: The Sacred Provocateur
+  - Archetype Action:: provoke others to step into self-responsibility
+  - Center:: [[Root Center #center]]
+  - I Ching Hexagram:: Obstruction
+  - Keywords:: provocation, spirit awareness, emotional pressure, moodiness, perseverance, being provocative, clarity, transformation
+  - Human Design Definition:: The value of obstruction in provoking analysis, assessment and re-evaluation.
+  - Core Theme:: Pressure to find passion and spirit in life and to emote
+  - Tropical Sign:: Cancer
+  - Gene Keys Shadow:: Provocation
+  - Gene Keys Gift:: Dynamism
+  - Gene Keys Siddhi:: Liberation
+  - Description:: Fueled by Root Center, pressure to provoke evolving emotional awareness of spirit into revealing itself. Individual through 39th gate provokes mutative potential within 55th gate to release spirit consciousness. Sacred gift is provoking heightened states of awareness.
+  - High Frequency Expression:: Using pressure to find passion and spirit in life, taking full responsibility for emotions while allowing others to do the same. Provoking heightened states of emotional and spiritual awareness.
+  - Low Frequency Expression:: Taking responsibility for other people's emotions and being a people pleaser. Intentionally pushing buttons in revenge or as attempt to hurt people.
+  - Focus:: The value of obstruction in provoking analysis, assessment and re-evaluation. Energy to persevere through moods and tap into spirit awareness.
+  - Circuit Role:: Provokes the emotional and spiritual awakening necessary for individual knowing to emerge, creating the pressure needed for mutation and transformation.
+  - Comments:: Provoking reveals whose spirit is correct for you. One of three gates of deafness, not designed to be easily influenced. Takes time to learn who can be successfully provoked.
+  - Affirmations::
+    - I am provocative AF
+    - I love to be mischievous
+    - I push buttons in those that are ready for transformation
+
+- Gate 43 - Breakthrough #gate
+  - Number:: 43
+  - Name:: The Gate of Insight
+  - Archetype Name:: The Listener Within
+  - Archetype Action:: listen to and trust your internal wisdom
+  - Center:: [[Ajna Center #center]]
+  - I Ching Hexagram:: Breakthrough
+  - Keywords:: insight, breakthrough, inner ear, unique knowing, freakish perspective, inner listening, self-awareness, breakthroughs
+  - Human Design Definition:: In order for achievement to be maintained a new order must be fairly established.
+  - Core Theme:: Fear of rejection and trusting inner wisdom
+  - Tropical Sign:: Scorpio
+  - Gene Keys Shadow:: Deafness
+  - Gene Keys Gift:: Insight
+  - Gene Keys Siddhi:: Epiphany
+  - Description:: Gate of inner ear that only listens to own unique inner voice. Transforms rational inner knowing into Individual insight through spontaneous breakthrough to new perspective. Like being a hotline for Universal wisdom and truth.
+  - High Frequency Expression:: Being a hotline for universal wisdom, tuning into ideas that create breakthroughs. Staying true to inner wisdom and making space for radical transformation to occur.
+  - Low Frequency Expression:: Listening to others instead of inner wisdom, being clouded by external influences. Worrying about rejection and doubting your inner truth and insights.
+  - Focus:: In order for achievement to be maintained a new order must be fairly established. Knowing not backed up by facts, can take fortitude to stand behind insights.
+  - Circuit Role:: Provides the breakthrough insights and inner knowing that drive individual mutation, listening to universal wisdom and translating it into new understanding.
+  - Comments:: Nothing more difficult than to listen to and really hear others - genetic protection from undue influence. Carries fear of rejection and mental anxiety.
+  - Affirmations::
+    - I turn ideas into breakthrough
+    - I think outside the box
+    - I am a hotline of magic
+
+- Gate 55 - Abundance #gate
+  - Number:: 55
+  - Name:: The Gate of Spirit
+  - Archetype Name:: The Abundant Spirit
+  - Archetype Action:: surrender to creativity and abundance
+  - Center:: [[Solar Plexus Center #center]]
+  - I Ching Hexagram:: Abundance
+  - Keywords:: spirit, abundance, emotional awareness, moods, melancholy, passion, faith, creativity, fruitful darkness
+  - Human Design Definition:: Abundance is strictly a question of spirit.
+  - Core Theme:: Fear of emptiness and embodying abundant spirit
+  - Tropical Sign:: Pisces
+  - Gene Keys Shadow:: Victimization
+  - Gene Keys Gift:: Freedom
+  - Gene Keys Siddhi:: Freedom
+  - Description:: Awareness of spirit is emotion, not concept or instinct. Abundance is function of spirit and how you perceive what you're feeling and mood you're experiencing in moment. Emotionally embodies faith in the spirit of abundance.
+  - High Frequency Expression:: Embodying faith in the spirit of abundance, feeling that God is everything and Earth is a place for Divine play. Using emotions as creative fuel and finding abundance in all experiences.
+  - Low Frequency Expression:: Rejecting low emotional experiences and using them as evidence for lack and victim consciousness. Losing faith when not using emotions as creative fuel.
+  - Focus:: Abundance is strictly a question of spirit. Susceptible to melancholic chemistry of emotional wave constantly moving through cycles.
+  - Circuit Role:: Provides the spiritual abundance and emotional depth needed for individual knowing to flourish, recognizing that all moods are creative fuel for mutation.
+  - Comments:: Moods determine what is correct and when. Not in mood to eat, work, make love, be sociable or create - not healthy to do so. Most creative when melancholic.
+  - Affirmations::
+    - I am connected to the spirit of abundance
+    - Earth is a place of Divine play
+    - My moods are creative fuel and that is my abundance
+
+- Gate 57 - The Gentle #gate
+  - Number:: 57
+  - Name:: The Gate of Intuitive Clarity
+  - Archetype Name:: The Lucid Intuitive
+  - Archetype Action:: trusting your intuitive knowing
+  - Center:: [[Spleen Center #center]]
+  - I Ching Hexagram:: The Gentle
+  - Keywords:: intuitive clarity, penetrating awareness, right ear, survival intelligence, present moment, intuition, instinct, inner knowing
+  - Human Design Definition:: The extraordinary power of clarity.
+  - Core Theme:: Fear of the future and trusting intuitive knowing
+  - Tropical Sign:: Libra
+  - Gene Keys Shadow:: Unease
+  - Gene Keys Gift:: Intuition
+  - Gene Keys Siddhi:: Clarity
+  - Description:: With clarity of intuitive insight, has capacity to penetrate to one's core in now. Deep inner attunement to sound constantly alert to vibrations from physical, emotional and psychic environments. Gate of right ear with extraordinary power of clarity.
+  - High Frequency Expression:: Trusting intuitive knowing above all else, being highly intuitive and possibly psychic. Believing everything needed exists in present moment and body is most trustworthy source of intuition.
+  - Low Frequency Expression:: Not trusting intuition or writing off intuitive knowing because nothing logical backs it up. Trusting other people's opinions over inner wisdom.
+  - Focus:: The extraordinary power of clarity. Gate of right ear - if want to hear what someone really saying, listen with intuitively attuned right ear.
+  - Circuit Role:: Provides the intuitive clarity and survival intelligence needed for individual knowing, sensing what is safe and beneficial for mutation and innovation.
+  - Comments:: Must be alert and focused in now to hear Spleen messages. Little voice speaks once and softly - must act on hunches immediately.
+  - Affirmations::
+    - I am intuitive AF
+    - I bring about spontaneous healing and miracles through my intuition
+    - I trust myself and my intuition
+
+- Gate 60 - Limitation #gate
+  - Number:: 60
+  - Name:: The Gate of Acceptance
+  - Archetype Name:: The Embodied Magician
+  - Archetype Action:: use creativity to overcome obstacles
+  - Center:: [[Root Center #center]]
+  - I Ching Hexagram:: Limitation
+  - Keywords:: acceptance, limitation, mutation pressure, restraint, evolutionary possibilities, magic, embodiment, Laws of Nature
+  - Human Design Definition:: The acceptance of limitation is the first step in transcendence.
+  - Core Theme:: Pressure to transcend limitation through creative magic
+  - Tropical Sign:: Capricorn/Aquarius
+  - Gene Keys Shadow:: Limitation
+  - Gene Keys Gift:: Realism
+  - Gene Keys Siddhi:: Justice
+  - Description:: Creates pressure needed for pure energy to mutate into form. Root Center fuels restraint, enabling pressure to build under each possibility. Hub of all evolutionary possibilities with creative mutative process subject to pulse. Uses creativity to overcome obstacles.
+  - High Frequency Expression:: Flowing through life by using creativity to overcome limitations, breaking rules and creating equitable systems. Thriving with proper boundaries that allow magic and transformation to flourish.
+  - Low Frequency Expression:: Becoming victimized by laws, rules, boundaries and natural limits. Acting out when boundaries aren't clear, staying in comfort zone instead of using creativity.
+  - Focus:: The acceptance of limitation is the first step in transcendence. Pressure creates deep restlessness to move ahead, limitations may feel like roadblocks.
+  - Circuit Role:: Provides the creative pressure and acceptance of limitation needed for individual mutation, understanding that creativity is born from constraints.
+  - Comments:: Mutation takes place in "space between notes" created by on-off pulse. When impatient with unpredictable process, melancholy can deepen into depression.
+  - Affirmations::
+    - I trust that limitation is the seed of creativity
+    - Magic and creativity flow through my boundaries
+    - I work with nature instead of against it
+
+- Gate 61 - Inner Truth #gate
+  - Number:: 61
+  - Name:: The Gate of Mystery
+  - Archetype Name:: The Divine Door
+  - Archetype Action:: revel in the mystery of life
+  - Center:: [[Head Center #center]]
+  - I Ching Hexagram:: Inner Truth
+  - Keywords:: mystery, inspiration, universal principles, absolute recognition, seeking, inner truth, mysticism
+  - Human Design Definition:: The awareness of universal underlying principles.
+  - Core Theme:: Knowing something new, understanding mysteries of life, knowing the unknowable
+  - Tropical Sign:: Capricorn
+  - Gene Keys Shadow:: Psychosis
+  - Gene Keys Gift:: Inspiration
+  - Gene Keys Siddhi:: Sanctity
+  - Description:: Pressure to know, unravel mystery, and inspire with unique moments of absolute recognition. Knowing moves toward deeper self-acceptance where you can embrace what distinguishes you from others. Path to discovering inner truth by reveling in mystery.
+  - High Frequency Expression:: Deeply understanding that knowledge and wisdom are different, with wisdom happening when knowledge integrates into the body. Living with open heart and mind, knowing Truth is subjective.
+  - Low Frequency Expression:: Feeling pressured to answer the biggest question "Why am I here?" Getting lost or overwhelmed with the question of why, becoming obsessed or fanatical.
+  - Focus:: The awareness of universal underlying principles. Love to spend time musing and mentally delving into unknown.
+  - Circuit Role:: Provides the mystical inspiration and universal awareness that initiates individual knowing, bringing through divine inspiration for mutation and innovation.
+  - Comments:: Individual mind yearns for silence now, for voices to stop. Secret is to enjoy thoughts and let inner knowing reveal itself in unique timing.
+  - Affirmations::
+    - I surrender to the Divine Mystery of life
+    - I am ready to receive Divine Inspiration
+    - Truth is subjective

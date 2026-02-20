@@ -1,0 +1,438 @@
+[
+  {
+    "id": "num-1",
+    "type": "numerology-number",
+    "name": "1 — The Unity",
+    "number": 1,
+    "symbol": "I",
+    "harmonicTone": "Unity / Everything / One",
+    "archetype": "The Pioneer / The Creator / The Leader",
+    "planet": "sun",
+    "element": "fire",
+    "chakraId": "chakra-7-crown",
+    "solfeggioHz": 396,
+    "lowerExpressionPattern": "Separation / Ego / Isolation",
+    "lowerExpression": {
+      "name": "Separation",
+      "expression": "The shadow of 1 is the illusion of radical separateness — the belief that one must stand alone, conquer alone, or that others are fundamentally in the way. This creates either excessive independence (refusing help, dominating others) or its repressive form: inability to take any initiative, dependency, waiting for someone else to lead. The irony: the number of Unity expressing as absolute isolation.",
+      "blockingBelief": "I am alone. I must win on my own terms or I have failed. No one else can do this the right way."
+    },
+    "alignedExpression": {
+      "name": "Leadership",
+      "expression": "When the shadow of separation dissolves, authentic leadership emerges — not as domination but as the natural capacity to initiate, inspire, and demonstrate through lived example. Number 1s carry the frequency of new beginnings, the courage to be first, and the creative spark that ignites possibility in others."
+    },
+    "highestExpression": {
+      "name": "Unity",
+      "expression": "The highest expression of 1 is the paradox of its shadow realized: in fully inhabiting their unique individuality, the 1 discovers that all individuality is an expression of the same One. Leadership becomes the impulse of Life itself moving through this particular vessel. Every action becomes a gesture of the Infinite exploring itself."
+    },
+    "adamApolloEssence": "Eternity is Unity. Infinite potential is made manifest in itself, but is still Infinite. There is no separation between the zero and the one, because the moment you are conscious of the nothing, it is now something. The nothing and the everything are the same, as neither can exist without each other. There is no division in the Infinite; no time passes in the Eternal. The Real One cannot be defined, as it is primary to the act of definition.",
+    "lifePathMeaning": "Your life path is one of pioneering, originality, and the courage to forge new paths. You are here to develop authentic self-expression and learn the art of independent initiative. The challenge: moving from independence-as-isolation to independence-as-self-actualization that inspires others. Success comes when you act from genuine inner direction rather than proving something.",
+    "destinyMeaning": "Your soul came here to embody individuality as a gift to the collective — demonstrating what it looks like to follow one's own truth without compromise. The ultimate destination is the recognition that your unique expression is the universe's own creativity moving through you.",
+    "keywords": ["leadership", "independence", "pioneer", "origination", "self", "courage", "initiative", "will", "unity"],
+    "relatedGates": [1, 13, 25, 51],
+    "relatedChakras": ["chakra-7-crown"],
+    "relatedNumerology": [10, 19, 28, 37],
+    "lifePathCalculation": "Reduce birth date to single digit — e.g., July 27, 1984 → 7+2+7+1+9+8+4 = 38 → 3+8 = 11 → 1+1 = 2",
+    "affirmation": "I trust my unique path. My initiative creates new possibilities.",
+    "contemplativeQuestion": "Where in your life are you holding back your genuine initiative? What would you begin if you knew it was safe to lead?"
+  },
+  {
+    "id": "num-2",
+    "type": "numerology-number",
+    "name": "2 — The Duality",
+    "number": 2,
+    "symbol": "II",
+    "harmonicTone": "Duality / Time / Relationship",
+    "archetype": "The Partner / The Diplomat / The Receiver",
+    "planet": "moon",
+    "element": "water",
+    "chakraId": "chakra-2-sacral",
+    "solfeggioHz": 417,
+    "lowerExpressionPattern": "Codependency / Indecision / Self-erasure",
+    "lowerExpression": {
+      "name": "Codependency",
+      "expression": "The shadow of 2 is the loss of self in relationship — needing another's validation to feel real, unable to make decisions without approval, over-adapting to others' needs until one's own desires disappear. The repressive form: hypersensitivity and emotional withdrawal that builds walls instead of bridges. The reactive form: manipulating through emotional needs, indirect aggression.",
+      "blockingBelief": "I am not complete on my own. My value comes from being needed by others. If I stand fully in my truth, I will be abandoned."
+    },
+    "alignedExpression": {
+      "name": "Collaboration",
+      "expression": "The gift of 2 is genuine partnership — the extraordinary capacity to truly hear another, to find the middle ground where both parties are elevated, and to weave separate threads into something more beautiful than either alone. Number 2s carry the frequency of diplomacy, sensitivity, and the art of deep listening."
+    },
+    "highestExpression": {
+      "name": "Harmony",
+      "expression": "The highest expression of 2 is the state where there is no longer any sense of opposition or competition — where one's own presence and another's presence create something more like music than conflict. Not compromise but genuine resonance. The dyad that becomes a doorway to the infinite."
+    },
+    "adamApolloEssence": "Time begins in the first moment. In the birth of the Universe, the first moment in time gives rise to the first separation between heat and cold, light and dark, positive and negative charge. Inherent in two is the first breath, the first division, the initiation of Duality. Interaction, relationship, polarity.",
+    "lifePathMeaning": "Your life path is one of partnership, sensitivity, and the art of relationship. You are here to develop the capacity for genuine collaboration and to discover your authentic voice within it. The challenge: learning to stand fully in your own truth while remaining genuinely open to others. Success comes through learning to need and be needed from a place of wholeness.",
+    "destinyMeaning": "Your soul came here to demonstrate the beauty of true meeting — the sacred encounter where two separate beings recognize their fundamental unity. You are the bridge-maker, the diplomat, the one who finds the common thread in apparent opposites.",
+    "keywords": ["partnership", "diplomacy", "sensitivity", "harmony", "cooperation", "balance", "receptivity", "duality", "relationship"],
+    "relatedGates": [2, 15, 39, 55],
+    "relatedChakras": ["chakra-2-sacral", "chakra-4-heart"],
+    "relatedNumerology": [11, 20, 29, 38],
+    "affirmation": "My sensitivity is my strength. I find harmony within myself before seeking it with others.",
+    "contemplativeQuestion": "Where are you over-giving to the point of self-erasure? What would feel different if you brought the same care to your own needs as you do to others'?"
+  },
+  {
+    "id": "num-3",
+    "type": "numerology-number",
+    "name": "3 — The Trinity",
+    "number": 3,
+    "symbol": "III",
+    "harmonicTone": "Trinity / Balance / Creation",
+    "archetype": "The Creator / The Communicator / The Joyful One",
+    "planet": "jupiter",
+    "element": "fire",
+    "chakraId": "chakra-3-solar-plexus",
+    "solfeggioHz": 528,
+    "lowerExpressionPattern": "Scattered Expression / Performance Anxiety / Suppression of Authentic Voice",
+    "lowerExpression": {
+      "name": "Scattered Expression",
+      "expression": "The shadow of 3 is creative energy that cannot land — ideas that never become realized, self-expression that performs rather than shares, humor that deflects rather than connects. The repressive form: swallowing creative impulses entirely, becoming serious and closed. The reactive form: compulsive talking, entertaining, or creating without depth — filling space to avoid the vulnerability of genuine expression.",
+      "blockingBelief": "My real self is too much. If I truly express myself, I will be too loud, too weird, too emotional — and people will leave."
+    },
+    "alignedExpression": {
+      "name": "Creative Expression",
+      "expression": "The gift of 3 is the irrepressible creative impulse that finds beauty in everything and must give it form — in words, art, music, movement, laughter, or the beautiful construction of an idea. When 3 flows freely, it becomes the channel through which joy enters the world. There is always a third way — the balance point that transforms opposition into possibility."
+    },
+    "highestExpression": {
+      "name": "Pure Joy",
+      "expression": "The highest expression of 3 is the recognition that existence itself is an act of divine creativity, and that one's entire life — work, love, conversation, play — is the canvas. Joy not as happiness (which requires good circumstances) but as the natural state of consciousness that has remembered its creative nature."
+    },
+    "adamApolloEssence": "Unity remains Present. In the first moment of time, in the birth of duality and separation, there remains an exact point of balance between any two opposing forces. The three is a moderator for the forces of change, the fabric of Space that stretches between the boundaries of Time. Within Yin, Yang, and the Balance — the three allows for all of Existence to Be.",
+    "lifePathMeaning": "Your life path is one of creative expression, communication, and the art of bringing joy into the world. You are here to develop the courage of authentic self-expression — to stop performing and start creating. The challenge: transforming scattered creative energy into focused work that moves people.",
+    "destinyMeaning": "Your soul came here to demonstrate that creativity is a spiritual practice — that when one creates from genuine inner necessity, the work becomes a gift to the collective. You are the artist, the writer, the teacher whose medium is language, form, or the alchemical space of true conversation.",
+    "keywords": ["creativity", "expression", "joy", "communication", "art", "optimism", "inspiration", "expansion", "trinity"],
+    "relatedGates": [3, 12, 45, 56],
+    "relatedChakras": ["chakra-3-solar-plexus", "chakra-2-sacral"],
+    "relatedNumerology": [12, 21, 30, 39],
+    "affirmation": "My authentic expression is my gift. I create from joy, not from the need for approval.",
+    "contemplativeQuestion": "What creative impulse have you been suppressing because it felt too self-indulgent, too impractical, or too vulnerable? What is trying to be born through you?"
+  },
+  {
+    "id": "num-4",
+    "type": "numerology-number",
+    "name": "4 — The Foundation",
+    "number": 4,
+    "symbol": "IV",
+    "harmonicTone": "Awareness / Creation / Four Directions",
+    "archetype": "The Builder / The Architect / The Stabilizer",
+    "planet": "uranus",
+    "element": "earth",
+    "chakraId": "chakra-1-root",
+    "solfeggioHz": 639,
+    "lowerExpressionPattern": "Rigidity / Limitation / Refusal of Change",
+    "lowerExpression": {
+      "name": "Rigidity",
+      "expression": "The shadow of 4 is the belief that stability requires control — that if things are not done properly (in the right order, by the right method), everything will collapse. This becomes rigidity: resistance to change, inability to adapt, relationships treated as projects to be managed. The repressive form: overwhelming limitation and a life of pure maintenance. The reactive form: sudden explosive rebellion against all structure.",
+      "blockingBelief": "The only safety comes from complete control. Spontaneity is recklessness. I must work harder, be more disciplined, to earn my place."
+    },
+    "alignedExpression": {
+      "name": "Foundation-Building",
+      "expression": "The gift of 4 is the sacred art of making things real. Where others have vision, the 4 has both vision AND the patient, disciplined capacity to build the vessel that holds the vision across time. The four directions, the four elements, the four-fold pattern of stable form — 4 knows that nothing beautiful lasts without a solid foundation."
+    },
+    "highestExpression": {
+      "name": "Mastery",
+      "expression": "The highest expression of 4 is the achievement of genuine mastery — not a certificate, but the lived reality of a skill so thoroughly embodied that it becomes second nature. The master builder who creates systems, structures, and forms that serve life for generations. Sacred architecture in all its forms."
+    },
+    "adamApolloEssence": "The observer realizes that in recognizing the Self at the center of the four directions, there is a whole universe of layers between our connection with the ground and the sky. The four directions — above, below, the four cardinal points — represent the observer's awareness of themselves as existing within a structured reality. Four is the cross at the center of being.",
+    "lifePathMeaning": "Your life path is one of building, stability, and the patient creation of enduring value. You are here to develop the discipline to bring your deepest values into stable, material form. The challenge: learning to distinguish healthy structure from rigid limitation, and trusting that your natural approach to life — methodical, thorough, committed — is a profound gift.",
+    "destinyMeaning": "Your soul came here to demonstrate that the most sacred work is done with the hands and the heart together — that building a life, a family, a company, or a community with genuine care and craftsmanship is a form of prayer.",
+    "keywords": ["foundation", "stability", "discipline", "building", "structure", "patience", "mastery", "earth", "sacred geometry"],
+    "relatedGates": [4, 32, 46, 57],
+    "relatedChakras": ["chakra-1-root"],
+    "relatedNumerology": [13, 22, 31, 40],
+    "affirmation": "I build on solid ground. My discipline is a form of love. My structures serve life.",
+    "contemplativeQuestion": "Where is your need for structure serving you, and where is it protecting you from the aliveness of uncertainty? What would you build if you knew it was allowed to be imperfect and alive?"
+  },
+  {
+    "id": "num-5",
+    "type": "numerology-number",
+    "name": "5 — The Freedom",
+    "number": 5,
+    "symbol": "V",
+    "harmonicTone": "Physicality / Root Chakra / The Five Senses",
+    "archetype": "The Adventurer / The Messenger / The Free Spirit",
+    "planet": "mercury",
+    "element": "earth",
+    "chakraId": "chakra-1-root",
+    "solfeggioHz": 741,
+    "lowerExpressionPattern": "Restlessness / Addiction / Escape",
+    "lowerExpression": {
+      "name": "Restlessness",
+      "expression": "The shadow of 5 is the inability to be present with what is — constantly seeking the next experience, the next place, the next relationship before the current one has been fully lived. This creates addiction patterns: to stimulation, to novelty, to substances that promise liberation from the discomfort of limitation. The fundamental fear: that stopping means dying.",
+      "blockingBelief": "The moment I stop moving, I'll miss my life. Commitment means death. Freedom is only possible by running."
+    },
+    "alignedExpression": {
+      "name": "Embodied Presence",
+      "expression": "The gift of 5 is the extraordinary capacity for fully embodied sensory experience — when 5 stops running, they discover that the physical world is miraculously alive. Every sensation becomes a doorway. The body becomes the temple it always was. True freedom is not escape but full presence in the physical form."
+    },
+    "highestExpression": {
+      "name": "Liberation",
+      "expression": "The highest expression of 5 is the realization that freedom is not a place you go — it is a quality of consciousness you carry within your own embodied presence. Having explored the entire range of physical experience, one discovers that every moment contains the infinite. True liberation is the discovery that this body, this breath, this moment, is complete."
+    },
+    "adamApolloEssence": "When the observer decides to observe this experience of Creation, a new layer of creation is made possible. The observer can now objectively view themselves. Five represents the observer stepping outside experience to witness it — the Pentagram: four elements held within and observed by Spirit. The five-pointed star is the alchemical symbol of the human body and its five-fold consciousness in physical reality.",
+    "lifePathMeaning": "Your life path is one of freedom, experience, and the full inhabitation of physical life. You are here to explore the extraordinary breadth of human experience and to discover that freedom is not found by escaping commitment but by choosing it fully. The challenge: transforming restlessness into deep, adventurous presence.",
+    "destinyMeaning": "Your soul came here to demonstrate the sacred nature of physical experience — that the five senses, used consciously, are portals to the divine. You are the adventurer whose journey becomes wisdom, the messenger who translates lived experience into maps for others.",
+    "keywords": ["freedom", "adventure", "change", "versatility", "senses", "experience", "liberation", "physicality", "presence"],
+    "relatedGates": [5, 35, 39, 63],
+    "relatedChakras": ["chakra-1-root", "chakra-2-sacral"],
+    "relatedNumerology": [14, 23, 32, 41],
+    "affirmation": "I am free within my chosen commitments. My body is the portal to the infinite.",
+    "contemplativeQuestion": "What sensation, experience, or area of physical life have you been avoiding? What is your restlessness protecting you from fully feeling?"
+  },
+  {
+    "id": "num-6",
+    "type": "numerology-number",
+    "name": "6 — The Love",
+    "number": 6,
+    "symbol": "VI",
+    "harmonicTone": "Emotionality / Sacral Chakra / The Spectrum of Feeling",
+    "archetype": "The Nurturer / The Healer / The Harmonizer",
+    "planet": "venus",
+    "element": "water",
+    "chakraId": "chakra-2-sacral",
+    "solfeggioHz": 852,
+    "lowerExpressionPattern": "Martyrdom / Control through Love / Perfectionism",
+    "lowerExpression": {
+      "name": "Martyrdom",
+      "expression": "The shadow of 6 is love weaponized through self-sacrifice — giving endlessly while keeping emotional score, creating relationships of obligation rather than freedom. The repressive form: swallowing all personal needs in service of others' happiness, becoming resentful in the silence. The reactive form: controlling others through excessive caretaking, unable to tolerate imperfection in people or situations.",
+      "blockingBelief": "Love requires sacrifice. If I truly love someone, I have to give up myself. My needs are a burden. I am only worthy when I am useful."
+    },
+    "alignedExpression": {
+      "name": "Unconditional Service",
+      "expression": "The gift of 6 is love that sees the best in everyone — that can hold a vision of a person's highest self even when they cannot see it themselves. When 6 learns to include themselves in their own circle of love, their capacity for nurturing, healing, and genuine service becomes extraordinary."
+    },
+    "highestExpression": {
+      "name": "Unconditional Love",
+      "expression": "The highest expression of 6 is love freed from need — not love that requires the other to be or do anything, but love as a state of being that flows through one like sunlight through a window. The healer who has healed themselves. The parent who has parented themselves. Love as the frequency from which all of life is viewed."
+    },
+    "adamApolloEssence": "As the observer decides to step out of the experience of the Physical, they realize that everything is in a state of vibration. The only difference between the Fire and the Water is its state of vibration. In this observation, all experience can be seen to be vibration — including the act of perceiving. This is the Emotional spectrum: from the deepest Earth to the highest Sky, mapped in the Hexagram, the Flower of Life, the rainbow of feeling.",
+    "lifePathMeaning": "Your life path is one of love, family, and the creation of beauty and healing. You are here to discover that genuine service begins with genuine self-love — that you cannot pour from an empty vessel. The challenge: moving from conditional love (that requires gratitude and perfection) to love that flows freely from wholeness.",
+    "destinyMeaning": "Your soul came here to demonstrate that love is not a feeling but a practice — that beauty, harmony, and genuine care for others are among the most sacred contributions a human can make to the world.",
+    "keywords": ["love", "nurturing", "harmony", "beauty", "service", "family", "healing", "responsibility", "emotion"],
+    "relatedGates": [6, 11, 36, 47],
+    "relatedChakras": ["chakra-2-sacral", "chakra-4-heart"],
+    "relatedNumerology": [15, 24, 33, 42],
+    "affirmation": "I love myself as fully as I love others. My care flows from wholeness, not from need.",
+    "contemplativeQuestion": "Where are you caring for others in a way that prevents them from growing? Where are you sacrificing your own needs, and calling it love?"
+  },
+  {
+    "id": "num-7",
+    "type": "numerology-number",
+    "name": "7 — The Wisdom",
+    "number": 7,
+    "symbol": "VII",
+    "harmonicTone": "Mentality / Solar Chakra / The Mind's Eye",
+    "archetype": "The Seeker / The Mystic / The Analyst",
+    "planet": "neptune",
+    "element": "air",
+    "chakraId": "chakra-3-solar-plexus",
+    "solfeggioHz": 963,
+    "lowerExpressionPattern": "Isolation / Cynicism / Spiritual Bypassing",
+    "lowerExpression": {
+      "name": "Isolation",
+      "expression": "The shadow of 7 is the retreat from ordinary human life into the castle of the mind — a place where one is never wrong because one never fully commits, never fully engages, never truly risks being misunderstood. The repressive form: withdrawal, depression, the belief that one is fundamentally different from other humans. The reactive form: cynicism, contempt for those who cannot see what one perceives, spiritual arrogance.",
+      "blockingBelief": "I am too sensitive, too complex, too deep for this world. People do not understand me and never will. The only safe place is inside my own mind."
+    },
+    "alignedExpression": {
+      "name": "Wisdom",
+      "expression": "The gift of 7 is the penetrating inner sight that can perceive the pattern beneath the surface — the insight that goes directly to what is essential, the question that unlocks something that years of effort could not. When 7 trusts their perception enough to bring it into relationship, wisdom becomes genuinely transformative."
+    },
+    "highestExpression": {
+      "name": "Presence",
+      "expression": "The highest expression of 7 is the mystic who has moved all the way through analysis into direct knowing — through the mind into the space behind the mind where direct perception is possible. Not thinking about presence but being it. The 7 who has integrated their depth into a quiet, radiant, embodied aliveness."
+    },
+    "adamApolloEssence": "The observer steps outside the experience of Emotion, now perceiving feelings as they have changed in time, and considering the source and forms of each. This act of observation is the step outside the realm of vibration, and into the space of identification — the realm of the Mind. The Solar System itself acts as a plane-like conceptual map of our collective mental state. The Heptagram: divine star light form, radiance and expansion.",
+    "lifePathMeaning": "Your life path is one of wisdom, introspection, and the development of genuine inner authority. You are here to learn the difference between isolation and healthy solitude — between cynicism and discernment. The challenge: trusting your perceptions enough to bring them into the world without need for external validation.",
+    "destinyMeaning": "Your soul came here to demonstrate that the inner journey is not a retreat from life but its very foundation — that genuine wisdom, earned through honest self-examination, is among the greatest gifts one can offer to a world that often mistakes information for knowledge.",
+    "keywords": ["wisdom", "analysis", "introspection", "spirituality", "knowledge", "solitude", "perception", "mind", "mystery"],
+    "relatedGates": [7, 33, 56, 61],
+    "relatedChakras": ["chakra-3-solar-plexus", "chakra-6-third-eye"],
+    "relatedNumerology": [16, 25, 34, 43],
+    "affirmation": "My inner knowing is trustworthy. I bring my depth into relationship.",
+    "contemplativeQuestion": "What truth do you know in your deepest inner perception that you haven't yet had the courage to speak? What are you still analyzing instead of living?"
+  },
+  {
+    "id": "num-8",
+    "type": "numerology-number",
+    "name": "8 — The Infinity",
+    "number": 8,
+    "symbol": "VIII",
+    "harmonicTone": "Perception of Time / Karma / The Infinite Cycle",
+    "archetype": "The Authority / The Manifester / The Karmic Master",
+    "planet": "saturn",
+    "element": "earth",
+    "chakraId": "chakra-5-throat",
+    "solfeggioHz": 528,
+    "lowerExpressionPattern": "Domination / Greed / Misuse of Power",
+    "lowerExpression": {
+      "name": "Domination",
+      "expression": "The shadow of 8 is the misuse of power — using personal authority, financial resources, or organizational influence to control rather than empower. The repressive form: giving all power away, becoming powerless in relationships and career, attracting domineering partners. The reactive form: financial obsession, the need to be the biggest/richest/most successful at any cost.",
+      "blockingBelief": "Power corrupts, so I must either take it or reject it entirely. My worth is measured in what I have achieved and accumulated. Vulnerability is weakness."
+    },
+    "alignedExpression": {
+      "name": "Empowerment",
+      "expression": "The gift of 8 is the capacity to take raw potential and transform it into genuine power — not power-over but power-to: the authority that creates space for others to grow. The 8 in full expression is the leader, the entrepreneur, the changemaker who can hold large visions and build the structures to realize them."
+    },
+    "highestExpression": {
+      "name": "Infinite Abundance",
+      "expression": "The highest expression of 8 is the recognition that abundance is not a finite resource but an infinite quality of consciousness — that genuine authority serves rather than rules, that true wealth is the capacity to give freely because one knows the source is inexhaustible. The infinity symbol: power flowing in both directions simultaneously."
+    },
+    "adamApolloEssence": "The perception of time through observation creates the Octave — the doubled frequency that is recognizable as the same note at a higher level. Eight is the perception of time itself as a cyclical, self-referencing intelligence. Saturn, the planet of time, karma, and structure, governs this frequency — the recognition that what is sown in time is reaped in time.",
+    "lifePathMeaning": "Your life path is one of authority, abundance, and the mastery of material reality in service of something larger. You are here to develop a healthy relationship with power — learning that true authority comes from integrity, not control, and that real wealth is built on genuine service.",
+    "destinyMeaning": "Your soul came here to demonstrate that material mastery and spiritual depth are not opposites — that the person of genuine power and integrity creates conditions in which others can flourish.",
+    "keywords": ["power", "abundance", "authority", "karma", "achievement", "mastery", "infinity", "material", "manifestation"],
+    "relatedGates": [8, 20, 31, 45],
+    "relatedChakras": ["chakra-5-throat", "chakra-3-solar-plexus"],
+    "relatedNumerology": [17, 26, 35, 44],
+    "affirmation": "I use my power in service of life. Abundance flows through me and benefits all it touches.",
+    "contemplativeQuestion": "Where have you given your power away, and to whom? Where have you misused it? What would it mean to stand in genuine authority — which has no need to dominate?"
+  },
+  {
+    "id": "num-9",
+    "type": "numerology-number",
+    "name": "9 — The Completion",
+    "number": 9,
+    "symbol": "IX",
+    "harmonicTone": "Eternal Present / Completion / The Universal",
+    "archetype": "The Humanitarian / The Sage / The Finisher",
+    "planet": "mars",
+    "element": "fire",
+    "chakraId": "chakra-7-crown",
+    "solfeggioHz": 963,
+    "lowerExpressionPattern": "Victimhood / Martyrdom / Inability to Let Go",
+    "lowerExpression": {
+      "name": "Resentment",
+      "expression": "The shadow of 9 is the accumulation of the shadows of all other numbers — the sense of having given everything and received nothing, having lost too much, having seen too much of human suffering to remain open. The repressive form: withdrawal into the purity of non-engagement, refusing to be touched by anything. The reactive form: bitter humanitarianism that secretly resents the humanity it serves.",
+      "blockingBelief": "I have already given so much and received so little. The world is broken and my care makes no difference. I must complete everything before I can rest."
+    },
+    "alignedExpression": {
+      "name": "Universal Wisdom",
+      "expression": "The gift of 9 is the wisdom earned through having genuinely lived all the experiences — the breadth of compassion that comes from having felt the full spectrum of human emotion and survived. The 9 in full expression sees the whole, holds the complexity, and still chooses to serve."
+    },
+    "highestExpression": {
+      "name": "Eternal Presence",
+      "expression": "The highest expression of 9 is the direct recognition of the eternal present — that there is nowhere to arrive because one is already here, that completion is not something to achieve but something to notice in each moment. The number 9 is the number of the cosmos itself: whatever you multiply by 9, the digits always return to 9 (9×2=18→1+8=9). It is the self-referencing wholeness of existence."
+    },
+    "adamApolloEssence": "The Eternal Present is the recognition that all of time is available in this moment — that past and future are simply different vantage points on the same infinite now. Nine contains all numbers within it (9+1=10→1, etc.) as the cosmos contains all experience. The completion of one cycle is the seed of the next.",
+    "lifePathMeaning": "Your life path is one of completion, universal service, and the wisdom of having come the whole way around. You are here to develop the capacity to let go — of people, places, identities, and stories — and to discover that letting go is not loss but liberation.",
+    "destinyMeaning": "Your soul came here to demonstrate the gift of genuine endings — that completing cycles with grace, releasing what has served its purpose, and choosing presence over accumulation is itself a profound form of wisdom.",
+    "keywords": ["completion", "wisdom", "humanitarian", "service", "letting go", "universal", "compassion", "wholeness", "karma"],
+    "relatedGates": [9, 40, 50, 58],
+    "relatedChakras": ["chakra-7-crown", "chakra-4-heart"],
+    "relatedNumerology": [18, 27, 36, 45],
+    "affirmation": "I am whole now. I release with love what has served its purpose.",
+    "contemplativeQuestion": "What cycle in your life is genuinely complete and waiting for you to honor its completion? What are you refusing to release because you believe the ending means failure?"
+  },
+  {
+    "id": "num-11",
+    "type": "numerology-number",
+    "name": "11 — The Illumination",
+    "number": 11,
+    "symbol": "XI",
+    "harmonicTone": "Master Number / Illumination / The Light-Bearer",
+    "archetype": "The Visionary / The Intuitive / The Spiritual Messenger",
+    "planet": "moon",
+    "element": "air",
+    "chakraId": "chakra-6-third-eye",
+    "solfeggioHz": 417,
+    "isMasterNumber": true,
+    "lowerExpressionPattern": "Anxiety / Overwhelm / Inability to Ground Vision",
+    "lowerExpression": {
+      "name": "Overwhelm",
+      "expression": "The shadow of 11 is psychic/intuitive sensitivity so amplified that it cannot be integrated — the antenna so powerful it cannot be turned off, receiving more signal than one can process. This leads to anxiety, emotional overwhelm, and the tendency to either completely shut down (repressive) or to become scattered and unstable as the nervous system struggles to handle the incoming frequency (reactive).",
+      "blockingBelief": "The world is too much. My sensitivity is a curse. I cannot protect myself from what I feel and know. Being this open is dangerous."
+    },
+    "alignedExpression": {
+      "name": "Illumination",
+      "expression": "The gift of 11 is the capacity to perceive what others cannot yet see — to channel genuine inspiration from beyond the ordinary mind and bring it into form in a way that lights something up in others. The spiritual teacher, the visionary artist, the leader who transmits clarity simply by being present."
+    },
+    "highestExpression": {
+      "name": "Revelation",
+      "expression": "The highest expression of 11 is the full integration of spiritual sensitivity with human groundedness — a being who can channel the highest frequencies without being destabilized by them. The light-bearer who has learned to inhabit their luminosity without burning out."
+    },
+    "adamApolloEssence": "Eleven is the first master number — two ones standing together in full presence, each maintaining their wholeness while creating something larger through their proximity. The doubled 1 creates a gateway: two pillars of consciousness holding open a portal to higher perception. The number of illumination, of beings who serve as antennas for higher frequencies.",
+    "lifePathMeaning": "Your life path carries the amplified frequency of the master number 11. You are here as an intuitive channel between ordinary human experience and higher perception. The work is integration: learning to be fully embodied while remaining fully open — to ground your sensitivity rather than being overwhelmed by it.",
+    "destinyMeaning": "Your soul came here as a bridge between dimensions — to bring through something that needs to be said, shown, or embodied in the world. The destination is not achievement but transmission: becoming the clearest possible channel for what wants to come through.",
+    "keywords": ["intuition", "illumination", "sensitivity", "inspiration", "vision", "spiritual", "channel", "master", "messenger"],
+    "relatedGates": [11, 26, 43, 61],
+    "relatedChakras": ["chakra-6-third-eye", "chakra-7-crown"],
+    "relatedNumerology": [2, 29, 38, 47],
+    "affirmation": "I am grounded enough to channel the light. My sensitivity is a sacred gift.",
+    "contemplativeQuestion": "What vision or insight have you been receiving that feels too large or too strange to share? What would it mean to trust what you know enough to bring it into form?"
+  },
+  {
+    "id": "num-22",
+    "type": "numerology-number",
+    "name": "22 — The Master Builder",
+    "number": 22,
+    "symbol": "XXII",
+    "harmonicTone": "Master Number / Sacred Architecture / Vision in Form",
+    "archetype": "The Master Builder / The Visionary Architect / The World-Changer",
+    "planet": "saturn",
+    "element": "earth",
+    "chakraId": "chakra-7-crown",
+    "solfeggioHz": 963,
+    "isMasterNumber": true,
+    "lowerExpressionPattern": "Overwhelming Ambition / Impracticality / Paralysis by Perfectionism",
+    "lowerExpression": {
+      "name": "Paralysis",
+      "expression": "The shadow of 22 is the vision so grand it can never be realized — the master builder who is so aware of the scale of what wants to be built that they cannot start. Or its opposite: the person who reduces themselves to the frequency of 4 because the 22 frequency feels too overwhelming. Either way: the sacred architecture remains unbuilt because the builder cannot bear the distance between vision and manifestation.",
+      "blockingBelief": "The vision is too big. I will fail at this scale. Or: I am just a regular person — that magnitude is not possible for me."
+    },
+    "alignedExpression": {
+      "name": "Visionary Building",
+      "expression": "The gift of 22 is the extraordinary combination of inspired vision and genuine practical capacity — the ability to see clearly what needs to be built AND to build it, step by step, across time. The master builder creates systems, organizations, and structures that serve humanity beyond their own lifetime."
+    },
+    "highestExpression": {
+      "name": "Universal Service",
+      "expression": "The highest expression of 22 is the recognition that one is not the architect but the vessel through which the architecture wishes to come into being — that true master-building is an act of surrender to something larger. The ego of the builder dissolves; the building remains as a gift to life."
+    },
+    "adamApolloEssence": "Twenty-two represents the full actualization of the four-fold pattern at the highest scale — the sacred number of the Tree of Life's 22 paths, the 22 letters of the Hebrew alphabet, the 22 major arcana of the Tarot. It is the master number of sacred architecture made manifest in the world.",
+    "lifePathMeaning": "Your life path carries the master builder frequency — the potential to create something that genuinely serves humanity at scale. The work is learning to hold the vision without being overwhelmed by it, and to build patiently, one stone at a time, trusting that the sacred architecture is already complete in the realm of potential.",
+    "destinyMeaning": "Your soul came here to manifest something significant — a body of work, a system, an organization, a contribution — that serves life beyond your own individual story. The destination is not personal success but the completion of something larger than yourself.",
+    "keywords": ["master builder", "vision", "architecture", "manifestation", "large scale", "sacred", "leadership", "legacy", "service"],
+    "relatedGates": [22, 36, 47, 57],
+    "relatedChakras": ["chakra-7-crown", "chakra-1-root"],
+    "relatedNumerology": [4, 40, 49, 58],
+    "affirmation": "I build with vision and patience. The scale of my work honors the scale of my purpose.",
+    "contemplativeQuestion": "What are you building that will outlast you? Where are you shrinking the magnitude of what wants to come through you?"
+  },
+  {
+    "id": "num-33",
+    "type": "numerology-number",
+    "name": "33 — The Master Teacher",
+    "number": 33,
+    "symbol": "XXXIII",
+    "harmonicTone": "Master Number / Christ Consciousness / Healing Love",
+    "archetype": "The Master Teacher / The Healer / The Compassionate Servant",
+    "planet": "neptune",
+    "element": "water",
+    "chakraId": "chakra-4-heart",
+    "solfeggioHz": 528,
+    "isMasterNumber": true,
+    "lowerExpressionPattern": "Martyrdom / Self-Sacrifice / Saving Others at Own Expense",
+    "lowerExpression": {
+      "name": "Martyrdom",
+      "expression": "The shadow of 33 is love expressed as self-annihilation — the teacher who cannot have their own life because they are always in service, the healer who cannot receive healing, the compassionate one who has given so completely that they have nothing left. This shadow is the most subtle because it is praised by the world: no one tells the martyr to stop. The 33 must learn that they cannot pour from an empty vessel — that self-care is a prerequisite for genuine service.",
+      "blockingBelief": "Love means sacrifice. My needs come last. I am here to serve — my personal fulfillment is secondary. If I rest, people will suffer."
+    },
+    "alignedExpression": {
+      "name": "Compassionate Healing",
+      "expression": "The gift of 33 is the capacity to love with the full warmth of the human heart AND the wisdom to know that genuine love sometimes says no, sometimes holds a boundary, sometimes loves enough to let someone struggle. The master teacher who has healed their own wounds has genuine compassion rather than empathy that exhausts."
+    },
+    "highestExpression": {
+      "name": "Pure Love",
+      "expression": "The highest expression of 33 is love as a state of being — not love for someone or something but love as the fundamental frequency of consciousness. The master teacher who is simply a channel for grace. Presence that heals without effort, because the entire being is an open heart."
+    },
+    "adamApolloEssence": "Thirty-three is the master teacher number — the full expression of the three frequencies (3×11=33) meeting the love vibration of the sacred heart. In many mystical traditions, 33 is associated with the highest expression of human spiritual development — the frequency of those who have mastered embodied love and chosen to remain in form to serve.",
+    "lifePathMeaning": "Your life path carries the master teacher frequency — the potential to embody compassion and wisdom at a level that genuinely transforms those you encounter. The work is learning to teach from your own healed wounds rather than from ongoing suffering, and to serve from fullness rather than from depletion.",
+    "destinyMeaning": "Your soul came here as a vessel of love in its most mature form — not romantic love or parental love but the love that sees and serves the divine in every human being regardless of how that human is presenting.",
+    "keywords": ["healing", "teaching", "compassion", "service", "love", "master", "heart", "wisdom", "grace"],
+    "relatedGates": [33, 13, 22, 47],
+    "relatedChakras": ["chakra-4-heart", "chakra-7-crown"],
+    "relatedNumerology": [6, 24, 33, 51],
+    "affirmation": "I heal myself first. Love flows through me from an infinite source.",
+    "contemplativeQuestion": "Where are you sacrificing yourself in the name of service, and calling it love? What would it mean to receive as generously as you give?"
+  }
+]

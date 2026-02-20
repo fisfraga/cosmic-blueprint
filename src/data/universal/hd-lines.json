@@ -1,0 +1,259 @@
+[
+  {
+    "id": "hd-line-1",
+    "type": "hd-line",
+    "name": "Line 1 - The Investigator",
+    "symbol": "1",
+    "lineNumber": 1,
+    "archetype": "Investigator",
+    "trigram": "Lower",
+    "trigramPosition": "Bottom",
+    "theme": "Foundation and Security",
+    "description": "Line 1 is the foundation of the hexagram, representing the need to investigate, research, and build a solid base of knowledge. Those with Line 1 energy have an intrinsic need to understand things deeply before feeling secure. They are the researchers and investigators of life.",
+    "keywords": [
+      "Research",
+      "Foundation",
+      "Introspection",
+      "Security",
+      "Study",
+      "Depth"
+    ],
+    "gifts": [
+      "Deep capacity for research and investigation",
+      "Natural ability to build solid foundations",
+      "Thorough understanding through study",
+      "Security through knowledge",
+      "Ability to become an authority through expertise"
+    ],
+    "challenges": [
+      "Insecurity when lacking sufficient knowledge",
+      "Tendency to over-research before acting",
+      "Fear of being caught unprepared",
+      "Can become isolated in their studies",
+      "May struggle with uncertainty"
+    ],
+    "inPersonality": "When Line 1 appears in the Personality (conscious), you're aware of your need to investigate and research. You consciously seek knowledge and understanding, and feel secure when you've done your homework.",
+    "inDesign": "When Line 1 appears in the Design (unconscious), this investigative quality operates beneath your awareness. Others may see you as thorough and well-researched even when you don't recognize this in yourself.",
+    "healthyExpression": "The healthy Line 1 has done their research and stands on a solid foundation of knowledge. They feel secure in their understanding and can share their expertise with confidence.",
+    "unhealthyExpression": "The unhealthy Line 1 is perpetually insecure, always feeling they need to know more before they can act. They may use research as a way to avoid moving forward.",
+    "practicalGuidance": "Honor your need to investigate and understand. Build your foundation of knowledge in areas that genuinely interest you. Know that you don't need to know everything—just enough to feel secure. Your depth of understanding is your gift.",
+    "image": "/images/human-design/lines/hd-line-1.png"
+  },
+  {
+    "id": "hd-line-2",
+    "type": "hd-line",
+    "name": "Line 2 - The Hermit",
+    "symbol": "2",
+    "lineNumber": 2,
+    "archetype": "Hermit",
+    "trigram": "Lower",
+    "trigramPosition": "Middle",
+    "theme": "Natural Talent and Being Called Out",
+    "description": "Line 2 represents natural, innate talent that often operates unconsciously. Those with Line 2 energy have gifts they may not recognize in themselves, and they require being 'called out' by others to share these talents. They need alone time to develop their gifts.",
+    "keywords": [
+      "Natural talent",
+      "Hermit",
+      "Called out",
+      "Projection",
+      "Alone time",
+      "Shyness"
+    ],
+    "gifts": [
+      "Natural, innate talents that come easily",
+      "Ability to do things without formal training",
+      "Gifts that others recognize and call forth",
+      "Need for solitude that nurtures creativity",
+      "Selective engagement preserves energy"
+    ],
+    "challenges": [
+      "May not recognize their own talents",
+      "Can resist being called out",
+      "Struggle with unwanted projections from others",
+      "May hide gifts out of shyness or resistance",
+      "Can become too isolated"
+    ],
+    "inPersonality": "When Line 2 appears in the Personality (conscious), you're aware of your need for alone time and may resist being called out. You might feel shy about your talents even as others project their needs onto you.",
+    "inDesign": "When Line 2 appears in the Design (unconscious), your natural talents operate beneath your awareness. Others see gifts in you that you may not recognize, and they call you out to share them.",
+    "healthyExpression": "The healthy Line 2 honors their need for solitude while remaining open to being called out for the right opportunities. They've learned to recognize and value their natural talents.",
+    "unhealthyExpression": "The unhealthy Line 2 either hides completely from the world or answers every call, regardless of whether it's correct for them. They may deny their gifts entirely.",
+    "practicalGuidance": "Honor your need for alone time—it's where you develop and restore yourself. Wait to be called out for opportunities rather than pushing yourself forward. Learn to recognize when a call is correct for you. Your talents are real, even if you don't see them.",
+    "image": "/images/human-design/lines/hd-line-2.png"
+  },
+  {
+    "id": "hd-line-3",
+    "type": "hd-line",
+    "name": "Line 3 - The Martyr",
+    "symbol": "3",
+    "lineNumber": 3,
+    "archetype": "Martyr",
+    "trigram": "Lower",
+    "trigramPosition": "Top",
+    "theme": "Trial and Error, Experiential Learning",
+    "description": "Line 3 represents learning through direct experience—trial and error. Those with Line 3 energy are here to discover what works and what doesn't through hands-on experimentation. What others might call 'mistakes' are actually valuable data points for Line 3.",
+    "keywords": [
+      "Trial and error",
+      "Experimentation",
+      "Resilience",
+      "Discovery",
+      "Adaptation",
+      "Bonds made and broken"
+    ],
+    "gifts": [
+      "Resilience through experiential learning",
+      "Ability to discover what truly works",
+      "Adaptability born from diverse experiences",
+      "Wisdom gained through direct engagement",
+      "Natural experimenters and innovators"
+    ],
+    "challenges": [
+      "May be labeled as making 'mistakes'",
+      "Can feel like life is a series of failures",
+      "Bonds frequently made and broken",
+      "Material and relational instability",
+      "Self-judgment about their experimental nature"
+    ],
+    "inPersonality": "When Line 3 appears in the Personality (conscious), you're aware of your experimental nature. You know you learn by doing and may consciously engage in trial and error processes.",
+    "inDesign": "When Line 3 appears in the Design (unconscious), you may not realize how much you learn through experience. Life seems to put you through trials that others might avoid, but these are your teachers.",
+    "healthyExpression": "The healthy Line 3 has made peace with their experimental nature. They understand that 'mistakes' are discoveries, and they share their hard-won wisdom with others.",
+    "unhealthyExpression": "The unhealthy Line 3 judges themselves harshly for their trials, feeling like a perpetual failure. They may give up trying or become bitter about their experiences.",
+    "practicalGuidance": "Embrace your experimental nature—it's how you learn and grow. Reframe 'mistakes' as discoveries and valuable data. Your experiences, especially the difficult ones, make you wise. Share what you've learned with others who can benefit.",
+    "image": "/images/human-design/lines/hd-line-3.png"
+  },
+  {
+    "id": "hd-line-4",
+    "type": "hd-line",
+    "name": "Line 4 - The Opportunist",
+    "symbol": "4",
+    "lineNumber": 4,
+    "archetype": "Opportunist",
+    "trigram": "Upper",
+    "trigramPosition": "Bottom",
+    "theme": "Network and Influence",
+    "description": "Line 4 marks the transition from the lower (personal) trigram to the upper (transpersonal) trigram. Those with Line 4 energy are designed to externalize and share, working through their network of relationships. Opportunities come through who they know.",
+    "keywords": [
+      "Network",
+      "Friendship",
+      "Influence",
+      "Opportunity",
+      "Foundation for others",
+      "Externalization"
+    ],
+    "gifts": [
+      "Strong network of meaningful relationships",
+      "Opportunities come through connections",
+      "Natural ability to influence others",
+      "Provides foundation and stability for others",
+      "Bridge between personal and collective"
+    ],
+    "challenges": [
+      "Dependency on network for opportunities",
+      "Can be devastated by friendship loss",
+      "May struggle with 'cold' networking",
+      "Need for close bonds can limit expansion",
+      "Can become stuck in wrong networks"
+    ],
+    "inPersonality": "When Line 4 appears in the Personality (conscious), you're aware of how important your network is. You consciously cultivate relationships and know that your opportunities come through people you know.",
+    "inDesign": "When Line 4 appears in the Design (unconscious), your networking operates beneath your awareness. You naturally attract and maintain connections that become sources of opportunity.",
+    "healthyExpression": "The healthy Line 4 has cultivated a network of genuine friendships and meaningful connections. Opportunities flow naturally through these relationships, and they provide a stable foundation for others.",
+    "unhealthyExpression": "The unhealthy Line 4 either clings desperately to their network or isolates themselves when hurt. They may manipulate relationships for opportunity rather than allowing natural flow.",
+    "practicalGuidance": "Cultivate genuine friendships—your network is your goldmine. Know that opportunities come through who you know, not what you know. Be a friend to have friends. When one door closes, trust that your network will open another.",
+    "image": "/images/human-design/lines/hd-line-4.png"
+  },
+  {
+    "id": "hd-line-5",
+    "type": "hd-line",
+    "name": "Line 5 - The Heretic",
+    "symbol": "5",
+    "lineNumber": 5,
+    "archetype": "Heretic",
+    "trigram": "Upper",
+    "trigramPosition": "Middle",
+    "theme": "Projection and Practical Solutions",
+    "description": "Line 5 carries the strongest projection field of all lines. Others project their hopes and expectations onto Line 5, seeing them as potential saviors or problem-solvers. When Line 5 delivers, they're celebrated; when they don't meet projections, they can be vilified.",
+    "keywords": [
+      "Projection",
+      "Savior",
+      "Heretic",
+      "Universalization",
+      "Practical solutions",
+      "Reputation"
+    ],
+    "gifts": [
+      "Natural ability to provide practical solutions",
+      "Charisma and attractive projection field",
+      "Capacity to influence and lead",
+      "Can see universal applications",
+      "Ability to meet collective needs"
+    ],
+    "challenges": [
+      "Heavy burden of others' projections",
+      "Reputation can be damaged if projections aren't met",
+      "May be vilified when they don't 'save' others",
+      "Paranoia about what others think",
+      "Must manage expectations carefully"
+    ],
+    "inPersonality": "When Line 5 appears in the Personality (conscious), you're aware of the projections others place on you. You may feel the pressure to be a savior or problem-solver and consciously manage your reputation.",
+    "inDesign": "When Line 5 appears in the Design (unconscious), you may not realize how much others project onto you. You attract expectations and attention without necessarily understanding why.",
+    "healthyExpression": "The healthy Line 5 understands the projection field and chooses carefully when to step into the role of problem-solver. They deliver practical solutions when they can and manage expectations when they can't.",
+    "unhealthyExpression": "The unhealthy Line 5 either tries to meet every projection (burning out) or becomes paranoid about reputation. They may hide to avoid projections or become defensive and bitter.",
+    "practicalGuidance": "Understand that others will project onto you—it's not personal. Choose carefully when to engage with projections. When you do step in, deliver practical solutions. Protect your reputation by not over-promising. Remember: you can't save everyone.",
+    "image": "/images/human-design/lines/hd-line-5.png"
+  },
+  {
+    "id": "hd-line-6",
+    "type": "hd-line",
+    "name": "Line 6 - The Role Model",
+    "symbol": "6",
+    "lineNumber": 6,
+    "archetype": "Role Model",
+    "trigram": "Upper",
+    "trigramPosition": "Top",
+    "theme": "Three-Part Life Process and Objectivity",
+    "description": "Line 6 represents the culmination of the hexagram and operates through a unique three-part life process: trial and error (like Line 3) until around age 30, then withdrawal 'onto the roof' for observation until around 50, then stepping into the role model phase. They are designed to become wise leaders through experience.",
+    "keywords": [
+      "Role model",
+      "Three-part process",
+      "Objectivity",
+      "Leadership",
+      "Trust",
+      "Wisdom"
+    ],
+    "gifts": [
+      "Unique three-part life journey brings wisdom",
+      "Objectivity from 'roof' observation period",
+      "Natural role models and leaders",
+      "Trustworthy through lived experience",
+      "Can see the big picture"
+    ],
+    "challenges": [
+      "First 30 years can feel chaotic (Line 3 process)",
+      "May feel disconnected during 'roof' period",
+      "Pressure to be a perfect role model",
+      "Can become too aloof or detached",
+      "Waiting for the third phase can be frustrating"
+    ],
+    "inPersonality": "When Line 6 appears in the Personality (conscious), you're aware of your three-part life process. You may consciously observe from the 'roof' and feel the call to become a role model.",
+    "inDesign": "When Line 6 appears in the Design (unconscious), the three-part process operates without your conscious awareness. You may not realize why different phases of life feel so distinct.",
+    "healthyExpression": "The healthy Line 6 has moved through their process with grace. They've integrated the lessons of trial and error, gained objectivity from observation, and stepped into authentic leadership as a role model.",
+    "unhealthyExpression": "The unhealthy Line 6 either never gets on the roof (staying in perpetual chaos) or refuses to come down (remaining aloof and disconnected). They may resist the role model responsibility.",
+    "practicalGuidance": "Honor your three-part process: embrace the trial and error of youth, use the middle period to observe and gain perspective, and when ready, step into your role as a wise guide. Your objectivity and lived experience are your gifts. Trust your timing.",
+    "lifePhases": {
+      "phase1": {
+        "name": "Trial and Error",
+        "ageRange": "Birth to ~30",
+        "description": "Like Line 3, experiencing life through direct engagement and experimentation. Learning what works and what doesn't."
+      },
+      "phase2": {
+        "name": "On the Roof",
+        "ageRange": "~30 to ~50",
+        "description": "A period of withdrawal and observation. Gaining objectivity and perspective on life from a detached vantage point."
+      },
+      "phase3": {
+        "name": "Role Model",
+        "ageRange": "~50 onwards",
+        "description": "Stepping off the roof into embodied wisdom. Becoming a trusted role model and guide for others."
+      }
+    },
+    "image": "/images/human-design/lines/hd-line-6.png"
+  }
+]

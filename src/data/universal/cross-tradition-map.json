@@ -1,0 +1,312 @@
+{
+  "_meta": {
+    "description": "Cross-tradition correspondence map. Use this with hd-gates.json (which has tropicalSignId per gate) to derive full cross-tradition relationships for all 64 gates/gene keys. The 64-gate mappings are computed at runtime via getGateCrossTraditionData().",
+    "source": "Stefano — Astrological Alchemy workshops + Kybalion synthesis",
+    "version": "1.0"
+  },
+
+  "signMappings": {
+    "aries": {
+      "naturalHouse": 1,
+      "chakraId": "chakra-4-heart",
+      "chakraName": "Heart",
+      "alchemicalSubstance": "Sulphur",
+      "substanceQuality": "contraction / action / will",
+      "element": "fire",
+      "polarSign": "libra",
+      "theme": "Identity — who am I authentically? The self as first relationship."
+    },
+    "taurus": {
+      "naturalHouse": 2,
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "alchemicalSubstance": "Sulphur",
+      "substanceQuality": "contraction / action / will",
+      "element": "earth",
+      "polarSign": "scorpio",
+      "theme": "Self-worth through resources. Values made material. The body as sacred ground."
+    },
+    "gemini": {
+      "naturalHouse": 3,
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "alchemicalSubstance": "Sulphur",
+      "substanceQuality": "contraction / action / will",
+      "element": "air",
+      "polarSign": "sagittarius",
+      "theme": "Intellect as creative vitality. Communication, curiosity, and the joy of the mind in motion."
+    },
+    "cancer": {
+      "naturalHouse": 4,
+      "chakraId": "chakra-1-root",
+      "chakraName": "Root",
+      "alchemicalSubstance": "Sulphur",
+      "substanceQuality": "contraction / action / will",
+      "element": "water",
+      "polarSign": "capricorn",
+      "theme": "Ancestral roots, family patterns, the home as inner sanctum. Foundation of all life."
+    },
+    "leo": {
+      "naturalHouse": 5,
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "alchemicalSubstance": "Sal",
+      "substanceQuality": "integration / feeling / soul",
+      "element": "fire",
+      "polarSign": "aquarius",
+      "theme": "Creative self-expression as soul-purpose. Joy, play, romance — identity crystallized through creation."
+    },
+    "virgo": {
+      "naturalHouse": 6,
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "alchemicalSubstance": "Sal",
+      "substanceQuality": "integration / feeling / soul",
+      "element": "earth",
+      "polarSign": "pisces",
+      "theme": "Devotion through refinement. Work and health as sacred practice. Integration through service."
+    },
+    "libra": {
+      "naturalHouse": 7,
+      "chakraId": "chakra-4-heart",
+      "chakraName": "Heart",
+      "alchemicalSubstance": "Sal",
+      "substanceQuality": "integration / feeling / soul",
+      "element": "air",
+      "polarSign": "aries",
+      "theme": "Relationships as the mirror of self. Balance, beauty, justice — integration through the other."
+    },
+    "scorpio": {
+      "naturalHouse": 8,
+      "chakraId": "chakra-5-throat",
+      "chakraName": "Throat",
+      "alchemicalSubstance": "Sal",
+      "substanceQuality": "integration / feeling / soul",
+      "element": "water",
+      "polarSign": "taurus",
+      "theme": "Transformation through depth. Sexuality as sacred alchemy. Death/rebirth as the path to authentic voice."
+    },
+    "sagittarius": {
+      "naturalHouse": 9,
+      "chakraId": "chakra-6-third-eye",
+      "chakraName": "Third Eye",
+      "alchemicalSubstance": "Mercurius",
+      "substanceQuality": "expansion / thought / intelligence",
+      "element": "fire",
+      "polarSign": "gemini",
+      "theme": "Philosophy and wisdom-seeking. Expansion through higher truth, travel, and spiritual vision."
+    },
+    "capricorn": {
+      "naturalHouse": 10,
+      "chakraId": "chakra-7-crown",
+      "chakraName": "Crown",
+      "alchemicalSubstance": "Mercurius",
+      "substanceQuality": "expansion / thought / intelligence",
+      "element": "earth",
+      "polarSign": "cancer",
+      "theme": "Vocation as spiritual practice. Purpose made visible in the world. Intelligence applied to mastery over time."
+    },
+    "aquarius": {
+      "naturalHouse": 11,
+      "chakraId": "chakra-6-third-eye",
+      "chakraName": "Third Eye",
+      "alchemicalSubstance": "Mercurius",
+      "substanceQuality": "expansion / thought / intelligence",
+      "element": "air",
+      "polarSign": "leo",
+      "theme": "Collective vision and ideals. The group mind. Humanitarian intelligence — what future does humanity need?"
+    },
+    "pisces": {
+      "naturalHouse": 12,
+      "chakraId": "chakra-5-throat",
+      "chakraName": "Throat",
+      "alchemicalSubstance": "Mercurius",
+      "substanceQuality": "expansion / thought / intelligence",
+      "element": "water",
+      "polarSign": "virgo",
+      "theme": "Dissolution and mysticism. The unconscious as wisdom source. Spiritual depth requiring surrender to speak truth."
+    }
+  },
+
+  "houseMappings": {
+    "1": {
+      "chakraId": "chakra-4-heart",
+      "chakraName": "Heart",
+      "naturalRuler": "aries",
+      "lifeAreaTheme": "Identity, authentic self-expression, how you enter the world",
+      "stefanoNote": "Sun in 1st: Heart chakra activated through self — purpose expressed through pure authentic presence"
+    },
+    "2": {
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "naturalRuler": "taurus",
+      "lifeAreaTheme": "Resources, self-worth, values, what you own and cherish",
+      "stefanoNote": "Sun in 2nd: Solar Plexus activated through material values — purpose expressed through what you value and build"
+    },
+    "3": {
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "naturalRuler": "gemini",
+      "lifeAreaTheme": "Communication, learning, siblings, local environment, ideas",
+      "stefanoNote": "Sun in 3rd: Sacral chakra activated through the mind — intellect as the primary creative force and life purpose"
+    },
+    "4": {
+      "chakraId": "chakra-1-root",
+      "chakraName": "Root",
+      "naturalRuler": "cancer",
+      "lifeAreaTheme": "Home, family, ancestry, psychological foundations, roots",
+      "stefanoNote": "Sun in 4th: Root chakra activated — solar purpose found in ancestry, home, and creating sacred foundations for self and family"
+    },
+    "5": {
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "naturalRuler": "leo",
+      "lifeAreaTheme": "Creativity, self-expression, romance, children, play, joy",
+      "stefanoNote": "Sun in 5th: Sacral chakra activated through creative expression — life force as play, art, love, and delight"
+    },
+    "6": {
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "naturalRuler": "virgo",
+      "lifeAreaTheme": "Work, health, service, daily routines, refinement",
+      "stefanoNote": "Sun in 6th: Solar Plexus activated through devotion to work and health — mastery through service"
+    },
+    "7": {
+      "chakraId": "chakra-4-heart",
+      "chakraName": "Heart",
+      "naturalRuler": "libra",
+      "lifeAreaTheme": "Relationships, partnerships, marriage, the significant other",
+      "stefanoNote": "Sun in 7th: Heart chakra activated through relationship — the other as mirror, love as the path to self-knowledge"
+    },
+    "8": {
+      "chakraId": "chakra-5-throat",
+      "chakraName": "Throat",
+      "naturalRuler": "scorpio",
+      "lifeAreaTheme": "Transformation, shared resources, sexuality, death/rebirth, occult",
+      "stefanoNote": "Sun in 8th: Throat chakra activated through depth — authentic voice requires going through transformation"
+    },
+    "9": {
+      "chakraId": "chakra-6-third-eye",
+      "chakraName": "Third Eye",
+      "naturalRuler": "sagittarius",
+      "lifeAreaTheme": "Philosophy, higher education, travel, spiritual expansion, beliefs, faith",
+      "stefanoNote": "Sun in 9th: Third Eye activated through wisdom-seeking — purpose fulfilled by expanding into philosophical and spiritual horizons"
+    },
+    "10": {
+      "chakraId": "chakra-7-crown",
+      "chakraName": "Crown",
+      "naturalRuler": "capricorn",
+      "lifeAreaTheme": "Vocation, career, public life, authority, highest purpose in the world",
+      "stefanoNote": "Sun in 10th: Crown chakra activated — the solar purpose is cosmic in scale, expressed through vocation and contribution to the world"
+    },
+    "11": {
+      "chakraId": "chakra-6-third-eye",
+      "chakraName": "Third Eye",
+      "naturalRuler": "aquarius",
+      "lifeAreaTheme": "Groups, friends, ideals, humanitarian vision, collective consciousness",
+      "stefanoNote": "Sun in 11th: Third Eye activated through collective vision — purpose is to hold and embody ideals for the group"
+    },
+    "12": {
+      "chakraId": "chakra-5-throat",
+      "chakraName": "Throat",
+      "naturalRuler": "pisces",
+      "lifeAreaTheme": "Spirituality, solitude, hidden realms, the unconscious, dissolution, karma",
+      "stefanoNote": "Sun in 12th: Throat chakra activated through dissolution — authentic voice requires surrendering to the mystical and the hidden"
+    }
+  },
+
+  "substanceMappings": {
+    "Sulphur": {
+      "signs": ["aries", "taurus", "gemini", "cancer"],
+      "chakrasActivated": ["chakra-1-root", "chakra-2-sacral", "chakra-3-solar-plexus", "chakra-4-heart"],
+      "quality": "Contraction, action, will, grounding, materialization",
+      "transformationPath": "Raw impulse → directed will → embodied mastery",
+      "hermetic": "Related to Principles I (Mentalism) and VI (Cause/Effect)"
+    },
+    "Sal": {
+      "signs": ["leo", "virgo", "libra", "scorpio"],
+      "chakrasActivated": ["chakra-2-sacral", "chakra-3-solar-plexus", "chakra-4-heart", "chakra-5-throat"],
+      "quality": "Integration, feeling, crystallization, soul-depth",
+      "transformationPath": "Experience → integration → wisdom held in form",
+      "hermetic": "Related to Principles II (Correspondence) and IV (Polarity)"
+    },
+    "Mercurius": {
+      "signs": ["sagittarius", "capricorn", "aquarius", "pisces"],
+      "chakrasActivated": ["chakra-5-throat", "chakra-6-third-eye", "chakra-7-crown"],
+      "quality": "Expansion, thought, intelligence, connection between worlds",
+      "transformationPath": "Understanding → expanded perception → universal knowing",
+      "hermetic": "Related to Principles III (Vibration), V (Rhythm), and VII (Gender)"
+    }
+  },
+
+  "elementChakraAffinity": {
+    "fire": {
+      "primaryChakra": "chakra-3-solar-plexus",
+      "secondaryChakra": "chakra-2-sacral",
+      "quality": "Will, action, transformation, purification"
+    },
+    "earth": {
+      "primaryChakra": "chakra-1-root",
+      "secondaryChakra": "chakra-3-solar-plexus",
+      "quality": "Grounding, manifestation, form, embodiment"
+    },
+    "air": {
+      "primaryChakra": "chakra-4-heart",
+      "secondaryChakra": "chakra-6-third-eye",
+      "quality": "Connection, thought, relationship, breath"
+    },
+    "water": {
+      "primaryChakra": "chakra-2-sacral",
+      "secondaryChakra": "chakra-5-throat",
+      "quality": "Feeling, intuition, depth, flow, dissolution"
+    }
+  },
+
+  "hdCenterChakraMap": {
+    "root-center": {
+      "chakraId": "chakra-1-root",
+      "chakraName": "Root",
+      "correspondence": "Direct — both govern survival pressure, grounding, and adrenal response"
+    },
+    "spleen-center": {
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "correspondence": "Intuitive awareness and instinctual knowing — the body's immune and survival intelligence"
+    },
+    "sacral-center": {
+      "chakraId": "chakra-2-sacral",
+      "chakraName": "Sacral/Splenic",
+      "correspondence": "Life force, sexuality, work energy — the core generator frequency"
+    },
+    "solar-plexus-center": {
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "correspondence": "Emotional intelligence and wave — the center of feeling awareness"
+    },
+    "heart-center": {
+      "chakraId": "chakra-3-solar-plexus",
+      "chakraName": "Solar Plexus",
+      "correspondence": "Willpower, ego, and the drive to prove — personal power center"
+    },
+    "g-center": {
+      "chakraId": "chakra-4-heart",
+      "chakraName": "Heart",
+      "correspondence": "Identity, love, and direction — the magnetic core of self"
+    },
+    "throat-center": {
+      "chakraId": "chakra-5-throat",
+      "chakraName": "Throat",
+      "correspondence": "Direct — both govern expression, manifestation of inner into outer form"
+    },
+    "ajna-center": {
+      "chakraId": "chakra-6-third-eye",
+      "chakraName": "Third Eye",
+      "correspondence": "Mental processing and conceptualization — the mind making meaning"
+    },
+    "head-center": {
+      "chakraId": "chakra-7-crown",
+      "chakraName": "Crown",
+      "correspondence": "Inspiration and mental pressure — the cosmic download center"
+    }
+  }
+}
