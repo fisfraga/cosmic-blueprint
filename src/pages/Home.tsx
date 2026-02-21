@@ -116,7 +116,7 @@ const explorationTools = [
 
 const toolColors: Record<string, string> = {
   purple: 'from-purple-500/10 to-purple-600/5 border-purple-500/20 hover:border-purple-400/40',
-  blue: 'from-blue-500/10 to-blue-600/5 border-blue-500/20 hover:border-blue-400/40',
+  blue: 'from-air-500/10 to-air-600/5 border-air-500/20 hover:border-air-400/40',
   cyan: 'from-cyan-500/10 to-cyan-600/5 border-cyan-500/20 hover:border-cyan-400/40',
   orange: 'from-orange-500/10 to-orange-600/5 border-orange-500/20 hover:border-orange-400/40',
   teal: 'from-teal-500/10 to-teal-600/5 border-teal-500/20 hover:border-teal-400/40',
@@ -430,7 +430,7 @@ export function Home() {
           <div className="space-y-3">
             {recentInsights.map((insight) => {
               const categoryColors: Record<string, string> = {
-                astrology: 'border-blue-500/30 text-blue-400',
+                astrology: 'border-air-500/30 text-air-400',
                 humanDesign: 'border-amber-500/30 text-amber-400',
                 geneKeys: 'border-purple-500/30 text-purple-400',
                 crossSystem: 'border-cyan-500/30 text-cyan-400',

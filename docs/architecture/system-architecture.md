@@ -566,21 +566,49 @@ Used for natal chart calculation (houses, aspects) when `VITE_ASTROLOGY_API_ENAB
 
 ## 14. Questions for Specialist Review
 
-### For @data-engineer (Dara):
-1. Is the missing `public.` prefix on `contemplation_sessions` causing any actual issues in Supabase?
-2. Should `saved_insights(category, contemplation_type)` have compound indexes for filtering?
-3. Is JSONB for `profile_data` the right choice, or should we consider a versioned schema approach?
-4. Are the current RLS policies sufficient? Are there any edge cases (e.g., profile sharing, admin access)?
-5. Is there a missing UPDATE policy gap anywhere?
-6. What is the actual database size/growth rate for a typical user?
+### For @data-engineer (Dara): ✅ ANSWERED (Phase 2 Complete)
 
-### For @ux-design-expert (Uma):
-1. Are the 1,346L `ContemplationChamber.tsx` and 1,202L `Profile.tsx` causing UX issues (performance, responsiveness)?
-2. Is the element-based theming (fire/earth/air/water) consistent across all 70+ pages?
-3. Are there accessibility (a11y) issues in the D3 visualizations (CelestialMandala, ConstellationGraph)?
-4. How is the loading experience for lazy-loaded pages beyond the generic "Loading..." text?
-5. Are there mobile responsiveness gaps in the complex pages?
-6. Is the Onboarding flow (742L) working well, or are there UX friction points?
+*Full analysis in `docs/architecture/SCHEMA.md` + `docs/architecture/DB-AUDIT.md`. Summary:*
+
+1. **Missing `public.` prefix on `contemplation_sessions` — causing issues?**
+   → **No immediate issues.** Supabase defaults to `public` schema, so the table resolves correctly. However, it's an inconsistency (other 3 tables use explicit `public.` prefix) and could cause confusion if `search_path` is ever modified. Classified as MED-02, fix is trivial (`ALTER TABLE` or document as accepted inconsistency).
+
+2. **Should `saved_insights(category, contemplation_type)` have compound indexes?**
+   → **Yes, eventually.** Currently only single-column indexes exist on `category` and `type` (and the `type` index has a **CRITICAL column name bug** — references `type` instead of `contemplation_type`, see DB-AUDIT CRIT-03). Compound indexes on `(user_id, category)` and `(user_id, contemplation_type)` would better serve the actual query patterns (always filtered by user_id via RLS + category/type). Classified as LOW-03 — add when traffic data justifies it.
+
+3. **JSONB for `profile_data` — right choice?**
+   → **Yes, correct choice for current architecture.** The profile is read/written as a complete unit, never queried by sub-fields at the DB level. JSONB provides flexibility for schema evolution (v1→v2 migration handled in TypeScript). Column-level constraints aren't needed since validation occurs in the app layer. If profile sub-field queries become needed (e.g., "find all Scorpio Sun users"), a materialized view or extracted columns approach would be appropriate then.
+
+4. **RLS policies sufficient? Edge cases?**
+   → **RLS is complete and sufficient for current scope.** All 4 tables have SELECT/INSERT/UPDATE/DELETE policies, all enforcing `auth.uid() = user_id`. No gaps detected. Edge cases considered: (a) **Profile sharing** — would require new RLS policies with a sharing/permissions table, not needed yet; (b) **Admin access** — would need service role key or admin-level policies, not needed yet; (c) **Anonymous users** — `auth.uid()` returns NULL → zero access, correct behavior.
+
+5. **Missing UPDATE policy gap?**
+   → **No gaps found.** All 4 tables have explicit UPDATE policies. RLS coverage is 4/4 operations × 4 tables = 16 policies, all present and consistent. However, there's a **more critical gap in the sync layer**: Supabase write operations (upsert/delete) have zero error handling in TypeScript (DB-AUDIT CRIT-02). RLS enforcement is correct at the DB level, but the app never checks if writes succeeded.
+
+6. **Database size/growth rate for a typical user?**
+   → **Estimated well within limits.** localStorage: ~2.5MB max (10 profiles × 100KB + 100 insights × 5KB + 20 sessions × 50KB + pathways). Browser limit is 5-10MB. Supabase: mirrors localStorage, so similar per-user footprint. Growth rate is bounded by hard caps (10 profiles, 100 insights, 20 sessions). The real size concern isn't storage but **JSONB payload size** — a single `cosmic_profiles.profile_data` row stores the entire `CosmicProfile` (~50-100KB JSONB), which could slow upserts. No monitoring exists currently (DB-AUDIT LOW-01).
+
+### For @ux-design-expert (Uma): ✅ ANSWERED (Phase 3 Complete)
+
+*Full answers in `docs/architecture/frontend-spec.md`. Summary:*
+
+1. **ContemplationChamber (1,345L) and Profile (1,202L) — UX impact?**
+   → Not causing visible UX issues yet (no reported performance/responsiveness problems), but they are **structural time bombs**. ContemplationChamber has 19 useState hooks — every state change re-renders the entire 1,345L tree. Recommend decomposition into ChatMessages + ChatInput + SessionManager sub-components.
+
+2. **Element theming consistency across 70+ pages?**
+   → **YES — excellent consistency.** Custom element colors (fire/earth/air/water/humandesign/genekey) total 761 instances, all using the centralized Tailwind config. Only 1 arbitrary color value found (`bg-[#9333EA]` in ProfileBodyGraph.tsx → should be `bg-genekey-600`). The color system is the strongest aspect of the design.
+
+3. **D3 visualization accessibility?**
+   → **CRITICAL gap.** All 5 D3 components (CelestialMandala, ConstellationGraph, BodyGraph, HouseSubstanceWheel, ChakraBodyViz) have **zero ARIA support** — no `role="img"`, no `aria-label`, no text alternatives. They are invisible to screen readers. Additionally, all 5 duplicate SVG setup, color maps, and interaction handlers with no shared utilities.
+
+4. **Loading experience for lazy-loaded pages?**
+   → **Adequate.** All routes use `<LoadingSkeleton variant="page" />` (155L component with 4 variants). This provides visual feedback during chunk loading. No ARIA live regions for loading states though (screen readers don't know loading is happening).
+
+5. **Mobile responsiveness gaps?**
+   → Mobile-first responsive design using `md:` breakpoints throughout. Grid layouts collapse properly (`grid-cols-1 md:grid-cols-2 lg:grid-cols-3`). Layout.tsx has hamburger menu for mobile nav. No critical gaps identified, though the D3 visualizations (CelestialMandala, BodyGraph) may not scale well on very small screens.
+
+6. **Onboarding flow (742L) — UX friction?**
+   → Main friction: **birth data form is duplicated** between Onboarding.tsx (StepBirthData, ~200L) and ProfileCreationForm.tsx (624L). Same fields, same validation, same coordinate parsing — two separate implementations. Recommend extracting a shared `BirthDataForm` molecule.
 
 ---
 
@@ -599,5 +627,7 @@ Used for natal chart calculation (houses, aspects) when `VITE_ASTROLOGY_API_ENAB
 
 ---
 
-*Document Version: 1.0 — Phase 1 of 10 (Brownfield Discovery)*
-*Next: Phase 2 (@data-engineer) + Phase 3 (@ux-design-expert)*
+*Document Version: 1.2 — Phases 1 + 2 + 3 of 10 (Brownfield Discovery)*
+*Completed: Phase 1 (@architect), Phase 2 (@data-engineer), Phase 3 (@ux-design-expert)*
+*Next: Phase 4 (@architect — Technical Debt Draft) using all 3 specialist reports*
+*See also: `docs/architecture/frontend-spec.md` (Phase 3), `SCHEMA.md` + `DB-AUDIT.md` (Phase 2)*

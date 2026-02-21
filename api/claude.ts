@@ -42,8 +42,15 @@ const ALLOWED_ORIGINS = [
 
 function isOriginAllowed(origin: string | undefined): boolean {
   if (!origin) return false;
-  return ALLOWED_ORIGINS.some((allowed) => origin === allowed || origin.startsWith(allowed));
+  return ALLOWED_ORIGINS.includes(origin);
 }
+
+// --- Model whitelist ---
+const ALLOWED_MODELS = new Set([
+  'anthropic/claude-sonnet-4-6',
+  'anthropic/claude-haiku-4-5-20251001',
+  'anthropic/claude-sonnet-4-5-20250514',
+]);
 
 // --- Handler ---
 export default async function handler(req: VercelRequest, res: VercelResponse) {
@@ -96,6 +103,10 @@ export default async function handler(req: VercelRequest, res: VercelResponse) {
   try {
     const { systemPrompt, messages, stream: shouldStream, model } = req.body;
     const modelId = (model as string) || 'anthropic/claude-sonnet-4-6';
+
+    if (!ALLOWED_MODELS.has(modelId)) {
+      return res.status(400).json({ error: `Model not allowed: ${modelId}` });
+    }
 
     if (!systemPrompt || !messages) {
       return res.status(400).json({ error: 'Missing systemPrompt or messages' });
