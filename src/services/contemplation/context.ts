@@ -9,7 +9,12 @@ import { getCosmicWeather } from '../transits';
 import { formatILOSContextForCategory } from './ilos';
 import { getRelevantExcerpts, formatExcerptsForContext } from '../../data/knowledge';
 
-export type ContemplationCategory = 'astrology' | 'humanDesign' | 'geneKeys' | 'crossSystem' | 'lifeOS' | 'alchemy';
+export type ContemplationCategory =
+  | 'astrology' | 'humanDesign' | 'geneKeys' | 'crossSystem' | 'lifeOS'
+  | 'alchemy'            // Refocused: chakras + hermetic alchemy only
+  | 'numerology'         // Split from alchemy: Life Path + Numerology Overview
+  | 'cosmicEmbodiment'   // Promoted from crossSystem: any energy speaks directly
+  | 'fixedStars';        // Exposed from service layer
 
 export type ContemplationType =
   // Astrology
@@ -48,6 +53,8 @@ export type ContemplationType =
   | 'planetSphereSynthesis'
   | 'holisticReading'
   | 'cosmicEmbodiment'
+  | 'elementalSystemBridge'
+  | 'lifePathSynthesis'
   // Life OS
   | 'lifeAreaAlignment'
   | 'goalCosmicContext'
@@ -106,10 +113,16 @@ function getIncludedSystems(category: ContemplationCategory): {
       // Life OS needs everything — bridges cosmic to intentional living
       return { ...base, humanDesign: true, geneKeys: true, bridges: true };
     case 'alchemy':
-      // Alchemy needs everything — numerology, chakras, and alchemy bridge all systems
+      // Alchemy (chakras + hermetic): bridges all systems
       return { ...base, humanDesign: true, geneKeys: true, bridges: true };
-    case 'fixedStars' as ContemplationCategory:
-      // Fixed stars are an astrological layer; include astrology context
+    case 'numerology':
+      // Numerology: Life Path connects to Gene Keys + astrology purpose
+      return { ...base, humanDesign: false, geneKeys: true, bridges: false };
+    case 'cosmicEmbodiment':
+      // Embodiment: any entity across all systems
+      return { ...base, humanDesign: true, geneKeys: true, bridges: true };
+    case 'fixedStars':
+      // Fixed stars are an astrological layer; include astrology context only
       return { ...base, humanDesign: false, geneKeys: false, bridges: false };
     default:
       return { astrology: true, humanDesign: true, geneKeys: true, bridges: true };
@@ -163,8 +176,9 @@ export function formatProfileContext(
     sections.push(formatTodayGateActivations(profile));
   }
 
-  // Include Fixed Stars context for fixed-star contemplation types
+  // Include Fixed Stars context for fixed-star category or types
   if (
+    selection.category === 'fixedStars' ||
     selection.type === 'fixedStarProfile' ||
     selection.type === 'fixedStarConjunction' ||
     selection.type === 'fixedStarTransit'

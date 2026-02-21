@@ -119,6 +119,13 @@ export function formatILOSContextForCategory(category: string): string {
     case 'geneKeys':
       return formatGeneKeysILOSContext();
 
+    case 'numerology':
+      // Numerology connects to purpose — same context as Gene Keys
+      return formatGeneKeysILOSContext();
+
+    case 'cosmicEmbodiment':
+    case 'fixedStars':
+    case 'alchemy':
     default:
       return '';
   }

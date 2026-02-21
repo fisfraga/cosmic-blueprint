@@ -12,6 +12,7 @@ import {
   getModelForType,
   getModelId,
 } from '../services/contemplation/prompts';
+import { getCustomPrompt } from '../services/contemplation/customTypes';
 import {
   formatProfileContext,
   appendILOSContext,
@@ -36,7 +37,25 @@ import {
   deleteSession as deleteSessionFromStorage,
 } from '../services/sessions';
 
-// Pathway context from navigation
+// ─── Session Migration (Sprint Q) ─────────────────────────────────────────────
+// Migrate old sessions whose category changed when types were reorganized.
+// Safe to run on every resume — no-op for already-migrated sessions.
+
+const TYPE_CATEGORY_REMAP: Partial<Record<string, ContemplationCategory>> = {
+  numerologyReading: 'numerology',
+  numerologyOverview: 'numerology',
+  cosmicEmbodiment: 'cosmicEmbodiment',
+};
+
+function migrateSessionCategory(session: SavedSession): SavedSession {
+  const remappedCategory = TYPE_CATEGORY_REMAP[session.contemplationType];
+  if (remappedCategory && session.category !== remappedCategory) {
+    return { ...session, category: remappedCategory };
+  }
+  return session;
+}
+
+// ─── Pathway context from navigation ──────────────────────────────────────────
 export interface PathwayContext {
   pathwayId: string;
   stepId: string;
@@ -153,74 +172,92 @@ function parseSeedFromParams(searchParams: URLSearchParams): ContemplationSeed |
 }
 
 
+export type ContemplationLevel = 'beginner' | 'advanced' | 'master';
+
 export interface ContemplationTypeOption {
   id: ContemplationType;
   name: string;
   description: string;
   needsFocus?: boolean;
+  level?: ContemplationLevel;
 }
 
 export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTypeOption[]> = {
   astrology: [
-    { id: 'natalOverview', name: 'Natal Overview', description: 'Big picture of your cosmic blueprint' },
-    { id: 'transitOverview', name: 'Transit Overview', description: 'General overview of current cosmic weather' },
-    { id: 'transitReading', name: 'Focused Transit', description: 'Explore a specific transit in depth', needsFocus: true },
-    { id: 'placementDeepDive', name: 'Placement Deep Dive', description: 'Explore a specific planet placement', needsFocus: true },
-    { id: 'placementOverview', name: 'All Placements', description: 'Explore all your planetary placements' },
-    { id: 'aspectExploration', name: 'Aspect Exploration', description: 'Understand planetary dialogues', needsFocus: true },
-    { id: 'aspectOverview', name: 'All Aspects', description: 'Explore all your planetary aspects' },
-    { id: 'configurationReading', name: 'Configuration Reading', description: 'Interpret aspect patterns', needsFocus: true },
-    { id: 'elementalBalance', name: 'Elemental Balance', description: 'Explore your element distribution' },
+    { id: 'natalOverview',        name: 'Natal Overview',         description: 'Big picture of your cosmic blueprint',                              level: 'beginner' },
+    { id: 'transitOverview',      name: 'Transit Overview',       description: 'General overview of current cosmic weather',                        level: 'beginner' },
+    { id: 'placementOverview',    name: 'All Placements',         description: 'Explore all your planetary placements',                             level: 'beginner' },
+    { id: 'aspectOverview',       name: 'All Aspects',            description: 'Explore all your planetary aspects',                                level: 'beginner' },
+    { id: 'profileExploration',   name: 'Profile Lines',          description: 'Your conscious/unconscious roles',                                  level: 'beginner' },
+    { id: 'placementDeepDive',    name: 'Placement Deep Dive',    description: 'Explore a specific planet placement',      needsFocus: true,         level: 'advanced' },
+    { id: 'transitReading',       name: 'Focused Transit',        description: 'Explore a specific transit in depth',       needsFocus: true,         level: 'advanced' },
+    { id: 'aspectExploration',    name: 'Aspect Exploration',     description: 'Understand planetary dialogues',            needsFocus: true,         level: 'advanced' },
+    { id: 'elementalBalance',     name: 'Elemental Balance',      description: 'Explore your element distribution',                                 level: 'advanced' },
+    { id: 'configurationReading', name: 'Configuration Reading',  description: 'Interpret aspect patterns',                 needsFocus: true,         level: 'advanced' },
   ],
   humanDesign: [
-    { id: 'typeStrategy', name: 'Type & Strategy', description: 'Your energy type and decision-making' },
-    { id: 'authorityCheckIn', name: 'Authority Check-in', description: 'Connect with inner authority' },
-    { id: 'gateContemplation', name: 'Gate Contemplation', description: 'Explore a specific gate', needsFocus: true },
-    { id: 'gateOverview', name: 'All Gates', description: 'Explore all your defined gates' },
-    { id: 'channelExploration', name: 'Channel Exploration', description: 'Explore a specific channel', needsFocus: true },
-    { id: 'channelOverview', name: 'All Channels', description: 'Explore all your defined channels' },
-    { id: 'centerAwareness', name: 'Center Awareness', description: 'Explore a specific center', needsFocus: true },
-    { id: 'centerOverview', name: 'All Centers', description: 'Explore your defined and undefined centers' },
-    { id: 'profileExploration', name: 'Profile Lines', description: 'Your conscious/unconscious roles' },
+    { id: 'typeStrategy',       name: 'Type & Strategy',    description: 'Your energy type and decision-making',                           level: 'beginner' },
+    { id: 'authorityCheckIn',   name: 'Authority Check-in', description: 'Connect with inner authority',                                  level: 'beginner' },
+    { id: 'gateOverview',       name: 'All Gates',          description: 'Explore all your defined gates',                                level: 'beginner' },
+    { id: 'channelOverview',    name: 'All Channels',       description: 'Explore all your defined channels',                             level: 'beginner' },
+    { id: 'centerOverview',     name: 'All Centers',        description: 'Explore your defined and undefined centers',                    level: 'beginner' },
+    { id: 'gateContemplation',  name: 'Gate Contemplation', description: 'Explore a specific gate',         needsFocus: true,             level: 'advanced' },
+    { id: 'channelExploration', name: 'Channel Exploration',description: 'Explore a specific channel',      needsFocus: true,             level: 'advanced' },
+    { id: 'centerAwareness',    name: 'Center Awareness',   description: 'Explore a specific center',       needsFocus: true,             level: 'advanced' },
+    { id: 'profileExploration', name: 'Profile Lines',      description: 'Your conscious/unconscious roles',                              level: 'beginner' },
   ],
   geneKeys: [
-    { id: 'activationSequence', name: 'Activation Sequence', description: 'The path of Purpose' },
-    { id: 'venusSequence', name: 'Venus Sequence', description: 'The path of the Heart' },
-    { id: 'pearlSequence', name: 'Pearl Sequence', description: 'The path of Prosperity' },
-    { id: 'shadowWork', name: 'Shadow Work', description: 'Gentle shadow illumination', needsFocus: true },
-    { id: 'shadowOverview', name: 'All Shadows', description: 'Explore all your shadow patterns' },
-    { id: 'giftActivation', name: 'Gift Activation', description: 'Embodying your gifts', needsFocus: true },
-    { id: 'giftOverview', name: 'All Gifts', description: 'Explore all your gift frequencies' },
-    { id: 'siddhiContemplation', name: 'Siddhi Meditation', description: 'Highest potential', needsFocus: true },
-    { id: 'siddhiOverview', name: 'All Siddhis', description: 'Contemplate all your siddhi potentials' },
+    { id: 'shadowOverview',      name: 'All Shadows',          description: 'Explore all your shadow patterns',                    level: 'beginner' },
+    { id: 'giftOverview',        name: 'All Gifts',            description: 'Explore all your gift frequencies',                   level: 'beginner' },
+    { id: 'siddhiOverview',      name: 'All Siddhis',          description: 'Contemplate all your siddhi potentials',             level: 'beginner' },
+    { id: 'shadowWork',          name: 'Shadow Work',          description: 'Gentle shadow illumination',   needsFocus: true,      level: 'advanced' },
+    { id: 'giftActivation',      name: 'Gift Activation',      description: 'Embodying your gifts',         needsFocus: true,      level: 'advanced' },
+    { id: 'siddhiContemplation', name: 'Siddhi Meditation',    description: 'Highest potential',            needsFocus: true,      level: 'advanced' },
+    { id: 'activationSequence',  name: 'Activation Sequence',  description: 'The path of Purpose',                                level: 'master' },
+    { id: 'venusSequence',       name: 'Venus Sequence',       description: 'The path of the Heart',                              level: 'master' },
+    { id: 'pearlSequence',       name: 'Pearl Sequence',       description: 'The path of Prosperity',                             level: 'master' },
   ],
   crossSystem: [
-    { id: 'gateKeyBridge', name: 'Gate-Key Bridge', description: 'HD meets Gene Keys', needsFocus: true },
-    { id: 'gateKeyOverview', name: 'All Gate-Key Bridges', description: 'Explore how all your gates connect to Gene Keys' },
-    { id: 'planetSphereSynthesis', name: 'Planet-Sphere Synthesis', description: 'Astrology meets Gene Keys' },
-    { id: 'holisticReading', name: 'Holistic Reading', description: 'All three systems woven together' },
-    { id: 'cosmicEmbodiment', name: 'Cosmic Embodiment', description: 'Let an energy speak directly to you', needsFocus: true },
+    { id: 'gateKeyOverview',         name: 'All Gate-Key Bridges',      description: 'Explore how all your gates connect to Gene Keys',                                                           level: 'beginner' },
+    { id: 'gateKeyBridge',           name: 'Gate-Key Bridge',           description: 'HD meets Gene Keys',                                                        needsFocus: true, level: 'advanced' },
+    { id: 'planetSphereSynthesis',   name: 'Planet-Sphere Synthesis',   description: 'Astrology meets Gene Keys',                                                                level: 'advanced' },
+    { id: 'elementalSystemBridge',   name: 'Elemental System Bridge',   description: 'How your dominant element expresses across all three systems simultaneously',               level: 'advanced' },
+    { id: 'holisticReading',         name: 'Holistic Reading',          description: 'All three systems woven together',                                                         level: 'master' },
+    { id: 'lifePathSynthesis',       name: 'Life Path Synthesis',       description: 'Numerology Life Path + Gene Keys purpose + Astrology purpose indicators as one life reading', level: 'master' },
   ],
   lifeOS: [
-    { id: 'lifeAreaAlignment', name: 'Life Area Alignment', description: 'Explore how cosmic design aligns with intentional living in a specific life area' },
-    { id: 'goalCosmicContext', name: 'Goal Cosmic Context', description: 'Understand your active goals through cosmic blueprint context' },
-    { id: 'purposeReview', name: 'Purpose Review', description: 'Connect Gene Keys Activation Sequence to your Life OS purpose architecture' },
+    { id: 'lifeAreaAlignment', name: 'Life Area Alignment', description: 'Explore how cosmic design aligns with intentional living in a specific life area', level: 'master' },
+    { id: 'goalCosmicContext',  name: 'Goal Cosmic Context',  description: 'Understand your active goals through cosmic blueprint context',               level: 'master' },
+    { id: 'purposeReview',      name: 'Purpose Review',       description: 'Connect Gene Keys Activation Sequence to your Life OS purpose architecture', level: 'master' },
   ],
   alchemy: [
-    { id: 'numerologyReading' as ContemplationType, name: 'Life Path Reading', description: "Deep contemplation of your life path number's shadow, gift, and siddhi arc" },
-    { id: 'numerologyOverview' as ContemplationType, name: 'Numerology Overview', description: 'Quick numerological snapshot connecting life path to Gene Keys and chakras' },
-    { id: 'chakraAwareness' as ContemplationType, name: 'Chakra Activations', description: 'Explore which chakras are activated by your planetary placements' },
-    { id: 'alchemicalMapping' as ContemplationType, name: 'Alchemical Pattern', description: 'Understand your dominant alchemical substance — Sulphur, Sal, or Mercurius' },
+    { id: 'chakraAwareness',   name: 'Chakra Activations', description: 'Explore which chakras are activated by your planetary placements',                        level: 'advanced' },
+    { id: 'alchemicalMapping', name: 'Alchemical Pattern', description: 'Understand your dominant alchemical substance — Sulphur, Sal, or Mercurius',             level: 'master' },
+  ],
+  numerology: [
+    { id: 'numerologyOverview', name: 'Numerology Overview',  description: 'Quick numerological snapshot connecting life path to Gene Keys and chakras',              level: 'beginner' },
+    { id: 'numerologyReading',  name: 'Life Path Reading',    description: "Deep contemplation of your life path number's shadow, gift, and siddhi arc",             level: 'advanced' },
+  ],
+  cosmicEmbodiment: [
+    { id: 'cosmicEmbodiment', name: 'Cosmic Embodiment', description: 'Let any cosmic energy speak directly to you — planets, gates, signs, elements, and more', needsFocus: true, level: 'master' },
+  ],
+  fixedStars: [
+    { id: 'fixedStarProfile',     name: 'Fixed Star Profile',  description: 'Your natal fixed star conjunctions and their archetypal gifts',              level: 'master' },
+    { id: 'fixedStarConjunction', name: 'Star Conjunction',    description: 'Deep dive into a specific fixed star conjunction in your chart', needsFocus: true, level: 'advanced' },
+    { id: 'fixedStarTransit',     name: 'Fixed Star Transits', description: 'Current planetary activations of your natal star positions',                 level: 'master' },
   ],
 };
 
 export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: string; color: string }> = {
-  astrology: { name: 'Astrology', icon: '☉', color: 'from-amber-500/40 to-orange-500/25 border-amber-500/50' },
-  humanDesign: { name: 'Human Design', icon: '⬡', color: 'from-humandesign-500/40 to-humandesign-600/25 border-humandesign-500/50' },
-  geneKeys: { name: 'Gene Keys', icon: '🔑', color: 'from-genekey-500/40 to-genekey-600/25 border-genekey-500/50' },
-  crossSystem: { name: 'Cross-System', icon: '∞', color: 'from-purple-500/40 to-blue-500/25 border-purple-500/50' },
-  lifeOS: { name: 'Life OS', icon: '◈', color: 'from-emerald-500/40 to-teal-500/25 border-emerald-500/50' },
-  alchemy: { name: 'Alchemy & Numbers', icon: '⚗️', color: 'from-rose-500/40 to-amber-500/25 border-rose-500/50' },
+  astrology:        { name: 'Astrology',     icon: '☉',  color: 'from-amber-500/40 to-orange-500/25 border-amber-500/50' },
+  humanDesign:      { name: 'Human Design',  icon: '⬡',  color: 'from-humandesign-500/40 to-humandesign-600/25 border-humandesign-500/50' },
+  geneKeys:         { name: 'Gene Keys',     icon: '🔑', color: 'from-genekey-500/40 to-genekey-600/25 border-genekey-500/50' },
+  crossSystem:      { name: 'Cross-System',  icon: '∞',  color: 'from-purple-500/40 to-blue-500/25 border-purple-500/50' },
+  lifeOS:           { name: 'Life OS',       icon: '◈',  color: 'from-emerald-500/40 to-teal-500/25 border-emerald-500/50' },
+  alchemy:          { name: 'Alchemy',       icon: '⚗️', color: 'from-rose-500/40 to-amber-500/25 border-rose-500/50' },
+  numerology:       { name: 'Numerology',    icon: '∑',  color: 'from-cyan-500/40 to-blue-500/25 border-cyan-500/50' },
+  cosmicEmbodiment: { name: 'Embodiment',    icon: '✦',  color: 'from-pink-500/40 to-rose-500/25 border-pink-500/50' },
+  fixedStars:       { name: 'Fixed Stars',   icon: '★',  color: 'from-indigo-500/40 to-purple-500/25 border-indigo-500/50' },
 };
 
 export interface ModelOption {
@@ -414,7 +451,7 @@ export function useContemplation() {
     const contextWithILOS = appendILOSContext(rawContext, category);
     const context = appendKnowledgeExcerpts(contextWithILOS, selection);
     const categoryPrompt = CATEGORY_PROMPTS[category] || CATEGORY_PROMPTS['crossSystem'];
-    const typePrompt = CONTEMPLATION_TYPE_PROMPTS[contemplationType] || '';
+    const typePrompt = getCustomPrompt(contemplationType) ?? CONTEMPLATION_TYPE_PROMPTS[contemplationType] ?? '';
 
     // Get appropriate persona for this contemplation type
     const persona = getDefaultPersonaForType(contemplationType);
@@ -524,11 +561,12 @@ ${context}`;
   };
 
   const resumeSession = (session: SavedSession) => {
-    setCategory(session.category);
-    setContemplationType(session.contemplationType);
-    setFocusEntity(session.focusEntity);
-    setMessages(session.messages);
-    setCurrentSessionId(session.id);
+    const migrated = migrateSessionCategory(session);
+    setCategory(migrated.category);
+    setContemplationType(migrated.contemplationType);
+    setFocusEntity(migrated.focusEntity);
+    setMessages(migrated.messages);
+    setCurrentSessionId(migrated.id);
     setShowSavedSessions(false);
   };
 

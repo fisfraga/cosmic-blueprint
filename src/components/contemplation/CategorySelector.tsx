@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { AstroProfile } from '../../types';
 import type { ContemplationCategory, ContemplationType, FocusEntity } from '../../services/contemplation/context';
@@ -8,8 +9,24 @@ import {
   CATEGORY_INFO,
   MODEL_OPTIONS,
   type ContemplationTypeOption,
+  type ContemplationLevel,
   type ModelOption,
 } from '../../hooks/useContemplation';
+
+const LEVEL_OPTIONS: { value: ContemplationLevel | 'all'; label: string }[] = [
+  { value: 'all', label: 'All' },
+  { value: 'beginner', label: 'Beginner' },
+  { value: 'advanced', label: 'Advanced' },
+  { value: 'master', label: 'Master' },
+];
+
+const LEVEL_COLORS: Record<ContemplationLevel, string> = {
+  beginner: 'text-emerald-400 border-emerald-500/40 bg-emerald-500/10',
+  advanced: 'text-amber-400 border-amber-500/40 bg-amber-500/10',
+  master: 'text-purple-400 border-purple-500/40 bg-purple-500/10',
+};
+
+const LEVEL_FILTER_KEY = 'contemplation-level-filter';
 
 export interface CategorySelectorProps {
   profile: AstroProfile;
@@ -60,8 +77,29 @@ export function CategorySelector({
   goBack,
   startContemplation,
 }: CategorySelectorProps) {
+  const [levelFilter, setLevelFilter] = useState<ContemplationLevel | 'all'>(() => {
+    try {
+      const stored = localStorage.getItem(LEVEL_FILTER_KEY);
+      return (stored as ContemplationLevel | 'all') || 'all';
+    } catch {
+      return 'all';
+    }
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem(LEVEL_FILTER_KEY, levelFilter);
+    } catch { /* ignore */ }
+  }, [levelFilter]);
+
   const focusOptions = needsFocus && category && contemplationType && category !== 'lifeOS'
     ? getFocusOptions(profile, category, contemplationType)
+    : [];
+
+  const filteredTypes = category
+    ? CONTEMPLATION_TYPES[category].filter(
+        (t) => levelFilter === 'all' || t.level === levelFilter
+      )
     : [];
 
   return (
@@ -87,7 +125,7 @@ export function CategorySelector({
             </div>
           )}
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {(Object.keys(CATEGORY_INFO) as ContemplationCategory[]).map((cat) => (
               <button
                 key={cat}
@@ -104,7 +142,10 @@ export function CategorySelector({
                   {cat === 'geneKeys' && 'Shadow, Gift, and Siddhi contemplations'}
                   {cat === 'crossSystem' && 'Weave all three systems together'}
                   {cat === 'lifeOS' && 'Connect cosmic design to intentional living'}
-                  {cat === 'alchemy' && 'Numerology, Chakra Activations & Hermetic Alchemy'}
+                  {cat === 'alchemy' && 'Chakra Activations & Hermetic Alchemy'}
+                  {cat === 'numerology' && 'Life Path and Birthday Number as living archetypes'}
+                  {cat === 'cosmicEmbodiment' && 'Let any cosmic energy speak directly to you'}
+                  {cat === 'fixedStars' && 'The ancient stellar gatekeepers in your chart'}
                 </p>
               </button>
             ))}
@@ -134,18 +175,51 @@ export function CategorySelector({
             </div>
           </div>
 
-          <h3 className="text-theme-text-secondary mb-4">Choose a contemplation type:</h3>
+          {/* Level Filter */}
+          <div className="flex items-center gap-2 mb-4">
+            <span className="text-theme-text-tertiary text-xs uppercase tracking-wider">Level:</span>
+            <div className="flex gap-1">
+              {LEVEL_OPTIONS.map((opt) => (
+                <button
+                  key={opt.value}
+                  onClick={() => setLevelFilter(opt.value)}
+                  className={`px-3 py-1 rounded-full text-xs font-medium border transition-all ${
+                    levelFilter === opt.value
+                      ? 'bg-theme-border text-theme-text-primary border-theme-border'
+                      : 'text-theme-text-tertiary border-theme-border-subtle hover:border-theme-border hover:text-theme-text-secondary'
+                  }`}
+                >
+                  {opt.label}
+                </button>
+              ))}
+            </div>
+          </div>
+
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {CONTEMPLATION_TYPES[category].map((type) => (
+            {filteredTypes.length > 0 ? filteredTypes.map((type) => (
               <button
                 key={type.id}
                 onClick={() => setContemplationType(type.id)}
                 className="p-4 rounded-xl bg-surface-overlay border border-theme-border-subtle hover:border-theme-border text-left transition-all"
               >
-                <h4 className="font-medium text-theme-text-primary mb-1">{type.name}</h4>
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <h4 className="font-medium text-theme-text-primary">{type.name}</h4>
+                  {type.level && (
+                    <span className={`text-xs px-2 py-0.5 rounded-full border flex-shrink-0 ${LEVEL_COLORS[type.level]}`}>
+                      {type.level}
+                    </span>
+                  )}
+                </div>
                 <p className="text-theme-text-secondary text-sm">{type.description}</p>
               </button>
-            ))}
+            )) : (
+              <p className="text-theme-text-tertiary text-sm col-span-2 py-4 text-center">
+                No {levelFilter} types in this category.{' '}
+                <button onClick={() => setLevelFilter('all')} className="text-theme-text-secondary hover:text-theme-text-primary underline">
+                  Show all
+                </button>
+              </p>
+            )}
           </div>
         </motion.div>
       )}

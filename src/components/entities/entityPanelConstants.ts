@@ -1,4 +1,5 @@
 import type { EntitySystem } from '../../services/entities';
+import type { ElementColorKey } from '../../styles/colors';
 
 // System colors for header styling
 export const SYSTEM_COLORS: Record<EntitySystem, {
@@ -31,6 +32,20 @@ export const SYSTEM_COLORS: Record<EntitySystem, {
     accent: 'bg-blue-500',
     text: 'text-blue-300',
   },
+};
+
+// Sign panel colors — element-based (fire/earth/air/water)
+// bg/border/text from elementColors; accent uses solid bg for badge/button consistency with SYSTEM_COLORS
+export const SIGN_ELEMENT_PANEL_COLORS: Record<ElementColorKey, {
+  bg: string;
+  border: string;
+  accent: string;
+  text: string;
+}> = {
+  fire:  { bg: 'bg-fire-500/10',  border: 'border-fire-500/30',  accent: 'bg-fire-500',  text: 'text-fire-400' },
+  earth: { bg: 'bg-earth-500/10', border: 'border-earth-500/30', accent: 'bg-earth-500', text: 'text-earth-400' },
+  air:   { bg: 'bg-air-500/10',   border: 'border-air-500/30',   accent: 'bg-air-500',   text: 'text-air-400' },
+  water: { bg: 'bg-water-500/10', border: 'border-water-500/30', accent: 'bg-water-500', text: 'text-water-400' },
 };
 
 // System labels

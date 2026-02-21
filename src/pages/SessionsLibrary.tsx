@@ -28,6 +28,9 @@ const FILTER_OPTIONS: FilterOption[] = [
   { value: 'crossSystem', label: 'Cross-System' },
   { value: 'lifeOS', label: 'Life OS' },
   { value: 'alchemy', label: 'Alchemy' },
+  { value: 'numerology', label: 'Numerology' },
+  { value: 'cosmicEmbodiment', label: 'Embodiment' },
+  { value: 'fixedStars', label: 'Fixed Stars' },
 ];
 
 const CATEGORY_STYLES: Record<
@@ -69,6 +72,24 @@ const CATEGORY_STYLES: Record<
     text: 'text-rose-400',
     label: 'Alchemy',
     icon: '⚗️',
+  },
+  numerology: {
+    borderTop: 'border-t-cyan-400',
+    text: 'text-cyan-300',
+    label: 'Numerology',
+    icon: '∑',
+  },
+  cosmicEmbodiment: {
+    borderTop: 'border-t-pink-500',
+    text: 'text-pink-400',
+    label: 'Embodiment',
+    icon: '✦',
+  },
+  fixedStars: {
+    borderTop: 'border-t-indigo-500',
+    text: 'text-indigo-400',
+    label: 'Fixed Stars',
+    icon: '★',
   },
 };
 

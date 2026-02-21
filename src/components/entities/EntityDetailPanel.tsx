@@ -8,7 +8,7 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { EntityInfo } from '../../services/entities';
 import { useProfile } from '../../context';
-import { SYSTEM_COLORS, SYSTEM_LABELS, CATEGORY_LABELS } from './entityPanelConstants';
+import { SYSTEM_COLORS, SYSTEM_LABELS, CATEGORY_LABELS, SIGN_ELEMENT_PANEL_COLORS } from './entityPanelConstants';
 import { getProfileSpheresForGeneKey } from './entityPanelUtils';
 import { EntityPanelHeader } from './EntityPanelHeader';
 import { EntityPanelFooter } from './EntityPanelFooter';
@@ -64,7 +64,14 @@ export function EntityDetailPanel({
 
   if (!entity) return null;
 
-  const colors = SYSTEM_COLORS[entity.system];
+  let resolvedColors = SYSTEM_COLORS[entity.system];
+  if (entity.type === 'sign' && entity.data) {
+    const elementId = (entity.data as { elementId?: string }).elementId;
+    if (elementId && SIGN_ELEMENT_PANEL_COLORS[elementId as keyof typeof SIGN_ELEMENT_PANEL_COLORS]) {
+      resolvedColors = SIGN_ELEMENT_PANEL_COLORS[elementId as keyof typeof SIGN_ELEMENT_PANEL_COLORS];
+    }
+  }
+  const colors = resolvedColors;
   const systemLabel = SYSTEM_LABELS[entity.system];
   const categoryLabel = CATEGORY_LABELS[entity.type] || entity.type;
 
