@@ -12,6 +12,7 @@ import {
 import type { AstroProfile, BirthData } from '../types';
 import { LocationAutocomplete } from './LocationAutocomplete';
 import type { GeocodingResult } from '../services/geocoding';
+import { getTimezoneForLocation } from '../services/timezoneResolver';
 
 // Common timezone options
 const TIMEZONE_OPTIONS = [
@@ -368,6 +369,9 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
                 setCityOfBirth(label);
                 setLatitude(String(result.latitude));
                 setLongitude(String(result.longitude));
+                // Auto-detect timezone from coordinates
+                const detectedTz = getTimezoneForLocation(result.latitude, result.longitude);
+                setTimezone(detectedTz);
               }}
             />
             <p className="text-xs text-theme-text-tertiary mt-1">
