@@ -135,7 +135,7 @@ export function InsightSaveButton({
               <div className="bg-surface-base border border-theme-border-subtle rounded-xl shadow-2xl overflow-hidden">
                 {/* Header */}
                 <div className="px-6 py-4 border-b border-theme-border-subtle flex items-center justify-between">
-                  <h3 className="text-lg font-medium text-white flex items-center gap-2">
+                  <h3 className="text-lg font-medium text-theme-text-primary flex items-center gap-2">
                     <svg className="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
                     </svg>
@@ -191,7 +191,7 @@ export function InsightSaveButton({
                       onChange={(e) => setTagInput(e.target.value)}
                       onKeyDown={handleKeyDown}
                       placeholder={tags.length === 0 ? 'Type a tag and press Enter...' : ''}
-                      className="flex-1 min-w-[120px] bg-transparent text-white text-sm outline-none placeholder:text-gray-500"
+                      className="flex-1 min-w-[120px] bg-transparent text-theme-text-primary text-sm outline-none placeholder:text-theme-text-muted"
                     />
                   </div>
 

@@ -29,7 +29,7 @@ export function EntityPanelHeader({
               )}
               <h2
                 id="entity-panel-title"
-                className="text-base font-semibold text-white truncate"
+                className="text-base font-semibold text-theme-text-primary truncate"
               >
                 {entity.name}
               </h2>
@@ -65,7 +65,7 @@ export function EntityPanelHeader({
             )}
             <h2
               id="entity-panel-title"
-              className="text-lg sm:text-lg font-semibold text-white truncate"
+              className="text-lg sm:text-lg font-semibold text-theme-text-primary truncate"
             >
               {entity.name}
             </h2>

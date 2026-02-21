@@ -146,7 +146,7 @@ export function ConfigurationGallery() {
           <div className="space-y-4">
             {personalConfigs.map((config) => {
               const configType = configurations.get(config.configurationId);
-              const colors = configColors[config.configurationId] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-white' };
+              const colors = configColors[config.configurationId] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
               const involvedPlanets = config.placementIds
                 .map(id => {
                   const placement = profile?.placements.find(p => p.id === id);
@@ -194,7 +194,7 @@ export function ConfigurationGallery() {
       {/* Configuration Gallery Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {Array.from(configurations.values()).map((config) => {
-          const colors = configColors[config.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-white' };
+          const colors = configColors[config.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
           const isSelected = selectedConfig?.id === config.id;
 
           return (
@@ -236,7 +236,7 @@ export function ConfigurationGallery() {
             className="mt-8"
           >
             {(() => {
-              const colors = configColors[selectedConfig.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-white' };
+              const colors = configColors[selectedConfig.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
 
               return (
                 <div className={`${colors.bg} ${colors.border} border rounded-xl p-6`}>

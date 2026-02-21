@@ -99,7 +99,7 @@ function processMarkdownLine(
 
     // Simple regex-based markdown parsing
     const patterns = [
-      { regex: /\*\*([^*]+)\*\*/g, render: (match: string) => <strong key={key++} className="font-semibold text-white">{match}</strong> },
+      { regex: /\*\*([^*]+)\*\*/g, render: (match: string) => <strong key={key++} className="font-semibold text-theme-text-primary">{match}</strong> },
       { regex: /\*([^*]+)\*/g, render: (match: string) => <em key={key++} className="italic">{match}</em> },
       { regex: /`([^`]+)`/g, render: (match: string) => <code key={key++} className="bg-surface-raised px-1.5 py-0.5 rounded text-sm font-mono text-purple-300">{match}</code> },
     ];
@@ -188,21 +188,21 @@ export function MessageContent({
         // Check for headers (# ## ###)
         if (trimmed.startsWith('### ')) {
           return (
-            <h3 key={index} className="text-base font-semibold text-white mt-2">
+            <h3 key={index} className="text-base font-semibold text-theme-text-primary mt-2">
               {processParagraph(trimmed.slice(4), onEntityClick, index)}
             </h3>
           );
         }
         if (trimmed.startsWith('## ')) {
           return (
-            <h2 key={index} className="text-lg font-semibold text-white mt-3">
+            <h2 key={index} className="text-lg font-semibold text-theme-text-primary mt-3">
               {processParagraph(trimmed.slice(3), onEntityClick, index)}
             </h2>
           );
         }
         if (trimmed.startsWith('# ')) {
           return (
-            <h1 key={index} className="text-xl font-bold text-white mt-4">
+            <h1 key={index} className="text-xl font-bold text-theme-text-primary mt-4">
               {processParagraph(trimmed.slice(2), onEntityClick, index)}
             </h1>
           );

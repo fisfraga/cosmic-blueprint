@@ -36,7 +36,7 @@ export function MessageThread({
           <div
             className={`max-w-[85%] p-4 rounded-xl relative group ${
               msg.role === 'user'
-                ? 'bg-purple-500/20 border border-purple-500/30 text-white'
+                ? 'bg-purple-500/20 border border-purple-500/30 text-theme-text-primary'
                 : 'bg-surface-overlay border border-theme-border-subtle text-theme-text-secondary'
             }`}
           >

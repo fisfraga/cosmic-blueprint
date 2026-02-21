@@ -118,7 +118,7 @@ export function ElementRealms() {
           <button
             onClick={() => setShowAlchemical(false)}
             className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-              !showAlchemical ? 'bg-surface-interactive text-white' : 'text-theme-text-secondary hover:text-theme-text-primary'
+              !showAlchemical ? 'bg-surface-interactive text-theme-text-primary' : 'text-theme-text-secondary hover:text-theme-text-primary'
             }`}
           >
             Classical (4)
@@ -126,7 +126,7 @@ export function ElementRealms() {
           <button
             onClick={() => setShowAlchemical(true)}
             className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-              showAlchemical ? 'bg-surface-interactive text-white' : 'text-theme-text-secondary hover:text-theme-text-primary'
+              showAlchemical ? 'bg-surface-interactive text-theme-text-primary' : 'text-theme-text-secondary hover:text-theme-text-primary'
             }`}
           >
             Alchemical (3)

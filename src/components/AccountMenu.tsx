@@ -60,7 +60,7 @@ export function AccountMenu() {
           <div className="relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-3 py-2 bg-surface-base/50 border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
+              className="flex items-center gap-2 px-3 py-2 bg-surface-base border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
             >
               <span className="text-theme-text-primary font-medium truncate max-w-[120px]">
                 {profile.name}
@@ -133,7 +133,7 @@ export function AccountMenu() {
       <div ref={dropdownRef} className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-3 py-2 bg-surface-base/50 border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
+          className="flex items-center gap-2 px-3 py-2 bg-surface-base border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
         >
           <span className="text-theme-text-primary font-medium truncate max-w-[120px]">
             {profile.name}
@@ -305,7 +305,7 @@ export function AccountMenu() {
                   {p.name.charAt(0).toUpperCase()}
                 </div>
                 <div className="text-left min-w-0">
-                  <p className="text-white font-medium text-sm truncate">{p.name}</p>
+                  <p className="text-theme-text-primary font-medium text-sm truncate">{p.name}</p>
                   <p className="text-theme-text-tertiary text-xs">{p.relationship || 'Unknown'}</p>
                 </div>
               </button>

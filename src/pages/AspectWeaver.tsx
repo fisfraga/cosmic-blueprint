@@ -299,7 +299,7 @@ export function AspectWeaver() {
               const aspectType = aspects.get(aspect.aspectId);
               const planet1 = planets.get(aspect.planet1Id);
               const planet2 = planets.get(aspect.planet2Id);
-              const colors = aspectColors[aspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-white' };
+              const colors = aspectColors[aspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-theme-text-primary' };
               const isSelected = selectedAspect?.id === aspect.id;
               const priorityTier = getAspectPriorityTier(aspect);
 
@@ -355,7 +355,7 @@ export function AspectWeaver() {
           const aspectType = aspects.get(selectedAspect.aspectId);
           const planet1 = planets.get(selectedAspect.planet1Id);
           const planet2 = planets.get(selectedAspect.planet2Id);
-          const colors = aspectColors[selectedAspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-white' };
+          const colors = aspectColors[selectedAspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-theme-text-primary' };
 
           if (!aspectType || !planet1 || !planet2) return null;
 
@@ -431,7 +431,7 @@ export function AspectWeaver() {
         <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Aspect Reference</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {Array.from(aspects.values()).map((aspect) => {
-            const colors = aspectColors[aspect.id] || { bg: 'bg-surface-interactive', text: 'text-white' };
+            const colors = aspectColors[aspect.id] || { bg: 'bg-surface-interactive', text: 'text-theme-text-primary' };
             const isMajor = MAJOR_ASPECT_IDS.includes(aspect.id);
             return (
               <Link

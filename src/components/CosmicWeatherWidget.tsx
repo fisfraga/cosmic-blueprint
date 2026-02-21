@@ -45,7 +45,7 @@ function PlanetCard({
     <div
       className={`
         relative flex items-center gap-2 px-3 py-2 rounded-lg
-        ${hasAspects ? 'bg-surface-raised/80 border border-theme-border' : 'bg-surface-raised/40'}
+        ${hasAspects ? 'bg-surface-raised border border-theme-border' : 'bg-surface-raised/60'}
         transition-all
       `}
     >
@@ -131,7 +131,7 @@ export function CosmicWeatherWidget() {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-gradient-to-br from-surface-raised/80 to-surface-base/80 border border-theme-border-subtle rounded-xl overflow-hidden"
+      className="bg-gradient-to-br from-surface-raised to-surface-base border border-theme-border-subtle rounded-xl overflow-hidden"
     >
       {/* Header */}
       <div className="px-5 py-4 border-b border-theme-border-subtle/50 flex items-center justify-between">

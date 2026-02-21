@@ -134,7 +134,7 @@ export function Graph() {
                     allSelected
                       ? 'bg-white text-neutral-900'
                       : someSelected
-                      ? 'bg-surface-interactive text-white'
+                      ? 'bg-surface-interactive text-theme-text-primary'
                       : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >

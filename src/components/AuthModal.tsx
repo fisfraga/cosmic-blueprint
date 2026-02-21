@@ -77,7 +77,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   <p className="text-theme-text-secondary text-sm mb-2">
                     We sent a magic link to
                   </p>
-                  <p className="text-white font-medium mb-4">{email}</p>
+                  <p className="text-theme-text-primary font-medium mb-4">{email}</p>
                   <p className="text-theme-text-tertiary text-xs">
                     Click the link in your email to sign in. The link expires in 1 hour.
                   </p>
@@ -103,7 +103,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       placeholder="your@email.com"
                       required
                       disabled={state === 'loading'}
-                      className="w-full bg-surface-raised border border-theme-border-subtle rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-500 transition-colors disabled:opacity-50"
+                      className="w-full bg-surface-raised border border-theme-border-subtle rounded-lg px-4 py-3 text-theme-text-primary placeholder-theme-text-muted focus:outline-none focus:border-cyan-500 transition-colors disabled:opacity-50"
                     />
                   </div>
 

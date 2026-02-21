@@ -140,7 +140,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
             </svg>
           </button>
-          <h3 className="text-white font-medium min-w-[140px] text-center">
+          <h3 className="text-theme-text-primary font-medium min-w-[140px] text-center">
             {MONTH_NAMES[currentMonth.month]} {currentMonth.year}
           </h3>
           <button
@@ -198,7 +198,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
                   ${selected
                     ? 'bg-purple-500 text-white'
                     : aspectInfo
-                      ? `border ${getNatureBorderColor(aspectInfo.nature)} bg-surface-raised/50 text-white`
+                      ? `border ${getNatureBorderColor(aspectInfo.nature)} bg-surface-raised/50 text-theme-text-primary`
                       : 'text-theme-text-secondary hover:bg-surface-interactive/50 hover:text-theme-text-primary'
                   }
                 `}
@@ -247,7 +247,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
           >
             <div className="bg-surface-base/80 border border-theme-border-subtle rounded-lg p-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-sm text-white font-medium">
+                <span className="text-sm text-theme-text-primary font-medium">
                   {MONTH_NAMES[currentMonth.month]} {hoveredDay}
                 </span>
                 <span className="text-lg">{dayPreview.moonPhase.emoji}</span>

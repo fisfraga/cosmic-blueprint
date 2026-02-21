@@ -210,7 +210,7 @@ export function Home() {
             <span className="text-theme-text-tertiary text-sm uppercase tracking-[0.3em]">A Digital Temple</span>
             <span className="text-2xl text-theme-text-muted">—</span>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium mb-4 bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
+          <h1 className="font-serif text-5xl md:text-6xl font-medium mb-4 text-theme-text-primary">
             Cosmic Blueprint
           </h1>
           <p className="text-theme-text-secondary text-lg max-w-xl mx-auto leading-relaxed">
@@ -480,7 +480,7 @@ export function Home() {
       )}
 
       {/* ── CONTEMPLATION CTA ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-900/50 border border-theme-border-subtle p-8 text-center">
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-sunken to-surface-base border border-theme-border-subtle p-8 text-center">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
           <span className="text-[12rem] font-serif">🕯</span>
         </div>

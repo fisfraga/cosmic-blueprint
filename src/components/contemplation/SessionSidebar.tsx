@@ -68,7 +68,7 @@ export function SessionSidebar({
                 <div className="flex flex-col gap-2">
                   <button
                     onClick={() => onResumeSession(session)}
-                    className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                    className="px-3 py-1.5 bg-surface-overlay/50 hover:bg-surface-overlay text-theme-text-primary text-sm rounded-lg transition-colors"
                   >
                     Resume
                   </button>
