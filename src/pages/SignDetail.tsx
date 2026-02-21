@@ -56,7 +56,7 @@ export function SignDetail() {
   const relatedChakra = Array.from(chakras.values()).find(c => c.relatedSigns.includes(sign.id));
 
   const colorClasses = elementColors[sign.elementId as keyof typeof elementColors] || elementColors.fire;
-  const textColor = elementTextColors[sign.elementId as keyof typeof elementTextColors] || 'text-neutral-400';
+  const textColor = elementTextColors[sign.elementId as keyof typeof elementTextColors] || 'text-theme-text-secondary';
 
   const alchemicalElement = sign.alchemicalElementId ? elements.get(sign.alchemicalElementId) : null;
   const siblingSignIds = alchemicalElement?.zodiacSignIds ?? [];
@@ -68,31 +68,31 @@ export function SignDetail() {
         <div className="text-6xl mb-4">{sign.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{sign.name}</h1>
         <p className={`text-xl italic ${textColor}`}>"{sign.keyPhrase}"</p>
-        <div className="flex items-center justify-center gap-4 mt-4 text-sm text-neutral-400">
-          <span className="px-3 py-1 bg-neutral-800/50 rounded-full">{sign.signModality}</span>
-          <span className={`px-3 py-1 bg-neutral-800/50 rounded-full ${textColor}`}>
+        <div className="flex items-center justify-center gap-4 mt-4 text-sm text-theme-text-secondary">
+          <span className="px-3 py-1 bg-surface-overlay rounded-full">{sign.signModality}</span>
+          <span className={`px-3 py-1 bg-surface-overlay rounded-full ${textColor}`}>
             {element?.name || sign.elementId}
           </span>
-          <span className="px-3 py-1 bg-neutral-800/50 rounded-full">{sign.dateRange}</span>
+          <span className="px-3 py-1 bg-surface-overlay rounded-full">{sign.dateRange}</span>
         </div>
       </header>
 
       {/* Quick Facts */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-neutral-900/50 rounded-xl p-4 text-center border border-neutral-800">
-          <div className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Order</div>
+        <div className="bg-surface-base/50 rounded-xl p-4 text-center border border-theme-border-subtle">
+          <div className="text-theme-text-secondary text-xs uppercase tracking-wider mb-1">Order</div>
           <div className="font-serif text-2xl">{sign.orderInZodiac}</div>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-4 text-center border border-neutral-800">
-          <div className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Modality</div>
+        <div className="bg-surface-base/50 rounded-xl p-4 text-center border border-theme-border-subtle">
+          <div className="text-theme-text-secondary text-xs uppercase tracking-wider mb-1">Modality</div>
           <div className="font-serif text-lg">{sign.signModality}</div>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-4 text-center border border-neutral-800">
-          <div className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Element</div>
+        <div className="bg-surface-base/50 rounded-xl p-4 text-center border border-theme-border-subtle">
+          <div className="text-theme-text-secondary text-xs uppercase tracking-wider mb-1">Element</div>
           <div className={`font-serif text-lg ${textColor}`}>{element?.name}</div>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-4 text-center border border-neutral-800">
-          <div className="text-neutral-400 text-xs uppercase tracking-wider mb-1">Body Part</div>
+        <div className="bg-surface-base/50 rounded-xl p-4 text-center border border-theme-border-subtle">
+          <div className="text-theme-text-secondary text-xs uppercase tracking-wider mb-1">Body Part</div>
           <div className="font-serif text-lg">{sign.bodyPart}</div>
         </div>
       </div>
@@ -107,8 +107,8 @@ export function SignDetail() {
                 key={placement.planetId}
                 className={`flex items-center justify-between p-3 rounded-lg ${
                   placement.placementType === 'planet'
-                    ? 'bg-neutral-800/60'
-                    : 'bg-neutral-800/40 border border-neutral-700/50'
+                    ? 'bg-surface-raised/60'
+                    : 'bg-surface-raised/40 border border-theme-border-subtle/50'
                 }`}
               >
                 <div className="flex items-center gap-3">
@@ -126,8 +126,8 @@ export function SignDetail() {
                   </div>
                 </div>
                 <div className="text-right">
-                  <div className="text-sm text-neutral-400">{placement.degree}</div>
-                  <div className="text-xs text-neutral-500">House {placement.houseNumber}</div>
+                  <div className="text-sm text-theme-text-secondary">{placement.degree}</div>
+                  <div className="text-xs text-theme-text-tertiary">House {placement.houseNumber}</div>
                 </div>
               </div>
             ))}
@@ -136,35 +136,35 @@ export function SignDetail() {
       )}
 
       {/* Characteristics */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Characteristics & Qualities</h2>
-        <p className="text-neutral-300 leading-relaxed">{sign.characteristicsAndQualities}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{sign.characteristicsAndQualities}</p>
       </section>
 
       {/* Traits */}
       {sign.traits && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Key Traits</h2>
-          <p className="text-neutral-300 leading-relaxed">{sign.traits}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{sign.traits}</p>
         </section>
       )}
 
       {/* Connections */}
       <div className="grid md:grid-cols-2 gap-6">
         {/* Ruling Planets */}
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Ruling Planets</h2>
           <div className="space-y-3">
             {rulingPlanets.map((planet) => planet && (
               <Link
                 key={planet.id}
                 to={`/planets/${planet.id}`}
-                className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+                className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
               >
                 <span className="text-2xl">{planet.symbol}</span>
                 <div>
                   <div className="font-medium">{planet.name}</div>
-                  <div className="text-sm text-neutral-400">{planet.archetype}</div>
+                  <div className="text-sm text-theme-text-secondary">{planet.archetype}</div>
                 </div>
               </Link>
             ))}
@@ -172,29 +172,29 @@ export function SignDetail() {
         </section>
 
         {/* Opposite Sign */}
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Polarity Axis</h2>
           {oppositeSign && (
             <Link
               to={`/signs/${oppositeSign.id}`}
-              className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+              className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
             >
               <span className="text-2xl">{oppositeSign.symbol}</span>
               <div>
                 <div className="font-medium">{oppositeSign.name}</div>
-                <div className="text-sm text-neutral-400">Opposite Sign</div>
+                <div className="text-sm text-theme-text-secondary">Opposite Sign</div>
               </div>
             </Link>
           )}
           {ruledHouse && (
             <Link
               to={`/houses/${ruledHouse.id}`}
-              className="flex items-center gap-3 p-3 mt-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+              className="flex items-center gap-3 p-3 mt-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
             >
               <span className="text-2xl">⌂</span>
               <div>
                 <div className="font-medium">{ruledHouse.name}</div>
-                <div className="text-sm text-neutral-400">Natural House</div>
+                <div className="text-sm text-theme-text-secondary">Natural House</div>
               </div>
             </Link>
           )}
@@ -203,9 +203,9 @@ export function SignDetail() {
 
       {/* Human Design Gates & Gene Keys in this Sign */}
       {(hdGates.length > 0 || geneKeys.length > 0) && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Cross-System Connections</h2>
-          <p className="text-neutral-400 text-sm mb-6">
+          <p className="text-theme-text-secondary text-sm mb-6">
             In the unified wisdom traditions, each zodiac sign contains specific Human Design Gates
             and Gene Keys that express through its archetypal energy.
           </p>
@@ -222,12 +222,12 @@ export function SignDetail() {
                     <Link
                       key={gate.id}
                       to={`/human-design/${gate.id}`}
-                      className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+                      className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
                     >
                       <span className="text-xl font-serif text-humandesign-400 w-8">{gate.gateNumber}</span>
                       <div className="min-w-0">
                         <div className="font-medium truncate">{gate.name}</div>
-                        <div className="text-xs text-neutral-500 truncate">{gate.iChingName}</div>
+                        <div className="text-xs text-theme-text-tertiary truncate">{gate.iChingName}</div>
                       </div>
                     </Link>
                   ))}
@@ -246,12 +246,12 @@ export function SignDetail() {
                     <Link
                       key={gk.id}
                       to={`/gene-keys/${gk.id}`}
-                      className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+                      className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
                     >
                       <span className="text-xl font-serif text-genekey-400 w-8">{gk.keyNumber}</span>
                       <div className="min-w-0">
                         <div className="font-medium truncate">{gk.name}</div>
-                        <div className="text-xs text-neutral-500 truncate">
+                        <div className="text-xs text-theme-text-tertiary truncate">
                           {gk.shadow.name} &#8594; {gk.gift.name}
                         </div>
                       </div>
@@ -266,15 +266,15 @@ export function SignDetail() {
 
       {/* Chakra Resonance */}
       {relatedChakra && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Chakra Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             In astrological alchemy, each zodiac sign resonates with a specific energy center —
             the chakra whose archetypal energy mirrors the sign's essential nature and life theme.
           </p>
           <Link
             to={`/chakras/${relatedChakra.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700 mb-4"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle mb-4"
           >
             <div
               className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
@@ -283,17 +283,17 @@ export function SignDetail() {
               {relatedChakra.symbol}
             </div>
             <div>
-              <p className="text-white font-medium">{relatedChakra.name}</p>
-              <p className="text-neutral-400 text-sm italic">{relatedChakra.sanskritName}</p>
-              <p className="text-neutral-500 text-xs mt-1">{relatedChakra.lifeTheme}</p>
+              <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
+              <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
+              <p className="text-theme-text-tertiary text-xs mt-1">{relatedChakra.lifeTheme}</p>
             </div>
           </Link>
           {relatedChakra.alchemyNote && (
             <div
-              className="p-4 rounded-lg bg-neutral-800/30 border-l-2"
+              className="p-4 rounded-lg bg-surface-raised/30 border-l-2"
               style={{ borderLeftColor: relatedChakra.colorHex + '90' }}
             >
-              <p className="text-neutral-300 text-sm italic leading-relaxed">
+              <p className="text-theme-text-secondary text-sm italic leading-relaxed">
                 "{relatedChakra.alchemyNote}"
               </p>
             </div>
@@ -307,10 +307,10 @@ export function SignDetail() {
           <Link to={`/elements/${element.id}`} className="flex items-center gap-4 group">
             <span className="text-4xl">{element.symbol}</span>
             <div>
-              <h2 className="font-serif text-xl group-hover:text-white transition-colors">
+              <h2 className="font-serif text-xl group-hover:text-theme-text-primary transition-colors">
                 {element.name} Element
               </h2>
-              <p className="text-neutral-400">{element.corePrinciple}</p>
+              <p className="text-theme-text-secondary">{element.corePrinciple}</p>
             </div>
           </Link>
         </section>
@@ -319,7 +319,7 @@ export function SignDetail() {
       {/* Alchemical Nature */}
       {alchemicalElement && (
         <section className={`rounded-xl p-6 border ${POLARITY_COLORS[sign.substancePolarity].bg} ${POLARITY_COLORS[sign.substancePolarity].border}`}>
-          <h2 className="font-serif text-xl font-semibold text-white mb-4">Alchemical Nature</h2>
+          <h2 className="font-serif text-xl font-semibold text-theme-text-primary mb-4">Alchemical Nature</h2>
           <div className="flex items-start gap-4 mb-4">
             <div className="text-4xl shrink-0">{alchemicalElement.symbol}</div>
             <div>
@@ -331,14 +331,14 @@ export function SignDetail() {
                   {POLARITY_LABEL[sign.substancePolarity]}
                 </span>
               </div>
-              <p className="text-sm text-neutral-400">{alchemicalElement.corePrinciple}</p>
-              <p className="text-xs text-neutral-500 mt-1">{alchemicalElement.coreQuality}</p>
+              <p className="text-sm text-theme-text-secondary">{alchemicalElement.corePrinciple}</p>
+              <p className="text-xs text-theme-text-tertiary mt-1">{alchemicalElement.coreQuality}</p>
             </div>
           </div>
           {/* Sibling signs */}
           {siblingSignIds.length > 0 && (
             <div>
-              <p className="text-xs text-neutral-500 mb-2 uppercase tracking-wider">Signs of this substance</p>
+              <p className="text-xs text-theme-text-tertiary mb-2 uppercase tracking-wider">Signs of this substance</p>
               <div className="flex flex-wrap gap-2">
                 {siblingSignIds.map((sid) => {
                   const s = signs.get(sid);
@@ -351,7 +351,7 @@ export function SignDetail() {
                       className={`flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-sm transition-colors ${
                         isCurrent
                           ? `${POLARITY_COLORS[sign.substancePolarity].badge} font-semibold cursor-default`
-                          : 'bg-neutral-800/50 text-neutral-300 hover:bg-neutral-700/60'
+                          : 'bg-surface-overlay text-theme-text-secondary hover:bg-surface-interactive/60'
                       }`}
                     >
                       <span>{s.symbol}</span>
@@ -366,12 +366,12 @@ export function SignDetail() {
       )}
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
-        <Link to="/signs" className="text-neutral-400 hover:text-white transition-colors">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+        <Link to="/signs" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &larr; All Signs
         </Link>
         {oppositeSign && (
-          <Link to={`/signs/${oppositeSign.id}`} className="text-neutral-400 hover:text-white transition-colors">
+          <Link to={`/signs/${oppositeSign.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
             {oppositeSign.name} &rarr;
           </Link>
         )}

@@ -35,7 +35,7 @@ export function GKSequenceDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Sequence Not Found</h1>
-        <p className="text-neutral-400 mb-4">
+        <p className="text-theme-text-secondary mb-4">
           The Gene Keys sequence you're looking for doesn't exist.
         </p>
         <Link to="/gene-keys/sequences" className="text-emerald-400 hover:underline">
@@ -101,14 +101,14 @@ export function GKSequenceDetail() {
       <header className={`text-center py-8 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border}`}>
         <div className="text-5xl mb-4">{sequence.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{sequence.name}</h1>
-        <p className="text-xl text-neutral-300 italic">{sequence.theme}</p>
+        <p className="text-xl text-theme-text-secondary italic">{sequence.theme}</p>
 
         {/* Meta Pills */}
         <div className="flex items-center justify-center gap-3 text-sm flex-wrap mt-4">
-          <span className={`px-3 py-1.5 ${colors.accent} text-white rounded-full`}>
+          <span className={`px-3 py-1.5 ${colors.accent} text-theme-text-primary rounded-full`}>
             Sequence {sequence.sequenceOrder}
           </span>
-          <span className="px-3 py-1.5 bg-neutral-900/50 text-neutral-300 rounded-full">
+          <span className="px-3 py-1.5 bg-surface-base/50 text-theme-text-secondary rounded-full">
             {sequence.spheres?.length || 0} Spheres
           </span>
         </div>
@@ -118,14 +118,14 @@ export function GKSequenceDetail() {
       {sequence.primaryQuestion && (
         <section className={`bg-gradient-to-br ${colors.bg} rounded-xl p-6 border ${colors.border}`}>
           <h2 className={`font-serif text-lg mb-2 ${colors.text}`}>Primary Question</h2>
-          <p className="text-xl text-white font-medium italic">"{sequence.primaryQuestion}"</p>
+          <p className="text-xl text-theme-text-primary font-medium italic">"{sequence.primaryQuestion}"</p>
         </section>
       )}
 
       {/* Description */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Overview</h2>
-        <p className="text-neutral-300 leading-relaxed">{sequence.description}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{sequence.description}</p>
       </section>
 
       {/* Transformation & Focus */}
@@ -133,19 +133,19 @@ export function GKSequenceDetail() {
         {sequence.transformation && (
           <section className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20">
             <h2 className="font-serif text-lg mb-3 text-emerald-400">Transformation</h2>
-            <p className="text-neutral-300 leading-relaxed text-sm">{sequence.transformation}</p>
+            <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.transformation}</p>
           </section>
         )}
         {sequence.contemplationFocus && (
           <section className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
             <h2 className="font-serif text-lg mb-3 text-purple-400">Contemplation Focus</h2>
-            <p className="text-neutral-300 leading-relaxed text-sm">{sequence.contemplationFocus}</p>
+            <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.contemplationFocus}</p>
           </section>
         )}
       </div>
 
       {/* Spheres in this Sequence */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Spheres in This Sequence</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {sphereDetails.map((detail, idx) => {
@@ -155,12 +155,12 @@ export function GKSequenceDetail() {
             return (
               <div
                 key={idx}
-                className={`p-4 rounded-lg bg-neutral-800/50 border ${colors.border}`}
+                className={`p-4 rounded-lg bg-surface-overlay border ${colors.border}`}
               >
                 <div className="flex items-start justify-between gap-3">
                   <div>
                     <h4 className={`font-medium ${colors.text}`}>{detail.sphere}</h4>
-                    <p className="text-xs text-neutral-500 mt-0.5">{detail.planet}</p>
+                    <p className="text-xs text-theme-text-tertiary mt-0.5">{detail.planet}</p>
                   </div>
                   {profileGK && (() => {
                     const gk = geneKeys.get(`gk-${profileGK}`);
@@ -180,7 +180,7 @@ export function GKSequenceDetail() {
                     );
                   })()}
                 </div>
-                <p className="text-sm text-neutral-400 mt-2">{detail.description}</p>
+                <p className="text-sm text-theme-text-secondary mt-2">{detail.description}</p>
               </div>
             );
           })}
@@ -205,9 +205,9 @@ export function GKSequenceDetail() {
                 <Link
                   key={sphereId}
                   to={`/gene-keys/gk-${gkNumber}`}
-                  className="flex items-center justify-between p-3 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors"
+                  className="flex items-center justify-between p-3 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors"
                 >
-                  <span className="text-neutral-300">{sphereDetail?.sphere || sphereId}</span>
+                  <span className="text-theme-text-secondary">{sphereDetail?.sphere || sphereId}</span>
                   <span className="text-emerald-400 font-medium">Gene Key {gkNumber}</span>
                 </Link>
               );
@@ -218,9 +218,9 @@ export function GKSequenceDetail() {
 
       {/* Practical Guidance */}
       {sequence.practicalGuidance && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Practical Guidance</h2>
-          <p className="text-neutral-300 leading-relaxed">{sequence.practicalGuidance}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{sequence.practicalGuidance}</p>
         </section>
       )}
 
@@ -230,7 +230,7 @@ export function GKSequenceDetail() {
           {sequence.keywords.map((keyword, i) => (
             <span
               key={i}
-              className={`px-3 py-1.5 bg-neutral-800 ${colors.text} rounded-full text-sm`}
+              className={`px-3 py-1.5 bg-surface-raised ${colors.text} rounded-full text-sm`}
             >
               {keyword}
             </span>
@@ -240,13 +240,13 @@ export function GKSequenceDetail() {
 
       {/* Pathways */}
       {sequence.pathways && sequence.pathways.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Pathways</h2>
           <div className="flex flex-wrap gap-3">
             {sequence.pathways.map((pathway, i) => (
               <span
                 key={i}
-                className="px-4 py-2 bg-neutral-800/50 border border-neutral-700 rounded-lg text-neutral-300 capitalize"
+                className="px-4 py-2 bg-surface-overlay border border-theme-border-subtle rounded-lg text-theme-text-secondary capitalize"
               >
                 {pathway.replace(/-/g, ' ')}
               </span>
@@ -256,16 +256,16 @@ export function GKSequenceDetail() {
       )}
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
         <Link
           to="/gene-keys/sequences"
-          className="text-neutral-400 hover:text-white transition-colors"
+          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
         >
           ← All Sequences
         </Link>
         <Link
           to="/gene-keys/spheres"
-          className="text-neutral-400 hover:text-white transition-colors"
+          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
         >
           All Spheres →
         </Link>

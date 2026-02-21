@@ -215,12 +215,12 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
 };
 
 export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: string; color: string }> = {
-  astrology: { name: 'Astrology', icon: '☉', color: 'from-amber-500/20 to-orange-500/10 border-amber-500/30' },
-  humanDesign: { name: 'Human Design', icon: '⬡', color: 'from-humandesign-500/20 to-humandesign-600/10 border-humandesign-500/30' },
-  geneKeys: { name: 'Gene Keys', icon: '🔑', color: 'from-genekeys-500/20 to-genekeys-600/10 border-genekeys-500/30' },
-  crossSystem: { name: 'Cross-System', icon: '∞', color: 'from-purple-500/20 to-blue-500/10 border-purple-500/30' },
-  lifeOS: { name: 'Life OS', icon: '◈', color: 'from-emerald-500/20 to-teal-500/10 border-emerald-500/30' },
-  alchemy: { name: 'Alchemy & Numbers', icon: '⚗️', color: 'from-rose-500/20 to-amber-500/10 border-rose-500/30' },
+  astrology: { name: 'Astrology', icon: '☉', color: 'from-amber-500/40 to-orange-500/25 border-amber-500/50' },
+  humanDesign: { name: 'Human Design', icon: '⬡', color: 'from-humandesign-500/40 to-humandesign-600/25 border-humandesign-500/50' },
+  geneKeys: { name: 'Gene Keys', icon: '🔑', color: 'from-genekey-500/40 to-genekey-600/25 border-genekey-500/50' },
+  crossSystem: { name: 'Cross-System', icon: '∞', color: 'from-purple-500/40 to-blue-500/25 border-purple-500/50' },
+  lifeOS: { name: 'Life OS', icon: '◈', color: 'from-emerald-500/40 to-teal-500/25 border-emerald-500/50' },
+  alchemy: { name: 'Alchemy & Numbers', icon: '⚗️', color: 'from-rose-500/40 to-amber-500/25 border-rose-500/50' },
 };
 
 export interface ModelOption {

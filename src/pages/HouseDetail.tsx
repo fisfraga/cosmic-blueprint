@@ -57,7 +57,7 @@ export function HouseDetail() {
             {house.houseType} House
           </span>
           {rulingSign && (
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">
+            <span className="px-3 py-1 bg-surface-raised rounded-full">
               {rulingSign.symbol} {rulingSign.name}
             </span>
           )}
@@ -84,8 +84,8 @@ export function HouseDetail() {
                   key={placement.planetId}
                   className={`flex items-center justify-between p-3 rounded-lg ${
                     placement.placementType === 'planet'
-                      ? 'bg-neutral-800/60'
-                      : 'bg-neutral-800/40 border border-neutral-700/50'
+                      ? 'bg-surface-raised/60'
+                      : 'bg-surface-raised/40 border border-theme-border-subtle/50'
                   }`}
                 >
                   <div className="flex items-center gap-3">
@@ -97,7 +97,7 @@ export function HouseDetail() {
                           <span className="text-xs text-red-400 ml-1">R</span>
                         )}
                       </div>
-                      <div className="text-xs text-neutral-400">
+                      <div className="text-xs text-theme-text-secondary">
                         in {placementSign?.name}
                         {placement.dignity && (
                           <span className="text-amber-400 ml-1">({placement.dignity})</span>
@@ -105,7 +105,7 @@ export function HouseDetail() {
                       </div>
                     </div>
                   </div>
-                  <div className="text-sm text-neutral-400">{placement.degree}</div>
+                  <div className="text-sm text-theme-text-secondary">{placement.degree}</div>
                 </div>
               );
             })}
@@ -114,13 +114,13 @@ export function HouseDetail() {
       )}
 
       {/* Life Areas */}
-      <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-neutral-700">
+      <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Life Area Focus</h2>
         <div className="flex flex-wrap gap-2">
           {house.lifeAreaFocus.map((area, index) => (
             <span
               key={index}
-              className="px-4 py-2 bg-neutral-800 rounded-lg text-neutral-300"
+              className="px-4 py-2 bg-surface-raised rounded-lg text-theme-text-secondary"
             >
               {area}
             </span>
@@ -129,9 +129,9 @@ export function HouseDetail() {
       </section>
 
       {/* Meaning */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Meaning & Representation</h2>
-        <p className="text-neutral-300 leading-relaxed">{house.meaningAndRepresentation}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{house.meaningAndRepresentation}</p>
         {house.worldHalfTheme && (
           <p className={`mt-3 text-sm font-medium ${house.worldHalf === 'inner' ? 'text-amber-400/70' : 'text-indigo-400/70'}`}>
             {house.worldHalfTheme}
@@ -142,32 +142,32 @@ export function HouseDetail() {
       {/* Rulers */}
       <div className="grid md:grid-cols-2 gap-6">
         {rulingSign && (
-          <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
             <h2 className="font-serif text-xl mb-4">Natural Sign</h2>
             <Link
               to={`/signs/${rulingSign.id}`}
-              className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+              className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
             >
               <span className="text-3xl">{rulingSign.symbol}</span>
               <div>
                 <div className="font-medium text-lg">{rulingSign.name}</div>
-                <div className="text-sm text-neutral-400">{rulingSign.keyPhrase}</div>
+                <div className="text-sm text-theme-text-secondary">{rulingSign.keyPhrase}</div>
               </div>
             </Link>
           </section>
         )}
 
         {rulingPlanet && (
-          <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
             <h2 className="font-serif text-xl mb-4">Natural Ruler</h2>
             <Link
               to={`/planets/${rulingPlanet.id}`}
-              className="flex items-center gap-3 p-3 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors"
+              className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
             >
               <span className="text-3xl">{rulingPlanet.symbol}</span>
               <div>
                 <div className="font-medium text-lg">{rulingPlanet.name}</div>
-                <div className="text-sm text-neutral-400">{rulingPlanet.archetype}</div>
+                <div className="text-sm text-theme-text-secondary">{rulingPlanet.archetype}</div>
               </div>
             </Link>
           </section>
@@ -176,15 +176,15 @@ export function HouseDetail() {
 
       {/* Chakra Resonance */}
       {relatedChakra && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Chakra Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             In astrological alchemy, each house activates a specific energy center —
             the chakra whose qualities mirror the life area this house governs.
           </p>
           <Link
             to={`/chakras/${relatedChakra.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700 mb-4"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle mb-4"
           >
             <div
               className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
@@ -193,17 +193,17 @@ export function HouseDetail() {
               {relatedChakra.symbol}
             </div>
             <div>
-              <p className="text-white font-medium">{relatedChakra.name}</p>
-              <p className="text-neutral-400 text-sm italic">{relatedChakra.sanskritName}</p>
-              <p className="text-neutral-500 text-xs mt-1">{relatedChakra.lifeTheme}</p>
+              <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
+              <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
+              <p className="text-theme-text-tertiary text-xs mt-1">{relatedChakra.lifeTheme}</p>
             </div>
           </Link>
           {relatedChakra.alchemyNote && (
             <div
-              className="p-4 rounded-lg bg-neutral-800/30 border-l-2"
+              className="p-4 rounded-lg bg-surface-raised/30 border-l-2"
               style={{ borderLeftColor: relatedChakra.colorHex + '90' }}
             >
-              <p className="text-neutral-300 text-sm italic leading-relaxed">
+              <p className="text-theme-text-secondary text-sm italic leading-relaxed">
                 "{relatedChakra.alchemyNote}"
               </p>
             </div>
@@ -213,9 +213,9 @@ export function HouseDetail() {
 
       {/* Cross-System Resonance: HD Gates & Gene Keys */}
       {(houseGates.length > 0 || houseGeneKeys.length > 0) && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-2">Cross-System Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             Via the natural sign of this house ({rulingSign?.name}), these HD Gates and Gene Keys carry
             the same archetypal energy in the body graph and genetic wisdom.
           </p>
@@ -230,7 +230,7 @@ export function HouseDetail() {
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-humandesign-500/10 rounded-lg hover:bg-humandesign-500/20 transition-colors text-sm"
                   >
                     <span className="font-serif text-humandesign-400">{gate.gateNumber}</span>
-                    <span className="text-neutral-300">{gate.name}</span>
+                    <span className="text-theme-text-secondary">{gate.name}</span>
                   </Link>
                 ))}
               </div>
@@ -247,8 +247,8 @@ export function HouseDetail() {
                     className="flex items-center gap-1.5 px-3 py-1.5 bg-genekey-500/10 rounded-lg hover:bg-genekey-500/20 transition-colors text-sm"
                   >
                     <span className="font-serif text-genekey-400">{gk.keyNumber}</span>
-                    <span className="text-neutral-300">{gk.name}</span>
-                    <span className="text-neutral-600">·</span>
+                    <span className="text-theme-text-secondary">{gk.name}</span>
+                    <span className="text-theme-text-muted">·</span>
                     <span className="text-emerald-400/70 text-xs">{gk.gift.name}</span>
                   </Link>
                 ))}
@@ -260,12 +260,12 @@ export function HouseDetail() {
 
       {/* Contemplation Questions */}
       {house.contemplationQuestions && house.contemplationQuestions.length > 0 && (
-        <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-neutral-700">
+        <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Contemplation Questions</h2>
           <ul className="space-y-3">
             {house.contemplationQuestions.map((question, index) => (
-              <li key={index} className="flex gap-3 text-neutral-300">
-                <span className="text-neutral-500">{index + 1}.</span>
+              <li key={index} className="flex gap-3 text-theme-text-secondary">
+                <span className="text-theme-text-tertiary">{index + 1}.</span>
                 <span className="italic">{question}</span>
               </li>
             ))}
@@ -274,9 +274,9 @@ export function HouseDetail() {
       )}
 
       {/* House Type Explanation */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">About {house.houseType} Houses</h2>
-        <p className="text-neutral-300 leading-relaxed">
+        <p className="text-theme-text-secondary leading-relaxed">
           {house.houseType === 'Angular' && (
             "Angular houses (1st, 4th, 7th, 10th) are the most powerful positions in the chart. Planets here express themselves strongly and visibly. These houses represent the cardinal points of identity, home, relationships, and career."
           )}
@@ -290,14 +290,14 @@ export function HouseDetail() {
       </section>
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
-        <Link to={`/houses/${prevHouse.id}`} className="text-neutral-400 hover:text-white transition-colors">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+        <Link to={`/houses/${prevHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &larr; {prevHouse.name}
         </Link>
-        <Link to="/houses" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/houses" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           All Houses
         </Link>
-        <Link to={`/houses/${nextHouse.id}`} className="text-neutral-400 hover:text-white transition-colors">
+        <Link to={`/houses/${nextHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           {nextHouse.name} &rarr;
         </Link>
       </nav>

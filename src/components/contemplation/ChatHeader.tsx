@@ -23,17 +23,17 @@ export function ChatHeader({
   const info = CATEGORY_INFO[category];
 
   return (
-    <div className="flex-shrink-0 h-12 flex items-center justify-between px-4 border-b border-neutral-800 bg-neutral-950/80 backdrop-blur-sm">
+    <div className="flex-shrink-0 h-12 flex items-center justify-between px-4 border-b border-theme-border-subtle bg-surface-base/80 backdrop-blur-sm">
       {/* Left: category icon + name + type */}
       <div className="flex items-center gap-2 min-w-0">
         <span className="text-lg">{info.icon}</span>
-        <span className="text-sm font-medium text-white truncate">
+        <span className="text-sm font-medium text-theme-text-primary truncate">
           {info.name}
         </span>
         {typeName && (
           <>
-            <span className="text-neutral-600">·</span>
-            <span className="text-sm text-neutral-400 truncate">{typeName}</span>
+            <span className="text-theme-text-muted">·</span>
+            <span className="text-sm text-theme-text-secondary truncate">{typeName}</span>
           </>
         )}
       </div>
@@ -42,7 +42,7 @@ export function ChatHeader({
       <div className="flex items-center gap-1">
         <button
           onClick={onExportMarkdown}
-          className="p-2 text-neutral-500 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
+          className="p-2 text-theme-text-tertiary hover:text-theme-text-primary rounded-lg hover:bg-surface-raised transition-colors"
           title="Export as Markdown"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -51,7 +51,7 @@ export function ChatHeader({
         </button>
         <button
           onClick={onExportJson}
-          className="p-2 text-neutral-500 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
+          className="p-2 text-theme-text-tertiary hover:text-theme-text-primary rounded-lg hover:bg-surface-raised transition-colors"
           title="Export as JSON"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -63,7 +63,7 @@ export function ChatHeader({
           className={`p-2 rounded-lg transition-colors ${
             copySuccess
               ? 'text-green-400 bg-green-500/10'
-              : 'text-neutral-500 hover:text-white hover:bg-neutral-800'
+              : 'text-theme-text-tertiary hover:text-theme-text-primary hover:bg-surface-raised'
           }`}
           title={copySuccess ? 'Copied!' : 'Copy as Markdown'}
         >
@@ -72,11 +72,11 @@ export function ChatHeader({
           </svg>
         </button>
 
-        <div className="w-px h-5 bg-neutral-700 mx-1" />
+        <div className="w-px h-5 bg-surface-interactive mx-1" />
 
         <button
           onClick={onResetSession}
-          className="p-2 text-neutral-500 hover:text-red-400 rounded-lg hover:bg-neutral-800 transition-colors"
+          className="p-2 text-theme-text-tertiary hover:text-red-400 rounded-lg hover:bg-surface-raised transition-colors"
           title="End Session & Start New"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">

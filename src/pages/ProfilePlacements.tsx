@@ -59,14 +59,14 @@ export function ProfilePlacements() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <Link to="/profile" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+          <Link to="/profile" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
             ← Back to Overview
           </Link>
-          <h1 className="font-serif text-3xl text-white flex items-center gap-3">
+          <h1 className="font-serif text-3xl text-theme-text-primary flex items-center gap-3">
             <span className="text-purple-400">⚝</span>
             My Placements
           </h1>
-          <p className="text-neutral-400 mt-1">
+          <p className="text-theme-text-secondary mt-1">
             All your personal placements across three wisdom systems
           </p>
         </div>
@@ -75,7 +75,7 @@ export function ProfilePlacements() {
       {/* Astrology Placements */}
       <div className="bg-gradient-to-br from-amber-500/5 to-amber-600/5 rounded-xl p-6 border border-amber-500/20">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-serif text-xl text-white flex items-center gap-2">
+          <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2">
             <span className="text-amber-400">☉</span>
             Astrology Placements
           </h2>
@@ -97,17 +97,17 @@ export function ProfilePlacements() {
               <Link
                 key={placement.id}
                 to={`/profile/astrology/placements/${placement.planetId}`}
-                className="flex items-center gap-3 p-3 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                className="flex items-center gap-3 p-3 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
               >
                 <span className="text-2xl">{planet?.symbol}</span>
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-white">{planet?.name}</span>
+                    <span className="font-mediumtext-theme-text-primary">{planet?.name}</span>
                     <span className={`text-sm ${signColors?.text}`}>
                       {sign?.symbol} {sign?.name}
                     </span>
                   </div>
-                  <p className="text-neutral-500 text-xs">
+                  <p className="text-theme-text-tertiary text-xs">
                     {placement.degree}°{placement.minute}' • {house?.name}
                     {placement.retrograde && ' • ℞'}
                   </p>
@@ -122,7 +122,7 @@ export function ProfilePlacements() {
       {profile.geneKeysProfile && (
         <div className="bg-gradient-to-br from-emerald-500/5 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-xl text-white flex items-center gap-2">
+            <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2">
               <span className="text-emerald-400">✧</span>
               Gene Keys Placements
             </h2>
@@ -159,7 +159,7 @@ export function ProfilePlacements() {
                       <Link
                         key={key}
                         to={`/profile/gene-keys/${key}`}
-                        className="p-3 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                        className="p-3 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
                       >
                         <div className="flex items-center justify-between mb-1">
                           <span className="text-emerald-400/80 text-xs">{sphereData.sphereName}</span>
@@ -169,14 +169,14 @@ export function ProfilePlacements() {
                         </div>
                         {gk && (
                           <>
-                            <p className="text-white text-sm">{gk.name}</p>
-                            <p className="text-neutral-500 text-xs mt-1">
+                            <p className="text-theme-text-primary text-sm">{gk.name}</p>
+                            <p className="text-theme-text-tertiary text-xs mt-1">
                               {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                             </p>
                           </>
                         )}
                         {line && (
-                          <p className="text-neutral-600 text-xs mt-1">
+                          <p className="text-theme-text-muted text-xs mt-1">
                             Line {sphereData.line}: {line.archetype}
                           </p>
                         )}
@@ -194,7 +194,7 @@ export function ProfilePlacements() {
       {profile.humanDesignProfile && (
         <div className="bg-gradient-to-br from-amber-500/5 to-orange-600/5 rounded-xl p-6 border border-amber-500/20">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-xl text-white flex items-center gap-2">
+            <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2">
               <span className="text-amber-400">⬡</span>
               Human Design Gates
             </h2>
@@ -222,12 +222,12 @@ export function ProfilePlacements() {
                     <Link
                       key={`personality-${index}`}
                       to={`/profile/human-design/gates/${gate.gateNumber}`}
-                      className="block p-2 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                      className="block p-2 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
                     >
                       <div className="flex items-center gap-2">
-                        <span className="text-neutral-500 text-xs w-16">{gate.planet}</span>
+                        <span className="text-theme-text-tertiary text-xs w-16">{gate.planet}</span>
                         <span className="text-amber-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                        {gateData && <span className="text-neutral-300 text-sm">{gateData.name}</span>}
+                        {gateData && <span className="text-theme-text-secondary text-sm">{gateData.name}</span>}
                       </div>
                       {gk && (
                         <p className="text-genekey-400 text-xs mt-1 ml-16">
@@ -255,12 +255,12 @@ export function ProfilePlacements() {
                     <Link
                       key={`design-${index}`}
                       to={`/profile/human-design/gates/${gate.gateNumber}`}
-                      className="block p-2 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                      className="block p-2 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
                     >
                       <div className="flex items-center gap-2">
-                        <span className="text-neutral-500 text-xs w-16">{gate.planet}</span>
+                        <span className="text-theme-text-tertiary text-xs w-16">{gate.planet}</span>
                         <span className="text-red-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                        {gateData && <span className="text-neutral-300 text-sm">{gateData.name}</span>}
+                        {gateData && <span className="text-theme-text-secondary text-sm">{gateData.name}</span>}
                       </div>
                       {gk && (
                         <p className="text-genekey-400 text-xs mt-1 ml-16">
@@ -276,7 +276,7 @@ export function ProfilePlacements() {
 
           {/* Defined Channels */}
           {profile.humanDesignProfile.definedChannelIds && profile.humanDesignProfile.definedChannelIds.length > 0 && (
-            <div className="mt-6 pt-4 border-t border-neutral-800/50">
+            <div className="mt-6 pt-4 border-t border-theme-border-subtle/50">
               <h3 className="text-sm font-medium mb-3 text-purple-300">Defined Channels</h3>
               <div className="flex flex-wrap gap-2">
                 {profile.humanDesignProfile.definedChannelIds.map((channelId) => {
@@ -305,32 +305,32 @@ export function ProfilePlacements() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         <Link
           to="/contemplate"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-2xl">🕯</span>
           <div>
-            <p className="font-medium text-white">Contemplate</p>
-            <p className="text-neutral-500 text-sm">Explore your placements with AI</p>
+            <p className="font-mediumtext-theme-text-primary">Contemplate</p>
+            <p className="text-theme-text-tertiary text-sm">Explore your placements with AI</p>
           </div>
         </Link>
         <Link
           to="/wheel"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-2xl">☉</span>
           <div>
-            <p className="font-medium text-white">Celestial Wheel</p>
-            <p className="text-neutral-500 text-sm">See placements on the mandala</p>
+            <p className="font-mediumtext-theme-text-primary">Celestial Wheel</p>
+            <p className="text-theme-text-tertiary text-sm">See placements on the mandala</p>
           </div>
         </Link>
         <Link
           to="/graph"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-2xl">⚭</span>
           <div>
-            <p className="font-medium text-white">Cosmic Graph</p>
-            <p className="text-neutral-500 text-sm">Explore relationships</p>
+            <p className="font-mediumtext-theme-text-primary">Cosmic Graph</p>
+            <p className="text-theme-text-tertiary text-sm">Explore relationships</p>
           </div>
         </Link>
       </div>

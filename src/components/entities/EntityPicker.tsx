@@ -134,13 +134,13 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
           placeholder="Search for any cosmic energy..."
           value={searchQuery}
           onChange={e => setSearchQuery(e.target.value)}
-          className="w-full px-4 py-3 bg-neutral-800 border border-neutral-700 rounded-xl
-            text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500/50"
+          className="w-full px-4 py-3 bg-surface-raised border border-theme-border rounded-xl
+            text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500/50"
         />
         {searchQuery && (
           <button
             onClick={() => setSearchQuery('')}
-            className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 hover:text-white"
+            className="absolute right-3 top-1/2 -translate-y-1/2 text-theme-text-tertiary hover:text-theme-text-primary"
           >
             ✕
           </button>
@@ -156,7 +156,7 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
             className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors
               ${selectedSystem === value
                 ? `${color} text-white`
-                : 'bg-neutral-800 text-neutral-400 hover:text-white hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-interactive'
               }`}
           >
             {label}
@@ -171,8 +171,8 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
             onClick={() => setSelectedType('all')}
             className={`px-2 py-1 rounded text-xs transition-colors
               ${selectedType === 'all'
-                ? 'bg-neutral-600 text-white'
-                : 'bg-neutral-800 text-neutral-500 hover:text-white'
+                ? 'bg-surface-interactive text-theme-text-primary'
+                : 'bg-surface-raised text-theme-text-tertiary hover:text-theme-text-primary'
               }`}
           >
             All
@@ -183,8 +183,8 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
               onClick={() => setSelectedType(type)}
               className={`px-2 py-1 rounded text-xs transition-colors
                 ${selectedType === type
-                  ? 'bg-neutral-600 text-white'
-                  : 'bg-neutral-800 text-neutral-500 hover:text-white'
+                  ? 'bg-surface-interactive text-theme-text-primary'
+                  : 'bg-surface-raised text-theme-text-tertiary hover:text-theme-text-primary'
                 }`}
             >
               {TYPE_LABELS[type] || type}
@@ -197,7 +197,7 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
       <div className="max-h-80 overflow-y-auto pr-2 space-y-4">
         {Object.entries(groupedEntities).map(([type, typeEntities]) => (
           <div key={type}>
-            <h4 className="text-xs uppercase tracking-wider text-neutral-500 mb-2">
+            <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">
               {TYPE_LABELS[type] || type}
             </h4>
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -208,7 +208,7 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
                   className={`flex items-center gap-2 px-3 py-2.5 rounded-lg text-left transition-all
                     ${selectedId === entity.id
                       ? 'bg-purple-600 text-white ring-2 ring-purple-400'
-                      : 'bg-neutral-800 hover:bg-neutral-700 text-neutral-200 hover:text-white'
+                      : 'bg-surface-raised hover:bg-surface-interactive text-theme-text-secondary hover:text-theme-text-primary'
                     }`}
                 >
                   {entity.symbol && (
@@ -228,14 +228,14 @@ export function EntityPicker({ onSelect, selectedId }: EntityPickerProps): React
         ))}
 
         {entities.length === 0 && (
-          <div className="text-center py-8 text-neutral-500">
+          <div className="text-center py-8 text-theme-text-tertiary">
             {searchQuery ? 'No entities found' : 'Select a system to browse entities'}
           </div>
         )}
       </div>
 
       {/* Selection Hint */}
-      <p className="text-xs text-neutral-500 text-center">
+      <p className="text-xs text-theme-text-tertiary text-center">
         Select an energy to hear it speak directly to you
       </p>
     </div>

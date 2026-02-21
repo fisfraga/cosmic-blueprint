@@ -47,7 +47,7 @@ export const GUIDED_PATHWAYS: Pathway[] = [
     name: 'Shadow Work Week',
     description: 'A 7-day journey into your shadows, transforming fear into wisdom. Each day focuses on a different sphere of your Gene Keys profile.',
     icon: '🌑',
-    color: 'from-neutral-800 to-neutral-900 border-neutral-600',
+    color: 'from-surface-raised to-surface-base border-theme-border',
     duration: '7 days',
     theme: 'shadow-work',
     steps: [

@@ -30,15 +30,15 @@ export function HumanDesignAuthorityDetail() {
         <h1 className="font-serif text-4xl font-medium mb-2">{authority.name}</h1>
         <p className="text-xl text-humandesign-400 mb-2">{authority.percentage} of the population</p>
         {authority.alternativeNames.length > 0 && (
-          <p className="text-neutral-500">
+          <p className="text-theme-text-tertiary">
             Also known as: {authority.alternativeNames.join(', ')}
           </p>
         )}
       </header>
 
       {/* Description */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <p className="text-neutral-300 leading-relaxed">{authority.description}</p>
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <p className="text-theme-text-secondary leading-relaxed">{authority.description}</p>
       </section>
 
       {/* Core Info Grid */}
@@ -46,14 +46,14 @@ export function HumanDesignAuthorityDetail() {
         {/* Decision Process */}
         <div className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
           <h2 className="font-serif text-xl mb-3 text-humandesign-300">Decision Process</h2>
-          <p className="text-neutral-300">{authority.decisionProcess}</p>
+          <p className="text-theme-text-secondary">{authority.decisionProcess}</p>
         </div>
 
         {/* Timeframe */}
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-3">Timeframe</h2>
-          <p className="text-xl font-medium text-white mb-2">{authority.timeframe}</p>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-xl font-medium text-theme-text-primary mb-2">{authority.timeframe}</p>
+          <p className="text-theme-text-secondary text-sm">
             The typical time needed for clarity with this authority.
           </p>
         </div>
@@ -63,16 +63,16 @@ export function HumanDesignAuthorityDetail() {
       <section className="grid md:grid-cols-2 gap-4">
         <div className="bg-gradient-to-br from-green-500/10 to-green-600/5 rounded-xl p-6 border border-green-500/20">
           <h2 className="font-serif text-xl mb-3 text-green-300">Signs of Correct Use</h2>
-          <p className="text-neutral-300">{authority.signs.correct}</p>
+          <p className="text-theme-text-secondary">{authority.signs.correct}</p>
         </div>
         <div className="bg-gradient-to-br from-red-500/10 to-red-600/5 rounded-xl p-6 border border-red-500/20">
           <h2 className="font-serif text-xl mb-3 text-red-300">Signs of Incorrect Use</h2>
-          <p className="text-neutral-300">{authority.signs.incorrect}</p>
+          <p className="text-theme-text-secondary">{authority.signs.incorrect}</p>
         </div>
       </section>
 
       {/* Keywords */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Keywords</h2>
         <div className="flex flex-wrap gap-2">
           {authority.keywords.map((keyword, i) => (
@@ -89,14 +89,14 @@ export function HumanDesignAuthorityDetail() {
       {/* Practical Guidance */}
       <section className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
         <h2 className="font-serif text-xl mb-4 text-humandesign-300">Practical Guidance</h2>
-        <p className="text-neutral-300 leading-relaxed">{authority.practicalGuidance}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{authority.practicalGuidance}</p>
       </section>
 
       {/* Associated Center */}
       {center && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Associated Center</h2>
-          <p className="text-neutral-400 mb-4">
+          <p className="text-theme-text-secondary mb-4">
             This authority is based on the defined {center.name}.
           </p>
           <Link
@@ -106,7 +106,7 @@ export function HumanDesignAuthorityDetail() {
             <span className="text-3xl">{center.symbol}</span>
             <div>
               <h3 className="font-medium text-humandesign-300">{center.name}</h3>
-              <p className="text-neutral-400 text-sm">{center.centerType} Center</p>
+              <p className="text-theme-text-secondary text-sm">{center.centerType} Center</p>
             </div>
           </Link>
         </section>
@@ -115,8 +115,8 @@ export function HumanDesignAuthorityDetail() {
       {/* No Center Note */}
       {!center && authority.centerId === null && (
         <section className="bg-gradient-to-br from-neutral-500/10 to-neutral-600/5 rounded-xl p-6 border border-neutral-500/20">
-          <h2 className="font-serif text-xl mb-3 text-neutral-300">No Specific Center</h2>
-          <p className="text-neutral-400">
+          <h2 className="font-serif text-xl mb-3 text-theme-text-secondary">No Specific Center</h2>
+          <p className="text-theme-text-secondary">
             This authority is not based on a single defined center. Instead, it relies on
             {authority.id === 'hd-authority-lunar'
               ? ' the complete lunar cycle and all centers being undefined.'
@@ -127,14 +127,14 @@ export function HumanDesignAuthorityDetail() {
 
       {/* Chakra Resonance */}
       {relatedChakra && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-2">Chakra Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             The center governing this authority resonates with the following chakra in the Hindu-Brahman tradition.
           </p>
           <Link
             to={`/chakras/${relatedChakra.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
           >
             <div
               className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
@@ -143,9 +143,9 @@ export function HumanDesignAuthorityDetail() {
               {relatedChakra.symbol}
             </div>
             <div>
-              <p className="text-white font-medium">{relatedChakra.name}</p>
-              <p className="text-neutral-400 text-sm italic">{relatedChakra.sanskritName}</p>
-              <p className="text-neutral-500 text-xs mt-0.5">{relatedChakra.lifeTheme}</p>
+              <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
+              <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
+              <p className="text-theme-text-tertiary text-xs mt-0.5">{relatedChakra.lifeTheme}</p>
             </div>
           </Link>
         </section>
@@ -155,25 +155,25 @@ export function HumanDesignAuthorityDetail() {
       <section className="flex gap-4">
         <Link
           to="/human-design/types"
-          className="flex-1 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">◉</span>
           <h4 className="font-medium mt-2">Types</h4>
-          <p className="text-sm text-neutral-400 mt-1">Learn about the five HD types</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Learn about the five HD types</p>
         </Link>
         <Link
           to="/human-design/centers"
-          className="flex-1 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">⚬</span>
           <h4 className="font-medium mt-2">Centers</h4>
-          <p className="text-sm text-neutral-400 mt-1">Explore the nine energy centers</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Explore the nine energy centers</p>
         </Link>
       </section>
 
       {/* Back Link */}
       <div className="text-center pt-4">
-        <Link to="/human-design/authorities" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/human-design/authorities" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &#8592; Back to Authorities
         </Link>
       </div>

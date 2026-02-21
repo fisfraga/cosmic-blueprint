@@ -24,12 +24,12 @@ export function SessionSidebar({
     >
       <button
         onClick={onBack}
-        className="mb-4 text-neutral-400 hover:text-white text-sm flex items-center gap-1"
+        className="mb-4 text-theme-text-secondary hover:text-theme-text-primary text-sm flex items-center gap-1"
       >
         ← Start new session
       </button>
 
-      <h3 className="font-serif text-xl text-white mb-4">Saved Sessions</h3>
+      <h3 className="font-serif text-xl text-theme-text-primary mb-4">Saved Sessions</h3>
 
       <div className="space-y-3 max-h-[500px] overflow-y-auto pr-2">
         {savedSessions.map((session) => {
@@ -55,26 +55,26 @@ export function SessionSidebar({
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span>{categoryInfo.icon}</span>
-                    <span className="font-medium text-white">{typeOption?.name || session.contemplationType}</span>
+                    <span className="font-medium text-theme-text-primary">{typeOption?.name || session.contemplationType}</span>
                   </div>
                   {session.focusEntity && (
-                    <p className="text-neutral-300 text-sm mb-1">{session.focusEntity.name}</p>
+                    <p className="text-theme-text-secondary text-sm mb-1">{session.focusEntity.name}</p>
                   )}
-                  <p className="text-neutral-500 text-xs mb-2">{updatedDate} · {session.messages.length} messages</p>
+                  <p className="text-theme-text-tertiary text-xs mb-2">{updatedDate} · {session.messages.length} messages</p>
                   {previewText && (
-                    <p className="text-neutral-400 text-sm line-clamp-2">{previewText}</p>
+                    <p className="text-theme-text-secondary text-sm line-clamp-2">{previewText}</p>
                   )}
                 </div>
                 <div className="flex flex-col gap-2">
                   <button
                     onClick={() => onResumeSession(session)}
-                    className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                    className="px-3 py-1.5 bg-surface-overlay/50 hover:bg-surface-overlay text-theme-text-primary text-sm rounded-lg transition-colors"
                   >
                     Resume
                   </button>
                   <button
                     onClick={() => onDeleteSession(session.id)}
-                    className="px-3 py-1.5 text-neutral-500 hover:text-red-400 text-sm transition-colors"
+                    className="px-3 py-1.5 text-theme-text-tertiary hover:text-red-400 text-sm transition-colors"
                   >
                     Delete
                   </button>
@@ -86,7 +86,7 @@ export function SessionSidebar({
       </div>
 
       {savedSessions.length === 0 && (
-        <p className="text-neutral-500 text-center py-8">No saved sessions yet</p>
+        <p className="text-theme-text-tertiary text-center py-8">No saved sessions yet</p>
       )}
     </motion.div>
   );

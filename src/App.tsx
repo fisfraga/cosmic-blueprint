@@ -4,7 +4,7 @@ import { MotionConfig } from 'framer-motion';
 import { Layout } from './components';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSkeleton } from './components/LoadingSkeleton';
-import { ProfileProvider } from './context';
+import { ProfileProvider, ThemeProvider } from './context';
 import { AuthProvider } from './context/AuthContext';
 
 // Lazy load pages for code-splitting
@@ -89,6 +89,7 @@ const ProfileHDChannelDetail = lazy(() => import('./pages/profile/ProfileHDChann
 function App() {
   return (
     <ErrorBoundary>
+    <ThemeProvider>
     <MotionConfig reducedMotion="user">
     <AuthProvider>
     <ProfileProvider>
@@ -181,6 +182,7 @@ function App() {
     </ProfileProvider>
     </AuthProvider>
     </MotionConfig>
+    </ThemeProvider>
     </ErrorBoundary>
   );
 }

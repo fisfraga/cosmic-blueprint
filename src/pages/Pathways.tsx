@@ -56,8 +56,8 @@ function PathwayCard({
         <div className="flex items-center gap-3">
           <span className="text-3xl">{pathway.icon}</span>
           <div>
-            <h3 className="font-serif text-xl text-white">{pathway.name}</h3>
-            <p className="text-neutral-400 text-sm">{pathway.duration} · {pathway.steps.length} steps</p>
+            <h3 className="font-serif text-xltext-theme-text-primary">{pathway.name}</h3>
+            <p className="text-theme-text-secondary text-sm">{pathway.duration} · {pathway.steps.length} steps</p>
           </div>
         </div>
         <div className="flex items-center gap-2">
@@ -74,7 +74,7 @@ function PathwayCard({
         </div>
       </div>
 
-      <p className="text-neutral-300 text-sm mb-4 leading-relaxed">
+      <p className="text-theme-text-secondary text-sm mb-4 leading-relaxed">
         {pathway.description}
       </p>
 
@@ -82,10 +82,10 @@ function PathwayCard({
       {hasStarted && (
         <div className="mb-4">
           <div className="flex items-center justify-between text-sm mb-1">
-            <span className="text-neutral-400">Progress</span>
+            <span className="text-theme-text-secondary">Progress</span>
             <span className="text-white">{completionPercent}%</span>
           </div>
-          <div className="h-2 bg-neutral-800 rounded-full overflow-hidden">
+          <div className="h-2 bg-surface-raised rounded-full overflow-hidden">
             <motion.div
               initial={{ width: 0 }}
               animate={{ width: `${completionPercent}%` }}
@@ -100,7 +100,7 @@ function PathwayCard({
         {!hasStarted ? (
           <button
             onClick={onStart}
-            className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+            className="px-4 py-2 bg-white/10 hover:bg-white/20 text-theme-text-primary rounded-lg transition-colors"
           >
             Begin Journey
           </button>
@@ -108,13 +108,13 @@ function PathwayCard({
           <>
             <button
               onClick={onReset}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-theme-text-primary rounded-lg transition-colors"
             >
               Start Over
             </button>
             <button
               onClick={onContinue}
-              className="px-4 py-2 text-neutral-400 hover:text-white transition-colors"
+              className="px-4 py-2 text-theme-text-secondary hover:text-theme-text-primary transition-colors"
             >
               Review Journal
             </button>
@@ -123,13 +123,13 @@ function PathwayCard({
           <>
             <button
               onClick={onContinue}
-              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-white rounded-lg transition-colors"
+              className="px-4 py-2 bg-white/10 hover:bg-white/20 text-theme-text-primary rounded-lg transition-colors"
             >
               Continue
             </button>
             <button
               onClick={onReset}
-              className="px-4 py-2 text-neutral-500 hover:text-red-400 transition-colors text-sm"
+              className="px-4 py-2 text-theme-text-tertiary hover:text-red-400 transition-colors text-sm"
             >
               Reset
             </button>
@@ -193,22 +193,22 @@ function PathwayDetail({
         initial={{ scale: 0.95, y: 20 }}
         animate={{ scale: 1, y: 0 }}
         exit={{ scale: 0.95, y: 20 }}
-        className="bg-neutral-900 border border-neutral-800 rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
+        className="bg-surface-base border border-theme-border-subtle rounded-xl max-w-2xl w-full max-h-[80vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
-        <div className={`p-6 border-b border-neutral-800 bg-gradient-to-r ${pathway.color}`}>
+        <div className={`p-6 border-b border-theme-border-subtle bg-gradient-to-r ${pathway.color}`}>
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-3">
               <span className="text-3xl">{pathway.icon}</span>
               <div>
-                <h2 className="font-serif text-2xl text-white">{pathway.name}</h2>
-                <p className="text-neutral-400 text-sm">{pathway.duration}</p>
+                <h2 className="font-serif text-2xltext-theme-text-primary">{pathway.name}</h2>
+                <p className="text-theme-text-secondary text-sm">{pathway.duration}</p>
               </div>
             </div>
             <button
               onClick={onClose}
-              className="text-neutral-400 hover:text-white p-2"
+              className="text-theme-text-secondary hover:text-theme-text-primary p-2"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -234,8 +234,8 @@ function PathwayDetail({
                     : isCurrent
                     ? 'bg-purple-500/10 border-purple-500/30'
                     : isLocked
-                    ? 'bg-neutral-800/50 border-neutral-700 opacity-50'
-                    : 'bg-neutral-800/50 border-neutral-700'
+                    ? 'bg-surface-overlay border-theme-border-subtle opacity-50'
+                    : 'bg-surface-overlay border-theme-border-subtle'
                 }`}
               >
                 <div className="flex items-start justify-between">
@@ -244,12 +244,12 @@ function PathwayDetail({
                       {isCompleted ? (
                         <span className="text-green-400">✓</span>
                       ) : (
-                        <span className="text-neutral-500">{index + 1}</span>
+                        <span className="text-theme-text-tertiary">{index + 1}</span>
                       )}
-                      <h4 className="font-medium text-white">{step.title}</h4>
+                      <h4 className="font-mediumtext-theme-text-primary">{step.title}</h4>
                     </div>
-                    <p className="text-neutral-400 text-sm ml-6">{step.description}</p>
-                    <p className="text-neutral-500 text-xs ml-6 mt-1">
+                    <p className="text-theme-text-secondary text-sm ml-6">{step.description}</p>
+                    <p className="text-theme-text-tertiary text-xs ml-6 mt-1">
                       ~{step.estimatedMinutes} minutes
                     </p>
                   </div>
@@ -271,7 +271,7 @@ function PathwayDetail({
                     {!isLocked && !isCompleted && (
                       <button
                         onClick={() => handleStartContemplation(step)}
-                        className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-white text-sm rounded-lg transition-colors"
+                        className="px-3 py-1.5 bg-white/10 hover:bg-white/20 text-theme-text-primary text-sm rounded-lg transition-colors"
                       >
                         Start
                       </button>
@@ -319,9 +319,9 @@ function PathwayDetail({
 
                 {/* Journal Prompt */}
                 {(isCurrent || isCompleted) && (
-                  <div className="mt-3 ml-6 p-3 bg-neutral-900/50 rounded-lg border border-neutral-700">
-                    <p className="text-neutral-500 text-xs uppercase tracking-wider mb-1">Reflection Prompt</p>
-                    <p className="text-neutral-300 text-sm italic">{step.journalPrompt}</p>
+                  <div className="mt-3 ml-6 p-3 bg-surface-base/50 rounded-lg border border-theme-border-subtle">
+                    <p className="text-theme-text-tertiary text-xs uppercase tracking-wider mb-1">Reflection Prompt</p>
+                    <p className="text-theme-text-secondary text-sm italic">{step.journalPrompt}</p>
                   </div>
                 )}
               </div>
@@ -330,16 +330,16 @@ function PathwayDetail({
         </div>
 
         {/* Footer */}
-        <div className="p-6 border-t border-neutral-800 flex justify-between">
+        <div className="p-6 border-t border-theme-border-subtle flex justify-between">
           <button
             onClick={onReset}
-            className="text-neutral-500 hover:text-red-400 text-sm transition-colors"
+            className="text-theme-text-tertiary hover:text-red-400 text-sm transition-colors"
           >
             Reset Pathway
           </button>
           <button
             onClick={onClose}
-            className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white rounded-lg transition-colors"
+            className="px-4 py-2 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary rounded-lg transition-colors"
           >
             Close
           </button>
@@ -360,23 +360,23 @@ function PathwayDetail({
               initial={{ scale: 0.95 }}
               animate={{ scale: 1 }}
               exit={{ scale: 0.95 }}
-              className="bg-neutral-900 border border-neutral-700 rounded-xl p-6 max-w-lg w-full"
+              className="bg-surface-base border border-theme-border-subtle rounded-xl p-6 max-w-lg w-full"
               onClick={(e) => e.stopPropagation()}
             >
-              <h3 className="font-serif text-xl text-white mb-2">{selectedStep.title}</h3>
-              <p className="text-neutral-400 text-sm mb-4 italic">{selectedStep.journalPrompt}</p>
+              <h3 className="font-serif text-xl text-theme-text-primary mb-2">{selectedStep.title}</h3>
+              <p className="text-theme-text-secondary text-sm mb-4 italic">{selectedStep.journalPrompt}</p>
 
               <textarea
                 value={journalEntry}
                 onChange={(e) => setJournalEntry(e.target.value)}
                 placeholder="Write your reflection here..."
-                className="w-full h-48 bg-neutral-800 border border-neutral-700 rounded-lg p-4 text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500/50 resize-none"
+                className="w-full h-48 bg-surface-raised border border-theme-border-subtle rounded-lg p-4 text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500/50 resize-none"
               />
 
               <div className="flex justify-end gap-3 mt-4">
                 <button
                   onClick={() => setShowJournal(false)}
-                  className="px-4 py-2 text-neutral-400 hover:text-white transition-colors"
+                  className="px-4 py-2 text-theme-text-secondary hover:text-theme-text-primary transition-colors"
                 >
                   Cancel
                 </button>
@@ -495,10 +495,10 @@ export function Pathways() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Guided Pathways
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Structured contemplation journeys for deep self-discovery. Each pathway guides you through a series of themed contemplations with journaling prompts.
         </p>
       </div>
@@ -507,7 +507,7 @@ export function Pathways() {
       {todayActivations.length > 0 && (
         <section className="mb-8 p-5 rounded-xl bg-gradient-to-r from-purple-500/10 to-humandesign-500/10 border border-purple-500/20">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="font-serif text-lg text-white flex items-center gap-2">
+            <h2 className="font-serif text-lg text-theme-text-primary flex items-center gap-2">
               <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse inline-block"></span>
               Today's Cosmic Tide
             </h2>
@@ -515,7 +515,7 @@ export function Pathways() {
               Full forecast →
             </Link>
           </div>
-          <p className="text-neutral-400 text-sm mb-3">
+          <p className="text-theme-text-secondary text-sm mb-3">
             {todayActivations.length} planet{todayActivations.length !== 1 ? 's are' : ' is'} transiting your natal gates — this energy deepens your contemplation work.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -523,7 +523,7 @@ export function Pathways() {
               <Link
                 key={activation.pos.planetId}
                 to={`/human-design/${activation.gate.id}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800/80 hover:bg-neutral-800 border border-humandesign-500/30 rounded-full text-sm transition-colors"
+                className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-raised/80 hover:bg-surface-raised border border-humandesign-500/30 rounded-full text-sm transition-colors"
               >
                 <span className="text-xl leading-none">{activation.pos.symbol}</span>
                 <span className="text-humandesign-300 font-medium">Gate {activation.gate.gateNumber}.{activation.line}</span>
@@ -542,7 +542,7 @@ export function Pathways() {
       {/* Active Pathways */}
       {activePathways.length > 0 && (
         <section className="mb-12">
-          <h2 className="font-serif text-2xl text-white mb-4">Continue Your Journey</h2>
+          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Continue Your Journey</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {activePathways.map((pathway) => (
               <PathwayCard
@@ -562,7 +562,7 @@ export function Pathways() {
       {/* Available Pathways */}
       {availablePathways.length > 0 && (
         <section className="mb-12">
-          <h2 className="font-serif text-2xl text-white mb-4">
+          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">
             {activePathways.length > 0 ? 'Explore More Pathways' : 'Choose Your Path'}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -584,7 +584,7 @@ export function Pathways() {
       {/* Completed Pathways */}
       {completedPathways.length > 0 && (
         <section>
-          <h2 className="font-serif text-2xl text-white mb-4">Completed Journeys</h2>
+          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Completed Journeys</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {completedPathways.map((pathway) => (
               <PathwayCard
@@ -618,30 +618,30 @@ export function Pathways() {
       </AnimatePresence>
 
       {/* How Pathways Work */}
-      <section className="mt-12 bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h3 className="font-serif text-lg text-white mb-4">How Guided Pathways Work</h3>
+      <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h3 className="font-serif text-lg text-theme-text-primary mb-4">How Guided Pathways Work</h3>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
           <div>
             <p className="text-purple-400 font-medium mb-1">1. Choose a Path</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Select a pathway that resonates with your current journey and needs.
             </p>
           </div>
           <div>
             <p className="text-purple-400 font-medium mb-1">2. Contemplate Daily</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Each step guides you to a themed contemplation in the chamber.
             </p>
           </div>
           <div>
             <p className="text-purple-400 font-medium mb-1">3. Journal Your Insights</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Reflection prompts help you integrate what you discover.
             </p>
           </div>
           <div>
             <p className="text-purple-400 font-medium mb-1">4. Track Progress</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Your journey is saved so you can continue anytime.
             </p>
           </div>

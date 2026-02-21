@@ -22,7 +22,7 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
   return (
     <>
       {/* Elemental Balance */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl text-white mb-4">Elemental Balance</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {(['fire', 'earth', 'air', 'water'] as const).map((element) => {
@@ -35,9 +35,9 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
               <div key={element}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`font-medium capitalize ${colors.text}`}>{element}</span>
-                  <span className="text-neutral-400">{count} planets</span>
+                  <span className="text-theme-text-secondary">{count} planets</span>
                 </div>
-                <div className="h-3 bg-neutral-800 rounded-full overflow-hidden mb-3">
+                <div className="h-3 bg-surface-raised rounded-full overflow-hidden mb-3">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${percentage}%` }}
@@ -61,8 +61,8 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
         </div>
 
         {/* Balance Insight */}
-        <div className="mt-6 pt-4 border-t border-neutral-800 flex items-center justify-between">
-          <p className="text-neutral-300 text-sm">
+        <div className="mt-6 pt-4 border-t border-theme-border-subtle flex items-center justify-between">
+          <p className="text-theme-text-secondary text-sm">
             <span className="text-white font-medium">Your elemental signature:</span>{' '}
             Strong in <span className={elementColors[elementalAnalysis.dominant as keyof typeof elementColors]?.text}>{elementalAnalysis.dominant}</span>,
             {' '}inviting growth through <span className={elementColors[elementalAnalysis.deficient as keyof typeof elementColors]?.text}>{elementalAnalysis.deficient}</span>.
@@ -77,9 +77,9 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
       </div>
 
       {/* Cosmic Identity - The Big Four with HD & GK */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl text-white mb-2">Cosmic Identity</h2>
-        <p className="text-neutral-400 text-sm mb-4">Your Sun, Moon, Mercury, and Ascendant across all three wisdom systems</p>
+        <p className="text-theme-text-secondary text-sm mb-4">Your Sun, Moon, Mercury, and Ascendant across all three wisdom systems</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {/* Sun */}
           {(() => {
@@ -104,14 +104,14 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                 </div>
 
                 {/* Astrology */}
-                <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                  <p className="text-xs text-neutral-500 mb-1">Astrology</p>
+                <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                  <p className="text-xs text-theme-text-tertiary mb-1">Astrology</p>
                   <div className="flex items-center gap-2">
                     <span className={signColors?.text}>{sign?.symbol}</span>
                     <span className="text-white">{sign?.name}</span>
-                    <span className="text-neutral-500">• {house?.name}</span>
+                    <span className="text-theme-text-tertiary">• {house?.name}</span>
                   </div>
-                  <p className="text-neutral-500 text-xs mt-1">
+                  <p className="text-theme-text-tertiary text-xs mt-1">
                     {sunPlacement.degree}°{sunPlacement.minute}'{sunPlacement.retrograde && ' ℞'}
                     {sunPlacement.dignityId && ` • ${sunPlacement.dignityId}`}
                   </p>
@@ -119,29 +119,29 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
                 {/* Human Design */}
                 {hdCore && (
-                  <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                    <p className="text-xs text-neutral-500 mb-1">Human Design</p>
+                  <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                    <p className="text-xs text-theme-text-tertiary mb-1">Human Design</p>
                     <Link to={`/profile/human-design/gates/${hdCore.gateNumber}`} className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                       <span className="text-amber-400 font-medium">Gate {hdCore.gateNumber}.{hdCore.line}</span>
-                      {hdGate && <span className="text-neutral-300">— {hdGate.name}</span>}
+                      {hdGate && <span className="text-theme-text-secondary">— {hdGate.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">{hdCore.centerName} Center</p>
+                    <p className="text-theme-text-tertiary text-xs mt-1">{hdCore.centerName} Center</p>
                   </div>
                 )}
 
                 {/* Gene Keys */}
                 {gkCore && (
                   <div>
-                    <p className="text-xs text-neutral-500 mb-1">Gene Keys</p>
+                    <p className="text-xs text-theme-text-tertiary mb-1">Gene Keys</p>
                     <Link to={`/profile/gene-keys/lifesWork`} className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                       <span className="text-purple-400 font-medium">Key {gkCore.geneKeyNumber}.{gkCore.line}</span>
-                      {gk && <span className="text-neutral-300">— {gk.name}</span>}
+                      {gk && <span className="text-theme-text-secondary">— {gk.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">
+                    <p className="text-theme-text-tertiary text-xs mt-1">
                       {gkCore.sphereName} • Line {gkCore.line} {line?.archetype}
                     </p>
                     {gk && (
-                      <p className="text-neutral-400 text-xs mt-1 italic">
+                      <p className="text-theme-text-secondary text-xs mt-1 italic">
                         {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                       </p>
                     )}
@@ -174,14 +174,14 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                 </div>
 
                 {/* Astrology */}
-                <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                  <p className="text-xs text-neutral-500 mb-1">Astrology</p>
+                <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                  <p className="text-xs text-theme-text-tertiary mb-1">Astrology</p>
                   <div className="flex items-center gap-2">
                     <span className={signColors?.text}>{sign?.symbol}</span>
                     <span className="text-white">{sign?.name}</span>
-                    <span className="text-neutral-500">• {house?.name}</span>
+                    <span className="text-theme-text-tertiary">• {house?.name}</span>
                   </div>
-                  <p className="text-neutral-500 text-xs mt-1">
+                  <p className="text-theme-text-tertiary text-xs mt-1">
                     {moonPlacement.degree}°{moonPlacement.minute}'{moonPlacement.retrograde && ' ℞'}
                     {moonPlacement.dignityId && ` • ${moonPlacement.dignityId}`}
                   </p>
@@ -189,29 +189,29 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
                 {/* Human Design */}
                 {hdCore && (
-                  <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                    <p className="text-xs text-neutral-500 mb-1">Human Design</p>
+                  <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                    <p className="text-xs text-theme-text-tertiary mb-1">Human Design</p>
                     <Link to={`/profile/human-design/gates/${hdCore.gateNumber}`} className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                       <span className="text-amber-400 font-medium">Gate {hdCore.gateNumber}.{hdCore.line}</span>
-                      {hdGate && <span className="text-neutral-300">— {hdGate.name}</span>}
+                      {hdGate && <span className="text-theme-text-secondary">— {hdGate.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">{hdCore.centerName} Center</p>
+                    <p className="text-theme-text-tertiary text-xs mt-1">{hdCore.centerName} Center</p>
                   </div>
                 )}
 
                 {/* Gene Keys */}
                 {gkCore && (
                   <div>
-                    <p className="text-xs text-neutral-500 mb-1">Gene Keys</p>
+                    <p className="text-xs text-theme-text-tertiary mb-1">Gene Keys</p>
                     <Link to={`/profile/gene-keys/evolution`} className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                       <span className="text-purple-400 font-medium">Key {gkCore.geneKeyNumber}.{gkCore.line}</span>
-                      {gk && <span className="text-neutral-300">— {gk.name}</span>}
+                      {gk && <span className="text-theme-text-secondary">— {gk.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">
+                    <p className="text-theme-text-tertiary text-xs mt-1">
                       {gkCore.sphereName} • Line {gkCore.line} {line?.archetype}
                     </p>
                     {gk && (
-                      <p className="text-neutral-400 text-xs mt-1 italic">
+                      <p className="text-theme-text-secondary text-xs mt-1 italic">
                         {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                       </p>
                     )}
@@ -244,14 +244,14 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                 </div>
 
                 {/* Astrology */}
-                <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                  <p className="text-xs text-neutral-500 mb-1">Astrology</p>
+                <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                  <p className="text-xs text-theme-text-tertiary mb-1">Astrology</p>
                   <div className="flex items-center gap-2">
                     <span className={signColors?.text}>{sign?.symbol}</span>
                     <span className="text-white">{sign?.name}</span>
-                    <span className="text-neutral-500">• {house?.name}</span>
+                    <span className="text-theme-text-tertiary">• {house?.name}</span>
                   </div>
-                  <p className="text-neutral-500 text-xs mt-1">
+                  <p className="text-theme-text-tertiary text-xs mt-1">
                     {mercuryPlacement.degree}°{mercuryPlacement.minute}'{mercuryPlacement.retrograde && ' ℞'}
                     {mercuryPlacement.dignityId && ` • ${mercuryPlacement.dignityId}`}
                   </p>
@@ -259,29 +259,29 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
                 {/* Human Design */}
                 {hdCore && (
-                  <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                    <p className="text-xs text-neutral-500 mb-1">Human Design</p>
+                  <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                    <p className="text-xs text-theme-text-tertiary mb-1">Human Design</p>
                     <Link to={`/profile/human-design/gates/${hdCore.gateNumber}`} className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                       <span className="text-amber-400 font-medium">Gate {hdCore.gateNumber}.{hdCore.line}</span>
-                      {hdGate && <span className="text-neutral-300">— {hdGate.name}</span>}
+                      {hdGate && <span className="text-theme-text-secondary">— {hdGate.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">{hdCore.centerName} Center</p>
+                    <p className="text-theme-text-tertiary text-xs mt-1">{hdCore.centerName} Center</p>
                   </div>
                 )}
 
                 {/* Gene Keys */}
                 {gkCore && (
                   <div>
-                    <p className="text-xs text-neutral-500 mb-1">Gene Keys</p>
+                    <p className="text-xs text-theme-text-tertiary mb-1">Gene Keys</p>
                     <Link to={`/profile/gene-keys/radiance`} className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                       <span className="text-purple-400 font-medium">Key {gkCore.geneKeyNumber}.{gkCore.line}</span>
-                      {gk && <span className="text-neutral-300">— {gk.name}</span>}
+                      {gk && <span className="text-theme-text-secondary">— {gk.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">
+                    <p className="text-theme-text-tertiary text-xs mt-1">
                       {gkCore.sphereName} • Line {gkCore.line} {line?.archetype}
                     </p>
                     {gk && (
-                      <p className="text-neutral-400 text-xs mt-1 italic">
+                      <p className="text-theme-text-secondary text-xs mt-1 italic">
                         {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                       </p>
                     )}
@@ -313,14 +313,14 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                 </div>
 
                 {/* Astrology */}
-                <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                  <p className="text-xs text-neutral-500 mb-1">Astrology</p>
+                <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                  <p className="text-xs text-theme-text-tertiary mb-1">Astrology</p>
                   <div className="flex items-center gap-2">
                     <span className={signColors?.text}>{sign?.symbol}</span>
                     <span className="text-white">{sign?.name} Rising</span>
                   </div>
                   {ascPlacement && (
-                    <p className="text-neutral-500 text-xs mt-1">
+                    <p className="text-theme-text-tertiary text-xs mt-1">
                       {ascPlacement.degree}°{ascPlacement.minute}'
                     </p>
                   )}
@@ -328,29 +328,29 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
                 {/* Human Design */}
                 {hdCore && (
-                  <div className="mb-3 pb-3 border-b border-neutral-800/50">
-                    <p className="text-xs text-neutral-500 mb-1">Human Design</p>
+                  <div className="mb-3 pb-3 border-b border-theme-border-subtle/50">
+                    <p className="text-xs text-theme-text-tertiary mb-1">Human Design</p>
                     <Link to={`/profile/human-design/gates/${hdCore.gateNumber}`} className="flex items-center gap-2 hover:text-amber-300 transition-colors">
                       <span className="text-amber-400 font-medium">Gate {hdCore.gateNumber}.{hdCore.line}</span>
-                      {hdGate && <span className="text-neutral-300">— {hdGate.name}</span>}
+                      {hdGate && <span className="text-theme-text-secondary">— {hdGate.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">{hdCore.centerName} Center</p>
+                    <p className="text-theme-text-tertiary text-xs mt-1">{hdCore.centerName} Center</p>
                   </div>
                 )}
 
                 {/* Gene Keys */}
                 {gkCore && (
                   <div>
-                    <p className="text-xs text-neutral-500 mb-1">Gene Keys</p>
+                    <p className="text-xs text-theme-text-tertiary mb-1">Gene Keys</p>
                     <Link to={`/profile/gene-keys/purpose`} className="flex items-center gap-2 hover:text-purple-300 transition-colors">
                       <span className="text-purple-400 font-medium">Key {gkCore.geneKeyNumber}.{gkCore.line}</span>
-                      {gk && <span className="text-neutral-300">— {gk.name}</span>}
+                      {gk && <span className="text-theme-text-secondary">— {gk.name}</span>}
                     </Link>
-                    <p className="text-neutral-500 text-xs mt-1">
+                    <p className="text-theme-text-tertiary text-xs mt-1">
                       {gkCore.sphereName} • Line {gkCore.line} {line?.archetype}
                     </p>
                     {gk && (
-                      <p className="text-neutral-400 text-xs mt-1 italic">
+                      <p className="text-theme-text-secondary text-xs mt-1 italic">
                         {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                       </p>
                     )}
@@ -363,10 +363,10 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
       </div>
 
       {/* All Placements */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <div className="flex items-center justify-between mb-4">
           <h2 className="font-serif text-xl text-white">All Placements</h2>
-          <span className="text-neutral-400 text-sm">{placements.length} placements</span>
+          <span className="text-theme-text-secondary text-sm">{placements.length} placements</span>
         </div>
         <div className="space-y-2">
           {placements.map((placement) => {
@@ -384,7 +384,7 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
             return (
               <div
                 key={placement.id}
-                className="flex items-center justify-between p-3 bg-neutral-800/50 rounded-lg hover:bg-neutral-800 transition-colors"
+                className="flex items-center justify-between p-3 bg-surface-raised/50 rounded-lg hover:bg-surface-raised transition-colors"
               >
                 <div className="flex items-center gap-3">
                   <span className="text-xl w-8">{planet?.symbol}</span>
@@ -395,7 +395,7 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                         {sign?.symbol} {sign?.name}
                       </span>
                     </div>
-                    <p className="text-neutral-500 text-xs">
+                    <p className="text-theme-text-tertiary text-xs">
                       {placement.degree}°{placement.minute}'
                       {hdGateData && <span className="text-amber-400 mx-1">• {hdGateData.gateNumber}.{hdGateData.line}</span>}
                       {' '}• {house?.name}
@@ -418,7 +418,7 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                     </span>
                   )}
                   {placement.dignityId && (
-                    <span className="px-2 py-0.5 text-xs bg-neutral-700 text-neutral-300 rounded capitalize">
+                    <span className="px-2 py-0.5 text-xs bg-surface-interactive text-theme-text-secondary rounded capitalize">
                       {placement.dignityId}
                     </span>
                   )}
@@ -431,12 +431,12 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
       {/* Personal Aspects */}
       {profile.aspects?.planetary && profile.aspects.planetary.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-serif text-xl text-white">Your Aspects</h2>
             <Link
               to="/weaver"
-              className="text-sm text-neutral-400 hover:text-white transition-colors"
+              className="text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors"
             >
               View in Aspect Weaver →
             </Link>
@@ -446,14 +446,14 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
               const aspectType = aspects.get(personalAspect.aspectId);
               const planet1 = getPlanetData(personalAspect.planet1Id);
               const planet2 = getPlanetData(personalAspect.planet2Id);
-              const colors = aspectColors[personalAspect.aspectId] || { bg: 'bg-neutral-800', text: 'text-neutral-300' };
+              const colors = aspectColors[personalAspect.aspectId] || { bg: 'bg-surface-raised', text: 'text-theme-text-secondary' };
 
               if (!aspectType || !planet1 || !planet2) return null;
 
               return (
                 <div
                   key={personalAspect.id}
-                  className={`p-3 ${colors.bg} rounded-lg border border-neutral-700/50`}
+                  className={`p-3 ${colors.bg} rounded-lg border border-theme-border-subtle/50`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -464,10 +464,10 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
                     <span className={`text-xs ${colors.text}`}>{aspectType.name}</span>
                   </div>
                   <div className="flex items-center justify-between mt-1">
-                    <span className="text-neutral-400 text-xs">
+                    <span className="text-theme-text-secondary text-xs">
                       {planet1.name} {aspectType.name.toLowerCase()} {planet2.name}
                     </span>
-                    <span className="text-neutral-500 text-xs">
+                    <span className="text-theme-text-tertiary text-xs">
                       {personalAspect.orbDegree}°{personalAspect.orbMinute}' {personalAspect.direction}
                     </span>
                   </div>
@@ -480,12 +480,12 @@ export function AstrologyTab({ profile }: ProfileTabProps) {
 
       {/* Configurations */}
       {profile.configurations.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <div className="flex items-center justify-between mb-4">
             <h2 className="font-serif text-xl text-white">Configurations</h2>
             <Link
               to="/configurations"
-              className="text-sm text-neutral-400 hover:text-white transition-colors"
+              className="text-sm text-theme-text-secondary hover:text-theme-text-primary transition-colors"
             >
               View Gallery →
             </Link>

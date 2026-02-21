@@ -4,9 +4,38 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      boxShadow: {
+        'theme-sm': '0 1px 3px var(--shadow-ambient)',
+        'theme-md': '0 4px 12px var(--shadow-ambient)',
+        'theme-lg': '0 8px 24px var(--shadow-elevation)',
+      },
+      backgroundImage: {
+        'surface-shimmer': 'var(--surface-shimmer)',
+      },
       colors: {
+        // Theme-aware semantic tokens (driven by CSS custom properties)
+        surface: {
+          base: 'var(--surface-base)',
+          raised: 'var(--surface-raised)',
+          overlay: 'var(--surface-overlay)',
+          sunken: 'var(--surface-sunken)',
+          interactive: 'var(--surface-interactive)',
+          'interactive-hover': 'var(--surface-interactive-hover)',
+        },
+        'theme-text': {
+          primary: 'var(--text-primary)',
+          secondary: 'var(--text-secondary)',
+          tertiary: 'var(--text-tertiary)',
+          muted: 'var(--text-muted)',
+        },
+        'theme-border': {
+          subtle: 'var(--border-subtle)',
+          DEFAULT: 'var(--border-default)',
+          strong: 'var(--border-strong)',
+        },
         // Fire Element - Warm oranges and reds
         fire: {
           300: '#FFB088',

@@ -245,10 +245,10 @@ export function BodyGraph({
               : 'Undefined';
 
         return (
-          <div className="bg-neutral-800 px-3 py-2 rounded-lg shadow-lg border border-neutral-700 max-w-xs">
+          <div className="bg-surface-raised px-3 py-2 rounded-lg shadow-lg border border-theme-border-subtle max-w-xs">
             <div className="font-medium text-humandesign-400">Gate {hoveredGate}</div>
-            <div className="text-sm text-neutral-200">{gate.name.replace(`Gate ${hoveredGate}: `, '')}</div>
-            <div className="text-xs text-neutral-400 mt-1">{typeLabel}</div>
+            <div className="text-sm text-theme-text-primary">{gate.name.replace(`Gate ${hoveredGate}: `, '')}</div>
+            <div className="text-xs text-theme-text-secondary mt-1">{typeLabel}</div>
           </div>
         );
       }
@@ -258,11 +258,11 @@ export function BodyGraph({
       const channel = CHANNEL_PATHS[hoveredChannel];
       if (channel) {
         return (
-          <div className="bg-neutral-800 px-3 py-2 rounded-lg shadow-lg border border-neutral-700 max-w-xs">
+          <div className="bg-surface-raised px-3 py-2 rounded-lg shadow-lg border border-theme-border-subtle max-w-xs">
             <div className="font-medium text-humandesign-400">
               Channel {channel.gate1}-{channel.gate2}
             </div>
-            <div className="text-xs text-neutral-400 mt-1">
+            <div className="text-xs text-theme-text-secondary mt-1">
               {definedChannelsSet.has(hoveredChannel) ? 'Defined' : 'Undefined'}
             </div>
           </div>
@@ -275,9 +275,9 @@ export function BodyGraph({
       if (center) {
         const isDefined = definedCentersSet.has(center.id);
         return (
-          <div className="bg-neutral-800 px-3 py-2 rounded-lg shadow-lg border border-neutral-700 max-w-xs">
+          <div className="bg-surface-raised px-3 py-2 rounded-lg shadow-lg border border-theme-border-subtle max-w-xs">
             <div className="font-medium text-humandesign-400">{center.name}</div>
-            <div className="text-xs text-neutral-400 mt-1">
+            <div className="text-xs text-theme-text-secondary mt-1">
               {isDefined ? center.definedMeaning : center.undefinedMeaning}
             </div>
           </div>
@@ -484,7 +484,7 @@ export function BodyGraphInteractive() {
   };
 
   return (
-    <div className="bg-neutral-900/50 rounded-xl p-4 sm:p-6 border border-neutral-800">
+    <div className="bg-surface-base/50 rounded-xl p-4 sm:p-6 border border-theme-border-subtle">
       <h3 className="font-serif text-lg mb-4 text-center">Human Design Body Graph</h3>
       <BodyGraphResponsive
         interactive={true}
@@ -492,7 +492,7 @@ export function BodyGraphInteractive() {
         onCenterClick={handleCenterClick}
         onGateClick={handleGateClick}
       />
-      <p className="text-xs text-neutral-500 text-center mt-4">
+      <p className="text-xs text-theme-text-tertiary text-center mt-4">
         Click on centers to view details
       </p>
     </div>

@@ -70,7 +70,7 @@ function StepDots({ current }: { current: Step }) {
               ? 'h-2 w-6 bg-amber-400'
               : s < current
               ? 'h-2 w-2 bg-amber-600/60'
-              : 'h-2 w-2 bg-neutral-700',
+              : 'h-2 w-2 bg-surface-interactive',
           ].join(' ')}
         />
       ))}
@@ -101,7 +101,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
         <div className="absolute inset-0 rounded-full border border-amber-500/20 animate-[spin_20s_linear_infinite]" style={{ width: '160px', height: '160px', top: '-12px', left: '-12px' }} />
         {/* Inner ring */}
         <div className="absolute inset-0 rounded-full border border-purple-500/20 animate-[spin_12s_linear_infinite_reverse]" style={{ width: '130px', height: '130px', top: '3px', left: '3px' }} />
-        <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-amber-950/60 via-neutral-900/80 to-purple-950/60 border border-neutral-700/50 shadow-2xl shadow-amber-900/20">
+        <div className="relative flex h-28 w-28 items-center justify-center rounded-full bg-gradient-to-br from-amber-950/60 via-neutral-900/80 to-purple-950/60 border border-theme-border-subtle/50 shadow-2xl shadow-amber-900/20">
           <span className="text-5xl leading-none select-none">✦</span>
         </div>
       </motion.div>
@@ -121,7 +121,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.6, duration: 0.6 }}
-        className="mb-3 max-w-md text-lg text-neutral-300 leading-relaxed"
+        className="mb-3 max-w-md text-lg text-theme-text-secondary leading-relaxed"
       >
         The moment you arrived holds an encoded map of your nature,
         gifts, and life's purpose.
@@ -131,7 +131,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.75, duration: 0.6 }}
-        className="mb-12 max-w-sm text-sm text-neutral-500 leading-relaxed"
+        className="mb-12 max-w-sm text-sm text-theme-text-tertiary leading-relaxed"
       >
         Six ancient wisdom traditions — Astrology, Human Design, Gene Keys,
         Numerology, Chakras, and Hermetic Philosophy — decoded from your birth data.
@@ -152,7 +152,7 @@ function StepWelcome({ onNext }: { onNext: () => void }) {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 1.1, duration: 0.4 }}
-        className="mt-5 text-xs text-neutral-600"
+        className="mt-5 text-xs text-theme-text-muted"
       >
         No account required · Your data stays on your device
       </motion.p>
@@ -279,7 +279,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
   );
 
   const inputClass =
-    'w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-2.5 text-white placeholder-neutral-500 focus:border-amber-500/60 focus:outline-none transition-colors text-sm';
+    'w-full rounded-lg border border-theme-border-subtle bg-surface-raised px-4 py-2.5 text-theme-text-primary placeholder-neutral-500 focus:border-amber-500/60 focus:outline-none transition-colors text-sm';
 
   return (
     <motion.div
@@ -292,8 +292,8 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
     >
       <div className="mb-7 text-center">
         <div className="mb-3 text-3xl">🌌</div>
-        <h2 className="mb-2 text-2xl font-bold text-white">Enter Your Birth Moment</h2>
-        <p className="text-sm text-neutral-400 leading-relaxed">
+        <h2 className="mb-2 text-2xl font-boldtext-theme-text-primary">Enter Your Birth Moment</h2>
+        <p className="text-sm text-theme-text-secondary leading-relaxed">
           The moment you arrived holds everything. Your exact birth time and
           location allow the cosmos to speak.
         </p>
@@ -302,7 +302,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
       <form onSubmit={handleSubmit} className="space-y-4">
         {/* Name */}
         <div>
-          <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+          <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
             Your Name
           </label>
           <input
@@ -317,7 +317,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
         {/* Date / Time row */}
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+            <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
               Date of Birth
             </label>
             <input
@@ -328,7 +328,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
             />
           </div>
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+            <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
               Time of Birth
             </label>
             <input
@@ -342,7 +342,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
 
         {/* City of Birth */}
         <div>
-          <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+          <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
             City of Birth
           </label>
           <input
@@ -357,7 +357,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
         {/* Coordinates */}
         <div className="grid grid-cols-2 gap-3">
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+            <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
               Latitude
             </label>
             <input
@@ -370,7 +370,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
             />
           </div>
           <div>
-            <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+            <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
               Longitude
             </label>
             <input
@@ -384,7 +384,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
           </div>
         </div>
 
-        <p className="text-[11px] text-neutral-500">
+        <p className="text-[11px] text-theme-text-tertiary">
           Find your city's coordinates at{' '}
           <a
             href="https://www.latlong.net/"
@@ -398,7 +398,7 @@ function StepBirthData({ onSuccess }: StepBirthDataProps) {
 
         {/* Timezone */}
         <div>
-          <label className="mb-1 block text-xs font-medium text-neutral-400 uppercase tracking-wide">
+          <label className="mb-1 block text-xs font-medium text-theme-text-secondary uppercase tracking-wide">
             Timezone
           </label>
           <select
@@ -498,7 +498,7 @@ function StepReveal({
         initial={{ opacity: 0, y: 8 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.2 }}
-        className="mb-2 text-2xl font-bold text-white"
+        className="mb-2 text-2xl font-boldtext-theme-text-primary"
       >
         Your Three Cosmic Signatures
       </motion.h2>
@@ -506,7 +506,7 @@ function StepReveal({
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.35 }}
-        className="mb-8 text-sm text-neutral-400"
+        className="mb-8 text-sm text-theme-text-secondary"
       >
         Each tradition reveals a different facet of the same infinite you.
       </motion.p>
@@ -522,12 +522,12 @@ function StepReveal({
           >
             <div className="mb-1 flex items-center gap-2">
               <span className="text-xl leading-none">{sig.icon}</span>
-              <span className="text-xs font-semibold uppercase tracking-widest text-neutral-500">
+              <span className="text-xs font-semibold uppercase tracking-widest text-theme-text-tertiary">
                 {sig.label}
               </span>
             </div>
-            <p className="text-xl font-bold text-white">{sig.value}</p>
-            <p className="mt-0.5 text-xs text-neutral-500">{sig.description}</p>
+            <p className="text-xl font-boldtext-theme-text-primary">{sig.value}</p>
+            <p className="mt-0.5 text-xs text-theme-text-tertiary">{sig.description}</p>
           </motion.div>
         ))}
       </div>
@@ -558,10 +558,10 @@ function StepContemplation({ onNext }: { onNext: () => void }) {
       className="mx-auto w-full max-w-lg px-4 py-10 text-center"
     >
       <div className="mb-6 text-4xl">🔮</div>
-      <h2 className="mb-3 text-2xl font-bold text-white">
+      <h2 className="mb-3 text-2xl font-boldtext-theme-text-primary">
         The Contemplation Chamber
       </h2>
-      <p className="mb-8 text-sm leading-relaxed text-neutral-400">
+      <p className="mb-8 text-sm leading-relaxed text-theme-text-secondary">
         Your blueprint comes alive through contemplation. The AI guides you
         through personalized readings — from natal chart insight to Gene Keys
         activation and Human Design strategy.
@@ -572,7 +572,7 @@ function StepContemplation({ onNext }: { onNext: () => void }) {
         <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-amber-500/70">
           32 contemplation types · 6 AI personas
         </p>
-        <div className="mb-3 space-y-2 text-sm text-neutral-400">
+        <div className="mb-3 space-y-2 text-sm text-theme-text-secondary">
           {[
             '✦ Soul Blueprint Overview',
             '✦ Natal Chart Deep Dive',
@@ -597,7 +597,7 @@ function StepContemplation({ onNext }: { onNext: () => void }) {
         </Link>
         <button
           onClick={onNext}
-          className="py-2 text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
+          className="py-2 text-sm text-theme-text-tertiary hover:text-theme-text-secondary transition-colors"
         >
           Continue setup →
         </button>
@@ -625,8 +625,8 @@ function StepSave() {
         className="mx-auto w-full max-w-md px-4 py-14 text-center"
       >
         <div className="mb-4 text-5xl">✨</div>
-        <h2 className="mb-3 text-2xl font-bold text-white">You're All Set</h2>
-        <p className="mb-8 text-sm text-neutral-400">
+        <h2 className="mb-3 text-2xl font-boldtext-theme-text-primary">You're All Set</h2>
+        <p className="mb-8 text-sm text-theme-text-secondary">
           Your blueprint is saved and synced. The temple awaits.
         </p>
         <button
@@ -649,13 +649,13 @@ function StepSave() {
       className="mx-auto w-full max-w-md px-4 py-10 text-center"
     >
       <div className="mb-4 text-4xl">🕯</div>
-      <h2 className="mb-3 text-2xl font-bold text-white">
+      <h2 className="mb-3 text-2xl font-boldtext-theme-text-primary">
         Your Reading Is Ready
       </h2>
-      <p className="mb-2 text-base text-neutral-300">
+      <p className="mb-2 text-base text-theme-text-secondary">
         Save it for any device. Access your blueprint anywhere.
       </p>
-      <p className="mb-8 text-sm text-neutral-500">
+      <p className="mb-8 text-sm text-theme-text-tertiary">
         We use Magic Link — no password needed, just your email.
       </p>
 
@@ -668,8 +668,8 @@ function StepSave() {
             Save My Blueprint ✦
           </button>
         ) : (
-          <div className="rounded-xl border border-neutral-700 bg-neutral-900 p-4 text-left">
-            <p className="text-xs text-neutral-400">
+          <div className="rounded-xl border border-theme-border-subtle bg-surface-base p-4 text-left">
+            <p className="text-xs text-theme-text-secondary">
               Cloud sync is coming soon. Your blueprint is safely stored on this
               device for now.
             </p>
@@ -678,14 +678,14 @@ function StepSave() {
 
         <button
           onClick={() => navigate('/')}
-          className="py-2 text-sm text-neutral-500 hover:text-neutral-300 transition-colors"
+          className="py-2 text-sm text-theme-text-tertiary hover:text-theme-text-secondary transition-colors"
         >
           Continue without saving →
         </button>
       </div>
 
       <div className="mt-4 text-center">
-        <p className="text-xs text-neutral-600">
+        <p className="text-xs text-theme-text-muted">
           Your data is stored locally and never shared without your consent.
         </p>
       </div>
@@ -707,7 +707,7 @@ export function Onboarding() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950">
+    <div className="min-h-screen bg-surface-base">
       {/* Subtle starfield background */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         {/* Radial gradient glow */}

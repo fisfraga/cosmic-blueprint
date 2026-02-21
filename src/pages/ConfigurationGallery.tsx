@@ -130,10 +130,10 @@ export function ConfigurationGallery() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Configuration Gallery
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Aspect configurations are sacred geometries formed when multiple aspects combine into powerful patterns.
           These cosmic mandalas represent unique gifts and challenges in your chart.
         </p>
@@ -142,11 +142,11 @@ export function ConfigurationGallery() {
       {/* Personal Configurations */}
       {personalConfigs.length > 0 && (
         <div className="bg-gradient-to-r from-purple-500/10 to-blue-500/10 rounded-xl p-6 border border-purple-500/20 mb-8">
-          <h2 className="font-serif text-xl text-white mb-4">Your Configurations</h2>
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Your Configurations</h2>
           <div className="space-y-4">
             {personalConfigs.map((config) => {
               const configType = configurations.get(config.configurationId);
-              const colors = configColors[config.configurationId] || { bg: 'bg-neutral-700', border: 'border-neutral-600', text: 'text-white' };
+              const colors = configColors[config.configurationId] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
               const involvedPlanets = config.placementIds
                 .map(id => {
                   const placement = profile?.placements.find(p => p.id === id);
@@ -179,7 +179,7 @@ export function ConfigurationGallery() {
                     </div>
                     <button
                       onClick={() => setSelectedConfig(configType)}
-                      className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded transition-colors"
+                      className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
                     >
                       Learn More
                     </button>
@@ -194,7 +194,7 @@ export function ConfigurationGallery() {
       {/* Configuration Gallery Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         {Array.from(configurations.values()).map((config) => {
-          const colors = configColors[config.id] || { bg: 'bg-neutral-700', border: 'border-neutral-600', text: 'text-white' };
+          const colors = configColors[config.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
           const isSelected = selectedConfig?.id === config.id;
 
           return (
@@ -218,9 +218,9 @@ export function ConfigurationGallery() {
                   {config.nature}
                 </span>
               </div>
-              <h3 className="font-serif text-lg text-white mb-1">{config.name}</h3>
+              <h3 className="font-serif text-lg text-theme-text-primary mb-1">{config.name}</h3>
               <p className={`text-sm ${colors.text} mb-2`}>{config.keyword}</p>
-              <p className="text-xs text-neutral-400 line-clamp-2">{config.shape}</p>
+              <p className="text-xs text-theme-text-secondary line-clamp-2">{config.shape}</p>
             </motion.div>
           );
         })}
@@ -236,7 +236,7 @@ export function ConfigurationGallery() {
             className="mt-8"
           >
             {(() => {
-              const colors = configColors[selectedConfig.id] || { bg: 'bg-neutral-700', border: 'border-neutral-600', text: 'text-white' };
+              const colors = configColors[selectedConfig.id] || { bg: 'bg-surface-interactive', border: 'border-theme-border', text: 'text-theme-text-primary' };
 
               return (
                 <div className={`${colors.bg} ${colors.border} border rounded-xl p-6`}>
@@ -246,10 +246,10 @@ export function ConfigurationGallery() {
                         {configShapes[selectedConfig.id]}
                       </div>
                       <div>
-                        <h2 className="font-serif text-2xl text-white">{selectedConfig.name}</h2>
+                        <h2 className="font-serif text-2xltext-theme-text-primary">{selectedConfig.name}</h2>
                         <div className="flex items-center gap-3 mt-1">
                           <span className={`text-sm ${colors.text}`}>{selectedConfig.keyword}</span>
-                          <span className="text-neutral-500">•</span>
+                          <span className="text-theme-text-tertiary">•</span>
                           <span className={`text-xs px-2 py-0.5 rounded ${
                             selectedConfig.nature === 'Harmonious' ? 'bg-emerald-500/20 text-emerald-400' :
                             selectedConfig.nature === 'Challenging' ? 'bg-rose-500/20 text-rose-400' :
@@ -262,7 +262,7 @@ export function ConfigurationGallery() {
                     </div>
                     <button
                       onClick={() => setSelectedConfig(null)}
-                      className="text-neutral-400 hover:text-white transition-colors text-xl"
+                      className="text-theme-text-secondary hover:text-theme-text-primary transition-colors text-xl"
                     >
                       ✕
                     </button>
@@ -271,47 +271,47 @@ export function ConfigurationGallery() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <h3 className={`font-medium ${colors.text} mb-2`}>The Sacred Meaning</h3>
-                      <p className="text-neutral-300 text-sm leading-relaxed">
+                      <p className="text-theme-text-secondary text-sm leading-relaxed">
                         {selectedConfig.explanation}
                       </p>
                     </div>
                     <div>
                       <h3 className={`font-medium ${colors.text} mb-2`}>Life Impact</h3>
-                      <p className="text-neutral-300 text-sm leading-relaxed">
+                      <p className="text-theme-text-secondary text-sm leading-relaxed">
                         {selectedConfig.impact}
                       </p>
                     </div>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-neutral-700/50">
+                  <div className="mt-6 pt-6 border-t border-theme-border-subtle/50">
                     <h3 className={`font-medium ${colors.text} mb-2`}>Integration Practice</h3>
-                    <p className="text-neutral-300 text-sm leading-relaxed">
+                    <p className="text-theme-text-secondary text-sm leading-relaxed">
                       {selectedConfig.integrationPractice}
                     </p>
                   </div>
 
-                  <div className="mt-6 pt-6 border-t border-neutral-700/50 grid grid-cols-2 md:grid-cols-4 gap-4">
+                  <div className="mt-6 pt-6 border-t border-theme-border-subtle/50 grid grid-cols-2 md:grid-cols-4 gap-4">
                     <div>
-                      <span className="text-xs text-neutral-500 uppercase tracking-wide">Shape</span>
-                      <p className="text-sm text-neutral-300 mt-1">{selectedConfig.shape}</p>
+                      <span className="text-xs text-theme-text-tertiary uppercase tracking-wide">Shape</span>
+                      <p className="text-sm text-theme-text-secondary mt-1">{selectedConfig.shape}</p>
                     </div>
                     <div>
-                      <span className="text-xs text-neutral-500 uppercase tracking-wide">Required Aspects</span>
-                      <p className="text-sm text-neutral-300 mt-1">{selectedConfig.requiredAspectIds.join(', ')}</p>
+                      <span className="text-xs text-theme-text-tertiary uppercase tracking-wide">Required Aspects</span>
+                      <p className="text-sm text-theme-text-secondary mt-1">{selectedConfig.requiredAspectIds.join(', ')}</p>
                     </div>
                     <div>
-                      <span className="text-xs text-neutral-500 uppercase tracking-wide">Aspect Count</span>
-                      <p className="text-sm text-neutral-300 mt-1">{selectedConfig.requiredAspectCount}</p>
+                      <span className="text-xs text-theme-text-tertiary uppercase tracking-wide">Aspect Count</span>
+                      <p className="text-sm text-theme-text-secondary mt-1">{selectedConfig.requiredAspectCount}</p>
                     </div>
                     <div>
-                      <span className="text-xs text-neutral-500 uppercase tracking-wide">Orb Range</span>
-                      <p className="text-sm text-neutral-300 mt-1">{selectedConfig.orbRange}</p>
+                      <span className="text-xs text-theme-text-tertiary uppercase tracking-wide">Orb Range</span>
+                      <p className="text-sm text-theme-text-secondary mt-1">{selectedConfig.orbRange}</p>
                     </div>
                   </div>
 
-                  <div className="mt-4 p-4 bg-neutral-800/50 rounded-lg">
-                    <span className="text-xs text-neutral-500 uppercase tracking-wide">Elemental Pattern</span>
-                    <p className="text-sm text-neutral-300 mt-1">{selectedConfig.elementalPattern}</p>
+                  <div className="mt-4 p-4 bg-surface-overlay rounded-lg">
+                    <span className="text-xs text-theme-text-tertiary uppercase tracking-wide">Elemental Pattern</span>
+                    <p className="text-sm text-theme-text-secondary mt-1">{selectedConfig.elementalPattern}</p>
                   </div>
                 </div>
               );
@@ -322,26 +322,26 @@ export function ConfigurationGallery() {
 
       {/* Understanding Section */}
       <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
           <div className="text-2xl mb-3 text-emerald-400">△</div>
           <h3 className="font-serif text-lg text-emerald-400 mb-2">Harmonious Patterns</h3>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             Grand Trine, Kite, Mystic Rectangle, and Cradle bring natural talents and flow.
             They represent areas where energy moves easily and gifts emerge naturally.
           </p>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
           <div className="text-2xl mb-3 text-rose-400">□</div>
           <h3 className="font-serif text-lg text-rose-400 mb-2">Challenging Patterns</h3>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             Grand Cross and T-Square create tension that drives growth.
             They represent life's crucibles that forge strength and character through friction.
           </p>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
           <div className="text-2xl mb-3 text-purple-400">✧</div>
           <h3 className="font-serif text-lg text-purple-400 mb-2">Destiny Patterns</h3>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             Yod and Stellium point to areas of concentrated purpose.
             They represent cosmic appointments and special callings that require conscious development.
           </p>

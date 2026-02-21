@@ -57,14 +57,14 @@ export function ContemplationChamber() {
           ) : (
             <div className="text-center mb-8">
               <div className="flex items-center justify-center gap-3">
-                <h1 className="font-serif font-medium text-white text-4xl mb-3">
+                <h1 className="font-serif font-medium text-theme-text-primary text-4xl mb-3">
                   Contemplation Chamber
                 </h1>
                 <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-medium rounded border border-emerald-500/30 mb-3">
                   ILOS
                 </span>
               </div>
-              <p className="text-neutral-400 max-w-2xl mx-auto">
+              <p className="text-theme-text-secondary max-w-2xl mx-auto">
                 A sacred space for AI-guided reflection on your cosmic blueprint. Choose a wisdom system to begin.
               </p>
             </div>
@@ -174,24 +174,24 @@ export function ContemplationChamber() {
 
           {/* Guidance Section */}
           {!c.category && !c.showSavedSessions && (
-            <section className="mt-12 bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-              <h3 className="font-serif text-lg text-white mb-4">Contemplation Guidance</h3>
+            <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h3 className="font-serif text-lg text-theme-text-primary mb-4">Contemplation Guidance</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
                 <div>
                   <p className="text-purple-400 font-medium mb-1">Create Space</p>
-                  <p className="text-neutral-400">
+                  <p className="text-theme-text-secondary">
                     Find a quiet moment. Take three deep breaths before beginning.
                   </p>
                 </div>
                 <div>
                   <p className="text-purple-400 font-medium mb-1">Be Present</p>
-                  <p className="text-neutral-400">
+                  <p className="text-theme-text-secondary">
                     Engage with curiosity. There are no wrong answers here.
                   </p>
                 </div>
                 <div>
                   <p className="text-purple-400 font-medium mb-1">Trust the Process</p>
-                  <p className="text-neutral-400">
+                  <p className="text-theme-text-secondary">
                     Let insights arise naturally. This is your journey of discovery.
                   </p>
                 </div>

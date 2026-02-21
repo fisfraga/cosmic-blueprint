@@ -43,7 +43,7 @@ export function ProfilePlacementDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Placement Not Found</h1>
-        <p className="text-neutral-400 mb-4">This placement could not be found in your profile.</p>
+        <p className="text-theme-text-secondary mb-4">This placement could not be found in your profile.</p>
         <Link to="/profile/astrology" className="text-amber-400 hover:underline">
           Back to Astrology Profile
         </Link>
@@ -78,14 +78,14 @@ export function ProfilePlacementDetail() {
     >
       {/* Header */}
       <div>
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
           ← Back to Astrology Profile
         </Link>
         <div className="flex items-center gap-4 mt-2">
           <span className="text-5xl">{planet?.symbol}</span>
           <div>
-            <h1 className="font-serif text-3xl text-white">{placement.displayName}</h1>
-            <p className="text-neutral-400 mt-1">
+            <h1 className="font-serif text-3xltext-theme-text-primary">{placement.displayName}</h1>
+            <p className="text-theme-text-secondary mt-1">
               {placement.degree}°{placement.minute}' {sign?.name}
               {placement.retrograde && <span className="text-amber-400 ml-2">℞ Retrograde</span>}
             </p>
@@ -98,14 +98,14 @@ export function ProfilePlacementDetail() {
         {/* Planet Card */}
         <Link
           to={planet?.routePath || '#'}
-          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-neutral-800/50 transition-colors`}
+          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors`}
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">Planet</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Planet</p>
           <div className="flex items-center gap-3">
             <span className="text-3xl">{planet?.symbol}</span>
             <div>
-              <p className="text-white font-medium">{planet?.name}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium">{planet?.name}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(planet?.data as { archetype?: string })?.archetype}
               </p>
             </div>
@@ -115,14 +115,14 @@ export function ProfilePlacementDetail() {
         {/* Sign Card */}
         <Link
           to={sign?.routePath || '#'}
-          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-neutral-800/50 transition-colors`}
+          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors`}
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">Sign</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Sign</p>
           <div className="flex items-center gap-3">
             <span className={`text-3xl ${colors.text}`}>{sign?.symbol}</span>
             <div>
-              <p className="text-white font-medium">{sign?.name}</p>
-              <p className="text-neutral-400 text-sm capitalize">{elementId} Sign</p>
+              <p className="text-theme-text-primary font-medium">{sign?.name}</p>
+              <p className="text-theme-text-secondary text-sm capitalize">{elementId} Sign</p>
             </div>
           </div>
         </Link>
@@ -130,14 +130,14 @@ export function ProfilePlacementDetail() {
         {/* House Card */}
         <Link
           to={house?.routePath || '#'}
-          className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-5 hover:bg-neutral-800/50 transition-colors"
+          className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors"
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">House</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">House</p>
           <div className="flex items-center gap-3">
             <span className="text-3xl text-amber-400">{house?.symbol}</span>
             <div>
-              <p className="text-white font-medium">{house?.name}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium">{house?.name}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(house?.data as { houseType?: string })?.houseType}
               </p>
             </div>
@@ -148,15 +148,15 @@ export function ProfilePlacementDetail() {
       {/* Additional Details Row */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {/* Degree */}
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Position</p>
-          <p className="text-white font-medium">{placement.degree}°{placement.minute}'</p>
-          <p className="text-neutral-400 text-xs mt-1">{sign?.name}</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Position</p>
+          <p className="text-theme-text-primary font-medium">{placement.degree}°{placement.minute}'</p>
+          <p className="text-theme-text-secondary text-xs mt-1">{sign?.name}</p>
         </div>
 
         {/* Dignity */}
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Dignity</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Dignity</p>
           {dignity ? (
             <>
               <p className={`font-medium ${
@@ -166,41 +166,41 @@ export function ProfilePlacementDetail() {
               }`}>
                 {(dignity.data as { dignityType?: string })?.dignityType}
               </p>
-              <p className="text-neutral-400 text-xs mt-1">Essential Dignity</p>
+              <p className="text-theme-text-secondary text-xs mt-1">Essential Dignity</p>
             </>
           ) : (
-            <p className="text-neutral-600">Peregrine</p>
+            <p className="text-theme-text-muted">Peregrine</p>
           )}
         </div>
 
         {/* Decan */}
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Decan</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Decan</p>
           {decan ? (
-            <p className="text-white font-medium">{decan.name}</p>
+            <p className="text-theme-text-primary font-medium">{decan.name}</p>
           ) : (
-            <p className="text-neutral-600">—</p>
+            <p className="text-theme-text-muted">—</p>
           )}
         </div>
 
         {/* Chart Ruler */}
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Chart Status</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Chart Status</p>
           {placement.isChartRuler ? (
             <p className="text-yellow-400 font-medium">
               Chart Ruler ({placement.isChartRuler})
             </p>
           ) : (
-            <p className="text-neutral-600">—</p>
+            <p className="text-theme-text-muted">—</p>
           )}
         </div>
       </div>
 
       {/* Archetypal Expression */}
       <div className={`${colors.bg} border ${colors.border} rounded-xl p-6`}>
-        <h2 className="font-serif text-xl text-white mb-4">Archetypal Expression</h2>
-        <p className="text-neutral-300 leading-relaxed">
-          <span className="text-white font-medium">{planet?.name}</span> represents{' '}
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Archetypal Expression</h2>
+        <p className="text-theme-text-secondary leading-relaxed">
+          <span className="text-theme-text-primary font-medium">{planet?.name}</span> represents{' '}
           {(planet?.data as { functionAndMeaning?: string })?.functionAndMeaning?.split('.')[0] || 'a core archetype'}.
           In <span className={colors.text}>{sign?.name}</span>, this energy expresses through{' '}
           {signData?.elementId} qualities, finding its arena of expression in the{' '}
@@ -212,26 +212,26 @@ export function ProfilePlacementDetail() {
       {/* Cross-System Connections */}
       {(placement.geneKeyNumber || placement.hdGateNumber) && (
         <div className="bg-gradient-to-br from-purple-500/10 to-amber-500/10 rounded-xl p-6 border border-purple-500/20">
-          <h2 className="font-serif text-xl text-white mb-4">Cross-System Connections</h2>
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Cross-System Connections</h2>
           <div className="grid md:grid-cols-2 gap-4">
             {placement.geneKeyNumber && (
               <Link
                 to={`/gene-keys/gk-${placement.geneKeyNumber}`}
-                className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors"
+                className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
               >
                 <p className="text-genekey-400 text-xs mb-1">Gene Key</p>
-                <p className="text-white font-medium">Gene Key {placement.geneKeyNumber}</p>
-                <p className="text-neutral-400 text-xs mt-1">Same zodiacal degree</p>
+                <p className="text-theme-text-primary font-medium">Gene Key {placement.geneKeyNumber}</p>
+                <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
               </Link>
             )}
             {placement.hdGateNumber && (
               <Link
                 to={`/human-design/gate-${placement.hdGateNumber}`}
-                className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors"
+                className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
               >
                 <p className="text-amber-400 text-xs mb-1">Human Design Gate</p>
-                <p className="text-white font-medium">Gate {placement.hdGateNumber}</p>
-                <p className="text-neutral-400 text-xs mt-1">Same zodiacal degree</p>
+                <p className="text-theme-text-primary font-medium">Gate {placement.hdGateNumber}</p>
+                <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
               </Link>
             )}
           </div>
@@ -240,8 +240,8 @@ export function ProfilePlacementDetail() {
 
       {/* Aspects Involving This Planet */}
       {aspectsInvolving.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">
             Aspects ({aspectsInvolving.length})
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
@@ -261,7 +261,7 @@ export function ProfilePlacementDetail() {
                 opposition: 'bg-purple-500/10 text-purple-400',
                 quincunx: 'bg-amber-500/10 text-amber-400',
               };
-              const colorClass = aspectColors[aspectData.aspectId] || 'bg-neutral-800 text-neutral-300';
+              const colorClass = aspectColors[aspectData.aspectId] || 'bg-surface-raised text-theme-text-secondary';
 
               return (
                 <Link
@@ -274,7 +274,7 @@ export function ProfilePlacementDetail() {
                     <span className="text-sm">{aspectType?.symbol}</span>
                     <span className="text-lg">{otherPlanet?.symbol}</span>
                   </div>
-                  <p className="text-neutral-400 text-xs mt-1">
+                  <p className="text-theme-text-secondary text-xs mt-1">
                     {aspectType?.name} {otherPlanet?.name} ({aspectData.orbDegree}°{aspectData.orbMinute}')
                   </p>
                 </Link>
@@ -295,11 +295,11 @@ export function ProfilePlacementDetail() {
       </div>
 
       {/* Navigation Links */}
-      <div className="flex justify-between pt-4 border-t border-neutral-800">
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm">
+      <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           ← All Placements
         </Link>
-        <Link to={planet?.routePath || '#'} className="text-neutral-400 hover:text-white text-sm">
+        <Link to={planet?.routePath || '#'} className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           {planet?.name} in Astrology →
         </Link>
       </div>

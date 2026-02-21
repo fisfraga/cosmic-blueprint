@@ -60,7 +60,7 @@ const CATEGORY_STYLES: Record<
   },
   lifeOS: {
     borderTop: 'border-t-neutral-700',
-    text: 'text-neutral-400',
+    text: 'text-theme-text-secondary',
     label: 'Life OS',
     icon: '⚙',
   },
@@ -119,7 +119,7 @@ function getCategoryStyles(category: ContemplationCategory) {
   return (
     CATEGORY_STYLES[category] ?? {
       borderTop: 'border-t-neutral-700',
-      text: 'text-neutral-400',
+      text: 'text-theme-text-secondary',
       label: category,
       icon: '✦',
     }
@@ -180,8 +180,8 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
       exit={{ opacity: 0, y: -8, scale: 0.97 }}
       transition={{ duration: 0.22 }}
       className={[
-        'relative flex flex-col gap-3 rounded-lg border border-neutral-800',
-        'bg-neutral-900/50 p-5 border-t-2',
+        'relative flex flex-col gap-3 rounded-lg border border-theme-border-subtle',
+        'bg-surface-base/50 p-5 border-t-2',
         styles.borderTop,
       ].join(' ')}
     >
@@ -197,7 +197,7 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
         <button
           onClick={handleDeleteClick}
           aria-label="Delete session"
-          className="flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors text-neutral-500 hover:text-red-400 hover:bg-neutral-800"
+          className="flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors text-theme-text-tertiary hover:text-red-400 hover:bg-surface-raised"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -218,22 +218,22 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
 
       {/* Type + focus entity */}
       <div>
-        <p className="text-sm font-medium text-neutral-100">{formattedType}</p>
+        <p className="text-sm font-medium text-theme-text-primary">{formattedType}</p>
         {session.focusEntity && (
-          <p className="text-xs text-neutral-400 mt-0.5">{session.focusEntity.name}</p>
+          <p className="text-xs text-theme-text-secondary mt-0.5">{session.focusEntity.name}</p>
         )}
       </div>
 
       {/* Message preview */}
       {previewText && (
-        <p className="text-sm leading-relaxed text-neutral-300 line-clamp-3">
+        <p className="text-sm leading-relaxed text-theme-text-secondary line-clamp-3">
           {previewText}
         </p>
       )}
 
       {/* Footer: stats + action buttons */}
-      <div className="flex items-center justify-between gap-2 pt-1 border-t border-neutral-800/60">
-        <div className="flex items-center gap-3 text-xs text-neutral-500">
+      <div className="flex items-center justify-between gap-2 pt-1 border-t border-theme-border-subtle/60">
+        <div className="flex items-center gap-3 text-xs text-theme-text-tertiary">
           <span>{userMessageCount} {userMessageCount === 1 ? 'exchange' : 'exchanges'}</span>
           <span>·</span>
           <span>{formatRelativeTime(session.updatedAt)}</span>
@@ -247,7 +247,7 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
             className={`rounded-lg border px-3 py-1.5 text-xs font-medium transition-all ${
               copied
                 ? 'border-emerald-700/50 bg-emerald-900/30 text-emerald-400'
-                : 'border-neutral-700 bg-neutral-800/50 text-neutral-400 hover:text-purple-400 hover:border-neutral-600'
+                : 'border-theme-border-subtle bg-surface-overlay text-theme-text-secondary hover:text-purple-400 hover:border-theme-border'
             }`}
           >
             {copied ? '✓ Copied' : '⟐ Tana'}
@@ -290,7 +290,7 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
               'flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all',
               isActive
                 ? 'border-amber-500/60 bg-amber-500/10 text-amber-300'
-                : 'border-neutral-700 bg-neutral-800/50 text-neutral-400 hover:border-neutral-600 hover:text-neutral-200',
+                : 'border-theme-border-subtle bg-surface-overlay text-theme-text-secondary hover:border-theme-border hover:text-theme-text-primary',
             ].join(' ')}
           >
             {opt.label}
@@ -298,7 +298,7 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
               <span
                 className={[
                   'rounded-full px-1.5 py-px text-[10px] font-semibold',
-                  isActive ? 'bg-amber-500/20 text-amber-300' : 'bg-neutral-700 text-neutral-400',
+                  isActive ? 'bg-amber-500/20 text-amber-300' : 'bg-surface-interactive text-theme-text-secondary',
                 ].join(' ')}
               >
                 {count}
@@ -355,7 +355,7 @@ export function SessionsLibrary() {
   );
 
   return (
-    <div className="min-h-screen bg-neutral-950 px-4 py-10">
+    <div className="min-h-screen bg-surface-base px-4 py-10">
       <div className="mx-auto max-w-3xl">
         {/* ── Page Header ── */}
         <motion.header
@@ -370,17 +370,17 @@ export function SessionsLibrary() {
                 🌀
               </div>
               <div>
-                <h1 className="text-2xl font-bold tracking-tight text-neutral-100">
+                <h1 className="text-2xl font-bold tracking-tight text-theme-text-primary">
                   Contemplation Sessions
                 </h1>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-theme-text-secondary">
                   Your saved conversations from the Contemplation Chamber
                 </p>
               </div>
             </div>
 
             <div className="flex shrink-0 flex-col items-end gap-1.5">
-              <span className="text-sm text-neutral-400">
+              <span className="text-sm text-theme-text-secondary">
                 {sessions.length}{' '}
                 {sessions.length === 1 ? 'session' : 'sessions'}
               </span>
@@ -421,7 +421,7 @@ export function SessionsLibrary() {
                 key="no-results"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="py-12 text-center text-sm text-neutral-500"
+                className="py-12 text-center text-sm text-theme-text-tertiary"
               >
                 No sessions in this category yet.
               </motion.p>

@@ -83,25 +83,13 @@ export function EntityDetailPanel({
   if (isSidebar) {
     return (
       <div
-        className="bg-cosmic-900 border border-cosmic-700 rounded-xl shadow-lg
+        className="bg-surface-base border border-theme-border-subtle rounded-xl shadow-lg
           flex flex-col h-[600px] sticky top-4 animate-fade-in"
         role="region"
         aria-labelledby="entity-panel-title"
       >
         <EntityPanelHeader {...headerProps} />
         <div className="flex-1 overflow-y-auto p-4 overscroll-contain">
-          {entity.image && (
-            <div className="mb-4 rounded-lg overflow-hidden bg-cosmic-800">
-              <img
-                src={entity.image}
-                alt={entity.name}
-                className="w-full h-28 object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-            </div>
-          )}
           <EntityPanelContent {...contentProps} />
         </div>
         <EntityPanelFooter {...footerProps} />
@@ -118,8 +106,8 @@ export function EntityDetailPanel({
         aria-hidden="true"
       />
       <div
-        className="fixed right-0 top-0 h-full w-full sm:max-w-sm bg-cosmic-900
-          border-l border-cosmic-700 shadow-2xl z-50
+        className="fixed right-0 top-0 h-full w-full sm:max-w-sm bg-surface-base
+          border-l border-theme-border-subtle shadow-2xl z-50
           flex flex-col animate-slide-in-right
           safe-area-inset-top safe-area-inset-bottom"
         role="dialog"
@@ -128,18 +116,6 @@ export function EntityDetailPanel({
       >
         <EntityPanelHeader {...headerProps} />
         <div className="flex-1 overflow-y-auto p-4 sm:p-4 overscroll-contain">
-          {entity.image && (
-            <div className="mb-4 rounded-lg overflow-hidden bg-cosmic-800">
-              <img
-                src={entity.image}
-                alt={entity.name}
-                className="w-full h-32 sm:h-32 object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-            </div>
-          )}
           <EntityPanelContent {...contentProps} />
         </div>
         <EntityPanelFooter {...footerProps} />

@@ -28,7 +28,7 @@ export function Wheel() {
       {/* Header */}
       <section className="text-center">
         <h1 className="font-serif text-3xl font-medium mb-2">Celestial Mandala</h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Explore the zodiac wheel. Click any sign to learn more about its energy,
           or hover to see the key phrase.
         </p>
@@ -50,17 +50,17 @@ export function Wheel() {
           {selectedSign ? (
             <>
               {/* Sign Card */}
-              <div className={`p-6 rounded-xl border ${elementColors[selectedSign.elementId as keyof typeof elementColors] || 'border-neutral-700'}`}>
+              <div className={`p-6 rounded-xl border ${elementColors[selectedSign.elementId as keyof typeof elementColors] || 'border-theme-border-subtle'}`}>
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-4xl">{selectedSign.symbol}</span>
                   <div>
                     <h2 className="font-serif text-2xl">{selectedSign.name}</h2>
-                    <p className="text-neutral-400 text-sm">{selectedSign.dateRange}</p>
+                    <p className="text-theme-text-secondary text-sm">{selectedSign.dateRange}</p>
                   </div>
                 </div>
-                <p className="text-neutral-300 italic mb-4">"{selectedSign.keyPhrase}"</p>
+                <p className="text-theme-text-secondary italic mb-4">"{selectedSign.keyPhrase}"</p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  <span className="px-2 py-1 bg-neutral-800 rounded text-xs">
+                  <span className="px-2 py-1 bg-surface-raised rounded text-xs">
                     {selectedSign.signModality}
                   </span>
                   <span className={`px-2 py-1 rounded text-xs ${elementColors[selectedSign.elementId as keyof typeof elementColors]}`}>
@@ -77,16 +77,16 @@ export function Wheel() {
 
               {/* My Placements in this Sign */}
               {placements.length > 0 && (
-                <div className={`p-4 rounded-xl border ${elementColors[selectedSign.elementId as keyof typeof elementColors] || 'border-neutral-700'}`}>
-                  <h3 className="text-sm text-neutral-400 mb-3">My Placements in {selectedSign.name}</h3>
+                <div className={`p-4 rounded-xl border ${elementColors[selectedSign.elementId as keyof typeof elementColors] || 'border-theme-border-subtle'}`}>
+                  <h3 className="text-sm text-theme-text-secondary mb-3">My Placements in {selectedSign.name}</h3>
                   <div className="space-y-2">
                     {placements.map((placement) => (
                       <div
                         key={placement.planetId}
                         className={`flex items-center justify-between p-2 rounded-lg ${
                           placement.placementType === 'planet'
-                            ? 'bg-neutral-800/50'
-                            : 'bg-neutral-800/30 border border-neutral-700/50'
+                            ? 'bg-surface-overlay'
+                            : 'bg-surface-raised/30 border border-theme-border-subtle/50'
                         }`}
                       >
                         <div className="flex items-center gap-2">
@@ -104,8 +104,8 @@ export function Wheel() {
                           </div>
                         </div>
                         <div className="text-right">
-                          <span className="text-xs text-neutral-400">{placement.degree}</span>
-                          <span className="block text-xs text-neutral-500">House {placement.houseNumber}</span>
+                          <span className="text-xs text-theme-text-secondary">{placement.degree}</span>
+                          <span className="block text-xs text-theme-text-tertiary">House {placement.houseNumber}</span>
                         </div>
                       </div>
                     ))}
@@ -114,8 +114,8 @@ export function Wheel() {
               )}
 
               {/* Element Siblings */}
-              <div className="p-4 bg-neutral-900/50 rounded-xl border border-neutral-800">
-                <h3 className="text-sm text-neutral-400 mb-3">Other {element?.name} Signs</h3>
+              <div className="p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle">
+                <h3 className="text-sm text-theme-text-secondary mb-3">Other {element?.name} Signs</h3>
                 <div className="space-y-2">
                   {siblingsSigns
                     .filter((s) => s.id !== selectedSign.id)
@@ -123,7 +123,7 @@ export function Wheel() {
                       <button
                         key={sign.id}
                         onClick={() => setSelectedSign(sign)}
-                        className="flex items-center gap-2 w-full p-2 bg-neutral-800/50 hover:bg-neutral-800 rounded-lg transition-colors text-left"
+                        className="flex items-center gap-2 w-full p-2 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors text-left"
                       >
                         <span className="text-xl">{sign.symbol}</span>
                         <span className="text-sm">{sign.name}</span>
@@ -133,8 +133,8 @@ export function Wheel() {
               </div>
             </>
           ) : (
-            <div className="p-6 bg-neutral-900/50 rounded-xl border border-neutral-800 text-center">
-              <p className="text-neutral-400">
+            <div className="p-6 bg-surface-base/50 rounded-xl border border-theme-border-subtle text-center">
+              <p className="text-theme-text-secondary">
                 Click on a sign in the wheel to see its details
               </p>
             </div>

@@ -96,9 +96,9 @@ export function CategorySelector({
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-3xl">{CATEGORY_INFO[cat].icon}</span>
-                  <h2 className="font-serif text-xl text-white">{CATEGORY_INFO[cat].name}</h2>
+                  <h2 className="font-serif text-xl text-theme-text-primary">{CATEGORY_INFO[cat].name}</h2>
                 </div>
-                <p className="text-neutral-400 text-sm">
+                <p className="text-theme-text-secondary text-sm">
                   {cat === 'astrology' && 'Explore planets, signs, houses, and aspects'}
                   {cat === 'humanDesign' && 'Type, Authority, Gates, and Channels'}
                   {cat === 'geneKeys' && 'Shadow, Gift, and Siddhi contemplations'}
@@ -122,7 +122,7 @@ export function CategorySelector({
         >
           <button
             onClick={goBack}
-            className="mb-4 text-neutral-400 hover:text-white text-sm flex items-center gap-1"
+            className="mb-4 text-theme-text-secondary hover:text-theme-text-primary text-sm flex items-center gap-1"
           >
             ← Back to categories
           </button>
@@ -130,20 +130,20 @@ export function CategorySelector({
           <div className={`p-4 rounded-xl bg-gradient-to-br ${CATEGORY_INFO[category].color} border mb-6`}>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{CATEGORY_INFO[category].icon}</span>
-              <h2 className="font-serif text-lg text-white">{CATEGORY_INFO[category].name}</h2>
+              <h2 className="font-serif text-lg text-theme-text-primary">{CATEGORY_INFO[category].name}</h2>
             </div>
           </div>
 
-          <h3 className="text-neutral-300 mb-4">Choose a contemplation type:</h3>
+          <h3 className="text-theme-text-secondary mb-4">Choose a contemplation type:</h3>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {CONTEMPLATION_TYPES[category].map((type) => (
               <button
                 key={type.id}
                 onClick={() => setContemplationType(type.id)}
-                className="p-4 rounded-xl bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 text-left transition-all"
+                className="p-4 rounded-xl bg-surface-overlay border border-theme-border-subtle hover:border-theme-border text-left transition-all"
               >
-                <h4 className="font-medium text-white mb-1">{type.name}</h4>
-                <p className="text-neutral-400 text-sm">{type.description}</p>
+                <h4 className="font-medium text-theme-text-primary mb-1">{type.name}</h4>
+                <p className="text-theme-text-secondary text-sm">{type.description}</p>
               </button>
             ))}
           </div>
@@ -160,19 +160,19 @@ export function CategorySelector({
         >
           <button
             onClick={goBack}
-            className="mb-4 text-neutral-400 hover:text-white text-sm flex items-center gap-1"
+            className="mb-4 text-theme-text-secondary hover:text-theme-text-primary text-sm flex items-center gap-1"
           >
             ← Back to types
           </button>
 
           <div className={`p-4 rounded-xl bg-gradient-to-br ${CATEGORY_INFO[category].color} border mb-6`}>
-            <p className="text-neutral-300 text-sm">{CATEGORY_INFO[category].name} · {selectedTypeOption?.name}</p>
+            <p className="text-theme-text-secondary text-sm">{CATEGORY_INFO[category].name} · {selectedTypeOption?.name}</p>
           </div>
 
           {/* Special EntityPicker for Cosmic Embodiment */}
           {contemplationType === 'cosmicEmbodiment' ? (
             <>
-              <h3 className="text-neutral-300 mb-4">Which cosmic energy would you like to hear from?</h3>
+              <h3 className="text-theme-text-secondary mb-4">Which cosmic energy would you like to hear from?</h3>
               <EntityPicker
                 onSelect={(entity) => setFocusEntity({
                   type: 'embodiment',
@@ -184,13 +184,13 @@ export function CategorySelector({
             </>
           ) : (
             <>
-              <h3 className="text-neutral-300 mb-4">Select a focus:</h3>
+              <h3 className="text-theme-text-secondary mb-4">Select a focus:</h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 max-h-96 overflow-y-auto pr-2">
                 {focusOptions.map((option) => (
                   <button
                     key={option.id}
                     onClick={() => setFocusEntity(option)}
-                    className="p-3 rounded-lg bg-neutral-800/50 border border-neutral-700 hover:border-neutral-600 text-left transition-all text-sm"
+                    className="p-3 rounded-lg bg-surface-overlay border border-theme-border-subtle hover:border-theme-border text-left transition-all text-sm"
                   >
                     {option.name}
                   </button>
@@ -212,7 +212,7 @@ export function CategorySelector({
         >
           <button
             onClick={goBack}
-            className="mb-4 text-neutral-400 hover:text-white text-sm flex items-center gap-1 mx-auto"
+            className="mb-4 text-theme-text-secondary hover:text-theme-text-primary text-sm flex items-center gap-1 mx-auto"
           >
             ← Change selection
           </button>
@@ -220,16 +220,16 @@ export function CategorySelector({
           <div className={`p-6 rounded-xl bg-gradient-to-br ${CATEGORY_INFO[category!].color} border mb-6`}>
             <div className="flex items-center justify-center gap-2 mb-2">
               <span className="text-2xl">{CATEGORY_INFO[category!].icon}</span>
-              <h2 className="font-serif text-xl text-white">{selectedTypeOption?.name}</h2>
+              <h2 className="font-serif text-xl text-theme-text-primary">{selectedTypeOption?.name}</h2>
             </div>
             {focusEntity && (
-              <p className="text-neutral-300">{focusEntity.name}</p>
+              <p className="text-theme-text-secondary">{focusEntity.name}</p>
             )}
           </div>
 
           {/* Model Selector */}
           <div className="mb-6">
-            <p className="text-neutral-500 text-xs uppercase tracking-wider mb-3 text-center">Choose your guide</p>
+            <p className="text-theme-text-tertiary text-xs uppercase tracking-wider mb-3 text-center">Choose your guide</p>
             <div className="flex gap-2 justify-center">
               {MODEL_OPTIONS.map((opt: ModelOption) => {
                 const isSelected = selectedModel === opt.value;
@@ -240,7 +240,7 @@ export function CategorySelector({
                     className={`flex flex-col items-center p-3 rounded-xl border transition-all flex-1 max-w-[90px] ${
                       isSelected
                         ? 'bg-purple-500/20 border-purple-500/50 text-purple-300'
-                        : 'bg-neutral-800/50 border-neutral-700 hover:border-neutral-600 text-neutral-400 hover:text-neutral-300'
+                        : 'bg-surface-overlay border-theme-border-subtle hover:border-theme-border text-theme-text-secondary hover:text-theme-text-secondary'
                     }`}
                   >
                     <span className="text-xl mb-1">{opt.icon}</span>

@@ -264,13 +264,13 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
       animate={{ opacity: 1, y: 0 }}
       className="max-w-lg mx-auto"
     >
-      <div className="bg-neutral-900/50 rounded-xl border border-neutral-800 p-6">
+      <div className="bg-surface-base/50 rounded-xl border border-theme-border-subtle p-6">
         <div className="text-center mb-6">
           <span className="text-4xl block mb-3">✦</span>
-          <h2 className="font-serif text-2xl text-white">
+          <h2 className="font-serif text-2xl text-theme-text-primary">
             {isNewProfile ? 'Add New Profile' : 'Create Your Cosmic Profile'}
           </h2>
-          <p className="text-neutral-400 text-sm mt-2">
+          <p className="text-theme-text-secondary text-sm mt-2">
             Enter birth details to generate your cosmic blueprint
           </p>
         </div>
@@ -281,9 +281,9 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-purple-300 text-sm font-medium">
-                  Active Profile: <span className="text-white">{currentProfile.name}</span>
+                  Active Profile: <span className="text-theme-text-primary">{currentProfile.name}</span>
                 </p>
-                <p className="text-neutral-400 text-xs mt-1">
+                <p className="text-theme-text-secondary text-xs mt-1">
                   {allProfiles.length} profile{allProfiles.length !== 1 ? 's' : ''} saved
                 </p>
               </div>
@@ -306,23 +306,23 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Name */}
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">Name</label>
+            <label className="block text-sm text-theme-text-secondary mb-1">Name</label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Enter name"
-              className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500"
+              className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500"
             />
           </div>
 
           {/* Relationship */}
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">Relationship</label>
+            <label className="block text-sm text-theme-text-secondary mb-1">Relationship</label>
             <select
               value={relationship}
               onChange={(e) => setRelationship(e.target.value)}
-              className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+              className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary focus:outline-none focus:border-purple-500"
             >
               {RELATIONSHIP_OPTIONS.map((opt) => (
                 <option key={opt} value={opt}>{opt}</option>
@@ -332,32 +332,32 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
 
           {/* Date of Birth */}
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">Date of Birth</label>
+            <label className="block text-sm text-theme-text-secondary mb-1">Date of Birth</label>
             <input
               type="date"
               value={dateOfBirth}
               onChange={(e) => setDateOfBirth(e.target.value)}
-              className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+              className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary focus:outline-none focus:border-purple-500"
             />
           </div>
 
           {/* Time of Birth */}
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">Time of Birth</label>
+            <label className="block text-sm text-theme-text-secondary mb-1">Time of Birth</label>
             <input
               type="time"
               value={timeOfBirth}
               onChange={(e) => setTimeOfBirth(e.target.value)}
-              className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+              className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary focus:outline-none focus:border-purple-500"
             />
-            <p className="text-xs text-neutral-500 mt-1">
+            <p className="text-xs text-theme-text-tertiary mt-1">
               Accurate birth time is important for precise calculations
             </p>
           </div>
 
           {/* City of Birth — with geocoding autocomplete */}
           <div>
-            <label className="block text-sm text-neutral-400 mb-1">City of Birth</label>
+            <label className="block text-sm text-theme-text-secondary mb-1">City of Birth</label>
             <LocationAutocomplete
               initialValue={cityOfBirth}
               placeholder="e.g., New York, USA"
@@ -370,7 +370,7 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
                 setLongitude(String(result.longitude));
               }}
             />
-            <p className="text-xs text-neutral-500 mt-1">
+            <p className="text-xs text-theme-text-tertiary mt-1">
               Type a city name to search — coordinates will be filled automatically
             </p>
           </div>
@@ -400,9 +400,9 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="space-y-4 border-t border-neutral-800 pt-4"
+              className="space-y-4 border-t border-theme-border-subtle pt-4"
             >
-              <p className="text-xs text-neutral-500">
+              <p className="text-xs text-theme-text-tertiary">
                 Look up coordinates at{' '}
                 <a
                   href="https://www.latlong.net/"
@@ -417,38 +417,38 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
               <div className="grid grid-cols-2 gap-4">
                 {/* Latitude */}
                 <div>
-                  <label className="block text-sm text-neutral-400 mb-1">Latitude</label>
+                  <label className="block text-sm text-theme-text-secondary mb-1">Latitude</label>
                   <input
                     type="number"
                     step="any"
                     value={latitude}
                     onChange={(e) => setLatitude(e.target.value)}
                     placeholder="-22.9068"
-                    className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500"
                   />
                 </div>
 
                 {/* Longitude */}
                 <div>
-                  <label className="block text-sm text-neutral-400 mb-1">Longitude</label>
+                  <label className="block text-sm text-theme-text-secondary mb-1">Longitude</label>
                   <input
                     type="number"
                     step="any"
                     value={longitude}
                     onChange={(e) => setLongitude(e.target.value)}
                     placeholder="-43.1729"
-                    className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500"
+                    className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500"
                   />
                 </div>
               </div>
 
               {/* Timezone */}
               <div>
-                <label className="block text-sm text-neutral-400 mb-1">Timezone</label>
+                <label className="block text-sm text-theme-text-secondary mb-1">Timezone</label>
                 <select
                   value={timezone}
                   onChange={(e) => setTimezone(e.target.value)}
-                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white focus:outline-none focus:border-purple-500"
+                  className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary focus:outline-none focus:border-purple-500"
                 >
                   {TIMEZONE_OPTIONS.map((tz) => (
                     <option key={tz.value} value={tz.value}>{tz.label}</option>
@@ -467,7 +467,7 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
           )}
 
           {/* Chart Data Paste Section */}
-          <div className="border-t border-neutral-800 pt-4 mt-4">
+          <div className="border-t border-theme-border-subtle pt-4 mt-4">
             <button
               type="button"
               onClick={() => setShowChartData(!showChartData)}
@@ -502,7 +502,7 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
 
               {/* Astrology Data */}
               <div>
-                <label className="block text-sm text-neutral-400 mb-1">
+                <label className="block text-sm text-theme-text-secondary mb-1">
                   Astrology Data (from astro-seek.com)
                 </label>
                 <textarea
@@ -524,9 +524,9 @@ Planet aspects:
 Sun Conjunction Mercury (Orb: 6°11', Applying)
 ...`}
                   rows={8}
-                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 font-mono text-xs"
+                  className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-600 focus:outline-none focus:border-purple-500 font-mono text-xs"
                 />
-                <p className="text-xs text-neutral-500 mt-1">
+                <p className="text-xs text-theme-text-tertiary mt-1">
                   Go to{' '}
                   <a
                     href="https://horoscopes.astro-seek.com/birth-chart-horoscope-online"
@@ -542,7 +542,7 @@ Sun Conjunction Mercury (Orb: 6°11', Applying)
 
               {/* Human Design Data */}
               <div>
-                <label className="block text-sm text-neutral-400 mb-1">
+                <label className="block text-sm text-theme-text-secondary mb-1">
                   Human Design Data (from mybodygraph.com or similar)
                 </label>
                 <textarea
@@ -572,9 +572,9 @@ Defined Centers:
 - Throat
 ...`}
                   rows={8}
-                  className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-600 focus:outline-none focus:border-purple-500 font-mono text-xs"
+                  className="w-full px-4 py-2 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-600 focus:outline-none focus:border-purple-500 font-mono text-xs"
                 />
-                <p className="text-xs text-neutral-500 mt-1">
+                <p className="text-xs text-theme-text-tertiary mt-1">
                   Go to{' '}
                   <a
                     href="https://mybodygraph.com/"
@@ -613,7 +613,7 @@ Defined Centers:
               type="button"
               onClick={handleCancel}
               disabled={isSubmitting}
-              className="flex-1 px-4 py-2 bg-neutral-800 text-neutral-300 rounded-lg hover:bg-neutral-700 transition-colors disabled:opacity-50"
+              className="flex-1 px-4 py-2 bg-surface-raised text-theme-text-secondary rounded-lg hover:bg-surface-interactive transition-colors disabled:opacity-50"
             >
               Cancel
             </button>

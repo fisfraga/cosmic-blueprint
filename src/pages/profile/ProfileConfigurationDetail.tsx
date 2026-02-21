@@ -42,7 +42,7 @@ export function ProfileConfigurationDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Configuration Not Found</h1>
-        <p className="text-neutral-400 mb-4">This configuration could not be found in your profile.</p>
+        <p className="text-theme-text-secondary mb-4">This configuration could not be found in your profile.</p>
         <Link to="/profile/astrology" className="text-amber-400 hover:underline">
           Back to Astrology Profile
         </Link>
@@ -69,14 +69,14 @@ export function ProfileConfigurationDetail() {
     >
       {/* Header */}
       <div>
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
           ← Back to Astrology Profile
         </Link>
         <div className="flex items-center gap-4 mt-2">
           <span className="text-5xl text-purple-400">{configType?.symbol || '✦'}</span>
           <div>
-            <h1 className="font-serif text-3xl text-white">{config.displayName}</h1>
-            <p className="text-neutral-400 mt-1">
+            <h1 className="font-serif text-3xltext-theme-text-primary">{config.displayName}</h1>
+            <p className="text-theme-text-secondary mt-1">
               {config.planetIds.length} planets involved
             </p>
           </div>
@@ -85,7 +85,7 @@ export function ProfileConfigurationDetail() {
 
       {/* Configuration Visual */}
       <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
-        <h2 className="font-serif text-xl text-white mb-4">Pattern Overview</h2>
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Pattern Overview</h2>
         <div className="flex flex-wrap justify-center gap-4 mb-6">
           {involvedPlanets.map(({ planet, sign }, index) => (
             <div
@@ -93,21 +93,21 @@ export function ProfileConfigurationDetail() {
               className="flex flex-col items-center gap-2 bg-purple-500/20 rounded-lg p-4"
             >
               <span className="text-3xl">{planet?.symbol}</span>
-              <span className="text-white font-medium">{planet?.name}</span>
+              <span className="text-theme-text-primary font-medium">{planet?.name}</span>
               {sign && (
                 <span className="text-purple-300 text-sm">in {sign.name}</span>
               )}
             </div>
           ))}
         </div>
-        <p className="text-neutral-300 text-center">
+        <p className="text-theme-text-secondary text-center">
           {configType?.description}
         </p>
       </div>
 
       {/* Involved Placements */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Involved Placements</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Involved Placements</h2>
         <div className="space-y-3">
           {involvedPlanets.map(({ planet, placement, sign }) => {
             if (!planet || !placement) return null;
@@ -117,20 +117,20 @@ export function ProfileConfigurationDetail() {
               <Link
                 key={planet.id}
                 to={`/profile/astrology/placements/${planet.id}`}
-                className="block p-4 bg-neutral-800/50 rounded-lg hover:bg-neutral-700/50 transition-colors"
+                className="block p-4 bg-surface-overlay rounded-lg hover:bg-surface-interactive/50 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-3">
                     <span className="text-2xl">{planet.symbol}</span>
                     <div>
-                      <p className="text-white font-medium">{planet.name}</p>
-                      <p className="text-neutral-400 text-sm">
+                      <p className="text-theme-text-primary font-medium">{planet.name}</p>
+                      <p className="text-theme-text-secondary text-sm">
                         {placement.degree}°{placement.minute}' {sign?.name}
                       </p>
                     </div>
                   </div>
                   <div className="text-right">
-                    <p className="text-neutral-400 text-sm">{house?.name}</p>
+                    <p className="text-theme-text-secondary text-sm">{house?.name}</p>
                   </div>
                 </div>
               </Link>
@@ -141,8 +141,8 @@ export function ProfileConfigurationDetail() {
 
       {/* Signs Involved */}
       {config.signIds.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">Signs Involved</h2>
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Signs Involved</h2>
           <div className="flex flex-wrap gap-3">
             {[...new Set(config.signIds)].map((signId) => {
               const sign = getEntity(signId);
@@ -153,11 +153,11 @@ export function ProfileConfigurationDetail() {
                 <Link
                   key={signId}
                   to={sign.routePath || '#'}
-                  className="flex items-center gap-2 px-4 py-2 bg-neutral-800/50 rounded-lg hover:bg-neutral-700/50 transition-colors"
+                  className="flex items-center gap-2 px-4 py-2 bg-surface-overlay rounded-lg hover:bg-surface-interactive/50 transition-colors"
                 >
                   <span className="text-xl">{sign.symbol}</span>
-                  <span className="text-white">{sign.name}</span>
-                  <span className="text-neutral-500 text-sm capitalize">({signData.elementId})</span>
+                  <span className="text-theme-text-primary">{sign.name}</span>
+                  <span className="text-theme-text-tertiary text-sm capitalize">({signData.elementId})</span>
                 </Link>
               );
             })}
@@ -166,26 +166,26 @@ export function ProfileConfigurationDetail() {
       )}
 
       {/* Configuration Type Info */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">About {configType?.name || 'This Pattern'}</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">About {configType?.name || 'This Pattern'}</h2>
         <div className="grid md:grid-cols-2 gap-6">
           <div>
-            <p className="text-neutral-300 leading-relaxed">
+            <p className="text-theme-text-secondary leading-relaxed">
               {configType?.description || 'An aspect pattern in your natal chart.'}
             </p>
           </div>
           <div className="space-y-3">
             {configType && (configType.data as { nature?: string })?.nature && (
               <div className="flex justify-between items-center">
-                <span className="text-neutral-500">Nature</span>
-                <span className="text-white capitalize">
+                <span className="text-theme-text-tertiary">Nature</span>
+                <span className="text-theme-text-primary capitalize">
                   {(configType.data as { nature?: string }).nature}
                 </span>
               </div>
             )}
             {configType && (configType.data as { keyword?: string })?.keyword && (
               <div className="flex justify-between items-center">
-                <span className="text-neutral-500">Keyword</span>
+                <span className="text-theme-text-tertiary">Keyword</span>
                 <span className="text-purple-300">
                   {(configType.data as { keyword?: string }).keyword}
                 </span>
@@ -196,8 +196,8 @@ export function ProfileConfigurationDetail() {
       </div>
 
       {/* Universal Configuration Link */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Learn More</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Learn More</h2>
         <Link
           to={configType?.routePath || '/configurations'}
           className="inline-flex items-center gap-2 text-purple-400 hover:text-purple-300"
@@ -218,11 +218,11 @@ export function ProfileConfigurationDetail() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4 border-t border-neutral-800">
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm">
+      <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           ← Back to Astrology
         </Link>
-        <Link to="/configurations" className="text-neutral-400 hover:text-white text-sm">
+        <Link to="/configurations" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           All Configuration Types →
         </Link>
       </div>

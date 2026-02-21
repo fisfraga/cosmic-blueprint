@@ -39,7 +39,7 @@ export function ProfileHDPlacementDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Gate Not Found</h1>
-        <p className="text-neutral-400 mb-4">This gate could not be found in your profile.</p>
+        <p className="text-theme-text-secondary mb-4">This gate could not be found in your profile.</p>
         <Link to="/profile/human-design" className="text-amber-400 hover:underline">
           Back to Human Design Profile
         </Link>
@@ -64,7 +64,7 @@ export function ProfileHDPlacementDetail() {
     >
       {/* Header */}
       <div>
-        <Link to="/profile/human-design" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+        <Link to="/profile/human-design" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
           ← Back to Human Design Profile
         </Link>
         <div className="flex items-center gap-4 mt-2">
@@ -76,8 +76,8 @@ export function ProfileHDPlacementDetail() {
             </span>
           </div>
           <div>
-            <h1 className="font-serif text-3xl text-white">{placement.displayName}</h1>
-            <p className="text-neutral-400 mt-1">
+            <h1 className="font-serif text-3xltext-theme-text-primary">{placement.displayName}</h1>
+            <p className="text-theme-text-secondary mt-1">
               {(gate?.data as { name?: string })?.name || `Gate ${placement.gateNumber}`}
             </p>
           </div>
@@ -94,7 +94,7 @@ export function ProfileHDPlacementDetail() {
           placement.isPersonality ? 'bg-amber-400' : 'bg-red-400'
         }`}></span>
         {placement.isPersonality ? 'Personality (Conscious)' : 'Design (Unconscious)'}
-        {planet && <span className="text-neutral-400 ml-2">via {planet.name}</span>}
+        {planet && <span className="text-theme-text-secondary ml-2">via {planet.name}</span>}
       </div>
 
       {/* Core Relationship Cards */}
@@ -102,16 +102,16 @@ export function ProfileHDPlacementDetail() {
         {/* Gate Card */}
         <Link
           to={gate?.routePath || '#'}
-          className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-5 hover:bg-neutral-800/50 transition-colors"
+          className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors"
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">Gate</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Gate</p>
           <div className="flex items-center gap-3">
             <span className="text-3xl text-amber-400">{placement.gateNumber}</span>
             <div>
-              <p className="text-white font-medium">
+              <p className="text-theme-text-primary font-medium">
                 {(gate?.data as { name?: string })?.name || `Gate ${placement.gateNumber}`}
               </p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-secondary text-sm">
                 {(gate?.data as { hdDefinition?: string })?.hdDefinition?.slice(0, 40)}...
               </p>
             </div>
@@ -121,14 +121,14 @@ export function ProfileHDPlacementDetail() {
         {/* Line Card */}
         <Link
           to={line?.routePath || '#'}
-          className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-5 hover:bg-neutral-800/50 transition-colors"
+          className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors"
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">Line</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Line</p>
           <div className="flex items-center gap-3">
             <span className="text-3xl text-purple-400">{placement.lineNumber}</span>
             <div>
-              <p className="text-white font-medium">Line {placement.lineNumber}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium">Line {placement.lineNumber}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(line?.data as { archetype?: string })?.archetype}
               </p>
             </div>
@@ -138,14 +138,14 @@ export function ProfileHDPlacementDetail() {
         {/* Center Card */}
         <Link
           to={center?.routePath || '#'}
-          className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-5 hover:bg-neutral-800/50 transition-colors"
+          className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors"
         >
-          <p className="text-neutral-500 text-xs mb-2 uppercase tracking-wider">Center</p>
+          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Center</p>
           <div className="flex items-center gap-3">
             <span className="text-3xl text-cyan-400">⬡</span>
             <div>
-              <p className="text-white font-medium">{center?.name}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium">{center?.name}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(center?.data as { centerType?: string })?.centerType}
               </p>
             </div>
@@ -157,9 +157,9 @@ export function ProfileHDPlacementDetail() {
       <div className={`rounded-xl p-6 border ${
         placement.isChannelComplete
           ? 'bg-emerald-500/10 border-emerald-500/30'
-          : 'bg-neutral-900/50 border-neutral-800'
+          : 'bg-surface-base/50 border-theme-border-subtle'
       }`}>
-        <h2 className="font-serif text-xl text-white mb-4">Channel Connection</h2>
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Channel Connection</h2>
         {placement.isChannelComplete && channel ? (
           <div>
             <Link
@@ -168,36 +168,36 @@ export function ProfileHDPlacementDetail() {
             >
               <div className="flex items-center gap-2">
                 <span className="text-2xl text-amber-400">{placement.gateNumber}</span>
-                <span className="text-neutral-500">—</span>
+                <span className="text-theme-text-tertiary">—</span>
                 <span className="text-2xl text-amber-400">
                   {partnerGate?.id?.replace('gate-', '')}
                 </span>
               </div>
               <div>
                 <p className="text-emerald-400 font-medium">Channel Complete</p>
-                <p className="text-white">{channel.name}</p>
+                <p className="text-theme-text-primary">{channel.name}</p>
               </div>
             </Link>
-            <p className="text-neutral-400 text-sm mt-3">{channel.description}</p>
+            <p className="text-theme-text-secondary text-sm mt-3">{channel.description}</p>
           </div>
         ) : (
           <div>
             <div className="flex items-center gap-4 mb-3">
               <div className="flex items-center gap-2">
                 <span className="text-2xl text-amber-400">{placement.gateNumber}</span>
-                <span className="text-neutral-500">—</span>
-                <span className="text-2xl text-neutral-600">
+                <span className="text-theme-text-tertiary">—</span>
+                <span className="text-2xl text-theme-text-muted">
                   {partnerGate?.id?.replace('gate-', '') || '?'}
                 </span>
               </div>
               <div>
-                <p className="text-neutral-400">Hanging Gate</p>
-                <p className="text-neutral-500 text-sm">
+                <p className="text-theme-text-secondary">Hanging Gate</p>
+                <p className="text-theme-text-tertiary text-sm">
                   Partner gate {partnerGate?.id?.replace('gate-', '')} not activated
                 </p>
               </div>
             </div>
-            <p className="text-neutral-500 text-sm">
+            <p className="text-theme-text-tertiary text-sm">
               Hanging gates seek completion through others. You may be naturally drawn to people who carry Gate {partnerGate?.id?.replace('gate-', '')}.
             </p>
             {partnerGate && (
@@ -213,30 +213,30 @@ export function ProfileHDPlacementDetail() {
       </div>
 
       {/* Gate Details */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Gate {placement.gateNumber} Overview</h2>
-        <p className="text-neutral-300 leading-relaxed mb-4">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Gate {placement.gateNumber} Overview</h2>
+        <p className="text-theme-text-secondary leading-relaxed mb-4">
           {gate?.description || (gate?.data as { hdDefinition?: string })?.hdDefinition}
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mt-6">
           {planet && (
-            <div className="bg-neutral-800/50 rounded-lg p-3">
-              <p className="text-neutral-500 text-xs mb-1">Activating Planet</p>
-              <p className="text-white flex items-center gap-2">
+            <div className="bg-surface-overlay rounded-lg p-3">
+              <p className="text-theme-text-tertiary text-xs mb-1">Activating Planet</p>
+              <p className="text-theme-text-primary flex items-center gap-2">
                 <span>{planet.symbol}</span>
                 {planet.name}
               </p>
             </div>
           )}
-          <div className="bg-neutral-800/50 rounded-lg p-3">
-            <p className="text-neutral-500 text-xs mb-1">Line Theme</p>
-            <p className="text-white">
+          <div className="bg-surface-overlay rounded-lg p-3">
+            <p className="text-theme-text-tertiary text-xs mb-1">Line Theme</p>
+            <p className="text-theme-text-primary">
               {(line?.data as { archetype?: string })?.archetype}
             </p>
           </div>
-          <div className="bg-neutral-800/50 rounded-lg p-3">
-            <p className="text-neutral-500 text-xs mb-1">Center</p>
-            <p className="text-white">{center?.name}</p>
+          <div className="bg-surface-overlay rounded-lg p-3">
+            <p className="text-theme-text-tertiary text-xs mb-1">Center</p>
+            <p className="text-theme-text-primary">{center?.name}</p>
           </div>
         </div>
       </div>
@@ -244,18 +244,18 @@ export function ProfileHDPlacementDetail() {
       {/* Cross-System Connection */}
       {geneKey && (
         <div className="bg-gradient-to-br from-genekey-500/10 to-purple-500/10 rounded-xl p-6 border border-genekey-500/20">
-          <h2 className="font-serif text-xl text-white mb-4">Gene Key Connection</h2>
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Gene Key Connection</h2>
           <Link
             to={geneKey.routePath || '#'}
-            className="block bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors"
+            className="block bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
           >
             <div className="flex items-center gap-4">
               <span className="text-3xl text-genekey-400">{placement.gateNumber}</span>
               <div>
-                <p className="text-white font-medium">
+                <p className="text-theme-text-primary font-medium">
                   Gene Key {placement.gateNumber}: {(geneKey.data as { name?: string })?.name}
                 </p>
-                <p className="text-neutral-400 text-sm mt-1">
+                <p className="text-theme-text-secondary text-sm mt-1">
                   <span className="text-red-400">
                     {(geneKey.data as { shadow?: { name: string } })?.shadow?.name}
                   </span>
@@ -285,11 +285,11 @@ export function ProfileHDPlacementDetail() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4 border-t border-neutral-800">
-        <Link to="/profile/human-design" className="text-neutral-400 hover:text-white text-sm">
+      <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
+        <Link to="/profile/human-design" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           ← All Gates
         </Link>
-        <Link to={gate?.routePath || '#'} className="text-neutral-400 hover:text-white text-sm">
+        <Link to={gate?.routePath || '#'} className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           Gate {placement.gateNumber} in Knowledge Base →
         </Link>
       </div>

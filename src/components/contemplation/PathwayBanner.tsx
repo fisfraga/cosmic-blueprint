@@ -20,8 +20,8 @@ export function PathwayBanner({
       <div className="flex items-center justify-between">
         <div>
           <p className="text-purple-400 text-xs uppercase tracking-wider mb-1">Guided Pathway</p>
-          <p className="text-white font-medium">{activePathwayStep.title}</p>
-          <p className="text-neutral-400 text-sm">{activePathwayStep.description}</p>
+          <p className="text-theme-text-primary font-medium">{activePathwayStep.title}</p>
+          <p className="text-theme-text-secondary text-sm">{activePathwayStep.description}</p>
         </div>
         <div className="flex items-center gap-3">
           {!stepCompleted && hasMessages && (
@@ -39,16 +39,16 @@ export function PathwayBanner({
           )}
           <button
             onClick={onReturnToPathway}
-            className="text-neutral-400 hover:text-white text-sm transition-colors"
+            className="text-theme-text-secondary hover:text-theme-text-primary text-sm transition-colors"
           >
             Back to Pathway
           </button>
         </div>
       </div>
       {activePathwayStep.journalPrompt && hasMessages && (
-        <div className="mt-3 p-3 bg-neutral-900/50 rounded-lg border border-neutral-700">
-          <p className="text-neutral-500 text-xs uppercase tracking-wider mb-1">Reflection Prompt</p>
-          <p className="text-neutral-300 text-sm italic">{activePathwayStep.journalPrompt}</p>
+        <div className="mt-3 p-3 bg-surface-base/50 rounded-lg border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs uppercase tracking-wider mb-1">Reflection Prompt</p>
+          <p className="text-theme-text-secondary text-sm italic">{activePathwayStep.journalPrompt}</p>
         </div>
       )}
     </div>

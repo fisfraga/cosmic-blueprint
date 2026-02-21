@@ -121,23 +121,23 @@ export function NeutrinoWidget({
   // Not configured - show setup instructions
   if (!configured || !widgetUrl) {
     return (
-      <div className={`bg-neutral-900/50 rounded-xl border border-neutral-800 p-6 ${className}`}>
+      <div className={`bg-surface-base/50 rounded-xl border border-theme-border-subtle p-6 ${className}`}>
         <div className="text-center space-y-4">
           <div className="text-4xl">⚙️</div>
-          <h3 className="font-serif text-lg text-neutral-200">Neutrino Platform Setup Required</h3>
-          <p className="text-sm text-neutral-400 max-w-md mx-auto">
+          <h3 className="font-serif text-lg text-theme-text-primary">Neutrino Platform Setup Required</h3>
+          <p className="text-sm text-theme-text-secondary max-w-md mx-auto">
             To display your Human Design chart from Neutrino Platform, please configure your widget settings.
           </p>
-          <div className="bg-neutral-800/50 rounded-lg p-4 text-left text-sm">
-            <p className="text-neutral-300 font-medium mb-2">Setup Steps:</p>
-            <ol className="list-decimal list-inside space-y-1 text-neutral-400">
+          <div className="bg-surface-raised/50 rounded-lg p-4 text-left text-sm">
+            <p className="text-theme-text-secondary font-medium mb-2">Setup Steps:</p>
+            <ol className="list-decimal list-inside space-y-1 text-theme-text-secondary">
               <li>Create an account at <a href="https://neutrinoplatform.com" target="_blank" rel="noopener noreferrer" className="text-humandesign-400 hover:underline">neutrinoplatform.com</a></li>
               <li>Go to your dashboard and navigate to Widgets</li>
               <li>Copy your widget embed code</li>
-              <li>Update <code className="text-xs bg-neutral-700 px-1 rounded">src/config/neutrino.ts</code></li>
+              <li>Update <code className="text-xs bg-surface-interactive px-1 rounded">src/config/neutrino.ts</code></li>
             </ol>
           </div>
-          <p className="text-xs text-neutral-500">
+          <p className="text-xs text-theme-text-tertiary">
             In the meantime, we're displaying our built-in body graph visualization.
           </p>
         </div>
@@ -157,7 +157,7 @@ export function NeutrinoWidget({
               setError(null);
               setIsLoading(true);
             }}
-            className="text-sm text-neutral-400 hover:text-white underline"
+            className="text-sm text-theme-text-secondary hover:text-theme-text-primary underline"
           >
             Try again
           </button>
@@ -169,10 +169,10 @@ export function NeutrinoWidget({
   return (
     <div className={`relative ${className}`} style={{ width }}>
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-neutral-900/50 rounded-xl z-10">
+        <div className="absolute inset-0 flex items-center justify-center bg-surface-base/50 rounded-xl z-10">
           <div className="text-center space-y-2">
             <div className="animate-spin w-8 h-8 border-2 border-humandesign-400 border-t-transparent rounded-full mx-auto" />
-            <p className="text-sm text-neutral-400">Loading Neutrino chart...</p>
+            <p className="text-sm text-theme-text-secondary">Loading Neutrino chart...</p>
           </div>
         </div>
       )}
@@ -184,7 +184,7 @@ export function NeutrinoWidget({
         frameBorder="0"
         onLoad={handleIframeLoad}
         onError={handleIframeError}
-        className="rounded-xl bg-neutral-900"
+        className="rounded-xl bg-surface-base"
         title={`Neutrino ${type === 'chart' ? 'Body Graph' : 'Transit'} Widget`}
         allow="fullscreen"
       />
@@ -201,15 +201,15 @@ export function NeutrinoChartCard({
   className?: string;
 }) {
   return (
-    <div className={`bg-neutral-900/50 rounded-xl border border-neutral-800 ${className}`}>
-      <div className="p-4 border-b border-neutral-800">
+    <div className={`bg-surface-base/50 rounded-xl border border-theme-border-subtle ${className}`}>
+      <div className="p-4 border-b border-theme-border-subtle">
         <div className="flex items-center justify-between">
           <h3 className="font-serif text-lg">Human Design Chart</h3>
           <a
             href="https://neutrinoplatform.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-xs text-neutral-500 hover:text-neutral-400"
+            className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary"
           >
             Powered by Neutrino
           </a>
@@ -231,11 +231,11 @@ export function NeutrinoTransitWidget({
   className?: string;
 }) {
   return (
-    <div className={`bg-neutral-900/50 rounded-xl border border-neutral-800 ${className}`}>
-      <div className="p-4 border-b border-neutral-800">
+    <div className={`bg-surface-base/50 rounded-xl border border-theme-border-subtle ${className}`}>
+      <div className="p-4 border-b border-theme-border-subtle">
         <div className="flex items-center justify-between">
           <h3 className="font-serif text-lg">Current Transits</h3>
-          <span className="text-xs text-neutral-500">Live</span>
+          <span className="text-xs text-theme-text-tertiary">Live</span>
         </div>
       </div>
       <div className="p-4">

@@ -53,11 +53,11 @@ function PlacementContent({ entity }: { entity: EntityInfo }) {
       <div className="space-y-2">
         <div className="flex items-center gap-2">
           <span className="text-2xl">{planet?.symbol}</span>
-          <span className="text-white font-medium">{planet?.name}</span>
-          <span className="text-gray-400">in</span>
+          <span className="text-theme-text-primary font-medium">{planet?.name}</span>
+          <span className="text-theme-text-secondary">in</span>
           <span className="text-purple-300">{sign?.name}</span>
         </div>
-        <div className="text-sm text-gray-400">
+        <div className="text-sm text-theme-text-secondary">
           {placement.degree}°{placement.minute}' • {house?.name}
           {placement.retrograde && <span className="text-amber-400 ml-2">℞ Retrograde</span>}
         </div>
@@ -77,23 +77,23 @@ function GKPlacementContent({ entity }: { entity: EntityInfo }) {
       <div className="space-y-3">
         <div className="flex items-center gap-2">
           <span className="text-2xl text-emerald-300">{gkPlacement.geneKeyNumber}</span>
-          <span className="text-gray-400">Line {gkPlacement.lineNumber}</span>
+          <span className="text-theme-text-secondary">Line {gkPlacement.lineNumber}</span>
         </div>
         <div className="space-y-1.5 text-sm">
           <div className="flex items-center gap-2">
             <span className="w-14 text-red-400">Shadow</span>
-            <span className="text-gray-300">{gkPlacement.shadow?.name}</span>
+            <span className="text-theme-text-secondary">{gkPlacement.shadow?.name}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-14 text-emerald-400">Gift</span>
-            <span className="text-gray-300">{gkPlacement.gift?.name}</span>
+            <span className="text-theme-text-secondary">{gkPlacement.gift?.name}</span>
           </div>
           <div className="flex items-center gap-2">
             <span className="w-14 text-purple-400">Siddhi</span>
-            <span className="text-gray-300">{gkPlacement.siddhi?.name}</span>
+            <span className="text-theme-text-secondary">{gkPlacement.siddhi?.name}</span>
           </div>
         </div>
-        <p className="text-xs text-gray-500">{gkPlacement.planetarySource}</p>
+        <p className="text-xs text-theme-text-tertiary">{gkPlacement.planetarySource}</p>
       </div>
     </div>
   );
@@ -116,7 +116,7 @@ function HDPlacementContent({ entity }: { entity: EntityInfo }) {
         }`}>
           {hdPlacement.isPersonality ? 'Personality (Conscious)' : 'Design (Unconscious)'}
         </div>
-        <p className="text-sm text-gray-400">{center?.name}</p>
+        <p className="text-sm text-theme-text-secondary">{center?.name}</p>
         {hdPlacement.isChannelComplete && (
           <p className="text-sm text-emerald-400">Channel Complete</p>
         )}
@@ -141,10 +141,10 @@ function AspectContent({ entity }: { entity: EntityInfo }) {
         <span className="text-lg text-purple-300">{aspectType?.symbol}</span>
         <span className="text-2xl">{planet2?.symbol}</span>
       </div>
-      <p className="text-sm text-gray-300">
+      <p className="text-sm text-theme-text-secondary">
         {planet1?.name} {aspectType?.name?.toLowerCase()} {planet2?.name}
       </p>
-      <p className="text-xs text-gray-500 mt-1">
+      <p className="text-xs text-theme-text-tertiary mt-1">
         Orb: {aspect.orbDegree}°{aspect.orbMinute}' • {aspect.direction}
       </p>
     </div>
@@ -161,11 +161,11 @@ function ChannelContent({ entity }: { entity: EntityInfo }) {
       </h4>
       <div className="flex items-center gap-2 mb-2">
         <span className="text-2xl text-amber-300">{channel.gate1Number}</span>
-        <span className="text-gray-500">—</span>
+        <span className="text-theme-text-tertiary">—</span>
         <span className="text-2xl text-amber-300">{channel.gate2Number}</span>
       </div>
-      <p className="text-sm text-white">{channel.channelTheme}</p>
-      <p className="text-xs text-gray-500 mt-1">{channel.circuitType} Circuit</p>
+      <p className="text-sm text-theme-text-primary">{channel.channelTheme}</p>
+      <p className="text-xs text-theme-text-tertiary mt-1">{channel.circuitType} Circuit</p>
     </div>
   );
 }
@@ -188,7 +188,7 @@ function ConfigurationContent({ entity }: { entity: EntityInfo }) {
           );
         })}
       </div>
-      <p className="text-sm text-white">{config.configurationName}</p>
+      <p className="text-sm text-theme-text-primary">{config.configurationName}</p>
     </div>
   );
 }

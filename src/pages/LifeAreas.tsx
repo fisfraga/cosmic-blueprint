@@ -26,7 +26,7 @@ const ELEMENT_COLORS: Record<LifeAreaElement, {
 
 function PlanetPill({ planet }: { planet: TransitPosition }) {
   return (
-    <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-neutral-800 text-neutral-300 border border-neutral-700">
+    <span className="inline-flex items-center gap-1 text-xs px-2 py-0.5 rounded-full bg-surface-raised text-theme-text-secondary border border-theme-border-subtle">
       <span>{planet.symbol}</span>
       <span>{planet.planetName}</span>
       {planet.isRetrograde && <span className="text-amber-400">℞</span>}
@@ -65,7 +65,7 @@ function LifeAreaCard({
       className={`relative rounded-xl p-5 border transition-colors ${
         isActive
           ? colors.active
-          : `${colors.border} ${colors.bg} hover:border-neutral-700`
+          : `${colors.border} ${colors.bg} hover:border-theme-border-subtle`
       }`}
     >
       {/* Header row */}
@@ -73,8 +73,8 @@ function LifeAreaCard({
         <div className="flex items-center gap-3">
           <span className={`text-2xl ${colors.icon}`}>{area.icon}</span>
           <div>
-            <p className="text-xs text-neutral-500 mb-0.5">Area {area.house}</p>
-            <h3 className="text-white font-medium leading-tight">{area.name}</h3>
+            <p className="text-xs text-theme-text-tertiary mb-0.5">Area {area.house}</p>
+            <h3 className="text-theme-text-primary font-medium leading-tight">{area.name}</h3>
           </div>
         </div>
         {isActive && (
@@ -85,13 +85,13 @@ function LifeAreaCard({
       </div>
 
       {/* Archetype & Themes */}
-      <p className="text-xs text-neutral-500 mb-1">{area.archetype}</p>
-      <p className="text-xs text-neutral-600 mb-3 leading-relaxed">{area.themes}</p>
+      <p className="text-xs text-theme-text-tertiary mb-1">{area.archetype}</p>
+      <p className="text-xs text-theme-text-muted mb-3 leading-relaxed">{area.themes}</p>
 
       {/* Active transit planets */}
       {isActive && (
         <div className="mb-3">
-          <p className="text-xs text-neutral-500 mb-1.5">Transiting now</p>
+          <p className="text-xs text-theme-text-tertiary mb-1.5">Transiting now</p>
           <div className="flex flex-wrap gap-1.5">
             {transitPlanets.map((planet) => (
               <PlanetPill key={planet.planetId} planet={planet} />
@@ -103,12 +103,12 @@ function LifeAreaCard({
       {/* Natal planets (if profile loaded) */}
       {natalPlanetNames.length > 0 && (
         <div className="mb-3">
-          <p className="text-xs text-neutral-500 mb-1.5">Your natal placements</p>
+          <p className="text-xs text-theme-text-tertiary mb-1.5">Your natal placements</p>
           <div className="flex flex-wrap gap-1">
             {natalPlanetNames.map((name) => (
               <span
                 key={name}
-                className="text-xs px-2 py-0.5 rounded-full bg-neutral-900 text-neutral-400 border border-neutral-800"
+                className="text-xs px-2 py-0.5 rounded-full bg-surface-base text-theme-text-secondary border border-theme-border-subtle"
               >
                 {name}
               </span>
@@ -120,7 +120,7 @@ function LifeAreaCard({
       {/* Contemplate CTA */}
       <button
         onClick={handleContemplate}
-        className="w-full mt-1 py-1.5 text-xs rounded-lg border border-neutral-700 text-neutral-400 hover:text-white hover:border-neutral-600 hover:bg-neutral-800/50 transition-colors"
+        className="w-full mt-1 py-1.5 text-xs rounded-lg border border-theme-border-subtle text-theme-text-secondary hover:text-theme-text-primary hover:border-theme-border hover:bg-surface-overlay transition-colors"
       >
         🕯 Contemplate this area
       </button>
@@ -166,16 +166,16 @@ export default function LifeAreas() {
       <div className="mb-8">
         <div className="flex items-center justify-between flex-wrap gap-3">
           <div>
-            <h1 className="text-3xl font-serif font-medium text-white mb-2">
+            <h1 className="text-3xl font-serif font-medium text-theme-text-primary mb-2">
               Your 12 Life Areas
             </h1>
-            <p className="text-neutral-400 text-sm max-w-2xl">
+            <p className="text-theme-text-secondary text-sm max-w-2xl">
               The 12 astrological houses map directly to 12 key areas of your lived experience.
               Each area is currently influenced by the transiting planets passing through it.
             </p>
           </div>
           <div className="flex items-center gap-3 text-sm">
-            <span className="px-3 py-1.5 bg-neutral-900 border border-neutral-800 rounded-lg text-neutral-400">
+            <span className="px-3 py-1.5 bg-surface-base border border-theme-border-subtle rounded-lg text-theme-text-secondary">
               {weather.moonPhase.emoji} {weather.moonPhase.name}
             </span>
             {activeCount > 0 && (
@@ -213,17 +213,17 @@ export default function LifeAreas() {
       </div>
 
       {/* Legend */}
-      <div className="mt-8 p-4 rounded-xl bg-neutral-900/50 border border-neutral-800">
-        <p className="text-xs text-neutral-500 mb-2 font-medium uppercase tracking-wider">
+      <div className="mt-8 p-4 rounded-xl bg-surface-base/50 border border-theme-border-subtle">
+        <p className="text-xs text-theme-text-tertiary mb-2 font-medium uppercase tracking-wider">
           How to read this
         </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-neutral-500">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-theme-text-tertiary">
           <p>
-            <span className="text-neutral-400">Transiting now</span> — planets currently moving
+            <span className="text-theme-text-secondary">Transiting now</span> — planets currently moving
             through this area of your chart, bringing their archetypal energy to this life domain.
           </p>
           <p>
-            <span className="text-neutral-400">Natal placements</span> — planets that were in this
+            <span className="text-theme-text-secondary">Natal placements</span> — planets that were in this
             house at birth, permanently colouring how you experience this area.
           </p>
         </div>

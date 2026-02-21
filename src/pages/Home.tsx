@@ -144,16 +144,16 @@ function TraditionCard({ tradition, index }: { tradition: TraditionConfig; index
     >
       <Link
         to={tradition.path}
-        className={`group block bg-gradient-to-br ${tradition.colorFrom} ${tradition.colorTo} rounded-xl p-5 border ${tradition.borderColor} ${tradition.hoverBorder} transition-all hover:bg-neutral-900/70`}
+        className={`group block bg-gradient-to-br ${tradition.colorFrom} ${tradition.colorTo} rounded-xl p-5 border ${tradition.borderColor} ${tradition.hoverBorder} transition-all hover:bg-surface-base/70`}
       >
         <div className="flex items-start justify-between mb-3">
           <span className={`text-2xl ${tradition.textColor}`}>{tradition.icon}</span>
-          <span className="text-xs text-neutral-600">{count} entities</span>
+          <span className="text-xs text-theme-text-muted">{count} entities</span>
         </div>
         <h3 className={`font-serif text-lg font-medium ${tradition.textColor} group-hover:brightness-125 transition-all mb-1`}>
           {tradition.name}
         </h3>
-        <p className="text-neutral-500 text-sm leading-relaxed">{tradition.tagline}</p>
+        <p className="text-theme-text-tertiary text-sm leading-relaxed">{tradition.tagline}</p>
         <div className={`mt-3 text-xs ${tradition.textColor} opacity-0 group-hover:opacity-100 transition-opacity`}>
           Explore →
         </div>
@@ -206,14 +206,14 @@ export function Home() {
           className="relative"
         >
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="text-2xl text-neutral-600">—</span>
-            <span className="text-neutral-500 text-sm uppercase tracking-[0.3em]">A Digital Temple</span>
-            <span className="text-2xl text-neutral-600">—</span>
+            <span className="text-2xl text-theme-text-muted">—</span>
+            <span className="text-theme-text-tertiary text-sm uppercase tracking-[0.3em]">A Digital Temple</span>
+            <span className="text-2xl text-theme-text-muted">—</span>
           </div>
-          <h1 className="font-serif text-5xl md:text-6xl font-medium mb-4 bg-gradient-to-br from-white via-neutral-200 to-neutral-500 bg-clip-text text-transparent">
+          <h1 className="font-serif text-5xl md:text-6xl font-medium mb-4 text-theme-text-primary">
             Cosmic Blueprint
           </h1>
-          <p className="text-neutral-400 text-lg max-w-xl mx-auto leading-relaxed">
+          <p className="text-theme-text-secondary text-lg max-w-xl mx-auto leading-relaxed">
             Bridging six ancient wisdom traditions through a single birth moment —
             from the stars above to the sacred geometry within.
           </p>
@@ -233,7 +233,7 @@ export function Home() {
               </button>
               <button
                 onClick={() => navigate('/profile')}
-                className="px-8 py-3 border border-neutral-700 hover:border-neutral-500 text-neutral-300 hover:text-white rounded-xl transition-all"
+                className="px-8 py-3 border border-theme-border-subtle hover:border-theme-border-strong text-theme-text-secondary hover:text-theme-text-primary rounded-xl transition-all"
               >
                 Enter Birth Data
               </button>
@@ -247,15 +247,15 @@ export function Home() {
         <section>
           <div className="flex items-center justify-between mb-5">
             <div className="flex items-center gap-3">
-              <span className="text-xl text-neutral-400">✦</span>
-              <h2 className="font-serif text-xl text-white">
+              <span className="text-xl text-theme-text-secondary">✦</span>
+              <h2 className="font-serif text-xltext-theme-text-primary">
                 {profile.name ? `${profile.name}'s Blueprint` : 'Your Cosmic Blueprint'}
               </h2>
             </div>
             <div className="flex items-center gap-2">
               <button
                 onClick={() => setExpandedIdentity(!expandedIdentity)}
-                className="text-xs text-neutral-500 hover:text-neutral-300 transition-colors"
+                className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary transition-colors"
               >
                 {expandedIdentity ? 'Less' : 'More'}
               </button>
@@ -276,19 +276,19 @@ export function Home() {
                 {sunSign && (
                   <Link to={`/signs/${sunSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
                     <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('sun')?.symbol}</span>
-                    <div><p className="text-neutral-500 text-xs">Sun</p><p className="text-white text-sm">{sunSign.name}</p></div>
+                    <div><p className="text-theme-text-tertiary text-xs">Sun</p><p className="text-theme-text-primary text-sm">{sunSign.name}</p></div>
                   </Link>
                 )}
                 {moonSign && (
                   <Link to={`/signs/${moonSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
                     <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('moon')?.symbol}</span>
-                    <div><p className="text-neutral-500 text-xs">Moon</p><p className="text-white text-sm">{moonSign.name}</p></div>
+                    <div><p className="text-theme-text-tertiary text-xs">Moon</p><p className="text-theme-text-primary text-sm">{moonSign.name}</p></div>
                   </Link>
                 )}
                 {risingSign && (
                   <Link to={`/signs/${risingSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
                     <span className="w-7 h-7 flex items-center justify-center text-xs bg-air-500/20 text-air-400 rounded-full font-medium">AC</span>
-                    <div><p className="text-neutral-500 text-xs">Rising</p><p className="text-white text-sm">{risingSign.name}</p></div>
+                    <div><p className="text-theme-text-tertiary text-xs">Rising</p><p className="text-theme-text-primary text-sm">{risingSign.name}</p></div>
                   </Link>
                 )}
               </div>
@@ -314,13 +314,13 @@ export function Home() {
                     return (
                       <Link key={sphere.geneKeyId} to={`/gene-keys/${sphere.geneKeyId}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-genekey-500/10 transition-colors group">
                         <span className="w-7 h-7 flex items-center justify-center text-xs font-medium bg-genekey-500/20 text-genekey-400 rounded-full">{sphere.geneKeyNumber}</span>
-                        <div className="min-w-0"><p className="text-neutral-500 text-xs">{label}</p><p className="text-white text-sm truncate">{gk?.gift.name}</p></div>
+                        <div className="min-w-0"><p className="text-theme-text-tertiary text-xs">{label}</p><p className="text-theme-text-primary text-sm truncate">{gk?.gift.name}</p></div>
                       </Link>
                     );
                   })}
                 </div>
               ) : (
-                <p className="text-neutral-400 text-sm">Your Gene Keys journey awaits.</p>
+                <p className="text-theme-text-secondary text-sm">Your Gene Keys journey awaits.</p>
               )}
               <Link to="/profile/gene-keys" className="mt-3 block text-xs text-genekey-400 hover:text-genekey-300 transition-colors">
                 Golden Path →
@@ -343,12 +343,12 @@ export function Home() {
                   ].map(({ label, value, icon }) => (
                     <div key={label} className="flex items-center gap-3 p-2 -mx-2">
                       <span className="w-7 h-7 flex items-center justify-center text-xs bg-humandesign-500/20 text-humandesign-400 rounded-full">{icon}</span>
-                      <div><p className="text-neutral-500 text-xs">{label}</p><p className="text-white text-sm">{value}</p></div>
+                      <div><p className="text-theme-text-tertiary text-xs">{label}</p><p className="text-theme-text-primary text-sm">{value}</p></div>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-neutral-400 text-sm">Discover your energy type and authority.</p>
+                <p className="text-theme-text-secondary text-sm">Discover your energy type and authority.</p>
               )}
               <Link to="/profile/human-design" className="mt-3 block text-xs text-humandesign-400 hover:text-humandesign-300 transition-colors">
                 Body graph →
@@ -366,10 +366,10 @@ export function Home() {
       {/* ── SIX TRADITIONS ────────────────────────────────────────────────────── */}
       <section>
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-neutral-600 text-sm uppercase tracking-[0.2em]">The Six Traditions</span>
+          <span className="text-theme-text-muted text-sm uppercase tracking-[0.2em]">The Six Traditions</span>
         </div>
-        <h2 className="font-serif text-2xl text-white mb-1">Wisdom Gateway</h2>
-        <p className="text-neutral-500 text-sm mb-6 max-w-2xl">
+        <h2 className="font-serif text-2xl text-theme-text-primary mb-1">Wisdom Gateway</h2>
+        <p className="text-theme-text-tertiary text-sm mb-6 max-w-2xl">
           Each tradition is a complete language for self-knowledge. Together they form a unified map of consciousness.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -382,10 +382,10 @@ export function Home() {
       {/* ── EXPLORATION TOOLS ─────────────────────────────────────────────────── */}
       <section>
         <div className="flex items-center gap-3 mb-2">
-          <span className="text-neutral-600 text-sm uppercase tracking-[0.2em]">Interactive Tools</span>
+          <span className="text-theme-text-muted text-sm uppercase tracking-[0.2em]">Interactive Tools</span>
         </div>
-        <h2 className="font-serif text-2xl text-white mb-1">Explore & Visualize</h2>
-        <p className="text-neutral-500 text-sm mb-6">
+        <h2 className="font-serif text-2xl text-theme-text-primary mb-1">Explore & Visualize</h2>
+        <p className="text-theme-text-tertiary text-sm mb-6">
           See the connections. Feel the patterns. Navigate the cosmic web.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -403,10 +403,10 @@ export function Home() {
                 <div className="flex items-start gap-4">
                   <span className="text-2xl">{tool.icon}</span>
                   <div>
-                    <h3 className="font-medium text-white group-hover:text-neutral-200 transition-colors">
+                    <h3 className="font-medium text-theme-text-primary group-hover:text-theme-text-primary transition-colors">
                       {tool.title}
                     </h3>
-                    <p className="text-neutral-500 text-sm mt-0.5">{tool.description}</p>
+                    <p className="text-theme-text-tertiary text-sm mt-0.5">{tool.description}</p>
                   </div>
                 </div>
               </Link>
@@ -420,8 +420,8 @@ export function Home() {
         <section>
           <div className="flex items-center justify-between mb-4">
             <div>
-              <span className="text-neutral-600 text-sm uppercase tracking-[0.2em]">Your Journal</span>
-              <h2 className="font-serif text-2xl text-white mt-0.5">Recent Insights</h2>
+              <span className="text-theme-text-muted text-sm uppercase tracking-[0.2em]">Your Journal</span>
+              <h2 className="font-serif text-2xl text-theme-text-primary mt-0.5">Recent Insights</h2>
             </div>
             <Link to="/insights" className="text-xs text-amber-400 hover:text-amber-300 transition-colors">
               View all →
@@ -436,14 +436,14 @@ export function Home() {
                 crossSystem: 'border-cyan-500/30 text-cyan-400',
                 lifeOS: 'border-emerald-500/30 text-emerald-400',
               };
-              const colors = categoryColors[insight.category] || 'border-neutral-700 text-neutral-400';
+              const colors = categoryColors[insight.category] || 'border-theme-border-subtle text-theme-text-secondary';
               const dateStr = new Date(insight.createdAt).toLocaleDateString('en-US', {
                 month: 'short', day: 'numeric',
               });
               return (
                 <div
                   key={insight.id}
-                  className={`p-4 rounded-xl bg-neutral-900/50 border border-l-2 border-neutral-800 ${colors.split(' ')[0]} transition-colors`}
+                  className={`p-4 rounded-xl bg-surface-base/50 border border-l-2 border-theme-border-subtle ${colors.split(' ')[0]} transition-colors`}
                 >
                   <div className="flex items-start justify-between gap-3 mb-2">
                     <span className={`text-xs font-medium uppercase tracking-wide ${colors.split(' ')[1]}`}>
@@ -453,15 +453,15 @@ export function Home() {
                        insight.category === 'lifeOS' ? 'Life OS' :
                        insight.category}
                     </span>
-                    <span className="text-xs text-neutral-600 flex-shrink-0">{dateStr}</span>
+                    <span className="text-xs text-theme-text-muted flex-shrink-0">{dateStr}</span>
                   </div>
-                  <p className="text-neutral-300 text-sm leading-relaxed line-clamp-3">
+                  <p className="text-theme-text-secondary text-sm leading-relaxed line-clamp-3">
                     {insight.content}
                   </p>
                   {insight.tags.length > 0 && (
                     <div className="mt-2 flex flex-wrap gap-1">
                       {insight.tags.slice(0, 4).map((tag) => (
-                        <span key={tag} className="text-xs text-neutral-600 bg-neutral-800 px-1.5 py-0.5 rounded">
+                        <span key={tag} className="text-xs text-theme-text-muted bg-surface-raised px-1.5 py-0.5 rounded">
                           #{tag}
                         </span>
                       ))}
@@ -472,7 +472,7 @@ export function Home() {
             })}
           </div>
           <div className="mt-3 text-center">
-            <Link to="/insights" className="text-sm text-neutral-500 hover:text-neutral-300 transition-colors">
+            <Link to="/insights" className="text-sm text-theme-text-tertiary hover:text-theme-text-secondary transition-colors">
               ✧ Open Contemplation Journal
             </Link>
           </div>
@@ -480,14 +480,14 @@ export function Home() {
       )}
 
       {/* ── CONTEMPLATION CTA ─────────────────────────────────────────────────── */}
-      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-neutral-900 to-neutral-900/50 border border-neutral-800 p-8 text-center">
+      <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-surface-sunken to-surface-base border border-theme-border-subtle p-8 text-center">
         <div className="absolute inset-0 flex items-center justify-center pointer-events-none opacity-5">
           <span className="text-[12rem] font-serif">🕯</span>
         </div>
         <div className="relative">
-          <p className="text-neutral-500 text-sm uppercase tracking-[0.2em] mb-3">AI-Guided Reflection</p>
+          <p className="text-theme-text-tertiary text-sm uppercase tracking-[0.2em] mb-3">AI-Guided Reflection</p>
           <h2 className="font-serif text-3xl mb-3">Contemplation Chamber</h2>
-          <p className="text-neutral-400 max-w-xl mx-auto mb-6 text-sm leading-relaxed">
+          <p className="text-theme-text-secondary max-w-xl mx-auto mb-6 text-sm leading-relaxed">
             Enter a sacred space for dialogue with your cosmic blueprint. Six AI personas —
             each a different lens for exploring your placements, transits, and evolutionary path.
           </p>
@@ -506,8 +506,8 @@ export function Home() {
         <section className="rounded-xl border border-cyan-500/20 bg-gradient-to-br from-cyan-500/5 to-cyan-600/0 p-6 flex items-center gap-5">
           <span className="text-3xl text-cyan-400 flex-shrink-0">✦</span>
           <div className="flex-1">
-            <h3 className="font-serif text-base text-white mb-1">Save Your Blueprint Across Devices</h3>
-            <p className="text-neutral-400 text-sm">Sign in with your email to sync your cosmic profile and contemplation journal.</p>
+            <h3 className="font-serif text-base text-theme-text-primary mb-1">Save Your Blueprint Across Devices</h3>
+            <p className="text-theme-text-secondary text-sm">Sign in with your email to sync your cosmic profile and contemplation journal.</p>
           </div>
           <Link
             to="/profile"
@@ -519,8 +519,8 @@ export function Home() {
       )}
 
       {/* ── FOOTER QUOTE ──────────────────────────────────────────────────────── */}
-      <section className="text-center py-6 border-t border-neutral-900">
-        <blockquote className="font-serif text-lg italic text-neutral-500 max-w-2xl mx-auto">
+      <section className="text-center py-6 border-t border-theme-border-subtle">
+        <blockquote className="font-serif text-lg italic text-theme-text-tertiary max-w-2xl mx-auto">
           "The stars don't determine our destiny — they illuminate the path."
         </blockquote>
       </section>

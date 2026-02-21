@@ -37,17 +37,17 @@ export function EmptyState({ icon, title, description, action }: EmptyStateProps
       transition={{ duration: 0.3 }}
       className="mx-auto max-w-md"
     >
-      <div className="rounded-2xl border border-neutral-800 bg-gradient-to-br from-purple-950/40 via-neutral-900/60 to-amber-950/30 p-10 text-center shadow-xl">
+      <div className="rounded-2xl border border-theme-border-subtle bg-gradient-to-br from-purple-950/40 via-surface-base/60 to-amber-950/30 p-10 text-center shadow-xl">
         {icon != null && (
           <div className="mb-4 text-5xl" aria-hidden="true">
             {icon}
           </div>
         )}
 
-        <h2 className="mb-2 text-xl font-semibold text-neutral-100">{title}</h2>
+        <h2 className="mb-2 text-xl font-semibold text-theme-text-primary">{title}</h2>
 
         {description && (
-          <p className="mb-6 text-sm leading-relaxed text-neutral-400">
+          <p className="mb-6 text-sm leading-relaxed text-theme-text-secondary">
             {description}
           </p>
         )}

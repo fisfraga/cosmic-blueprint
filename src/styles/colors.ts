@@ -199,12 +199,12 @@ export const planetElementMap: Record<string, ElementColorKey> = {
   mars: 'fire',
   jupiter: 'fire',
   moon: 'water',
-  venus: 'water',
+  venus: 'earth',
   neptune: 'water',
   mercury: 'air',
   uranus: 'air',
   saturn: 'earth',
-  pluto: 'earth',
+  pluto: 'water',
 };
 
 // ------------------------------------
@@ -317,6 +317,58 @@ export const d3SubstanceColors = {
   bridge: { fill: '#10B981', stroke: '#059669', label: 'Sal',     polarity: 'Bridge' as const },
   yin:    { fill: '#6366F1', stroke: '#4F46E5', label: 'Mercurius', polarity: 'Yin' as const },
 };
+
+// ------------------------------------
+// D3 Theme Colors (surface/text tokens for visualizations)
+// ------------------------------------
+
+export interface D3ThemeColors {
+  background: string;
+  surfaceRaised: string;
+  gridLines: string;
+  labelText: string;
+  labelTextSecondary: string;
+  nodeStroke: string;
+  textPrimary: string;
+  textMuted: string;
+  borderSubtle: string;
+  backgroundAlpha80: string;
+  backgroundAlpha90: string;
+  backgroundAlpha95: string;
+}
+
+export function getD3ThemeColors(theme: 'light' | 'dark'): D3ThemeColors {
+  if (theme === 'light') {
+    return {
+      background: '#F0F2F7',
+      surfaceRaised: '#FFFFFF',
+      gridLines: '#D1D5E0',
+      labelText: '#4A4D5C',
+      labelTextSecondary: '#7A7D8C',
+      nodeStroke: '#B8BCC8',
+      textPrimary: '#0F1117',
+      textMuted: 'rgba(15, 17, 23, 0.5)',
+      borderSubtle: 'rgba(0, 0, 0, 0.15)',
+      backgroundAlpha80: 'rgba(240, 242, 247, 0.8)',
+      backgroundAlpha90: 'rgba(240, 242, 247, 0.9)',
+      backgroundAlpha95: 'rgba(240, 242, 247, 0.95)',
+    };
+  }
+  return {
+    background: '#0D0D15',
+    surfaceRaised: '#141420',
+    gridLines: '#2D2D44',
+    labelText: '#A0A0B8',
+    labelTextSecondary: '#6B6B80',
+    nodeStroke: '#3D3D58',
+    textPrimary: '#FFFFFF',
+    textMuted: 'rgba(255, 255, 255, 0.5)',
+    borderSubtle: 'rgba(255, 255, 255, 0.1)',
+    backgroundAlpha80: 'rgba(13, 13, 21, 0.8)',
+    backgroundAlpha90: 'rgba(13, 13, 21, 0.9)',
+    backgroundAlpha95: 'rgba(13, 13, 21, 0.95)',
+  };
+}
 
 // ------------------------------------
 // Helper Functions

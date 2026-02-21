@@ -36,7 +36,7 @@ export function GKSpheres() {
           <span className="text-3xl">◎</span>
           <h1 className="font-serif text-3xl font-medium">Gene Keys Spheres</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The Spheres are the 13 positions in your Hologenetic Profile where specific Gene Keys are placed.
           They form three sequences—Activation, Venus, and Pearl—each revealing different dimensions
           of your purpose, relationships, and prosperity.
@@ -44,9 +44,9 @@ export function GKSpheres() {
       </section>
 
       {/* Astrology & Gene Keys Connection */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">The Astrological Foundation</h2>
-        <p className="text-neutral-400 text-sm mb-6">
+        <p className="text-theme-text-secondary text-sm mb-6">
           Gene Keys are calculated from your astrological birth chart. Each sphere corresponds to a specific
           planetary position—either from your natal chart (birth moment) or your design chart (~88 days before birth).
         </p>
@@ -55,17 +55,17 @@ export function GKSpheres() {
             <img
               src="/images/gene-keys/Astrology-Gene-Keys.png"
               alt="Astrology and Gene Keys connection"
-              className="w-full rounded-lg border border-neutral-700"
+              className="w-full rounded-lg border border-theme-border-subtle"
             />
-            <p className="text-neutral-500 text-xs text-center">The relationship between Astrology and Gene Keys</p>
+            <p className="text-theme-text-tertiary text-xs text-center">The relationship between Astrology and Gene Keys</p>
           </div>
           <div className="space-y-3">
             <img
               src="/images/gene-keys/Astrology-planets-used-in-Gene-Keys.png"
               alt="Planets used in Gene Keys calculations"
-              className="w-full rounded-lg border border-neutral-700"
+              className="w-full rounded-lg border border-theme-border-subtle"
             />
-            <p className="text-neutral-500 text-xs text-center">Planetary sources for each sphere</p>
+            <p className="text-theme-text-tertiary text-xs text-center">Planetary sources for each sphere</p>
           </div>
         </div>
       </section>
@@ -80,7 +80,7 @@ export function GKSpheres() {
                 <span className="text-2xl">{sequence.icon}</span>
                 <h2 className="font-serif text-xl">{sequence.name}</h2>
               </div>
-              <p className="text-neutral-400 text-sm">{sequence.description}</p>
+              <p className="text-theme-text-secondary text-sm">{sequence.description}</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {spheres.map((sphere) => (
@@ -92,22 +92,22 @@ export function GKSpheres() {
       })}
 
       {/* Overview Table */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">All 13 Spheres at a Glance</h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-neutral-700 text-left">
-                <th className="py-2 px-3 text-neutral-400">Sphere</th>
-                <th className="py-2 px-3 text-neutral-400">Sequence</th>
-                <th className="py-2 px-3 text-neutral-400">Planetary Source</th>
-                <th className="py-2 px-3 text-neutral-400 hidden md:table-cell">Theme</th>
+              <tr className="border-b border-theme-border-subtle text-left">
+                <th className="py-2 px-3 text-theme-text-secondary">Sphere</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Sequence</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Planetary Source</th>
+                <th className="py-2 px-3 text-theme-text-secondary hidden md:table-cell">Theme</th>
               </tr>
             </thead>
             <tbody>
               {sequences.flatMap((seq) =>
                 getGKSpheresBySequence(seq.id).map((sphere) => (
-                  <tr key={sphere.id} className="border-b border-neutral-800 hover:bg-neutral-800/50">
+                  <tr key={sphere.id} className="border-b border-theme-border-subtle hover:bg-surface-overlay">
                     <td className="py-3 px-3">
                       <Link
                         to={`/gene-keys/spheres/${sphere.id}`}
@@ -117,9 +117,9 @@ export function GKSpheres() {
                         <span>{sphere.name}</span>
                       </Link>
                     </td>
-                    <td className="py-3 px-3 text-neutral-400">{sphere.sequence}</td>
-                    <td className="py-3 px-3 text-neutral-300 text-xs">{sphere.planetarySource}</td>
-                    <td className="py-3 px-3 text-neutral-400 hidden md:table-cell">{sphere.theme}</td>
+                    <td className="py-3 px-3 text-theme-text-secondary">{sphere.sequence}</td>
+                    <td className="py-3 px-3 text-theme-text-secondary text-xs">{sphere.planetarySource}</td>
+                    <td className="py-3 px-3 text-theme-text-secondary hidden md:table-cell">{sphere.theme}</td>
                   </tr>
                 ))
               )}
@@ -129,26 +129,26 @@ export function GKSpheres() {
       </section>
 
       {/* How to Use */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Working with the Spheres</h3>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
           <div>
             <h4 className="font-medium text-emerald-300 mb-2">Contemplation</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Each sphere holds a Gene Key that you can contemplate. Work with the shadow, gift, and siddhi
               frequencies to unlock the wisdom of each position in your profile.
             </p>
           </div>
           <div>
             <h4 className="font-medium text-rose-300 mb-2">Relationships</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The Venus Sequence spheres reveal your relationship patterns. Understanding these keys
               can transform how you connect with others and yourself.
             </p>
           </div>
           <div>
             <h4 className="font-medium text-blue-300 mb-2">Prosperity</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The Pearl Sequence shows how your gifts can flow into the world as prosperity—not just
               financial, but the full flowering of your contribution.
             </p>
@@ -160,19 +160,19 @@ export function GKSpheres() {
       <section className="flex gap-4">
         <Link
           to="/gene-keys"
-          className="flex-1 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">✧</span>
           <h4 className="font-medium mt-2">Gene Keys</h4>
-          <p className="text-sm text-neutral-400 mt-1">Explore all 64 Gene Keys</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Explore all 64 Gene Keys</p>
         </Link>
         <Link
           to="/gene-keys/codon-rings"
-          className="flex-1 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">⬡</span>
           <h4 className="font-medium mt-2">Codon Rings</h4>
-          <p className="text-sm text-neutral-400 mt-1">The chemical families</p>
+          <p className="text-sm text-theme-text-secondary mt-1">The chemical families</p>
         </Link>
       </section>
     </div>

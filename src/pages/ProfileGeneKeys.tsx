@@ -92,7 +92,7 @@ export function ProfileGeneKeys() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Gene Keys Profile Not Available</h1>
-        <p className="text-neutral-400 mb-4">Gene Keys data is not yet calculated for this profile.</p>
+        <p className="text-theme-text-secondary mb-4">Gene Keys data is not yet calculated for this profile.</p>
         <Link to="/profile" className="text-purple-400 hover:underline">Back to Profile</Link>
       </div>
     );
@@ -119,16 +119,16 @@ export function ProfileGeneKeys() {
     return (
       <Link
         to={`/profile/gene-keys/${sphereKey}`}
-        className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors group border border-neutral-800 hover:border-neutral-700"
+        className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors group border border-theme-border-subtle hover:border-theme-border-subtle"
       >
         <div className="flex items-center justify-between mb-2">
           <p className={`${colorClass} text-xs font-medium`}>{data.sphereName}</p>
           <div className="text-right">
             {data.planetarySource && (
-              <span className="text-neutral-600 text-xs block">{data.planetarySource}</span>
+              <span className="text-theme-text-muted text-xs block">{data.planetarySource}</span>
             )}
             {placement && sign && houseNum && (
-              <span className="text-neutral-500 text-xs block">
+              <span className="text-theme-text-tertiary text-xs block">
                 {placement.degree}° {sign.symbol} · H{houseNum}
               </span>
             )}
@@ -138,7 +138,7 @@ export function ProfileGeneKeys() {
           Key {data.geneKeyNumber}.{data.line}
         </p>
         {gk && (
-          <p className="text-white text-sm mt-1">{gk.name}</p>
+          <p className="text-theme-text-primary text-sm mt-1">{gk.name}</p>
         )}
         {gk && (
           <div className="mt-2 text-xs space-y-0.5">
@@ -148,7 +148,7 @@ export function ProfileGeneKeys() {
           </div>
         )}
         {line && (
-          <p className="text-neutral-500 text-xs mt-2">
+          <p className="text-theme-text-tertiary text-xs mt-2">
             Line {data.line}: {line.archetype}
           </p>
         )}
@@ -165,14 +165,14 @@ export function ProfileGeneKeys() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <Link to="/profile" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+          <Link to="/profile" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
             ← Back to Overview
           </Link>
-          <h1 className="font-serif text-3xl text-white flex items-center gap-3">
+          <h1 className="font-serif text-3xl text-theme-text-primary flex items-center gap-3">
             <span className="text-purple-400">✧</span>
             Gene Keys Profile
           </h1>
-          <p className="text-neutral-400 mt-1">{profile.name}'s Golden Path Journey</p>
+          <p className="text-theme-text-secondary mt-1">{profile.name}'s Golden Path Journey</p>
         </div>
         <Link
           to="/contemplate"
@@ -184,33 +184,33 @@ export function ProfileGeneKeys() {
 
       {/* Profile & Lines */}
       <div className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
-        <h2 className="font-serif text-xl text-white mb-4">Profile & Lines</h2>
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Profile & Lines</h2>
         <div className="grid md:grid-cols-3 gap-6">
-          <div className="bg-neutral-900/50 rounded-lg p-4">
-            <p className="text-neutral-400 text-sm mb-1">Your Profile</p>
+          <div className="bg-surface-base/50 rounded-lg p-4">
+            <p className="text-theme-text-secondary text-sm mb-1">Your Profile</p>
             <p className="text-3xl font-serif text-purple-300">{hdProfile}</p>
-            <p className="text-neutral-500 text-sm mt-2">
+            <p className="text-theme-text-tertiary text-sm mt-2">
               {gkLines.get(`gk-line-${personalitySunLine}`)?.archetype || `Line ${personalitySunLine}`} / {gkLines.get(`gk-line-${designSunLine}`)?.archetype || `Line ${designSunLine}`}
             </p>
           </div>
 
           <div className="md:col-span-2 grid grid-cols-2 gap-4">
             {/* Personality Line */}
-            <div className="bg-neutral-900/50 rounded-lg p-4">
+            <div className="bg-surface-base/50 rounded-lg p-4">
               <p className="text-amber-400 text-xs mb-1">Personality (Conscious)</p>
-              <p className="text-white font-medium">Line {personalitySunLine}</p>
+              <p className="text-theme-text-primary font-medium">Line {personalitySunLine}</p>
               {gkLines.get(`gk-line-${personalitySunLine}`) && (
-                <p className="text-neutral-400 text-sm mt-1">
+                <p className="text-theme-text-secondary text-sm mt-1">
                   {gkLines.get(`gk-line-${personalitySunLine}`)?.archetype}
                 </p>
               )}
             </div>
             {/* Design Line */}
-            <div className="bg-neutral-900/50 rounded-lg p-4">
+            <div className="bg-surface-base/50 rounded-lg p-4">
               <p className="text-red-400 text-xs mb-1">Design (Unconscious)</p>
-              <p className="text-white font-medium">Line {designSunLine}</p>
+              <p className="text-theme-text-primary font-medium">Line {designSunLine}</p>
               {gkLines.get(`gk-line-${designSunLine}`) && (
-                <p className="text-neutral-400 text-sm mt-1">
+                <p className="text-theme-text-secondary text-sm mt-1">
                   {gkLines.get(`gk-line-${designSunLine}`)?.archetype}
                 </p>
               )}
@@ -220,14 +220,14 @@ export function ProfileGeneKeys() {
       </div>
 
       {/* Activation Sequence */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <Link to="/gene-keys/sequences" className="group inline-block mb-4">
-          <h2 className="font-serif text-xl text-white flex items-center gap-2 group-hover:text-emerald-300">
+          <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2 group-hover:text-emerald-300">
             <span className="text-emerald-400">△</span>
             Activation Sequence
           </h2>
         </Link>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           Your Purpose — Discovering your genius and living your highest potential in the world.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -236,7 +236,7 @@ export function ProfileGeneKeys() {
           {renderSphereCard('radiance', gkProfile.radiance, 'text-emerald-400')}
           {renderSphereCard('purpose', gkProfile.purpose, 'text-emerald-400')}
         </div>
-        <div className="mt-4 pt-4 border-t border-neutral-800">
+        <div className="mt-4 pt-4 border-t border-theme-border-subtle">
           <Link
             to="/contemplate?sequence=activation"
             className="text-emerald-400 hover:text-emerald-300 text-sm"
@@ -247,14 +247,14 @@ export function ProfileGeneKeys() {
       </div>
 
       {/* Venus Sequence */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <Link to="/gene-keys/sequences" className="group inline-block mb-4">
-          <h2 className="font-serif text-xl text-white flex items-center gap-2 group-hover:text-rose-300">
+          <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2 group-hover:text-rose-300">
             <span className="text-rose-400">♀</span>
             Venus Sequence
           </h2>
         </Link>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           Your Relationships — Opening your heart through emotional healing and deep intimacy.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
@@ -264,7 +264,7 @@ export function ProfileGeneKeys() {
           {renderSphereCard('sq', gkProfile.sq, 'text-rose-400')}
           {renderSphereCard('core', gkProfile.core, 'text-rose-400')}
         </div>
-        <div className="mt-4 pt-4 border-t border-neutral-800">
+        <div className="mt-4 pt-4 border-t border-theme-border-subtle">
           <Link
             to="/contemplate?sequence=venus"
             className="text-rose-400 hover:text-rose-300 text-sm"
@@ -275,14 +275,14 @@ export function ProfileGeneKeys() {
       </div>
 
       {/* Pearl Sequence */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <Link to="/gene-keys/sequences" className="group inline-block mb-4">
-          <h2 className="font-serif text-xl text-white flex items-center gap-2 group-hover:text-blue-300">
+          <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2 group-hover:text-blue-300">
             <span className="text-blue-400">○</span>
             Pearl Sequence
           </h2>
         </Link>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           Your Prosperity — Unlocking your natural abundance through service and contribution.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -291,7 +291,7 @@ export function ProfileGeneKeys() {
           {renderSphereCard('brand', gkProfile.brand, 'text-blue-400')}
           {renderSphereCard('pearl', gkProfile.pearl, 'text-blue-400')}
         </div>
-        <div className="mt-4 pt-4 border-t border-neutral-800">
+        <div className="mt-4 pt-4 border-t border-theme-border-subtle">
           <Link
             to="/contemplate?sequence=pearl"
             className="text-blue-400 hover:text-blue-300 text-sm"
@@ -303,9 +303,9 @@ export function ProfileGeneKeys() {
 
       {/* Core Identity Keys */}
       {gkProfile.coreIdentity && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">Core Identity Keys</h2>
-          <p className="text-neutral-400 text-sm mb-4">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Core Identity Keys</h2>
+          <p className="text-theme-text-secondary text-sm mb-4">
             Your Sun, Moon, Mercury, and Ascendant Gene Keys form the foundation of your cosmic identity.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -317,11 +317,11 @@ export function ProfileGeneKeys() {
                 <Link
                   key={planet}
                   to={`/gene-keys/${data.geneKeyId}`}
-                  className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition-colors"
+                  className="bg-surface-overlay rounded-lg p-4 hover:bg-surface-interactive/50 transition-colors"
                 >
                   <p className="text-amber-400 text-xs capitalize mb-1">{planet}</p>
                   <p className="text-genekey-300 font-medium">Key {data.geneKeyNumber}.{data.line}</p>
-                  {gk && <p className="text-white text-sm mt-1">{gk.name}</p>}
+                  {gk && <p className="text-theme-text-primary text-sm mt-1">{gk.name}</p>}
                 </Link>
               );
             })}
@@ -332,8 +332,8 @@ export function ProfileGeneKeys() {
       {/* Repeated Gene Keys */}
       {analysis && analysis.repeatedKeys.length > 0 && (
         <div className="bg-gradient-to-br from-genekey-500/10 to-genekey-600/5 rounded-xl p-6 border border-genekey-500/20">
-          <h2 className="font-serif text-xl text-white mb-2">Repeated Gene Keys</h2>
-          <p className="text-neutral-400 text-sm mb-4">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-2">Repeated Gene Keys</h2>
+          <p className="text-theme-text-secondary text-sm mb-4">
             These keys appear multiple times in your profile, indicating areas of deep significance and amplified potential.
           </p>
           <div className="space-y-4">
@@ -343,15 +343,15 @@ export function ProfileGeneKeys() {
                 <Link
                   key={keyNumber}
                   to={`/gene-keys/gene-key-${keyNumber}`}
-                  className="block p-4 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+                  className="block p-4 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
                 >
                   <div className="flex items-start justify-between">
                     <div>
                       <p className="text-genekey-300 font-medium text-lg">Key {keyNumber}: {gk.name}</p>
-                      <p className="text-neutral-400 text-sm mt-1">
+                      <p className="text-theme-text-secondary text-sm mt-1">
                         Appears in: {spheres.join(', ')}
                       </p>
-                      <p className="text-neutral-500 text-xs mt-2">
+                      <p className="text-theme-text-tertiary text-xs mt-2">
                         <span className="text-red-400">{gk.shadow?.name}</span> → {' '}
                         <span className="text-emerald-400">{gk.gift?.name}</span> → {' '}
                         <span className="text-purple-400">{gk.siddhi?.name}</span>
@@ -370,9 +370,9 @@ export function ProfileGeneKeys() {
 
       {/* Line Distribution */}
       {analysis && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">Line Distribution</h2>
-          <p className="text-neutral-400 text-sm mb-4">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Line Distribution</h2>
+          <p className="text-theme-text-secondary text-sm mb-4">
             How the 6 lines are distributed across your profile spheres.
           </p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
@@ -385,20 +385,20 @@ export function ProfileGeneKeys() {
                 <Link
                   key={lineNum}
                   to={`/gene-keys/lines`}
-                  className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition-colors"
+                  className="bg-surface-overlay rounded-lg p-4 hover:bg-surface-interactive/50 transition-colors"
                 >
                   <div className="flex items-center justify-between mb-2">
-                    <span className="text-white font-medium">Line {lineNum}</span>
+                    <span className="text-theme-text-primary font-medium">Line {lineNum}</span>
                     <span className="text-genekey-400 text-sm">{info.count}</span>
                   </div>
-                  <div className="h-2 bg-neutral-700 rounded-full overflow-hidden mb-2">
+                  <div className="h-2 bg-surface-interactive rounded-full overflow-hidden mb-2">
                     <div
                       className="h-full bg-genekey-500 rounded-full"
                       style={{ width: `${percentage}%` }}
                     />
                   </div>
                   {lineData && (
-                    <p className="text-neutral-500 text-xs">{lineData.archetype}</p>
+                    <p className="text-theme-text-tertiary text-xs">{lineData.archetype}</p>
                   )}
                 </Link>
               );
@@ -409,9 +409,9 @@ export function ProfileGeneKeys() {
 
       {/* Active Codon Rings */}
       {analysis && analysis.activeRings.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">Your Codon Rings</h2>
-          <p className="text-neutral-400 text-sm mb-4">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Your Codon Rings</h2>
+          <p className="text-theme-text-secondary text-sm mb-4">
             These chemical families are active in your profile, connecting your Gene Keys at a genetic level.
           </p>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -429,11 +429,11 @@ export function ProfileGeneKeys() {
                 <Link
                   key={ringId}
                   to={`/gene-keys/codon-rings/${ringId}`}
-                  className="bg-neutral-800/50 rounded-lg p-4 hover:bg-neutral-700/50 transition-colors"
+                  className="bg-surface-overlay rounded-lg p-4 hover:bg-surface-interactive/50 transition-colors"
                 >
                   <p className="text-genekey-300 font-medium">{ring.name}</p>
-                  <p className="text-neutral-400 text-sm mt-1">{ring.theme}</p>
-                  <p className="text-neutral-500 text-xs mt-2">
+                  <p className="text-theme-text-secondary text-sm mt-1">{ring.theme}</p>
+                  <p className="text-theme-text-tertiary text-xs mt-2">
                     Your keys in this ring: {profileKeys.join(', ')}
                   </p>
                 </Link>
@@ -445,21 +445,21 @@ export function ProfileGeneKeys() {
 
       {/* Quick Links */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <Link to="/gene-keys" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/gene-keys" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">✧</span>
-          <span className="text-neutral-300 text-sm">64 Keys</span>
+          <span className="text-theme-text-secondary text-sm">64 Keys</span>
         </Link>
-        <Link to="/gene-keys/sequences" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/gene-keys/sequences" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">◇</span>
-          <span className="text-neutral-300 text-sm">Sequences</span>
+          <span className="text-theme-text-secondary text-sm">Sequences</span>
         </Link>
-        <Link to="/gene-keys/lines" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/gene-keys/lines" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">---</span>
-          <span className="text-neutral-300 text-sm">Lines</span>
+          <span className="text-theme-text-secondary text-sm">Lines</span>
         </Link>
-        <Link to="/gene-keys/codon-rings" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/gene-keys/codon-rings" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">⬡</span>
-          <span className="text-neutral-300 text-sm">Codon Rings</span>
+          <span className="text-theme-text-secondary text-sm">Codon Rings</span>
         </Link>
       </div>
     </motion.div>

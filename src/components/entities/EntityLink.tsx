@@ -86,7 +86,7 @@ function EntityPreviewTooltip({
       <div
         className={`
           max-w-xs p-3 rounded-lg shadow-xl border
-          bg-cosmic-900/95 backdrop-blur-sm
+          bg-surface-base/95 backdrop-blur-sm
           ${styles.border}
         `}
       >
@@ -96,14 +96,14 @@ function EntityPreviewTooltip({
             <span className="text-lg">{entity.symbol}</span>
           )}
           <div className="flex-1 min-w-0">
-            <h4 className="font-medium text-white text-sm truncate">
+            <h4 className="font-medium text-theme-text-primary text-sm truncate">
               {entity.name}
             </h4>
             <div className="flex gap-1.5 mt-0.5">
               <span className={`text-xs px-1.5 py-0.5 rounded ${styles.bg} ${styles.text}`}>
                 {SYSTEM_LABELS[entity.system]}
               </span>
-              <span className="text-xs px-1.5 py-0.5 rounded bg-cosmic-700 text-gray-400">
+              <span className="text-xs px-1.5 py-0.5 rounded bg-surface-interactive text-theme-text-secondary">
                 {TYPE_LABELS[entity.type] || entity.type}
               </span>
             </div>
@@ -112,7 +112,7 @@ function EntityPreviewTooltip({
 
         {/* Description preview */}
         {descriptionPreview && (
-          <p className="text-xs text-gray-400 leading-relaxed mb-2">
+          <p className="text-xs text-theme-text-secondary leading-relaxed mb-2">
             {descriptionPreview}
           </p>
         )}
@@ -123,7 +123,7 @@ function EntityPreviewTooltip({
             {entity.keywords.slice(0, 4).map((keyword, idx) => (
               <span
                 key={idx}
-                className="text-xs px-1.5 py-0.5 rounded bg-cosmic-800 text-gray-500"
+                className="text-xs px-1.5 py-0.5 rounded bg-surface-raised text-theme-text-tertiary"
               >
                 {String(keyword)}
               </span>
@@ -132,7 +132,7 @@ function EntityPreviewTooltip({
         )}
 
         {/* Click hint */}
-        <p className="text-xs text-gray-600 mt-2 text-center">
+        <p className="text-xs text-theme-text-muted mt-2 text-center">
           Click to view details
         </p>
       </div>
@@ -142,7 +142,7 @@ function EntityPreviewTooltip({
         className={`
           absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full
           w-0 h-0 border-l-8 border-r-8 border-t-8
-          border-transparent border-t-cosmic-900/95
+          border-transparent border-t-surface-base
         `}
       />
     </div>
@@ -305,7 +305,7 @@ export function EntityLink({
   if (!entity) {
     return (
       <span
-        className={`inline-flex items-center gap-0.5 text-gray-400 ${className}`}
+        className={`inline-flex items-center gap-0.5 text-theme-text-secondary ${className}`}
         title={`Entity not found: ${entityId}`}
       >
         {displayName}
@@ -372,7 +372,7 @@ export function EntityLink({
         className={`
           inline-flex items-center gap-1 px-1.5 py-0.5 rounded
           border transition-all duration-150 cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-cosmic-900
+          focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-surface-base
           ${styles.bg} ${styles.bgHover} ${styles.border}
           ${styles.text} ${styles.textHover}
           focus:ring-purple-500/50
@@ -419,7 +419,7 @@ export function EntityLinkInline({
   const entity = getEntity(entityId) || getProfileEntity(entityId);
 
   if (!entity) {
-    return <span className={`text-gray-400 ${className}`}>{displayName}</span>;
+    return <span className={`text-theme-text-secondary ${className}`}>{displayName}</span>;
   }
 
   // Use element-based styles for signs and elements, fall back to system styles

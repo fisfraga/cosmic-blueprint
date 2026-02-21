@@ -12,7 +12,7 @@ export function EntityStack({ entities, onCloseEntity, onEntityClick }: EntitySt
   if (entities.length === 0) return null;
 
   return (
-    <div className="hidden lg:flex flex-col w-[360px] lg:w-[400px] h-full border-l border-neutral-800 flex-shrink-0">
+    <div className="hidden lg:flex flex-col w-[360px] lg:w-[400px] h-full border-l border-theme-border-subtle flex-shrink-0">
       <AnimatePresence mode="popLayout">
         {entities.map((entity, index) => (
           <motion.div
@@ -23,7 +23,7 @@ export function EntityStack({ entities, onCloseEntity, onEntityClick }: EntitySt
             exit={{ opacity: 0, x: 40 }}
             transition={{ duration: 0.25, ease: 'easeOut' }}
             className={`flex-1 min-h-0 overflow-y-auto ${
-              index < entities.length - 1 ? 'border-b border-neutral-800' : ''
+              index < entities.length - 1 ? 'border-b border-theme-border-subtle' : ''
             }`}
           >
             <EntityDetailPanel

@@ -99,9 +99,9 @@ function processMarkdownLine(
 
     // Simple regex-based markdown parsing
     const patterns = [
-      { regex: /\*\*([^*]+)\*\*/g, render: (match: string) => <strong key={key++} className="font-semibold text-white">{match}</strong> },
+      { regex: /\*\*([^*]+)\*\*/g, render: (match: string) => <strong key={key++} className="font-semibold text-theme-text-primary">{match}</strong> },
       { regex: /\*([^*]+)\*/g, render: (match: string) => <em key={key++} className="italic">{match}</em> },
-      { regex: /`([^`]+)`/g, render: (match: string) => <code key={key++} className="bg-cosmic-800 px-1.5 py-0.5 rounded text-sm font-mono text-purple-300">{match}</code> },
+      { regex: /`([^`]+)`/g, render: (match: string) => <code key={key++} className="bg-surface-raised px-1.5 py-0.5 rounded text-sm font-mono text-purple-300">{match}</code> },
     ];
 
     // Apply patterns in order
@@ -181,28 +181,28 @@ export function MessageContent({
   const paragraphs = content.split(/\n\s*\n/).filter(p => p.trim());
 
   return (
-    <div className={`text-gray-200 space-y-3 ${className}`}>
+    <div className={`text-theme-text-secondary space-y-3 ${className}`}>
       {paragraphs.map((paragraph, index) => {
         const trimmed = paragraph.trim();
 
         // Check for headers (# ## ###)
         if (trimmed.startsWith('### ')) {
           return (
-            <h3 key={index} className="text-base font-semibold text-white mt-2">
+            <h3 key={index} className="text-base font-semibold text-theme-text-primary mt-2">
               {processParagraph(trimmed.slice(4), onEntityClick, index)}
             </h3>
           );
         }
         if (trimmed.startsWith('## ')) {
           return (
-            <h2 key={index} className="text-lg font-semibold text-white mt-3">
+            <h2 key={index} className="text-lg font-semibold text-theme-text-primary mt-3">
               {processParagraph(trimmed.slice(3), onEntityClick, index)}
             </h2>
           );
         }
         if (trimmed.startsWith('# ')) {
           return (
-            <h1 key={index} className="text-xl font-bold text-white mt-4">
+            <h1 key={index} className="text-xl font-bold text-theme-text-primary mt-4">
               {processParagraph(trimmed.slice(2), onEntityClick, index)}
             </h1>
           );
@@ -213,7 +213,7 @@ export function MessageContent({
           return (
             <blockquote
               key={index}
-              className="border-l-2 border-purple-500/50 pl-4 italic text-gray-300"
+              className="border-l-2 border-purple-500/50 pl-4 italic text-theme-text-secondary"
             >
               {processParagraph(trimmed.slice(2), onEntityClick, index)}
             </blockquote>

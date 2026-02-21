@@ -37,7 +37,7 @@ export function Numerology() {
           <span className="text-3xl text-cyan-400">∞</span>
           <h1 className="font-serif text-3xl font-medium">Numerology</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The sacred language of numbers as dimensional consciousness. Each number carries a unique
           frequency — a harmonic tone of creation that resonates through your life path, chakra system,
           and evolutionary purpose. Explore the spectrum from Lower Expression to Highest Expression for each number.
@@ -52,7 +52,7 @@ export function Numerology() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'all'
                 ? 'bg-cyan-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             All Numbers ({allNumbers.length})
@@ -62,7 +62,7 @@ export function Numerology() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'element'
                 ? 'bg-cyan-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             By Element
@@ -72,7 +72,7 @@ export function Numerology() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'master'
                 ? 'bg-cyan-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             Master Numbers ({masterNumbers.length})
@@ -90,7 +90,7 @@ export function Numerology() {
                   className={`px-4 py-2 rounded-lg text-sm capitalize transition-colors ${
                     filterValue === el
                       ? 'bg-cyan-500/80 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   {el} ({count})
@@ -102,13 +102,13 @@ export function Numerology() {
 
         {activeFilter !== 'all' && filterValue !== 'all' && (
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-neutral-500">Showing:</span>
+            <span className="text-theme-text-tertiary">Showing:</span>
             <span className="px-3 py-1 bg-cyan-500/20 text-cyan-300 rounded-full">
               {filteredNumbers.length} numbers
             </span>
             <button
               onClick={() => handleFilterChange('all', 'all')}
-              className="text-neutral-400 hover:text-white"
+              className="text-theme-text-secondary hover:text-theme-text-primary"
             >
               Clear filter
             </button>
@@ -128,13 +128,13 @@ export function Numerology() {
       {/* Adam Apollo System Note */}
       <section className="bg-gradient-to-br from-cyan-500/10 to-cyan-600/5 rounded-xl p-6 border border-cyan-500/20">
         <h3 className="font-serif text-lg mb-2 text-cyan-300">The Harmonic System of Numbers</h3>
-        <p className="text-neutral-400 text-sm mb-3">
+        <p className="text-theme-text-secondary text-sm mb-3">
           This numerology system is rooted in Adam Apollo's teaching that numbers are not mere labels but
           dimensional frequencies — each vibrating at a specific octave of consciousness. The number 5
           resonates with the Root Chakra (the 5 senses, physical reality); 6 with the Sacral (emotion and flow);
           7 with the Solar Plexus (will and identity). As you ascend, numbers map to higher centers of awareness.
         </p>
-        <p className="text-neutral-400 text-sm">
+        <p className="text-theme-text-secondary text-sm">
           Master numbers (11, 22, 33) operate at amplified frequencies and carry heightened evolutionary
           potential — and correspondingly greater shadow challenges. They are not "reduced" in calculation
           when they appear naturally in one's birth date.
@@ -147,7 +147,7 @@ export function Numerology() {
           <span className="text-2xl text-emerald-400">◎</span>
           <h2 className="font-serif text-2xl font-medium">Chakra Connections</h2>
         </div>
-        <p className="text-neutral-400 max-w-3xl mb-6">
+        <p className="text-theme-text-secondary max-w-3xl mb-6">
           Every number resonates with a specific energy center. Numbers are frequencies; chakras are
           receivers. Understanding your life path number's chakra reveals which center is your primary
           developmental arena in this incarnation.
@@ -156,11 +156,11 @@ export function Numerology() {
           {regularNumbers.map((num) => {
             const chakra = chakras.get(num.chakraId);
             return (
-              <div key={num.id} className="bg-neutral-900/50 rounded-lg p-3 border border-neutral-800 flex items-center gap-3">
+              <div key={num.id} className="bg-surface-base/50 rounded-lg p-3 border border-theme-border-subtle flex items-center gap-3">
                 <span className="text-2xl font-serif text-cyan-400 w-8 text-center">{num.number}</span>
                 <div>
-                  <p className="text-white text-sm font-medium">{chakra?.name || num.chakraId}</p>
-                  <p className="text-neutral-500 text-xs">{chakra?.sanskritName}</p>
+                  <p className="text-theme-text-primary text-sm font-medium">{chakra?.name || num.chakraId}</p>
+                  <p className="text-theme-text-tertiary text-xs">{chakra?.sanskritName}</p>
                 </div>
               </div>
             );
@@ -176,10 +176,10 @@ function NumerologyCard({ num }: { num: NumerologyNumber }) {
   return (
     <Link
       to={`/numerology/${num.id}`}
-      className={`bg-neutral-900/50 rounded-xl p-5 border transition-all group ${
+      className={`bg-surface-base/50 rounded-xl p-5 border transition-all group ${
         isMaster
-          ? 'border-cyan-500/40 hover:border-cyan-400/70 hover:bg-neutral-900'
-          : 'border-neutral-800 hover:border-cyan-500/50 hover:bg-neutral-900'
+          ? 'border-cyan-500/40 hover:border-cyan-400/70 hover:bg-surface-base'
+          : 'border-theme-border-subtle hover:border-cyan-500/50 hover:bg-surface-base'
       }`}
     >
       <div className="flex items-center justify-between mb-3">
@@ -191,19 +191,19 @@ function NumerologyCard({ num }: { num: NumerologyNumber }) {
         )}
       </div>
 
-      <h3 className="font-serif text-lg text-white group-hover:text-cyan-300 transition-colors mb-1">
+      <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-cyan-300 transition-colors mb-1">
         {num.name}
       </h3>
-      <p className="text-neutral-500 text-xs mb-3">{num.harmonicTone}</p>
+      <p className="text-theme-text-tertiary text-xs mb-3">{num.harmonicTone}</p>
 
       {/* Lower Expression → Highest Expression */}
       <div className="space-y-1 text-sm">
         <div className="flex items-center gap-2">
-          <span className="w-16 text-neutral-500 text-xs">Lower:</span>
+          <span className="w-16 text-theme-text-tertiary text-xs">Lower:</span>
           <span className="text-red-400">{num.lowerExpression.name}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-16 text-neutral-500 text-xs">Highest:</span>
+          <span className="w-16 text-theme-text-tertiary text-xs">Highest:</span>
           <span className="text-purple-400">{num.highestExpression.name}</span>
         </div>
       </div>

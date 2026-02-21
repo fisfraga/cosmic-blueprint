@@ -65,7 +65,7 @@ export function ProfileAspectDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Aspect Not Found</h1>
-        <p className="text-neutral-400 mb-4">This aspect could not be found in your profile.</p>
+        <p className="text-theme-text-secondary mb-4">This aspect could not be found in your profile.</p>
         <Link to="/profile/astrology" className="text-amber-400 hover:underline">
           Back to Astrology Profile
         </Link>
@@ -101,7 +101,7 @@ export function ProfileAspectDetail() {
     >
       {/* Header */}
       <div>
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
           ← Back to Astrology Profile
         </Link>
         <div className="flex items-center gap-4 mt-2">
@@ -111,8 +111,8 @@ export function ProfileAspectDetail() {
             <span className="text-5xl">{planet2?.symbol}</span>
           </div>
           <div>
-            <h1 className="font-serif text-3xl text-white">{aspect.displayName}</h1>
-            <p className="text-neutral-400 mt-1">
+            <h1 className="font-serif text-3xltext-theme-text-primary">{aspect.displayName}</h1>
+            <p className="text-theme-text-secondary mt-1">
               Orb: {aspect.orbDegree}°{aspect.orbMinute}' • {aspect.direction}
             </p>
           </div>
@@ -123,13 +123,13 @@ export function ProfileAspectDetail() {
       <div className={`${colors.bg} border ${colors.border} rounded-xl p-4 flex items-center justify-between`}>
         <div>
           <p className={`font-medium ${colors.text}`}>{aspectType?.name}</p>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             {(aspectType?.data as { angle?: number })?.angle}° angle
           </p>
         </div>
         <div className="text-right">
           <p className={`font-medium ${natureInfo.class}`}>{natureInfo.text}</p>
-          <p className="text-neutral-400 text-sm">{aspect.direction}</p>
+          <p className="text-theme-text-secondary text-sm">{aspect.direction}</p>
         </div>
       </div>
 
@@ -138,20 +138,20 @@ export function ProfileAspectDetail() {
         {/* Planet 1 */}
         <Link
           to={`/profile/astrology/placements/${aspect.planet1Id}`}
-          className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-4xl">{planet1?.symbol}</span>
             <div>
-              <p className="text-white font-medium text-lg">{planet1?.name}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium text-lg">{planet1?.name}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(planet1?.data as { archetype?: string })?.archetype}
               </p>
             </div>
           </div>
           {placement1 && (
-            <div className="bg-neutral-800/50 rounded-lg p-3 text-sm">
-              <p className="text-neutral-300">
+            <div className="bg-surface-overlay rounded-lg p-3 text-sm">
+              <p className="text-theme-text-secondary">
                 {placement1.degree}°{placement1.minute}' in{' '}
                 {getEntity(placement1.signId)?.name} ({getEntity(placement1.houseId)?.name})
               </p>
@@ -162,20 +162,20 @@ export function ProfileAspectDetail() {
         {/* Planet 2 */}
         <Link
           to={`/profile/astrology/placements/${aspect.planet2Id}`}
-          className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <div className="flex items-center gap-4 mb-4">
             <span className="text-4xl">{planet2?.symbol}</span>
             <div>
-              <p className="text-white font-medium text-lg">{planet2?.name}</p>
-              <p className="text-neutral-400 text-sm">
+              <p className="text-theme-text-primary font-medium text-lg">{planet2?.name}</p>
+              <p className="text-theme-text-secondary text-sm">
                 {(planet2?.data as { archetype?: string })?.archetype}
               </p>
             </div>
           </div>
           {placement2 && (
-            <div className="bg-neutral-800/50 rounded-lg p-3 text-sm">
-              <p className="text-neutral-300">
+            <div className="bg-surface-overlay rounded-lg p-3 text-sm">
+              <p className="text-theme-text-secondary">
                 {placement2.degree}°{placement2.minute}' in{' '}
                 {getEntity(placement2.signId)?.name} ({getEntity(placement2.houseId)?.name})
               </p>
@@ -186,43 +186,43 @@ export function ProfileAspectDetail() {
 
       {/* Aspect Description */}
       <div className={`${colors.bg} border ${colors.border} rounded-xl p-6`}>
-        <h2 className="font-serif text-xl text-white mb-4">Archetypal Dynamics</h2>
-        <p className="text-neutral-300 leading-relaxed mb-4">
-          The {aspectType?.name?.toLowerCase()} between <span className="text-white">{planet1?.name}</span> and{' '}
-          <span className="text-white">{planet2?.name}</span> creates a{' '}
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Archetypal Dynamics</h2>
+        <p className="text-theme-text-secondary leading-relaxed mb-4">
+          The {aspectType?.name?.toLowerCase()} between <span className="text-theme-text-primary">{planet1?.name}</span> and{' '}
+          <span className="text-theme-text-primary">{planet2?.name}</span> creates a{' '}
           {aspect.nature === 'harmonious' && 'flowing, supportive connection'}
           {aspect.nature === 'challenging' && 'dynamic tension that invites growth'}
           {aspect.nature === 'neutral' && 'fusion of energies'}
           {' '}in your chart.
         </p>
-        <p className="text-neutral-400 text-sm">
+        <p className="text-theme-text-secondary text-sm">
           {aspectType?.description}
         </p>
       </div>
 
       {/* Aspect Details */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Orb</p>
-          <p className="text-white font-medium">{aspect.orbDegree}°{aspect.orbMinute}'</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Orb</p>
+          <p className="text-theme-text-primary font-medium">{aspect.orbDegree}°{aspect.orbMinute}'</p>
         </div>
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Direction</p>
-          <p className="text-white font-medium">{aspect.direction}</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Direction</p>
+          <p className="text-theme-text-primary font-medium">{aspect.direction}</p>
         </div>
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Angle</p>
-          <p className="text-white font-medium">{(aspectType?.data as { angle?: number })?.angle}°</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Angle</p>
+          <p className="text-theme-text-primary font-medium">{(aspectType?.data as { angle?: number })?.angle}°</p>
         </div>
-        <div className="bg-neutral-900/50 rounded-lg p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Nature</p>
+        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Nature</p>
           <p className={`font-medium ${natureInfo.class}`}>{aspect.nature}</p>
         </div>
       </div>
 
       {/* Universal Aspect Link */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Learn More</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Learn More</h2>
         <Link
           to={aspectType?.routePath || '#'}
           className="inline-flex items-center gap-2 text-amber-400 hover:text-amber-300"
@@ -243,11 +243,11 @@ export function ProfileAspectDetail() {
       </div>
 
       {/* Navigation */}
-      <div className="flex justify-between pt-4 border-t border-neutral-800">
-        <Link to="/profile/astrology" className="text-neutral-400 hover:text-white text-sm">
+      <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
+        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           ← All Aspects
         </Link>
-        <Link to="/weaver" className="text-neutral-400 hover:text-white text-sm">
+        <Link to="/weaver" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
           Open in Aspect Weaver →
         </Link>
       </div>

@@ -52,23 +52,23 @@ export function AspectDetail() {
         <div className="text-7xl mb-4">{aspect.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{aspect.name}</h1>
         <p className={`text-xl italic ${colors.text}`}>{aspect.keyword}</p>
-        <div className="flex items-center justify-center gap-4 mt-4 text-sm text-neutral-400">
+        <div className="flex items-center justify-center gap-4 mt-4 text-sm text-theme-text-secondary">
           <span className={`px-3 py-1 rounded-full ${colors.bg} ${colors.text}`}>
             {aspect.nature}
           </span>
-          <span className="px-3 py-1 bg-neutral-800/50 rounded-full">
+          <span className="px-3 py-1 bg-surface-overlay rounded-full">
             {aspect.angle}°
           </span>
-          <span className="px-3 py-1 bg-neutral-800/50 rounded-full">
+          <span className="px-3 py-1 bg-surface-overlay rounded-full">
             Orb: {aspect.orbRange}
           </span>
         </div>
       </header>
 
       {/* Visual Representation */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800 text-center">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle text-center">
         <h2 className="font-serif text-xl mb-4">Angular Relationship</h2>
-        <div className="inline-flex items-center justify-center w-48 h-48 rounded-full border-2 border-neutral-700 relative">
+        <div className="inline-flex items-center justify-center w-48 h-48 rounded-full border-2 border-theme-border-subtle relative">
           <div className="absolute top-2 left-1/2 -translate-x-1/2 w-3 h-3 bg-white rounded-full"></div>
           <div
             className={`absolute w-3 h-3 rounded-full ${colors.bg} border-2 ${colors.border}`}
@@ -78,33 +78,33 @@ export function AspectDetail() {
               transform: 'translate(-50%, -50%)',
             }}
           ></div>
-          <div className="text-2xl font-serif text-neutral-400">{aspect.angle}°</div>
+          <div className="text-2xl font-serif text-theme-text-secondary">{aspect.angle}°</div>
         </div>
-        <p className="text-neutral-400 mt-4 text-sm">{aspect.elementalPattern}</p>
+        <p className="text-theme-text-secondary mt-4 text-sm">{aspect.elementalPattern}</p>
       </section>
 
       {/* Explanation */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Understanding the {aspect.name}</h2>
-        <p className="text-neutral-300 leading-relaxed">{aspect.explanation}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{aspect.explanation}</p>
       </section>
 
       {/* Impact */}
       <section className={`rounded-xl p-6 border bg-gradient-to-br ${colors.gradient} ${colors.border}`}>
         <h2 className="font-serif text-xl mb-4">Impact & Expression</h2>
-        <p className="text-neutral-300 leading-relaxed">{aspect.impact}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{aspect.impact}</p>
       </section>
 
       {/* Integration Practice */}
-      <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-neutral-700">
+      <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Integration Practice</h2>
-        <p className="text-neutral-300 leading-relaxed italic">{aspect.integrationPractice}</p>
+        <p className="text-theme-text-secondary leading-relaxed italic">{aspect.integrationPractice}</p>
       </section>
 
       {/* Nature Explanation */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">About {aspect.nature} Aspects</h2>
-        <p className="text-neutral-300 leading-relaxed">
+        <p className="text-theme-text-secondary leading-relaxed">
           {aspect.nature === 'Harmonious' && (
             "Harmonious aspects (trines, sextiles) indicate natural flow and ease between planetary energies. These aspects often represent talents and gifts that come naturally, areas where energy flows with minimal friction."
           )}
@@ -118,14 +118,14 @@ export function AspectDetail() {
       </section>
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
-        <Link to={`/aspects/${prevAspect.id}`} className="text-neutral-400 hover:text-white transition-colors">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+        <Link to={`/aspects/${prevAspect.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &larr; {prevAspect.name}
         </Link>
-        <Link to="/aspects" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/aspects" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           All Aspects
         </Link>
-        <Link to={`/aspects/${nextAspect.id}`} className="text-neutral-400 hover:text-white transition-colors">
+        <Link to={`/aspects/${nextAspect.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           {nextAspect.name} &rarr;
         </Link>
       </nav>

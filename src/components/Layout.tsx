@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { SearchBar } from './SearchBar';
 import { Breadcrumb } from './Breadcrumb';
 import { AccountMenu } from './AccountMenu';
+import { ThemeToggle } from './ThemeToggle';
 import { useRouteAnnouncer } from '../hooks/useRouteAnnouncer';
 
 // Profile submenu - methodology-specific pages
@@ -99,8 +100,8 @@ function NavDropdown({
         onClick={onToggle}
         className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
           isActive
-            ? 'bg-neutral-800 text-white'
-            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+            ? 'bg-surface-raised text-theme-text-primary'
+            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
         }`}
       >
         <span className="mr-1" aria-hidden="true">{icon}</span>
@@ -122,17 +123,17 @@ function NavDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 mt-1 py-2 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl min-w-[200px] z-50"
+            className="absolute top-full left-0 mt-1 py-2 bg-surface-raised border border-theme-border rounded-lg shadow-2xl min-w-[200px] z-50"
           >
             {items.map((item) => (
               item.soon ? (
                 <div
                   key={item.path + item.label}
-                  className="flex items-center gap-3 px-4 py-2 text-sm text-neutral-600 cursor-not-allowed"
+                  className="flex items-center gap-3 px-4 py-2 text-sm text-theme-text-muted cursor-not-allowed"
                 >
                   <span aria-hidden="true">{item.icon}</span>
                   {item.label}
-                  <span className="ml-auto text-xs bg-neutral-800 px-1.5 py-0.5 rounded">Soon</span>
+                  <span className="ml-auto text-xs bg-surface-raised px-1.5 py-0.5 rounded">Soon</span>
                 </div>
               ) : (
                 <NavLink
@@ -142,8 +143,8 @@ function NavDropdown({
                   className={({ isActive }) =>
                     `flex items-center gap-3 px-4 py-2 text-sm transition-colors ${
                       isActive
-                        ? 'bg-neutral-800 text-white'
-                        : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                        ? 'bg-surface-raised text-theme-text-primary'
+                        : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                     }`
                   }
                 >
@@ -151,7 +152,7 @@ function NavDropdown({
                   <div className="flex flex-col">
                     <span>{item.label}</span>
                     {item.description && (
-                      <span className="text-neutral-500 text-xs">{item.description}</span>
+                      <span className="text-theme-text-tertiary text-xs">{item.description}</span>
                     )}
                   </div>
                 </NavLink>
@@ -184,8 +185,8 @@ function LibraryDropdown({
         onClick={onToggle}
         className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors flex items-center gap-1 ${
           isActive
-            ? 'bg-neutral-800 text-white'
-            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+            ? 'bg-surface-raised text-theme-text-primary'
+            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
         }`}
       >
         <span className="mr-1" aria-hidden="true">📚</span>
@@ -207,12 +208,12 @@ function LibraryDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-1/2 -translate-x-1/2 mt-1 py-4 px-4 bg-neutral-900 border border-neutral-800 rounded-lg shadow-xl z-50"
+            className="absolute top-full left-1/2 -translate-x-1/2 mt-1 py-4 px-4 bg-surface-raised border border-theme-border rounded-lg shadow-2xl z-50"
           >
             <div className="flex gap-8">
               {/* Astrology Column */}
               <div className="min-w-[140px]">
-                <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2 px-2">Astrology</p>
+                <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Astrology</p>
                 <div className="space-y-0.5">
                   {astrologyItems.map((item) => (
                     <NavLink
@@ -222,8 +223,8 @@ function LibraryDropdown({
                       className={({ isActive }) =>
                         `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
                           isActive
-                            ? 'bg-neutral-800 text-white'
-                            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                            ? 'bg-surface-raised text-theme-text-primary'
+                            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                         }`
                       }
                     >
@@ -236,7 +237,7 @@ function LibraryDropdown({
 
               {/* Human Design Column */}
               <div className="min-w-[140px]">
-                <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2 px-2">Human Design</p>
+                <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Human Design</p>
                 <div className="space-y-0.5">
                   {humanDesignItems.map((item) => (
                     <NavLink
@@ -246,8 +247,8 @@ function LibraryDropdown({
                       className={({ isActive }) =>
                         `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
                           isActive
-                            ? 'bg-neutral-800 text-white'
-                            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                            ? 'bg-surface-raised text-theme-text-primary'
+                            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                         }`
                       }
                     >
@@ -260,7 +261,7 @@ function LibraryDropdown({
 
               {/* Gene Keys Column */}
               <div className="min-w-[140px]">
-                <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2 px-2">Gene Keys</p>
+                <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Gene Keys</p>
                 <div className="space-y-0.5">
                   {geneKeysItems.map((item) => (
                     <NavLink
@@ -270,8 +271,8 @@ function LibraryDropdown({
                       className={({ isActive }) =>
                         `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
                           isActive
-                            ? 'bg-neutral-800 text-white'
-                            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                            ? 'bg-surface-raised text-theme-text-primary'
+                            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                         }`
                       }
                     >
@@ -284,7 +285,7 @@ function LibraryDropdown({
 
               {/* Wisdom Traditions Column */}
               <div className="min-w-[140px]">
-                <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2 px-2">Wisdom</p>
+                <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Wisdom</p>
                 <div className="space-y-0.5">
                   {wisdomTraditionItems.map((item) => (
                     <NavLink
@@ -294,8 +295,8 @@ function LibraryDropdown({
                       className={({ isActive }) =>
                         `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
                           isActive
-                            ? 'bg-neutral-800 text-white'
-                            : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                            ? 'bg-surface-raised text-theme-text-primary'
+                            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                         }`
                       }
                     >
@@ -336,11 +337,11 @@ export function Layout() {
   };
 
   return (
-    <div className="min-h-screen bg-neutral-950 text-neutral-100">
+    <div className="min-h-screen bg-surface-base text-theme-text-primary">
       {/* Skip navigation link — visible only on keyboard focus */}
       <a
         href="#main-content"
-        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-neutral-900 focus:text-white focus:rounded-lg focus:border focus:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-cyan-500"
+        className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-4 focus:py-2 focus:bg-surface-base focus:text-theme-text-primary focus:rounded-lg focus:border focus:border-theme-border focus:outline-none focus:ring-2 focus:ring-cyan-500"
       >
         Skip to main content
       </a>
@@ -363,7 +364,7 @@ export function Layout() {
       )}
 
       {/* Header */}
-      <header className="border-b border-neutral-800 bg-neutral-900/50 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-theme-border-subtle bg-surface-base sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -391,8 +392,8 @@ export function Layout() {
                 className={({ isActive }) =>
                   `px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
                     isActive
-                      ? 'bg-neutral-800 text-white'
-                      : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                      ? 'bg-surface-raised text-theme-text-primary'
+                      : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                   }`
                 }
               >
@@ -401,7 +402,7 @@ export function Layout() {
               </NavLink>
 
               {/* Divider */}
-              <div className="w-px h-6 bg-neutral-800 mx-2" />
+              <div className="w-px h-6 bg-surface-raised mx-2" />
 
               {/* Explore Dropdown */}
               <NavDropdown
@@ -429,12 +430,13 @@ export function Layout() {
                   `px-3 py-1.5 rounded-lg text-sm transition-colors border ${
                     isActive
                       ? 'border-amber-500/40 bg-amber-500/10 text-amber-300'
-                      : 'border-neutral-700/50 text-neutral-500 hover:text-neutral-300 hover:border-neutral-600'
+                      : 'border-theme-border/50 text-theme-text-tertiary hover:text-theme-text-secondary hover:border-theme-border'
                   }`
                 }
               >
                 ✧ Journal
               </NavLink>
+              <ThemeToggle />
               <AccountMenu />
               <SearchBar />
             </div>
@@ -448,7 +450,7 @@ export function Layout() {
       </header>
 
       {/* Mobile Navigation */}
-      <nav className="md:hidden border-b border-neutral-800 bg-neutral-900/30 overflow-x-auto">
+      <nav className="md:hidden border-b border-theme-border-subtle bg-surface-base overflow-x-auto">
         <div className="flex gap-1 px-4 py-2">
           {mobileNavItems.map((item) => (
             <NavLink
@@ -457,8 +459,8 @@ export function Layout() {
               className={({ isActive }) =>
                 `px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
                   isActive
-                    ? 'bg-neutral-800 text-white'
-                    : 'text-neutral-400 hover:text-white'
+                    ? 'bg-surface-raised text-theme-text-primary'
+                    : 'text-theme-text-secondary hover:text-theme-text-primary'
                 }`
               }
             >
@@ -468,7 +470,7 @@ export function Layout() {
           ))}
           <button
             onClick={() => setMobileMenuOpen(true)}
-            className="px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap text-neutral-500 hover:text-white"
+            className="px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap text-theme-text-tertiary hover:text-theme-text-primary"
           >
             More...
           </button>
@@ -491,14 +493,14 @@ export function Layout() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed right-0 top-0 bottom-0 w-72 bg-neutral-900 border-l border-neutral-800 z-50 md:hidden overflow-y-auto"
+              className="fixed right-0 top-0 bottom-0 w-72 bg-surface-raised border-l border-theme-border z-50 md:hidden overflow-y-auto"
             >
               <div className="p-4">
                 <div className="flex items-center justify-between mb-6">
                   <span className="font-serif text-lg">Menu</span>
                   <button
                     onClick={() => setMobileMenuOpen(false)}
-                    className="text-neutral-400 hover:text-white p-1"
+                    className="text-theme-text-secondary hover:text-theme-text-primary p-1"
                   >
                     <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -508,7 +510,7 @@ export function Layout() {
 
                 {/* Profile Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Your Profile</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Your Profile</p>
                   <div className="space-y-1">
                     {profileItems.map((item) => (
                       <NavLink
@@ -518,8 +520,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -539,7 +541,7 @@ export function Layout() {
                       `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                         isActive
                           ? 'bg-amber-900/50 text-amber-300 border border-amber-500/30'
-                          : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50 border border-neutral-700'
+                          : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-raised/50 border border-theme-border'
                       }`
                     }
                   >
@@ -553,7 +555,7 @@ export function Layout() {
                       `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                         isActive
                           ? 'bg-amber-900/50 text-amber-300 border border-amber-500/30'
-                          : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50 border border-neutral-700'
+                          : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-raised/50 border border-theme-border'
                       }`
                     }
                   >
@@ -564,7 +566,7 @@ export function Layout() {
 
                 {/* Explore Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Explore</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Explore</p>
                   <div className="space-y-1">
                     {exploreItems.map((item) => (
                       <NavLink
@@ -574,8 +576,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -588,7 +590,7 @@ export function Layout() {
 
                 {/* Astrology Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Astrology</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Astrology</p>
                   <div className="space-y-1">
                     {astrologyItems.map((item) => (
                       <NavLink
@@ -598,8 +600,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -612,7 +614,7 @@ export function Layout() {
 
                 {/* Human Design Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Human Design</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Human Design</p>
                   <div className="space-y-1">
                     {humanDesignItems.map((item) => (
                       <NavLink
@@ -622,8 +624,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -636,7 +638,7 @@ export function Layout() {
 
                 {/* Gene Keys Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Gene Keys</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Gene Keys</p>
                   <div className="space-y-1">
                     {geneKeysItems.map((item) => (
                       <NavLink
@@ -646,8 +648,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -660,7 +662,7 @@ export function Layout() {
 
                 {/* Wisdom Traditions Section */}
                 <div className="mb-6">
-                  <p className="text-xs text-neutral-500 uppercase tracking-wider mb-2">Wisdom Traditions</p>
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Wisdom Traditions</p>
                   <div className="space-y-1">
                     {wisdomTraditionItems.map((item) => (
                       <NavLink
@@ -670,8 +672,8 @@ export function Layout() {
                         className={({ isActive }) =>
                           `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
                             isActive
-                              ? 'bg-neutral-800 text-white'
-                              : 'text-neutral-400 hover:text-white hover:bg-neutral-800/50'
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
                           }`
                         }
                       >
@@ -706,8 +708,8 @@ export function Layout() {
 
       {/* Footer — hidden on contemplation page for full-screen experience */}
       {!location.pathname.startsWith('/contemplate') && (
-        <footer className="border-t border-neutral-800 py-8 mt-auto">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+        <footer className="border-t border-theme-border-subtle py-8 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-theme-text-tertiary text-sm">
             <p className="font-serif italic">
               "The stars don't determine our destiny—they illuminate the path."
             </p>

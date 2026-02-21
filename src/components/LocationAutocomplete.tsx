@@ -191,7 +191,7 @@ export function LocationAutocomplete({
           aria-activedescendant={activeIndex >= 0 ? getOptionId(activeIndex) : undefined}
           aria-autocomplete="list"
           autoComplete="off"
-          className="w-full px-4 py-2.5 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500 transition-colors text-sm pr-10"
+          className="w-full px-4 py-2.5 bg-surface-raised border border-theme-border-subtle rounded-lg text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500 transition-colors text-sm pr-10"
         />
 
         {/* Loading spinner */}
@@ -205,7 +205,7 @@ export function LocationAutocomplete({
         {!isLoading && (
           <div className="absolute right-3 top-1/2 -translate-y-1/2 pointer-events-none">
             <svg
-              className="h-4 w-4 text-neutral-500"
+              className="h-4 w-4 text-theme-text-tertiary"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
@@ -228,7 +228,7 @@ export function LocationAutocomplete({
           id={listboxId}
           role="listbox"
           aria-label="Location search results"
-          className="absolute z-50 mt-1 w-full max-h-60 overflow-auto rounded-lg border border-neutral-700 bg-neutral-800 shadow-xl"
+          className="absolute z-50 mt-1 w-full max-h-60 overflow-auto rounded-lg border border-theme-border-subtle bg-surface-raised shadow-xl"
         >
           {results.map((result, index) => {
             const { city, context } = formatResult(result);
@@ -249,12 +249,12 @@ export function LocationAutocomplete({
                 className={[
                   'cursor-pointer px-4 py-2.5 transition-colors text-sm',
                   isActive
-                    ? 'bg-purple-600/30 text-white'
-                    : 'text-neutral-300 hover:bg-neutral-700/60',
+                    ? 'bg-purple-600/30 text-theme-text-primary'
+                    : 'text-theme-text-secondary hover:bg-surface-interactive/60',
                 ].join(' ')}
               >
                 <div className="font-medium leading-tight">{city}</div>
-                <div className="text-xs text-neutral-500 leading-tight mt-0.5 truncate">
+                <div className="text-xs text-theme-text-tertiary leading-tight mt-0.5 truncate">
                   {context}
                 </div>
               </li>
@@ -265,7 +265,7 @@ export function LocationAutocomplete({
 
       {/* "No results" message */}
       {isOpen && results.length === 0 && !isLoading && query.trim().length >= 3 && (
-        <div className="absolute z-50 mt-1 w-full rounded-lg border border-neutral-700 bg-neutral-800 px-4 py-3 text-sm text-neutral-500 shadow-xl">
+        <div className="absolute z-50 mt-1 w-full rounded-lg border border-theme-border-subtle bg-surface-raised px-4 py-3 text-sm text-theme-text-tertiary shadow-xl">
           No locations found
         </div>
       )}

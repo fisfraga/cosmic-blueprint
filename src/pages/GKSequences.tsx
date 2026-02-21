@@ -13,7 +13,7 @@ export function GKSequences() {
           <span className="text-3xl">◇</span>
           <h1 className="font-serif text-3xl font-medium">The Golden Path</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The Golden Path is a structured journey through the Gene Keys, comprising three sequences
           that progressively unlock your purpose, open your heart, and release your prosperity.
           Each sequence builds upon the previous, creating a transformational pathway of self-illumination.
@@ -33,9 +33,9 @@ export function GKSequences() {
       ))}
 
       {/* The Journey */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">The Journey of Self-Illumination</h3>
-        <div className="space-y-4 text-sm text-neutral-400">
+        <div className="space-y-4 text-sm text-theme-text-secondary">
           <p>
             The Golden Path is designed to be contemplated over time. You don't rush through it—you allow
             each Gene Key to reveal its wisdom as you integrate the teachings into your daily life.
@@ -46,22 +46,22 @@ export function GKSequences() {
             Your purpose influences your relationships, which in turn shapes your prosperity.
             The sequences are not separate but different facets of the same diamond of your being.
           </p>
-          <div className="grid md:grid-cols-3 gap-4 pt-4 border-t border-neutral-800">
+          <div className="grid md:grid-cols-3 gap-4 pt-4 border-t border-theme-border-subtle">
             <div>
               <h4 className="font-medium text-emerald-300 mb-2">Physical Grounding</h4>
-              <p className="text-neutral-500">
+              <p className="text-theme-text-tertiary">
                 The Activation Sequence grounds you in your body and centers you in your unique purpose.
               </p>
             </div>
             <div>
               <h4 className="font-medium text-rose-300 mb-2">Emotional Opening</h4>
-              <p className="text-neutral-500">
+              <p className="text-theme-text-tertiary">
                 The Venus Sequence opens your heart by illuminating and transforming emotional patterns.
               </p>
             </div>
             <div>
               <h4 className="font-medium text-blue-300 mb-2">Mental Clarity</h4>
-              <p className="text-neutral-500">
+              <p className="text-theme-text-tertiary">
                 The Pearl Sequence clarifies your vision and aligns your gifts with service to the whole.
               </p>
             </div>
@@ -70,33 +70,33 @@ export function GKSequences() {
       </section>
 
       {/* How to Begin */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Beginning the Golden Path</h3>
         <div className="grid md:grid-cols-2 gap-6 text-sm">
           <div>
             <h4 className="font-medium text-genekey-300 mb-2">1. Know Your Profile</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               To walk the Golden Path, you need your Hologenetic Profile—calculated from your birth data.
               This reveals which Gene Keys appear in each sphere of your life.
             </p>
           </div>
           <div>
             <h4 className="font-medium text-genekey-300 mb-2">2. Start with Activation</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Begin with the Activation Sequence. Contemplate your four Prime Gifts: Life's Work,
               Evolution, Radiance, and Purpose. Let each Gene Key reveal its wisdom over time.
             </p>
           </div>
           <div>
             <h4 className="font-medium text-genekey-300 mb-2">3. Practice Contemplation</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Contemplation is gentle, sustained attention. You roll the Gene Key through your mind
               like a velvet case, waiting for the hidden catch to spring open and reveal its treasure.
             </p>
           </div>
           <div>
             <h4 className="font-medium text-genekey-300 mb-2">4. Trust the Process</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The Gene Keys work through you over time. There's no need to rush or force insights.
               The transformation happens naturally as you bring awareness to the shadows and gifts.
             </p>
@@ -108,27 +108,27 @@ export function GKSequences() {
       <section className="flex gap-4 flex-wrap">
         <Link
           to="/gene-keys/spheres"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">◎</span>
           <h4 className="font-medium mt-2">Spheres</h4>
-          <p className="text-sm text-neutral-400 mt-1">The 13 positions in your profile</p>
+          <p className="text-sm text-theme-text-secondary mt-1">The 13 positions in your profile</p>
         </Link>
         <Link
           to="/gene-keys"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">✧</span>
           <h4 className="font-medium mt-2">Gene Keys</h4>
-          <p className="text-sm text-neutral-400 mt-1">Explore all 64 Gene Keys</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Explore all 64 Gene Keys</p>
         </Link>
         <Link
           to="/profile"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">✦</span>
           <h4 className="font-medium mt-2">My Chart</h4>
-          <p className="text-sm text-neutral-400 mt-1">Your personal profile</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Your personal profile</p>
         </Link>
       </section>
     </div>
@@ -153,7 +153,7 @@ function SequenceOverviewCard({ sequence }: { sequence: GKSequenceEntity }) {
           <p className={`text-${colors.accent}-300 text-sm`}>Sequence {sequence.sequenceOrder}</p>
         </div>
       </div>
-      <p className="text-neutral-400 text-sm mb-4">{sequence.theme}</p>
+      <p className="text-theme-text-secondary text-sm mb-4">{sequence.theme}</p>
       <div className={`text-${colors.accent}-400 font-medium text-sm`}>
         "{sequence.primaryQuestion}"
       </div>
@@ -170,7 +170,7 @@ function SequenceDetailSection({ sequence }: { sequence: GKSequenceEntity }) {
     'pearl-sequence': { bg: 'bg-blue-500/5', border: 'border-blue-500/20', text: 'text-blue-400' },
   };
 
-  const colors = colorMap[sequence.id] || { bg: 'bg-neutral-500/5', border: 'border-neutral-500/20', text: 'text-neutral-400' };
+  const colors = colorMap[sequence.id] || { bg: 'bg-neutral-500/5', border: 'border-neutral-500/20', text: 'text-theme-text-secondary' };
 
   return (
     <section className={`${colors.bg} rounded-xl p-6 border ${colors.border}`}>
@@ -182,37 +182,37 @@ function SequenceDetailSection({ sequence }: { sequence: GKSequenceEntity }) {
         </div>
       </div>
 
-      <p className="text-neutral-400 mb-6">{sequence.description}</p>
+      <p className="text-theme-text-secondary mb-6">{sequence.description}</p>
 
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div>
-          <h4 className="font-medium text-neutral-300 mb-2">Primary Question</h4>
+          <h4 className="font-medium text-theme-text-secondary mb-2">Primary Question</h4>
           <p className={`${colors.text} italic`}>"{sequence.primaryQuestion}"</p>
         </div>
         <div>
-          <h4 className="font-medium text-neutral-300 mb-2">Contemplation Focus</h4>
-          <p className="text-neutral-400 text-sm">{sequence.contemplationFocus}</p>
+          <h4 className="font-medium text-theme-text-secondary mb-2">Contemplation Focus</h4>
+          <p className="text-theme-text-secondary text-sm">{sequence.contemplationFocus}</p>
         </div>
       </div>
 
       <div className="mb-6">
-        <h4 className="font-medium text-neutral-300 mb-2">Transformation</h4>
-        <p className="text-neutral-400 text-sm">{sequence.transformation}</p>
+        <h4 className="font-medium text-theme-text-secondary mb-2">Transformation</h4>
+        <p className="text-theme-text-secondary text-sm">{sequence.transformation}</p>
       </div>
 
-      <div className="border-t border-neutral-800/50 pt-6">
-        <h4 className="font-medium text-neutral-300 mb-3">Spheres in This Sequence</h4>
+      <div className="border-t border-theme-border-subtle/50 pt-6">
+        <h4 className="font-medium text-theme-text-secondary mb-3">Spheres in This Sequence</h4>
         <div className="grid md:grid-cols-2 gap-3">
           {spheres.map((sphere) => (
             <Link
               key={sphere.id}
               to={`/gene-keys/spheres/${sphere.id}`}
-              className="flex items-center gap-3 p-3 bg-neutral-900/50 rounded-lg hover:bg-neutral-800/50 transition-colors"
+              className="flex items-center gap-3 p-3 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
             >
               <span className={`${colors.text}`}>{sphere.symbol}</span>
               <div>
                 <div className="font-medium text-sm">{sphere.name}</div>
-                <div className="text-xs text-neutral-500">{sphere.planetarySource}</div>
+                <div className="text-xs text-theme-text-tertiary">{sphere.planetarySource}</div>
               </div>
             </Link>
           ))}
@@ -221,7 +221,7 @@ function SequenceDetailSection({ sequence }: { sequence: GKSequenceEntity }) {
 
       <div className="flex flex-wrap gap-2 mt-4">
         {sequence.keywords.map((keyword) => (
-          <span key={keyword} className="px-2 py-1 bg-neutral-800/50 rounded text-neutral-400 text-xs">
+          <span key={keyword} className="px-2 py-1 bg-surface-overlay rounded text-theme-text-secondary text-xs">
             {keyword}
           </span>
         ))}
