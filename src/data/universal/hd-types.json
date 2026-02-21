@@ -45,8 +45,7 @@
       "Dalai Lama",
       "Mozart",
       "Elvis Presley"
-    ],
-    "image": "/images/human-design/types/hd-type-generator.png"
+    ]
   },
   {
     "id": "hd-type-manifesting-generator",
@@ -94,8 +93,7 @@
       "Jimi Hendrix",
       "Marie Curie",
       "Clint Eastwood"
-    ],
-    "image": "/images/human-design/types/hd-type-manifesting-generator.png"
+    ]
   },
   {
     "id": "hd-type-projector",
@@ -141,8 +139,7 @@
       "Princess Diana",
       "Marilyn Monroe",
       "Nelson Mandela"
-    ],
-    "image": "/images/human-design/types/hd-type-projector.png"
+    ]
   },
   {
     "id": "hd-type-manifestor",
@@ -190,8 +187,7 @@
       "Johnny Depp",
       "George W. Bush",
       "Adolf Hitler"
-    ],
-    "image": "/images/human-design/types/hd-type-manifestor.png"
+    ]
   },
   {
     "id": "hd-type-reflector",
@@ -237,7 +233,6 @@
       "Fyodor Dostoevsky",
       "H.G. Wells",
       "Ammachi"
-    ],
-    "image": "/images/human-design/types/hd-type-reflector.png"
+    ]
   }
 ]

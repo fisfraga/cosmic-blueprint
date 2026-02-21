@@ -46,10 +46,14 @@
       "healthyExpression": "The healthy Line 1 has done their research and stands on a solid foundation of knowledge. They feel secure in their understanding and can share their expertise with confidence.",
       "unhealthyExpression": "The unhealthy Line 1 is perpetually insecure, always feeling they need to know more before they can act."
     },
-    "profiles": ["1/3", "1/4", "4/1", "5/1"],
+    "profiles": [
+      "1/3",
+      "1/4",
+      "4/1",
+      "5/1"
+    ],
     "relatedLineId": "line-4",
-    "harmonyDescription": "Line 1 forms a natural harmony with Line 4 - the foundation-builder and the networker/externalizer.",
-    "image": "/images/lines/line-1.png"
+    "harmonyDescription": "Line 1 forms a natural harmony with Line 4 - the foundation-builder and the networker/externalizer."
   },
   {
     "id": "line-2",
@@ -99,10 +103,14 @@
       "healthyExpression": "The healthy Line 2 honors their need for solitude while remaining open to being called out for the right opportunities.",
       "unhealthyExpression": "The unhealthy Line 2 either hides completely from the world or answers every call, regardless of whether it's correct for them."
     },
-    "profiles": ["2/4", "2/5", "5/2", "6/2"],
+    "profiles": [
+      "2/4",
+      "2/5",
+      "5/2",
+      "6/2"
+    ],
     "relatedLineId": "line-5",
-    "harmonyDescription": "Line 2 forms a natural harmony with Line 5 - the hermit with natural gifts and the heretic who universalizes.",
-    "image": "/images/lines/line-2.png"
+    "harmonyDescription": "Line 2 forms a natural harmony with Line 5 - the hermit with natural gifts and the heretic who universalizes."
   },
   {
     "id": "line-3",
@@ -152,10 +160,14 @@
       "healthyExpression": "The healthy Line 3 has made peace with their experimental nature. They understand that 'mistakes' are discoveries.",
       "unhealthyExpression": "The unhealthy Line 3 judges themselves harshly for their trials, feeling like a perpetual failure."
     },
-    "profiles": ["1/3", "3/5", "3/6", "6/3"],
+    "profiles": [
+      "1/3",
+      "3/5",
+      "3/6",
+      "6/3"
+    ],
     "relatedLineId": "line-6",
-    "harmonyDescription": "Line 3 forms a natural harmony with Line 6 - the experiential learner and the eventual role model who has integrated those experiences.",
-    "image": "/images/lines/line-3.png"
+    "harmonyDescription": "Line 3 forms a natural harmony with Line 6 - the experiential learner and the eventual role model who has integrated those experiences."
   },
   {
     "id": "line-4",
@@ -205,10 +217,14 @@
       "healthyExpression": "The healthy Line 4 has cultivated a network of genuine friendships. Opportunities flow naturally through these relationships.",
       "unhealthyExpression": "The unhealthy Line 4 either clings desperately to their network or isolates themselves when hurt."
     },
-    "profiles": ["1/4", "2/4", "4/6", "4/1"],
+    "profiles": [
+      "1/4",
+      "2/4",
+      "4/6",
+      "4/1"
+    ],
     "relatedLineId": "line-1",
-    "harmonyDescription": "Line 4 forms a natural harmony with Line 1 - the networker/externalizer and the foundation-builder.",
-    "image": "/images/lines/line-4.png"
+    "harmonyDescription": "Line 4 forms a natural harmony with Line 1 - the networker/externalizer and the foundation-builder."
   },
   {
     "id": "line-5",
@@ -258,10 +274,14 @@
       "healthyExpression": "The healthy Line 5 understands the projection field and chooses carefully when to step into the role of problem-solver.",
       "unhealthyExpression": "The unhealthy Line 5 either tries to meet every projection (burning out) or becomes paranoid about reputation."
     },
-    "profiles": ["2/5", "3/5", "5/1", "5/2"],
+    "profiles": [
+      "2/5",
+      "3/5",
+      "5/1",
+      "5/2"
+    ],
     "relatedLineId": "line-2",
-    "harmonyDescription": "Line 5 forms a natural harmony with Line 2 - the heretic who universalizes and the hermit with natural gifts.",
-    "image": "/images/lines/line-5.png"
+    "harmonyDescription": "Line 5 forms a natural harmony with Line 2 - the heretic who universalizes and the hermit with natural gifts."
   },
   {
     "id": "line-6",
@@ -328,9 +348,13 @@
         "description": "Stepping off the roof into embodied wisdom. Becoming a trusted role model and guide for others."
       }
     },
-    "profiles": ["3/6", "4/6", "6/2", "6/3"],
+    "profiles": [
+      "3/6",
+      "4/6",
+      "6/2",
+      "6/3"
+    ],
     "relatedLineId": "line-3",
-    "harmonyDescription": "Line 6 forms a natural harmony with Line 3 - the role model who has integrated experiences and the experiential learner.",
-    "image": "/images/lines/line-6.png"
+    "harmonyDescription": "Line 6 forms a natural harmony with Line 3 - the role model who has integrated experiences and the experiential learner."
   }
 ]

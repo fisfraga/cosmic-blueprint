@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import { getSignsInOrder } from '../data';
 import { useReducedMotion } from '../hooks/useReducedMotion';
+import { d3ElementColors } from '../styles/colors';
 import type { ZodiacSign } from '../types';
 
 interface CelestialMandalaProps {
@@ -11,12 +12,7 @@ interface CelestialMandalaProps {
   selectedSignId?: string;
 }
 
-const elementColors = {
-  fire: { fill: '#FF6B35', stroke: '#FFB088', glow: 'rgba(255, 107, 53, 0.4)' },
-  earth: { fill: '#2D5016', stroke: '#5D8A3D', glow: 'rgba(45, 80, 22, 0.4)' },
-  air: { fill: '#4A90D9', stroke: '#7BB3E8', glow: 'rgba(74, 144, 217, 0.4)' },
-  water: { fill: '#1A5F7A', stroke: '#3D8A9A', glow: 'rgba(26, 95, 122, 0.4)' },
-};
+const elementColors = d3ElementColors;
 
 export function CelestialMandala({
   size = 500,

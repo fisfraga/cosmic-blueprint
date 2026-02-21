@@ -13,15 +13,12 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { houses, signs } from '../data';
+import { d3SubstanceColors } from '../styles/colors';
 import type { House } from '../types';
 
 // ─── Substance color mapping ───────────────────────────────────────────────
 
-const SUBSTANCE_COLORS = {
-  yang: { fill: '#f59e0b', stroke: '#d97706', label: 'Sulphur', polarity: 'Yang' },   // amber
-  bridge: { fill: '#10b981', stroke: '#059669', label: 'Sal', polarity: 'Bridge' },    // emerald
-  yin: { fill: '#6366f1', stroke: '#4f46e5', label: 'Mercurius', polarity: 'Yin' },   // indigo
-};
+const SUBSTANCE_COLORS = d3SubstanceColors;
 
 // ─── House → substance polarity (via ruling sign) ─────────────────────────
 

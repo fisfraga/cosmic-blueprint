@@ -24,8 +24,7 @@
     "signs": {
       "correct": "Decisions feel solid over time. You don't regret choices made with emotional clarity.",
       "incorrect": "Impulsive decisions during emotional highs or lows lead to regret when the wave passes."
-    },
-    "image": "/images/human-design/authorities/hd-authority-emotional.png"
+    }
   },
   {
     "id": "hd-authority-sacral",
@@ -52,8 +51,7 @@
     "signs": {
       "correct": "Following gut responses leads to satisfaction and sustained energy.",
       "incorrect": "Overriding the Sacral with mental justifications leads to frustration and exhaustion."
-    },
-    "image": "/images/human-design/authorities/hd-authority-sacral.png"
+    }
   },
   {
     "id": "hd-authority-splenic",
@@ -80,8 +78,7 @@
     "signs": {
       "correct": "Following intuitive hits leads to safety, well-being, and being in the right place at the right time.",
       "incorrect": "Ignoring or missing splenic hits can lead to unhealthy situations, wrong timing, or danger."
-    },
-    "image": "/images/human-design/authorities/hd-authority-splenic.png"
+    }
   },
   {
     "id": "hd-authority-ego",
@@ -109,8 +106,7 @@
     "signs": {
       "correct": "Following heart's desires gives you willpower to complete things. You feel self-worth and material stability.",
       "incorrect": "Overcommitting or making promises your heart isn't in leads to broken commitments and depleted willpower."
-    },
-    "image": "/images/human-design/authorities/hd-authority-ego.png"
+    }
   },
   {
     "id": "hd-authority-self-projected",
@@ -137,8 +133,7 @@
     "signs": {
       "correct": "When speaking your truth, you feel aligned and clear about your direction.",
       "incorrect": "Making decisions without expressing them, or following others' advice over your own knowing, leads to identity confusion."
-    },
-    "image": "/images/human-design/authorities/hd-authority-self-projected.png"
+    }
   },
   {
     "id": "hd-authority-mental",
@@ -166,8 +161,7 @@
     "signs": {
       "correct": "The right environments and conversations bring natural clarity. Decisions feel right when processed this way.",
       "incorrect": "Rushing decisions or being in wrong environments leads to unclear, regrettable choices."
-    },
-    "image": "/images/human-design/authorities/hd-authority-mental.png"
+    }
   },
   {
     "id": "hd-authority-lunar",
@@ -194,7 +188,6 @@
     "signs": {
       "correct": "Decisions made after a full cycle feel clear and aligned. Life brings delightful surprises.",
       "incorrect": "Rushing decisions leads to disappointment and feeling lost or disconnected."
-    },
-    "image": "/images/human-design/authorities/hd-authority-lunar.png"
+    }
   }
 ]

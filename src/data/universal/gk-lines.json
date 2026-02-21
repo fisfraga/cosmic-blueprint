@@ -21,8 +21,7 @@
     "shadow": "At the Shadow frequency, Line 1 can manifest as excessive insecurity, over-research to the point of never acting, and a tendency to become lost in details rather than trusting intuition.",
     "inGeneKeys": "When a Gene Key appears with Line 1, it indicates that the contemplation should be approached from a foundational, investigative perspective. The journey begins with introspection and building understanding from the ground up.",
     "contemplationTheme": "What foundation am I building? What do I need to understand more deeply before I can move forward?",
-    "practicalGuidance": "Take time to research and understand before acting. Build security through knowledge. Trust that a solid foundation will support all future growth.",
-    "image": "/images/gene-keys/lines/gk-line-1.png"
+    "practicalGuidance": "Take time to research and understand before acting. Build security through knowledge. Trust that a solid foundation will support all future growth."
   },
   {
     "id": "gk-line-2",
@@ -46,8 +45,7 @@
     "shadow": "At the Shadow frequency, Line 2 can manifest as shyness, withdrawal, fear of being seen, or conversely, projection of one's gifts onto others while denying them in oneself.",
     "inGeneKeys": "When a Gene Key appears with Line 2, it suggests that the energy of this key may already be naturally present but unrecognized. The journey involves accepting the call to share one's natural gifts.",
     "contemplationTheme": "What natural gifts do I possess that I may not fully recognize? Who is calling me to share my talents?",
-    "practicalGuidance": "Allow yourself periods of solitude to develop your natural talents. Be open to being called out by life. Trust that your gifts will be recognized when the time is right.",
-    "image": "/images/gene-keys/lines/gk-line-2.png"
+    "practicalGuidance": "Allow yourself periods of solitude to develop your natural talents. Be open to being called out by life. Trust that your gifts will be recognized when the time is right."
   },
   {
     "id": "gk-line-3",
@@ -71,8 +69,7 @@
     "shadow": "At the Shadow frequency, Line 3 can manifest as repeated mistakes without learning, martyrdom, pessimism, or being stuck in patterns of self-sabotage.",
     "inGeneKeys": "When a Gene Key appears with Line 3, it indicates that the path of transformation will involve hands-on learning and possible mistakes. The journey embraces the learning process itself.",
     "contemplationTheme": "What am I learning through my experiences? How can I transform my mistakes into wisdom?",
-    "practicalGuidance": "Embrace your experiences, including mistakes, as essential to your growth. Share the wisdom you've gained through trial and error. Trust the process of experiential learning.",
-    "image": "/images/gene-keys/lines/gk-line-3.png"
+    "practicalGuidance": "Embrace your experiences, including mistakes, as essential to your growth. Share the wisdom you've gained through trial and error. Trust the process of experiential learning."
   },
   {
     "id": "gk-line-4",
@@ -96,8 +93,7 @@
     "shadow": "At the Shadow frequency, Line 4 can manifest as manipulation, over-dependency on others, fear of being alone, or using relationships for personal gain.",
     "inGeneKeys": "When a Gene Key appears with Line 4, it suggests that relationships and community will play a key role in the transformation. The journey involves building meaningful connections.",
     "contemplationTheme": "How do my relationships support my growth? What opportunities are emerging through my network?",
-    "practicalGuidance": "Cultivate genuine friendships and meaningful connections. Allow opportunities to arise naturally through your network. Be generous with your influence and resources.",
-    "image": "/images/gene-keys/lines/gk-line-4.png"
+    "practicalGuidance": "Cultivate genuine friendships and meaningful connections. Allow opportunities to arise naturally through your network. Be generous with your influence and resources."
   },
   {
     "id": "gk-line-5",
@@ -121,8 +117,7 @@
     "shadow": "At the Shadow frequency, Line 5 can manifest as savior complex, paranoia about projections, running from responsibility, or failing to meet the expectations that come with the projection field.",
     "inGeneKeys": "When a Gene Key appears with Line 5, it indicates that the expression of this key will have universal implications. The journey involves accepting the responsibility that comes with influence.",
     "contemplationTheme": "What practical solutions am I called to offer? How can I serve the collective through my unique gifts?",
-    "practicalGuidance": "Accept the projections placed on you as part of your path. Deliver practical, universal solutions. Remember that your reputation is built on meeting real needs.",
-    "image": "/images/gene-keys/lines/gk-line-5.png"
+    "practicalGuidance": "Accept the projections placed on you as part of your path. Deliver practical, universal solutions. Remember that your reputation is built on meeting real needs."
   },
   {
     "id": "gk-line-6",
@@ -163,7 +158,6 @@
         "ageRange": "50+",
         "description": "Emergence as a living example, sharing integrated wisdom with the world through authentic being."
       }
-    },
-    "image": "/images/gene-keys/lines/gk-line-6.png"
+    }
   }
 ]

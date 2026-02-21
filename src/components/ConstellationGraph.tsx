@@ -8,6 +8,7 @@ import {
   planets,
   signs,
 } from '../data';
+import { d3ElementFlatColors, d3EntityTypeColors, d3RelationshipColors } from '../styles/colors';
 import type { UniversalEntity, Relationship, RelationshipType, EntityType } from '../types';
 
 interface ConstellationGraphProps {
@@ -33,96 +34,11 @@ interface GraphLink extends d3.SimulationLinkDatum<GraphNode> {
 }
 
 // Element colors - used for elements and signs
-const elementColors: Record<string, string> = {
-  fire: '#FF6B35',
-  earth: '#4A7C23',
-  air: '#4A90D9',
-  water: '#1A8F9F',
-  // Alchemical elements
-  sulphur: '#FFB347',
-  salt: '#C0C0C0',
-  'mercury-alchemical': '#9B59B6',
-};
+const elementColors = d3ElementFlatColors;
 
-// Color mappings for entity types (categories without element association)
-const entityTypeColors: Record<EntityType, string> = {
-  planet: '#A67C52',      // Warm bronze for planets
-  sign: '#9B59B6',        // Fallback for signs (overridden by element)
-  house: '#5D7A8C',       // Muted steel blue for houses
-  element: '#E74C3C',     // Fallback (overridden by specific element)
-  aspect: '#1ABC9C',
-  configuration: '#F39C12',
-  dignity: '#95A5A6',
-  point: '#E91E63',
-  decan: '#8E44AD',
-  'fixed-star': '#ECF0F1',
-  // Human Design & Gene Keys
-  'hd-gate': '#F59E0B',    // Amber for Human Design
-  'hd-channel': '#EAB308', // Gold for HD channels
-  'hd-center': '#D97706',  // Darker amber for HD centers
-  'hd-type': '#FB923C',    // Orange for HD types
-  'hd-strategy': '#FBBF24', // Yellow for HD strategies
-  'hd-authority': '#F97316', // Dark orange for HD authorities
-  'hd-line': '#FCD34D',    // Light yellow for HD lines
-  'hd-profile': '#FDE68A', // Pale yellow for HD profiles
-  'hd-variable': '#FDBA74', // Light orange for HD variables
-  'gene-key': '#8B5CF6',   // Purple for Gene Keys
-  'gk-sphere': '#A855F7',  // Violet for GK spheres
-  'gk-line': '#C084FC',    // Light purple for GK lines
-  'gk-sequence': '#9333EA', // Deep purple for GK sequences
-  'codon-ring': '#7C3AED', // Darker purple for codon rings
-  'amino-acid': '#A78BFA', // Lighter purple for amino acids
-  'trigram': '#10B981',    // Teal for trigrams
-  // Unified entities
-  'line': '#6366F1',       // Indigo for unified lines (spans GK + HD)
-  // Wisdom Traditions
-  'numerology-number': '#06B6D4', // Cyan for numerology
-  'chakra': '#10B981',            // Emerald for chakras
-  'hermetic-principle': '#F59E0B', // Amber-gold for hermetic principles
-  // Profile-specific entity types
-  'profile-placement': '#F472B6',    // Pink for astrology placements
-  'profile-gk-placement': '#C084FC', // Light purple for GK placements
-  'profile-hd-placement': '#FDE047', // Yellow for HD placements
-  'profile-aspect': '#F9A8D4',       // Light pink for aspects
-  'profile-channel': '#FACC15',      // Gold for profile channels
-  'profile-configuration': '#FB7185', // Rose for configurations
-};
+const entityTypeColors = d3EntityTypeColors as Record<EntityType, string>;
 
-// Relationship type colors
-const relationshipColors: Record<RelationshipType, string> = {
-  RULES: '#FFD700',
-  RULES_HOUSE: '#FFD700',
-  HAS_DIGNITY: '#9B59B6',
-  HAS_ELEMENT: '#E74C3C',
-  HAS_MODALITY: '#95A5A6',
-  OPPOSES: '#E74C3C',
-  CONTAINS_DECAN: '#8E44AD',
-  RULED_BY: '#FFD700',
-  BELONGS_TO: '#8E44AD',
-  DECAN_RULED_BY: '#FFD700',
-  COMPLEMENTS: '#1ABC9C',
-  HOUSE_RULED_BY_SIGN: '#3498DB',
-  HOUSE_RULED_BY_PLANET: '#FFD700',
-  ELEMENT_CONTAINS: '#E74C3C',
-  ENERGIZES: '#2ECC71',
-  CHALLENGES: '#E74C3C',
-  FLOWS_WITH: '#3498DB',
-  PLACED_IN_SIGN: '#9B59B6',
-  PLACED_IN_HOUSE: '#3498DB',
-  ASPECTS: '#F39C12',
-  PART_OF_CONFIGURATION: '#F39C12',
-  HAS_ALCHEMICAL_ELEMENT: '#8E44AD',
-  // Human Design relationships
-  GATE_IN_CENTER: '#F59E0B',
-  GATE_CONNECTS_TO: '#D97706',
-  GATE_IN_SIGN: '#B45309',
-  GATE_CORRESPONDS_TO_GK: '#8B5CF6',
-  // Gene Keys relationships
-  GK_PROGRAMMING_PARTNER: '#7C3AED',
-  GK_IN_CODON_RING: '#6D28D9',
-  GK_ENCODES_AMINO_ACID: '#5B21B6',
-  GK_CORRESPONDS_TO_GATE: '#F59E0B',
-};
+const relationshipColors = d3RelationshipColors as Record<RelationshipType, string>;
 
 function getNodeColor(entity: UniversalEntity): string {
   // Elements use their own element color

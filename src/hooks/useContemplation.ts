@@ -261,19 +261,30 @@ export function useContemplation() {
   const [showSavedSessions, setShowSavedSessions] = useState(false);
   const [activePathwayStep, setActivePathwayStep] = useState<PathwayStep | null>(null);
   const [stepCompleted, setStepCompleted] = useState(false);
-  const [selectedEntity, setSelectedEntity] = useState<EntityInfo | null>(null);
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const [selectedModel, setSelectedModel] = useState<string | null>(null);
   const [copySuccess, setCopySuccess] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Handle entity click from chat messages
+  // Handle entity click — supports up to 2 simultaneous entities
   const handleEntityClick = useCallback((entity: EntityInfo) => {
-    setSelectedEntity(entity);
+    setSelectedEntities(prev => {
+      // Already showing this entity — no-op
+      if (prev.some(e => e.id === entity.id)) return prev;
+      // Less than 2 open — push
+      if (prev.length < 2) return [...prev, entity];
+      // 2 open — replace oldest (index 0)
+      return [prev[1], entity];
+    });
   }, []);
 
-  const handleCloseEntityPanel = useCallback(() => {
-    setSelectedEntity(null);
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
+
+  const handleCloseAllEntities = useCallback(() => {
+    setSelectedEntities([]);
   }, []);
 
   // Initialize from pathway context if present
@@ -783,9 +794,11 @@ ${context}`;
     stepCompleted,
 
     // Entity panel state
-    selectedEntity,
+    selectedEntities,
+    showEntityPanel: selectedEntities.length > 0,
     handleEntityClick,
-    handleCloseEntityPanel,
+    handleCloseEntity,
+    handleCloseAllEntities,
 
     // Model selection
     selectedModel,

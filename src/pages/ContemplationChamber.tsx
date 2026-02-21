@@ -1,10 +1,11 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
-import { EntityDetailPanel } from '../components/entities';
-import { useContemplation, CATEGORY_INFO } from '../hooks/useContemplation';
+import { EntityDetailPanel, EntityStack } from '../components/entities';
+import { useContemplation } from '../hooks/useContemplation';
 import {
   MessageThread,
   InputBar,
+  ChatHeader,
   CategorySelector,
   SessionSidebar,
   PathwayBanner,
@@ -26,42 +27,48 @@ export function ContemplationChamber() {
     );
   }
 
-  // Determine if we're showing the entity panel (for layout adjustment)
-  const showEntityPanel = c.selectedEntity !== null;
-
-  // Determine if we're in chat mode (affects layout)
   const isInChatMode = c.messages.length > 0;
 
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className={`w-full ${isInChatMode ? 'h-[calc(100vh-140px)] overflow-hidden' : ''}`}
+      className={`w-full ${isInChatMode ? 'h-[calc(100dvh-140px)] overflow-hidden' : ''}`}
     >
       {/* Main container with flex layout for side-by-side on desktop */}
-      <div className={`flex gap-6 transition-all duration-300 ${
-        showEntityPanel ? 'lg:max-w-6xl' : 'max-w-4xl'
-      } mx-auto ${isInChatMode ? 'h-full' : ''}`}>
+      <div className={`flex transition-all duration-300 ${
+        c.showEntityPanel ? '' : 'max-w-4xl'
+      } mx-auto ${isInChatMode ? 'h-full' : 'gap-6'}`}>
         {/* Main Content Area */}
         <div className={`flex-1 min-w-0 transition-all duration-300 ${
-          showEntityPanel ? 'lg:flex-[2]' : ''
-        } ${isInChatMode ? 'flex flex-col h-full overflow-hidden' : ''}`}>
-          {/* Header */}
-          <div className={`text-center ${isInChatMode ? 'mb-4 flex-shrink-0' : 'mb-8'}`}>
-            <div className="flex items-center justify-center gap-3">
-              <h1 className={`font-serif font-medium text-white ${isInChatMode ? 'text-2xl mb-1' : 'text-4xl mb-3'}`}>
-                Contemplation Chamber
-              </h1>
-              <span className={`px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-medium rounded border border-emerald-500/30 ${isInChatMode ? 'mb-1' : 'mb-3'}`}>
-                ILOS
-              </span>
+          isInChatMode ? 'flex flex-col h-full overflow-hidden' : ''
+        }`}>
+          {/* Header — slim ChatHeader in chat mode, full title otherwise */}
+          {isInChatMode && c.category ? (
+            <ChatHeader
+              category={c.category}
+              typeName={c.selectedTypeOption?.name}
+              onExportMarkdown={c.exportAsMarkdown}
+              onExportJson={c.exportAsJson}
+              onCopyMarkdown={c.copyAsMarkdown}
+              copySuccess={c.copySuccess}
+              onResetSession={c.resetSession}
+            />
+          ) : (
+            <div className="text-center mb-8">
+              <div className="flex items-center justify-center gap-3">
+                <h1 className="font-serif font-medium text-white text-4xl mb-3">
+                  Contemplation Chamber
+                </h1>
+                <span className="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs font-medium rounded border border-emerald-500/30 mb-3">
+                  ILOS
+                </span>
+              </div>
+              <p className="text-neutral-400 max-w-2xl mx-auto">
+                A sacred space for AI-guided reflection on your cosmic blueprint. Choose a wisdom system to begin.
+              </p>
             </div>
-            <p className="text-neutral-400 max-w-2xl mx-auto">
-              {c.messages.length === 0
-                ? 'A sacred space for AI-guided reflection on your cosmic blueprint. Choose a wisdom system to begin.'
-                : `${CATEGORY_INFO[c.category!].name} · ${c.selectedTypeOption?.name}`}
-            </p>
-          </div>
+          )}
 
           {/* Pathway Context Banner */}
           {c.activePathwayStep && c.pathwayContext && (
@@ -113,7 +120,7 @@ export function ContemplationChamber() {
               />
             )}
 
-            {/* Phase 5: Chat Interface */}
+            {/* Chat Interface */}
             {c.messages.length > 0 && (
               <motion.div
                 key="chat"
@@ -135,7 +142,7 @@ export function ContemplationChamber() {
 
                 {/* Error */}
                 {c.error && (
-                  <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg flex items-center justify-between">
+                  <div className="mb-4 p-3 bg-red-500/10 border border-red-500/30 rounded-lg flex items-center justify-between flex-shrink-0">
                     <div>
                       <p className="text-red-400 text-sm">{c.error}</p>
                       {c.isRetrying && (
@@ -160,11 +167,6 @@ export function ContemplationChamber() {
                   onSend={c.sendMessage}
                   onKeyDown={c.handleKeyDown}
                   inputRef={c.inputRef}
-                  onExportMarkdown={c.exportAsMarkdown}
-                  onExportJson={c.exportAsJson}
-                  onCopyMarkdown={c.copyAsMarkdown}
-                  copySuccess={c.copySuccess}
-                  onResetSession={c.resetSession}
                 />
               </motion.div>
             )}
@@ -199,28 +201,27 @@ export function ContemplationChamber() {
 
         </div>
 
-        {/* Entity Detail Sidebar - visible on desktop when entity selected */}
-        {showEntityPanel && (
-          <div className={`hidden lg:block lg:flex-1 lg:min-w-[320px] lg:max-w-[400px] ${isInChatMode ? 'h-full overflow-y-auto' : ''}`}>
-            <EntityDetailPanel
-              entity={c.selectedEntity}
-              onClose={c.handleCloseEntityPanel}
-              onEntityClick={c.handleEntityClick}
-              mode="sidebar"
-            />
-          </div>
+        {/* Entity Stack — desktop split-view with up to 2 entities */}
+        {isInChatMode && (
+          <EntityStack
+            entities={c.selectedEntities}
+            onCloseEntity={c.handleCloseEntity}
+            onEntityClick={c.handleEntityClick}
+          />
         )}
       </div>
 
-      {/* Entity Detail Panel - overlay mode for mobile/tablet */}
-      <div className="lg:hidden">
-        <EntityDetailPanel
-          entity={c.selectedEntity}
-          onClose={c.handleCloseEntityPanel}
-          onEntityClick={c.handleEntityClick}
-          mode="overlay"
-        />
-      </div>
+      {/* Entity Detail Panel — overlay mode for mobile/tablet */}
+      {c.selectedEntities.length > 0 && (
+        <div className="lg:hidden">
+          <EntityDetailPanel
+            entity={c.selectedEntities[0]}
+            onClose={() => c.handleCloseEntity(c.selectedEntities[0].id)}
+            onEntityClick={c.handleEntityClick}
+            mode="overlay"
+          />
+        </div>
+      )}
     </motion.div>
   );
 }

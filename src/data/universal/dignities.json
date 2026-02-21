@@ -4,399 +4,349 @@
     "planetId": "sun",
     "signId": "leo",
     "dignityType": "Domicile",
-    "description": "The Sun rules Leo, expressing its vital force with full radiance and creative power.",
-    "image": "/images/astrology/dignities/sun-domicile-leo.png"
+    "description": "The Sun rules Leo, expressing its vital force with full radiance and creative power."
   },
   {
     "id": "sun-exaltation-aries",
     "planetId": "sun",
     "signId": "aries",
     "dignityType": "Exaltation",
-    "description": "The Sun is exalted in Aries, where its initiative and leadership qualities shine brightest.",
-    "image": "/images/astrology/dignities/sun-exaltation-aries.png"
+    "description": "The Sun is exalted in Aries, where its initiative and leadership qualities shine brightest."
   },
   {
     "id": "sun-detriment-aquarius",
     "planetId": "sun",
     "signId": "aquarius",
     "dignityType": "Detriment",
-    "description": "In Aquarius, the Sun's individual expression must balance with collective concerns.",
-    "image": "/images/astrology/dignities/sun-detriment-aquarius.png"
+    "description": "In Aquarius, the Sun's individual expression must balance with collective concerns."
   },
   {
     "id": "sun-fall-libra",
     "planetId": "sun",
     "signId": "libra",
     "dignityType": "Fall",
-    "description": "In Libra, the Sun learns to shine through partnership and harmony rather than solo brilliance.",
-    "image": "/images/astrology/dignities/sun-fall-libra.png"
+    "description": "In Libra, the Sun learns to shine through partnership and harmony rather than solo brilliance."
   },
   {
     "id": "moon-domicile-cancer",
     "planetId": "moon",
     "signId": "cancer",
     "dignityType": "Domicile",
-    "description": "The Moon rules Cancer, fully expressing its nurturing, protective, and intuitive nature.",
-    "image": "/images/astrology/dignities/moon-domicile-cancer.png"
+    "description": "The Moon rules Cancer, fully expressing its nurturing, protective, and intuitive nature."
   },
   {
     "id": "moon-exaltation-taurus",
     "planetId": "moon",
     "signId": "taurus",
     "dignityType": "Exaltation",
-    "description": "The Moon is exalted in Taurus, where emotional security finds stable, sensual expression.",
-    "image": "/images/astrology/dignities/moon-exaltation-taurus.png"
+    "description": "The Moon is exalted in Taurus, where emotional security finds stable, sensual expression."
   },
   {
     "id": "moon-detriment-capricorn",
     "planetId": "moon",
     "signId": "capricorn",
     "dignityType": "Detriment",
-    "description": "In Capricorn, emotions must be structured and disciplined, challenging the Moon's flowing nature.",
-    "image": "/images/astrology/dignities/moon-detriment-capricorn.png"
+    "description": "In Capricorn, emotions must be structured and disciplined, challenging the Moon's flowing nature."
   },
   {
     "id": "moon-fall-scorpio",
     "planetId": "moon",
     "signId": "scorpio",
     "dignityType": "Fall",
-    "description": "In Scorpio, the Moon's emotions run deep and intense, requiring transformation.",
-    "image": "/images/astrology/dignities/moon-fall-scorpio.png"
+    "description": "In Scorpio, the Moon's emotions run deep and intense, requiring transformation."
   },
   {
     "id": "mercury-domicile-gemini",
     "planetId": "mercury",
     "signId": "gemini",
     "dignityType": "Domicile",
-    "description": "Mercury rules Gemini, expressing quick wit, curiosity, and versatile communication.",
-    "image": "/images/astrology/dignities/mercury-domicile-gemini.png"
+    "description": "Mercury rules Gemini, expressing quick wit, curiosity, and versatile communication."
   },
   {
     "id": "mercury-domicile-virgo",
     "planetId": "mercury",
     "signId": "virgo",
     "dignityType": "Domicile",
-    "description": "Mercury also rules Virgo, expressing analytical precision and practical intelligence.",
-    "image": "/images/astrology/dignities/mercury-domicile-virgo.png"
+    "description": "Mercury also rules Virgo, expressing analytical precision and practical intelligence."
   },
   {
     "id": "mercury-exaltation-virgo",
     "planetId": "mercury",
     "signId": "virgo",
     "dignityType": "Exaltation",
-    "description": "Mercury is exalted in Virgo, where its analytical powers reach peak refinement.",
-    "image": "/images/astrology/dignities/mercury-exaltation-virgo.png"
+    "description": "Mercury is exalted in Virgo, where its analytical powers reach peak refinement."
   },
   {
     "id": "mercury-detriment-sagittarius",
     "planetId": "mercury",
     "signId": "sagittarius",
     "dignityType": "Detriment",
-    "description": "In Sagittarius, Mercury's detail focus expands to big-picture thinking.",
-    "image": "/images/astrology/dignities/mercury-detriment-sagittarius.png"
+    "description": "In Sagittarius, Mercury's detail focus expands to big-picture thinking."
   },
   {
     "id": "mercury-detriment-pisces",
     "planetId": "mercury",
     "signId": "pisces",
     "dignityType": "Detriment",
-    "description": "In Pisces, Mercury's logic dissolves into intuition and imagination.",
-    "image": "/images/astrology/dignities/mercury-detriment-pisces.png"
+    "description": "In Pisces, Mercury's logic dissolves into intuition and imagination."
   },
   {
     "id": "mercury-fall-pisces",
     "planetId": "mercury",
     "signId": "pisces",
     "dignityType": "Fall",
-    "description": "Mercury falls in Pisces, where rational thought gives way to poetic perception.",
-    "image": "/images/astrology/dignities/mercury-fall-pisces.png"
+    "description": "Mercury falls in Pisces, where rational thought gives way to poetic perception."
   },
   {
     "id": "venus-domicile-taurus",
     "planetId": "venus",
     "signId": "taurus",
     "dignityType": "Domicile",
-    "description": "Venus rules Taurus, expressing sensual pleasure, material beauty, and earthly love.",
-    "image": "/images/astrology/dignities/venus-domicile-taurus.png"
+    "description": "Venus rules Taurus, expressing sensual pleasure, material beauty, and earthly love."
   },
   {
     "id": "venus-domicile-libra",
     "planetId": "venus",
     "signId": "libra",
     "dignityType": "Domicile",
-    "description": "Venus also rules Libra, expressing harmony, partnership, and aesthetic refinement.",
-    "image": "/images/astrology/dignities/venus-domicile-libra.png"
+    "description": "Venus also rules Libra, expressing harmony, partnership, and aesthetic refinement."
   },
   {
     "id": "venus-exaltation-pisces",
     "planetId": "venus",
     "signId": "pisces",
     "dignityType": "Exaltation",
-    "description": "Venus is exalted in Pisces, where love becomes unconditional and transcendent.",
-    "image": "/images/astrology/dignities/venus-exaltation-pisces.png"
+    "description": "Venus is exalted in Pisces, where love becomes unconditional and transcendent."
   },
   {
     "id": "venus-detriment-aries",
     "planetId": "venus",
     "signId": "aries",
     "dignityType": "Detriment",
-    "description": "In Aries, Venus must express love through action and independence.",
-    "image": "/images/astrology/dignities/venus-detriment-aries.png"
+    "description": "In Aries, Venus must express love through action and independence."
   },
   {
     "id": "venus-detriment-scorpio",
     "planetId": "venus",
     "signId": "scorpio",
     "dignityType": "Detriment",
-    "description": "In Scorpio, Venus experiences love as transformation, intensity, and depth.",
-    "image": "/images/astrology/dignities/venus-detriment-scorpio.png"
+    "description": "In Scorpio, Venus experiences love as transformation, intensity, and depth."
   },
   {
     "id": "venus-fall-virgo",
     "planetId": "venus",
     "signId": "virgo",
     "dignityType": "Fall",
-    "description": "Venus falls in Virgo, where love becomes service and beauty seeks perfection.",
-    "image": "/images/astrology/dignities/venus-fall-virgo.png"
+    "description": "Venus falls in Virgo, where love becomes service and beauty seeks perfection."
   },
   {
     "id": "mars-domicile-aries",
     "planetId": "mars",
     "signId": "aries",
     "dignityType": "Domicile",
-    "description": "Mars rules Aries, expressing pure initiative, courage, and competitive drive.",
-    "image": "/images/astrology/dignities/mars-domicile-aries.png"
+    "description": "Mars rules Aries, expressing pure initiative, courage, and competitive drive."
   },
   {
     "id": "mars-domicile-scorpio",
     "planetId": "mars",
     "signId": "scorpio",
     "dignityType": "Domicile",
-    "description": "Mars traditionally rules Scorpio, expressing strategic power and transformative force.",
-    "image": "/images/astrology/dignities/mars-domicile-scorpio.png"
+    "description": "Mars traditionally rules Scorpio, expressing strategic power and transformative force."
   },
   {
     "id": "mars-exaltation-capricorn",
     "planetId": "mars",
     "signId": "capricorn",
     "dignityType": "Exaltation",
-    "description": "Mars is exalted in Capricorn, where its energy is channeled into disciplined achievement.",
-    "image": "/images/astrology/dignities/mars-exaltation-capricorn.png"
+    "description": "Mars is exalted in Capricorn, where its energy is channeled into disciplined achievement."
   },
   {
     "id": "mars-detriment-libra",
     "planetId": "mars",
     "signId": "libra",
     "dignityType": "Detriment",
-    "description": "In Libra, Mars must balance assertion with diplomacy and partnership.",
-    "image": "/images/astrology/dignities/mars-detriment-libra.png"
+    "description": "In Libra, Mars must balance assertion with diplomacy and partnership."
   },
   {
     "id": "mars-detriment-taurus",
     "planetId": "mars",
     "signId": "taurus",
     "dignityType": "Detriment",
-    "description": "In Taurus, Mars's urgency slows to deliberate, persistent action.",
-    "image": "/images/astrology/dignities/mars-detriment-taurus.png"
+    "description": "In Taurus, Mars's urgency slows to deliberate, persistent action."
   },
   {
     "id": "mars-fall-cancer",
     "planetId": "mars",
     "signId": "cancer",
     "dignityType": "Fall",
-    "description": "Mars falls in Cancer, where direct action becomes protective and emotionally motivated.",
-    "image": "/images/astrology/dignities/mars-fall-cancer.png"
+    "description": "Mars falls in Cancer, where direct action becomes protective and emotionally motivated."
   },
   {
     "id": "jupiter-domicile-sagittarius",
     "planetId": "jupiter",
     "signId": "sagittarius",
     "dignityType": "Domicile",
-    "description": "Jupiter rules Sagittarius, expressing expansive wisdom, adventure, and philosophical vision.",
-    "image": "/images/astrology/dignities/jupiter-domicile-sagittarius.png"
+    "description": "Jupiter rules Sagittarius, expressing expansive wisdom, adventure, and philosophical vision."
   },
   {
     "id": "jupiter-domicile-pisces",
     "planetId": "jupiter",
     "signId": "pisces",
     "dignityType": "Domicile",
-    "description": "Jupiter traditionally rules Pisces, expressing spiritual expansion and boundless compassion.",
-    "image": "/images/astrology/dignities/jupiter-domicile-pisces.png"
+    "description": "Jupiter traditionally rules Pisces, expressing spiritual expansion and boundless compassion."
   },
   {
     "id": "jupiter-exaltation-cancer",
     "planetId": "jupiter",
     "signId": "cancer",
     "dignityType": "Exaltation",
-    "description": "Jupiter is exalted in Cancer, where growth is nurtured through emotional wisdom.",
-    "image": "/images/astrology/dignities/jupiter-exaltation-cancer.png"
+    "description": "Jupiter is exalted in Cancer, where growth is nurtured through emotional wisdom."
   },
   {
     "id": "jupiter-detriment-gemini",
     "planetId": "jupiter",
     "signId": "gemini",
     "dignityType": "Detriment",
-    "description": "In Gemini, Jupiter's broad vision scatters into multiple interests.",
-    "image": "/images/astrology/dignities/jupiter-detriment-gemini.png"
+    "description": "In Gemini, Jupiter's broad vision scatters into multiple interests."
   },
   {
     "id": "jupiter-detriment-virgo",
     "planetId": "jupiter",
     "signId": "virgo",
     "dignityType": "Detriment",
-    "description": "In Virgo, Jupiter's expansiveness is refined through practical analysis.",
-    "image": "/images/astrology/dignities/jupiter-detriment-virgo.png"
+    "description": "In Virgo, Jupiter's expansiveness is refined through practical analysis."
   },
   {
     "id": "jupiter-fall-capricorn",
     "planetId": "jupiter",
     "signId": "capricorn",
     "dignityType": "Fall",
-    "description": "Jupiter falls in Capricorn, where optimism meets pragmatic restraint.",
-    "image": "/images/astrology/dignities/jupiter-fall-capricorn.png"
+    "description": "Jupiter falls in Capricorn, where optimism meets pragmatic restraint."
   },
   {
     "id": "saturn-domicile-capricorn",
     "planetId": "saturn",
     "signId": "capricorn",
     "dignityType": "Domicile",
-    "description": "Saturn rules Capricorn, expressing mastery through discipline, structure, and patient achievement.",
-    "image": "/images/astrology/dignities/saturn-domicile-capricorn.png"
+    "description": "Saturn rules Capricorn, expressing mastery through discipline, structure, and patient achievement."
   },
   {
     "id": "saturn-domicile-aquarius",
     "planetId": "saturn",
     "signId": "aquarius",
     "dignityType": "Domicile",
-    "description": "Saturn traditionally rules Aquarius, expressing social structure and humanitarian vision.",
-    "image": "/images/astrology/dignities/saturn-domicile-aquarius.png"
+    "description": "Saturn traditionally rules Aquarius, expressing social structure and humanitarian vision."
   },
   {
     "id": "saturn-exaltation-libra",
     "planetId": "saturn",
     "signId": "libra",
     "dignityType": "Exaltation",
-    "description": "Saturn is exalted in Libra, where justice and balanced judgment reach their height.",
-    "image": "/images/astrology/dignities/saturn-exaltation-libra.png"
+    "description": "Saturn is exalted in Libra, where justice and balanced judgment reach their height."
   },
   {
     "id": "saturn-detriment-cancer",
     "planetId": "saturn",
     "signId": "cancer",
     "dignityType": "Detriment",
-    "description": "In Cancer, Saturn's structure meets emotional fluidity and family bonds.",
-    "image": "/images/astrology/dignities/saturn-detriment-cancer.png"
+    "description": "In Cancer, Saturn's structure meets emotional fluidity and family bonds."
   },
   {
     "id": "saturn-detriment-leo",
     "planetId": "saturn",
     "signId": "leo",
     "dignityType": "Detriment",
-    "description": "In Leo, Saturn's restraint challenges creative self-expression.",
-    "image": "/images/astrology/dignities/saturn-detriment-leo.png"
+    "description": "In Leo, Saturn's restraint challenges creative self-expression."
   },
   {
     "id": "saturn-fall-aries",
     "planetId": "saturn",
     "signId": "aries",
     "dignityType": "Fall",
-    "description": "Saturn falls in Aries, where patience confronts impulsive action.",
-    "image": "/images/astrology/dignities/saturn-fall-aries.png"
+    "description": "Saturn falls in Aries, where patience confronts impulsive action."
   },
   {
     "id": "uranus-domicile-aquarius",
     "planetId": "uranus",
     "signId": "aquarius",
     "dignityType": "Domicile",
-    "description": "Uranus rules Aquarius (modern), expressing revolutionary vision and collective awakening.",
-    "image": "/images/astrology/dignities/uranus-domicile-aquarius.png"
+    "description": "Uranus rules Aquarius (modern), expressing revolutionary vision and collective awakening."
   },
   {
     "id": "uranus-exaltation-scorpio",
     "planetId": "uranus",
     "signId": "scorpio",
     "dignityType": "Exaltation",
-    "description": "Uranus is exalted in Scorpio, where radical transformation reaches its power.",
-    "image": "/images/astrology/dignities/uranus-exaltation-scorpio.png"
+    "description": "Uranus is exalted in Scorpio, where radical transformation reaches its power."
   },
   {
     "id": "uranus-detriment-leo",
     "planetId": "uranus",
     "signId": "leo",
     "dignityType": "Detriment",
-    "description": "In Leo, Uranus's collective focus meets individual creative ego.",
-    "image": "/images/astrology/dignities/uranus-detriment-leo.png"
+    "description": "In Leo, Uranus's collective focus meets individual creative ego."
   },
   {
     "id": "uranus-fall-taurus",
     "planetId": "uranus",
     "signId": "taurus",
     "dignityType": "Fall",
-    "description": "Uranus falls in Taurus, where sudden change meets stubborn stability.",
-    "image": "/images/astrology/dignities/uranus-fall-taurus.png"
+    "description": "Uranus falls in Taurus, where sudden change meets stubborn stability."
   },
   {
     "id": "neptune-domicile-pisces",
     "planetId": "neptune",
     "signId": "pisces",
     "dignityType": "Domicile",
-    "description": "Neptune rules Pisces (modern), expressing transcendence, dreams, and spiritual dissolution.",
-    "image": "/images/astrology/dignities/neptune-domicile-pisces.png"
+    "description": "Neptune rules Pisces (modern), expressing transcendence, dreams, and spiritual dissolution."
   },
   {
     "id": "neptune-exaltation-cancer",
     "planetId": "neptune",
     "signId": "cancer",
     "dignityType": "Exaltation",
-    "description": "Neptune is exalted in Cancer, where imagination nurtures deep emotional healing.",
-    "image": "/images/astrology/dignities/neptune-exaltation-cancer.png"
+    "description": "Neptune is exalted in Cancer, where imagination nurtures deep emotional healing."
   },
   {
     "id": "neptune-detriment-virgo",
     "planetId": "neptune",
     "signId": "virgo",
     "dignityType": "Detriment",
-    "description": "In Virgo, Neptune's dreams meet practical analysis and discernment.",
-    "image": "/images/astrology/dignities/neptune-detriment-virgo.png"
+    "description": "In Virgo, Neptune's dreams meet practical analysis and discernment."
   },
   {
     "id": "neptune-fall-capricorn",
     "planetId": "neptune",
     "signId": "capricorn",
     "dignityType": "Fall",
-    "description": "Neptune falls in Capricorn, where spiritual ideals confront material reality.",
-    "image": "/images/astrology/dignities/neptune-fall-capricorn.png"
+    "description": "Neptune falls in Capricorn, where spiritual ideals confront material reality."
   },
   {
     "id": "pluto-domicile-scorpio",
     "planetId": "pluto",
     "signId": "scorpio",
     "dignityType": "Domicile",
-    "description": "Pluto rules Scorpio (modern), expressing death-rebirth cycles and profound transformation.",
-    "image": "/images/astrology/dignities/pluto-domicile-scorpio.png"
+    "description": "Pluto rules Scorpio (modern), expressing death-rebirth cycles and profound transformation."
   },
   {
     "id": "pluto-exaltation-aries",
     "planetId": "pluto",
     "signId": "aries",
     "dignityType": "Exaltation",
-    "description": "Pluto is exalted in Aries, where transformative power ignites new beginnings.",
-    "image": "/images/astrology/dignities/pluto-exaltation-aries.png"
+    "description": "Pluto is exalted in Aries, where transformative power ignites new beginnings."
   },
   {
     "id": "pluto-detriment-taurus",
     "planetId": "pluto",
     "signId": "taurus",
     "dignityType": "Detriment",
-    "description": "In Taurus, Pluto's transformative force meets attachment to stability.",
-    "image": "/images/astrology/dignities/pluto-detriment-taurus.png"
+    "description": "In Taurus, Pluto's transformative force meets attachment to stability."
   },
   {
     "id": "pluto-fall-libra",
     "planetId": "pluto",
     "signId": "libra",
     "dignityType": "Fall",
-    "description": "Pluto falls in Libra, where power dynamics play out in relationships.",
-    "image": "/images/astrology/dignities/pluto-fall-libra.png"
+    "description": "Pluto falls in Libra, where power dynamics play out in relationships."
   }
 ]

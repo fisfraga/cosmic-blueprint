@@ -9,8 +9,7 @@
     "keyword": "Pioneer",
     "description": "The purest expression of Aries energy. Raw initiative, courage, and the spark of new beginnings. Here Mars rules with full force, bringing bold action and pioneering spirit.",
     "giftExpression": "Natural leadership, fearless initiative, ability to start new ventures",
-    "shadowExpression": "Impulsivity, aggression, difficulty seeing projects through",
-    "image": "/images/astrology/decans/aries-1.png"
+    "shadowExpression": "Impulsivity, aggression, difficulty seeing projects through"
   },
   {
     "id": "aries-2",
@@ -22,8 +21,7 @@
     "keyword": "Champion",
     "description": "Aries energy infused with Leo's solar radiance. The warrior becomes a champion, fighting for recognition and creative self-expression.",
     "giftExpression": "Charismatic leadership, creative courage, generous heroism",
-    "shadowExpression": "Ego battles, need for constant validation, dramatic conflicts",
-    "image": "/images/astrology/decans/aries-2.png"
+    "shadowExpression": "Ego battles, need for constant validation, dramatic conflicts"
   },
   {
     "id": "aries-3",
@@ -35,8 +33,7 @@
     "keyword": "Explorer",
     "description": "Aries energy expanded by Jupiter's wisdom. The warrior becomes a philosophical explorer, seeking meaning through action and adventure.",
     "giftExpression": "Adventurous wisdom, optimistic courage, inspiring leadership",
-    "shadowExpression": "Overconfidence, reckless expansion, preachy aggression",
-    "image": "/images/astrology/decans/aries-3.png"
+    "shadowExpression": "Overconfidence, reckless expansion, preachy aggression"
   },
   {
     "id": "taurus-1",
@@ -48,8 +45,7 @@
     "keyword": "Cultivator",
     "description": "The purest expression of Taurus energy. Deep appreciation for beauty, comfort, and material security. Venus rules here with sensual grace.",
     "giftExpression": "Natural abundance consciousness, artistic sensibility, steadfast loyalty",
-    "shadowExpression": "Possessiveness, resistance to change, excessive materialism",
-    "image": "/images/astrology/decans/taurus-1.png"
+    "shadowExpression": "Possessiveness, resistance to change, excessive materialism"
   },
   {
     "id": "taurus-2",
@@ -61,8 +57,7 @@
     "keyword": "Craftsman",
     "description": "Taurus energy refined by Virgo's Mercury. The builder becomes a craftsman, applying practical intelligence to material creation.",
     "giftExpression": "Skilled craftsmanship, practical wisdom, productive efficiency",
-    "shadowExpression": "Perfectionism, critical materialism, worry about resources",
-    "image": "/images/astrology/decans/taurus-2.png"
+    "shadowExpression": "Perfectionism, critical materialism, worry about resources"
   },
   {
     "id": "taurus-3",
@@ -74,8 +69,7 @@
     "keyword": "Builder",
     "description": "Taurus energy structured by Saturn's discipline. The cultivator becomes a master builder, creating lasting material achievements.",
     "giftExpression": "Patient mastery, enduring success, wise resource management",
-    "shadowExpression": "Rigid materialism, fear of loss, excessive caution",
-    "image": "/images/astrology/decans/taurus-3.png"
+    "shadowExpression": "Rigid materialism, fear of loss, excessive caution"
   },
   {
     "id": "gemini-1",
@@ -87,8 +81,7 @@
     "keyword": "Messenger",
     "description": "The purest expression of Gemini energy. Quick wit, curiosity, and the dance of ideas. Mercury rules here with playful intelligence.",
     "giftExpression": "Brilliant communication, versatile thinking, social adaptability",
-    "shadowExpression": "Scattered focus, superficiality, nervous restlessness",
-    "image": "/images/astrology/decans/gemini-1.png"
+    "shadowExpression": "Scattered focus, superficiality, nervous restlessness"
   },
   {
     "id": "gemini-2",
@@ -100,8 +93,7 @@
     "keyword": "Diplomat",
     "description": "Gemini energy harmonized by Libra's Venus. The messenger becomes a diplomat, using words to create beauty and connection.",
     "giftExpression": "Charming communication, artistic expression, social grace",
-    "shadowExpression": "People-pleasing words, indecisive communication, superficial harmony",
-    "image": "/images/astrology/decans/gemini-2.png"
+    "shadowExpression": "People-pleasing words, indecisive communication, superficial harmony"
   },
   {
     "id": "gemini-3",
@@ -113,8 +105,7 @@
     "keyword": "Innovator",
     "description": "Gemini energy electrified by Aquarius's Uranus. The messenger becomes an innovator, channeling ideas that revolutionize thinking.",
     "giftExpression": "Genius insights, revolutionary ideas, humanitarian communication",
-    "shadowExpression": "Eccentric thinking, detached communication, mental rebellion",
-    "image": "/images/astrology/decans/gemini-3.png"
+    "shadowExpression": "Eccentric thinking, detached communication, mental rebellion"
   },
   {
     "id": "cancer-1",
@@ -126,8 +117,7 @@
     "keyword": "Nurturer",
     "description": "The purest expression of Cancer energy. Deep emotional sensitivity, protective instincts, and soul-level nurturing. The Moon rules here with maternal wisdom.",
     "giftExpression": "Profound empathy, protective strength, emotional intelligence",
-    "shadowExpression": "Moodiness, over-protection, emotional manipulation",
-    "image": "/images/astrology/decans/cancer-1.png"
+    "shadowExpression": "Moodiness, over-protection, emotional manipulation"
   },
   {
     "id": "cancer-2",
@@ -139,8 +129,7 @@
     "keyword": "Transformer",
     "description": "Cancer energy deepened by Scorpio's Pluto. The nurturer becomes a transformer, using emotional power to heal and regenerate.",
     "giftExpression": "Healing presence, emotional depth, transformative care",
-    "shadowExpression": "Emotional intensity, controlling nurturing, psychic manipulation",
-    "image": "/images/astrology/decans/cancer-2.png"
+    "shadowExpression": "Emotional intensity, controlling nurturing, psychic manipulation"
   },
   {
     "id": "cancer-3",
@@ -152,8 +141,7 @@
     "keyword": "Mystic",
     "description": "Cancer energy dissolved by Pisces's Neptune. The nurturer becomes a mystic, offering spiritual compassion and transcendent care.",
     "giftExpression": "Spiritual nurturing, artistic sensitivity, unconditional love",
-    "shadowExpression": "Emotional confusion, martyrdom, escapist caregiving",
-    "image": "/images/astrology/decans/cancer-3.png"
+    "shadowExpression": "Emotional confusion, martyrdom, escapist caregiving"
   },
   {
     "id": "leo-1",
@@ -165,8 +153,7 @@
     "keyword": "Sovereign",
     "description": "The purest expression of Leo energy. Radiant self-expression, creative vitality, and natural authority. The Sun rules here with royal magnificence.",
     "giftExpression": "Authentic self-expression, generous leadership, creative brilliance",
-    "shadowExpression": "Ego inflation, attention seeking, dramatic self-centeredness",
-    "image": "/images/astrology/decans/leo-1.png"
+    "shadowExpression": "Ego inflation, attention seeking, dramatic self-centeredness"
   },
   {
     "id": "leo-2",
@@ -178,8 +165,7 @@
     "keyword": "Inspirer",
     "description": "Leo energy expanded by Sagittarius's Jupiter. The sovereign becomes an inspirer, using creativity to spread wisdom and joy.",
     "giftExpression": "Inspiring leadership, generous teaching, optimistic creativity",
-    "shadowExpression": "Grandiosity, preachy self-expression, excessive pride",
-    "image": "/images/astrology/decans/leo-2.png"
+    "shadowExpression": "Grandiosity, preachy self-expression, excessive pride"
   },
   {
     "id": "leo-3",
@@ -191,8 +177,7 @@
     "keyword": "Warrior",
     "description": "Leo energy ignited by Aries's Mars. The sovereign becomes a warrior, courageously fighting for creative vision and personal honor.",
     "giftExpression": "Courageous creativity, protective leadership, passionate expression",
-    "shadowExpression": "Aggressive ego, combative pride, dominating presence",
-    "image": "/images/astrology/decans/leo-3.png"
+    "shadowExpression": "Aggressive ego, combative pride, dominating presence"
   },
   {
     "id": "virgo-1",
@@ -204,8 +189,7 @@
     "keyword": "Analyst",
     "description": "The purest expression of Virgo energy. Precise analysis, practical service, and dedication to improvement. Mercury rules here with discerning wisdom.",
     "giftExpression": "Analytical brilliance, devoted service, healing precision",
-    "shadowExpression": "Over-analysis, critical perfectionism, anxious worry",
-    "image": "/images/astrology/decans/virgo-1.png"
+    "shadowExpression": "Over-analysis, critical perfectionism, anxious worry"
   },
   {
     "id": "virgo-2",
@@ -217,8 +201,7 @@
     "keyword": "Master",
     "description": "Virgo energy structured by Capricorn's Saturn. The analyst becomes a master, applying discipline to achieve practical excellence.",
     "giftExpression": "Disciplined mastery, practical achievement, responsible service",
-    "shadowExpression": "Rigid perfectionism, cold efficiency, workaholic tendencies",
-    "image": "/images/astrology/decans/virgo-2.png"
+    "shadowExpression": "Rigid perfectionism, cold efficiency, workaholic tendencies"
   },
   {
     "id": "virgo-3",
@@ -230,8 +213,7 @@
     "keyword": "Healer",
     "description": "Virgo energy softened by Taurus's Venus. The analyst becomes a healer, bringing beauty and grace to practical service.",
     "giftExpression": "Healing arts, beautiful service, practical creativity",
-    "shadowExpression": "Critical aestheticism, material worry, sensual perfectionism",
-    "image": "/images/astrology/decans/virgo-3.png"
+    "shadowExpression": "Critical aestheticism, material worry, sensual perfectionism"
   },
   {
     "id": "libra-1",
@@ -243,8 +225,7 @@
     "keyword": "Harmonizer",
     "description": "The purest expression of Libra energy. Natural diplomacy, aesthetic refinement, and the quest for balance. Venus rules here with graceful equilibrium.",
     "giftExpression": "Natural diplomacy, artistic refinement, relationship wisdom",
-    "shadowExpression": "Indecision, people-pleasing, superficial harmony",
-    "image": "/images/astrology/decans/libra-1.png"
+    "shadowExpression": "Indecision, people-pleasing, superficial harmony"
   },
   {
     "id": "libra-2",
@@ -256,8 +237,7 @@
     "keyword": "Reformer",
     "description": "Libra energy electrified by Aquarius's Uranus. The harmonizer becomes a reformer, seeking justice through revolutionary change.",
     "giftExpression": "Social innovation, humanitarian justice, progressive partnerships",
-    "shadowExpression": "Rebellious relationships, detached diplomacy, erratic balance",
-    "image": "/images/astrology/decans/libra-2.png"
+    "shadowExpression": "Rebellious relationships, detached diplomacy, erratic balance"
   },
   {
     "id": "libra-3",
@@ -269,8 +249,7 @@
     "keyword": "Mediator",
     "description": "Libra energy quickened by Gemini's Mercury. The harmonizer becomes a mediator, using communication to create understanding.",
     "giftExpression": "Brilliant negotiation, intellectual harmony, communicative grace",
-    "shadowExpression": "Overthinking relationships, nervous diplomacy, scattered balance",
-    "image": "/images/astrology/decans/libra-3.png"
+    "shadowExpression": "Overthinking relationships, nervous diplomacy, scattered balance"
   },
   {
     "id": "scorpio-1",
@@ -282,8 +261,7 @@
     "keyword": "Alchemist",
     "description": "The purest expression of Scorpio energy. Profound transformation, psychological depth, and regenerative power. Pluto rules here with intense magnetism.",
     "giftExpression": "Transformative power, psychological insight, healing intensity",
-    "shadowExpression": "Obsessive control, destructive intensity, power manipulation",
-    "image": "/images/astrology/decans/scorpio-1.png"
+    "shadowExpression": "Obsessive control, destructive intensity, power manipulation"
   },
   {
     "id": "scorpio-2",
@@ -295,8 +273,7 @@
     "keyword": "Mystic",
     "description": "Scorpio energy dissolved by Pisces's Neptune. The alchemist becomes a mystic, using intuition to navigate the depths of consciousness.",
     "giftExpression": "Psychic sensitivity, spiritual transformation, compassionate depth",
-    "shadowExpression": "Delusional intensity, escapist obsession, martyred transformation",
-    "image": "/images/astrology/decans/scorpio-2.png"
+    "shadowExpression": "Delusional intensity, escapist obsession, martyred transformation"
   },
   {
     "id": "scorpio-3",
@@ -308,8 +285,7 @@
     "keyword": "Guardian",
     "description": "Scorpio energy softened by Cancer's Moon. The alchemist becomes a guardian, protecting through emotional transformation.",
     "giftExpression": "Protective transformation, emotional depth, nurturing intensity",
-    "shadowExpression": "Possessive protection, moody intensity, manipulative nurturing",
-    "image": "/images/astrology/decans/scorpio-3.png"
+    "shadowExpression": "Possessive protection, moody intensity, manipulative nurturing"
   },
   {
     "id": "sagittarius-1",
@@ -321,8 +297,7 @@
     "keyword": "Philosopher",
     "description": "The purest expression of Sagittarius energy. Expansive wisdom, adventurous spirit, and the quest for truth. Jupiter rules here with boundless optimism.",
     "giftExpression": "Philosophical wisdom, adventurous spirit, inspiring optimism",
-    "shadowExpression": "Overconfidence, preachy righteousness, restless wandering",
-    "image": "/images/astrology/decans/sagittarius-1.png"
+    "shadowExpression": "Overconfidence, preachy righteousness, restless wandering"
   },
   {
     "id": "sagittarius-2",
@@ -334,8 +309,7 @@
     "keyword": "Crusader",
     "description": "Sagittarius energy ignited by Aries's Mars. The philosopher becomes a crusader, fighting for beliefs and truth.",
     "giftExpression": "Courageous truth-seeking, passionate teaching, adventurous action",
-    "shadowExpression": "Aggressive preaching, impulsive wandering, combative beliefs",
-    "image": "/images/astrology/decans/sagittarius-2.png"
+    "shadowExpression": "Aggressive preaching, impulsive wandering, combative beliefs"
   },
   {
     "id": "sagittarius-3",
@@ -347,8 +321,7 @@
     "keyword": "Visionary",
     "description": "Sagittarius energy illuminated by Leo's Sun. The philosopher becomes a visionary, radiating wisdom through creative expression.",
     "giftExpression": "Creative wisdom, generous teaching, radiant optimism",
-    "shadowExpression": "Grandiose beliefs, dramatic preaching, ego-driven philosophy",
-    "image": "/images/astrology/decans/sagittarius-3.png"
+    "shadowExpression": "Grandiose beliefs, dramatic preaching, ego-driven philosophy"
   },
   {
     "id": "capricorn-1",
@@ -360,8 +333,7 @@
     "keyword": "Architect",
     "description": "The purest expression of Capricorn energy. Disciplined ambition, structural mastery, and patient achievement. Saturn rules here with authoritative wisdom.",
     "giftExpression": "Strategic mastery, disciplined achievement, wise authority",
-    "shadowExpression": "Cold ambition, rigid control, fear-based limitation",
-    "image": "/images/astrology/decans/capricorn-1.png"
+    "shadowExpression": "Cold ambition, rigid control, fear-based limitation"
   },
   {
     "id": "capricorn-2",
@@ -373,8 +345,7 @@
     "keyword": "Patron",
     "description": "Capricorn energy softened by Taurus's Venus. The architect becomes a patron, building beauty and cultivating lasting value.",
     "giftExpression": "Beautiful achievement, stable success, graceful authority",
-    "shadowExpression": "Material ambition, possessive success, rigid aesthetics",
-    "image": "/images/astrology/decans/capricorn-2.png"
+    "shadowExpression": "Material ambition, possessive success, rigid aesthetics"
   },
   {
     "id": "capricorn-3",
@@ -386,8 +357,7 @@
     "keyword": "Administrator",
     "description": "Capricorn energy refined by Virgo's Mercury. The architect becomes an administrator, applying practical intelligence to systematic achievement.",
     "giftExpression": "Efficient leadership, practical wisdom, systematic mastery",
-    "shadowExpression": "Over-analysis of success, critical authority, workaholic perfectionism",
-    "image": "/images/astrology/decans/capricorn-3.png"
+    "shadowExpression": "Over-analysis of success, critical authority, workaholic perfectionism"
   },
   {
     "id": "aquarius-1",
@@ -399,8 +369,7 @@
     "keyword": "Revolutionary",
     "description": "The purest expression of Aquarius energy. Revolutionary vision, humanitarian ideals, and the spark of genius. Uranus rules here with electric brilliance.",
     "giftExpression": "Genius innovation, humanitarian vision, revolutionary thinking",
-    "shadowExpression": "Rebellious detachment, eccentric alienation, cold idealism",
-    "image": "/images/astrology/decans/aquarius-1.png"
+    "shadowExpression": "Rebellious detachment, eccentric alienation, cold idealism"
   },
   {
     "id": "aquarius-2",
@@ -412,8 +381,7 @@
     "keyword": "Networker",
     "description": "Aquarius energy quickened by Gemini's Mercury. The revolutionary becomes a networker, spreading ideas through brilliant communication.",
     "giftExpression": "Innovative communication, intellectual networking, progressive ideas",
-    "shadowExpression": "Scattered idealism, nervous detachment, superficial revolution",
-    "image": "/images/astrology/decans/aquarius-2.png"
+    "shadowExpression": "Scattered idealism, nervous detachment, superficial revolution"
   },
   {
     "id": "aquarius-3",
@@ -425,8 +393,7 @@
     "keyword": "Idealist",
     "description": "Aquarius energy harmonized by Libra's Venus. The revolutionary becomes an idealist, seeking beauty in social progress.",
     "giftExpression": "Social harmony, artistic innovation, beautiful idealism",
-    "shadowExpression": "Detached relationships, cold aesthetics, impersonal love",
-    "image": "/images/astrology/decans/aquarius-3.png"
+    "shadowExpression": "Detached relationships, cold aesthetics, impersonal love"
   },
   {
     "id": "pisces-1",
@@ -438,8 +405,7 @@
     "keyword": "Dreamer",
     "description": "The purest expression of Pisces energy. Boundless compassion, spiritual sensitivity, and transcendent imagination. Neptune rules here with oceanic depth.",
     "giftExpression": "Spiritual sensitivity, artistic imagination, unconditional compassion",
-    "shadowExpression": "Escapist dreaming, boundary dissolution, victimhood patterns",
-    "image": "/images/astrology/decans/pisces-1.png"
+    "shadowExpression": "Escapist dreaming, boundary dissolution, victimhood patterns"
   },
   {
     "id": "pisces-2",
@@ -451,8 +417,7 @@
     "keyword": "Empath",
     "description": "Pisces energy nurtured by Cancer's Moon. The dreamer becomes an empath, using emotional sensitivity to heal and protect.",
     "giftExpression": "Healing empathy, protective intuition, nurturing spirituality",
-    "shadowExpression": "Emotional overwhelm, codependent compassion, moody escapism",
-    "image": "/images/astrology/decans/pisces-2.png"
+    "shadowExpression": "Emotional overwhelm, codependent compassion, moody escapism"
   },
   {
     "id": "pisces-3",
@@ -464,7 +429,6 @@
     "keyword": "Shaman",
     "description": "Pisces energy deepened by Scorpio's Pluto. The dreamer becomes a shaman, navigating between worlds to bring transformation.",
     "giftExpression": "Shamanic power, transformative spirituality, regenerative compassion",
-    "shadowExpression": "Obsessive spirituality, manipulative mysticism, destructive escapism",
-    "image": "/images/astrology/decans/pisces-3.png"
+    "shadowExpression": "Obsessive spirituality, manipulative mysticism, destructive escapism"
   }
 ]

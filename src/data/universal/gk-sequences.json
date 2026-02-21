@@ -49,8 +49,7 @@
         "planet": "Earth (Design)",
         "description": "Your higher calling and reason for being"
       }
-    ],
-    "image": "/images/gene-keys/sequences/activation-sequence.png"
+    ]
   },
   {
     "id": "venus-sequence",
@@ -108,8 +107,7 @@
         "planet": "Moon (Natal)",
         "description": "Your emotional foundation and inner security"
       }
-    ],
-    "image": "/images/gene-keys/sequences/venus-sequence.png"
+    ]
   },
   {
     "id": "pearl-sequence",
@@ -160,7 +158,6 @@
         "planet": "Calculated point",
         "description": "Your ultimate prosperity and contribution"
       }
-    ],
-    "image": "/images/gene-keys/sequences/pearl-sequence.png"
+    ]
   }
 ]

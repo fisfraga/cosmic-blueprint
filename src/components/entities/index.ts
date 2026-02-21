@@ -4,4 +4,5 @@
 export { EntityLink, EntityLinkInline } from './EntityLink';
 export { MessageContent, hasEntityReferences, extractEntityIds } from './MessageContent';
 export { EntityDetailPanel } from './EntityDetailPanel';
+export { EntityStack } from './EntityStack';
 export { EntityPicker } from './EntityPicker';

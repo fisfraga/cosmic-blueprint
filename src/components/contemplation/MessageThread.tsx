@@ -27,7 +27,7 @@ export function MessageThread({
   messagesEndRef,
 }: MessageThreadProps) {
   return (
-    <div className="flex-1 min-h-0 overflow-y-auto space-y-4 mb-4 pr-2">
+    <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain space-y-4 mb-4 pr-2">
       {messages.map((msg, i) => (
         <div
           key={i}

@@ -171,25 +171,23 @@ export const toolColors: Record<string, string> = {
 };
 
 // ------------------------------------
+// Semantic Colors (challenge/strength/neutral)
+// ------------------------------------
+
+export const semanticColors = {
+  challenge: { text: 'text-red-400', bg: 'bg-red-500/10', border: 'border-red-500/20' },
+  strength: { text: 'text-emerald-400', bg: 'bg-emerald-500/10', border: 'border-emerald-500/20' },
+  neutral: { text: 'text-gray-400', bg: 'bg-gray-500/10', border: 'border-gray-500/20' },
+} as const;
+
+// ------------------------------------
 // Spectrum Colors (Gene Keys)
 // ------------------------------------
 
 export const spectrumColors = {
-  shadow: {
-    text: 'text-red-400/80',
-    bg: 'bg-red-500/10',
-    border: 'border-red-500/20',
-  },
-  gift: {
-    text: 'text-genekey-400',
-    bg: 'bg-genekey-500/10',
-    border: 'border-genekey-500/20',
-  },
-  siddhi: {
-    text: 'text-yellow-400/80',
-    bg: 'bg-yellow-500/10',
-    border: 'border-yellow-500/20',
-  },
+  shadow: semanticColors.challenge,
+  gift: semanticColors.strength,
+  siddhi: { text: 'text-purple-400', bg: 'bg-purple-500/10', border: 'border-purple-500/20' },
 } as const;
 
 // ------------------------------------
@@ -207,6 +205,117 @@ export const planetElementMap: Record<string, ElementColorKey> = {
   uranus: 'air',
   saturn: 'earth',
   pluto: 'earth',
+};
+
+// ------------------------------------
+// D3 Visualization Colors (hex values for SVG/Canvas rendering)
+// Normalized to match Tailwind config values above
+// ------------------------------------
+
+export interface D3ElementColor {
+  fill: string;
+  stroke: string;
+  glow: string;
+}
+
+/** Element colors for D3 SVG fills/strokes (CelestialMandala, etc.) */
+export const d3ElementColors: Record<string, D3ElementColor> = {
+  fire:  { fill: '#FF6B35', stroke: '#FFB088', glow: 'rgba(255, 107, 53, 0.4)' },
+  earth: { fill: '#5A8A35', stroke: '#7DA85A', glow: 'rgba(90, 138, 53, 0.4)' },
+  air:   { fill: '#4A90D9', stroke: '#7BB3E8', glow: 'rgba(74, 144, 217, 0.4)' },
+  water: { fill: '#3A8BA0', stroke: '#5AABBF', glow: 'rgba(58, 139, 160, 0.4)' },
+};
+
+/** Flat element color map for simpler use (ConstellationGraph node colors) */
+export const d3ElementFlatColors: Record<string, string> = {
+  fire: '#FF6B35',
+  earth: '#5A8A35',
+  air: '#4A90D9',
+  water: '#3A8BA0',
+  sulphur: '#FFB347',
+  salt: '#C0C0C0',
+  'mercury-alchemical': '#9B59B6',
+};
+
+/** Entity type colors for D3 graph nodes (38 types) */
+export const d3EntityTypeColors: Record<string, string> = {
+  planet: '#A67C52',
+  sign: '#9B59B6',
+  house: '#5D7A8C',
+  element: '#E74C3C',
+  aspect: '#1ABC9C',
+  configuration: '#F39C12',
+  dignity: '#95A5A6',
+  point: '#E91E63',
+  decan: '#8E44AD',
+  'fixed-star': '#ECF0F1',
+  'hd-gate': '#F59E0B',
+  'hd-channel': '#EAB308',
+  'hd-center': '#D97706',
+  'hd-type': '#FB923C',
+  'hd-strategy': '#FBBF24',
+  'hd-authority': '#F97316',
+  'hd-line': '#FCD34D',
+  'hd-profile': '#FDE68A',
+  'hd-variable': '#FDBA74',
+  'gene-key': '#8B5CF6',
+  'gk-sphere': '#A855F7',
+  'gk-line': '#C084FC',
+  'gk-sequence': '#9333EA',
+  'codon-ring': '#7C3AED',
+  'amino-acid': '#A78BFA',
+  'trigram': '#10B981',
+  'line': '#6366F1',
+  'numerology-number': '#06B6D4',
+  'chakra': '#10B981',
+  'hermetic-principle': '#F59E0B',
+  'profile-placement': '#F472B6',
+  'profile-gk-placement': '#C084FC',
+  'profile-hd-placement': '#FDE047',
+  'profile-aspect': '#F9A8D4',
+  'profile-channel': '#FACC15',
+  'profile-configuration': '#FB7185',
+};
+
+/** Relationship type colors for D3 graph edges */
+export const d3RelationshipColors: Record<string, string> = {
+  RULES: '#FFD700',
+  RULES_HOUSE: '#FFD700',
+  HAS_DIGNITY: '#9B59B6',
+  HAS_ELEMENT: '#E74C3C',
+  HAS_MODALITY: '#95A5A6',
+  OPPOSES: '#E74C3C',
+  CONTAINS_DECAN: '#8E44AD',
+  RULED_BY: '#FFD700',
+  BELONGS_TO: '#8E44AD',
+  DECAN_RULED_BY: '#FFD700',
+  COMPLEMENTS: '#1ABC9C',
+  HOUSE_RULED_BY_SIGN: '#3498DB',
+  HOUSE_RULED_BY_PLANET: '#FFD700',
+  ELEMENT_CONTAINS: '#E74C3C',
+  ENERGIZES: '#2ECC71',
+  CHALLENGES: '#E74C3C',
+  FLOWS_WITH: '#3498DB',
+  PLACED_IN_SIGN: '#9B59B6',
+  PLACED_IN_HOUSE: '#3498DB',
+  ASPECTS: '#F39C12',
+  PART_OF_CONFIGURATION: '#F39C12',
+  HAS_ALCHEMICAL_ELEMENT: '#8E44AD',
+  GATE_IN_CENTER: '#F59E0B',
+  GATE_CONNECTS_TO: '#D97706',
+  GATE_IN_SIGN: '#B45309',
+  GATE_CORRESPONDS_TO_GK: '#8B5CF6',
+  GK_PROGRAMMING_PARTNER: '#7C3AED',
+  GK_IN_CODON_RING: '#6D28D9',
+  GK_ENCODES_AMINO_ACID: '#5B21B6',
+  GK_CORRESPONDS_TO_GATE: '#F59E0B',
+};
+
+/** Alchemical substance colors for HouseSubstanceWheel */
+export const d3SubstanceColors = {
+  yang:   { fill: '#F59E0B', stroke: '#D97706', label: 'Sulphur', polarity: 'Yang' as const },
+  bridge: { fill: '#10B981', stroke: '#059669', label: 'Sal',     polarity: 'Bridge' as const },
+  yin:    { fill: '#6366F1', stroke: '#4F46E5', label: 'Mercurius', polarity: 'Yin' as const },
 };
 
 // ------------------------------------

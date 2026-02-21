@@ -19,8 +19,7 @@
     "theme": "External expression of your purpose",
     "practicalGuidance": "This Gene Key describes the work you're here to do and the gifts you're here to share. When you align with your Life's Work, you feel on purpose. When you resist it, you may feel lost or unfulfilled. Contemplate the shadow, gift, and siddhi of this key to understand your life's creative expression.",
     "partnerSphere": "gk-sphere-evolution",
-    "relationship": "The Life's Work and Evolution spheres are complementary—one is your external expression, the other your internal evolution.",
-    "image": "/images/gene-keys/spheres/gk-sphere-lifes-work.png"
+    "relationship": "The Life's Work and Evolution spheres are complementary—one is your external expression, the other your internal evolution."
   },
   {
     "id": "gk-sphere-evolution",
@@ -42,8 +41,7 @@
     "theme": "Internal growth and evolution",
     "practicalGuidance": "This Gene Key shows what you're here to learn and integrate. It often represents the challenges you face that become your greatest teachers. Working with this key consciously accelerates your personal evolution.",
     "partnerSphere": "gk-sphere-lifes-work",
-    "relationship": "Evolution grounds and supports Life's Work—as you evolve internally, your external expression deepens.",
-    "image": "/images/gene-keys/spheres/gk-sphere-evolution.png"
+    "relationship": "Evolution grounds and supports Life's Work—as you evolve internally, your external expression deepens."
   },
   {
     "id": "gk-sphere-radiance",
@@ -65,8 +63,7 @@
     "theme": "Your natural emanation and presence",
     "practicalGuidance": "This key shows the frequency you naturally emanate when you're not trying. It's connected to your unconscious gifts that shine through you. Aligning with your Radiance allows your presence to naturally uplift others.",
     "partnerSphere": "gk-sphere-purpose",
-    "relationship": "Radiance and Purpose form a polarity—your natural radiance supports the discovery of your higher purpose.",
-    "image": "/images/gene-keys/spheres/gk-sphere-radiance.png"
+    "relationship": "Radiance and Purpose form a polarity—your natural radiance supports the discovery of your higher purpose."
   },
   {
     "id": "gk-sphere-purpose",
@@ -88,8 +85,7 @@
     "theme": "Your soul's evolutionary foundation",
     "practicalGuidance": "This Gene Key reveals the deeper purpose underlying your life. It may not feel conscious—it's the ground you stand on. Contemplating this key helps you align with your soul's intended foundation.",
     "partnerSphere": "gk-sphere-radiance",
-    "relationship": "Purpose grounds you while Radiance emanates—together they form the axis of your incarnation.",
-    "image": "/images/gene-keys/spheres/gk-sphere-purpose.png"
+    "relationship": "Purpose grounds you while Radiance emanates—together they form the axis of your incarnation."
   },
   {
     "id": "gk-sphere-attraction",
@@ -111,8 +107,7 @@
     "theme": "Unconscious relational patterns",
     "practicalGuidance": "This key reveals shadow patterns that unconsciously attract certain relationship dynamics. By becoming conscious of this sphere, you can transform unconscious attraction into conscious magnetism.",
     "partnerSphere": null,
-    "relationship": "Attraction is the entry point to the Venus Sequence, revealing the deepest layer of relationship patterns.",
-    "image": "/images/gene-keys/spheres/gk-sphere-attraction.png"
+    "relationship": "Attraction is the entry point to the Venus Sequence, revealing the deepest layer of relationship patterns."
   },
   {
     "id": "gk-sphere-iq",
@@ -134,8 +129,7 @@
     "theme": "Conscious relationship intelligence",
     "practicalGuidance": "This key shows how your conscious values influence your relationships. Working with this sphere helps you develop clearer understanding of what you truly value in connection.",
     "partnerSphere": "gk-sphere-eq",
-    "relationship": "IQ and EQ work together—relationship intelligence and emotional courage must both develop for healthy relating.",
-    "image": "/images/gene-keys/spheres/gk-sphere-iq.png"
+    "relationship": "IQ and EQ work together—relationship intelligence and emotional courage must both develop for healthy relating."
   },
   {
     "id": "gk-sphere-eq",
@@ -157,8 +151,7 @@
     "theme": "Emotional courage in relationships",
     "practicalGuidance": "This key shows your capacity for emotional bravery in relationships. Developing this sphere increases your ability to be authentic and take emotional risks with others.",
     "partnerSphere": "gk-sphere-iq",
-    "relationship": "EQ complements IQ—together they form the foundation for balanced relating with both appreciation and courage.",
-    "image": "/images/gene-keys/spheres/gk-sphere-eq.png"
+    "relationship": "EQ complements IQ—together they form the foundation for balanced relating with both appreciation and courage."
   },
   {
     "id": "gk-sphere-sq",
@@ -180,8 +173,7 @@
     "theme": "Spiritual dimension of relationships",
     "practicalGuidance": "This key reveals your unconscious capacity for spiritual depth in relationships. Working with this sphere opens you to experiencing love as a path to the divine.",
     "partnerSphere": null,
-    "relationship": "SQ represents the higher octave of relational love, bridging human and divine connection.",
-    "image": "/images/gene-keys/spheres/gk-sphere-sq.png"
+    "relationship": "SQ represents the higher octave of relational love, bridging human and divine connection."
   },
   {
     "id": "gk-sphere-core",
@@ -203,8 +195,7 @@
     "theme": "The deepest wound and greatest gift",
     "practicalGuidance": "This is the most sensitive sphere in your profile. Working with the Core requires gentle, patient contemplation. As you heal the Core wound, you unlock your deepest gifts and most authentic power.",
     "partnerSphere": null,
-    "relationship": "The Core is the center of the Venus Sequence—all other spheres orbit around and are affected by this one.",
-    "image": "/images/gene-keys/spheres/gk-sphere-core.png"
+    "relationship": "The Core is the center of the Venus Sequence—all other spheres orbit around and are affected by this one."
   },
   {
     "id": "gk-sphere-vocation",
@@ -226,8 +217,7 @@
     "theme": "Your calling in service to the world",
     "practicalGuidance": "This key shows how your unconscious drive manifests as service. Vocation is about finding the intersection between what drives you and what the world needs.",
     "partnerSphere": "gk-sphere-culture",
-    "relationship": "Vocation and Culture work together—your calling manifests through the cultural context you engage with.",
-    "image": "/images/gene-keys/spheres/gk-sphere-vocation.png"
+    "relationship": "Vocation and Culture work together—your calling manifests through the cultural context you engage with."
   },
   {
     "id": "gk-sphere-culture",
@@ -249,8 +239,7 @@
     "theme": "Your relationship to collective culture",
     "practicalGuidance": "This key reveals your unconscious connection to the collective field. Understanding this sphere helps you see how your individual journey serves cultural evolution.",
     "partnerSphere": "gk-sphere-vocation",
-    "relationship": "Culture provides the context in which your Vocation can flourish and have impact.",
-    "image": "/images/gene-keys/spheres/gk-sphere-culture.png"
+    "relationship": "Culture provides the context in which your Vocation can flourish and have impact."
   },
   {
     "id": "gk-sphere-brand",
@@ -272,8 +261,7 @@
     "theme": "Your authentic signature in the world",
     "practicalGuidance": "This key shows your natural 'brand'—the authentic quality that distinguishes you. It's not about creating an image but about allowing your true essence to be seen and recognized.",
     "partnerSphere": "gk-sphere-pearl",
-    "relationship": "Brand supports the Pearl—your authentic imprint is the vessel through which your prosperity flows.",
-    "image": "/images/gene-keys/spheres/gk-sphere-brand.png"
+    "relationship": "Brand supports the Pearl—your authentic imprint is the vessel through which your prosperity flows."
   },
   {
     "id": "gk-sphere-pearl",
@@ -295,8 +283,7 @@
     "theme": "The ultimate treasure of your existence",
     "practicalGuidance": "The Pearl is the fruit of your entire journey. It emerges naturally as you work with all the other spheres. True prosperity—material and spiritual—flows from embodying your Pearl.",
     "partnerSphere": "gk-sphere-brand",
-    "relationship": "The Pearl is the ultimate flowering—supported by your Brand and expressing the integration of your entire profile.",
-    "image": "/images/gene-keys/spheres/gk-sphere-pearl.png"
+    "relationship": "The Pearl is the ultimate flowering—supported by your Brand and expressing the integration of your entire profile."
   },
   {
     "id": "gk-sphere-creativity",
@@ -318,8 +305,7 @@
     "theme": "Your unique creative expression",
     "practicalGuidance": "This key shows where your creative genius lives. It often manifests as sudden insights or unconventional approaches. Allowing this sphere to express itself brings original contributions to the world.",
     "partnerSphere": null,
-    "relationship": "Creativity adds the spark of innovation to your profile.",
-    "image": "/images/gene-keys/spheres/gk-sphere-creativity.png"
+    "relationship": "Creativity adds the spark of innovation to your profile."
   },
   {
     "id": "gk-sphere-relating",
@@ -341,8 +327,7 @@
     "theme": "Your communication and relating style",
     "practicalGuidance": "This key shows how you naturally communicate and think. Understanding this sphere helps you refine your ability to connect and share ideas with others.",
     "partnerSphere": null,
-    "relationship": "Relating influences how you communicate your gifts to the world.",
-    "image": "/images/gene-keys/spheres/gk-sphere-relating.png"
+    "relationship": "Relating influences how you communicate your gifts to the world."
   },
   {
     "id": "gk-sphere-stability",
@@ -364,7 +349,6 @@
     "theme": "Your structural foundation",
     "practicalGuidance": "This key reveals the unconscious structures that support your life. Working with this sphere helps you build sustainable foundations for your work and relationships.",
     "partnerSphere": null,
-    "relationship": "Stability provides the structural foundation that supports all other spheres.",
-    "image": "/images/gene-keys/spheres/gk-sphere-stability.png"
+    "relationship": "Stability provides the structural foundation that supports all other spheres."
   }
 ]

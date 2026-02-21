@@ -13,7 +13,7 @@ export type { EmptyStateProps } from './EmptyState';
 export { ProfileCreationForm } from './ProfileCreationForm';
 export { FilterBar, getElementFilterColor, getAspectFilterColor, elementFilterColors, aspectNatureColors } from './FilterBar';
 export type { FilterOption, FilterBarProps } from './FilterBar';
-export { ProfileSelector } from './ProfileSelector';
+export { AccountMenu } from './AccountMenu';
 export { CosmicWeatherWidget } from './CosmicWeatherWidget';
 export { TransitCalendar } from './TransitCalendar';
 export { InsightSaveButton } from './InsightSaveButton';

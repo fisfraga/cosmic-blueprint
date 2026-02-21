@@ -3,8 +3,7 @@ import { Outlet, NavLink, useLocation } from 'react-router-dom';
 import { AnimatePresence, motion } from 'framer-motion';
 import { SearchBar } from './SearchBar';
 import { Breadcrumb } from './Breadcrumb';
-import { ProfileSelector } from './ProfileSelector';
-import { UserMenu } from './UserMenu';
+import { AccountMenu } from './AccountMenu';
 import { useRouteAnnouncer } from '../hooks/useRouteAnnouncer';
 
 // Profile submenu - methodology-specific pages
@@ -58,7 +57,7 @@ const geneKeysItems = [
   { path: '/gene-keys/spheres', label: 'Spheres', icon: '◎' },
   { path: '/gene-keys/sequences', label: 'Sequences', icon: '◇' },
   { path: '/gene-keys/codon-rings', label: 'Codon Rings', icon: '⬡' },
-  { path: '/gene-keys/lines', label: 'Lines', icon: '---' },
+  { path: '/gene-keys/lines', label: 'Lines', icon: '--' },
   { path: '/gene-keys/amino-acids', label: 'Amino Acids', icon: '🧬' },
   { path: '/gene-keys/trigrams', label: 'Trigrams', icon: '☰' },
 ];
@@ -436,8 +435,7 @@ export function Layout() {
               >
                 ✧ Journal
               </NavLink>
-              <ProfileSelector />
-              <UserMenu />
+              <AccountMenu />
               <SearchBar />
             </div>
 
@@ -706,15 +704,17 @@ export function Layout() {
         </AnimatePresence>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-neutral-800 py-8 mt-auto">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
-          <p className="font-serif italic">
-            "The stars don't determine our destiny—they illuminate the path."
-          </p>
-          <p className="mt-2">Cosmic Temple - A digital temple for self-discovery</p>
-        </div>
-      </footer>
+      {/* Footer — hidden on contemplation page for full-screen experience */}
+      {!location.pathname.startsWith('/contemplate') && (
+        <footer className="border-t border-neutral-800 py-8 mt-auto">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+            <p className="font-serif italic">
+              "The stars don't determine our destiny—they illuminate the path."
+            </p>
+            <p className="mt-2">Cosmic Temple - A digital temple for self-discovery</p>
+          </div>
+        </footer>
+      )}
     </div>
   );
 }
