@@ -65,6 +65,9 @@ jobs:
           port: ${{ secrets.VPS_PORT }}
           script: |
             set -e
+            echo "Logging into ghcr.io..."
+            echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u fisfraga --password-stdin
+
             echo "Pulling latest image..."
             docker pull ghcr.io/${{ github.repository }}:latest
 
