@@ -56,20 +56,22 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Setup SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.VPS_SSH_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
       - name: Deploy to VPS
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: 22
-          script: |
+        run: |
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} << 'ENDSSH'
             set -e
             echo "Logging into ghcr.io..."
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u fisfraga --password-stdin
 
             echo "Pulling latest image..."
-            docker pull ghcr.io/${{ github.repository }}:latest
+            docker pull ghcr.io/fisfraga/cosmic-blueprint:latest
 
             cd /opt/cosmic-blueprint
 
@@ -85,13 +87,9 @@ jobs:
             docker image prune -f
 
             echo "Deploy complete"
+          ENDSSH
 
       - name: Verify deployment
-        uses: appleboy/ssh-action@v1
-        with:
-          host: ${{ secrets.VPS_HOST }}
-          username: ${{ secrets.VPS_USER }}
-          key: ${{ secrets.VPS_SSH_KEY }}
-          port: 22
-          script: |
-            curl -sf http://localhost:3000/health | grep -q "ok" && echo "Health check passed" || exit 1
+        run: |
+          ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
+            "curl -sf http://localhost:3000/health | grep -q 'ok' && echo 'Health check passed' || exit 1"
