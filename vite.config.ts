@@ -203,12 +203,15 @@ export default defineConfig({
     rollupOptions: {
       output: {
         manualChunks: {
-          // Split vendor libraries into separate chunks
+          // Split vendor libraries into separate cacheable chunks
           'vendor-react': ['react', 'react-dom', 'react-router-dom'],
           'vendor-d3': ['d3', 'd3-force', 'd3-selection', 'd3-zoom', 'd3-drag'],
           'vendor-motion': ['framer-motion'],
+          'vendor-astronomy': ['astronomy-engine'],
+          'vendor-supabase': ['@supabase/supabase-js', '@supabase/auth-js', '@supabase/postgrest-js', '@supabase/realtime-js', '@supabase/storage-js', '@supabase/functions-js'],
         },
       },
     },
+    chunkSizeWarningLimit: 600,
   },
 })
