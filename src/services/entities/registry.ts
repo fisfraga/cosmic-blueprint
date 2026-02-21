@@ -349,16 +349,7 @@ class EntityRegistryService {
     });
 
     // Fixed Stars
-    (fixedStars as Array<{
-      id: string;
-      name: string;
-      constellation: string;
-      magnitude: number;
-      archetype?: string;
-      keywords?: string[];
-      giftExpression?: string;
-      zodiacPosition?: { sign: string };
-    }>).forEach((star) => {
+    Array.from(fixedStars.values()).forEach((star) => {
       this.register({
         id: star.id,
         type: 'fixed-star',

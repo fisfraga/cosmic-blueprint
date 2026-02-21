@@ -68,6 +68,7 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
       case 'gene-key': return `/gene-keys/${entity.id}`;
       case 'codon-ring': return `/gene-keys/codon-rings/${entity.id}`;
       case 'gk-sphere': return `/gene-keys/spheres/${entity.id}`;
+      case 'fixed-star': return `/fixed-stars/${entity.id}`;
       default: return '#';
     }
   };
@@ -113,6 +114,10 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
       case 'gk-sphere': {
         const sphere = entity as GKSphereEntity;
         return `${sphere.sequence} Sequence • ${sphere.theme}`;
+      }
+      case 'fixed-star': {
+        const star = entity as import('../types').FixedStar;
+        return `${star.constellation} • ${star.archetype}`;
       }
       default:
         return '';

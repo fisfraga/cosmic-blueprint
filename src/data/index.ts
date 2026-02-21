@@ -12,6 +12,7 @@ import type {
   Relationship,
   AstroPoint,
   UniversalEntity,
+  FixedStar,
   // Human Design & Gene Keys
   HDGate,
   HDChannel,
@@ -208,7 +209,9 @@ export const hdGkRelationships = hdGkRelationshipsData as Relationship[];
 
 export const relationships = relationshipsData as Relationship[];
 
-export const fixedStars = fixedStarsData;
+export const fixedStars = new Map<string, FixedStar>(
+  (fixedStarsData as FixedStar[]).map((s) => [s.id, s])
+);
 
 // Dignity type for the matrix
 export interface DignityEntry {
@@ -296,6 +299,7 @@ export function getEntityById(id: string): UniversalEntity | undefined {
     aspects.get(id) ||
     configurations.get(id) ||
     points.get(id) ||
+    fixedStars.get(id) ||
     // Human Design & Gene Keys
     hdGates.get(id) ||
     hdChannels.get(id) ||
@@ -510,6 +514,52 @@ export function getMajorAspects(): Aspect[] {
 }
 
 // ------------------------------------
+// Fixed Stars Utilities
+// ------------------------------------
+
+/**
+ * Get all fixed stars sorted by ecliptic longitude (0–360°)
+ */
+export function getFixedStarsInOrder(): FixedStar[] {
+  return Array.from(fixedStars.values()).sort(
+    (a, b) => a.eclipticLongitude - b.eclipticLongitude
+  );
+}
+
+/**
+ * Get the 4 Royal Stars (Regulus, Aldebaran, Antares, Fomalhaut)
+ */
+export function getRoyalStars(): FixedStar[] {
+  return Array.from(fixedStars.values()).filter((s) => s.isRoyalStar);
+}
+
+/**
+ * Get all 15 Behenian fixed stars
+ */
+export function getBehenianStars(): FixedStar[] {
+  return Array.from(fixedStars.values()).filter((s) => s.isBehenian);
+}
+
+/**
+ * Get fixed stars by constellation name
+ */
+export function getFixedStarsByConstellation(constellation: string): FixedStar[] {
+  const lower = constellation.toLowerCase();
+  return Array.from(fixedStars.values()).filter(
+    (s) => s.constellation.toLowerCase() === lower
+  );
+}
+
+/**
+ * Get fixed stars by planetary nature (e.g. 'Mars', 'Jupiter', 'Venus')
+ */
+export function getFixedStarsByNature(nature: string): FixedStar[] {
+  return Array.from(fixedStars.values()).filter((s) =>
+    s.nature.includes(nature)
+  );
+}
+
+// ------------------------------------
 // Statistics & Aggregations
 // ------------------------------------
 
@@ -525,6 +575,7 @@ export function getEntityCounts(): Record<string, number> {
     aspects: aspects.size,
     configurations: configurations.size,
     points: points.size,
+    fixedStars: fixedStars.size,
     relationships: relationships.length,
     // Human Design & Gene Keys
     hdGates: hdGates.size,
@@ -565,6 +616,7 @@ export function getAllEntities(): UniversalEntity[] {
     ...Array.from(aspects.values()),
     ...Array.from(configurations.values()),
     ...Array.from(points.values()),
+    ...Array.from(fixedStars.values()),
     // Human Design & Gene Keys
     ...Array.from(hdGates.values()),
     ...Array.from(hdChannels.values()),

@@ -222,16 +222,16 @@ export interface D3ElementColor {
 export const d3ElementColors: Record<string, D3ElementColor> = {
   fire:  { fill: '#FF6B35', stroke: '#FFB088', glow: 'rgba(255, 107, 53, 0.4)' },
   earth: { fill: '#5A8A35', stroke: '#7DA85A', glow: 'rgba(90, 138, 53, 0.4)' },
-  air:   { fill: '#4A90D9', stroke: '#7BB3E8', glow: 'rgba(74, 144, 217, 0.4)' },
-  water: { fill: '#3A8BA0', stroke: '#5AABBF', glow: 'rgba(58, 139, 160, 0.4)' },
+  air:   { fill: '#22B0C8', stroke: '#80DCE8', glow: 'rgba(34, 176, 200, 0.4)' },
+  water: { fill: '#2E65C2', stroke: '#7BA8E8', glow: 'rgba(46, 101, 194, 0.4)' },
 };
 
 /** Flat element color map for simpler use (ConstellationGraph node colors) */
 export const d3ElementFlatColors: Record<string, string> = {
   fire: '#FF6B35',
   earth: '#5A8A35',
-  air: '#4A90D9',
-  water: '#3A8BA0',
+  air: '#22B0C8',
+  water: '#2E65C2',
   sulphur: '#FFB347',
   salt: '#C0C0C0',
   'mercury-alchemical': '#9B59B6',

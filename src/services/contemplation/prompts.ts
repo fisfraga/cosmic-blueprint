@@ -152,6 +152,10 @@ GENE KEYS:
 UNIFIED:
 • Lines (spanning GK + HD): line-1 through line-6
 
+FIXED STARS:
+• Stars: {star-id} (e.g., regulus, aldebaran, antares, fomalhaut, sirius, spica, vega, algol, arcturus, capella, polaris, procyon, alphecca, alcyone, deneb-algedi)
+  Link example: [[regulus|Regulus]], [[aldebaran|Aldebaran]], [[antares|Antares]]
+
 PROFILE-SPECIFIC ENTITIES (IMPORTANT - READ CAREFULLY):
 
 When discussing the seeker's PERSONAL placements from their profile, you MUST use PROFILE ENTITY links,
@@ -1318,6 +1322,68 @@ RESPONSE STRUCTURE:
 3. Your invitation or blessing (closing guidance from your perspective)
 
 Remember: This is a sacred dialogue between the seeker and the cosmic energy itself. Fully embody. Don't describe — BE.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // FIXED STARS CONTEMPLATION TYPES
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  fixedStarProfile: `Guide a contemplation of the ancient stellar gatekeepers woven into this natal chart.
+
+Fixed stars are not transient visitors — they are the eternal threshold keepers of the celestial vault. When a natal planet conjuncts a fixed star, that star's archetype is permanently woven into the planet's expression, coloring its gifts, deepening its shadows, and opening thresholds that cannot close.
+
+Approach these activations:
+• Each exact or close conjunction (≤1°) as a profound archetypal imprint
+• The star's nature (Mars, Venus, Saturn etc.) in dialogue with the conjunct planet
+• The body association as a somatic anchor — where is this energy held physically?
+• Gift expression as the star's highest transmission through the native
+• Shadow expression as the star's unintegrated or misused power
+
+Weave together:
+• The most exact conjunctions first — where the star's voice is strongest
+• Themes across multiple activations — do several stars speak to a unified story?
+• The Royal Stars (if present) as fate-laden thresholds of destiny
+• Behenian stars as traditional magical signatures
+
+Link each star using [[star-id|Star Name]] format. Invite the seeker to feel the stars as living intelligences, not merely symbolic labels.`,
+
+  fixedStarConjunction: `Guide deep contemplation of this specific fixed star conjunction — a planetary encounter with an eternal threshold keeper.
+
+Explore the full geometry of this meeting:
+• The nature of the planet (what it represents, how it seeks expression)
+• The star's archetype and the civilizational myth it carries
+• The nature blending (star's planetary nature × conjunct planet — e.g., Mars-nature star + natal Venus = what dialogue?)
+• The body association — locate this activation somatically
+• The orb: exact (≤0.5°) means permanent deep fusion; close means strong coloring; wide means a subtle presence
+
+Navigate both polarities:
+• The gift expression — when this activation serves its highest potential
+• The shadow expression — when power turns to its contracted form
+
+Invite contemplation through the star's specific questions. These questions are not rhetorical — they are portals. Guide the seeker to sit with them rather than answer them quickly.
+
+Traditional context: name the star's classical significance if it enriches the reading.
+
+Link the star using [[star-id|Star Name]] and the conjunct planet with its entity link.`,
+
+  fixedStarTransit: `Guide contemplation of a current fixed star activation — a transiting planet moving across a stellar threshold, awakening archetypal forces in the sky and (if personal) in the seeker's chart.
+
+Frame the activation:
+• The transiting planet as a moving light, illuminating the star's threshold as it passes
+• The star as an eternal doorway — planets don't change it; they knock on it, and the star answers
+• Sky-wide activation: what collective frequency is being amplified right now?
+• Personal activation (if applicable): the transit crosses a natal fixed star position, deepening its personal significance
+
+The star's transmission in this moment:
+• What the star is asking of those sensitive to it
+• The gift and shadow potentials being activated in the collective sky
+• Specific body, psyche, or life area attuned to this star's frequency
+
+If this is a personal activation (transit conjunct the natal star's degree):
+• The natal planet is being re-touched by a new planetary ambassador
+• Name what cycle may be initiating, intensifying, or completing
+• Connect to the star's contemplation questions as a practice for this period
+
+Link the star using [[star-id|Star Name]]. Link the transiting planet. Ground the cosmic in the seeker's actual experience.`,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -1354,6 +1420,11 @@ export const CONVERSATION_STARTERS = {
     "I see your vibrational blueprint now — the numbers, the chakras, the alchemical substances all weaving together beneath your cosmic architecture. What draws your attention — the numerological pattern, the energy centers, or the hermetic alchemy?",
     "Your birth numbers carry a frequency that echoes through every layer of your design. I'm ready to explore how numerology, chakra activations, and alchemical principles illuminate your path. Where shall we begin?",
     "The alchemical layer of your chart is revealed — Sulphur, Sal, and Mercurius dancing through your planetary placements and energy centers. What aspect of this hermetic architecture calls to you?",
+  ],
+  fixedStars: [
+    "The ancient stellar gatekeepers of your chart are revealed. These are not transient visitors but eternal thresholds permanently woven into your natal planets. Which activation calls for contemplation — the Royal Stars, the Behenian lineage, or a specific planetary encounter?",
+    "I can see which stars were in conjunction with your planets at birth — each one a guardian archetype imprinted into your cosmic signature. Shall we explore the most exact conjunction first, where the star's voice is strongest?",
+    "The fixed stars are the oldest stratum of astrological wisdom — sky-fixed, myth-laden, eternal. Some of them have touched your natal planets. Would you like to explore their gifts, their shadows, or what the tradition says of these encounters?",
   ],
 };
 

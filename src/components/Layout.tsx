@@ -14,6 +14,7 @@ const profileItems = [
   { path: '/profile/astrology', label: 'Astrology', icon: '☉', description: 'Full natal chart' },
   { path: '/profile/gene-keys', label: 'Gene Keys', icon: '✧', description: 'Golden Path journey' },
   { path: '/profile/human-design', label: 'Human Design', icon: '⬡', description: 'Body graph & type' },
+  { path: '/profile/fixed-stars', label: 'Fixed Stars', icon: '★', description: 'Star conjunctions' },
 ];
 
 // Explore Tools - Interactive visualizations
@@ -38,6 +39,7 @@ const astrologyItems = [
   { path: '/decans', label: 'Decans', icon: '◔' },
   { path: '/dignities', label: 'Dignities', icon: '⚖' },
   { path: '/configurations', label: 'Patterns', icon: '✡' },
+  { path: '/fixed-stars', label: 'Fixed Stars', icon: '★' },
 ];
 
 // Human Design Library

@@ -71,6 +71,9 @@ const Onboarding = lazy(() => import('./pages/Onboarding'));
 const InsightLibrary = lazy(() => import('./pages/InsightLibrary'));
 const SessionsLibrary = lazy(() => import('./pages/SessionsLibrary'));
 const LifeAreas = lazy(() => import('./pages/LifeAreas'));
+// Fixed Stars
+const FixedStars = lazy(() => import('./pages/FixedStars'));
+const FixedStarDetail = lazy(() => import('./pages/FixedStarDetail'));
 // Wisdom Traditions
 const Numerology = lazy(() => import('./pages/Numerology'));
 const NumerologyDetail = lazy(() => import('./pages/NumerologyDetail'));
@@ -85,6 +88,7 @@ const ProfileConfigurationDetail = lazy(() => import('./pages/profile/ProfileCon
 const ProfileGKPlacementDetail = lazy(() => import('./pages/profile/ProfileGKPlacementDetail'));
 const ProfileHDPlacementDetail = lazy(() => import('./pages/profile/ProfileHDPlacementDetail'));
 const ProfileHDChannelDetail = lazy(() => import('./pages/profile/ProfileHDChannelDetail'));
+const ProfileFixedStars = lazy(() => import('./pages/profile/ProfileFixedStars'));
 
 function App() {
   return (
@@ -111,6 +115,7 @@ function App() {
               <Route path="profile/human-design" element={<ProfileHumanDesign />} />
               <Route path="profile/human-design/gates/:gateId" element={<ProfileHDPlacementDetail />} />
               <Route path="profile/human-design/channels/:channelId" element={<ProfileHDChannelDetail />} />
+              <Route path="profile/fixed-stars" element={<ProfileFixedStars />} />
                 <Route path="realms" element={<ElementRealms />} />
                 <Route path="planets" element={<Planets />} />
                 <Route path="planets/:id" element={<PlanetDetail />} />
@@ -126,6 +131,8 @@ function App() {
                 <Route path="weaver" element={<AspectWeaver />} />
                 <Route path="configurations" element={<ConfigurationGallery />} />
                 <Route path="decans" element={<DecanDive />} />
+                <Route path="fixed-stars" element={<FixedStars />} />
+                <Route path="fixed-stars/:id" element={<FixedStarDetail />} />
                 <Route path="contemplate" element={<ContemplationChamber />} />
                 <Route path="transits" element={<Transits />} />
                 <Route path="pathways" element={<Pathways />} />

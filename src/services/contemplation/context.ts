@@ -2,6 +2,7 @@
 // Full Chart Context Architecture - Harmonic Resonance
 import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile } from '../../types';
 import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree } from '../../data';
+import { getFixedStarConjunctions } from '../fixedStars';
 import { calculateTransitNatalAspects, type TransitNatalAspect } from '../transitAspects';
 import { getPlanetaryPositions, longitudeToZodiac } from '../ephemeris';
 import { getCosmicWeather } from '../transits';
@@ -55,10 +56,14 @@ export type ContemplationType =
   | 'numerologyReading'
   | 'numerologyOverview'
   | 'chakraAwareness'
-  | 'alchemicalMapping';
+  | 'alchemicalMapping'
+  // Fixed Stars
+  | 'fixedStarProfile'
+  | 'fixedStarConjunction'
+  | 'fixedStarTransit';
 
 export interface FocusEntity {
-  type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment';
+  type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment' | 'fixed-star';
   id: string;
   name: string;
   transitData?: TransitNatalAspect; // For transit aspects
@@ -103,6 +108,9 @@ function getIncludedSystems(category: ContemplationCategory): {
     case 'alchemy':
       // Alchemy needs everything — numerology, chakras, and alchemy bridge all systems
       return { ...base, humanDesign: true, geneKeys: true, bridges: true };
+    case 'fixedStars' as ContemplationCategory:
+      // Fixed stars are an astrological layer; include astrology context
+      return { ...base, humanDesign: false, geneKeys: false, bridges: false };
     default:
       return { astrology: true, humanDesign: true, geneKeys: true, bridges: true };
   }
@@ -153,6 +161,15 @@ export function formatProfileContext(
     sections.push(formatPreComputedInsights(profile));
     // Add today's transit gate activations (transiting planets hitting natal gates)
     sections.push(formatTodayGateActivations(profile));
+  }
+
+  // Include Fixed Stars context for fixed-star contemplation types
+  if (
+    selection.type === 'fixedStarProfile' ||
+    selection.type === 'fixedStarConjunction' ||
+    selection.type === 'fixedStarTransit'
+  ) {
+    sections.push(formatFixedStarContext(profile));
   }
 
   // Conditionally include Enrichment context (Numerology, Chakra, Alchemy)
@@ -1172,6 +1189,14 @@ function formatFocusHighlight(profile: AstroProfile, selection: ContemplationSel
       }
       break;
     }
+    case 'fixed-star': {
+      const conjunctions = getFixedStarConjunctions(profile.placements);
+      const conj = conjunctions.find((c) => c.star.id === selection.focus?.id);
+      if (conj) {
+        outputLines.push(formatFixedStarFocus(conj));
+      }
+      break;
+    }
   }
 
   return outputLines.join('\n');
@@ -1388,6 +1413,15 @@ export function getFocusOptions(
       });
     }
 
+    case 'fixedStarConjunction': {
+      const conjunctions = getFixedStarConjunctions(profile.placements);
+      return conjunctions.map((c) => ({
+        type: 'fixed-star' as const,
+        id: c.star.id,
+        name: `${c.star.name} (${planets.get(c.planetId)?.name ?? c.planetId}, ${c.orbDegree.toFixed(2)}° orb)`,
+      }));
+    }
+
     case 'transitReading': {
       // Calculate current transit aspects to natal chart
       const natalPlacements = profile.placements.map(p => ({
@@ -1410,6 +1444,69 @@ export function getFocusOptions(
     default:
       return [];
   }
+}
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// FIXED STAR CONTEXT FORMATTERS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function formatFixedStarContext(profile: AstroProfile): string {
+  const conjunctions = getFixedStarConjunctions(profile.placements);
+  if (conjunctions.length === 0) return '';
+
+  const outputLines: string[] = [];
+  outputLines.push('\n[FIXED STARS — NATAL ACTIVATIONS]');
+  outputLines.push('Stars woven into the natal chart by ecliptic conjunction:');
+
+  conjunctions.forEach((c) => {
+    const planet = planets.get(c.planetId);
+    const tier = c.isExact ? 'exact' : c.orbDegree <= 1.0 ? 'close' : 'wide';
+    outputLines.push(
+      `  ★ ${c.star.name} (${c.star.constellation}) conjunct ${planet?.name ?? c.planetId} — ${c.orbDegree.toFixed(2)}° orb [${tier}]`
+    );
+    outputLines.push(`    Archetype: ${c.star.archetype}`);
+    outputLines.push(`    Gift: ${c.star.giftExpression}`);
+    outputLines.push(`    Shadow: ${c.star.shadowExpression}`);
+    outputLines.push(`    Body: ${c.star.bodyAssociation}`);
+  });
+
+  return outputLines.join('\n');
+}
+
+function formatFixedStarFocus(conj: import('../fixedStars').FixedStarConjunction): string {
+  const planet = planets.get(conj.planetId);
+  const signName =
+    conj.star.zodiacPosition.sign.charAt(0).toUpperCase() +
+    conj.star.zodiacPosition.sign.slice(1);
+  const outputLines: string[] = [];
+
+  outputLines.push(`\n★ ${conj.star.name} conjunct ${planet?.name ?? conj.planetId}`);
+  outputLines.push(`Constellation: ${conj.star.constellation}`);
+  outputLines.push(`Zodiac: ${signName} ${conj.star.zodiacPosition.degree}°${String(conj.star.zodiacPosition.minute).padStart(2, '0')}'`);
+  outputLines.push(`Orb: ${conj.orbDegree.toFixed(2)}°${conj.isExact ? ' (exact)' : ''}`);
+  outputLines.push(`Body Association: ${conj.star.bodyAssociation}`);
+  outputLines.push(`Nature: ${conj.star.nature.join(', ')}`);
+  if (conj.star.isRoyalStar) outputLines.push(`Royal Star: ${conj.star.royalStarTitle ?? 'Royal Star'}`);
+  if (conj.star.isBehenian) outputLines.push('Behenian: Yes');
+
+  outputLines.push('\nARCHETYPE:');
+  outputLines.push(conj.star.archetype);
+
+  outputLines.push('\nGIFT EXPRESSION:');
+  outputLines.push(conj.star.giftExpression);
+
+  outputLines.push('\nSHADOW EXPRESSION:');
+  outputLines.push(conj.star.shadowExpression);
+
+  outputLines.push('\nTRADITIONAL MEANING:');
+  outputLines.push(conj.star.traditionalMeaning);
+
+  outputLines.push('\nCONTEMPLATION QUESTIONS:');
+  conj.star.contemplationQuestions.forEach((q, i) => {
+    outputLines.push(`${i + 1}. ${q}`);
+  });
+
+  return outputLines.join('\n');
 }
 
 // ═══════════════════════════════════════════════════════════════════════════════

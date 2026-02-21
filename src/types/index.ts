@@ -225,14 +225,34 @@ export interface Dignity extends AstroEntity {
 // Fixed Star Types
 // ------------------------------------
 
+export interface FixedStarZodiacPosition {
+  sign: string;
+  degree: number;
+  minute: number;
+  note?: string;
+}
+
 export interface FixedStar extends AstroEntity {
   type: 'fixed-star';
+  alternateNames: string[];
   constellation: string;
   magnitude: number;
-  zodiacPosition: string;
-  nature: string;
+  zodiacPosition: FixedStarZodiacPosition;
+  nature: string[];
+  isBehenian: boolean;
+  isRoyalStar: boolean;
+  royalStarTitle?: string;
+  archetype: string;
   keywords: string[];
-  influence: string;
+  giftExpression: string;
+  shadowExpression: string;
+  traditionalMeaning: string;
+  bodyAssociation: string;
+  eclipticLongitude: number;  // Decimal degrees 0–360° — used for conjunction calculations
+  orb: number;                // Stellara-validated orb in degrees
+  astrologyKingUrl: string;
+  galacticConnections: string[]; // Future Sprint Q placeholder
+  contemplationQuestions: string[];
 }
 
 // ------------------------------------

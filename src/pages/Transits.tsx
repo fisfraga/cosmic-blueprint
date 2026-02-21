@@ -18,6 +18,12 @@ import {
 import { useProfile } from '../context';
 import { TransitCalendar } from '../components/TransitCalendar';
 import { geneKeys, chakras, getGateByDegree } from '../data';
+import {
+  getTransitStarActivations,
+  getFixedStarConjunctions,
+  getPersonalTransitActivations,
+  type TransitStarActivation,
+} from '../services/fixedStars';
 
 type ViewMode = 'day' | 'calendar';
 
@@ -343,6 +349,20 @@ export function Transits() {
     ? transitNatalAspects
     : transitNatalAspects.slice(0, 5);
 
+  // Fixed Star Activations — sky-wide (no profile needed)
+  const skyStarActivations = useMemo<TransitStarActivation[]>(() => {
+    if (!weather) return [];
+    return getTransitStarActivations(weather.positions);
+  }, [weather]);
+
+  // Personal Fixed Star Activations — transits hitting natal star conjunctions
+  const personalStarActivations = useMemo<TransitStarActivation[]>(() => {
+    if (!weather || !profile?.placements?.length) return [];
+    const natalConjunctions = getFixedStarConjunctions(profile.placements);
+    if (natalConjunctions.length === 0) return [];
+    return getPersonalTransitActivations(weather.positions, natalConjunctions);
+  }, [weather, profile]);
+
   if (!weather) {
     return (
       <div className="flex items-center justify-center h-64">
@@ -662,6 +682,122 @@ export function Transits() {
           </div>
         </section>
       )}
+
+      {/* Fixed Star Activations */}
+      <section className="mt-12">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-amber-400 text-2xl">★</span>
+          <h2 className="font-serif text-2xl text-theme-text-primary">Fixed Star Activations</h2>
+        </div>
+        <p className="text-theme-text-secondary text-sm mb-6">
+          Transiting planets currently conjunct fixed stars — ancient archetypal thresholds activated in the sky
+        </p>
+
+        {/* Personal activations (profile-gated) */}
+        {profile && personalStarActivations.length > 0 && (
+          <div className="mb-6">
+            <h3 className="font-serif text-lg text-amber-300 mb-3 flex items-center gap-2">
+              <span>✦</span> Personal Activations — Your Natal Star Degrees
+            </h3>
+            <div className="space-y-3">
+              {personalStarActivations.map((act, i) => (
+                <motion.div
+                  key={`${act.star.id}-${act.transitPlanetId}-personal`}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.06 }}
+                  className="p-4 rounded-xl border border-amber-500/40 bg-amber-500/8"
+                >
+                  <div className="flex items-start justify-between gap-3 mb-2">
+                    <div className="flex items-center gap-2">
+                      <span className="text-xl text-amber-400">★</span>
+                      <span className="text-lg">{act.transitPlanetSymbol}</span>
+                      <span className="font-medium text-theme-text-primary">{act.transitPlanetName}</span>
+                      <span className="text-theme-text-tertiary text-sm">activating</span>
+                      <Link
+                        to={`/fixed-stars/${act.star.id}`}
+                        className="font-serif font-medium text-amber-300 hover:text-amber-200 transition-colors"
+                      >
+                        {act.star.name}
+                      </Link>
+                    </div>
+                    <span className="text-xs font-mono text-amber-400/70 shrink-0">
+                      {act.orbDegree.toFixed(2)}° orb
+                    </span>
+                  </div>
+                  <p className="text-sm text-amber-300/70 italic ml-8">{act.star.archetype}</p>
+                  <p className="text-xs text-theme-text-muted ml-8 mt-1">{act.star.giftExpression}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Sky-wide activations */}
+        {skyStarActivations.length > 0 ? (
+          <div>
+            <h3 className="font-serif text-base text-theme-text-tertiary mb-3">
+              Sky-Wide Star Weather
+            </h3>
+            <div className="grid sm:grid-cols-2 gap-3">
+              {skyStarActivations.map((act, i) => (
+                <motion.div
+                  key={`${act.star.id}-${act.transitPlanetId}`}
+                  initial={{ opacity: 0, y: 8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: i * 0.04 }}
+                  className={`p-3 rounded-xl border bg-surface-raised/30 ${
+                    act.isPersonal
+                      ? 'border-amber-500/40'
+                      : 'border-theme-border-subtle'
+                  }`}
+                >
+                  <div className="flex items-center justify-between mb-1">
+                    <div className="flex items-center gap-1.5">
+                      <span className="text-sm text-amber-400">★</span>
+                      <Link
+                        to={`/fixed-stars/${act.star.id}`}
+                        className="text-sm font-medium text-theme-text-primary hover:text-amber-300 transition-colors"
+                      >
+                        {act.star.name}
+                      </Link>
+                      {act.star.isRoyalStar && (
+                        <span className="text-xs px-1.5 py-0.5 rounded bg-amber-500/15 text-amber-400 border border-amber-500/25">Royal</span>
+                      )}
+                      {act.isPersonal && (
+                        <span className="text-xs px-1.5 py-0.5 rounded bg-amber-500/20 text-amber-300 border border-amber-500/30">In your chart</span>
+                      )}
+                    </div>
+                    <span className="text-xs text-theme-text-muted font-mono">{act.orbDegree.toFixed(2)}°</span>
+                  </div>
+                  <div className="flex items-center gap-1 text-xs text-theme-text-secondary">
+                    <span>{act.transitPlanetSymbol}</span>
+                    <span>{act.transitPlanetName}</span>
+                    <span className="text-theme-text-muted">·</span>
+                    <span className="italic text-theme-text-muted">{act.star.archetype}</span>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <div className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-8 text-center">
+            <span className="text-3xl mb-2 block text-theme-text-muted">★</span>
+            <p className="text-theme-text-tertiary text-sm">
+              No transiting planets are currently within orb of a tracked fixed star
+            </p>
+          </div>
+        )}
+
+        <div className="mt-4 text-right">
+          <Link
+            to="/fixed-stars"
+            className="text-sm text-amber-400 hover:text-amber-300 transition-colors"
+          >
+            Explore All Fixed Stars →
+          </Link>
+        </div>
+      </section>
 
       {/* How Transits Work */}
       <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">

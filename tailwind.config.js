@@ -59,28 +59,28 @@ export default {
           secondary: '#A89070',
           tertiary: '#C4A77D',
         },
-        // Air Element - Blues and light blues
+        // Air Element - Light turquoise and cyan
         air: {
-          300: '#7BB3E8',
-          400: '#5CA1E0',
-          500: '#4A90D9',
-          600: '#3A7AC0',
-          700: '#2D64A8',
-          primary: '#4A90D9',
-          secondary: '#87CEEB',
-          tertiary: '#B8D4E3',
+          300: '#80DCE8',
+          400: '#45C5D8',
+          500: '#22B0C8',
+          600: '#1A95AA',
+          700: '#13788C',
+          primary: '#22B0C8',
+          secondary: '#A0E8F0',
+          tertiary: '#C5F0F7',
         },
-        // Water Element - Teals and deep blues
+        // Water Element - Deep blues
         // WCAG: 400+ must meet 4.5:1 on neutral-900 (#18181B)
         water: {
-          300: '#5AABBF',
-          400: '#4A9BB0',
-          500: '#3A8BA0',
-          600: '#2D7A90',
-          700: '#206A80',
-          primary: '#3A8BA0',
-          secondary: '#6DD0C2',
-          tertiary: '#2DB5A8',
+          300: '#7BA8E8',
+          400: '#4E82D6',
+          500: '#2E65C2',
+          600: '#2353A8',
+          700: '#1A4090',
+          primary: '#2E65C2',
+          secondary: '#8FBEF0',
+          tertiary: '#B0D4F7',
         },
         // Human Design - Amber/Gold
         humandesign: {
