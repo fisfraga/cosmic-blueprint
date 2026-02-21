@@ -24,7 +24,7 @@ import type {
   HDProfile,
   NumerologyProfile,
 } from '../types';
-import { getPlanetaryPositions, type PlanetaryPositions } from './ephemeris';
+import { getPlanetaryPositions, isRetrograde, type PlanetaryPositions } from './ephemeris';
 import { getGateByDegree, hdChannels } from '../data';
 import { enrichProfile } from './profileEnrichment';
 
@@ -96,6 +96,7 @@ function toPlanetaryPositions(
   ephemerisPositions: PlanetaryPositions
 ): PlanetaryPosition[] {
   const positions: PlanetaryPosition[] = [];
+  const date = ephemerisPositions.date;
 
   // Add all planets
   for (const planetId of PLANET_IDS) {
@@ -123,7 +124,7 @@ function toPlanetaryPositions(
           signId: getSignFromLongitude(longitude),
           degree,
           minute,
-          retrograde: false, // TODO: Calculate retrograde status
+          retrograde: isRetrograde(planetId, date),
         });
       }
     }
@@ -558,18 +559,52 @@ export function calculateHumanDesignProfile(
 }
 
 /**
- * Parse birth data to UTC Date
+ * Parse birth data to UTC Date using the birth location's timezone.
+ *
+ * Constructs a Date that represents the exact UTC moment of birth by
+ * resolving the IANA timezone offset at the given local date/time.
  */
 function parseBirthToUTC(birthData: BirthData): Date {
-  // Create date string and parse with timezone
-  const dateTimeStr = `${birthData.dateOfBirth}T${birthData.timeOfBirth}:00`;
+  const { dateOfBirth, timeOfBirth, timezone } = birthData;
+  const [year, month, day] = dateOfBirth.split('-').map(Number);
+  const [hour, minute] = timeOfBirth.split(':').map(Number);
 
-  // Get UTC offset for the timezone at the birth time
-  // This is simplified - for production, use a proper timezone library
-  const localDate = new Date(dateTimeStr);
+  // Use Intl to derive the UTC offset for the target timezone at the given moment.
+  //
+  // Step 1: Create a UTC date for the given calendar values.
+  const utcGuess = new Date(Date.UTC(year, month - 1, day, hour, minute, 0));
 
-  // Return as-is for now - proper implementation would use Intl or luxon
-  return localDate;
+  // Step 2: Format that UTC instant in the target timezone to see what
+  // local clock values it would produce.
+  const parts = new Intl.DateTimeFormat('en-US', {
+    timeZone: timezone,
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit',
+    hour12: false,
+  }).formatToParts(utcGuess);
+
+  const get = (type: string) =>
+    Number(parts.find((p) => p.type === type)?.value ?? 0);
+
+  const tzYear = get('year');
+  const tzMonth = get('month');
+  const tzDay = get('day');
+  const tzHour = get('hour') === 24 ? 0 : get('hour');
+  const tzMinute = get('minute');
+
+  // Step 3: The offset is the difference between the UTC guess and
+  // the timezone-local representation of that same instant.
+  const localFromTz = new Date(
+    Date.UTC(tzYear, tzMonth - 1, tzDay, tzHour, tzMinute, 0)
+  );
+  const offsetMs = localFromTz.getTime() - utcGuess.getTime();
+
+  // Step 4: The real UTC moment is the desired local time minus the offset.
+  return new Date(utcGuess.getTime() - offsetMs);
 }
 
 /**

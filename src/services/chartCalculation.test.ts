@@ -7,7 +7,7 @@ import {
   calculateGeneKeysProfile,
   calculateHumanDesignProfile,
 } from './chartCalculation';
-import { getPlanetaryPositions } from './ephemeris';
+import { getPlanetaryPositions, isRetrograde } from './ephemeris';
 
 // --- Test Fixtures ---
 // Two public birth charts with well-documented placements.
@@ -463,6 +463,63 @@ describe('chartCalculation', () => {
       expect(result.numerologyProfile).toBeDefined();
       if (result.numerologyProfile) {
         expect(result.numerologyProfile.lifePathNumber).toBeGreaterThanOrEqual(1);
+      }
+    });
+  });
+
+  describe('retrograde calculation (isRetrograde)', () => {
+    it('Sun is never retrograde', () => {
+      expect(isRetrograde('sun', new Date('2025-03-20T12:00:00Z'))).toBe(false);
+      expect(isRetrograde('sun', new Date('2024-06-15T12:00:00Z'))).toBe(false);
+    });
+
+    it('Moon is never retrograde', () => {
+      expect(isRetrograde('moon', new Date('2025-03-20T12:00:00Z'))).toBe(false);
+      expect(isRetrograde('moon', new Date('2024-06-15T12:00:00Z'))).toBe(false);
+    });
+
+    it('Earth is never retrograde', () => {
+      expect(isRetrograde('earth', new Date('2025-03-20T12:00:00Z'))).toBe(false);
+    });
+
+    it('Mercury is retrograde during known retrograde period (2025-03-15 to 2025-04-07)', () => {
+      // Mid-retrograde: should be true
+      expect(isRetrograde('mercury', new Date('2025-03-20T12:00:00Z'))).toBe(true);
+      expect(isRetrograde('mercury', new Date('2025-03-25T12:00:00Z'))).toBe(true);
+    });
+
+    it('Mercury is direct outside retrograde periods', () => {
+      // Well after retrograde ends
+      expect(isRetrograde('mercury', new Date('2025-04-15T12:00:00Z'))).toBe(false);
+    });
+
+    it('natal chart positions include retrograde data', () => {
+      const chart = calculateFullChart(gemini2024BirthData);
+      // Every position should have a boolean retrograde field
+      for (const pos of chart.natalPositions) {
+        expect(typeof pos.retrograde).toBe('boolean');
+      }
+      // Earth should never be retrograde
+      const earth = chart.natalPositions.find(p => p.planetId === 'earth')!;
+      expect(earth.retrograde).toBe(false);
+      // Sun should never be retrograde
+      const sun = chart.natalPositions.find(p => p.planetId === 'sun')!;
+      expect(sun.retrograde).toBe(false);
+    });
+
+    it('design chart positions include retrograde data', () => {
+      const chart = calculateFullChart(gemini2024BirthData);
+      for (const pos of chart.designPositions) {
+        expect(typeof pos.retrograde).toBe('boolean');
+      }
+    });
+
+    it('returns boolean for all standard planets', () => {
+      const date = new Date('2025-06-15T12:00:00Z');
+      const planets = ['mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
+      for (const planet of planets) {
+        const result = isRetrograde(planet, date);
+        expect(typeof result).toBe('boolean');
       }
     });
   });

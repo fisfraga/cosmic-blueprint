@@ -222,6 +222,48 @@ export function longitudeToZodiac(longitude: number): {
 }
 
 /**
+ * Determine if a planet is retrograde at a given date.
+ *
+ * A planet is retrograde when its geocentric ecliptic longitude is decreasing
+ * (i.e., it appears to move backward through the zodiac). We compare positions
+ * one day apart and check the direction of motion.
+ *
+ * Sun and Moon are never retrograde. Earth is never retrograde from our
+ * geocentric perspective.
+ */
+export function isRetrograde(planetId: string, date: Date): boolean {
+  // Sun, Moon, and Earth are never retrograde from geocentric perspective
+  if (planetId === 'sun' || planetId === 'moon' || planetId === 'earth') {
+    return false;
+  }
+
+  const today = getPlanetPosition(planetId as PlanetId, date);
+  const yesterday = getPlanetPosition(
+    planetId as PlanetId,
+    new Date(date.getTime() - 86400000)
+  );
+
+  // Calculate the difference in longitude
+  let diff = today - yesterday;
+
+  // Handle 0°/360° wraparound: if the absolute difference is > 180°,
+  // the planet crossed the 0° boundary
+  if (diff > 180) {
+    // Crossed backward over 0° (e.g., 1° -> 359° gives diff = -358, normalized to +2)
+    // A large positive diff after crossing means retrograde
+    return true;
+  }
+  if (diff < -180) {
+    // Crossed forward over 0° (e.g., 359° -> 1° gives diff = -358)
+    // A large negative diff after crossing means direct motion
+    return false;
+  }
+
+  // Normal case: negative diff = retrograde (longitude decreasing)
+  return diff < 0;
+}
+
+/**
  * Get the ephemeris data range info
  */
 export function getEphemerisInfo(): {
