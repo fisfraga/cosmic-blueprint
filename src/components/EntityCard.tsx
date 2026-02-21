@@ -213,17 +213,9 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
       className={`block p-5 rounded-xl border transition-all group hover:border-theme-border ${colors.bg} ${colors.border}`}
     >
       <div className="flex items-start gap-4">
-        {entity.image ? (
-          <img
-            src={entity.image}
-            alt={entity.name}
-            className="w-12 h-12 rounded-lg object-cover"
-          />
-        ) : (
-          <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl ${colors.bg}`}>
-            {entity.symbol || '✧'}
-          </div>
-        )}
+        <div className={`w-12 h-12 rounded-lg flex items-center justify-center text-2xl ${colors.bg}`}>
+          {entity.symbol || '✧'}
+        </div>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className={`text-xl ${colors.accent}`}>{entity.symbol}</span>

@@ -364,7 +364,7 @@ export function Layout() {
       )}
 
       {/* Header */}
-      <header className="border-b border-theme-border-subtle bg-surface-base/95 backdrop-blur-sm sticky top-0 z-50">
+      <header className="border-b border-theme-border-subtle bg-surface-base sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
@@ -450,7 +450,7 @@ export function Layout() {
       </header>
 
       {/* Mobile Navigation */}
-      <nav className="md:hidden border-b border-theme-border-subtle bg-surface-base/95 overflow-x-auto">
+      <nav className="md:hidden border-b border-theme-border-subtle bg-surface-base overflow-x-auto">
         <div className="flex gap-1 px-4 py-2">
           {mobileNavItems.map((item) => (
             <NavLink

@@ -90,18 +90,6 @@ export function EntityDetailPanel({
       >
         <EntityPanelHeader {...headerProps} />
         <div className="flex-1 overflow-y-auto p-4 overscroll-contain">
-          {entity.image && (
-            <div className="mb-4 rounded-lg overflow-hidden bg-surface-raised">
-              <img
-                src={entity.image}
-                alt={entity.name}
-                className="w-full h-28 object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-            </div>
-          )}
           <EntityPanelContent {...contentProps} />
         </div>
         <EntityPanelFooter {...footerProps} />
@@ -128,18 +116,6 @@ export function EntityDetailPanel({
       >
         <EntityPanelHeader {...headerProps} />
         <div className="flex-1 overflow-y-auto p-4 sm:p-4 overscroll-contain">
-          {entity.image && (
-            <div className="mb-4 rounded-lg overflow-hidden bg-surface-raised">
-              <img
-                src={entity.image}
-                alt={entity.name}
-                className="w-full h-32 sm:h-32 object-contain"
-                onError={(e) => {
-                  (e.target as HTMLImageElement).style.display = 'none';
-                }}
-              />
-            </div>
-          )}
           <EntityPanelContent {...contentProps} />
         </div>
         <EntityPanelFooter {...footerProps} />

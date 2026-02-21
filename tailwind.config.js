@@ -7,8 +7,16 @@ export default {
   darkMode: 'class',
   theme: {
     extend: {
-      // Theme-aware semantic tokens (driven by CSS custom properties)
+      boxShadow: {
+        'theme-sm': '0 1px 3px var(--shadow-ambient)',
+        'theme-md': '0 4px 12px var(--shadow-ambient)',
+        'theme-lg': '0 8px 24px var(--shadow-elevation)',
+      },
+      backgroundImage: {
+        'surface-shimmer': 'var(--surface-shimmer)',
+      },
       colors: {
+        // Theme-aware semantic tokens (driven by CSS custom properties)
         surface: {
           base: 'var(--surface-base)',
           raised: 'var(--surface-raised)',
@@ -28,16 +36,6 @@ export default {
           DEFAULT: 'var(--border-default)',
           strong: 'var(--border-strong)',
         },
-      },
-      boxShadow: {
-        'theme-sm': '0 1px 3px var(--shadow-ambient)',
-        'theme-md': '0 4px 12px var(--shadow-ambient)',
-        'theme-lg': '0 8px 24px var(--shadow-elevation)',
-      },
-      backgroundImage: {
-        'surface-shimmer': 'var(--surface-shimmer)',
-      },
-      colors: {
         // Fire Element - Warm oranges and reds
         fire: {
           300: '#FFB088',

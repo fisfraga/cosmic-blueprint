@@ -199,12 +199,12 @@ export const planetElementMap: Record<string, ElementColorKey> = {
   mars: 'fire',
   jupiter: 'fire',
   moon: 'water',
-  venus: 'water',
+  venus: 'earth',
   neptune: 'water',
   mercury: 'air',
   uranus: 'air',
   saturn: 'earth',
-  pluto: 'earth',
+  pluto: 'water',
 };
 
 // ------------------------------------

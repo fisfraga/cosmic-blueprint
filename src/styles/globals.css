@@ -39,7 +39,7 @@
 html.light {
   --surface-base: #F0F2F7;
   --surface-raised: #FFFFFF;
-  --surface-overlay: #ECEFF5;
+  --surface-overlay: #DDE1EC;
   --surface-sunken: #E4E7EF;
   --surface-interactive: #E8EBF2;
   --surface-interactive-hover: #DDE0EA;
@@ -87,6 +87,57 @@ html.light .bg-purple-900\/50  { background-color: rgb(168 85 247 / 0.12); }
 html.light .bg-amber-900\/50   { background-color: rgb(245 158 11 / 0.12); }
 html.light .bg-emerald-900\/50 { background-color: rgb(16 185 129 / 0.12); }
 html.light .bg-blue-900\/50    { background-color: rgb(59 130 246 / 0.12); }
+
+/* Light mode: EntityLink hover backgrounds */
+html.light .hover\:bg-purple-500\/20:hover  { background-color: rgb(168 85 247 / 0.25); }
+html.light .hover\:bg-amber-500\/20:hover   { background-color: rgb(245 158 11 / 0.25); }
+html.light .hover\:bg-emerald-500\/20:hover { background-color: rgb(16 185 129 / 0.25); }
+html.light .hover\:bg-blue-500\/20:hover    { background-color: rgb(59 130 246 / 0.25); }
+html.light .hover\:bg-fire-500\/20:hover    { background-color: rgb(255 107 53 / 0.25); }
+html.light .hover\:bg-earth-500\/20:hover   { background-color: rgb(90 138 53 / 0.25); }
+html.light .hover\:bg-sky-500\/20:hover     { background-color: rgb(14 165 233 / 0.25); }
+
+/* Light mode: EntityLink element hover text */
+html.light .hover\:text-fire-300:hover  { color: #cc4a22; }
+html.light .hover\:text-earth-300:hover { color: #3a6a1e; }
+html.light .hover\:text-sky-300:hover   { color: #0369a1; }
+html.light .hover\:text-blue-300:hover  { color: #1d4ed8; }
+
+/* Light mode: Borders — bump from /30 to /35 */
+html.light .border-purple-500\/30  { border-color: rgb(168 85 247 / 0.35); }
+html.light .border-amber-500\/30   { border-color: rgb(245 158 11 / 0.35); }
+html.light .border-emerald-500\/30 { border-color: rgb(16 185 129 / 0.35); }
+html.light .border-blue-500\/30    { border-color: rgb(59 130 246 / 0.35); }
+html.light .border-fire-500\/30    { border-color: rgb(255 107 53 / 0.35); }
+html.light .border-earth-500\/30   { border-color: rgb(90 138 53 / 0.35); }
+html.light .border-sky-500\/30     { border-color: rgb(14 165 233 / 0.35); }
+
+/* Light mode: Element backgrounds — bump to /18 */
+html.light .bg-fire-500\/10  { background-color: rgb(255 107 53 / 0.18); }
+html.light .bg-earth-500\/10 { background-color: rgb(90 138 53 / 0.18); }
+html.light .bg-sky-500\/10   { background-color: rgb(14 165 233 / 0.18); }
+
+/* Light mode: Category gradient boost (stronger on light background) */
+html.light .from-amber-500\/40       { --tw-gradient-from: rgb(245 158 11 / 0.50); }
+html.light .from-humandesign-500\/40 { --tw-gradient-from: rgb(245 158 11 / 0.50); }
+html.light .from-genekey-500\/40     { --tw-gradient-from: rgb(139 92 246 / 0.50); }
+html.light .from-purple-500\/40      { --tw-gradient-from: rgb(168 85 247 / 0.50); }
+html.light .from-emerald-500\/40     { --tw-gradient-from: rgb(16 185 129 / 0.50); }
+html.light .from-rose-500\/40        { --tw-gradient-from: rgb(244 63 94 / 0.50); }
+
+html.light .to-orange-500\/25        { --tw-gradient-to: rgb(249 115 22 / 0.35); }
+html.light .to-humandesign-600\/25   { --tw-gradient-to: rgb(217 119 6 / 0.35); }
+html.light .to-genekey-600\/25       { --tw-gradient-to: rgb(124 58 237 / 0.35); }
+html.light .to-blue-500\/25          { --tw-gradient-to: rgb(59 130 246 / 0.35); }
+html.light .to-teal-500\/25          { --tw-gradient-to: rgb(20 184 166 / 0.35); }
+html.light .to-amber-500\/25         { --tw-gradient-to: rgb(245 158 11 / 0.35); }
+
+html.light .border-amber-500\/50       { border-color: rgb(245 158 11 / 0.55); }
+html.light .border-humandesign-500\/50 { border-color: rgb(245 158 11 / 0.55); }
+html.light .border-genekey-500\/50     { border-color: rgb(139 92 246 / 0.55); }
+html.light .border-purple-500\/50      { border-color: rgb(168 85 247 / 0.55); }
+html.light .border-emerald-500\/50     { border-color: rgb(16 185 129 / 0.55); }
+html.light .border-rose-500\/50        { border-color: rgb(244 63 94 / 0.55); }
 
 @layer base {
   * {

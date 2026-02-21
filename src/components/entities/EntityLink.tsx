@@ -96,7 +96,7 @@ function EntityPreviewTooltip({
             <span className="text-lg">{entity.symbol}</span>
           )}
           <div className="flex-1 min-w-0">
-            <h4 className="font-medium text-white text-sm truncate">
+            <h4 className="font-medium text-theme-text-primary text-sm truncate">
               {entity.name}
             </h4>
             <div className="flex gap-1.5 mt-0.5">
@@ -142,7 +142,7 @@ function EntityPreviewTooltip({
         className={`
           absolute left-1/2 -translate-x-1/2 bottom-0 translate-y-full
           w-0 h-0 border-l-8 border-r-8 border-t-8
-          border-transparent border-t-cosmic-900/95
+          border-transparent border-t-surface-base
         `}
       />
     </div>
@@ -372,7 +372,7 @@ export function EntityLink({
         className={`
           inline-flex items-center gap-1 px-1.5 py-0.5 rounded
           border transition-all duration-150 cursor-pointer
-          focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-cosmic-900
+          focus:outline-none focus:ring-2 focus:ring-offset-1 focus:ring-offset-surface-base
           ${styles.bg} ${styles.bgHover} ${styles.border}
           ${styles.text} ${styles.textHover}
           focus:ring-purple-500/50
