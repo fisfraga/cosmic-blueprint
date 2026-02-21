@@ -11,13 +11,15 @@
     "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
     "verify": "npm run test:run && npm run build",
-    "verify:strict": "npm run lint && npm run test:run && npm run build"
+    "verify:strict": "npm run lint && npm run test:run && npm run build",
+    "start": "node server.js"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.71.2",
     "@supabase/supabase-js": "^2.97.0",
     "astronomy-engine": "^2.1.19",
     "d3": "^7.8.5",
+    "express": "^5.2.1",
     "framer-motion": "^10.16.16",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
