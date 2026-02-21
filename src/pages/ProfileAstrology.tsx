@@ -74,14 +74,14 @@ export function ProfileAstrology() {
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <Link to="/profile" className="text-neutral-400 hover:text-white text-sm mb-2 inline-block">
+          <Link to="/profile" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
             ← Back to Overview
           </Link>
-          <h1 className="font-serif text-3xl text-white flex items-center gap-3">
+          <h1 className="font-serif text-3xl text-theme-text-primary flex items-center gap-3">
             <span className="text-amber-400">☉</span>
             Astrology Profile
           </h1>
-          <p className="text-neutral-400 mt-1">{profile.name}'s complete natal chart</p>
+          <p className="text-theme-text-secondary mt-1">{profile.name}'s complete natal chart</p>
         </div>
         <Link
           to="/contemplate"
@@ -93,8 +93,8 @@ export function ProfileAstrology() {
 
       {/* Natal Chart Image */}
       <div className="flex justify-center">
-        <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800 max-w-lg">
-          <h3 className="font-serif text-lg text-white mb-3 text-center">Natal Chart</h3>
+        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-lg">
+          <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
           <img
             src="/images/astrology/Natal-Chart-Felipe-Fraga.png"
             alt="Natal Chart"
@@ -106,25 +106,25 @@ export function ProfileAstrology() {
       {/* Key Signatures */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {risingSign && (
-          <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-            <p className="text-neutral-500 text-xs mb-1">Rising Sign</p>
+          <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Rising Sign</p>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{risingSign.symbol}</span>
-              <span className="text-white font-medium">{risingSign.name}</span>
+              <span className="text-theme-text-primary font-medium">{risingSign.name}</span>
             </div>
           </div>
         )}
         {chartRulers.traditional && (
-          <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-            <p className="text-neutral-500 text-xs mb-1">Chart Ruler</p>
+          <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Chart Ruler</p>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{getPlanetData(chartRulers.traditional)?.symbol}</span>
-              <span className="text-white font-medium">{getPlanetData(chartRulers.traditional)?.name}</span>
+              <span className="text-theme-text-primary font-medium">{getPlanetData(chartRulers.traditional)?.name}</span>
             </div>
           </div>
         )}
-        <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Dominant Element</p>
+        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Dominant Element</p>
           <div className="flex items-center gap-2">
             <span className={`text-lg ${elementColors[elementalAnalysis.dominant as keyof typeof elementColors]?.text}`}>
               {elementalAnalysis.dominant === 'fire' && '🜂'}
@@ -132,18 +132,18 @@ export function ProfileAstrology() {
               {elementalAnalysis.dominant === 'air' && '🜁'}
               {elementalAnalysis.dominant === 'water' && '🜄'}
             </span>
-            <span className="text-white font-medium capitalize">{elementalAnalysis.dominant}</span>
+            <span className="text-theme-text-primary font-medium capitalize">{elementalAnalysis.dominant}</span>
           </div>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-          <p className="text-neutral-500 text-xs mb-1">Total Placements</p>
-          <span className="text-white font-medium text-xl">{placements.length}</span>
+        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
+          <p className="text-theme-text-tertiary text-xs mb-1">Total Placements</p>
+          <span className="text-theme-text-primary font-medium text-xl">{placements.length}</span>
         </div>
       </div>
 
       {/* Elemental Balance */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Elemental Balance</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Elemental Balance</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
           {(['fire', 'earth', 'air', 'water'] as const).map((element) => {
             const count = elementalAnalysis[element];
@@ -155,9 +155,9 @@ export function ProfileAstrology() {
               <div key={element}>
                 <div className="flex items-center justify-between mb-2">
                   <span className={`font-medium capitalize ${colors.text}`}>{element}</span>
-                  <span className="text-neutral-400">{count} ({Math.round(percentage)}%)</span>
+                  <span className="text-theme-text-secondary">{count} ({Math.round(percentage)}%)</span>
                 </div>
-                <div className="h-3 bg-neutral-800 rounded-full overflow-hidden mb-3">
+                <div className="h-3 bg-surface-raised rounded-full overflow-hidden mb-3">
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${percentage}%` }}
@@ -179,9 +179,9 @@ export function ProfileAstrology() {
             );
           })}
         </div>
-        <div className="mt-6 pt-4 border-t border-neutral-800">
-          <p className="text-neutral-300 text-sm">
-            <span className="text-white font-medium">Your elemental signature:</span>{' '}
+        <div className="mt-6 pt-4 border-t border-theme-border-subtle">
+          <p className="text-theme-text-secondary text-sm">
+            <span className="text-theme-text-primary font-medium">Your elemental signature:</span>{' '}
             Strong in <span className={elementColors[elementalAnalysis.dominant as keyof typeof elementColors]?.text}>{elementalAnalysis.dominant}</span>,
             {' '}inviting growth through <span className={elementColors[elementalAnalysis.deficient as keyof typeof elementColors]?.text}>{elementalAnalysis.deficient}</span>.
           </p>
@@ -189,12 +189,12 @@ export function ProfileAstrology() {
       </div>
 
       {/* All Placements Table */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">All Placements</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">All Placements</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="text-neutral-500 text-left border-b border-neutral-800">
+              <tr className="text-theme-text-tertiary text-left border-b border-theme-border-subtle">
                 <th className="pb-3 font-medium">Planet</th>
                 <th className="pb-3 font-medium">Sign</th>
                 <th className="pb-3 font-medium">Degree</th>
@@ -217,23 +217,23 @@ export function ProfileAstrology() {
                 const gk = hdGate?.geneKeyId ? geneKeys.get(hdGate.geneKeyId) : undefined;
 
                 return (
-                  <tr key={placement.id} className="hover:bg-neutral-800/30 cursor-pointer" onClick={() => window.location.href = `/profile/astrology/placements/${placement.planetId}`}>
+                  <tr key={placement.id} className="hover:bg-surface-raised/30 cursor-pointer" onClick={() => window.location.href = `/profile/astrology/placements/${placement.planetId}`}>
                     <td className="py-3">
                       <Link to={`/profile/astrology/placements/${placement.planetId}`} className="flex items-center gap-2 hover:text-amber-300">
                         <span className="text-lg">{planet?.symbol}</span>
-                        <span className="text-white">{planet?.name}</span>
+                        <span className="text-theme-text-primary">{planet?.name}</span>
                       </Link>
                     </td>
                     <td className="py-3">
                       <div className="flex items-center gap-1">
                         <span className={signColors?.text}>{sign?.symbol}</span>
-                        <span className="text-neutral-300">{sign?.name}</span>
+                        <span className="text-theme-text-secondary">{sign?.name}</span>
                       </div>
                     </td>
-                    <td className="py-3 text-neutral-400">
+                    <td className="py-3 text-theme-text-secondary">
                       {placement.degree}°{placement.minute}'
                     </td>
-                    <td className="py-3 text-neutral-400">
+                    <td className="py-3 text-theme-text-secondary">
                       {house?.name}
                     </td>
                     <td className="py-3">
@@ -249,7 +249,7 @@ export function ProfileAstrology() {
                           </Link>
                           {gk && (
                             <>
-                              <span className="text-neutral-700">·</span>
+                              <span className="text-theme-text-muted">·</span>
                               <Link
                                 to={`/gene-keys/${gk.id}`}
                                 onClick={(e) => e.stopPropagation()}
@@ -262,7 +262,7 @@ export function ProfileAstrology() {
                           )}
                         </div>
                       ) : (
-                        <span className="text-neutral-600 text-xs">—</span>
+                        <span className="text-theme-text-muted text-xs">—</span>
                       )}
                     </td>
                     <td className="py-3">
@@ -270,15 +270,15 @@ export function ProfileAstrology() {
                         <span className={`px-2 py-0.5 text-xs rounded ${
                           ['Domicile', 'Exaltation'].includes(dignity.dignityType) ? 'bg-emerald-500/20 text-emerald-400' :
                           ['Detriment', 'Fall'].includes(dignity.dignityType) ? 'bg-rose-500/20 text-rose-400' :
-                          'bg-neutral-700 text-neutral-300'
+                          'bg-surface-interactive text-theme-text-secondary'
                         }`}>
                           {dignity.dignityType}
                         </span>
                       ) : (
-                        <span className="text-neutral-600">—</span>
+                        <span className="text-theme-text-muted">—</span>
                       )}
                     </td>
-                    <td className="py-3 text-neutral-500 text-xs">
+                    <td className="py-3 text-theme-text-tertiary text-xs">
                       {placement.retrograde && <span className="text-amber-400">℞ Retrograde</span>}
                       {placement.isChartRuler && <span className="text-yellow-400 ml-2">Chart Ruler</span>}
                     </td>
@@ -291,8 +291,8 @@ export function ProfileAstrology() {
       </div>
 
       {/* House Placements */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Planets by House</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Planets by House</h2>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((houseNum) => {
             const houseId = `house-${houseNum}`;
@@ -303,9 +303,9 @@ export function ProfileAstrology() {
             const houseChakra = Array.from(chakras.values()).find(c => c.relatedHouses.includes(houseNum));
 
             return (
-              <div key={houseId} className="bg-neutral-800/30 rounded-lg p-3">
+              <div key={houseId} className="bg-surface-raised/30 rounded-lg p-3">
                 <div className="flex items-center justify-between mb-1">
-                  <Link to={`/houses/${houseId}`} className="text-neutral-300 hover:text-white text-sm font-medium">
+                  <Link to={`/houses/${houseId}`} className="text-theme-text-secondary hover:text-theme-text-primary text-sm font-medium">
                     {house?.name}
                   </Link>
                   <div className="flex items-center gap-1.5">
@@ -339,7 +339,7 @@ export function ProfileAstrology() {
                     })}
                   </div>
                 ) : (
-                  <span className="text-neutral-600 text-xs">Empty</span>
+                  <span className="text-theme-text-muted text-xs">Empty</span>
                 )}
               </div>
             );
@@ -349,10 +349,10 @@ export function ProfileAstrology() {
 
       {/* All Aspects */}
       {profile.aspects?.planetary && profile.aspects.planetary.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-xl text-white">All Aspects ({profile.aspects.planetary.length})</h2>
-            <Link to="/weaver" className="text-neutral-400 hover:text-white text-sm">
+            <h2 className="font-serif text-xltext-theme-text-primary">All Aspects ({profile.aspects.planetary.length})</h2>
+            <Link to="/weaver" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
               View in Aspect Weaver →
             </Link>
           </div>
@@ -361,7 +361,7 @@ export function ProfileAstrology() {
           <div className="flex flex-wrap gap-2 mb-4">
             {Object.entries(aspectCounts).map(([aspectId, count]) => {
               const aspectType = aspects.get(aspectId);
-              const colors = aspectColors[aspectId] || { bg: 'bg-neutral-800', text: 'text-neutral-300' };
+              const colors = aspectColors[aspectId] || { bg: 'bg-surface-raised', text: 'text-theme-text-secondary' };
               return aspectType ? (
                 <span key={aspectId} className={`px-3 py-1 ${colors.bg} ${colors.text} rounded-full text-sm`}>
                   {aspectType.symbol} {aspectType.name}: {count}
@@ -375,7 +375,7 @@ export function ProfileAstrology() {
               const aspectType = aspects.get(personalAspect.aspectId);
               const planet1 = getPlanetData(personalAspect.planet1Id);
               const planet2 = getPlanetData(personalAspect.planet2Id);
-              const colors = aspectColors[personalAspect.aspectId] || { bg: 'bg-neutral-800', text: 'text-neutral-300' };
+              const colors = aspectColors[personalAspect.aspectId] || { bg: 'bg-surface-raised', text: 'text-theme-text-secondary' };
 
               if (!aspectType || !planet1 || !planet2) return null;
 
@@ -383,7 +383,7 @@ export function ProfileAstrology() {
                 <Link
                   key={personalAspect.id}
                   to={`/profile/astrology/aspects/${personalAspect.planet1Id}-${personalAspect.planet2Id}`}
-                  className={`block p-3 ${colors.bg} rounded-lg border border-neutral-700/50 hover:opacity-80 transition-opacity`}
+                  className={`block p-3 ${colors.bg} rounded-lg border border-theme-border-subtle/50 hover:opacity-80 transition-opacity`}
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
@@ -391,11 +391,11 @@ export function ProfileAstrology() {
                       <span className={`text-sm ${colors.text}`}>{aspectType.symbol}</span>
                       <span className="text-lg">{planet2.symbol}</span>
                     </div>
-                    <span className="text-neutral-500 text-xs">
+                    <span className="text-theme-text-tertiary text-xs">
                       {personalAspect.orbDegree}°{personalAspect.orbMinute}'
                     </span>
                   </div>
-                  <p className="text-neutral-400 text-xs mt-1">
+                  <p className="text-theme-text-secondary text-xs mt-1">
                     {planet1.name} {aspectType.name.toLowerCase()} {planet2.name}
                   </p>
                 </Link>
@@ -407,8 +407,8 @@ export function ProfileAstrology() {
 
       {/* Configurations */}
       {profile.configurations.length > 0 && (
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4">Aspect Configurations</h2>
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Aspect Configurations</h2>
           <div className="space-y-4">
             {profile.configurations.map((config) => (
               <Link
@@ -437,10 +437,10 @@ export function ProfileAstrology() {
       )}
 
       {/* Dignities Analysis */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="font-serif text-xl text-white">Essential Dignities</h2>
-          <Link to="/dignities" className="text-neutral-400 hover:text-white text-sm">
+          <h2 className="font-serif text-xltext-theme-text-primary">Essential Dignities</h2>
+          <Link to="/dignities" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
             View Dignity Matrix →
           </Link>
         </div>
@@ -456,13 +456,13 @@ export function ProfileAstrology() {
                 return planet && sign && dignity ? (
                   <div key={p.id} className="flex items-center gap-2 p-2 bg-emerald-500/10 rounded">
                     <span className="text-lg">{planet.symbol}</span>
-                    <span className="text-white">{planet.name} in {sign.name}</span>
+                    <span className="text-theme-text-primary">{planet.name} in {sign.name}</span>
                     <span className="text-emerald-400 text-xs ml-auto">{dignity.dignityType}</span>
                   </div>
                 ) : null;
               })}
               {placements.filter(p => p.dignityId && ['domicile', 'exaltation'].includes(p.dignityId)).length === 0 && (
-                <p className="text-neutral-500 text-sm">No planets in domicile or exaltation</p>
+                <p className="text-theme-text-tertiary text-sm">No planets in domicile or exaltation</p>
               )}
             </div>
           </div>
@@ -477,13 +477,13 @@ export function ProfileAstrology() {
                 return planet && sign && dignity ? (
                   <div key={p.id} className="flex items-center gap-2 p-2 bg-rose-500/10 rounded">
                     <span className="text-lg">{planet.symbol}</span>
-                    <span className="text-white">{planet.name} in {sign.name}</span>
+                    <span className="text-theme-text-primary">{planet.name} in {sign.name}</span>
                     <span className="text-rose-400 text-xs ml-auto">{dignity.dignityType}</span>
                   </div>
                 ) : null;
               })}
               {placements.filter(p => p.dignityId && ['detriment', 'fall'].includes(p.dignityId)).length === 0 && (
-                <p className="text-neutral-500 text-sm">No planets in detriment or fall</p>
+                <p className="text-theme-text-tertiary text-sm">No planets in detriment or fall</p>
               )}
             </div>
           </div>
@@ -492,21 +492,21 @@ export function ProfileAstrology() {
 
       {/* Quick Links */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
-        <Link to="/planets" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/planets" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">☿</span>
-          <span className="text-neutral-300 text-sm">Planets</span>
+          <span className="text-theme-text-secondary text-sm">Planets</span>
         </Link>
-        <Link to="/signs" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/signs" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">♈︎</span>
-          <span className="text-neutral-300 text-sm">Signs</span>
+          <span className="text-theme-text-secondary text-sm">Signs</span>
         </Link>
-        <Link to="/houses" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/houses" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">⌂</span>
-          <span className="text-neutral-300 text-sm">Houses</span>
+          <span className="text-theme-text-secondary text-sm">Houses</span>
         </Link>
-        <Link to="/aspects" className="p-4 bg-neutral-900/50 rounded-lg border border-neutral-800 hover:border-neutral-700 text-center">
+        <Link to="/aspects" className="p-4 bg-surface-base/50 rounded-lg border border-theme-border-subtle hover:border-theme-border-subtle text-center">
           <span className="text-2xl block mb-1">△</span>
-          <span className="text-neutral-300 text-sm">Aspects</span>
+          <span className="text-theme-text-secondary text-sm">Aspects</span>
         </Link>
       </div>
     </motion.div>

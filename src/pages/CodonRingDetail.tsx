@@ -44,21 +44,21 @@ export function CodonRingDetail() {
       {ring.collectivePurpose && ring.collectivePurpose !== 'Unknown purpose' && (
         <section className="bg-gradient-to-br from-genekey-500/10 to-genekey-600/5 rounded-xl p-6 border border-genekey-500/20 text-center">
           <h2 className="font-serif text-lg mb-2 text-genekey-300">Collective Purpose</h2>
-          <p className="text-neutral-300 text-lg leading-relaxed">{ring.collectivePurpose}</p>
+          <p className="text-theme-text-secondary text-lg leading-relaxed">{ring.collectivePurpose}</p>
         </section>
       )}
 
       {/* Description */}
       {ring.description && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <p className="text-neutral-300 leading-relaxed">{ring.description}</p>
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <p className="text-theme-text-secondary leading-relaxed">{ring.description}</p>
         </section>
       )}
 
       {/* Member Gene Keys */}
       <section>
         <h2 className="font-serif text-2xl mb-4">Member Gene Keys</h2>
-        <p className="text-neutral-400 mb-6">
+        <p className="text-theme-text-secondary mb-6">
           These {memberKeys.length} Gene Keys share a deep genetic resonance within this Codon Ring,
           working together toward the ring's collective theme of <span className="text-genekey-400">{ring.theme}</span>.
         </p>
@@ -69,13 +69,13 @@ export function CodonRingDetail() {
               <Link
                 key={gk.id}
                 to={`/gene-keys/${gk.id}`}
-                className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-genekey-500/50 hover:bg-neutral-900 transition-all group"
+                className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-genekey-500/50 hover:bg-surface-base transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-3xl font-serif text-genekey-400">{gk.keyNumber}</span>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-2 mb-1">
-                      <h3 className="font-serif text-lg text-white group-hover:text-genekey-300 transition-colors">
+                      <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors">
                         {gk.name}
                       </h3>
                       {gate && (
@@ -88,15 +88,15 @@ export function CodonRingDetail() {
                     {/* Spectrum */}
                     <div className="space-y-1 text-sm">
                       <div className="flex items-center gap-2">
-                        <span className="w-14 text-neutral-500">Shadow:</span>
+                        <span className="w-14 text-theme-text-tertiary">Shadow:</span>
                         <span className="text-red-400/80">{gk.shadow.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="w-14 text-neutral-500">Gift:</span>
+                        <span className="w-14 text-theme-text-tertiary">Gift:</span>
                         <span className="text-genekey-400">{gk.gift.name}</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <span className="w-14 text-neutral-500">Siddhi:</span>
+                        <span className="w-14 text-theme-text-tertiary">Siddhi:</span>
                         <span className="text-yellow-400/80">{gk.siddhi.name}</span>
                       </div>
                     </div>
@@ -109,16 +109,16 @@ export function CodonRingDetail() {
       </section>
 
       {/* Ring Relationships */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Within the Ring</h2>
-        <p className="text-neutral-400 mb-4">
+        <p className="text-theme-text-secondary mb-4">
           Gene Keys within a Codon Ring influence each other at the genetic level. When contemplating
           one key in the ring, the energies of its ring-mates are also activated. This creates a
           holographic effect where understanding deepens across all related keys.
         </p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
           {memberKeys.map(gk => (
-            <div key={gk.id} className="text-center p-3 bg-neutral-800/50 rounded-lg">
+            <div key={gk.id} className="text-center p-3 bg-surface-overlay rounded-lg">
               <div className="text-2xl font-serif text-genekey-400 mb-1">{gk.keyNumber}</div>
               <div className="text-xs text-genekey-300">{gk.gift.name}</div>
             </div>
@@ -128,22 +128,22 @@ export function CodonRingDetail() {
 
       {/* Amino Acid */}
       {aminoAcid && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-2">Amino Acid</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             Codon Rings encode a specific amino acid in the human genome — the biochemical bridge between DNA and consciousness.
           </p>
           <Link
             to={`/gene-keys/amino-acids/${aminoAcid.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
           >
             <div className="w-12 h-12 rounded-full bg-genekey-500/20 flex-shrink-0 flex items-center justify-center">
               <span className="text-genekey-400 font-mono font-bold text-lg">{aminoAcid.symbol}</span>
             </div>
             <div>
-              <p className="text-white font-medium">{aminoAcid.name}</p>
-              <p className="text-neutral-400 text-sm capitalize">{aminoAcid.aminoAcidType}</p>
-              <p className="text-neutral-500 text-xs mt-1 line-clamp-2">{aminoAcid.consciousnessQuality}</p>
+              <p className="text-theme-text-primary font-medium">{aminoAcid.name}</p>
+              <p className="text-theme-text-secondary text-sm capitalize">{aminoAcid.aminoAcidType}</p>
+              <p className="text-theme-text-tertiary text-xs mt-1 line-clamp-2">{aminoAcid.consciousnessQuality}</p>
             </div>
           </Link>
         </section>
@@ -151,7 +151,7 @@ export function CodonRingDetail() {
 
       {/* Back Link */}
       <div className="text-center pt-4">
-        <Link to="/gene-keys/codon-rings" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/gene-keys/codon-rings" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &#8592; Back to Codon Rings
         </Link>
       </div>

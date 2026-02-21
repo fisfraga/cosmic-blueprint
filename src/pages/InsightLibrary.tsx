@@ -53,7 +53,7 @@ const CATEGORY_STYLES: Record<
   },
   lifeOS: {
     borderTop: 'border-t-neutral-700',
-    text: 'text-neutral-400',
+    text: 'text-theme-text-secondary',
     label: 'Life OS',
   },
   alchemy: {
@@ -103,7 +103,7 @@ function getCategoryStyles(category: ContemplationCategory) {
   return (
     CATEGORY_STYLES[category] ?? {
       borderTop: 'border-t-neutral-700',
-      text: 'text-neutral-400',
+      text: 'text-theme-text-secondary',
       label: category,
     }
   );
@@ -154,8 +154,8 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
       exit={{ opacity: 0, y: -8, scale: 0.97 }}
       transition={{ duration: 0.22 }}
       className={[
-        'relative flex flex-col gap-3 rounded-lg border border-neutral-800',
-        'bg-neutral-900/50 p-5 border-t-2',
+        'relative flex flex-col gap-3 rounded-lg border border-theme-border-subtle',
+        'bg-surface-base/50 p-5 border-t-2',
         styles.borderTop,
       ].join(' ')}
     >
@@ -174,7 +174,7 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
             className={`flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors ${
               copied
                 ? 'text-emerald-400 bg-emerald-900/30'
-                : 'text-neutral-500 hover:text-purple-400 hover:bg-neutral-800'
+                : 'text-theme-text-tertiary hover:text-purple-400 hover:bg-surface-raised'
             }`}
           >
             {copied ? '✓ Copied' : '⟐ Tana'}
@@ -183,7 +183,7 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
         <button
           onClick={handleDeleteClick}
           aria-label="Delete insight"
-          className="flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors text-neutral-500 hover:text-red-400 hover:bg-neutral-800"
+          className="flex items-center gap-1 rounded px-2 py-0.5 text-xs transition-colors text-theme-text-tertiary hover:text-red-400 hover:bg-surface-raised"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -207,7 +207,7 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
       <div className="relative">
         <p
           className={[
-            'text-sm leading-relaxed text-neutral-200 whitespace-pre-wrap',
+            'text-sm leading-relaxed text-theme-text-primary whitespace-pre-wrap',
             !expanded ? 'line-clamp-4' : '',
           ].join(' ')}
         >
@@ -226,9 +226,9 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
       </div>
 
       {/* Footer row: type badge, tags, timestamp */}
-      <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-neutral-800/60">
+      <div className="flex flex-wrap items-center gap-2 pt-1 border-t border-theme-border-subtle/60">
         {/* Contemplation type badge */}
-        <span className="rounded-full bg-neutral-800 px-2.5 py-0.5 text-xs text-neutral-300">
+        <span className="rounded-full bg-surface-raised px-2.5 py-0.5 text-xs text-theme-text-secondary">
           {formattedType}
         </span>
 
@@ -244,7 +244,7 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
           ))}
 
         {/* Spacer */}
-        <span className="ml-auto text-xs text-neutral-500 shrink-0">
+        <span className="ml-auto text-xs text-theme-text-tertiary shrink-0">
           {formatRelativeTime(insight.createdAt)}
         </span>
       </div>
@@ -277,7 +277,7 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
               'flex items-center gap-1.5 rounded-full border px-3.5 py-1.5 text-xs font-medium transition-all',
               isActive
                 ? 'border-amber-500/60 bg-amber-500/10 text-amber-300'
-                : 'border-neutral-700 bg-neutral-800/50 text-neutral-400 hover:border-neutral-600 hover:text-neutral-200',
+                : 'border-theme-border-subtle bg-surface-overlay text-theme-text-secondary hover:border-theme-border hover:text-theme-text-primary',
             ].join(' ')}
           >
             {opt.label}
@@ -285,7 +285,7 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
               <span
                 className={[
                   'rounded-full px-1.5 py-px text-[10px] font-semibold',
-                  isActive ? 'bg-amber-500/20 text-amber-300' : 'bg-neutral-700 text-neutral-400',
+                  isActive ? 'bg-amber-500/20 text-amber-300' : 'bg-surface-interactive text-theme-text-secondary',
                 ].join(' ')}
               >
                 {count}
@@ -381,7 +381,7 @@ export function InsightLibrary() {
   }, [insights, searchQuery]);
 
   return (
-    <div className="min-h-screen bg-neutral-950 px-4 py-10">
+    <div className="min-h-screen bg-surface-base px-4 py-10">
       <div className="mx-auto max-w-3xl">
         {/* ── Page Header ── */}
         <motion.header
@@ -397,10 +397,10 @@ export function InsightLibrary() {
                 ✧
               </div>
               <div>
-                <h1 className="text-2xl font-bold tracking-tight text-neutral-100">
+                <h1 className="text-2xl font-bold tracking-tight text-theme-text-primary">
                   Contemplation Journal
                 </h1>
-                <p className="text-sm text-neutral-400">
+                <p className="text-sm text-theme-text-secondary">
                   Your saved insights from the Contemplation Chamber
                 </p>
               </div>
@@ -408,7 +408,7 @@ export function InsightLibrary() {
 
             {/* Insight count + sync badge */}
             <div className="flex shrink-0 flex-col items-end gap-1.5">
-              <span className="text-sm text-neutral-400">
+              <span className="text-sm text-theme-text-secondary">
                 {insights.length}{' '}
                 {insights.length === 1 ? 'insight' : 'insights'}
               </span>
@@ -440,7 +440,7 @@ export function InsightLibrary() {
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
-                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500"
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-theme-text-tertiary"
                   aria-hidden="true"
                 >
                   <path
@@ -462,7 +462,7 @@ export function InsightLibrary() {
                   }}
                   placeholder="Search insights..."
                   aria-label="Search insights"
-                  className="w-full rounded-lg border border-neutral-800 bg-neutral-900/70 py-2.5 pl-10 pr-9 text-sm text-neutral-200 placeholder:text-neutral-500 transition-colors focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+                  className="w-full rounded-lg border border-theme-border-subtle bg-surface-base/70 py-2.5 pl-10 pr-9 text-sm text-theme-text-primary placeholder:text-theme-text-tertiary transition-colors focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
                 />
                 {/* Clear (X) button */}
                 {searchQuery && (
@@ -472,7 +472,7 @@ export function InsightLibrary() {
                       searchInputRef.current?.focus();
                     }}
                     aria-label="Clear search"
-                    className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-neutral-500 transition-colors hover:text-neutral-300"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-theme-text-tertiary transition-colors hover:text-theme-text-secondary"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -507,7 +507,7 @@ export function InsightLibrary() {
                 key="no-results"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="py-12 text-center text-sm text-neutral-500"
+                className="py-12 text-center text-sm text-theme-text-tertiary"
               >
                 {searchQuery.trim()
                   ? `No insights matching "${searchQuery.trim()}"${activeFilter !== 'all' ? ` in ${FILTER_OPTIONS.find((o) => o.value === activeFilter)?.label ?? activeFilter}` : ''}.`

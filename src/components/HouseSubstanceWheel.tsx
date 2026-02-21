@@ -300,7 +300,7 @@ export function HouseSubstanceWheel({
         const rulingSign = house.rulingSignId ? signs.get(house.rulingSignId) : null;
         return (
           <div
-            className="absolute z-10 rounded-xl border bg-neutral-950/95 p-3 shadow-2xl pointer-events-none"
+            className="absolute z-10 rounded-xl border bg-surface-base/95 p-3 shadow-2xl pointer-events-none"
             style={{
               borderColor: colors.fill + '40',
               top: size / 2 - 80,
@@ -309,7 +309,7 @@ export function HouseSubstanceWheel({
             }}
           >
             <div className="mb-1 flex items-center gap-2">
-              <span className="text-sm font-semibold text-white">House {n}</span>
+              <span className="text-sm font-semibold text-theme-text-primary">House {n}</span>
               <span
                 className="rounded-full px-1.5 py-0.5 text-[10px] font-medium uppercase tracking-wider"
                 style={{ backgroundColor: colors.fill + '25', color: colors.fill }}
@@ -317,8 +317,8 @@ export function HouseSubstanceWheel({
                 {colors.polarity}
               </span>
             </div>
-            <p className="text-[11px] text-neutral-400 mb-1">{house.name.replace('House', '').trim()} {rulingSign && `· ${rulingSign.symbol} ${rulingSign.name}`}</p>
-            <p className="text-[10px] text-neutral-500">{house.worldHalfTheme}</p>
+            <p className="text-[11px] text-theme-text-secondary mb-1">{house.name.replace('House', '').trim()} {rulingSign && `· ${rulingSign.symbol} ${rulingSign.name}`}</p>
+            <p className="text-[10px] text-theme-text-tertiary">{house.worldHalfTheme}</p>
             <p className="mt-1.5 text-[10px] font-medium uppercase tracking-widest" style={{ color: colors.fill }}>
               {colors.label} · {n <= 6 ? 'Inner' : 'Outer'} World
             </p>

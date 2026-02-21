@@ -49,10 +49,10 @@ export function DecanDive() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Decan Dive
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Each zodiac sign contains three decans—10° segments that add nuance to planetary placements.
           Discover how the decan colors your cosmic expression.
         </p>
@@ -61,7 +61,7 @@ export function DecanDive() {
       {/* Personal Decans */}
       {personalDecans.length > 0 && (
         <section>
-          <h2 className="font-serif text-xl text-white mb-4 flex items-center gap-2">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4 flex items-center gap-2">
             <span>✦</span> Your Decan Placements
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -82,12 +82,12 @@ export function DecanDive() {
                       <span className="text-2xl">{planet?.symbol}</span>
                       <span className="text-lg">{sign?.symbol}</span>
                     </div>
-                    <span className="text-xs text-neutral-400">{decan.degrees}</span>
+                    <span className="text-xs text-theme-text-secondary">{decan.degrees}</span>
                   </div>
                   <h3 className={`font-medium ${colors.text}`}>
                     {planet?.name} in {sign?.name} {decan.decanNumber}
                   </h3>
-                  <p className="text-neutral-300 text-sm mt-1">
+                  <p className="text-theme-text-secondary text-sm mt-1">
                     "{decan.keyword}" • Ruled by {planets.get(decan.rulerPlanetId)?.symbol}
                   </p>
                 </motion.div>
@@ -95,7 +95,7 @@ export function DecanDive() {
             })}
           </div>
           {personalDecans.length > 6 && (
-            <p className="text-neutral-500 text-sm mt-3 text-center">
+            <p className="text-theme-text-tertiary text-sm mt-3 text-center">
               + {personalDecans.length - 6} more placements
             </p>
           )}
@@ -104,7 +104,7 @@ export function DecanDive() {
 
       {/* Sign Selector */}
       <section>
-        <h2 className="font-serif text-xl text-white mb-4">Explore by Sign</h2>
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Explore by Sign</h2>
         <div className="flex flex-wrap justify-center gap-2">
           {orderedSigns.map((sign) => {
             const colors = elementColors[sign.elementId as keyof typeof elementColors];
@@ -117,7 +117,7 @@ export function DecanDive() {
                 className={`px-4 py-2 rounded-lg flex items-center gap-2 transition-all ${
                   isSelected
                     ? `${colors.bg} ${colors.border} border ${colors.text}`
-                    : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700 hover:text-white'
+                    : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive hover:text-theme-text-primary'
                 }`}
               >
                 <span className="text-lg">{sign.symbol}</span>
@@ -149,8 +149,8 @@ export function DecanDive() {
                     <div className="flex items-center gap-4">
                       <span className="text-5xl">{sign.symbol}</span>
                       <div>
-                        <h2 className="font-serif text-2xl text-white">{sign.name} Decans</h2>
-                        <p className="text-neutral-400">Three expressions of {sign.name} energy</p>
+                        <h2 className="font-serif text-2xltext-theme-text-primary">{sign.name} Decans</h2>
+                        <p className="text-theme-text-secondary">Three expressions of {sign.name} energy</p>
                       </div>
                     </div>
                   </div>
@@ -164,32 +164,32 @@ export function DecanDive() {
                       return (
                         <div
                           key={decan.id}
-                          className="p-5 hover:bg-neutral-900/50 transition-colors cursor-pointer"
+                          className="p-5 hover:bg-surface-base/50 transition-colors cursor-pointer"
                           onClick={() => setSelectedDecan(decan)}
                         >
                           <div className="flex items-center justify-between mb-3">
                             <span className={`text-sm font-medium ${colors.text}`}>
                               Decan {decan.decanNumber}
                             </span>
-                            <span className="text-xs text-neutral-500">{decan.degrees}</span>
+                            <span className="text-xs text-theme-text-tertiary">{decan.degrees}</span>
                           </div>
 
-                          <h3 className="font-serif text-lg text-white mb-2">
+                          <h3 className="font-serif text-lg text-theme-text-primary mb-2">
                             "{decan.keyword}"
                           </h3>
 
                           <div className="flex items-center gap-3 mb-3">
                             <div className="flex items-center gap-1">
                               <span className="text-xl">{rulerPlanet?.symbol}</span>
-                              <span className="text-xs text-neutral-400">ruler</span>
+                              <span className="text-xs text-theme-text-secondary">ruler</span>
                             </div>
                             <div className="flex items-center gap-1">
                               <span className="text-lg">{subrulerSign?.symbol}</span>
-                              <span className="text-xs text-neutral-400">influence</span>
+                              <span className="text-xs text-theme-text-secondary">influence</span>
                             </div>
                           </div>
 
-                          <p className="text-neutral-400 text-sm line-clamp-3">
+                          <p className="text-theme-text-secondary text-sm line-clamp-3">
                             {decan.description}
                           </p>
                         </div>
@@ -227,7 +227,7 @@ export function DecanDive() {
                 const colors = elementColors[(sign?.elementId || 'fire') as keyof typeof elementColors];
 
                 return (
-                  <div className={`rounded-xl border ${colors.border} bg-neutral-900`}>
+                  <div className={`rounded-xl border ${colors.border} bg-surface-base`}>
                     {/* Header */}
                     <div className={`p-6 bg-gradient-to-r ${colors.gradient}`}>
                       <div className="flex items-start justify-between">
@@ -235,10 +235,10 @@ export function DecanDive() {
                           <div className="flex items-center gap-3 mb-2">
                             <span className="text-4xl">{sign?.symbol}</span>
                             <div>
-                              <h2 className="font-serif text-2xl text-white">
+                              <h2 className="font-serif text-2xltext-theme-text-primary">
                                 {sign?.name} Decan {selectedDecan.decanNumber}
                               </h2>
-                              <p className="text-neutral-400">{selectedDecan.degrees}</p>
+                              <p className="text-theme-text-secondary">{selectedDecan.degrees}</p>
                             </div>
                           </div>
                           <p className={`text-xl ${colors.text} font-serif`}>
@@ -247,7 +247,7 @@ export function DecanDive() {
                         </div>
                         <button
                           onClick={() => setSelectedDecan(null)}
-                          className="text-neutral-400 hover:text-white transition-colors text-2xl"
+                          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors text-2xl"
                         >
                           ✕
                         </button>
@@ -261,15 +261,15 @@ export function DecanDive() {
                         <div className="flex items-center gap-3">
                           <span className="text-3xl">{rulerPlanet?.symbol}</span>
                           <div>
-                            <p className="text-white font-medium">{rulerPlanet?.name}</p>
-                            <p className="text-neutral-500 text-xs">Decan Ruler</p>
+                            <p className="text-theme-text-primary font-medium">{rulerPlanet?.name}</p>
+                            <p className="text-theme-text-tertiary text-xs">Decan Ruler</p>
                           </div>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="text-2xl">{subrulerSign?.symbol}</span>
                           <div>
-                            <p className="text-white font-medium">{subrulerSign?.name}</p>
-                            <p className="text-neutral-500 text-xs">Sub-influence</p>
+                            <p className="text-theme-text-primary font-medium">{subrulerSign?.name}</p>
+                            <p className="text-theme-text-tertiary text-xs">Sub-influence</p>
                           </div>
                         </div>
                       </div>
@@ -277,7 +277,7 @@ export function DecanDive() {
                       {/* Description */}
                       <div>
                         <h3 className={`font-medium ${colors.text} mb-2`}>The Energy</h3>
-                        <p className="text-neutral-300 leading-relaxed">
+                        <p className="text-theme-text-secondary leading-relaxed">
                           {selectedDecan.description}
                         </p>
                       </div>
@@ -286,31 +286,31 @@ export function DecanDive() {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
                           <h4 className="font-medium text-emerald-400 mb-2">Gift Expression</h4>
-                          <p className="text-neutral-300 text-sm">
+                          <p className="text-theme-text-secondary text-sm">
                             {selectedDecan.giftExpression}
                           </p>
                         </div>
                         <div className="p-4 bg-rose-500/10 border border-rose-500/30 rounded-lg">
                           <h4 className="font-medium text-rose-400 mb-2">Shadow Expression</h4>
-                          <p className="text-neutral-300 text-sm">
+                          <p className="text-theme-text-secondary text-sm">
                             {selectedDecan.shadowExpression}
                           </p>
                         </div>
                       </div>
 
                       {/* Links */}
-                      <div className="flex gap-3 pt-4 border-t border-neutral-800">
+                      <div className="flex gap-3 pt-4 border-t border-theme-border-subtle">
                         <Link
                           to={`/signs/${sign?.id}`}
                           onClick={() => setSelectedDecan(null)}
-                          className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded-lg transition-colors"
+                          className="px-4 py-2 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded-lg transition-colors"
                         >
                           View {sign?.name}
                         </Link>
                         <Link
                           to={`/planets/${rulerPlanet?.id}`}
                           onClick={() => setSelectedDecan(null)}
-                          className="px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded-lg transition-colors"
+                          className="px-4 py-2 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded-lg transition-colors"
                         >
                           View {rulerPlanet?.name}
                         </Link>
@@ -326,28 +326,28 @@ export function DecanDive() {
 
       {/* Understanding Decans */}
       <section className="mt-12">
-        <h2 className="font-serif text-2xl text-white mb-6">Understanding Decans</h2>
+        <h2 className="font-serif text-2xl text-theme-text-primary mb-6">Understanding Decans</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+          <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
             <div className="text-3xl mb-3">1️⃣</div>
-            <h3 className="font-medium text-white mb-2">First Decan (0-10°)</h3>
-            <p className="text-neutral-400 text-sm">
+            <h3 className="font-medium text-theme-text-primary mb-2">First Decan (0-10°)</h3>
+            <p className="text-theme-text-secondary text-sm">
               The purest expression of the sign's energy. Ruled by the sign's own planet,
               this decan embodies the archetypal qualities without modification.
             </p>
           </div>
-          <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+          <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
             <div className="text-3xl mb-3">2️⃣</div>
-            <h3 className="font-medium text-white mb-2">Second Decan (10-20°)</h3>
-            <p className="text-neutral-400 text-sm">
+            <h3 className="font-medium text-theme-text-primary mb-2">Second Decan (10-20°)</h3>
+            <p className="text-theme-text-secondary text-sm">
               The sign's energy colored by the next sign of its element.
               This adds complexity and a secondary planetary influence.
             </p>
           </div>
-          <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
+          <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
             <div className="text-3xl mb-3">3️⃣</div>
-            <h3 className="font-medium text-white mb-2">Third Decan (20-30°)</h3>
-            <p className="text-neutral-400 text-sm">
+            <h3 className="font-medium text-theme-text-primary mb-2">Third Decan (20-30°)</h3>
+            <p className="text-theme-text-secondary text-sm">
               The sign's energy merging with the third sign of its element.
               Often shows the most evolved or complex expression.
             </p>

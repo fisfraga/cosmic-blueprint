@@ -21,10 +21,10 @@ export function AstrologyContent({ entity, profile }: AstrologyContentProps) {
       {/* Planet: Archetype */}
       {entity.type === 'planet' && getStringValue(data, 'archetype') && (
         <div>
-          <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">
             Archetype
           </h4>
-          <p className="text-sm text-gray-300">{getStringValue(data, 'archetype')}</p>
+          <p className="text-sm text-theme-text-secondary">{getStringValue(data, 'archetype')}</p>
         </div>
       )}
 
@@ -79,9 +79,9 @@ function ElementPlacements({ entity }: { entity: EntityInfo }) {
           return (
             <div key={pe.id} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{planet?.symbol || ''}</span>
-              <span className="text-white font-medium">{planet?.name || placement.planetId}</span>
-              <span className="text-gray-500">in</span>
-              <span className="text-gray-300">{sign?.name || placement.signId}</span>
+              <span className="text-theme-text-primary font-medium">{planet?.name || placement.planetId}</span>
+              <span className="text-theme-text-tertiary">in</span>
+              <span className="text-theme-text-secondary">{sign?.name || placement.signId}</span>
             </div>
           );
         })}
@@ -109,16 +109,16 @@ function AspectsByType({ entity, profile }: { entity: EntityInfo; profile: Astro
           return (
             <div key={i} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{planet1?.symbol || ''}</span>
-              <span className="text-gray-500">{entity.symbol || '—'}</span>
+              <span className="text-theme-text-tertiary">{entity.symbol || '—'}</span>
               <span className="text-lg">{planet2?.symbol || ''}</span>
-              <span className="text-gray-400 text-xs ml-2">
+              <span className="text-theme-text-secondary text-xs ml-2">
                 {aspect.orbDegree?.toFixed(1) || '0'}° orb
               </span>
             </div>
           );
         })}
         {aspectsOfType.length > 6 && (
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-theme-text-tertiary mt-1">
             +{aspectsOfType.length - 6} more
           </p>
         )}
@@ -143,8 +143,8 @@ function SignPlacements({ entity }: { entity: EntityInfo }) {
           return (
             <div key={placementEntity.id} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{planet?.symbol || ''}</span>
-              <span className="text-white font-medium">{planet?.name || placement.planetId}</span>
-              <span className="text-gray-400">
+              <span className="text-theme-text-primary font-medium">{planet?.name || placement.planetId}</span>
+              <span className="text-theme-text-secondary">
                 {placement.degree}°{placement.minute}'
                 {placement.retrograde && <span className="text-amber-400 ml-1">℞</span>}
               </span>
@@ -173,8 +173,8 @@ function HousePlacements({ entity }: { entity: EntityInfo }) {
           return (
             <div key={placementEntity.id} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{planet?.symbol || ''}</span>
-              <span className="text-white font-medium">{planet?.name || placement.planetId}</span>
-              <span className="text-gray-400">
+              <span className="text-theme-text-primary font-medium">{planet?.name || placement.planetId}</span>
+              <span className="text-theme-text-secondary">
                 in {sign?.name || placement.signId}
               </span>
             </div>
@@ -203,16 +203,16 @@ function PlanetAspects({ entity }: { entity: EntityInfo }) {
           return (
             <div key={aspectEntity.id} className="flex items-center gap-2 text-sm">
               <span className="text-lg">{aspectType?.symbol || ''}</span>
-              <span className="text-white font-medium">{aspectType?.name || aspect.aspectId}</span>
-              <span className="text-gray-400">{otherPlanet?.name || otherPlanetId}</span>
-              <span className="text-gray-500 text-xs">
+              <span className="text-theme-text-primary font-medium">{aspectType?.name || aspect.aspectId}</span>
+              <span className="text-theme-text-secondary">{otherPlanet?.name || otherPlanetId}</span>
+              <span className="text-theme-text-tertiary text-xs">
                 {aspect.orbDegree}°{aspect.orbMinute}'
               </span>
             </div>
           );
         })}
         {aspectsWithPlanet.length > 6 && (
-          <p className="text-xs text-gray-500 mt-1">
+          <p className="text-xs text-theme-text-tertiary mt-1">
             +{aspectsWithPlanet.length - 6} more aspects
           </p>
         )}

@@ -81,23 +81,23 @@ export function Graph() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Constellation Pathways
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Explore the web of astrological relationships. Each node represents an entity,
           and the lines show how they connect through rulership, elements, and cosmic patterns.
         </p>
       </div>
 
       {/* Filters */}
-      <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
+      <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
         <div className="flex flex-wrap items-center gap-4 mb-4">
-          <h3 className="text-sm font-semibold text-white">Filters:</h3>
+          <h3 className="text-sm font-semiboldtext-theme-text-primary">Filters:</h3>
 
           {/* Entity Type Filters */}
           <div className="flex items-center gap-2">
-            <span className="text-xs text-neutral-500">Entities:</span>
+            <span className="text-xs text-theme-text-tertiary">Entities:</span>
             {entityTypeOptions.map((option) => (
               <button
                 key={option.value}
@@ -105,7 +105,7 @@ export function Graph() {
                 className={`px-3 py-1 text-xs rounded-full transition-colors ${
                   selectedEntityTypes.includes(option.value)
                     ? 'bg-white text-neutral-900'
-                    : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                    : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                 }`}
               >
                 {option.label}
@@ -113,11 +113,11 @@ export function Graph() {
             ))}
           </div>
 
-          <div className="h-4 w-px bg-neutral-700" />
+          <div className="h-4 w-px bg-surface-interactive" />
 
           {/* Relationship Type Filters */}
           <div className="flex items-center gap-2">
-            <span className="text-xs text-neutral-500">Relationships:</span>
+            <span className="text-xs text-theme-text-tertiary">Relationships:</span>
             {relationshipTypeGroups.map((group) => {
               const allSelected = group.types.every((t) =>
                 selectedRelationshipTypes.includes(t)
@@ -134,8 +134,8 @@ export function Graph() {
                     allSelected
                       ? 'bg-white text-neutral-900'
                       : someSelected
-                      ? 'bg-neutral-700 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      ? 'bg-surface-interactive text-white'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   {group.label}
@@ -147,10 +147,10 @@ export function Graph() {
           {(selectedRelationshipTypes.length > 0 ||
             selectedEntityTypes.length < 4) && (
             <>
-              <div className="h-4 w-px bg-neutral-700" />
+              <div className="h-4 w-px bg-surface-interactive" />
               <button
                 onClick={clearFilters}
-                className="px-3 py-1 text-xs rounded-full bg-neutral-800 text-neutral-400 hover:bg-neutral-700 transition-colors"
+                className="px-3 py-1 text-xs rounded-full bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive transition-colors"
               >
                 Clear Filters
               </button>
@@ -159,7 +159,7 @@ export function Graph() {
         </div>
 
         {selectedRelationshipTypes.length > 0 && (
-          <p className="text-xs text-neutral-500">
+          <p className="text-xs text-theme-text-tertiary">
             Showing only: {selectedRelationshipTypes.join(', ')}
           </p>
         )}
@@ -181,24 +181,24 @@ export function Graph() {
 
       {/* Information */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
-        <div className="bg-neutral-900/30 rounded-lg p-4 border border-neutral-800">
+        <div className="bg-surface-base/30 rounded-lg p-4 border border-theme-border-subtle">
           <div className="text-3xl mb-2">☉</div>
-          <h4 className="font-serif text-lg text-white mb-1">Planetary Rulership</h4>
-          <p className="text-neutral-400 text-sm">
+          <h4 className="font-serif text-lg text-theme-text-primary mb-1">Planetary Rulership</h4>
+          <p className="text-theme-text-secondary text-sm">
             Golden lines connect planets to the signs they rule, showing the cosmic hierarchy.
           </p>
         </div>
-        <div className="bg-neutral-900/30 rounded-lg p-4 border border-neutral-800">
+        <div className="bg-surface-base/30 rounded-lg p-4 border border-theme-border-subtle">
           <div className="text-3xl mb-2">🜂</div>
-          <h4 className="font-serif text-lg text-white mb-1">Elemental Bonds</h4>
-          <p className="text-neutral-400 text-sm">
+          <h4 className="font-serif text-lg text-theme-text-primary mb-1">Elemental Bonds</h4>
+          <p className="text-theme-text-secondary text-sm">
             Signs cluster around their elements, revealing temperamental kinship.
           </p>
         </div>
-        <div className="bg-neutral-900/30 rounded-lg p-4 border border-neutral-800">
+        <div className="bg-surface-base/30 rounded-lg p-4 border border-theme-border-subtle">
           <div className="text-3xl mb-2">☍</div>
-          <h4 className="font-serif text-lg text-white mb-1">Polarity Axes</h4>
-          <p className="text-neutral-400 text-sm">
+          <h4 className="font-serif text-lg text-theme-text-primary mb-1">Polarity Axes</h4>
+          <p className="text-theme-text-secondary text-sm">
             Opposing signs form balancing pairs across the cosmic wheel.
           </p>
         </div>

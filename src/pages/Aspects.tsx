@@ -41,7 +41,7 @@ export function Aspects() {
           <span className="text-3xl">△</span>
           <h1 className="font-serif text-3xl font-medium">Aspects</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           Aspects are the angular relationships between planets in your chart—the sacred geometry
           that describes how different parts of your psyche communicate with each other.
           They reveal the internal dialogues, tensions, and harmonies within your being.
@@ -68,12 +68,12 @@ export function Aspects() {
       </section>
 
       {/* Aspect Nature Guide */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Understanding Aspect Natures</h3>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
           <div>
             <h4 className="font-medium text-water-400 mb-1">Harmonious Aspects</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Trines (120°) and sextiles (60°) create natural flow between planets.
               These represent talents and ease, though they can also indicate areas
               where we coast rather than grow.
@@ -81,15 +81,15 @@ export function Aspects() {
           </div>
           <div>
             <h4 className="font-medium text-fire-400 mb-1">Challenging Aspects</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Squares (90°) and oppositions (180°) create tension and friction.
               These are the growth engines of your chart—the places where you
               develop strength through challenge.
             </p>
           </div>
           <div>
-            <h4 className="font-medium text-neutral-300 mb-1">Neutral Aspects</h4>
-            <p className="text-neutral-400">
+            <h4 className="font-medium text-theme-text-secondary mb-1">Neutral Aspects</h4>
+            <p className="text-theme-text-secondary">
               Conjunctions (0°) are neither harmonious nor challenging—they represent
               a fusion of energies that must be integrated as one unified force.
             </p>
@@ -98,26 +98,26 @@ export function Aspects() {
       </section>
 
       {/* Major Aspects Table */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Major Aspects at a Glance</h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-neutral-700 text-left">
-                <th className="py-2 px-3 text-neutral-400">Aspect</th>
-                <th className="py-2 px-3 text-neutral-400">Angle</th>
-                <th className="py-2 px-3 text-neutral-400">Nature</th>
-                <th className="py-2 px-3 text-neutral-400">Keyword</th>
+              <tr className="border-b border-theme-border-subtle text-left">
+                <th className="py-2 px-3 text-theme-text-secondary">Aspect</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Angle</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Nature</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Keyword</th>
               </tr>
             </thead>
             <tbody>
               {getMajorAspects().map((aspect) => (
-                <tr key={aspect.id} className="border-b border-neutral-800">
+                <tr key={aspect.id} className="border-b border-theme-border-subtle">
                   <td className="py-2 px-3">
                     <span className="mr-2">{aspect.symbol}</span>
                     {aspect.name}
                   </td>
-                  <td className="py-2 px-3 text-neutral-400">{aspect.angle}°</td>
+                  <td className="py-2 px-3 text-theme-text-secondary">{aspect.angle}°</td>
                   <td className="py-2 px-3">
                     <span
                       className={
@@ -125,13 +125,13 @@ export function Aspects() {
                           ? 'text-water-400'
                           : aspect.nature === 'Challenging'
                           ? 'text-fire-400'
-                          : 'text-neutral-300'
+                          : 'text-theme-text-secondary'
                       }
                     >
                       {aspect.nature}
                     </span>
                   </td>
-                  <td className="py-2 px-3 text-neutral-400">{aspect.keyword}</td>
+                  <td className="py-2 px-3 text-theme-text-secondary">{aspect.keyword}</td>
                 </tr>
               ))}
             </tbody>

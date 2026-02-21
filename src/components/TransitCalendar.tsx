@@ -127,13 +127,13 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
   };
 
   return (
-    <div className="bg-cosmic-800/50 border border-cosmic-700 rounded-xl overflow-hidden">
+    <div className="bg-surface-raised/50 border border-theme-border-subtle rounded-xl overflow-hidden">
       {/* Header */}
-      <div className="px-4 py-3 border-b border-cosmic-700/50 flex items-center justify-between">
+      <div className="px-4 py-3 border-b border-theme-border-subtle/50 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <button
             onClick={() => navigateMonth(-1)}
-            className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-cosmic-700/50 transition-colors"
+            className="p-1.5 rounded-lg text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-interactive/50 transition-colors"
             aria-label="Previous month"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -145,7 +145,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
           </h3>
           <button
             onClick={() => navigateMonth(1)}
-            className="p-1.5 rounded-lg text-gray-400 hover:text-white hover:bg-cosmic-700/50 transition-colors"
+            className="p-1.5 rounded-lg text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-interactive/50 transition-colors"
             aria-label="Next month"
           >
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -166,7 +166,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
         {/* Weekday headers */}
         <div className="grid grid-cols-7 gap-1 mb-2">
           {WEEKDAYS.map(day => (
-            <div key={day} className="text-center text-xs text-gray-500 font-medium py-1">
+            <div key={day} className="text-center text-xs text-theme-text-tertiary font-medium py-1">
               {day}
             </div>
           ))}
@@ -198,8 +198,8 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
                   ${selected
                     ? 'bg-purple-500 text-white'
                     : aspectInfo
-                      ? `border ${getNatureBorderColor(aspectInfo.nature)} bg-cosmic-800/50 text-white`
-                      : 'text-gray-400 hover:bg-cosmic-700/50 hover:text-white'
+                      ? `border ${getNatureBorderColor(aspectInfo.nature)} bg-surface-raised/50 text-white`
+                      : 'text-theme-text-secondary hover:bg-surface-interactive/50 hover:text-theme-text-primary'
                   }
                 `}
               >
@@ -220,18 +220,18 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
         </div>
 
         {/* Legend */}
-        <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-cosmic-700/50">
+        <div className="flex items-center justify-center gap-4 mt-4 pt-4 border-t border-theme-border-subtle/50">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-emerald-500" />
-            <span className="text-xs text-gray-500">Harmonious</span>
+            <span className="text-xs text-theme-text-tertiary">Harmonious</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-red-500" />
-            <span className="text-xs text-gray-500">Challenging</span>
+            <span className="text-xs text-theme-text-tertiary">Challenging</span>
           </div>
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-purple-500" />
-            <span className="text-xs text-gray-500">Mixed</span>
+            <span className="text-xs text-theme-text-tertiary">Mixed</span>
           </div>
         </div>
       </div>
@@ -245,14 +245,14 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
             exit={{ opacity: 0, y: -10 }}
             className="px-4 pb-4"
           >
-            <div className="bg-cosmic-900/80 border border-cosmic-700 rounded-lg p-3">
+            <div className="bg-surface-base/80 border border-theme-border-subtle rounded-lg p-3">
               <div className="flex items-center justify-between mb-2">
                 <span className="text-sm text-white font-medium">
                   {MONTH_NAMES[currentMonth.month]} {hoveredDay}
                 </span>
                 <span className="text-lg">{dayPreview.moonPhase.emoji}</span>
               </div>
-              <p className="text-xs text-gray-400 mb-2">{dayPreview.moonPhase.name}</p>
+              <p className="text-xs text-theme-text-secondary mb-2">{dayPreview.moonPhase.name}</p>
               {dayPreview.significantAspects.length > 0 ? (
                 <div className="flex flex-wrap gap-1">
                   {dayPreview.significantAspects.slice(0, 3).map((aspect, i) => (
@@ -271,7 +271,7 @@ export function TransitCalendar({ onDaySelect, selectedDate }: TransitCalendarPr
                   ))}
                 </div>
               ) : (
-                <p className="text-xs text-gray-500">No major aspects</p>
+                <p className="text-xs text-theme-text-tertiary">No major aspects</p>
               )}
             </div>
           </motion.div>

@@ -64,7 +64,7 @@ export function GeneKeys() {
           <span className="text-3xl text-genekey-400">&#10022;</span>
           <h1 className="font-serif text-3xl font-medium">Gene Keys</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The Gene Keys are a contemplative transmission revealing the spectrum of human consciousness.
           Each of the 64 keys contains a Shadow (fear-based pattern), Gift (creative potential),
           and Siddhi (highest expression)—a pathway from suffering to liberation encoded in your DNA.
@@ -80,7 +80,7 @@ export function GeneKeys() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'all'
                 ? 'bg-genekey-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             All Keys ({allGeneKeys.length})
@@ -90,7 +90,7 @@ export function GeneKeys() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'ring'
                 ? 'bg-genekey-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             By Ring
@@ -100,7 +100,7 @@ export function GeneKeys() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'element'
                 ? 'bg-genekey-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             By Element
@@ -110,7 +110,7 @@ export function GeneKeys() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'sign'
                 ? 'bg-genekey-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             By Sign
@@ -120,7 +120,7 @@ export function GeneKeys() {
             className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
               activeFilter === 'center'
                 ? 'bg-genekey-500 text-white'
-                : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
             }`}
           >
             By HD Center
@@ -139,7 +139,7 @@ export function GeneKeys() {
                   className={`px-3 py-1.5 rounded-full text-sm transition-colors ${
                     filterValue === ring.id
                       ? 'bg-genekey-500/80 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   {ring.name.replace('Ring Of ', '')} ({keyCount})
@@ -160,7 +160,7 @@ export function GeneKeys() {
                   className={`px-4 py-2 rounded-lg text-sm transition-colors flex items-center gap-2 ${
                     filterValue === element.id
                       ? 'bg-genekey-500/80 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   <span className="text-lg">{element.symbol}</span>
@@ -182,7 +182,7 @@ export function GeneKeys() {
                   className={`px-3 py-1.5 rounded-lg text-sm transition-colors flex items-center gap-1.5 ${
                     filterValue === sign.id
                       ? 'bg-genekey-500/80 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   <span>{sign.symbol}</span>
@@ -204,7 +204,7 @@ export function GeneKeys() {
                   className={`px-3 py-1.5 rounded-lg text-sm transition-colors ${
                     filterValue === center.id
                       ? 'bg-humandesign-500/80 text-white'
-                      : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                      : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
                   }`}
                 >
                   {center.name.replace(' Center', '')} ({keyCount})
@@ -217,13 +217,13 @@ export function GeneKeys() {
         {/* Active Filter Badge */}
         {activeFilter !== 'all' && filterValue !== 'all' && (
           <div className="flex items-center gap-2 text-sm">
-            <span className="text-neutral-500">Showing:</span>
+            <span className="text-theme-text-tertiary">Showing:</span>
             <span className="px-3 py-1 bg-genekey-500/20 text-genekey-300 rounded-full">
               {filteredKeys.length} keys
             </span>
             <button
               onClick={() => handleFilterChange('all', 'all')}
-              className="text-neutral-400 hover:text-white"
+              className="text-theme-text-secondary hover:text-theme-text-primary"
             >
               Clear filter
             </button>
@@ -243,14 +243,14 @@ export function GeneKeys() {
       {/* Understanding Note */}
       <section className="bg-gradient-to-br from-genekey-500/10 to-genekey-600/5 rounded-xl p-6 border border-genekey-500/20">
         <h3 className="font-serif text-lg mb-2 text-genekey-300">The Spectrum of Consciousness</h3>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           Each Gene Key represents a holographic fractal of your potential. The <strong className="text-genekey-300">Shadow</strong> is
           not something to eliminate but to embrace—it contains the raw material for transformation.
           As awareness penetrates the Shadow, the <strong className="text-genekey-300">Gift</strong> naturally emerges.
           The <strong className="text-genekey-300">Siddhi</strong> represents the flowering of consciousness itself,
           available to all yet rarely fully embodied.
         </p>
-        <p className="text-neutral-400 text-sm">
+        <p className="text-theme-text-secondary text-sm">
           The Gene Keys connect deeply with Human Design (sharing the same 64 hexagrams) and Astrology
           (each key corresponds to specific zodiac degrees). Together they form a unified map of human potential.
         </p>
@@ -262,7 +262,7 @@ export function GeneKeys() {
           <span className="text-2xl text-genekey-400">&#9678;</span>
           <h2 className="font-serif text-2xl font-medium">Codon Rings</h2>
         </div>
-        <p className="text-neutral-400 max-w-3xl mb-6">
+        <p className="text-theme-text-secondary max-w-3xl mb-6">
           The 21 Codon Rings are chemical families that group Gene Keys by their amino acid expression.
           Keys within the same ring share a deep genetic resonance and collective purpose.
         </p>
@@ -271,13 +271,13 @@ export function GeneKeys() {
             <Link
               key={ring.id}
               to={`/gene-keys/codon-rings/${ring.id}`}
-              className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800 hover:border-genekey-500/50 transition-all group"
+              className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle hover:border-genekey-500/50 transition-all group"
             >
-              <h4 className="font-serif text-lg text-white group-hover:text-genekey-300 transition-colors mb-1">
+              <h4 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-1">
                 {ring.name}
               </h4>
               <p className="text-genekey-400 text-sm mb-2">{ring.theme}</p>
-              <p className="text-neutral-500 text-xs">
+              <p className="text-theme-text-tertiary text-xs">
                 Keys: {ring.geneKeyIds.map(id => {
                   const gk = geneKeys.get(id);
                   return gk ? gk.keyNumber : '';
@@ -298,49 +298,49 @@ function GeneKeyCard({ geneKey }: { geneKey: GeneKey }) {
   return (
     <Link
       to={`/gene-keys/${geneKey.id}`}
-      className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-genekey-500/50 hover:bg-neutral-900 transition-all group"
+      className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-genekey-500/50 hover:bg-surface-base transition-all group"
     >
       <div className="flex items-center justify-between mb-3">
         <span className="text-2xl font-serif text-genekey-400">{geneKey.keyNumber}</span>
-        <span className="text-xs text-neutral-500 bg-neutral-800 px-2 py-1 rounded">
+        <span className="text-xs text-theme-text-tertiary bg-surface-raised px-2 py-1 rounded">
           {geneKey.tropicalSignId?.replace(/-/g, ' ').replace(/\b\w/g, c => c.toUpperCase())}
         </span>
       </div>
 
-      <h3 className="font-serif text-lg text-white group-hover:text-genekey-300 transition-colors mb-2">
+      <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-2">
         {geneKey.name}
       </h3>
 
       {/* Shadow → Gift → Siddhi */}
       <div className="space-y-1 text-sm">
         <div className="flex items-center gap-2">
-          <span className="w-16 text-neutral-500">Shadow:</span>
+          <span className="w-16 text-theme-text-tertiary">Shadow:</span>
           <span className="text-red-400">{geneKey.shadow.name}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-16 text-neutral-500">Gift:</span>
+          <span className="w-16 text-theme-text-tertiary">Gift:</span>
           <span className="text-emerald-400">{geneKey.gift.name}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="w-16 text-neutral-500">Siddhi:</span>
+          <span className="w-16 text-theme-text-tertiary">Siddhi:</span>
           <span className="text-purple-400">{geneKey.siddhi.name}</span>
         </div>
       </div>
 
       {/* HD Gate + Amino Acid bridge */}
       {(gate || amino) && (
-        <div className="mt-3 pt-3 border-t border-neutral-800 flex items-center gap-2">
+        <div className="mt-3 pt-3 border-t border-theme-border-subtle flex items-center gap-2">
           {gate && (
             <>
               <span className="text-xs text-humandesign-500">HD</span>
               <span className="text-xs font-serif text-humandesign-400">{gate.gateNumber}</span>
             </>
           )}
-          {gate && amino && <span className="text-neutral-700">·</span>}
+          {gate && amino && <span className="text-theme-text-muted">·</span>}
           {amino && (
             <>
               <span className="text-xs font-mono text-genekey-500">{amino.symbol}</span>
-              <span className="text-xs text-neutral-500">{amino.name}</span>
+              <span className="text-xs text-theme-text-tertiary">{amino.name}</span>
             </>
           )}
         </div>

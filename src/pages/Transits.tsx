@@ -47,8 +47,8 @@ function TransitCard({
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ delay: index * 0.05 }}
-      className={`bg-neutral-900/50 border rounded-xl p-4 hover:border-neutral-700 transition-colors ${
-        isInNatalChart ? 'border-humandesign-500/40' : 'border-neutral-800'
+      className={`bg-surface-base/50 border rounded-xl p-4 hover:border-theme-border-subtle transition-colors ${
+        isInNatalChart ? 'border-humandesign-500/40' : 'border-theme-border-subtle'
       }`}
     >
       <div className="flex items-center justify-between mb-3">
@@ -57,7 +57,7 @@ function TransitCard({
           <div>
             <Link
               to={`/planets/${position.planetId}`}
-              className="font-medium text-lg text-white hover:text-purple-400 transition-colors"
+              className="font-medium text-lg text-theme-text-primary hover:text-purple-400 transition-colors"
             >
               {position.planetName}
             </Link>
@@ -71,18 +71,18 @@ function TransitCard({
         <div className="text-right">
           <Link
             to={`/signs/${position.signId}`}
-            className="flex items-center gap-1 text-neutral-300 hover:text-white transition-colors text-lg"
+            className="flex items-center gap-1 text-theme-text-secondary hover:text-theme-text-primary transition-colors text-lg"
           >
             <span className="text-xl">{position.signSymbol}</span>
             <span>{position.signName}</span>
           </Link>
-          <span className="text-neutral-500 text-sm">{position.formattedDegree}</span>
+          <span className="text-theme-text-tertiary text-sm">{position.formattedDegree}</span>
         </div>
       </div>
 
       {/* Cross-system bridge strip: Gate · Gene Key · Chakra */}
       {gate && (
-        <div className="flex items-center gap-1.5 flex-wrap mb-3 pb-3 border-b border-neutral-800 text-xs">
+        <div className="flex items-center gap-1.5 flex-wrap mb-3 pb-3 border-b border-theme-border-subtle text-xs">
           <Link
             to={`/human-design/${gate.id}`}
             className={`flex items-center gap-1 px-2 py-1 rounded transition-colors ${
@@ -101,9 +101,9 @@ function TransitCard({
               className="flex items-center gap-1 px-2 py-1 bg-genekey-500/10 text-genekey-400 rounded hover:bg-genekey-500/20 transition-colors"
             >
               <span className="font-serif">{gk.keyNumber}</span>
-              <span className="text-neutral-600">·</span>
+              <span className="text-theme-text-muted">·</span>
               <span className="text-red-400/70">{gk.shadow.name}</span>
-              <span className="text-neutral-700">→</span>
+              <span className="text-theme-text-muted">→</span>
               <span className="text-emerald-400/70">{gk.gift.name}</span>
             </Link>
           )}
@@ -111,11 +111,11 @@ function TransitCard({
           {chakra && (
             <Link
               to={`/chakras/${chakra.id}`}
-              className="flex items-center gap-1 px-2 py-1 bg-neutral-800 rounded hover:bg-neutral-700 transition-colors"
+              className="flex items-center gap-1 px-2 py-1 bg-surface-raised rounded hover:bg-surface-interactive transition-colors"
               style={{ color: chakra.colorHex }}
             >
               <span>{chakra.symbol}</span>
-              <span className="text-neutral-400">{chakra.name.replace(' Chakra', '')}</span>
+              <span className="text-theme-text-secondary">{chakra.name.replace(' Chakra', '')}</span>
             </Link>
           )}
 
@@ -126,7 +126,7 @@ function TransitCard({
       )}
 
       {/* Interpretation shown by default */}
-      <p className="text-neutral-400 text-sm leading-relaxed">
+      <p className="text-theme-text-secondary text-sm leading-relaxed">
         {interpretation}
       </p>
     </motion.div>
@@ -241,19 +241,19 @@ function TransitNatalAspectCard({
         <div className="flex items-center gap-2">
           <span>{natureIcons[aspect.nature]}</span>
           <span className="text-lg">{aspect.transitSymbol}</span>
-          <span className="font-medium text-white">{aspect.transitPlanet}</span>
-          <span className="text-xl text-neutral-400">{aspect.aspectSymbol}</span>
-          <span className="text-sm text-neutral-500">natal</span>
+          <span className="font-mediumtext-theme-text-primary">{aspect.transitPlanet}</span>
+          <span className="text-xl text-theme-text-secondary">{aspect.aspectSymbol}</span>
+          <span className="text-sm text-theme-text-tertiary">natal</span>
           <span className="text-lg">{aspect.natalSymbol}</span>
-          <span className="font-medium text-white">{aspect.natalPlanet}</span>
+          <span className="font-mediumtext-theme-text-primary">{aspect.natalPlanet}</span>
         </div>
-        <div className="text-sm text-neutral-400">
+        <div className="text-sm text-theme-text-secondary">
           <span className="opacity-70">{aspect.aspectType}</span>
           <span className="ml-2 opacity-50">({aspect.orb}°)</span>
         </div>
       </div>
 
-      <div className="text-sm text-neutral-500 mb-2">
+      <div className="text-sm text-theme-text-tertiary mb-2">
         <span className="inline-flex items-center gap-1">
           {aspect.transitSymbol} in {signSymbols[aspect.transitSign]}
         </span>
@@ -290,7 +290,7 @@ function TransitNatalAspectCard({
         <motion.p
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
-          className="mt-3 text-neutral-400 text-sm leading-relaxed border-t border-neutral-700/50 pt-3"
+          className="mt-3 text-theme-text-secondary text-sm leading-relaxed border-t border-theme-border-subtle/50 pt-3"
         >
           {getTransitNatalInterpretation(aspect)}
         </motion.p>
@@ -346,7 +346,7 @@ export function Transits() {
   if (!weather) {
     return (
       <div className="flex items-center justify-center h-64">
-        <div className="animate-pulse text-neutral-500">Loading cosmic weather...</div>
+        <div className="animate-pulse text-theme-text-tertiary">Loading cosmic weather...</div>
       </div>
     );
   }
@@ -366,23 +366,23 @@ export function Transits() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Cosmic Weather
         </h1>
-        <p className="text-neutral-400">
+        <p className="text-theme-text-secondary">
           Current planetary positions and transits
         </p>
       </div>
 
       {/* View Mode Toggle */}
       <div className="flex justify-center mb-6">
-        <div className="bg-neutral-900/50 border border-neutral-800 rounded-lg p-1 flex gap-1">
+        <div className="bg-surface-base/50 border border-theme-border-subtle rounded-lg p-1 flex gap-1">
           <button
             onClick={() => setViewMode('day')}
             className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
               viewMode === 'day'
                 ? 'bg-purple-500/20 text-purple-400 border border-purple-500/40'
-                : 'text-neutral-400 hover:text-white'
+                : 'text-theme-text-secondary hover:text-theme-text-primary'
             }`}
           >
             Day View
@@ -392,7 +392,7 @@ export function Transits() {
             className={`px-4 py-2 rounded-md text-sm font-medium transition-all ${
               viewMode === 'calendar'
                 ? 'bg-purple-500/20 text-purple-400 border border-purple-500/40'
-                : 'text-neutral-400 hover:text-white'
+                : 'text-theme-text-secondary hover:text-theme-text-primary'
             }`}
           >
             Calendar View
@@ -415,15 +415,15 @@ export function Transits() {
 
       {/* Date Selector */}
       {viewMode === 'day' && <div className="flex justify-center mb-8">
-        <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-4 flex items-center gap-4">
+        <div className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-4 flex items-center gap-4">
           <button
             onClick={() => setSelectedDate(new Date(selectedDate.getTime() - 86400000))}
-            className="p-2 hover:bg-neutral-800 rounded-lg transition-colors text-neutral-400 hover:text-white"
+            className="p-2 hover:bg-surface-raised rounded-lg transition-colors text-theme-text-secondary hover:text-theme-text-primary"
           >
             ← Previous Day
           </button>
           <div className="text-center">
-            <p className="text-white font-medium">{formattedDate}</p>
+            <p className="text-theme-text-primary font-medium">{formattedDate}</p>
             <button
               onClick={() => setSelectedDate(new Date())}
               className="text-purple-400 hover:text-purple-300 text-sm transition-colors"
@@ -433,7 +433,7 @@ export function Transits() {
           </div>
           <button
             onClick={() => setSelectedDate(new Date(selectedDate.getTime() + 86400000))}
-            className="p-2 hover:bg-neutral-800 rounded-lg transition-colors text-neutral-400 hover:text-white"
+            className="p-2 hover:bg-surface-raised rounded-lg transition-colors text-theme-text-secondary hover:text-theme-text-primary"
           >
             Next Day →
           </button>
@@ -445,11 +445,11 @@ export function Transits() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-gradient-to-br from-neutral-900 to-neutral-800 border border-neutral-700 rounded-xl p-6 text-center"
+          className="bg-gradient-to-br from-neutral-900 to-neutral-800 border border-theme-border-subtle rounded-xl p-6 text-center"
         >
           <span className="text-5xl mb-3 block">{weather.moonPhase.emoji}</span>
-          <h3 className="font-serif text-xl text-white mb-1">{weather.moonPhase.name}</h3>
-          <p className="text-neutral-400 text-sm">{weather.moonPhase.illumination}% illuminated</p>
+          <h3 className="font-serif text-xl text-theme-text-primary mb-1">{weather.moonPhase.name}</h3>
+          <p className="text-theme-text-secondary text-sm">{weather.moonPhase.illumination}% illuminated</p>
         </motion.div>
 
         <motion.div
@@ -459,10 +459,10 @@ export function Transits() {
           className="bg-gradient-to-br from-amber-900/20 to-neutral-900 border border-amber-500/30 rounded-xl p-6 text-center"
         >
           <span className="text-5xl mb-3 block">℞</span>
-          <h3 className="font-serif text-xl text-white mb-1">
+          <h3 className="font-serif text-xl text-theme-text-primary mb-1">
             {weather.retrogradeCount} Planet{weather.retrogradeCount !== 1 ? 's' : ''} Retrograde
           </h3>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             {weather.retrogradeCount === 0
               ? 'Clear skies for forward motion'
               : 'Time for review and reflection'}
@@ -476,10 +476,10 @@ export function Transits() {
           className="bg-gradient-to-br from-purple-900/20 to-neutral-900 border border-purple-500/30 rounded-xl p-6 text-center"
         >
           <span className="text-5xl mb-3 block">⚭</span>
-          <h3 className="font-serif text-xl text-white mb-1">
+          <h3 className="font-serif text-xl text-theme-text-primary mb-1">
             {weather.significantAspects.length} Major Aspect{weather.significantAspects.length !== 1 ? 's' : ''}
           </h3>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             Tight orb configurations active now
           </p>
         </motion.div>
@@ -488,7 +488,7 @@ export function Transits() {
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Planetary Positions */}
         <section>
-          <h2 className="font-serif text-2xl text-white mb-4">Planetary Positions</h2>
+          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Planetary Positions</h2>
           <div className="space-y-3">
             {weather.positions.map((position, index) => (
               <TransitCard key={position.planetId} position={position} index={index} natalGateNumbers={natalGateNumbers} />
@@ -498,7 +498,7 @@ export function Transits() {
 
         {/* Significant Aspects */}
         <section>
-          <h2 className="font-serif text-2xl text-white mb-4">Current Aspects</h2>
+          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Current Aspects</h2>
           {weather.significantAspects.length > 0 ? (
             <div className="space-y-3">
               {weather.significantAspects.map((aspect, index) => (
@@ -506,15 +506,15 @@ export function Transits() {
               ))}
             </div>
           ) : (
-            <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-8 text-center">
-              <p className="text-neutral-500">No major aspects within tight orb today</p>
+            <div className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-8 text-center">
+              <p className="text-theme-text-tertiary">No major aspects within tight orb today</p>
             </div>
           )}
 
           {/* Cosmic Guidance */}
-          <div className="mt-8 bg-neutral-900/50 border border-neutral-800 rounded-xl p-6">
-            <h3 className="font-serif text-lg text-white mb-3">Today's Cosmic Theme</h3>
-            <p className="text-neutral-400 text-sm leading-relaxed">
+          <div className="mt-8 bg-surface-base/50 border border-theme-border-subtle rounded-xl p-6">
+            <h3 className="font-serif text-lg text-theme-text-primary mb-3">Today's Cosmic Theme</h3>
+            <p className="text-theme-text-secondary text-sm leading-relaxed">
               {weather.moonPhase.name === 'New Moon' && (
                 "New Moon energy supports fresh starts and setting intentions. Plant seeds for what you wish to grow."
               )}
@@ -561,17 +561,17 @@ export function Transits() {
       {profile && (
         <section className="mt-12">
           <div className="flex items-center justify-between mb-4">
-            <h2 className="font-serif text-2xl text-white">
+            <h2 className="font-serif text-2xltext-theme-text-primary">
               Transits to Your Chart
             </h2>
             {transitNatalAspects.length > 0 && (
-              <span className="text-sm text-neutral-400">
+              <span className="text-sm text-theme-text-secondary">
                 {transitNatalAspects.length} active aspect{transitNatalAspects.length !== 1 ? 's' : ''}
               </span>
             )}
           </div>
 
-          <p className="text-neutral-400 text-sm mb-6">
+          <p className="text-theme-text-secondary text-sm mb-6">
             How today's sky is activating {profile.name}'s natal chart
           </p>
 
@@ -604,7 +604,7 @@ export function Transits() {
               {transitNatalAspects.length > 5 && (
                 <button
                   onClick={() => setShowAllNatalAspects(!showAllNatalAspects)}
-                  className="mt-4 w-full p-3 bg-neutral-900/50 border border-neutral-800 rounded-xl text-neutral-400 hover:text-white hover:border-neutral-700 transition-colors"
+                  className="mt-4 w-full p-3 bg-surface-base/50 border border-theme-border-subtle rounded-xl text-theme-text-secondary hover:text-theme-text-primary hover:border-theme-border-subtle transition-colors"
                 >
                   {showAllNatalAspects
                     ? 'Show less'
@@ -635,8 +635,8 @@ export function Transits() {
               </div>
             </>
           ) : (
-            <div className="bg-neutral-900/50 border border-neutral-800 rounded-xl p-8 text-center">
-              <p className="text-neutral-500">No significant transits to your natal planets today</p>
+            <div className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-8 text-center">
+              <p className="text-theme-text-tertiary">No significant transits to your natal planets today</p>
             </div>
           )}
         </section>
@@ -647,10 +647,10 @@ export function Transits() {
         <section className="mt-12">
           <div className="bg-gradient-to-br from-purple-900/20 to-neutral-900 border border-purple-500/30 rounded-xl p-8 text-center">
             <span className="text-4xl block mb-4">✨</span>
-            <h3 className="font-serif text-xl text-white mb-2">
+            <h3 className="font-serif text-xl text-theme-text-primary mb-2">
               See How Today Affects Your Chart
             </h3>
-            <p className="text-neutral-400 mb-4">
+            <p className="text-theme-text-secondary mb-4">
               Load your profile to see which transits are activating your natal planets
             </p>
             <Link
@@ -664,24 +664,24 @@ export function Transits() {
       )}
 
       {/* How Transits Work */}
-      <section className="mt-12 bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h3 className="font-serif text-lg text-white mb-4">Understanding Transits</h3>
+      <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h3 className="font-serif text-lg text-theme-text-primary mb-4">Understanding Transits</h3>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
           <div>
             <p className="text-purple-400 font-medium mb-1">What Are Transits?</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               Transits are the current positions of planets as they move through the zodiac, creating aspects to your natal chart.
             </p>
           </div>
           <div>
             <p className="text-purple-400 font-medium mb-1">Retrograde Motion</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               When planets appear to move backward (℞), their energy turns inward—time for review, revision, and reflection.
             </p>
           </div>
           <div>
             <p className="text-purple-400 font-medium mb-1">Moon Phases</p>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The lunar cycle sets the rhythm for action (waxing) and release (waning), with New and Full Moons as pivot points.
             </p>
           </div>

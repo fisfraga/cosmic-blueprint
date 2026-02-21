@@ -25,7 +25,7 @@ export function HumanDesignCenters() {
           <span className="text-3xl text-humandesign-400">&#9675;</span>
           <h1 className="font-serif text-3xl font-medium">Human Design Centers</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The nine centers in Human Design evolved from the seven chakras. Each center governs
           specific aspects of life and can be either defined (colored/consistent) or undefined
           (white/receptive) in your chart. Understanding your centers reveals where you have
@@ -37,17 +37,17 @@ export function HumanDesignCenters() {
       <section className="flex flex-col lg:flex-row gap-6">
         <div className="flex-1">
           <div className="flex flex-wrap gap-4 text-sm mb-6">
-            <div className="bg-neutral-900/50 rounded-lg px-4 py-2 border border-neutral-800">
+            <div className="bg-surface-base/50 rounded-lg px-4 py-2 border border-theme-border-subtle">
               <span className="text-humandesign-400 font-medium">{allCenters.length}</span>
-              <span className="text-neutral-500 ml-2">Centers</span>
+              <span className="text-theme-text-tertiary ml-2">Centers</span>
             </div>
-            <div className="bg-neutral-900/50 rounded-lg px-4 py-2 border border-neutral-800">
+            <div className="bg-surface-base/50 rounded-lg px-4 py-2 border border-theme-border-subtle">
               <span className="text-humandesign-400 font-medium">64</span>
-              <span className="text-neutral-500 ml-2">Gates</span>
+              <span className="text-theme-text-tertiary ml-2">Gates</span>
             </div>
-            <div className="bg-neutral-900/50 rounded-lg px-4 py-2 border border-neutral-800">
+            <div className="bg-surface-base/50 rounded-lg px-4 py-2 border border-theme-border-subtle">
               <span className="text-humandesign-400 font-medium">36</span>
-              <span className="text-neutral-500 ml-2">Channels</span>
+              <span className="text-theme-text-tertiary ml-2">Channels</span>
             </div>
           </div>
 
@@ -57,7 +57,7 @@ export function HumanDesignCenters() {
               const centersOfType = getCentersByType(type);
               return (
                 <div key={type} className="flex items-center gap-3 text-sm">
-                  <span className="w-28 text-neutral-500">{type}:</span>
+                  <span className="w-28 text-theme-text-tertiary">{type}:</span>
                   <span className="text-humandesign-300">
                     {centersOfType.map(c => c.name.replace(' Center', '')).join(', ')}
                   </span>
@@ -69,8 +69,8 @@ export function HumanDesignCenters() {
 
         {/* Mini Body Graph */}
         <div className="lg:w-64">
-          <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800">
-            <h3 className="text-xs text-neutral-500 text-center mb-3">Click a center</h3>
+          <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle">
+            <h3 className="text-xs text-theme-text-tertiary text-center mb-3">Click a center</h3>
             <BodyGraphMini
               onCenterClick={(centerId) => navigate(`/human-design/centers/${centerId}`)}
               interactive={true}
@@ -90,7 +90,7 @@ export function HumanDesignCenters() {
               <span className="text-xl text-humandesign-400">&#9702;</span>
               <h2 className="font-serif text-xl">{type} Centers</h2>
             </div>
-            <p className="text-neutral-500 text-sm mb-4">{centerTypeDescriptions[type]}</p>
+            <p className="text-theme-text-tertiary text-sm mb-4">{centerTypeDescriptions[type]}</p>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
               {centersOfType.map(center => (
                 <CenterCard key={center.id} center={center} />
@@ -103,12 +103,12 @@ export function HumanDesignCenters() {
       {/* Understanding Note */}
       <section className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
         <h3 className="font-serif text-lg mb-2 text-humandesign-300">Defined vs Undefined</h3>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           A <strong className="text-humandesign-300">defined center</strong> (colored in your chart) means you have
           consistent, reliable access to that energy. You're not easily influenced by others in this area—you are
           the one who influences.
         </p>
-        <p className="text-neutral-400 text-sm">
+        <p className="text-theme-text-secondary text-sm">
           An <strong className="text-humandesign-300">undefined center</strong> (white in your chart) means you're
           open and receptive in this area. You take in and amplify the energy of others, which gives you wisdom
           about this aspect of life—but can also lead to conditioning if you're not aware.
@@ -126,11 +126,11 @@ function CenterCard({ center }: { center: HDCenter }) {
   return (
     <Link
       to={`/human-design/centers/${center.id}`}
-      className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-humandesign-500/50 hover:bg-neutral-900 transition-all group"
+      className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-humandesign-500/50 hover:bg-surface-base transition-all group"
     >
       <div className="flex items-start justify-between mb-3">
         <div>
-          <h3 className="font-serif text-lg text-white group-hover:text-humandesign-300 transition-colors">
+          <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-humandesign-300 transition-colors">
             {center.name}
           </h3>
           <p className="text-humandesign-400 text-sm">{center.centerType}</p>
@@ -138,14 +138,14 @@ function CenterCard({ center }: { center: HDCenter }) {
         <span className="text-2xl">{center.symbol}</span>
       </div>
 
-      <p className="text-neutral-500 text-sm mb-3">{center.biologicalCorrelate}</p>
+      <p className="text-theme-text-tertiary text-sm mb-3">{center.biologicalCorrelate}</p>
 
       <div className="flex items-center justify-between text-xs">
         <div className="flex gap-4">
-          <span className="text-neutral-400">
+          <span className="text-theme-text-secondary">
             <span className="text-humandesign-400">{gateCount}</span> gates
           </span>
-          <span className="text-neutral-400">
+          <span className="text-theme-text-secondary">
             <span className="text-humandesign-400">{channelCount}</span> channels
           </span>
         </div>

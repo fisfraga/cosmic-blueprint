@@ -24,8 +24,8 @@ export interface FilterBarProps<T extends string> {
   variant?: 'pills' | 'buttons';
 }
 
-const defaultActiveColor = 'bg-neutral-800 text-white border-neutral-700';
-const inactiveColor = 'border-neutral-700 text-neutral-400 hover:text-white hover:border-neutral-600';
+const defaultActiveColor = 'bg-surface-raised text-theme-text-primary border-theme-border-subtle';
+const inactiveColor = 'border-theme-border-subtle text-theme-text-secondary hover:text-theme-text-primary hover:border-theme-border';
 
 export function FilterBar<T extends string>({
   options,
@@ -70,7 +70,7 @@ export function FilterBar<T extends string>({
 /* eslint-disable react-refresh/only-export-components */
 
 export const elementFilterColors: Record<string, string> = {
-  all: 'bg-neutral-800 text-white border-neutral-700',
+  all: 'bg-surface-raised text-theme-text-primary border-theme-border-subtle',
   fire: 'bg-fire-500/20 text-fire-400 border-fire-500/30',
   earth: 'bg-earth-500/20 text-earth-400 border-earth-500/30',
   air: 'bg-air-500/20 text-air-400 border-air-500/30',
@@ -88,5 +88,5 @@ export const aspectNatureColors: Record<string, string> = {
 };
 
 export function getAspectFilterColor(value: string): string {
-  return aspectNatureColors[value] || 'bg-neutral-800 text-white border-neutral-700';
+  return aspectNatureColors[value] || 'bg-surface-raised text-theme-text-primary border-theme-border-subtle';
 }

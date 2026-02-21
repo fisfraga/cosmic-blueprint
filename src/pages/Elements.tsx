@@ -40,18 +40,18 @@ export function Elements() {
           <span className="text-3xl">🜂</span>
           <h1 className="font-serif text-3xl font-medium">Elements</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The elements are the fundamental building blocks of astrological temperament.
-          They describe not what you are made of, but <em className="text-neutral-300">how you are becoming</em>.
+          They describe not what you are made of, but <em className="text-theme-text-secondary">how you are becoming</em>.
           Understanding your elemental balance reveals your natural way of engaging with life.
         </p>
       </section>
 
       {/* Classical Elements */}
       <section>
-        <h2 className="font-serif text-xl mb-4 text-neutral-300">
+        <h2 className="font-serif text-xl mb-4 text-theme-text-secondary">
           Classical Elements
-          <span className="text-neutral-500 text-sm ml-2 font-sans">
+          <span className="text-theme-text-tertiary text-sm ml-2 font-sans">
             The four fundamental modes of being
           </span>
         </h2>
@@ -69,19 +69,19 @@ export function Elements() {
                 <div className="flex items-start gap-4 mb-4">
                   <span className={`text-4xl ${colors?.accent}`}>{element.symbol}</span>
                   <div>
-                    <h3 className="font-serif text-xl font-medium group-hover:text-white transition-colors">
+                    <h3 className="font-serif text-xl font-medium group-hover:text-theme-text-primary transition-colors">
                       {element.name}
                     </h3>
                     <p className={`text-sm ${colors?.accent}`}>{element.corePrinciple}</p>
                   </div>
                 </div>
 
-                <p className="text-neutral-400 text-sm mb-4 line-clamp-2">
+                <p className="text-theme-text-secondary text-sm mb-4 line-clamp-2">
                   {element.coreQuality}
                 </p>
 
                 <div className="flex items-center gap-2">
-                  <span className="text-neutral-500 text-sm">Signs:</span>
+                  <span className="text-theme-text-tertiary text-sm">Signs:</span>
                   <div className="flex gap-2">
                     {signs.map((sign) => (
                       <span key={sign.id} className={`text-lg ${colors?.accent}`} title={sign.name}>
@@ -109,9 +109,9 @@ export function Elements() {
 
       {/* Alchemical Elements */}
       <section>
-        <h2 className="font-serif text-xl mb-4 text-neutral-300">
+        <h2 className="font-serif text-xl mb-4 text-theme-text-secondary">
           Alchemical Elements
-          <span className="text-neutral-500 text-sm ml-2 font-sans">
+          <span className="text-theme-text-tertiary text-sm ml-2 font-sans">
             The three principles of transformation
           </span>
         </h2>
@@ -120,15 +120,15 @@ export function Elements() {
             <Link
               key={element.id}
               to={`/elements/${element.id}`}
-              className="block p-5 rounded-xl border border-neutral-700 hover:border-neutral-600 bg-neutral-900/50 transition-all group"
+              className="block p-5 rounded-xl border border-theme-border-subtle hover:border-theme-border bg-surface-base/50 transition-all group"
             >
               <div className="flex items-center gap-3 mb-3">
-                <span className="text-2xl text-neutral-300">{element.symbol}</span>
-                <h3 className="font-serif text-lg font-medium group-hover:text-white transition-colors">
+                <span className="text-2xl text-theme-text-secondary">{element.symbol}</span>
+                <h3 className="font-serif text-lg font-medium group-hover:text-theme-text-primary transition-colors">
                   {element.name}
                 </h3>
               </div>
-              <p className="text-neutral-400 text-sm line-clamp-3">
+              <p className="text-theme-text-secondary text-sm line-clamp-3">
                 {element.coreQuality}
               </p>
             </Link>
@@ -137,32 +137,32 @@ export function Elements() {
       </section>
 
       {/* Element Dynamics */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Element Dynamics</h3>
         <div className="grid md:grid-cols-2 gap-6 text-sm">
           <div>
-            <h4 className="font-medium text-neutral-200 mb-2">Complementary Pairs</h4>
-            <ul className="space-y-2 text-neutral-400">
+            <h4 className="font-medium text-theme-text-primary mb-2">Complementary Pairs</h4>
+            <ul className="space-y-2 text-theme-text-secondary">
               <li className="flex items-center gap-2">
                 <span className="text-fire-400">🜂</span> Fire + <span className="text-air-400">🜁</span> Air
-                <span className="text-neutral-500">— Active, extroverted, energizing</span>
+                <span className="text-theme-text-tertiary">— Active, extroverted, energizing</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-earth-400">🜃</span> Earth + <span className="text-water-400">🜄</span> Water
-                <span className="text-neutral-500">— Receptive, introverted, grounding</span>
+                <span className="text-theme-text-tertiary">— Receptive, introverted, grounding</span>
               </li>
             </ul>
           </div>
           <div>
-            <h4 className="font-medium text-neutral-200 mb-2">Challenging Pairs</h4>
-            <ul className="space-y-2 text-neutral-400">
+            <h4 className="font-medium text-theme-text-primary mb-2">Challenging Pairs</h4>
+            <ul className="space-y-2 text-theme-text-secondary">
               <li className="flex items-center gap-2">
                 <span className="text-fire-400">🜂</span> Fire + <span className="text-water-400">🜄</span> Water
-                <span className="text-neutral-500">— Passion meets emotion</span>
+                <span className="text-theme-text-tertiary">— Passion meets emotion</span>
               </li>
               <li className="flex items-center gap-2">
                 <span className="text-earth-400">🜃</span> Earth + <span className="text-air-400">🜁</span> Air
-                <span className="text-neutral-500">— Practicality meets ideation</span>
+                <span className="text-theme-text-tertiary">— Practicality meets ideation</span>
               </li>
             </ul>
           </div>

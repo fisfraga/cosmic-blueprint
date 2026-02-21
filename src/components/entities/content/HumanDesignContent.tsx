@@ -49,20 +49,20 @@ function GateContent({ data }: { data: Record<string, unknown> }) {
             <span className="text-3xl font-bold text-amber-300">{gateNumber}</span>
           )}
           {iChingName && (
-            <div className="text-sm text-gray-400">{iChingName}</div>
+            <div className="text-sm text-theme-text-secondary">{iChingName}</div>
           )}
         </div>
       )}
       {highExpr && (
         <div>
           <p className="text-xs text-emerald-400 mb-1">High Expression</p>
-          <p className="text-sm text-gray-300">{highExpr}</p>
+          <p className="text-sm text-theme-text-secondary">{highExpr}</p>
         </div>
       )}
       {lowExpr && (
         <div>
           <p className="text-xs text-red-400 mb-1">Low Expression</p>
-          <p className="text-sm text-gray-300">{lowExpr}</p>
+          <p className="text-sm text-theme-text-secondary">{lowExpr}</p>
         </div>
       )}
     </div>
@@ -86,7 +86,7 @@ function ChannelContent({ data, onEntityClick }: { data: Record<string, unknown>
       )}
       {(gate1Entity || gate2Entity) && (
         <div>
-          <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">
             Connecting Gates
           </h4>
           <div className="flex items-center gap-2">
@@ -129,13 +129,13 @@ function CenterContent({ data }: { data: Record<string, unknown> }) {
       {definedMeaning && (
         <div>
           <p className="text-xs text-emerald-400 mb-1">When Defined</p>
-          <p className="text-sm text-gray-300">{definedMeaning}</p>
+          <p className="text-sm text-theme-text-secondary">{definedMeaning}</p>
         </div>
       )}
       {undefinedMeaning && (
         <div>
-          <p className="text-xs text-gray-400 mb-1">When Undefined</p>
-          <p className="text-sm text-gray-300">{undefinedMeaning}</p>
+          <p className="text-xs text-theme-text-secondary mb-1">When Undefined</p>
+          <p className="text-sm text-theme-text-secondary">{undefinedMeaning}</p>
         </div>
       )}
     </div>
@@ -147,7 +147,7 @@ function TypeContent({ data }: { data: Record<string, unknown> }) {
     <div className="space-y-2">
       {getStringValue(data, 'signatureEmotion') && (
         <div className="flex items-center gap-2">
-          <span className="w-20 text-xs text-gray-500">Signature</span>
+          <span className="w-20 text-xs text-theme-text-tertiary">Signature</span>
           <span className="text-sm text-emerald-400">
             {getStringValue(data, 'signatureEmotion')}
           </span>
@@ -155,7 +155,7 @@ function TypeContent({ data }: { data: Record<string, unknown> }) {
       )}
       {getStringValue(data, 'notSelfEmotion') && (
         <div className="flex items-center gap-2">
-          <span className="w-20 text-xs text-gray-500">Not-Self</span>
+          <span className="w-20 text-xs text-theme-text-tertiary">Not-Self</span>
           <span className="text-sm text-red-400">
             {getStringValue(data, 'notSelfEmotion')}
           </span>

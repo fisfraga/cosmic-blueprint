@@ -30,11 +30,11 @@ export class ErrorBoundary extends Component<Props, State> {
     }
 
     return (
-      <div className="min-h-screen bg-neutral-900 flex items-center justify-center p-6">
+      <div className="min-h-screen bg-surface-base flex items-center justify-center p-6">
         <div className="max-w-md w-full text-center space-y-6">
           <div className="text-5xl">&#x2727;</div>
           <h1 className="text-2xl font-bold text-white">Something went wrong</h1>
-          <p className="text-neutral-400 text-sm">
+          <p className="text-theme-text-secondary text-sm">
             {this.state.error?.message || 'An unexpected error occurred.'}
           </p>
           <div className="flex flex-col gap-3">
@@ -46,7 +46,7 @@ export class ErrorBoundary extends Component<Props, State> {
             </button>
             <a
               href="/"
-              className="text-neutral-400 hover:text-white transition-colors text-sm underline"
+              className="text-theme-text-secondary hover:text-theme-text-primary transition-colors text-sm underline"
             >
               Go to Home
             </a>

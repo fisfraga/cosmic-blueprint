@@ -28,10 +28,10 @@ export function Signs() {
           <span className="text-3xl">♈︎</span>
           <h1 className="font-serif text-3xl font-medium">Zodiac Signs</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The twelve zodiac signs represent archetypal energies—ways of being and expressing
           in the world. Everyone has all twelve signs in their chart; the signs show
-          <em className="text-neutral-300"> how</em> the planetary energies express themselves.
+          <em className="text-theme-text-secondary"> how</em> the planetary energies express themselves.
         </p>
       </section>
 
@@ -55,26 +55,26 @@ export function Signs() {
       </section>
 
       {/* Modality Guide */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Understanding Modalities</h3>
         <div className="grid md:grid-cols-3 gap-4 text-sm">
           <div>
-            <h4 className="font-medium text-neutral-200 mb-1">Cardinal Signs</h4>
-            <p className="text-neutral-400">
+            <h4 className="font-medium text-theme-text-primary mb-1">Cardinal Signs</h4>
+            <p className="text-theme-text-secondary">
               Initiators and leaders. Aries, Cancer, Libra, Capricorn begin each season
               and excel at starting new things.
             </p>
           </div>
           <div>
-            <h4 className="font-medium text-neutral-200 mb-1">Fixed Signs</h4>
-            <p className="text-neutral-400">
+            <h4 className="font-medium text-theme-text-primary mb-1">Fixed Signs</h4>
+            <p className="text-theme-text-secondary">
               Stabilizers and sustainers. Taurus, Leo, Scorpio, Aquarius hold the middle
               of each season and excel at maintaining.
             </p>
           </div>
           <div>
-            <h4 className="font-medium text-neutral-200 mb-1">Mutable Signs</h4>
-            <p className="text-neutral-400">
+            <h4 className="font-medium text-theme-text-primary mb-1">Mutable Signs</h4>
+            <p className="text-theme-text-secondary">
               Adapters and transformers. Gemini, Virgo, Sagittarius, Pisces end each season
               and excel at transitioning.
             </p>

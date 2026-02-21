@@ -31,7 +31,7 @@ export function AminoAcidDetail() {
     return (
       <div className="text-center py-12">
         <h1 className="font-serif text-2xl mb-4">Amino Acid Not Found</h1>
-        <p className="text-neutral-400 mb-4">
+        <p className="text-theme-text-secondary mb-4">
           The amino acid you're looking for doesn't exist.
         </p>
         <Link to="/gene-keys/amino-acids" className="text-emerald-400 hover:underline">
@@ -90,19 +90,19 @@ export function AminoAcidDetail() {
     <div className="space-y-8 max-w-4xl mx-auto">
       {/* Header */}
       <header className={`text-center py-8 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border}`}>
-        <div className="text-5xl mb-4 font-mono font-bold text-white">{aminoAcid.symbol}</div>
+        <div className="text-5xl mb-4 font-mono font-boldtext-theme-text-primary">{aminoAcid.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{aminoAcid.name}</h1>
-        <p className="text-xl text-neutral-300 font-mono">{aminoAcid.abbreviation}</p>
+        <p className="text-xl text-theme-text-secondary font-mono">{aminoAcid.abbreviation}</p>
 
         {/* Meta Pills */}
         <div className="flex items-center justify-center gap-3 text-sm flex-wrap mt-4">
-          <span className={`px-3 py-1.5 ${colors.text} bg-neutral-900/50 rounded-full`}>
+          <span className={`px-3 py-1.5 ${colors.text} bg-surface-base/50 rounded-full`}>
             {aminoAcid.aminoAcidType}
           </span>
           {linkedCodonRing && (
             <Link
               to={`/gene-keys/codon-rings/${linkedCodonRing.id}`}
-              className="px-3 py-1.5 text-emerald-300 bg-neutral-900/50 rounded-full hover:bg-neutral-900/70 transition-colors"
+              className="px-3 py-1.5 text-emerald-300 bg-surface-base/50 rounded-full hover:bg-surface-base/70 transition-colors"
             >
               {linkedCodonRing.name}
             </Link>
@@ -111,23 +111,23 @@ export function AminoAcidDetail() {
       </header>
 
       {/* Description */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Overview</h2>
-        <p className="text-neutral-300 leading-relaxed">{aminoAcid.description}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{aminoAcid.description}</p>
       </section>
 
       {/* Chemical Nature & Physiological Role */}
       <div className="grid md:grid-cols-2 gap-6">
         {aminoAcid.chemicalNature && (
-          <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-            <h2 className="font-serif text-lg mb-3 text-neutral-200">Chemical Nature</h2>
-            <p className="text-neutral-400 leading-relaxed text-sm">{aminoAcid.chemicalNature}</p>
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-lg mb-3 text-theme-text-primary">Chemical Nature</h2>
+            <p className="text-theme-text-secondary leading-relaxed text-sm">{aminoAcid.chemicalNature}</p>
           </section>
         )}
         {aminoAcid.physiologicalRole && (
-          <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-            <h2 className="font-serif text-lg mb-3 text-neutral-200">Physiological Role</h2>
-            <p className="text-neutral-400 leading-relaxed text-sm">{aminoAcid.physiologicalRole}</p>
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-lg mb-3 text-theme-text-primary">Physiological Role</h2>
+            <p className="text-theme-text-secondary leading-relaxed text-sm">{aminoAcid.physiologicalRole}</p>
           </section>
         )}
       </div>
@@ -136,13 +136,13 @@ export function AminoAcidDetail() {
       {aminoAcid.consciousnessQuality && (
         <section className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
           <h2 className="font-serif text-xl mb-4 text-purple-400">Consciousness Quality</h2>
-          <p className="text-neutral-300 leading-relaxed">{aminoAcid.consciousnessQuality}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{aminoAcid.consciousnessQuality}</p>
         </section>
       )}
 
       {/* Linked Gene Keys */}
       {linkedGeneKeys.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Connected Gene Keys</h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
             {linkedGeneKeys.map(gk => {
@@ -151,14 +151,14 @@ export function AminoAcidDetail() {
                 <Link
                   key={gk.id}
                   to={`/gene-keys/${gk.id}`}
-                  className="flex items-center gap-3 p-3 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+                  className="flex items-center gap-3 p-3 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
                 >
                   <span className="text-2xl font-bold text-emerald-400">{gk.keyNumber}</span>
                   <div className="overflow-hidden">
-                    <p className="text-white text-sm font-medium truncate">
+                    <p className="text-theme-text-primary text-sm font-medium truncate">
                       {gk.name.replace(`Gene Key ${gk.keyNumber}: `, '')}
                     </p>
-                    <p className="text-xs text-neutral-500 truncate">
+                    <p className="text-xs text-theme-text-tertiary truncate">
                       {gk.shadow?.name} → {gk.gift?.name} → {gk.siddhi?.name}
                     </p>
                   </div>
@@ -171,9 +171,9 @@ export function AminoAcidDetail() {
 
       {/* Human Design Gates */}
       {linkedHDGates.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-2">Human Design Gates</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             Each Gene Key corresponds to an HD Gate sharing the same archetypal energy in the body graph.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -184,7 +184,7 @@ export function AminoAcidDetail() {
                 className="flex items-center gap-2 px-3 py-2 bg-humandesign-500/10 rounded-lg hover:bg-humandesign-500/20 transition-colors border border-humandesign-500/20"
               >
                 <span className="text-humandesign-400 font-serif font-medium">{gate.gateNumber}</span>
-                <span className="text-neutral-300 text-sm">{gate.name}</span>
+                <span className="text-theme-text-secondary text-sm">{gate.name}</span>
               </Link>
             ))}
           </div>
@@ -195,7 +195,7 @@ export function AminoAcidDetail() {
       {profileGeneKeys.length > 0 && (
         <section className="bg-emerald-900/20 rounded-xl p-6 border border-emerald-500/20">
           <h2 className="font-serif text-xl mb-4 text-emerald-400">In Your Profile</h2>
-          <p className="text-neutral-400 text-sm mb-4">
+          <p className="text-theme-text-secondary text-sm mb-4">
             Gene Keys from this amino acid's codon ring appear in your Hologenetic Profile:
           </p>
           <div className="space-y-2">
@@ -203,9 +203,9 @@ export function AminoAcidDetail() {
               <Link
                 key={idx}
                 to={`/gene-keys/gk-${item.geneKeyNumber}`}
-                className="flex items-center justify-between p-3 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors"
+                className="flex items-center justify-between p-3 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors"
               >
-                <span className="text-neutral-300 capitalize">{item.sphereName}</span>
+                <span className="text-theme-text-secondary capitalize">{item.sphereName}</span>
                 <span className="text-emerald-400 font-medium">Gene Key {item.geneKeyNumber}</span>
               </Link>
             ))}
@@ -215,18 +215,18 @@ export function AminoAcidDetail() {
 
       {/* Codon Ring Connection */}
       {linkedCodonRing && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Codon Ring</h2>
           <Link
             to={`/gene-keys/codon-rings/${linkedCodonRing.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
           >
             <div className="w-12 h-12 rounded-full bg-emerald-500/20 flex items-center justify-center">
               <span className="text-emerald-400 text-xl">◯</span>
             </div>
             <div>
-              <h4 className="text-white font-medium">{linkedCodonRing.name}</h4>
-              <p className="text-neutral-500 text-sm">
+              <h4 className="text-theme-text-primary font-medium">{linkedCodonRing.name}</h4>
+              <p className="text-theme-text-tertiary text-sm">
                 {linkedCodonRing.geneKeyIds?.length || 0} Gene Keys in this ring
               </p>
             </div>
@@ -235,16 +235,16 @@ export function AminoAcidDetail() {
       )}
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
         <Link
           to="/gene-keys/amino-acids"
-          className="text-neutral-400 hover:text-white transition-colors"
+          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
         >
           ← All Amino Acids
         </Link>
         <Link
           to="/gene-keys/codon-rings"
-          className="text-neutral-400 hover:text-white transition-colors"
+          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
         >
           Codon Rings →
         </Link>

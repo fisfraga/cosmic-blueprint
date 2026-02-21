@@ -37,10 +37,10 @@ export function EntityPanelContent({
       {/* Description */}
       {entity.description && (
         <div>
-          <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-1">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">
             Description
           </h4>
-          <p className="text-sm text-gray-300 leading-relaxed">
+          <p className="text-sm text-theme-text-secondary leading-relaxed">
             {entity.description.length > 300
               ? `${entity.description.slice(0, 300)}...`
               : entity.description}
@@ -51,7 +51,7 @@ export function EntityPanelContent({
       {/* Keywords */}
       {entity.keywords && entity.keywords.length > 0 && (
         <div>
-          <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">
             Keywords
           </h4>
           <div className="flex flex-wrap gap-1.5">
@@ -102,7 +102,7 @@ export function EntityPanelContent({
       {/* Related Entities */}
       {relatedEntities.length > 0 && (
         <div>
-          <h4 className="text-xs uppercase tracking-wider text-gray-500 mb-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">
             Related
           </h4>
           <div className="space-y-1">
@@ -111,15 +111,15 @@ export function EntityPanelContent({
                 key={related.id}
                 onClick={() => onEntityClick?.(related)}
                 className="w-full flex items-center gap-2 px-2 py-1.5 rounded
-                  bg-cosmic-800 hover:bg-cosmic-700 transition-colors text-left"
+                  bg-surface-raised hover:bg-surface-interactive transition-colors text-left"
               >
                 {related.symbol && (
                   <span className="text-sm opacity-60">{related.symbol}</span>
                 )}
-                <span className="text-sm text-gray-300 flex-1 truncate">
+                <span className="text-sm text-theme-text-secondary flex-1 truncate">
                   {related.name}
                 </span>
-                <ChevronRightIcon className="w-3 h-3 text-gray-500" />
+                <ChevronRightIcon className="w-3 h-3 text-theme-text-tertiary" />
               </button>
             ))}
           </div>

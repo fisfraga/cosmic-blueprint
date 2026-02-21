@@ -23,7 +23,7 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
   return (
     <div className="bg-gradient-to-br from-amber-500/5 to-amber-600/5 rounded-xl p-6 border border-amber-500/20">
       <div className="flex items-center justify-between mb-6">
-        <h2 className="font-serif text-xl text-white flex items-center gap-2">
+        <h2 className="font-serif text-xl text-theme-text-primary flex items-center gap-2">
           <span>⬡</span> Human Design Profile
         </h2>
         <Link
@@ -36,46 +36,46 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
 
       {/* HD Key Signature */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-        <Link to="/human-design/types" className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors group">
-          <p className="text-neutral-400 text-xs mb-1">Type</p>
+        <Link to="/human-design/types" className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors group">
+          <p className="text-theme-text-secondary text-xs mb-1">Type</p>
           <p className="text-amber-300 font-medium text-lg group-hover:text-amber-200">{profile.humanDesignProfile.type}</p>
-          <p className="text-neutral-500 text-xs mt-1">Energy blueprint</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">Energy blueprint</p>
         </Link>
-        <div className="bg-neutral-900/50 rounded-lg p-4">
-          <p className="text-neutral-400 text-xs mb-1">Strategy</p>
+        <div className="bg-surface-base/50 rounded-lg p-4">
+          <p className="text-theme-text-secondary text-xs mb-1">Strategy</p>
           <p className="text-amber-300 font-medium">{profile.humanDesignProfile.strategy}</p>
-          <p className="text-neutral-500 text-xs mt-1">How to engage life</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">How to engage life</p>
         </div>
-        <Link to="/human-design/authorities" className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors group">
-          <p className="text-neutral-400 text-xs mb-1">Authority</p>
+        <Link to="/human-design/authorities" className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors group">
+          <p className="text-theme-text-secondary text-xs mb-1">Authority</p>
           <p className="text-amber-300 font-medium group-hover:text-amber-200">{profile.humanDesignProfile.authority}</p>
-          <p className="text-neutral-500 text-xs mt-1">Decision-making</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">Decision-making</p>
         </Link>
-        <Link to="/human-design/profiles" className="bg-neutral-900/50 rounded-lg p-4 hover:bg-neutral-800/50 transition-colors group">
-          <p className="text-neutral-400 text-xs mb-1">Profile</p>
+        <Link to="/human-design/profiles" className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors group">
+          <p className="text-theme-text-secondary text-xs mb-1">Profile</p>
           <p className="text-amber-300 font-medium text-lg group-hover:text-amber-200">{profile.humanDesignProfile.profile}</p>
-          <p className="text-neutral-500 text-xs mt-1">Life archetype</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">Life archetype</p>
         </Link>
       </div>
 
       {/* Incarnation Cross & Definition */}
-      <div className="grid md:grid-cols-2 gap-4 mb-6 p-4 bg-neutral-900/30 rounded-lg">
+      <div className="grid md:grid-cols-2 gap-4 mb-6 p-4 bg-surface-base/30 rounded-lg">
         <div>
-          <p className="text-neutral-400 text-xs mb-1">Incarnation Cross</p>
-          <p className="text-white font-medium">{profile.humanDesignProfile.incarnationCross}</p>
-          <p className="text-neutral-500 text-xs mt-1">Your life purpose theme</p>
+          <p className="text-theme-text-secondary text-xs mb-1">Incarnation Cross</p>
+          <p className="text-theme-text-primary font-medium">{profile.humanDesignProfile.incarnationCross}</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">Your life purpose theme</p>
         </div>
         <div>
-          <p className="text-neutral-400 text-xs mb-1">Definition</p>
-          <p className="text-white font-medium">{profile.humanDesignProfile.definition}</p>
-          <p className="text-neutral-500 text-xs mt-1">How your energy connects</p>
+          <p className="text-theme-text-secondary text-xs mb-1">Definition</p>
+          <p className="text-theme-text-primary font-medium">{profile.humanDesignProfile.definition}</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">How your energy connects</p>
         </div>
       </div>
 
       {/* Gates with Gene Key sphere connections */}
       <div className="grid md:grid-cols-2 gap-6 mb-6">
         <div>
-          <p className="text-neutral-300 text-sm mb-3 flex items-center gap-2">
+          <p className="text-theme-text-secondary text-sm mb-3 flex items-center gap-2">
             <span className="w-3 h-3 bg-amber-400 rounded-full"></span>
             Personality Gates (Conscious)
           </p>
@@ -95,12 +95,12 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
                 <Link
                   key={`${gate.gateId}-${index}`}
                   to={`/profile/human-design/gates/${gate.gateNumber}`}
-                  className="block p-2 bg-neutral-800/50 hover:bg-neutral-700/50 rounded-lg text-sm transition-colors"
+                  className="block p-2 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg text-sm transition-colors"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-neutral-500 text-xs w-20">{gate.planet}</span>
+                    <span className="text-theme-text-tertiary text-xs w-20">{gate.planet}</span>
                     <span className="text-amber-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                    {gateData && <span className="text-neutral-300">{gateData.name}</span>}
+                    {gateData && <span className="text-theme-text-secondary">{gateData.name}</span>}
                   </div>
                   {gk && (
                     <p className="text-genekey-400 text-xs mt-1 ml-20">
@@ -114,7 +114,7 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
           </div>
         </div>
         <div>
-          <p className="text-neutral-300 text-sm mb-3 flex items-center gap-2">
+          <p className="text-theme-text-secondary text-sm mb-3 flex items-center gap-2">
             <span className="w-3 h-3 bg-red-400 rounded-full"></span>
             Design Gates (Unconscious)
           </p>
@@ -134,12 +134,12 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
                 <Link
                   key={`${gate.gateId}-${index}`}
                   to={`/profile/human-design/gates/${gate.gateNumber}`}
-                  className="block p-2 bg-neutral-800/50 hover:bg-neutral-700/50 rounded-lg text-sm transition-colors"
+                  className="block p-2 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg text-sm transition-colors"
                 >
                   <div className="flex items-center gap-2">
-                    <span className="text-neutral-500 text-xs w-20">{gate.planet}</span>
+                    <span className="text-theme-text-tertiary text-xs w-20">{gate.planet}</span>
                     <span className="text-red-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                    {gateData && <span className="text-neutral-300">{gateData.name}</span>}
+                    {gateData && <span className="text-theme-text-secondary">{gateData.name}</span>}
                   </div>
                   {gk && (
                     <p className="text-genekey-400 text-xs mt-1 ml-20">
@@ -156,8 +156,8 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
 
       {/* Defined Centers */}
       {profile.humanDesignProfile.definedCenterIds && (
-        <div className="pt-4 border-t border-neutral-800/50">
-          <p className="text-neutral-400 text-sm mb-3">Defined Centers ({profile.humanDesignProfile.definedCenterIds.length} of 9)</p>
+        <div className="pt-4 border-t border-theme-border-subtle/50">
+          <p className="text-theme-text-secondary text-sm mb-3">Defined Centers ({profile.humanDesignProfile.definedCenterIds.length} of 9)</p>
           <div className="flex flex-wrap gap-2">
             {profile.humanDesignProfile.definedCenterIds.map((centerId) => {
               const center = hdCenters.get(centerId);
@@ -172,7 +172,7 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
               ) : null;
             })}
           </div>
-          <p className="text-neutral-500 text-xs mt-3">
+          <p className="text-theme-text-tertiary text-xs mt-3">
             Defined centers represent consistent, reliable energy. Open centers are where you learn and experience the world.
           </p>
         </div>
@@ -180,8 +180,8 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
 
       {/* Active Channels */}
       {activeChannels.length > 0 && (
-        <div className="pt-4 border-t border-neutral-800/50">
-          <p className="text-neutral-400 text-sm mb-3">
+        <div className="pt-4 border-t border-theme-border-subtle/50">
+          <p className="text-theme-text-secondary text-sm mb-3">
             Active Channels ({activeChannels.length}) — circuits defined by your gates
           </p>
           <div className="grid md:grid-cols-2 gap-2">
@@ -189,13 +189,13 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
               <Link
                 key={ch.id}
                 to={`/human-design/channels/${ch.id}`}
-                className="flex items-center justify-between p-2 bg-neutral-800/50 hover:bg-neutral-700/50 rounded-lg text-sm transition-colors group"
+                className="flex items-center justify-between p-2 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg text-sm transition-colors group"
               >
                 <div className="flex items-center gap-2">
                   <span className="text-humandesign-400 font-serif font-medium">{ch.gate1Number}–{ch.gate2Number}</span>
-                  <span className="text-neutral-300 group-hover:text-white transition-colors">{ch.name}</span>
+                  <span className="text-theme-text-secondary group-hover:text-theme-text-primary transition-colors">{ch.name}</span>
                 </div>
-                <span className="text-xs text-neutral-500 bg-neutral-700 px-1.5 py-0.5 rounded">{ch.circuitType}</span>
+                <span className="text-xs text-theme-text-tertiary bg-surface-interactive px-1.5 py-0.5 rounded">{ch.circuitType}</span>
               </Link>
             ))}
           </div>
@@ -204,8 +204,8 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
 
       {/* Chakra Resonance */}
       {definedCenterChakras.length > 0 && (
-        <div className="pt-4 border-t border-neutral-800/50">
-          <p className="text-neutral-400 text-sm mb-3">Chakra Resonance — your defined centers in the Hindu-Brahman system</p>
+        <div className="pt-4 border-t border-theme-border-subtle/50">
+          <p className="text-theme-text-secondary text-sm mb-3">Chakra Resonance — your defined centers in the Hindu-Brahman system</p>
           <div className="flex flex-wrap gap-2">
             {definedCenterChakras.map(chakra => (
               <Link
@@ -227,7 +227,7 @@ export function HumanDesignTab({ profile }: ProfileTabProps) {
       )}
 
       {/* Links */}
-      <div className="mt-6 pt-4 border-t border-neutral-800/50 flex flex-wrap gap-3">
+      <div className="mt-6 pt-4 border-t border-theme-border-subtle/50 flex flex-wrap gap-3">
         <Link to="/human-design/types" className="text-amber-400 hover:text-amber-300 text-sm">Types →</Link>
         <Link to="/human-design/authorities" className="text-amber-400 hover:text-amber-300 text-sm">Authorities →</Link>
         <Link to="/human-design/profiles" className="text-amber-400 hover:text-amber-300 text-sm">Profiles →</Link>

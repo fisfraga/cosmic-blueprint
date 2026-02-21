@@ -59,12 +59,12 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
             transition={{ duration: 0.2 }}
             className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md z-50 px-4"
           >
-            <div className="bg-neutral-900 border border-neutral-700 rounded-2xl p-8 shadow-2xl">
+            <div className="bg-surface-base border border-theme-border-subtle rounded-2xl p-8 shadow-2xl">
               {/* Header */}
               <div className="text-center mb-6">
                 <div className="text-4xl mb-3">✦</div>
                 <h2 className="font-serif text-2xl font-medium mb-1">Enter the Temple</h2>
-                <p className="text-neutral-400 text-sm">
+                <p className="text-theme-text-secondary text-sm">
                   Sign in with your email — we'll send a magic link. No password needed.
                 </p>
               </div>
@@ -74,16 +74,16 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 <div className="text-center py-4">
                   <div className="text-3xl mb-3">🕯</div>
                   <h3 className="font-serif text-lg mb-2 text-cyan-300">Check your inbox</h3>
-                  <p className="text-neutral-400 text-sm mb-2">
+                  <p className="text-theme-text-secondary text-sm mb-2">
                     We sent a magic link to
                   </p>
                   <p className="text-white font-medium mb-4">{email}</p>
-                  <p className="text-neutral-500 text-xs">
+                  <p className="text-theme-text-tertiary text-xs">
                     Click the link in your email to sign in. The link expires in 1 hour.
                   </p>
                   <button
                     onClick={handleClose}
-                    className="mt-6 px-6 py-2 bg-neutral-800 text-neutral-300 rounded-lg text-sm hover:bg-neutral-700 transition-colors"
+                    className="mt-6 px-6 py-2 bg-surface-raised text-theme-text-secondary rounded-lg text-sm hover:bg-surface-interactive transition-colors"
                   >
                     Close
                   </button>
@@ -92,7 +92,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                 /* Form state */
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label htmlFor="email" className="block text-sm text-neutral-400 mb-1.5">
+                    <label htmlFor="email" className="block text-sm text-theme-text-secondary mb-1.5">
                       Email address
                     </label>
                     <input
@@ -103,7 +103,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                       placeholder="your@email.com"
                       required
                       disabled={state === 'loading'}
-                      className="w-full bg-neutral-800 border border-neutral-700 rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-500 transition-colors disabled:opacity-50"
+                      className="w-full bg-surface-raised border border-theme-border-subtle rounded-lg px-4 py-3 text-white placeholder-neutral-500 focus:outline-none focus:border-cyan-500 transition-colors disabled:opacity-50"
                     />
                   </div>
 
@@ -116,12 +116,12 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
                   <button
                     type="submit"
                     disabled={state === 'loading' || !email.trim()}
-                    className="w-full bg-cyan-600 hover:bg-cyan-500 disabled:bg-neutral-700 disabled:text-neutral-500 text-white font-medium py-3 rounded-lg transition-colors"
+                    className="w-full bg-cyan-600 hover:bg-cyan-500 disabled:bg-surface-interactive disabled:text-theme-text-tertiary text-white font-medium py-3 rounded-lg transition-colors"
                   >
                     {state === 'loading' ? 'Sending...' : 'Send Magic Link'}
                   </button>
 
-                  <p className="text-center text-neutral-600 text-xs">
+                  <p className="text-center text-theme-text-muted text-xs">
                     Your cosmic blueprint is saved to your account across all devices.
                   </p>
                 </form>
@@ -131,7 +131,7 @@ export function AuthModal({ isOpen, onClose }: AuthModalProps) {
               {state !== 'sent' && (
                 <button
                   onClick={handleClose}
-                  className="absolute top-4 right-4 text-neutral-600 hover:text-neutral-400 transition-colors"
+                  className="absolute top-4 right-4 text-theme-text-muted hover:text-theme-text-secondary transition-colors"
                 >
                   <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />

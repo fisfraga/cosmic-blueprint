@@ -20,26 +20,26 @@ export function LoadingSkeleton({ variant = 'page', count = 6 }: LoadingSkeleton
     return (
       <div className="space-y-8 max-w-4xl mx-auto animate-pulse">
         {/* Header skeleton */}
-        <div className="text-center py-10 rounded-2xl bg-neutral-800/30 border border-neutral-800">
-          <div className="w-16 h-16 bg-neutral-700 rounded-full mx-auto mb-4" />
-          <div className="h-8 bg-neutral-700 rounded w-48 mx-auto mb-2" />
-          <div className="h-4 bg-neutral-700/50 rounded w-32 mx-auto" />
+        <div className="text-center py-10 rounded-2xl bg-surface-raised/30 border border-theme-border-subtle">
+          <div className="w-16 h-16 bg-surface-interactive rounded-full mx-auto mb-4" />
+          <div className="h-8 bg-surface-interactive rounded w-48 mx-auto mb-2" />
+          <div className="h-4 bg-surface-interactive/50 rounded w-32 mx-auto" />
         </div>
 
         {/* Content sections */}
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <div className="h-6 bg-neutral-700 rounded w-32 mb-4" />
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <div className="h-6 bg-surface-interactive rounded w-32 mb-4" />
           <div className="space-y-2">
-            <div className="h-4 bg-neutral-700/50 rounded w-full" />
-            <div className="h-4 bg-neutral-700/50 rounded w-3/4" />
+            <div className="h-4 bg-surface-interactive/50 rounded w-full" />
+            <div className="h-4 bg-surface-interactive/50 rounded w-3/4" />
           </div>
         </div>
 
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <div className="h-6 bg-neutral-700 rounded w-40 mb-4" />
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <div className="h-6 bg-surface-interactive rounded w-40 mb-4" />
           <div className="grid grid-cols-3 gap-4">
             {Array.from({ length: 3 }).map((_, i) => (
-              <div key={i} className="h-20 bg-neutral-700/30 rounded-lg" />
+              <div key={i} className="h-20 bg-surface-interactive/30 rounded-lg" />
             ))}
           </div>
         </div>
@@ -52,19 +52,19 @@ export function LoadingSkeleton({ variant = 'page', count = 6 }: LoadingSkeleton
       <div className="space-y-8 animate-pulse">
         {/* Profile header */}
         <div className="flex items-center gap-4">
-          <div className="w-20 h-20 bg-neutral-700 rounded-full" />
+          <div className="w-20 h-20 bg-surface-interactive rounded-full" />
           <div>
-            <div className="h-6 bg-neutral-700 rounded w-40 mb-2" />
-            <div className="h-4 bg-neutral-700/50 rounded w-24" />
+            <div className="h-6 bg-surface-interactive rounded w-40 mb-2" />
+            <div className="h-4 bg-surface-interactive/50 rounded w-24" />
           </div>
         </div>
 
         {/* Content grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
           {Array.from({ length: count }).map((_, i) => (
-            <div key={i} className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
-              <div className="h-4 bg-neutral-700 rounded w-20 mb-3" />
-              <div className="h-6 bg-neutral-700/50 rounded w-32" />
+            <div key={i} className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
+              <div className="h-4 bg-surface-interactive rounded w-20 mb-3" />
+              <div className="h-6 bg-surface-interactive/50 rounded w-32" />
             </div>
           ))}
         </div>
@@ -78,16 +78,16 @@ export function LoadingSkeleton({ variant = 'page', count = 6 }: LoadingSkeleton
       {/* Header */}
       <div>
         <div className="flex items-center gap-3 mb-2">
-          <div className="w-8 h-8 bg-neutral-700 rounded" />
-          <div className="h-8 bg-neutral-700 rounded w-48" />
+          <div className="w-8 h-8 bg-surface-interactive rounded" />
+          <div className="h-8 bg-surface-interactive rounded w-48" />
         </div>
-        <div className="h-4 bg-neutral-700/50 rounded w-96 max-w-full" />
+        <div className="h-4 bg-surface-interactive/50 rounded w-96 max-w-full" />
       </div>
 
       {/* Filter bar */}
       <div className="flex gap-2">
         {Array.from({ length: 4 }).map((_, i) => (
-          <div key={i} className="h-10 bg-neutral-800 rounded-lg w-24" />
+          <div key={i} className="h-10 bg-surface-raised rounded-lg w-24" />
         ))}
       </div>
 
@@ -107,16 +107,16 @@ function SkeletonCard({ delay = 0 }: { delay?: number }) {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ delay }}
-      className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800"
+      className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle"
     >
       <div className="flex items-center justify-between mb-3">
-        <div className="w-10 h-10 bg-neutral-700 rounded-full" />
-        <div className="w-16 h-6 bg-neutral-700/50 rounded" />
+        <div className="w-10 h-10 bg-surface-interactive rounded-full" />
+        <div className="w-16 h-6 bg-surface-interactive/50 rounded" />
       </div>
-      <div className="h-5 bg-neutral-700 rounded w-3/4 mb-2" />
+      <div className="h-5 bg-surface-interactive rounded w-3/4 mb-2" />
       <div className="space-y-1">
-        <div className="h-3 bg-neutral-700/50 rounded w-full" />
-        <div className="h-3 bg-neutral-700/50 rounded w-2/3" />
+        <div className="h-3 bg-surface-interactive/50 rounded w-full" />
+        <div className="h-3 bg-surface-interactive/50 rounded w-2/3" />
       </div>
     </motion.div>
   );
@@ -132,7 +132,7 @@ export function LoadingSpinner({ size = 'md' }: { size?: 'sm' | 'md' | 'lg' }) {
 
   return (
     <svg
-      className={`animate-spin ${sizeClasses[size]} text-neutral-400`}
+      className={`animate-spin ${sizeClasses[size]} text-theme-text-secondary`}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 24 24"

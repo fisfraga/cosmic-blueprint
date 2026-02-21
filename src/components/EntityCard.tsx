@@ -170,7 +170,7 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
     return (
       <Link
         to={getEntityPath()}
-        className={`flex items-center gap-3 p-3 rounded-lg border transition-all hover:border-neutral-600 ${colors.bg} ${colors.border}`}
+        className={`flex items-center gap-3 p-3 rounded-lg border transition-all hover:border-theme-border ${colors.bg} ${colors.border}`}
       >
         <span className={`text-2xl ${colors.accent}`}>{entity.symbol}</span>
         <div className="min-w-0 flex-1">
@@ -185,21 +185,21 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
       <div className={`block p-6 rounded-xl border ${colors.bg} ${colors.border}`}>
         <div className="text-center mb-4">
           <div className={`text-5xl mb-3 ${colors.accent}`}>{entity.symbol || '✧'}</div>
-          <h3 className="font-serif text-2xl font-medium text-white">
+          <h3 className="font-serif text-2xl font-medium text-theme-text-primary">
             {entity.name}
           </h3>
-          <p className="text-neutral-400 text-sm mt-1 capitalize">{entity.type}</p>
+          <p className="text-theme-text-secondary text-sm mt-1 capitalize">{entity.type}</p>
         </div>
 
-        <p className="text-neutral-400 text-sm mb-4">{getSubtitle()}</p>
+        <p className="text-theme-text-secondary text-sm mb-4">{getSubtitle()}</p>
 
-        <p className="text-neutral-300 text-sm line-clamp-4 mb-4">
+        <p className="text-theme-text-secondary text-sm line-clamp-4 mb-4">
           {getDescription()}
         </p>
 
         <Link
           to={getEntityPath()}
-          className="block w-full text-center px-4 py-2 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded-lg transition-colors"
+          className="block w-full text-center px-4 py-2 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded-lg transition-colors"
         >
           View Full Details
         </Link>
@@ -210,7 +210,7 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
   return (
     <Link
       to={getEntityPath()}
-      className={`block p-5 rounded-xl border transition-all group hover:border-neutral-600 ${colors.bg} ${colors.border}`}
+      className={`block p-5 rounded-xl border transition-all group hover:border-theme-border ${colors.bg} ${colors.border}`}
     >
       <div className="flex items-start gap-4">
         {entity.image ? (
@@ -227,11 +227,11 @@ export function EntityCard({ entity, variant = 'default' }: EntityCardProps) {
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className={`text-xl ${colors.accent}`}>{entity.symbol}</span>
-            <h3 className="font-serif text-lg font-medium group-hover:text-white transition-colors truncate">
+            <h3 className="font-serif text-lg font-medium group-hover:text-theme-text-primary transition-colors truncate">
               {entity.name}
             </h3>
           </div>
-          <p className="text-neutral-400 text-sm mt-1 line-clamp-2">
+          <p className="text-theme-text-secondary text-sm mt-1 line-clamp-2">
             {getSubtitle()}
           </p>
         </div>

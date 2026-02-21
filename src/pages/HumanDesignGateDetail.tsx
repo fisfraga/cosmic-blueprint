@@ -32,7 +32,7 @@ export function HumanDesignGateDetail() {
       <header className="text-center py-8">
         <div className="text-6xl mb-4 font-serif text-humandesign-400">{gate.gateNumber}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{gate.name}</h1>
-        <p className="text-xl text-neutral-300 italic mb-4">{gate.iChingName}</p>
+        <p className="text-xl text-theme-text-secondary italic mb-4">{gate.iChingName}</p>
 
         {/* Meta Info */}
         <div className="flex items-center justify-center gap-3 text-sm flex-wrap">
@@ -42,16 +42,16 @@ export function HumanDesignGateDetail() {
             </span>
           )}
           {gate.circuitType && (
-            <span className="px-3 py-1.5 bg-neutral-800 text-neutral-400 rounded-full">
+            <span className="px-3 py-1.5 bg-surface-raised text-theme-text-secondary rounded-full">
               {gate.circuitType} Circuit
             </span>
           )}
           {zodiacSign && (
-            <span className="px-3 py-1.5 bg-neutral-800 text-neutral-400 rounded-full">
+            <span className="px-3 py-1.5 bg-surface-raised text-theme-text-secondary rounded-full">
               {zodiacSign.symbol} {zodiacSign.name}
             </span>
           )}
-          <span className="px-3 py-1.5 bg-neutral-800 text-neutral-400 rounded-full">
+          <span className="px-3 py-1.5 bg-surface-raised text-theme-text-secondary rounded-full">
             I Ching #{gate.iChingHexagram}
           </span>
         </div>
@@ -59,9 +59,9 @@ export function HumanDesignGateDetail() {
 
       {/* Core Theme */}
       {gate.coreTheme && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-3">Core Theme</h2>
-          <p className="text-neutral-300 leading-relaxed text-lg">{gate.coreTheme}</p>
+          <p className="text-theme-text-secondary leading-relaxed text-lg">{gate.coreTheme}</p>
         </section>
       )}
 
@@ -78,17 +78,17 @@ export function HumanDesignGateDetail() {
 
       {/* HD Definition */}
       {gate.hdDefinition && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-3">Human Design Definition</h2>
-          <p className="text-neutral-300 leading-relaxed">{gate.hdDefinition}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{gate.hdDefinition}</p>
         </section>
       )}
 
       {/* Circuit Description */}
       {gate.description && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-3">How It Manifests</h2>
-          <p className="text-neutral-300 leading-relaxed">{gate.description}</p>
+          <p className="text-theme-text-secondary leading-relaxed">{gate.description}</p>
         </section>
       )}
 
@@ -97,13 +97,13 @@ export function HumanDesignGateDetail() {
         {gate.highExpression && (
           <section className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20">
             <h2 className="font-serif text-xl mb-3 text-emerald-400">High Expression</h2>
-            <p className="text-neutral-300 leading-relaxed">{gate.highExpression}</p>
+            <p className="text-theme-text-secondary leading-relaxed">{gate.highExpression}</p>
           </section>
         )}
         {gate.lowExpression && (
           <section className="bg-gradient-to-br from-red-500/10 to-red-600/5 rounded-xl p-6 border border-red-500/20">
             <h2 className="font-serif text-xl mb-3 text-red-400">Low Expression</h2>
-            <p className="text-neutral-300 leading-relaxed">{gate.lowExpression}</p>
+            <p className="text-theme-text-secondary leading-relaxed">{gate.lowExpression}</p>
           </section>
         )}
       </div>
@@ -116,7 +116,7 @@ export function HumanDesignGateDetail() {
             {gate.affirmations.map((affirmation, i) => (
               <li key={i} className="flex items-start gap-3">
                 <span className="text-humandesign-400 mt-1">&#10003;</span>
-                <p className="text-neutral-300 italic">{affirmation}</p>
+                <p className="text-theme-text-secondary italic">{affirmation}</p>
               </li>
             ))}
           </ul>
@@ -124,17 +124,17 @@ export function HumanDesignGateDetail() {
       )}
 
       {/* Connections */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Connections</h2>
         <div className="grid md:grid-cols-2 gap-4">
           {/* Center */}
           {center && (
-            <div className="p-4 rounded-lg bg-neutral-800/50 border border-neutral-700">
-              <h4 className="text-neutral-400 text-sm mb-1">Energy Center</h4>
+            <div className="p-4 rounded-lg bg-surface-overlay border border-theme-border-subtle">
+              <h4 className="text-theme-text-secondary text-sm mb-1">Energy Center</h4>
               <div>
-                <p className="text-white font-medium">{center.name}</p>
+                <p className="text-theme-text-primary font-medium">{center.name}</p>
                 <p className="text-humandesign-400 text-sm">{center.centerType} Center</p>
-                <p className="text-neutral-500 text-sm mt-1">{center.biologicalCorrelate}</p>
+                <p className="text-theme-text-tertiary text-sm mt-1">{center.biologicalCorrelate}</p>
               </div>
             </div>
           )}
@@ -143,14 +143,14 @@ export function HumanDesignGateDetail() {
           {correspondingGeneKey && (
             <Link
               to={`/gene-keys/${correspondingGeneKey.id}`}
-              className="p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+              className="p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
             >
-              <h4 className="text-neutral-400 text-sm mb-1">Gene Key</h4>
+              <h4 className="text-theme-text-secondary text-sm mb-1">Gene Key</h4>
               <div className="flex items-center gap-3">
                 <span className="text-2xl font-serif text-genekey-400">{correspondingGeneKey.keyNumber}</span>
                 <div>
-                  <p className="text-white font-medium">{correspondingGeneKey.name}</p>
-                  <p className="text-neutral-500 text-sm">
+                  <p className="text-theme-text-primary font-medium">{correspondingGeneKey.name}</p>
+                  <p className="text-theme-text-tertiary text-sm">
                     {correspondingGeneKey.shadow.name} &#8594; {correspondingGeneKey.gift.name} &#8594; {correspondingGeneKey.siddhi.name}
                   </p>
                 </div>
@@ -162,14 +162,14 @@ export function HumanDesignGateDetail() {
           {zodiacSign && (
             <Link
               to={`/signs/${zodiacSign.id}`}
-              className="p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+              className="p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
             >
-              <h4 className="text-neutral-400 text-sm mb-1">Zodiac Position</h4>
+              <h4 className="text-theme-text-secondary text-sm mb-1">Zodiac Position</h4>
               <div className="flex items-center gap-3">
                 <span className="text-2xl">{zodiacSign.symbol}</span>
                 <div>
-                  <p className="text-white font-medium">{zodiacSign.name}</p>
-                  <p className="text-neutral-500 text-sm">
+                  <p className="text-theme-text-primary font-medium">{zodiacSign.name}</p>
+                  <p className="text-theme-text-tertiary text-sm">
                     {gate.degreeStart}° - {gate.degreeEnd}°
                   </p>
                 </div>
@@ -185,14 +185,14 @@ export function HumanDesignGateDetail() {
               return (
                 <Link
                   to={`/human-design/${partnerGate.id}`}
-                  className="p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+                  className="p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
                 >
-                  <h4 className="text-neutral-400 text-sm mb-1">Channel Partner</h4>
+                  <h4 className="text-theme-text-secondary text-sm mb-1">Channel Partner</h4>
                   <div className="flex items-center gap-3">
                     <span className="text-2xl font-serif text-humandesign-400">{partnerGate.gateNumber}</span>
                     <div>
-                      <p className="text-white font-medium">{partnerGate.name}</p>
-                      <p className="text-neutral-500 text-sm">{partnerGate.iChingName}</p>
+                      <p className="text-theme-text-primary font-medium">{partnerGate.name}</p>
+                      <p className="text-theme-text-tertiary text-sm">{partnerGate.iChingName}</p>
                     </div>
                   </div>
                 </Link>
@@ -204,13 +204,13 @@ export function HumanDesignGateDetail() {
 
       {/* Line Descriptions */}
       {gate.lineDescriptions && gate.lineDescriptions.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">The Six Lines</h2>
           <div className="space-y-4">
             {gate.lineDescriptions.map((line, i) => (
               <div key={i} className="flex gap-4">
                 <span className="text-humandesign-400 font-serif text-lg w-8">{i + 1}</span>
-                <p className="text-neutral-300">{line}</p>
+                <p className="text-theme-text-secondary">{line}</p>
               </div>
             ))}
           </div>
@@ -218,15 +218,15 @@ export function HumanDesignGateDetail() {
       )}
 
       {/* Navigation */}
-      <nav className="flex items-center justify-between pt-6 border-t border-neutral-800">
+      <nav className="flex items-center justify-between pt-6 border-t border-theme-border-subtle">
         {prevGate ? (
           <Link
             to={`/human-design/${prevGate.id}`}
-            className="flex items-center gap-2 text-neutral-400 hover:text-humandesign-300 transition-colors group"
+            className="flex items-center gap-2 text-theme-text-secondary hover:text-humandesign-300 transition-colors group"
           >
             <span className="text-lg">&#8592;</span>
             <div className="text-left">
-              <p className="text-xs text-neutral-600">Previous</p>
+              <p className="text-xs text-theme-text-muted">Previous</p>
               <p className="text-sm group-hover:text-humandesign-300">
                 <span className="font-serif text-humandesign-400 mr-1">{prevGate.gateNumber}</span>
                 {prevGate.name}
@@ -235,17 +235,17 @@ export function HumanDesignGateDetail() {
           </Link>
         ) : <span />}
 
-        <Link to="/human-design" className="text-neutral-500 hover:text-white transition-colors text-sm">
+        <Link to="/human-design" className="text-theme-text-tertiary hover:text-theme-text-primary transition-colors text-sm">
           All Gates
         </Link>
 
         {nextGate ? (
           <Link
             to={`/human-design/${nextGate.id}`}
-            className="flex items-center gap-2 text-neutral-400 hover:text-humandesign-300 transition-colors group text-right"
+            className="flex items-center gap-2 text-theme-text-secondary hover:text-humandesign-300 transition-colors group text-right"
           >
             <div className="text-right">
-              <p className="text-xs text-neutral-600">Next</p>
+              <p className="text-xs text-theme-text-muted">Next</p>
               <p className="text-sm group-hover:text-humandesign-300">
                 {nextGate.name}
                 <span className="font-serif text-humandesign-400 ml-1">{nextGate.gateNumber}</span>

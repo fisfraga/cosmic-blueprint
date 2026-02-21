@@ -45,7 +45,7 @@ function PlanetCard({
     <div
       className={`
         relative flex items-center gap-2 px-3 py-2 rounded-lg
-        ${hasAspects ? 'bg-cosmic-800/80 border border-cosmic-600' : 'bg-cosmic-800/40'}
+        ${hasAspects ? 'bg-surface-raised/80 border border-theme-border' : 'bg-surface-raised/40'}
         transition-all
       `}
     >
@@ -54,13 +54,13 @@ function PlanetCard({
         <span className="text-lg" title={position.planetName}>
           {position.symbol}
         </span>
-        <span className="text-gray-400 text-sm" title={position.signName}>
+        <span className="text-theme-text-secondary text-sm" title={position.signName}>
           {position.signSymbol}
         </span>
       </div>
 
       {/* Degree */}
-      <span className="text-xs text-gray-500">
+      <span className="text-xs text-theme-text-tertiary">
         {position.formattedDegree}
       </span>
 
@@ -117,9 +117,9 @@ export function CosmicWeatherWidget() {
 
   if (!weather) {
     return (
-      <div className="bg-cosmic-800/50 border border-cosmic-700 rounded-xl p-6 animate-pulse">
-        <div className="h-6 w-32 bg-cosmic-700 rounded mb-4" />
-        <div className="h-20 bg-cosmic-700 rounded" />
+      <div className="bg-surface-overlay border border-theme-border-subtle rounded-xl p-6 animate-pulse">
+        <div className="h-6 w-32 bg-surface-interactive rounded mb-4" />
+        <div className="h-20 bg-surface-interactive rounded" />
       </div>
     );
   }
@@ -131,15 +131,15 @@ export function CosmicWeatherWidget() {
     <motion.div
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      className="bg-gradient-to-br from-cosmic-800/80 to-cosmic-900/80 border border-cosmic-700 rounded-xl overflow-hidden"
+      className="bg-gradient-to-br from-surface-raised/80 to-surface-base/80 border border-theme-border-subtle rounded-xl overflow-hidden"
     >
       {/* Header */}
-      <div className="px-5 py-4 border-b border-cosmic-700/50 flex items-center justify-between">
-        <h3 className="text-sm font-medium text-white flex items-center gap-2">
+      <div className="px-5 py-4 border-b border-theme-border-subtle/50 flex items-center justify-between">
+        <h3 className="text-sm font-medium text-theme-text-primary flex items-center gap-2">
           <span className="text-xl">{weather.moonPhase.emoji}</span>
           Today's Sky
         </h3>
-        <span className="text-xs text-gray-500">
+        <span className="text-xs text-theme-text-tertiary">
           {new Date().toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' })}
         </span>
       </div>
@@ -151,16 +151,16 @@ export function CosmicWeatherWidget() {
           <div className="flex items-center gap-3">
             <span className="text-3xl">{weather.moonPhase.emoji}</span>
             <div>
-              <p className="text-white font-medium">{weather.moonPhase.name}</p>
-              <p className="text-sm text-gray-400">
+              <p className="text-theme-text-primary font-medium">{weather.moonPhase.name}</p>
+              <p className="text-sm text-theme-text-secondary">
                 Moon in {weather.moonPhase.moonSignSymbol} {weather.moonPhase.moonSign}
-                <span className="text-gray-500 ml-1">{weather.moonPhase.moonDegree}</span>
+                <span className="text-theme-text-tertiary ml-1">{weather.moonPhase.moonDegree}</span>
               </p>
             </div>
           </div>
           <div className="text-right">
             <p className="text-2xl font-light text-indigo-300">{weather.moonPhase.illumination}%</p>
-            <p className="text-xs text-gray-500">illuminated</p>
+            <p className="text-xs text-theme-text-tertiary">illuminated</p>
           </div>
         </div>
 
@@ -179,7 +179,7 @@ export function CosmicWeatherWidget() {
 
         {/* Current Sky Positions */}
         <div>
-          <p className="text-xs text-gray-500 uppercase tracking-wide mb-2">
+          <p className="text-xs text-theme-text-tertiary uppercase tracking-wide mb-2">
             Planets in the Sky
             {hasProfile && <span className="text-purple-400 ml-1">• badges show natal aspects</span>}
           </p>
@@ -196,8 +196,8 @@ export function CosmicWeatherWidget() {
 
         {/* Active Transit Summary (if profile) */}
         {hasProfile && transitsByPlanet.size > 0 && (
-          <div className="pt-2 border-t border-cosmic-700/50">
-            <p className="text-xs text-gray-500 mb-2">
+          <div className="pt-2 border-t border-theme-border-subtle/50">
+            <p className="text-xs text-theme-text-tertiary mb-2">
               {Array.from(transitsByPlanet.values()).flat().length} active transit-natal aspects
             </p>
             <div className="flex flex-wrap gap-1">
@@ -229,7 +229,7 @@ export function CosmicWeatherWidget() {
       {/* Footer Link */}
       <Link
         to="/transits"
-        className="block px-5 py-3 border-t border-cosmic-700/50 text-sm text-purple-400 hover:text-purple-300 hover:bg-cosmic-800/50 transition-colors text-center"
+        className="block px-5 py-3 border-t border-theme-border-subtle/50 text-sm text-purple-400 hover:text-purple-300 hover:bg-surface-overlay transition-colors text-center"
       >
         View Full Transit Report →
       </Link>

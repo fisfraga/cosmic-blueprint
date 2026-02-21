@@ -57,7 +57,7 @@ const typeColors: Record<string, string> = {
   element: 'text-water-400 bg-water-500/10',
   aspect: 'text-fire-400 bg-fire-500/10',
   configuration: 'text-air-400 bg-air-500/10',
-  point: 'text-neutral-400 bg-neutral-500/10',
+  point: 'text-theme-text-secondary bg-neutral-500/10',
 };
 
 export function SearchBar() {
@@ -174,7 +174,7 @@ export function SearchBar() {
           setIsOpen(true);
           setTimeout(() => inputRef.current?.focus(), 0);
         }}
-        className="flex items-center gap-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 rounded-lg text-sm text-neutral-400 transition-colors"
+        className="flex items-center gap-2 px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive rounded-lg text-sm text-theme-text-secondary transition-colors"
       >
         <svg
           className="w-4 h-4"
@@ -190,7 +190,7 @@ export function SearchBar() {
           />
         </svg>
         <span className="hidden sm:inline">Search...</span>
-        <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 bg-neutral-700 rounded text-xs">
+        <kbd className="hidden sm:inline-flex items-center gap-1 px-1.5 py-0.5 bg-surface-interactive rounded text-xs">
           <span className="text-xs">⌘</span>K
         </kbd>
       </button>
@@ -205,11 +205,11 @@ export function SearchBar() {
           />
 
           {/* Search Panel */}
-          <div className="relative w-full max-w-lg bg-neutral-900 rounded-xl border border-neutral-700 shadow-2xl overflow-hidden">
+          <div className="relative w-full max-w-lg bg-surface-base rounded-xl border border-theme-border shadow-2xl overflow-hidden">
             {/* Input */}
-            <div className="flex items-center gap-3 p-4 border-b border-neutral-800">
+            <div className="flex items-center gap-3 p-4 border-b border-theme-border-subtle">
               <svg
-                className="w-5 h-5 text-neutral-400"
+                className="w-5 h-5 text-theme-text-secondary"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -228,10 +228,10 @@ export function SearchBar() {
                 onChange={(e) => setQuery(e.target.value)}
                 onKeyDown={handleKeyDown}
                 placeholder="Search planets, signs, houses..."
-                className="flex-1 bg-transparent text-white placeholder-neutral-500 outline-none"
+                className="flex-1 bg-transparent text-theme-text-primary placeholder-neutral-500 outline-none"
                 autoFocus
               />
-              <kbd className="px-2 py-1 bg-neutral-800 rounded text-xs text-neutral-400">
+              <kbd className="px-2 py-1 bg-surface-raised rounded text-xs text-theme-text-secondary">
                 ESC
               </kbd>
             </div>
@@ -245,8 +245,8 @@ export function SearchBar() {
                     onClick={() => navigateToResult(result)}
                     className={`w-full flex items-center gap-3 px-4 py-2 text-left transition-colors ${
                       index === selectedIndex
-                        ? 'bg-neutral-800'
-                        : 'hover:bg-neutral-800/50'
+                        ? 'bg-surface-raised'
+                        : 'hover:bg-surface-overlay'
                     }`}
                   >
                     <span className="text-xl w-8 text-center">
@@ -255,14 +255,14 @@ export function SearchBar() {
                     <div className="flex-1 min-w-0">
                       <div className="font-medium truncate">{result.entity.name}</div>
                       {result.entity.description && (
-                        <div className="text-sm text-neutral-400 truncate">
+                        <div className="text-sm text-theme-text-secondary truncate">
                           {result.entity.description}
                         </div>
                       )}
                     </div>
                     <span
                       className={`px-2 py-0.5 rounded text-xs ${
-                        typeColors[result.entity.type] || 'text-neutral-400 bg-neutral-700'
+                        typeColors[result.entity.type] || 'text-theme-text-secondary bg-surface-interactive'
                       }`}
                     >
                       {getEntityTypeLabel(result.entity.type)}
@@ -271,11 +271,11 @@ export function SearchBar() {
                 ))}
               </div>
             ) : query.trim() ? (
-              <div className="px-4 py-8 text-center text-neutral-400">
+              <div className="px-4 py-8 text-center text-theme-text-secondary">
                 No results found for "{query}"
               </div>
             ) : (
-              <div className="px-4 py-6 text-center text-neutral-500 text-sm">
+              <div className="px-4 py-6 text-center text-theme-text-tertiary text-sm">
                 <p>Start typing to search across all entities</p>
                 <p className="mt-2 text-xs">
                   Try: "Sun", "Aries", "Fire", "Trine"
@@ -284,15 +284,15 @@ export function SearchBar() {
             )}
 
             {/* Footer */}
-            <div className="flex items-center justify-between px-4 py-2 border-t border-neutral-800 text-xs text-neutral-500">
+            <div className="flex items-center justify-between px-4 py-2 border-t border-theme-border-subtle text-xs text-theme-text-tertiary">
               <div className="flex items-center gap-4">
                 <span className="flex items-center gap-1">
-                  <kbd className="px-1 py-0.5 bg-neutral-800 rounded">↑</kbd>
-                  <kbd className="px-1 py-0.5 bg-neutral-800 rounded">↓</kbd>
+                  <kbd className="px-1 py-0.5 bg-surface-raised rounded">↑</kbd>
+                  <kbd className="px-1 py-0.5 bg-surface-raised rounded">↓</kbd>
                   navigate
                 </span>
                 <span className="flex items-center gap-1">
-                  <kbd className="px-1 py-0.5 bg-neutral-800 rounded">↵</kbd>
+                  <kbd className="px-1 py-0.5 bg-surface-raised rounded">↵</kbd>
                   select
                 </span>
               </div>

@@ -37,7 +37,7 @@ export function MessageThread({
             className={`max-w-[85%] p-4 rounded-xl relative group ${
               msg.role === 'user'
                 ? 'bg-purple-500/20 border border-purple-500/30 text-white'
-                : 'bg-neutral-800/50 border border-neutral-700 text-neutral-200'
+                : 'bg-surface-overlay border border-theme-border-subtle text-theme-text-secondary'
             }`}
           >
             {msg.role === 'user' ? (
@@ -68,8 +68,8 @@ export function MessageThread({
       ))}
       {isSending && (
         <div className="flex justify-start">
-          <div className="bg-neutral-800/50 border border-neutral-700 rounded-xl p-4">
-            <div className="flex items-center gap-2 text-neutral-400">
+          <div className="bg-surface-overlay border border-theme-border-subtle rounded-xl p-4">
+            <div className="flex items-center gap-2 text-theme-text-secondary">
               <div className="animate-pulse">Contemplating</div>
               <div className="flex gap-1">
                 <span className="animate-bounce" style={{ animationDelay: '0ms' }}>.</span>

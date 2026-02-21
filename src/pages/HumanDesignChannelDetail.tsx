@@ -51,7 +51,7 @@ export function HumanDesignChannelDetail() {
             {channel.circuitType} Circuit
           </span>
           {channel.streamType && (
-            <span className="px-3 py-1.5 bg-neutral-800 text-neutral-400 rounded-full">
+            <span className="px-3 py-1.5 bg-surface-raised text-theme-text-secondary rounded-full">
               {channel.streamType} Stream
             </span>
           )}
@@ -59,30 +59,30 @@ export function HumanDesignChannelDetail() {
       </header>
 
       {/* Centers Connection */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800 text-center">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle text-center">
         <div className="flex items-center justify-center gap-4 flex-wrap">
           <Link
             to={`/human-design/centers/${center1?.id}`}
-            className="px-4 py-2 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
+            className="px-4 py-2 bg-surface-raised rounded-lg hover:bg-surface-interactive transition-colors"
           >
-            <p className="text-neutral-400 text-xs">Center</p>
-            <p className="text-white font-medium">{center1?.name}</p>
+            <p className="text-theme-text-secondary text-xs">Center</p>
+            <p className="text-theme-text-primary font-medium">{center1?.name}</p>
           </Link>
           <span className="text-humandesign-400 text-2xl">&#8644;</span>
           <Link
             to={`/human-design/centers/${center2?.id}`}
-            className="px-4 py-2 bg-neutral-800 rounded-lg hover:bg-neutral-700 transition-colors"
+            className="px-4 py-2 bg-surface-raised rounded-lg hover:bg-surface-interactive transition-colors"
           >
-            <p className="text-neutral-400 text-xs">Center</p>
-            <p className="text-white font-medium">{center2?.name}</p>
+            <p className="text-theme-text-secondary text-xs">Center</p>
+            <p className="text-theme-text-primary font-medium">{center2?.name}</p>
           </Link>
         </div>
       </section>
 
       {/* Description */}
       {channel.description && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <p className="text-neutral-300 leading-relaxed">{channel.description}</p>
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <p className="text-theme-text-secondary leading-relaxed">{channel.description}</p>
         </section>
       )}
 
@@ -91,13 +91,13 @@ export function HumanDesignChannelDetail() {
         {channel.giftExpression && (
           <div className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
             <h2 className="font-serif text-xl mb-3 text-humandesign-300">Gift Expression</h2>
-            <p className="text-neutral-300">{channel.giftExpression}</p>
+            <p className="text-theme-text-secondary">{channel.giftExpression}</p>
           </div>
         )}
         {channel.challengeExpression && (
-          <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-            <h2 className="font-serif text-xl mb-3 text-neutral-400">Challenge Expression</h2>
-            <p className="text-neutral-300">{channel.challengeExpression}</p>
+          <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-3 text-theme-text-secondary">Challenge Expression</h2>
+            <p className="text-theme-text-secondary">{channel.challengeExpression}</p>
           </div>
         )}
       </section>
@@ -107,7 +107,7 @@ export function HumanDesignChannelDetail() {
         <section className="text-center">
           <div className="flex flex-wrap justify-center gap-2">
             {channel.keywords.map((kw, i) => (
-              <span key={i} className="px-4 py-2 bg-neutral-800 text-neutral-300 rounded-lg text-sm">
+              <span key={i} className="px-4 py-2 bg-surface-raised text-theme-text-secondary rounded-lg text-sm">
                 {kw}
               </span>
             ))}
@@ -118,7 +118,7 @@ export function HumanDesignChannelDetail() {
       {/* The Two Gates */}
       <section>
         <h2 className="font-serif text-2xl mb-4">The Gates</h2>
-        <p className="text-neutral-400 mb-6">
+        <p className="text-theme-text-secondary mb-6">
           This channel is formed when both Gate {channel.gate1Number} and Gate {channel.gate2Number} are
           activated in your chart, creating a defined energy flow between the {center1?.name} and {center2?.name}.
         </p>
@@ -127,15 +127,15 @@ export function HumanDesignChannelDetail() {
           {gate1 && (
             <Link
               to={`/human-design/${gate1.id}`}
-              className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-humandesign-500/50 hover:bg-neutral-900 transition-all group"
+              className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-humandesign-500/50 hover:bg-surface-base transition-all group"
             >
               <div className="flex items-start gap-4">
                 <span className="text-3xl font-serif text-humandesign-400">{gate1.gateNumber}</span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-lg text-white group-hover:text-humandesign-300 transition-colors mb-1">
+                  <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-humandesign-300 transition-colors mb-1">
                     {gate1.name}
                   </h3>
-                  <p className="text-neutral-500 text-sm mb-2">{gate1.iChingName}</p>
+                  <p className="text-theme-text-tertiary text-sm mb-2">{gate1.iChingName}</p>
                   {gate1.coreTheme && (
                     <p className="text-humandesign-400/80 text-sm line-clamp-2">{gate1.coreTheme}</p>
                   )}
@@ -148,15 +148,15 @@ export function HumanDesignChannelDetail() {
           {gate2 && (
             <Link
               to={`/human-design/${gate2.id}`}
-              className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-humandesign-500/50 hover:bg-neutral-900 transition-all group"
+              className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-humandesign-500/50 hover:bg-surface-base transition-all group"
             >
               <div className="flex items-start gap-4">
                 <span className="text-3xl font-serif text-humandesign-400">{gate2.gateNumber}</span>
                 <div className="flex-1">
-                  <h3 className="font-serif text-lg text-white group-hover:text-humandesign-300 transition-colors mb-1">
+                  <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-humandesign-300 transition-colors mb-1">
                     {gate2.name}
                   </h3>
-                  <p className="text-neutral-500 text-sm mb-2">{gate2.iChingName}</p>
+                  <p className="text-theme-text-tertiary text-sm mb-2">{gate2.iChingName}</p>
                   {gate2.coreTheme && (
                     <p className="text-humandesign-400/80 text-sm line-clamp-2">{gate2.coreTheme}</p>
                   )}
@@ -171,19 +171,19 @@ export function HumanDesignChannelDetail() {
       {(geneKey1 || geneKey2) && (
         <section>
           <h2 className="font-serif text-2xl mb-4">Corresponding Gene Keys</h2>
-          <p className="text-neutral-400 mb-6">
+          <p className="text-theme-text-secondary mb-6">
             Each HD Gate corresponds to a Gene Key that shares the same number and archetypal energy.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             {geneKey1 && (
               <Link
                 to={`/gene-keys/${geneKey1.id}`}
-                className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-genekey-500/50 hover:bg-neutral-900 transition-all group"
+                className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-genekey-500/50 hover:bg-surface-base transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-3xl font-serif text-genekey-400">{geneKey1.keyNumber}</span>
                   <div className="flex-1">
-                    <h3 className="font-serif text-lg text-white group-hover:text-genekey-300 transition-colors mb-1">
+                    <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-1">
                       {geneKey1.name}
                     </h3>
                     <div className="text-sm space-y-0.5">
@@ -192,9 +192,9 @@ export function HumanDesignChannelDetail() {
                       <p className="text-yellow-400/80">{geneKey1.siddhi.name}</p>
                     </div>
                     {amino1 && (
-                      <div className="mt-2 pt-2 border-t border-neutral-800 flex items-center gap-2">
+                      <div className="mt-2 pt-2 border-t border-theme-border-subtle flex items-center gap-2">
                         <span className="text-genekey-500 font-mono text-xs">{amino1.symbol}</span>
-                        <span className="text-neutral-500 text-xs">{amino1.name}</span>
+                        <span className="text-theme-text-tertiary text-xs">{amino1.name}</span>
                       </div>
                     )}
                   </div>
@@ -205,12 +205,12 @@ export function HumanDesignChannelDetail() {
             {geneKey2 && (
               <Link
                 to={`/gene-keys/${geneKey2.id}`}
-                className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-genekey-500/50 hover:bg-neutral-900 transition-all group"
+                className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-genekey-500/50 hover:bg-surface-base transition-all group"
               >
                 <div className="flex items-start gap-4">
                   <span className="text-3xl font-serif text-genekey-400">{geneKey2.keyNumber}</span>
                   <div className="flex-1">
-                    <h3 className="font-serif text-lg text-white group-hover:text-genekey-300 transition-colors mb-1">
+                    <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-1">
                       {geneKey2.name}
                     </h3>
                     <div className="text-sm space-y-0.5">
@@ -219,9 +219,9 @@ export function HumanDesignChannelDetail() {
                       <p className="text-yellow-400/80">{geneKey2.siddhi.name}</p>
                     </div>
                     {amino2 && (
-                      <div className="mt-2 pt-2 border-t border-neutral-800 flex items-center gap-2">
+                      <div className="mt-2 pt-2 border-t border-theme-border-subtle flex items-center gap-2">
                         <span className="text-genekey-500 font-mono text-xs">{amino2.symbol}</span>
-                        <span className="text-neutral-500 text-xs">{amino2.name}</span>
+                        <span className="text-theme-text-tertiary text-xs">{amino2.name}</span>
                       </div>
                     )}
                   </div>
@@ -234,9 +234,9 @@ export function HumanDesignChannelDetail() {
 
       {/* Chakra Resonance */}
       {uniqueChakras.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-2">Chakra Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             The energy centers bridged by this channel resonate with the following chakras in the Hindu-Brahman tradition.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -244,7 +244,7 @@ export function HumanDesignChannelDetail() {
               <Link
                 key={chakra.id}
                 to={`/chakras/${chakra.id}`}
-                className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+                className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
               >
                 <div
                   className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
@@ -253,9 +253,9 @@ export function HumanDesignChannelDetail() {
                   {chakra.symbol}
                 </div>
                 <div>
-                  <p className="text-white font-medium">{chakra.name}</p>
-                  <p className="text-neutral-400 text-sm italic">{chakra.sanskritName}</p>
-                  <p className="text-neutral-500 text-xs mt-0.5">{chakra.lifeTheme}</p>
+                  <p className="text-theme-text-primary font-medium">{chakra.name}</p>
+                  <p className="text-theme-text-secondary text-sm italic">{chakra.sanskritName}</p>
+                  <p className="text-theme-text-tertiary text-xs mt-0.5">{chakra.lifeTheme}</p>
                 </div>
               </Link>
             ))}
@@ -265,7 +265,7 @@ export function HumanDesignChannelDetail() {
 
       {/* Back Link */}
       <div className="text-center pt-4">
-        <Link to="/human-design/channels" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/human-design/channels" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &#8592; Back to Channels
         </Link>
       </div>

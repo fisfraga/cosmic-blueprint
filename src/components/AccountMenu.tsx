@@ -21,7 +21,7 @@ const getRelationshipBadge = (relationship: string) => {
     'Friend': 'bg-amber-500/20 text-amber-400',
     'Sibling': 'bg-cyan-500/20 text-cyan-400',
   };
-  return badges[relationship] || 'bg-neutral-500/20 text-neutral-400';
+  return badges[relationship] || 'bg-neutral-500/20 text-theme-text-secondary';
 };
 
 export function AccountMenu() {
@@ -60,9 +60,9 @@ export function AccountMenu() {
           <div className="relative">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="flex items-center gap-2 px-3 py-2 bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 rounded-lg transition-colors"
+              className="flex items-center gap-2 px-3 py-2 bg-surface-base/50 border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
             >
-              <span className="text-white font-medium truncate max-w-[120px]">
+              <span className="text-theme-text-primary font-medium truncate max-w-[120px]">
                 {profile.name}
               </span>
               {allProfiles.length > 1 && (
@@ -71,7 +71,7 @@ export function AccountMenu() {
                 </span>
               )}
               <svg
-                className={`w-4 h-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+                className={`w-4 h-4 text-theme-text-secondary transition-transform ${isOpen ? 'rotate-180' : ''}`}
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -86,7 +86,7 @@ export function AccountMenu() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute right-0 mt-2 w-64 bg-neutral-900 border border-neutral-800 rounded-xl shadow-xl z-50 overflow-hidden"
+                  className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
                 >
                   {renderProfileList()}
                   {renderProfileActions()}
@@ -107,7 +107,7 @@ export function AccountMenu() {
         )}
         <button
           onClick={() => setShowSignIn(true)}
-          className="px-4 py-2 rounded-lg text-sm font-medium text-neutral-400 hover:text-white hover:bg-neutral-800/50 transition-colors border border-neutral-700 hover:border-neutral-600"
+          className="px-4 py-2 rounded-lg text-sm font-medium text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay transition-colors border border-theme-border hover:border-theme-border"
         >
           Sign In
         </button>
@@ -133,9 +133,9 @@ export function AccountMenu() {
       <div ref={dropdownRef} className="relative">
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="flex items-center gap-2 px-3 py-2 bg-neutral-900/50 border border-neutral-800 hover:border-neutral-700 rounded-lg transition-colors"
+          className="flex items-center gap-2 px-3 py-2 bg-surface-base/50 border border-theme-border-subtle hover:border-theme-border rounded-lg transition-colors"
         >
-          <span className="text-white font-medium truncate max-w-[120px]">
+          <span className="text-theme-text-primary font-medium truncate max-w-[120px]">
             {profile.name}
           </span>
           {allProfiles.length > 1 && (
@@ -144,7 +144,7 @@ export function AccountMenu() {
             </span>
           )}
           <svg
-            className={`w-4 h-4 text-neutral-400 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+            className={`w-4 h-4 text-theme-text-secondary transition-transform ${isOpen ? 'rotate-180' : ''}`}
             fill="none"
             viewBox="0 0 24 24"
             stroke="currentColor"
@@ -159,7 +159,7 @@ export function AccountMenu() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 mt-2 w-64 bg-neutral-900 border border-neutral-800 rounded-xl shadow-xl z-50 overflow-hidden"
+              className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
             >
               {renderProfileList()}
               {renderProfileActions()}
@@ -182,18 +182,18 @@ export function AccountMenu() {
       {/* Trigger: avatar + profile name + chevron */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-700 transition-colors"
+        className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-surface-raised hover:bg-surface-interactive transition-colors"
       >
         <span className="w-7 h-7 rounded-full bg-cyan-600 flex items-center justify-center text-xs font-bold text-white flex-shrink-0">
           {initials}
         </span>
         {profile && (
-          <span className="text-sm text-white font-medium truncate max-w-[120px] hidden sm:block">
+          <span className="text-sm text-theme-text-primary font-medium truncate max-w-[120px] hidden sm:block">
             {profile.name}
           </span>
         )}
         <svg
-          className={`w-3 h-3 text-neutral-500 transition-transform ${isOpen ? 'rotate-180' : ''}`}
+          className={`w-3 h-3 text-theme-text-tertiary transition-transform ${isOpen ? 'rotate-180' : ''}`}
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
@@ -210,23 +210,23 @@ export function AccountMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 mt-2 w-64 bg-neutral-900 border border-neutral-800 rounded-xl shadow-xl z-50 overflow-hidden"
+            className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
           >
             {/* User info header */}
-            <div className="px-4 py-3 border-b border-neutral-800">
-              <p className="text-xs text-neutral-500">Signed in as</p>
-              <p className="text-sm text-white truncate">{user!.email}</p>
+            <div className="px-4 py-3 border-b border-theme-border-subtle">
+              <p className="text-xs text-theme-text-tertiary">Signed in as</p>
+              <p className="text-sm text-theme-text-primary truncate">{user!.email}</p>
             </div>
 
             {/* Profile section */}
             {profile && renderProfileList()}
 
             {/* Navigation links */}
-            <div className="border-t border-neutral-800 p-2">
+            <div className="border-t border-theme-border-subtle p-2">
               <Link
                 to="/profile"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay rounded-lg transition-colors"
               >
                 <span aria-hidden="true">&#10022;</span>
                 My Blueprint
@@ -234,7 +234,7 @@ export function AccountMenu() {
               <Link
                 to="/insights"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay rounded-lg transition-colors"
               >
                 <span aria-hidden="true">&#10023;</span>
                 Contemplation Journal
@@ -242,7 +242,7 @@ export function AccountMenu() {
               <Link
                 to="/profile"
                 onClick={() => setIsOpen(false)}
-                className="flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-3 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay rounded-lg transition-colors"
               >
                 <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -253,13 +253,13 @@ export function AccountMenu() {
             </div>
 
             {/* Sign out */}
-            <div className="border-t border-neutral-800 p-2">
+            <div className="border-t border-theme-border-subtle p-2">
               <button
                 onClick={async () => {
                   setIsOpen(false);
                   await signOut();
                 }}
-                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors text-left"
+                className="w-full flex items-center gap-2 px-3 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay rounded-lg transition-colors text-left"
               >
                 <span aria-hidden="true">&#8617;</span>
                 Sign Out
@@ -281,8 +281,8 @@ export function AccountMenu() {
     return (
       <>
         {/* Header */}
-        <div className="px-4 py-2 border-b border-neutral-800">
-          <p className="text-xs text-neutral-500 uppercase tracking-wider">Switch Profile</p>
+        <div className="px-4 py-2 border-b border-theme-border-subtle">
+          <p className="text-xs text-theme-text-tertiary uppercase tracking-wider">Switch Profile</p>
         </div>
 
         {/* Profile list */}
@@ -290,8 +290,8 @@ export function AccountMenu() {
           {allProfiles.map((p) => (
             <div
               key={p.id}
-              className={`group w-full px-4 py-3 flex items-center justify-between hover:bg-neutral-800 transition-colors ${
-                p.id === profile.id ? 'bg-neutral-800/50' : ''
+              className={`group w-full px-4 py-3 flex items-center justify-between hover:bg-surface-raised transition-colors ${
+                p.id === profile.id ? 'bg-surface-overlay' : ''
               }`}
             >
               <button
@@ -306,7 +306,7 @@ export function AccountMenu() {
                 </div>
                 <div className="text-left min-w-0">
                   <p className="text-white font-medium text-sm truncate">{p.name}</p>
-                  <p className="text-neutral-500 text-xs">{p.relationship || 'Unknown'}</p>
+                  <p className="text-theme-text-tertiary text-xs">{p.relationship || 'Unknown'}</p>
                 </div>
               </button>
               <div className="flex items-center gap-1">
@@ -320,7 +320,7 @@ export function AccountMenu() {
                     e.stopPropagation();
                     setPendingDelete(p);
                   }}
-                  className="p-1 rounded text-neutral-600 opacity-0 group-hover:opacity-100 hover:text-red-400 hover:bg-neutral-700 transition-all"
+                  className="p-1 rounded text-theme-text-muted opacity-0 group-hover:opacity-100 hover:text-red-400 hover:bg-surface-interactive transition-all"
                   aria-label={`Delete ${p.name}'s profile`}
                 >
                   <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -334,7 +334,7 @@ export function AccountMenu() {
 
         {/* Add new profile */}
         {canAddMore && (
-          <div className="border-t border-neutral-800 p-2">
+          <div className="border-t border-theme-border-subtle p-2">
             <Link
               to="/profile?new=true"
               onClick={() => setIsOpen(false)}
@@ -353,7 +353,7 @@ export function AccountMenu() {
 
   function renderProfileActions() {
     return (
-      <div className="border-t border-neutral-800 p-2">
+      <div className="border-t border-theme-border-subtle p-2">
         {canAddMore && !profile && (
           <Link
             to="/profile?new=true"
@@ -369,7 +369,7 @@ export function AccountMenu() {
         <Link
           to="/profile"
           onClick={() => setIsOpen(false)}
-          className="flex items-center gap-2 px-3 py-2 text-sm text-neutral-400 hover:bg-neutral-800 rounded-lg transition-colors"
+          className="flex items-center gap-2 px-3 py-2 text-sm text-theme-text-secondary hover:bg-surface-raised rounded-lg transition-colors"
         >
           <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
@@ -397,16 +397,16 @@ export function AccountMenu() {
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.95 }}
-              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-neutral-900 border border-neutral-700 rounded-xl shadow-2xl z-[70] p-6"
+              className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 bg-surface-base border border-theme-border rounded-xl shadow-2xl z-[70] p-6"
             >
-              <h3 className="text-white font-medium mb-2">Delete Profile</h3>
-              <p className="text-neutral-400 text-sm mb-6">
+              <h3 className="text-theme-text-primary font-medium mb-2">Delete Profile</h3>
+              <p className="text-theme-text-secondary text-sm mb-6">
                 Delete {pendingDelete.name}&apos;s profile? This cannot be undone.
               </p>
               <div className="flex justify-end gap-3">
                 <button
                   onClick={() => setPendingDelete(null)}
-                  className="px-4 py-2 text-sm text-neutral-400 hover:text-white rounded-lg hover:bg-neutral-800 transition-colors"
+                  className="px-4 py-2 text-sm text-theme-text-secondary hover:text-theme-text-primary rounded-lg hover:bg-surface-raised transition-colors"
                 >
                   Cancel
                 </button>

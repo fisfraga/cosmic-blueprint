@@ -49,12 +49,12 @@ export function PlanetDetail() {
       <header className="text-center py-8">
         <div className="text-6xl mb-4">{planet.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{planet.name}</h1>
-        <p className="text-xl text-neutral-300 italic">{planet.archetype}</p>
+        <p className="text-xl text-theme-text-secondary italic">{planet.archetype}</p>
         {planetData && (
-          <div className="flex items-center justify-center gap-4 mt-4 text-sm text-neutral-400">
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">{planetData.planetType}</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Cycle: {planetData.cycleDuration}</span>
-            <span className="px-3 py-1 bg-neutral-800 rounded-full">Importance: {planetData.planetImportance}/4</span>
+          <div className="flex items-center justify-center gap-4 mt-4 text-sm text-theme-text-secondary">
+            <span className="px-3 py-1 bg-surface-raised rounded-full">{planetData.planetType}</span>
+            <span className="px-3 py-1 bg-surface-raised rounded-full">Cycle: {planetData.cycleDuration}</span>
+            <span className="px-3 py-1 bg-surface-raised rounded-full">Importance: {planetData.planetImportance}/4</span>
           </div>
         )}
       </header>
@@ -66,7 +66,7 @@ export function PlanetDetail() {
           <div className="flex items-center gap-4">
             <Link
               to={`/signs/${placementSign.id}`}
-              className="flex items-center gap-3 p-4 bg-neutral-800/60 hover:bg-neutral-800 rounded-lg transition-colors flex-1"
+              className="flex items-center gap-3 p-4 bg-surface-raised/60 hover:bg-surface-raised rounded-lg transition-colors flex-1"
             >
               <span className="text-3xl">{placementSign.symbol}</span>
               <div>
@@ -76,7 +76,7 @@ export function PlanetDetail() {
                     <span className="text-sm text-red-400 ml-2">Retrograde</span>
                   )}
                 </div>
-                <div className="text-sm text-neutral-400">
+                <div className="text-sm text-theme-text-secondary">
                   {myPlacement.degree} in House {myPlacement.houseNumber}
                   {myPlacement.dignity && (
                     <span className="text-amber-400 ml-2">({myPlacement.dignity})</span>
@@ -90,37 +90,37 @@ export function PlanetDetail() {
 
       {/* HD Activation — bridge: this planet's degree → HD Gate → Gene Key */}
       {hdActivation && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-humandesign-500/20">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-humandesign-500/20">
           <h2 className="font-serif text-xl mb-2 text-humandesign-300">Human Design Activation</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             Your {planet.name} at {myPlacement?.degree} {placementSign?.name} activates this specific gate and gene key in your body graph.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
             <Link
               to={`/human-design/${hdActivation.gate.id}`}
-              className="flex items-center gap-3 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+              className="flex items-center gap-3 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
             >
               <span className="text-2xl font-serif text-humandesign-400 w-10 text-center">
                 {hdActivation.gate.gateNumber}
               </span>
               <div>
-                <p className="text-neutral-400 text-xs mb-0.5">Gate · Line {hdActivation.line}</p>
-                <p className="text-white font-medium">{hdActivation.gate.name}</p>
-                <p className="text-neutral-500 text-sm">{hdActivation.gate.iChingName}</p>
+                <p className="text-theme-text-secondary text-xs mb-0.5">Gate · Line {hdActivation.line}</p>
+                <p className="text-theme-text-primary font-medium">{hdActivation.gate.name}</p>
+                <p className="text-theme-text-tertiary text-sm">{hdActivation.gate.iChingName}</p>
               </div>
             </Link>
             {activatedGK && (
               <Link
                 to={`/gene-keys/${activatedGK.id}`}
-                className="flex items-center gap-3 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+                className="flex items-center gap-3 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
               >
                 <span className="text-2xl font-serif text-genekey-400 w-10 text-center">
                   {activatedGK.keyNumber}
                 </span>
                 <div>
-                  <p className="text-neutral-400 text-xs mb-0.5">Gene Key</p>
-                  <p className="text-white font-medium">{activatedGK.name}</p>
-                  <p className="text-neutral-500 text-sm">
+                  <p className="text-theme-text-secondary text-xs mb-0.5">Gene Key</p>
+                  <p className="text-theme-text-primary font-medium">{activatedGK.name}</p>
+                  <p className="text-theme-text-tertiary text-sm">
                     <span className="text-red-400/70">{activatedGK.shadow.name}</span>
                     {' → '}
                     <span className="text-emerald-400/70">{activatedGK.gift.name}</span>
@@ -138,28 +138,28 @@ export function PlanetDetail() {
           {activatedChakra && (
             <Link
               to={`/chakras/${activatedChakra.id}`}
-              className="flex items-center gap-2 px-3 py-1.5 bg-neutral-900/50 hover:bg-neutral-800 rounded-lg border border-neutral-800 transition-colors"
+              className="flex items-center gap-2 px-3 py-1.5 bg-surface-base/50 hover:bg-surface-raised rounded-lg border border-theme-border-subtle transition-colors"
             >
               <span style={{ color: activatedChakra.colorHex }}>{activatedChakra.symbol}</span>
-              <span className="text-neutral-300 text-sm">{activatedChakra.name}</span>
+              <span className="text-theme-text-secondary text-sm">{activatedChakra.name}</span>
             </Link>
           )}
           {activatedCodonRing && (
             <Link
               to={`/gene-keys/codon-rings/${activatedCodonRing.id}`}
-              className="flex items-center gap-2 px-3 py-1.5 bg-neutral-900/50 hover:bg-neutral-800 rounded-lg border border-neutral-800 transition-colors"
+              className="flex items-center gap-2 px-3 py-1.5 bg-surface-base/50 hover:bg-surface-raised rounded-lg border border-theme-border-subtle transition-colors"
             >
               <span className="text-genekey-500 text-xs">⬡</span>
-              <span className="text-neutral-300 text-sm">{activatedCodonRing.name}</span>
+              <span className="text-theme-text-secondary text-sm">{activatedCodonRing.name}</span>
             </Link>
           )}
         </section>
       )}
 
       {/* Function & Meaning */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h2 className="font-serif text-xl mb-4">Function & Meaning</h2>
-        <p className="text-neutral-300 leading-relaxed">{planet.functionAndMeaning}</p>
+        <p className="text-theme-text-secondary leading-relaxed">{planet.functionAndMeaning}</p>
       </section>
 
       {/* Gift & Shadow */}
@@ -167,25 +167,25 @@ export function PlanetDetail() {
         <div className="grid md:grid-cols-2 gap-6">
           <section className="bg-gradient-to-br from-water-500/10 to-water-600/5 rounded-xl p-6 border border-water-500/20">
             <h2 className="font-serif text-xl mb-3 text-water-400">Gift Expression</h2>
-            <p className="text-neutral-300 leading-relaxed">{planetData.giftExpression}</p>
+            <p className="text-theme-text-secondary leading-relaxed">{planetData.giftExpression}</p>
           </section>
           <section className="bg-gradient-to-br from-fire-500/10 to-fire-600/5 rounded-xl p-6 border border-fire-500/20">
             <h2 className="font-serif text-xl mb-3 text-fire-400">Shadow Expression</h2>
-            <p className="text-neutral-300 leading-relaxed">{planetData.shadowExpression}</p>
+            <p className="text-theme-text-secondary leading-relaxed">{planetData.shadowExpression}</p>
           </section>
         </div>
       )}
 
       {/* Signs Ruled */}
       {ruledSigns.length > 0 && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Signs Ruled</h2>
           <div className="flex flex-wrap gap-3">
             {ruledSigns.map((sign) => sign && (
               <Link
                 key={sign.id}
                 to={`/signs/${sign.id}`}
-                className="flex items-center gap-2 px-4 py-2 bg-neutral-800 hover:bg-neutral-700 rounded-lg transition-colors"
+                className="flex items-center gap-2 px-4 py-2 bg-surface-raised hover:bg-surface-interactive rounded-lg transition-colors"
               >
                 <span className="text-xl">{sign.symbol}</span>
                 <span>{sign.name}</span>
@@ -197,12 +197,12 @@ export function PlanetDetail() {
 
       {/* Contemplation Questions */}
       {planet.contemplationQuestions && planet.contemplationQuestions.length > 0 && (
-        <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-neutral-700">
+        <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Contemplation Questions</h2>
           <ul className="space-y-3">
             {planet.contemplationQuestions.map((question, index) => (
-              <li key={index} className="flex gap-3 text-neutral-300">
-                <span className="text-neutral-500">{index + 1}.</span>
+              <li key={index} className="flex gap-3 text-theme-text-secondary">
+                <span className="text-theme-text-tertiary">{index + 1}.</span>
                 <span className="italic">{question}</span>
               </li>
             ))}
@@ -211,8 +211,8 @@ export function PlanetDetail() {
       )}
 
       {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-neutral-800">
-        <Link to="/planets" className="text-neutral-400 hover:text-white transition-colors">
+      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+        <Link to="/planets" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &larr; All Planets & Points
         </Link>
       </nav>

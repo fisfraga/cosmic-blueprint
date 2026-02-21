@@ -18,7 +18,7 @@ export function Trigrams() {
           <span className="text-3xl">☰</span>
           <h1 className="font-serif text-3xl font-medium">The 8 Trigrams</h1>
         </div>
-        <p className="text-neutral-400 max-w-3xl">
+        <p className="text-theme-text-secondary max-w-3xl">
           The eight trigrams are the building blocks of the 64 hexagrams of the I Ching.
           Each trigram consists of three lines—either broken (yin) or unbroken (yang)—representing
           fundamental forces of nature. In the Gene Keys system, the trigrams form the upper and
@@ -27,25 +27,25 @@ export function Trigrams() {
       </section>
 
       {/* Yin-Yang Basics */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">The Dance of Yin & Yang</h3>
         <div className="grid md:grid-cols-2 gap-6">
-          <div className="p-4 bg-neutral-800/50 rounded-lg">
+          <div className="p-4 bg-surface-overlay rounded-lg">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-2xl">━━━</span>
               <span className="font-medium">Yang (Unbroken Line)</span>
             </div>
-            <p className="text-neutral-400 text-sm">
+            <p className="text-theme-text-secondary text-sm">
               Creative, active, light, masculine principle. Yang energy initiates, expands,
               and moves outward. It is the force of creation and action.
             </p>
           </div>
-          <div className="p-4 bg-neutral-800/50 rounded-lg">
+          <div className="p-4 bg-surface-overlay rounded-lg">
             <div className="flex items-center gap-3 mb-3">
               <span className="text-2xl">━ ━</span>
               <span className="font-medium">Yin (Broken Line)</span>
             </div>
-            <p className="text-neutral-400 text-sm">
+            <p className="text-theme-text-secondary text-sm">
               Receptive, passive, dark, feminine principle. Yin energy receives, contracts,
               and draws inward. It is the force of form and nurturing.
             </p>
@@ -65,7 +65,7 @@ export function Trigrams() {
       {/* The Six Children */}
       <section>
         <h2 className="font-serif text-xl mb-4">The Six Children</h2>
-        <p className="text-neutral-400 text-sm mb-4">
+        <p className="text-theme-text-secondary text-sm mb-4">
           The remaining six trigrams arise from the interaction of Heaven and Earth.
           They form three pairs of sons and daughters, each with complementary qualities.
         </p>
@@ -77,31 +77,31 @@ export function Trigrams() {
       </section>
 
       {/* Trigram Relationships */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Trigram Correspondence Table</h3>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
-              <tr className="border-b border-neutral-700 text-left">
-                <th className="py-2 px-3 text-neutral-400">Trigram</th>
-                <th className="py-2 px-3 text-neutral-400">Symbol</th>
-                <th className="py-2 px-3 text-neutral-400">Nature</th>
-                <th className="py-2 px-3 text-neutral-400">Element</th>
-                <th className="py-2 px-3 text-neutral-400 hidden md:table-cell">Direction</th>
-                <th className="py-2 px-3 text-neutral-400 hidden md:table-cell">Family</th>
+              <tr className="border-b border-theme-border-subtle text-left">
+                <th className="py-2 px-3 text-theme-text-secondary">Trigram</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Symbol</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Nature</th>
+                <th className="py-2 px-3 text-theme-text-secondary">Element</th>
+                <th className="py-2 px-3 text-theme-text-secondary hidden md:table-cell">Direction</th>
+                <th className="py-2 px-3 text-theme-text-secondary hidden md:table-cell">Family</th>
               </tr>
             </thead>
             <tbody>
               {allTrigrams.map((t) => (
-                <tr key={t.id} className="border-b border-neutral-800 hover:bg-neutral-800/50">
+                <tr key={t.id} className="border-b border-theme-border-subtle hover:bg-surface-overlay">
                   <td className="py-3 px-3 font-medium">
                     {t.name} ({t.chineseName})
                   </td>
                   <td className="py-3 px-3 text-2xl">{t.symbol}</td>
-                  <td className="py-3 px-3 text-neutral-300">{t.nature}</td>
-                  <td className="py-3 px-3 text-neutral-400">{t.element}</td>
-                  <td className="py-3 px-3 text-neutral-400 hidden md:table-cell">{t.direction}</td>
-                  <td className="py-3 px-3 text-neutral-400 hidden md:table-cell">{t.familyMember}</td>
+                  <td className="py-3 px-3 text-theme-text-secondary">{t.nature}</td>
+                  <td className="py-3 px-3 text-theme-text-secondary">{t.element}</td>
+                  <td className="py-3 px-3 text-theme-text-secondary hidden md:table-cell">{t.direction}</td>
+                  <td className="py-3 px-3 text-theme-text-secondary hidden md:table-cell">{t.familyMember}</td>
                 </tr>
               ))}
             </tbody>
@@ -110,12 +110,12 @@ export function Trigrams() {
       </section>
 
       {/* Trigrams in Gene Keys */}
-      <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <h3 className="font-serif text-lg mb-4">Trigrams in the Gene Keys</h3>
         <div className="grid md:grid-cols-2 gap-4 text-sm">
           <div>
             <h4 className="font-medium text-amber-300 mb-2">Upper Trigram</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The upper trigram (formed by lines 4, 5, 6) of a hexagram represents how the Gene Key
               expresses outwardly—how its energy interacts with the world and others. It shows the
               transpersonal and collective dimension.
@@ -123,7 +123,7 @@ export function Trigrams() {
           </div>
           <div>
             <h4 className="font-medium text-teal-300 mb-2">Lower Trigram</h4>
-            <p className="text-neutral-400">
+            <p className="text-theme-text-secondary">
               The lower trigram (formed by lines 1, 2, 3) represents the internal foundation—how
               the Gene Key is processed individually and forms the basis for outer expression.
               It shows the personal and introspective dimension.
@@ -136,27 +136,27 @@ export function Trigrams() {
       <section className="flex gap-4 flex-wrap">
         <Link
           to="/gene-keys"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">✧</span>
           <h4 className="font-medium mt-2">Gene Keys</h4>
-          <p className="text-sm text-neutral-400 mt-1">Explore all 64 hexagrams</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Explore all 64 hexagrams</p>
         </Link>
         <Link
           to="/gene-keys/lines"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">---</span>
           <h4 className="font-medium mt-2">The 6 Lines</h4>
-          <p className="text-sm text-neutral-400 mt-1">Line archetypes within hexagrams</p>
+          <p className="text-sm text-theme-text-secondary mt-1">Line archetypes within hexagrams</p>
         </Link>
         <Link
           to="/human-design"
-          className="flex-1 min-w-[200px] p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex-1 min-w-[200px] p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border-subtle transition-colors"
         >
           <span className="text-lg">⬡</span>
           <h4 className="font-medium mt-2">Human Design</h4>
-          <p className="text-sm text-neutral-400 mt-1">The 64 Gates</p>
+          <p className="text-sm text-theme-text-secondary mt-1">The 64 Gates</p>
         </Link>
       </section>
     </div>
@@ -165,7 +165,7 @@ export function Trigrams() {
 
 function TrigramCard({ trigram, featured = false }: { trigram: Trigram; featured?: boolean }) {
   const elementColors: Record<string, string> = {
-    'Metal': 'text-neutral-300',
+    'Metal': 'text-theme-text-secondary',
     'Earth': 'text-amber-400',
     'Wood': 'text-green-400',
     'Water': 'text-blue-400',
@@ -173,41 +173,41 @@ function TrigramCard({ trigram, featured = false }: { trigram: Trigram; featured
   };
 
   return (
-    <div className={`bg-neutral-900/50 rounded-xl p-5 border border-neutral-800 hover:border-neutral-700 transition-colors ${featured ? 'md:p-6' : ''}`}>
+    <div className={`bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle hover:border-theme-border-subtle transition-colors ${featured ? 'md:p-6' : ''}`}>
       <div className="flex items-start gap-4 mb-4">
         <div className="text-4xl">{trigram.symbol}</div>
         <div>
           <h3 className={`font-serif ${featured ? 'text-xl' : 'text-lg'} font-medium`}>
             {trigram.name}
           </h3>
-          <p className="text-neutral-500 text-sm">{trigram.chineseName}</p>
+          <p className="text-theme-text-tertiary text-sm">{trigram.chineseName}</p>
         </div>
       </div>
 
       <div className="space-y-3 text-sm">
         <div className="flex flex-wrap gap-4">
           <div>
-            <span className="text-neutral-500">Nature: </span>
-            <span className="text-neutral-300">{trigram.nature}</span>
+            <span className="text-theme-text-tertiary">Nature: </span>
+            <span className="text-theme-text-secondary">{trigram.nature}</span>
           </div>
           <div>
-            <span className="text-neutral-500">Element: </span>
-            <span className={elementColors[trigram.element] || 'text-neutral-300'}>{trigram.element}</span>
+            <span className="text-theme-text-tertiary">Element: </span>
+            <span className={elementColors[trigram.element] || 'text-theme-text-secondary'}>{trigram.element}</span>
           </div>
         </div>
 
         <div>
-          <span className="text-neutral-500">Image: </span>
-          <span className="text-neutral-300">{trigram.image}</span>
+          <span className="text-theme-text-tertiary">Image: </span>
+          <span className="text-theme-text-secondary">{trigram.image}</span>
         </div>
 
-        <p className="text-neutral-400 text-sm pt-2 border-t border-neutral-800 line-clamp-3">
+        <p className="text-theme-text-secondary text-sm pt-2 border-t border-theme-border-subtle line-clamp-3">
           {trigram.description}
         </p>
 
         <div className="flex flex-wrap gap-1">
           {trigram.keywords.slice(0, 4).map((keyword) => (
-            <span key={keyword} className="px-2 py-0.5 bg-neutral-800 rounded text-neutral-400 text-xs">
+            <span key={keyword} className="px-2 py-0.5 bg-surface-raised rounded text-theme-text-secondary text-xs">
               {keyword}
             </span>
           ))}

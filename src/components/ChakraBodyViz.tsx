@@ -48,7 +48,7 @@ function ChakraTooltip({ chakra, y }: TooltipProps) {
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: -8 }}
       transition={{ duration: 0.18 }}
-      className="absolute left-full ml-3 z-10 w-52 rounded-xl border bg-neutral-950/95 p-4 shadow-2xl"
+      className="absolute left-full ml-3 z-10 w-52 rounded-xl border bg-surface-base/95 p-4 shadow-2xl"
       style={{
         top: `${tipY}px`,
         borderColor: chakra.colorHex + '40',
@@ -63,13 +63,13 @@ function ChakraTooltip({ chakra, y }: TooltipProps) {
           {chakra.symbol}
         </div>
         <div>
-          <p className="text-sm font-semibold text-white">{chakra.name}</p>
-          <p className="text-[11px] italic text-neutral-500">{chakra.sanskritName}</p>
+          <p className="text-sm font-semibold text-theme-text-primary">{chakra.name}</p>
+          <p className="text-[11px] italic text-theme-text-tertiary">{chakra.sanskritName}</p>
         </div>
       </div>
 
       {/* Hz frequency */}
-      <p className="mb-3 text-[11px] text-neutral-500">
+      <p className="mb-3 text-[11px] text-theme-text-tertiary">
         {chakra.frequency} Hz · {chakra.element} · Mantra: {chakra.seed_mantra}
       </p>
 
@@ -79,7 +79,7 @@ function ChakraTooltip({ chakra, y }: TooltipProps) {
           <span className="mt-px h-2 w-2 shrink-0 rounded-full bg-red-500" />
           <div>
             <span className="font-medium text-red-400">{chakra.constricted.name}</span>
-            <p className="mt-0.5 text-[10px] leading-relaxed text-neutral-500 line-clamp-2">
+            <p className="mt-0.5 text-[10px] leading-relaxed text-theme-text-tertiary line-clamp-2">
               {chakra.constricted.expression}
             </p>
           </div>
@@ -88,7 +88,7 @@ function ChakraTooltip({ chakra, y }: TooltipProps) {
           <span className="mt-px h-2 w-2 shrink-0 rounded-full bg-emerald-500" />
           <div>
             <span className="font-medium text-emerald-400">{chakra.flowing.name}</span>
-            <p className="mt-0.5 text-[10px] leading-relaxed text-neutral-500 line-clamp-2">
+            <p className="mt-0.5 text-[10px] leading-relaxed text-theme-text-tertiary line-clamp-2">
               {chakra.flowing.expression}
             </p>
           </div>

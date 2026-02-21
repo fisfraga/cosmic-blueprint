@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import { getSignsInOrder } from '../data';
 import { useReducedMotion } from '../hooks/useReducedMotion';
-import { d3ElementColors } from '../styles/colors';
+import { useTheme } from '../context';
+import { d3ElementColors, getD3ThemeColors } from '../styles/colors';
 import type { ZodiacSign } from '../types';
 
 interface CelestialMandalaProps {
@@ -23,6 +24,8 @@ export function CelestialMandala({
   const navigate = useNavigate();
   const [hoveredSign, setHoveredSign] = useState<string | null>(null);
   const prefersReducedMotion = useReducedMotion();
+  const { theme } = useTheme();
+  const d3Colors = useMemo(() => getD3ThemeColors(theme), [theme]);
   const signs = getSignsInOrder();
 
   useEffect(() => {
@@ -47,15 +50,15 @@ export function CelestialMandala({
     // Add background circle
     g.append('circle')
       .attr('r', outerRadius + 10)
-      .attr('fill', 'rgba(13, 13, 21, 0.8)')
-      .attr('stroke', 'rgba(255, 255, 255, 0.1)')
+      .attr('fill', d3Colors.backgroundAlpha80)
+      .attr('stroke', d3Colors.borderSubtle)
       .attr('stroke-width', 1);
 
     // Inner circle
     g.append('circle')
       .attr('r', innerRadius - 10)
-      .attr('fill', 'rgba(13, 13, 21, 0.9)')
-      .attr('stroke', 'rgba(255, 255, 255, 0.1)')
+      .attr('fill', d3Colors.backgroundAlpha90)
+      .attr('stroke', d3Colors.borderSubtle)
       .attr('stroke-width', 1);
 
     // Create arc generator
@@ -212,7 +215,7 @@ export function CelestialMandala({
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
       .attr('font-size', size / 18)
-      .attr('fill', 'white')
+      .attr('fill', d3Colors.textPrimary)
       .attr('pointer-events', 'none')
       .text((d) => d.data.symbol);
 
@@ -233,7 +236,7 @@ export function CelestialMandala({
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
       .attr('font-size', 10)
-      .attr('fill', 'rgba(255, 255, 255, 0.5)')
+      .attr('fill', d3Colors.textMuted)
       .attr('font-family', 'Inter, sans-serif')
       .text((d) => d.data.name);
 
@@ -243,10 +246,10 @@ export function CelestialMandala({
       .attr('dominant-baseline', 'central')
       .attr('font-family', 'Cinzel, serif')
       .attr('font-size', size / 20)
-      .attr('fill', 'rgba(255, 255, 255, 0.7)')
+      .attr('fill', d3Colors.labelText)
       .text('Zodiac');
 
-  }, [signs, size, hoveredSign, selectedSignId, onSignSelect, navigate, prefersReducedMotion]);
+  }, [signs, size, hoveredSign, selectedSignId, onSignSelect, navigate, prefersReducedMotion, d3Colors]);
 
   const hoveredSignData = hoveredSign ? signs.find((s) => s.id === hoveredSign) : null;
 
@@ -270,12 +273,12 @@ export function CelestialMandala({
       </div>
       {/* Tooltip */}
       {hoveredSignData && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-neutral-700 text-center whitespace-nowrap">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface-base/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-theme-border-subtle text-center whitespace-nowrap">
           <div className="flex items-center gap-2 justify-center">
             <span className="text-xl">{hoveredSignData.symbol}</span>
             <span className="font-serif text-lg">{hoveredSignData.name}</span>
           </div>
-          <p className="text-neutral-400 text-sm">{hoveredSignData.keyPhrase}</p>
+          <p className="text-theme-text-secondary text-sm">{hoveredSignData.keyPhrase}</p>
         </div>
       )}
     </div>

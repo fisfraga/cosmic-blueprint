@@ -73,14 +73,14 @@ export function Breadcrumb() {
   });
 
   return (
-    <nav className="text-sm text-neutral-400 mb-6">
+    <nav className="text-sm text-theme-text-secondary mb-6">
       {breadcrumbs.map((item, index) => (
         <span key={item.path}>
           {index > 0 && <span className="mx-2">/</span>}
           {index === breadcrumbs.length - 1 ? (
-            <span className="text-white">{item.label}</span>
+            <span className="text-theme-text-primary">{item.label}</span>
           ) : (
-            <Link to={item.path} className="hover:text-white transition-colors">
+            <Link to={item.path} className="hover:text-theme-text-primary transition-colors">
               {item.label}
             </Link>
           )}

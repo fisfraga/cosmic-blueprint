@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState, useCallback } from 'react';
+import { useEffect, useRef, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import {
@@ -8,7 +8,8 @@ import {
   planets,
   signs,
 } from '../data';
-import { d3ElementFlatColors, d3EntityTypeColors, d3RelationshipColors } from '../styles/colors';
+import { useTheme } from '../context';
+import { d3ElementFlatColors, d3EntityTypeColors, d3RelationshipColors, getD3ThemeColors } from '../styles/colors';
 import type { UniversalEntity, Relationship, RelationshipType, EntityType } from '../types';
 
 interface ConstellationGraphProps {
@@ -108,6 +109,8 @@ export function ConstellationGraph({
   const [internalSelectedId, setInternalSelectedId] = useState<string | null>(
     selectedEntityId || null
   );
+  const { theme } = useTheme();
+  const d3Colors = useMemo(() => getD3ThemeColors(theme), [theme]);
 
   const selectedId = selectedEntityId !== undefined ? selectedEntityId : internalSelectedId;
 
@@ -228,7 +231,7 @@ export function ConstellationGraph({
       .attr('orient', 'auto')
       .append('path')
       .attr('d', 'M0,-5L10,0L0,5')
-      .attr('fill', '#666');
+      .attr('fill', d3Colors.labelTextSecondary);
 
     // Draw links
     const linkGroup = g.append('g').attr('class', 'links');
@@ -276,7 +279,7 @@ export function ConstellationGraph({
       .append('circle')
       .attr('r', (d) => d.radius)
       .attr('fill', (d) => d.color)
-      .attr('stroke', '#ffffff')
+      .attr('stroke', d3Colors.nodeStroke)
       .attr('stroke-width', 2);
 
     // Node symbols
@@ -285,7 +288,7 @@ export function ConstellationGraph({
       .attr('text-anchor', 'middle')
       .attr('dominant-baseline', 'central')
       .attr('font-size', (d) => Math.max(10, d.radius * 0.8))
-      .attr('fill', '#ffffff')
+      .attr('fill', d3Colors.textPrimary)
       .attr('pointer-events', 'none')
       .text((d) => d.entity.symbol || d.entity.name.charAt(0));
 
@@ -389,6 +392,7 @@ export function ConstellationGraph({
     filterEntityTypes,
     handleNodeClick,
     handleNodeDoubleClick,
+    d3Colors,
   ]);
 
   const hoveredEntity = hoveredNode ? getEntityById(hoveredNode) : null;
@@ -400,68 +404,68 @@ export function ConstellationGraph({
         ref={svgRef}
         width={width}
         height={height}
-        className="bg-neutral-900/50 rounded-lg border border-neutral-700"
+        className="bg-surface-base/50 rounded-lg border border-theme-border-subtle"
       />
 
       {/* Legend */}
-      <div className="absolute top-4 left-4 bg-neutral-900/90 backdrop-blur-sm rounded-lg p-3 border border-neutral-700">
-        <h4 className="text-sm font-semibold text-white mb-2">Categories</h4>
+      <div className="absolute top-4 left-4 bg-surface-base/90 backdrop-blur-sm rounded-lg p-3 border border-theme-border-subtle">
+        <h4 className="text-sm font-semibold text-theme-text-primary mb-2">Categories</h4>
         <div className="space-y-1 mb-3">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entityTypeColors.planet }} />
-            <span className="text-xs text-neutral-300">Planets</span>
+            <span className="text-xs text-theme-text-secondary">Planets</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: entityTypeColors.house }} />
-            <span className="text-xs text-neutral-300">Houses</span>
+            <span className="text-xs text-theme-text-secondary">Houses</span>
           </div>
         </div>
-        <h4 className="text-sm font-semibold text-white mb-2">Elements</h4>
+        <h4 className="text-sm font-semibold text-theme-text-primary mb-2">Elements</h4>
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: elementColors.fire }} />
-            <span className="text-xs text-neutral-300">Fire (Signs & Element)</span>
+            <span className="text-xs text-theme-text-secondary">Fire (Signs & Element)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: elementColors.earth }} />
-            <span className="text-xs text-neutral-300">Earth (Signs & Element)</span>
+            <span className="text-xs text-theme-text-secondary">Earth (Signs & Element)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: elementColors.air }} />
-            <span className="text-xs text-neutral-300">Air (Signs & Element)</span>
+            <span className="text-xs text-theme-text-secondary">Air (Signs & Element)</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full" style={{ backgroundColor: elementColors.water }} />
-            <span className="text-xs text-neutral-300">Water (Signs & Element)</span>
+            <span className="text-xs text-theme-text-secondary">Water (Signs & Element)</span>
           </div>
         </div>
       </div>
 
       {/* Tooltip for hovered node */}
       {hoveredEntity && (
-        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-neutral-700 text-center whitespace-nowrap">
+        <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-surface-base/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-theme-border-subtle text-center whitespace-nowrap">
           <div className="flex items-center gap-2 justify-center">
             <span className="text-xl">{hoveredEntity.symbol}</span>
-            <span className="font-serif text-lg text-white">{hoveredEntity.name}</span>
+            <span className="font-serif text-lg text-theme-text-primary">{hoveredEntity.name}</span>
           </div>
-          <p className="text-neutral-400 text-sm capitalize">{hoveredEntity.type}</p>
-          <p className="text-neutral-500 text-xs mt-1">Click to select, double-click to view</p>
+          <p className="text-theme-text-secondary text-sm capitalize">{hoveredEntity.type}</p>
+          <p className="text-theme-text-tertiary text-xs mt-1">Click to select, double-click to view</p>
         </div>
       )}
 
       {/* Selected entity info */}
       {selectedEntity && !hoveredNode && (
-        <div className="absolute bottom-4 right-4 bg-neutral-900/95 backdrop-blur-sm px-4 py-3 rounded-lg border border-neutral-700 max-w-xs">
+        <div className="absolute bottom-4 right-4 bg-surface-base/95 backdrop-blur-sm px-4 py-3 rounded-lg border border-theme-border-subtle max-w-xs">
           <div className="flex items-center gap-2 mb-2">
             <span className="text-2xl">{selectedEntity.symbol}</span>
             <div>
-              <h4 className="font-serif text-lg text-white">{selectedEntity.name}</h4>
-              <p className="text-neutral-400 text-sm capitalize">{selectedEntity.type}</p>
+              <h4 className="font-serif text-lg text-theme-text-primary">{selectedEntity.name}</h4>
+              <p className="text-theme-text-secondary text-sm capitalize">{selectedEntity.type}</p>
             </div>
           </div>
           <button
             onClick={() => navigate(getEntityPath(selectedEntity))}
-            className="w-full mt-2 px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded transition-colors"
+            className="w-full mt-2 px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
           >
             View Details
           </button>
@@ -469,9 +473,9 @@ export function ConstellationGraph({
       )}
 
       {/* Instructions */}
-      <div className="absolute top-4 right-4 bg-neutral-900/90 backdrop-blur-sm rounded-lg p-3 border border-neutral-700">
-        <h4 className="text-sm font-semibold text-white mb-2">Controls</h4>
-        <ul className="text-xs text-neutral-400 space-y-1">
+      <div className="absolute top-4 right-4 bg-surface-base/90 backdrop-blur-sm rounded-lg p-3 border border-theme-border-subtle">
+        <h4 className="text-sm font-semibold text-theme-text-primary mb-2">Controls</h4>
+        <ul className="text-xs text-theme-text-secondary space-y-1">
           <li>Scroll to zoom</li>
           <li>Drag to pan</li>
           <li>Drag nodes to move</li>

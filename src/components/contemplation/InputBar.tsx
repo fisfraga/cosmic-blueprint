@@ -25,7 +25,7 @@ export function InputBar({
         onChange={(e) => setInputValue(e.target.value)}
         onKeyDown={onKeyDown}
         placeholder="Share your thoughts or ask a question..."
-        className="flex-1 bg-neutral-800 border border-neutral-700 rounded-xl p-4 text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500/50 resize-none"
+        className="flex-1 bg-surface-raised border border-theme-border-subtle rounded-xl p-4 text-theme-text-primary placeholder-neutral-500 focus:outline-none focus:border-purple-500/50 resize-none"
         rows={2}
         disabled={isSending}
       />

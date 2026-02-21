@@ -27,26 +27,26 @@ export function HumanDesignCenterDetail() {
         <div className="text-5xl mb-4">{center.symbol}</div>
         <h1 className="font-serif text-4xl font-medium mb-2">{center.name}</h1>
         <p className="text-xl text-humandesign-400 mb-2">{center.centerType} Center</p>
-        <p className="text-neutral-400">{center.biologicalCorrelate}</p>
+        <p className="text-theme-text-secondary">{center.biologicalCorrelate}</p>
       </header>
 
       {/* Description */}
       {center.description && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <p className="text-neutral-300 leading-relaxed">{center.description}</p>
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <p className="text-theme-text-secondary leading-relaxed">{center.description}</p>
         </section>
       )}
 
       {/* Chakra Resonance */}
       {relatedChakra && (
-        <section className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Chakra Resonance</h2>
-          <p className="text-neutral-500 text-sm mb-4">
+          <p className="text-theme-text-tertiary text-sm mb-4">
             In the Hindu-Brahman tradition underlying Human Design, this center resonates with a corresponding chakra energy center.
           </p>
           <Link
             to={`/chakras/${relatedChakra.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-neutral-800/50 hover:bg-neutral-800 transition-colors border border-neutral-700"
+            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle"
           >
             <div
               className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
@@ -55,9 +55,9 @@ export function HumanDesignCenterDetail() {
               {relatedChakra.symbol}
             </div>
             <div>
-              <p className="text-white font-medium">{relatedChakra.name}</p>
-              <p className="text-neutral-400 text-sm italic">{relatedChakra.sanskritName}</p>
-              <p className="text-neutral-500 text-xs mt-1">{relatedChakra.lifeTheme}</p>
+              <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
+              <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
+              <p className="text-theme-text-tertiary text-xs mt-1">{relatedChakra.lifeTheme}</p>
             </div>
           </Link>
         </section>
@@ -67,18 +67,18 @@ export function HumanDesignCenterDetail() {
       <section className="grid md:grid-cols-2 gap-4">
         <div className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
           <h2 className="font-serif text-xl mb-3 text-humandesign-300">Defined</h2>
-          <p className="text-neutral-300">{center.definedMeaning}</p>
+          <p className="text-theme-text-secondary">{center.definedMeaning}</p>
         </div>
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl mb-3 text-neutral-400">Undefined</h2>
-          <p className="text-neutral-300">{center.undefinedMeaning}</p>
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl mb-3 text-theme-text-secondary">Undefined</h2>
+          <p className="text-theme-text-secondary">{center.undefinedMeaning}</p>
         </div>
       </section>
 
       {/* Gates in this Center */}
       <section>
         <h2 className="font-serif text-2xl mb-4">Gates ({gates.length})</h2>
-        <p className="text-neutral-400 mb-4">
+        <p className="text-theme-text-secondary mb-4">
           These gates are located in the {center.name} and express their energy through this center's qualities.
         </p>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -88,7 +88,7 @@ export function HumanDesignCenterDetail() {
               <Link
                 key={gate.id}
                 to={`/human-design/${gate.id}`}
-                className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800 hover:border-humandesign-500/50 hover:bg-neutral-900 transition-all group"
+                className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle hover:border-humandesign-500/50 hover:bg-surface-base transition-all group"
               >
                 <div className="flex items-start justify-between mb-2">
                   <span className="text-2xl font-serif text-humandesign-400">{gate.gateNumber}</span>
@@ -100,14 +100,14 @@ export function HumanDesignCenterDetail() {
                     </div>
                   )}
                 </div>
-                <h3 className="font-medium text-white group-hover:text-humandesign-300 transition-colors mb-1">
+                <h3 className="font-medium text-theme-text-primary group-hover:text-humandesign-300 transition-colors mb-1">
                   {gate.name}
                 </h3>
-                <p className="text-neutral-500 text-sm">{gate.iChingName}</p>
+                <p className="text-theme-text-tertiary text-sm">{gate.iChingName}</p>
                 {gate.keywords && gate.keywords.length > 0 && (
                   <div className="flex flex-wrap gap-1 mt-2">
                     {gate.keywords.slice(0, 2).map((kw, i) => (
-                      <span key={i} className="text-xs text-neutral-400 bg-neutral-800 px-2 py-0.5 rounded">
+                      <span key={i} className="text-xs text-theme-text-secondary bg-surface-raised px-2 py-0.5 rounded">
                         {kw}
                       </span>
                     ))}
@@ -123,7 +123,7 @@ export function HumanDesignCenterDetail() {
       {channels.length > 0 && (
         <section>
           <h2 className="font-serif text-2xl mb-4">Connected Channels ({channels.length})</h2>
-          <p className="text-neutral-400 mb-4">
+          <p className="text-theme-text-secondary mb-4">
             These channels connect the {center.name} to other centers in the body graph.
           </p>
           <div className="grid md:grid-cols-2 gap-4">
@@ -137,7 +137,7 @@ export function HumanDesignCenterDetail() {
                 <Link
                   key={channel.id}
                   to={`/human-design/channels/${channel.id}`}
-                  className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800 hover:border-humandesign-500/50 hover:bg-neutral-900 transition-all group"
+                  className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle hover:border-humandesign-500/50 hover:bg-surface-base transition-all group"
                 >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2">
@@ -145,14 +145,14 @@ export function HumanDesignCenterDetail() {
                         {channel.gate1Number}-{channel.gate2Number}
                       </span>
                     </div>
-                    <span className="text-xs text-neutral-500 bg-neutral-800 px-2 py-0.5 rounded">
+                    <span className="text-xs text-theme-text-tertiary bg-surface-raised px-2 py-0.5 rounded">
                       {channel.circuitType}
                     </span>
                   </div>
-                  <h3 className="font-medium text-white group-hover:text-humandesign-300 transition-colors mb-1">
+                  <h3 className="font-medium text-theme-text-primary group-hover:text-humandesign-300 transition-colors mb-1">
                     {channel.name}
                   </h3>
-                  <p className="text-neutral-500 text-sm">
+                  <p className="text-theme-text-tertiary text-sm">
                     {gate1?.name || `Gate ${channel.gate1Number}`} &#8594; {gate2?.name || `Gate ${channel.gate2Number}`}
                   </p>
                   {otherCenter && (
@@ -169,7 +169,7 @@ export function HumanDesignCenterDetail() {
 
       {/* Back Link */}
       <div className="text-center pt-4">
-        <Link to="/human-design/centers" className="text-neutral-400 hover:text-white transition-colors">
+        <Link to="/human-design/centers" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
           &#8592; Back to Centers
         </Link>
       </div>

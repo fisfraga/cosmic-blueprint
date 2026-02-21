@@ -17,7 +17,7 @@ export function EntityPanelFooter({
 
   if (isSidebar) {
     return (
-      <div className="border-t border-cosmic-700 p-3">
+      <div className="border-t border-theme-border-subtle p-3">
         <button
           onClick={onViewFullPage}
           className={`w-full flex items-center justify-center gap-2 px-4 py-2
@@ -32,7 +32,7 @@ export function EntityPanelFooter({
   }
 
   return (
-    <div className="border-t border-cosmic-700 p-4 pb-safe">
+    <div className="border-t border-theme-border-subtle p-4 pb-safe">
       <button
         onClick={onViewFullPage}
         className={`w-full flex items-center justify-center gap-2 px-4 py-3.5 sm:py-2.5

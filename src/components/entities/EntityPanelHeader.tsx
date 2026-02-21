@@ -38,7 +38,7 @@ export function EntityPanelHeader({
               <span className={`px-2 py-0.5 text-xs rounded ${colors.accent} text-white`}>
                 {systemLabel}
               </span>
-              <span className="px-2 py-0.5 text-xs rounded bg-cosmic-700 text-gray-300">
+              <span className="px-2 py-0.5 text-xs rounded bg-surface-interactive text-theme-text-secondary">
                 {categoryLabel}
               </span>
             </div>
@@ -48,7 +48,7 @@ export function EntityPanelHeader({
             className="p-2 -mr-1 rounded-lg hover:bg-white/10 transition-colors"
             aria-label="Close panel"
           >
-            <CloseIcon className="w-5 h-5 text-gray-400" />
+            <CloseIcon className="w-5 h-5 text-theme-text-secondary" />
           </button>
         </div>
       </div>
@@ -74,7 +74,7 @@ export function EntityPanelHeader({
             <span className={`px-2 py-1 sm:py-0.5 text-xs rounded ${colors.accent} text-white`}>
               {systemLabel}
             </span>
-            <span className="px-2 py-1 sm:py-0.5 text-xs rounded bg-cosmic-700 text-gray-300">
+            <span className="px-2 py-1 sm:py-0.5 text-xs rounded bg-surface-interactive text-theme-text-secondary">
               {categoryLabel}
             </span>
           </div>
@@ -84,7 +84,7 @@ export function EntityPanelHeader({
           className="p-3 sm:p-2 -mr-1 rounded-lg hover:bg-white/10 active:bg-white/20 transition-colors touch-manipulation"
           aria-label="Close panel"
         >
-          <CloseIcon className="w-6 h-6 sm:w-5 sm:h-5 text-gray-400" />
+          <CloseIcon className="w-6 h-6 sm:w-5 sm:h-5 text-theme-text-secondary" />
         </button>
       </div>
     </div>

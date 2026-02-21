@@ -22,7 +22,7 @@ export function GeneKeyContent({ entity, onEntityClick, profile, profileSpheres 
         <div className="space-y-2">
           {getNestedStringValue(data, 'shadow', 'name') && (
             <div className="flex items-center gap-2">
-              <span className="w-16 text-xs text-gray-500">Shadow</span>
+              <span className="w-16 text-xs text-theme-text-tertiary">Shadow</span>
               <span className="text-sm text-red-400">
                 {getNestedStringValue(data, 'shadow', 'name')}
               </span>
@@ -30,7 +30,7 @@ export function GeneKeyContent({ entity, onEntityClick, profile, profileSpheres 
           )}
           {getNestedStringValue(data, 'gift', 'name') && (
             <div className="flex items-center gap-2">
-              <span className="w-16 text-xs text-gray-500">Gift</span>
+              <span className="w-16 text-xs text-theme-text-tertiary">Gift</span>
               <span className="text-sm text-emerald-400">
                 {getNestedStringValue(data, 'gift', 'name')}
               </span>
@@ -38,7 +38,7 @@ export function GeneKeyContent({ entity, onEntityClick, profile, profileSpheres 
           )}
           {getNestedStringValue(data, 'siddhi', 'name') && (
             <div className="flex items-center gap-2">
-              <span className="w-16 text-xs text-gray-500">Siddhi</span>
+              <span className="w-16 text-xs text-theme-text-tertiary">Siddhi</span>
               <span className="text-sm text-purple-400">
                 {getNestedStringValue(data, 'siddhi', 'name')}
               </span>
@@ -56,9 +56,9 @@ export function GeneKeyContent({ entity, onEntityClick, profile, profileSpheres 
           <div className="space-y-1.5">
             {profileSpheres.map((sphere, idx) => (
               <div key={idx} className="flex items-center gap-2 text-sm">
-                <span className="text-white font-medium">{sphere.sphereName}</span>
-                <span className="text-gray-500">—</span>
-                <span className="text-gray-400">
+                <span className="text-theme-text-primary font-medium">{sphere.sphereName}</span>
+                <span className="text-theme-text-tertiary">—</span>
+                <span className="text-theme-text-secondary">
                   {sphere.planetarySource}
                   {sphere.signPlacement && (
                     <span className="text-emerald-400/80"> in {sphere.signPlacement}</span>
@@ -105,9 +105,9 @@ function ZodiacPosition({ entity, onEntityClick }: { entity: EntityInfo; onEntit
       <div className="flex items-center gap-3">
         <span className="text-2xl">{zodiacSign.symbol}</span>
         <div>
-          <p className="text-sm text-white font-medium">{zodiacSign.name}</p>
+          <p className="text-sm text-theme-text-primary font-medium">{zodiacSign.name}</p>
           {degreeStart && degreeEnd && (
-            <p className="text-xs text-gray-400">{degreeStart}° — {degreeEnd}°</p>
+            <p className="text-xs text-theme-text-secondary">{degreeStart}° — {degreeEnd}°</p>
           )}
         </div>
       </div>
@@ -172,7 +172,7 @@ function CodonRingContent({ entity, onEntityClick, profile }: { entity: EntityIn
           </h4>
           <div className="space-y-1">
             {activeInProfile.map((item, idx) => (
-              <div key={idx} className="text-sm text-gray-300">
+              <div key={idx} className="text-sm text-theme-text-secondary">
                 GK {item.geneKeyNumber} as <span className="text-emerald-400">{item.sphereName}</span>
               </div>
             ))}

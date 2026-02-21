@@ -36,16 +36,16 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
       {/* Header */}
       <div className="text-center">
         <div className="flex items-center justify-center gap-2 mb-2">
-          <h1 className="font-serif text-4xl font-medium text-white">
+          <h1 className="font-serif text-4xl font-medium text-theme-text-primary">
             {profile.name}
           </h1>
           {profile.relationship && profile.relationship !== 'Me' && (
-            <span className="px-2 py-1 bg-neutral-800 text-neutral-400 text-sm rounded">
+            <span className="px-2 py-1 bg-surface-raised text-theme-text-secondary text-sm rounded">
               {profile.relationship}
             </span>
           )}
         </div>
-        <p className="text-neutral-400">
+        <p className="text-theme-text-secondary">
           {new Date(profile.dateOfBirth).toLocaleDateString('en-US', {
             weekday: 'long',
             year: 'numeric',
@@ -54,13 +54,13 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
           })}
           {profile.timeOfBirth && ` at ${profile.timeOfBirth}`}
         </p>
-        <p className="text-neutral-500 text-sm mt-1">{profile.cityOfBirth}</p>
+        <p className="text-theme-text-tertiary text-sm mt-1">{profile.cityOfBirth}</p>
       </div>
 
       {/* Natal Chart */}
       <div className="flex justify-center">
-        <div className="bg-neutral-900/50 rounded-xl p-4 border border-neutral-800 max-w-md">
-          <h3 className="font-serif text-lg text-white mb-3 text-center">Natal Chart</h3>
+        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-md">
+          <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
           <img
             src="/images/astrology/Natal-Chart-Felipe-Fraga.png"
             alt="Natal Chart"
@@ -73,7 +73,7 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
       {allGateNumbers.size > 0 && (
         <div className="bg-gradient-to-r from-purple-500/10 to-humandesign-500/10 rounded-xl p-5 border border-purple-500/20">
           <div className="flex items-center justify-between mb-3">
-            <h2 className="font-serif text-lg text-white flex items-center gap-2">
+            <h2 className="font-serif text-lg text-theme-text-primary flex items-center gap-2">
               <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse inline-block"></span>
               Today in Your Chart
             </h2>
@@ -88,11 +88,11 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
                   <Link
                     key={pos.planetId}
                     to={`/human-design/${gate.id}`}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-neutral-800/80 hover:bg-neutral-800 border border-humandesign-500/30 rounded-full text-sm transition-colors"
+                    className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-raised/80 hover:bg-surface-raised border border-humandesign-500/30 rounded-full text-sm transition-colors"
                   >
                     <span className="text-xl leading-none">{pos.symbol}</span>
-                    <span className="text-neutral-300">{pos.planetName}</span>
-                    <span className="text-neutral-600">→</span>
+                    <span className="text-theme-text-secondary">{pos.planetName}</span>
+                    <span className="text-theme-text-muted">→</span>
                     <span className="text-humandesign-300 font-medium">Gate {gate.gateNumber}.{line}</span>
                     {gk && (
                       <span className="text-emerald-400/80 text-xs">· {gk.gift.name}</span>
@@ -119,7 +119,7 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
               </button>
             </>
           ) : (
-            <p className="text-neutral-400 text-sm">
+            <p className="text-theme-text-secondary text-sm">
               No planets transiting your natal gates today.{' '}
               <Link to="/transits" className="text-purple-400 hover:text-purple-300 transition-colors">Explore all transits →</Link>
             </p>
@@ -131,28 +131,28 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
         {/* Rising Sign */}
         {risingSign && (
-          <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
-            <p className="text-neutral-400 text-sm mb-2">Rising Sign</p>
+          <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
+            <p className="text-theme-text-secondary text-sm mb-2">Rising Sign</p>
             <div className="flex items-center gap-3">
               <span className="text-3xl">{risingSign.symbol}</span>
               <div>
-                <p className="font-serif text-xl text-white">{risingSign.name}</p>
-                <p className="text-neutral-500 text-sm">Ascendant</p>
+                <p className="font-serif text-xl text-theme-text-primary">{risingSign.name}</p>
+                <p className="text-theme-text-tertiary text-sm">Ascendant</p>
               </div>
             </div>
           </div>
         )}
 
         {/* Chart Rulers */}
-        <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
-          <p className="text-neutral-400 text-sm mb-2">Chart Rulers</p>
+        <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
+          <p className="text-theme-text-secondary text-sm mb-2">Chart Rulers</p>
           <div className="flex items-center gap-4">
             {chartRulers.traditional && (
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{getPlanetData(chartRulers.traditional)?.symbol}</span>
                 <div>
-                  <p className="font-medium text-white">{getPlanetData(chartRulers.traditional)?.name}</p>
-                  <p className="text-neutral-500 text-xs">Traditional</p>
+                  <p className="font-medium text-theme-text-primary">{getPlanetData(chartRulers.traditional)?.name}</p>
+                  <p className="text-theme-text-tertiary text-xs">Traditional</p>
                 </div>
               </div>
             )}
@@ -160,8 +160,8 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
               <div className="flex items-center gap-2">
                 <span className="text-2xl">{getPlanetData(chartRulers.modern)?.symbol}</span>
                 <div>
-                  <p className="font-medium text-white">{getPlanetData(chartRulers.modern)?.name}</p>
-                  <p className="text-neutral-500 text-xs">Modern</p>
+                  <p className="font-medium text-theme-text-primary">{getPlanetData(chartRulers.modern)?.name}</p>
+                  <p className="text-theme-text-tertiary text-xs">Modern</p>
                 </div>
               </div>
             )}
@@ -169,10 +169,10 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
         </div>
 
         {/* Dominant Element */}
-        <div className="bg-neutral-900/50 rounded-xl p-5 border border-neutral-800">
-          <p className="text-neutral-400 text-sm mb-2">Dominant Element</p>
+        <div className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle">
+          <p className="text-theme-text-secondary text-sm mb-2">Dominant Element</p>
           <div className="flex items-center gap-3">
-            <div className={`w-10 h-10 rounded-full ${elementColors[elementalAnalysis.dominant as keyof typeof elementColors]?.bg || 'bg-neutral-700'} flex items-center justify-center`}>
+            <div className={`w-10 h-10 rounded-full ${elementColors[elementalAnalysis.dominant as keyof typeof elementColors]?.bg || 'bg-surface-interactive'} flex items-center justify-center`}>
               <span className="text-white text-lg">
                 {elementalAnalysis.dominant === 'fire' && '🜂'}
                 {elementalAnalysis.dominant === 'earth' && '🜃'}
@@ -181,8 +181,8 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
               </span>
             </div>
             <div>
-              <p className="font-serif text-xl text-white capitalize">{elementalAnalysis.dominant}</p>
-              <p className="text-neutral-500 text-sm">{elementalAnalysis[elementalAnalysis.dominant as keyof typeof elementalAnalysis]} planets</p>
+              <p className="font-serif text-xl text-theme-text-primary capitalize">{elementalAnalysis.dominant}</p>
+              <p className="text-theme-text-tertiary text-sm">{elementalAnalysis[elementalAnalysis.dominant as keyof typeof elementalAnalysis]} planets</p>
             </div>
           </div>
         </div>
@@ -203,45 +203,45 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
         >
           <span className="text-2xl">✦</span>
           <div>
-            <p className="font-medium text-white">Contemplate Your Chart</p>
-            <p className="text-neutral-500 text-sm">Explore with AI wisdom guide</p>
+            <p className="font-medium text-theme-text-primary">Contemplate Your Chart</p>
+            <p className="text-theme-text-tertiary text-sm">Explore with AI wisdom guide</p>
           </div>
         </button>
         <Link
           to="/wheel"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border transition-colors"
         >
           <span className="text-2xl">☉</span>
           <div>
-            <p className="font-medium text-white">View Chart Wheel</p>
-            <p className="text-neutral-500 text-sm">See your placements on the mandala</p>
+            <p className="font-medium text-theme-text-primary">View Chart Wheel</p>
+            <p className="text-theme-text-tertiary text-sm">See your placements on the mandala</p>
           </div>
         </Link>
         <Link
           to="/graph"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border transition-colors"
         >
           <span className="text-2xl">⚭</span>
           <div>
-            <p className="font-medium text-white">Explore Relationships</p>
-            <p className="text-neutral-500 text-sm">Discover cosmic connections</p>
+            <p className="font-medium text-theme-text-primary">Explore Relationships</p>
+            <p className="text-theme-text-tertiary text-sm">Discover cosmic connections</p>
           </div>
         </Link>
         <Link
           to="/elements"
-          className="flex items-center gap-3 p-4 bg-neutral-900/50 rounded-xl border border-neutral-800 hover:border-neutral-700 transition-colors"
+          className="flex items-center gap-3 p-4 bg-surface-base/50 rounded-xl border border-theme-border-subtle hover:border-theme-border transition-colors"
         >
           <span className="text-2xl">🜂</span>
           <div>
-            <p className="font-medium text-white">Learn About Elements</p>
-            <p className="text-neutral-500 text-sm">Deepen your elemental understanding</p>
+            <p className="font-medium text-theme-text-primary">Learn About Elements</p>
+            <p className="text-theme-text-tertiary text-sm">Deepen your elemental understanding</p>
           </div>
         </Link>
       </div>
 
       {/* Data Management */}
-      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-        <h2 className="font-serif text-xl text-white mb-4">Data Management</h2>
+      <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Data Management</h2>
         <div className="flex items-center gap-4">
           <button
             onClick={() => {
@@ -249,7 +249,7 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
               setExportSuccess(true);
               setTimeout(() => setExportSuccess(false), 2000);
             }}
-            className="flex items-center gap-2 px-4 py-2 bg-neutral-800 text-neutral-200 rounded-lg hover:bg-neutral-700 transition-colors text-sm"
+            className="flex items-center gap-2 px-4 py-2 bg-surface-raised text-theme-text-primary rounded-lg hover:bg-surface-interactive transition-colors text-sm"
           >
             {exportSuccess ? (
               <>
@@ -267,7 +267,7 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
               </>
             )}
           </button>
-          <p className="text-neutral-500 text-sm">
+          <p className="text-theme-text-tertiary text-sm">
             Download all your profiles, insights, sessions, and pathway progress as JSON.
           </p>
         </div>

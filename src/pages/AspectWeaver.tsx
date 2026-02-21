@@ -121,10 +121,10 @@ export function AspectWeaver() {
     >
       {/* Header */}
       <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-white mb-3">
+        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
           Aspect Weaver
         </h1>
-        <p className="text-neutral-400 max-w-2xl mx-auto">
+        <p className="text-theme-text-secondary max-w-2xl mx-auto">
           Visualize the geometric relationships between planets in your chart.
           Aspects reveal how different parts of your psyche communicate and interact.
         </p>
@@ -137,7 +137,7 @@ export function AspectWeaver() {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             showMajorOnly
               ? 'bg-white text-neutral-900'
-              : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700'
+              : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
           }`}
         >
           Major Aspects Only
@@ -147,7 +147,7 @@ export function AspectWeaver() {
           className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
             showAllAspects
               ? 'bg-amber-500/20 text-amber-400 border border-amber-500/50'
-              : 'bg-neutral-800 text-neutral-300 hover:bg-neutral-700'
+              : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
           }`}
         >
           {showAllAspects ? 'Showing All' : `Show All (${personalAspects.length})`}
@@ -159,8 +159,8 @@ export function AspectWeaver() {
               onClick={() => setFilterAspectType(filterAspectType === aspect.id ? null : aspect.id)}
               className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 ${
                 filterAspectType === aspect.id
-                  ? `${aspectColors[aspect.id]?.bg || 'bg-neutral-700'} ${aspectColors[aspect.id]?.text || 'text-white'} border border-current`
-                  : 'bg-neutral-800 text-neutral-400 hover:bg-neutral-700'
+                  ? `${aspectColors[aspect.id]?.bg || 'bg-surface-interactive'} ${aspectColors[aspect.id]?.text || 'text-white'} border border-current`
+                  : 'bg-surface-raised text-theme-text-secondary hover:bg-surface-interactive'
               }`}
             >
               <span>{aspect.symbol}</span>
@@ -173,8 +173,8 @@ export function AspectWeaver() {
       {/* Main Content */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
         {/* Aspect Wheel */}
-        <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
-          <h2 className="font-serif text-xl text-white mb-4 text-center">Your Aspect Wheel</h2>
+        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4 text-center">Your Aspect Wheel</h2>
 
           <svg viewBox="0 0 400 400" className="w-full max-w-md mx-auto">
             {/* Zodiac wheel background */}
@@ -278,10 +278,10 @@ export function AspectWeaver() {
         {/* Aspect List */}
         <div className="space-y-4">
           <div className="flex items-center justify-between">
-            <h2 className="font-serif text-xl text-white">
+            <h2 className="font-serif text-xltext-theme-text-primary">
               Your Aspects ({filteredAspects.length}{!showAllAspects && !filterAspectType && personalAspects.length > 15 ? ` of ${personalAspects.length}` : ''})
             </h2>
-            <div className="flex items-center gap-3 text-xs text-neutral-400">
+            <div className="flex items-center gap-3 text-xs text-theme-text-secondary">
               <span className="flex items-center gap-1">
                 <span className="w-2 h-2 bg-yellow-400 rounded-full"></span> High
               </span>
@@ -299,7 +299,7 @@ export function AspectWeaver() {
               const aspectType = aspects.get(aspect.aspectId);
               const planet1 = planets.get(aspect.planet1Id);
               const planet2 = planets.get(aspect.planet2Id);
-              const colors = aspectColors[aspect.aspectId] || { bg: 'bg-neutral-700', text: 'text-white' };
+              const colors = aspectColors[aspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-white' };
               const isSelected = selectedAspect?.id === aspect.id;
               const priorityTier = getAspectPriorityTier(aspect);
 
@@ -312,7 +312,7 @@ export function AspectWeaver() {
                   className={`p-4 rounded-lg border-l-4 border cursor-pointer transition-all ${priorityTierColors[priorityTier]} ${
                     isSelected
                       ? `${colors.bg} border-y border-r border-current ${colors.text}`
-                      : 'bg-neutral-800/50 border-y border-r border-neutral-700 hover:border-neutral-600'
+                      : 'bg-surface-overlay border-y border-r border-theme-border-subtle hover:border-theme-border'
                   }`}
                   onMouseEnter={() => setHoveredAspect(aspect.id)}
                   onMouseLeave={() => setHoveredAspect(null)}
@@ -326,12 +326,12 @@ export function AspectWeaver() {
                     </div>
                     <div className="text-right">
                       <div className={`text-sm ${colors.text}`}>{aspectType.name}</div>
-                      <div className="text-xs text-neutral-400">
+                      <div className="text-xs text-theme-text-secondary">
                         Orb: {aspect.orbDegree}°{aspect.orbMinute}' • {aspect.direction}
                       </div>
                     </div>
                   </div>
-                  <div className="mt-2 text-sm text-neutral-400">
+                  <div className="mt-2 text-sm text-theme-text-secondary">
                     {planet1.name} {aspectType.name.toLowerCase()} {planet2.name}
                   </div>
                 </motion.div>
@@ -339,7 +339,7 @@ export function AspectWeaver() {
             })}
 
             {filteredAspects.length === 0 && (
-              <p className="text-neutral-400 text-center py-4">
+              <p className="text-theme-text-secondary text-center py-4">
                 {personalAspects.length === 0
                   ? 'No aspects in profile'
                   : 'No aspects match the current filter'}
@@ -355,7 +355,7 @@ export function AspectWeaver() {
           const aspectType = aspects.get(selectedAspect.aspectId);
           const planet1 = planets.get(selectedAspect.planet1Id);
           const planet2 = planets.get(selectedAspect.planet2Id);
-          const colors = aspectColors[selectedAspect.aspectId] || { bg: 'bg-neutral-700', text: 'text-white' };
+          const colors = aspectColors[selectedAspect.aspectId] || { bg: 'bg-surface-interactive', text: 'text-white' };
 
           if (!aspectType || !planet1 || !planet2) return null;
 
@@ -374,17 +374,17 @@ export function AspectWeaver() {
                     <span>{planet2.symbol}</span>
                   </div>
                   <div>
-                    <h3 className="font-serif text-xl text-white">
+                    <h3 className="font-serif text-xltext-theme-text-primary">
                       {planet1.name} {aspectType.name} {planet2.name}
                     </h3>
-                    <p className="text-sm text-neutral-400">
+                    <p className="text-sm text-theme-text-secondary">
                       Orb: {selectedAspect.orbDegree}°{selectedAspect.orbMinute}' • {selectedAspect.direction}
                     </p>
                   </div>
                 </div>
                 <button
                   onClick={() => setSelectedAspect(null)}
-                  className="text-neutral-400 hover:text-white transition-colors"
+                  className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
                 >
                   ✕
                 </button>
@@ -393,30 +393,30 @@ export function AspectWeaver() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
                   <h4 className={`font-medium ${colors.text} mb-2`}>About {aspectType.name}s</h4>
-                  <p className="text-neutral-300 text-sm">{aspectType.explanation}</p>
+                  <p className="text-theme-text-secondary text-sm">{aspectType.explanation}</p>
                 </div>
                 <div>
                   <h4 className={`font-medium ${colors.text} mb-2`}>Integration Practice</h4>
-                  <p className="text-neutral-300 text-sm">{aspectType.integrationPractice}</p>
+                  <p className="text-theme-text-secondary text-sm">{aspectType.integrationPractice}</p>
                 </div>
               </div>
 
               <div className="flex gap-2 mt-4">
                 <Link
                   to={`/planets/${planet1.id}`}
-                  className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded transition-colors"
+                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
                 >
                   View {planet1.name}
                 </Link>
                 <Link
                   to={`/planets/${planet2.id}`}
-                  className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded transition-colors"
+                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
                 >
                   View {planet2.name}
                 </Link>
                 <Link
                   to={`/aspects/${aspectType.id}`}
-                  className="px-3 py-1.5 bg-neutral-800 hover:bg-neutral-700 text-white text-sm rounded transition-colors"
+                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
                 >
                   View {aspectType.name}
                 </Link>
@@ -428,30 +428,30 @@ export function AspectWeaver() {
 
       {/* Aspect Reference */}
       <div className="mt-8">
-        <h2 className="font-serif text-2xl text-white mb-4">Aspect Reference</h2>
+        <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Aspect Reference</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
           {Array.from(aspects.values()).map((aspect) => {
-            const colors = aspectColors[aspect.id] || { bg: 'bg-neutral-700', text: 'text-white' };
+            const colors = aspectColors[aspect.id] || { bg: 'bg-surface-interactive', text: 'text-white' };
             const isMajor = MAJOR_ASPECT_IDS.includes(aspect.id);
             return (
               <Link
                 key={aspect.id}
                 to={`/aspects/${aspect.id}`}
-                className={`${colors.bg} p-4 rounded-lg border border-neutral-700 hover:border-neutral-600 transition-colors ${
+                className={`${colors.bg} p-4 rounded-lg border border-theme-border-subtle hover:border-theme-border transition-colors ${
                   isMajor ? 'ring-1 ring-white/10' : ''
                 }`}
               >
                 <div className="flex items-center gap-3 mb-2">
                   <span className={`text-2xl ${colors.text}`}>{aspect.symbol}</span>
                   <div>
-                    <h3 className="font-medium text-white">{aspect.name}</h3>
-                    <p className="text-xs text-neutral-400">
+                    <h3 className="font-mediumtext-theme-text-primary">{aspect.name}</h3>
+                    <p className="text-xs text-theme-text-secondary">
                       {aspect.angle}° • {aspect.nature}
                       {isMajor && <span className="ml-1 text-white/50">• Major</span>}
                     </p>
                   </div>
                 </div>
-                <p className="text-sm text-neutral-400">{aspect.keyword}</p>
+                <p className="text-sm text-theme-text-secondary">{aspect.keyword}</p>
               </Link>
             );
           })}

@@ -146,9 +146,9 @@ export function ProfileBodyGraph({
  */
 export function BodyGraphLegend() {
   return (
-    <div className="flex flex-wrap justify-center gap-4 text-xs text-neutral-400 mt-4">
+    <div className="flex flex-wrap justify-center gap-4 text-xs text-theme-text-secondary mt-4">
       <div className="flex items-center gap-2">
-        <div className="w-3 h-3 rounded-full bg-[#1F2937] border border-neutral-600" />
+        <div className="w-3 h-3 rounded-full bg-[#1F2937] border border-theme-border" />
         <span>Personality (Conscious)</span>
       </div>
       <div className="flex items-center gap-2">
@@ -179,13 +179,13 @@ export function ProfileBodyGraphCard({
   showLegend?: boolean;
 }) {
   return (
-    <div className="bg-neutral-900/50 rounded-xl p-4 sm:p-6 border border-neutral-800">
+    <div className="bg-surface-base/50 rounded-xl p-4 sm:p-6 border border-theme-border-subtle">
       {title && (
         <h3 className="font-serif text-lg mb-4 text-center">{title}</h3>
       )}
       <ProfileBodyGraph size="responsive" showGates={true} />
       {showLegend && <BodyGraphLegend />}
-      <p className="text-xs text-neutral-500 text-center mt-4">
+      <p className="text-xs text-theme-text-tertiary text-center mt-4">
         Click on centers, channels, or gates to explore
       </p>
     </div>
