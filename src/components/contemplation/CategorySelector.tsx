@@ -80,7 +80,10 @@ export function CategorySelector({
   const [levelFilter, setLevelFilter] = useState<ContemplationLevel | 'all'>(() => {
     try {
       const stored = localStorage.getItem(LEVEL_FILTER_KEY);
-      return (stored as ContemplationLevel | 'all') || 'all';
+      const valid: (ContemplationLevel | 'all')[] = ['all', 'beginner', 'advanced', 'master'];
+      return valid.includes(stored as ContemplationLevel | 'all')
+        ? (stored as ContemplationLevel | 'all')
+        : 'all';
     } catch {
       return 'all';
     }
