@@ -1,10 +1,13 @@
 import { Link } from 'react-router-dom';
+import { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { useProfile } from '../../context';
 import { planets, points } from '../../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../../components';
 import { getFixedStarConjunctions, groupConjunctionsByExactness } from '../../services/fixedStars';
 import type { FixedStarConjunction } from '../../services/fixedStars';
+import { computeParans, groupParansByStar, formatAngle } from '../../services/bradysParans';
+import type { ParanGroup } from '../../services/bradysParans';
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
@@ -138,10 +141,85 @@ function TierSection({
   );
 }
 
+// ─── Parans Sub-components ────────────────────────────────────────────────────
+
+function ParanGroupCard({ group }: { group: ParanGroup }) {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 8 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="bg-surface-raised/30 rounded-xl border border-theme-border-subtle p-5 space-y-3"
+    >
+      <div className="flex items-start gap-3">
+        <span className="text-indigo-400 text-2xl mt-0.5">★</span>
+        <div>
+          <Link
+            to={`/fixed-stars/${group.star.id}`}
+            className="font-serif text-lg font-medium text-theme-text-primary hover:text-indigo-300 transition-colors"
+          >
+            {group.star.name}
+          </Link>
+          <p className="text-sm text-indigo-300/80 italic">{group.star.archetype}</p>
+          <p className="text-xs text-theme-text-muted">{group.star.constellation}</p>
+        </div>
+      </div>
+
+      <div className="space-y-2 pl-9">
+        {group.parans.map((paran, idx) => {
+          const planet = planets.get(paran.planetId) ?? points.get(paran.planetId);
+          return (
+            <div
+              key={`${paran.star.id}-${paran.planetId}-${paran.starAngle}-${paran.planetAngle}-${idx}`}
+              className="flex items-center gap-2 text-sm text-theme-text-secondary"
+            >
+              <span className="text-indigo-400/60">--</span>
+              <span className="text-indigo-300">{formatAngle(paran.starAngle)}</span>
+              <span className="text-theme-text-muted">while</span>
+              {planet && <span className="text-lg">{planet.symbol}</span>}
+              <span>{planet?.name ?? paran.planetId}</span>
+              <span className="text-indigo-300">{formatAngle(paran.planetAngle)}</span>
+              <span className="text-xs text-theme-text-muted font-mono ml-auto">
+                {paran.orbMinutes}m
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </motion.div>
+  );
+}
+
+function ParansSection({ paranGroups }: { paranGroups: ParanGroup[] }) {
+  if (paranGroups.length === 0) return null;
+
+  const totalParans = paranGroups.reduce((sum, g) => sum + g.parans.length, 0);
+
+  return (
+    <section>
+      <div className="flex items-center gap-2 mb-1">
+        <span className="text-xl text-indigo-400">⟡</span>
+        <h2 className="font-serif text-xl text-theme-text-primary">Brady's Parans</h2>
+        <span className="text-sm text-theme-text-tertiary">
+          ({totalParans} parans across {paranGroups.length} stars)
+        </span>
+      </div>
+      <p className="text-sm text-theme-text-tertiary mb-4">
+        Stars sharing an angle (Rising/Setting/Culminating/Anti-Culminating) with a natal planet on your birth day.
+        A mundane-sphere technique sensitive to your birth latitude.
+      </p>
+      <div className="space-y-4">
+        {paranGroups.map((group) => (
+          <ParanGroupCard key={group.star.id} group={group} />
+        ))}
+      </div>
+    </section>
+  );
+}
+
 // ─── Main Page ─────────────────────────────────────────────────────────────────
 
 export function ProfileFixedStars() {
-  const { profile, isLoading, hasProfile } = useProfile();
+  const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
 
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
@@ -159,6 +237,12 @@ export function ProfileFixedStars() {
   const conjunctions = getFixedStarConjunctions(profile.placements);
   const { exact, close, wide } = groupConjunctionsByExactness(conjunctions);
   const totalCount = conjunctions.length;
+
+  // Compute Brady's Parans (memoized — computeParans involves astronomy-engine calculations)
+  const paranGroups = useMemo(() => {
+    if (!cosmicProfile?.birthData) return [];
+    return groupParansByStar(computeParans(cosmicProfile.birthData));
+  }, [cosmicProfile?.birthData]);
 
   return (
     <div className="space-y-10">
@@ -253,6 +337,9 @@ export function ProfileFixedStars() {
         accentClass="text-theme-text-tertiary"
       />
 
+      {/* Brady's Parans */}
+      <ParansSection paranGroups={paranGroups} />
+
       {/* Footer note */}
       <section className="bg-surface-raised/20 rounded-xl p-5 border border-theme-border-subtle">
         <h3 className="font-serif text-base text-theme-text-tertiary mb-2">About These Calculations</h3>
@@ -260,6 +347,11 @@ export function ProfileFixedStars() {
           Conjunctions are detected by ecliptic longitude — when a natal planet falls within the
           star's orb at your birth longitude. Orbs are set by star brightness: Royal Stars (2°),
           bright stars (2°), Behenian stars (1–1.5°), dimmer stars (0.5–1°).
+        </p>
+        <p className="text-sm text-theme-text-muted mt-2">
+          Brady's Parans use the mundane sphere — identifying when a star and planet share an angle
+          (horizon or meridian) on the birth day. Star RA/Dec is approximated from ecliptic longitude
+          (assuming 0° ecliptic latitude), so results for stars far from the ecliptic are less precise.
         </p>
       </section>
     </div>
