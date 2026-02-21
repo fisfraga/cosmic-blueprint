@@ -47,7 +47,7 @@ const TYPE_CATEGORY_REMAP: Partial<Record<string, ContemplationCategory>> = {
   cosmicEmbodiment: 'cosmicEmbodiment',
 };
 
-function migrateSessionCategory(session: SavedSession): SavedSession {
+export function migrateSessionCategory(session: SavedSession): SavedSession {
   const remappedCategory = TYPE_CATEGORY_REMAP[session.contemplationType];
   if (remappedCategory && session.category !== remappedCategory) {
     return { ...session, category: remappedCategory };
@@ -239,12 +239,19 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'numerologyReading',  name: 'Life Path Reading',    description: "Deep contemplation of your life path number's shadow, gift, and siddhi arc",             level: 'advanced' },
   ],
   cosmicEmbodiment: [
-    { id: 'cosmicEmbodiment', name: 'Cosmic Embodiment', description: 'Let any cosmic energy speak directly to you — planets, gates, signs, elements, and more', needsFocus: true, level: 'master' },
+    { id: 'cosmicEmbodiment',    name: 'Cosmic Embodiment',    description: 'Let any cosmic energy speak directly to you — planets, gates, signs, elements, and more', needsFocus: true, level: 'master' },
+    { id: 'elementalEmbodiment', name: 'Elemental Embodiment', description: 'Let a classical element (Fire, Earth, Air, Water) speak to you in first person',             needsFocus: true, level: 'master' },
+    { id: 'sequenceEmbodiment',  name: 'Sequence Embodiment',  description: 'Let a Gene Key from your Activation Sequence speak as itself — from shadow through siddhi',   needsFocus: true, level: 'master' },
   ],
   fixedStars: [
     { id: 'fixedStarProfile',     name: 'Fixed Star Profile',  description: 'Your natal fixed star conjunctions and their archetypal gifts',              level: 'master' },
     { id: 'fixedStarConjunction', name: 'Star Conjunction',    description: 'Deep dive into a specific fixed star conjunction in your chart', needsFocus: true, level: 'advanced' },
     { id: 'fixedStarTransit',     name: 'Fixed Star Transits', description: 'Current planetary activations of your natal star positions',                 level: 'master' },
+  ],
+  galacticAstrology: [
+    { id: 'galacticProfile',      name: 'Galactic Profile',        description: 'Your natal conjunctions to the Galactic Center, Great Attractor, and other major galactic points', level: 'master' },
+    { id: 'galacticPointReading', name: 'Galactic Point Reading',  description: 'Deep dive into a specific galactic point conjunction in your chart', needsFocus: true, level: 'master' },
+    { id: 'galacticAlignment',    name: 'Galactic Alignments',     description: 'Current planetary transits activating the galactic axis',                level: 'advanced' },
   ],
 };
 
@@ -258,6 +265,7 @@ export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: 
   numerology:       { name: 'Numerology',    icon: '∑',  color: 'from-cyan-500/40 to-blue-500/25 border-cyan-500/50' },
   cosmicEmbodiment: { name: 'Embodiment',    icon: '✦',  color: 'from-pink-500/40 to-rose-500/25 border-pink-500/50' },
   fixedStars:       { name: 'Fixed Stars',   icon: '★',  color: 'from-indigo-500/40 to-purple-500/25 border-indigo-500/50' },
+  galacticAstrology:{ name: 'Galactic',      icon: '🌌', color: 'from-violet-500/40 to-blue-900/25 border-violet-500/50' },
 };
 
 export interface ModelOption {
@@ -456,22 +464,31 @@ export function useContemplation() {
     // Get appropriate persona for this contemplation type
     const persona = getDefaultPersonaForType(contemplationType);
 
-    // For cosmic embodiment, add the entity-specific embodiment context
+    // For embodiment types, add the entity-specific embodiment context
     let embodimentContext: string | undefined;
-    if (contemplationType === 'cosmicEmbodiment' && focusEntity) {
-      const entityType = focusEntity.id.includes('gate-') ? 'hd-gate' :
-                        focusEntity.id.includes('gk-') ? 'gene-key' :
-                        focusEntity.id.includes('-center') ? 'hd-center' :
-                        focusEntity.id.includes('house-') ? 'house' :
-                        focusEntity.id.includes('hd-type-') ? 'hd-type' :
-                        focusEntity.id.includes('hd-authority-') ? 'hd-authority' :
-                        focusEntity.id.includes('profile-') ? 'hd-profile' :
-                        focusEntity.id.includes('ring-') ? 'codon-ring' :
-                        focusEntity.entitySystem === 'astrology' ?
-                          (['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'chiron', 'north-node', 'south-node', 'ascendant', 'midheaven'].includes(focusEntity.id) ? 'planet' :
-                           ['fire', 'earth', 'air', 'water'].includes(focusEntity.id) ? 'element' :
-                           ['conjunction', 'sextile', 'square', 'trine', 'opposition', 'quincunx', 'semi-sextile', 'semi-square', 'sesquiquadrate', 'quintile'].includes(focusEntity.id) ? 'aspect' : 'sign') :
-                        'sign'; // Default fallback
+    if (focusEntity && (contemplationType === 'cosmicEmbodiment' || contemplationType === 'elementalEmbodiment' || contemplationType === 'sequenceEmbodiment')) {
+      let entityType: string;
+
+      if (contemplationType === 'elementalEmbodiment') {
+        entityType = 'element';
+      } else if (contemplationType === 'sequenceEmbodiment') {
+        entityType = 'sphere';
+      } else {
+        // cosmicEmbodiment — derive type from entity id/system heuristics
+        entityType = focusEntity.id.includes('gate-') ? 'hd-gate' :
+                     focusEntity.id.includes('gk-') ? 'gene-key' :
+                     focusEntity.id.includes('-center') ? 'hd-center' :
+                     focusEntity.id.includes('house-') ? 'house' :
+                     focusEntity.id.includes('hd-type-') ? 'hd-type' :
+                     focusEntity.id.includes('hd-authority-') ? 'hd-authority' :
+                     focusEntity.id.includes('profile-') ? 'hd-profile' :
+                     focusEntity.id.includes('ring-') ? 'codon-ring' :
+                     focusEntity.entitySystem === 'astrology' ?
+                       (['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn', 'uranus', 'neptune', 'pluto', 'chiron', 'north-node', 'south-node', 'ascendant', 'midheaven'].includes(focusEntity.id) ? 'planet' :
+                        ['fire', 'earth', 'air', 'water'].includes(focusEntity.id) ? 'element' :
+                        ['conjunction', 'sextile', 'square', 'trine', 'opposition', 'quincunx', 'semi-sextile', 'semi-square', 'sesquiquadrate', 'quintile'].includes(focusEntity.id) ? 'aspect' : 'sign') :
+                       'sign'; // Default fallback
+      }
 
       embodimentContext = getEmbodimentContext(entityType, focusEntity.id, focusEntity.name);
     }

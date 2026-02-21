@@ -17,6 +17,7 @@ export type EntityType =
   | 'dignity'
   | 'point'
   | 'fixed-star'
+  | 'galactic-point'
   // Human Design & Gene Keys
   | 'hd-gate'
   | 'hd-channel'
@@ -253,6 +254,25 @@ export interface FixedStar extends AstroEntity {
   astrologyKingUrl: string;
   galacticConnections: string[]; // Future Sprint Q placeholder
   contemplationQuestions: string[];
+}
+
+// ------------------------------------
+// Galactic Point Types
+// ------------------------------------
+
+export interface GalacticPoint extends AstroEntity {
+  type: 'galactic-point';
+  eclipticLongitude: number;  // 0–360°, J2000 tropical
+  orb: number;                // conjunction orb in degrees
+  zodiacSign: string;         // Current tropical zodiac sign
+  zodiacDegree: number;
+  zodiacMinute: number;
+  archetype: string;
+  keywords: string[];
+  gift: string;
+  challenge: string;
+  description: string;
+  contemplationTheme: string;
 }
 
 // ------------------------------------
@@ -1103,6 +1123,7 @@ export type UniversalEntity =
   | AspectConfiguration
   | Dignity
   | FixedStar
+  | GalacticPoint
   | AstroPoint
   // Human Design & Gene Keys
   | HDCenter

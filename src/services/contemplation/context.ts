@@ -1,8 +1,9 @@
 // Context builder for Contemplation Chamber AI
 // Full Chart Context Architecture - Harmonic Resonance
-import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile } from '../../types';
+import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile, Element } from '../../types';
 import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree } from '../../data';
 import { getFixedStarConjunctions } from '../fixedStars';
+import { getGalacticConjunctions, getGalacticTransitActivations, type GalacticConjunction } from '../galacticAstrology';
 import { calculateTransitNatalAspects, type TransitNatalAspect } from '../transitAspects';
 import { getPlanetaryPositions, longitudeToZodiac } from '../ephemeris';
 import { getCosmicWeather } from '../transits';
@@ -11,10 +12,11 @@ import { getRelevantExcerpts, formatExcerptsForContext } from '../../data/knowle
 
 export type ContemplationCategory =
   | 'astrology' | 'humanDesign' | 'geneKeys' | 'crossSystem' | 'lifeOS'
-  | 'alchemy'            // Refocused: chakras + hermetic alchemy only
-  | 'numerology'         // Split from alchemy: Life Path + Numerology Overview
-  | 'cosmicEmbodiment'   // Promoted from crossSystem: any energy speaks directly
-  | 'fixedStars';        // Exposed from service layer
+  | 'alchemy'             // Refocused: chakras + hermetic alchemy only
+  | 'numerology'          // Split from alchemy: Life Path + Numerology Overview
+  | 'cosmicEmbodiment'    // Promoted from crossSystem: any energy speaks directly
+  | 'fixedStars'          // Exposed from service layer
+  | 'galacticAstrology';  // Sprint R: galactic center, great attractor, SGC, GAC
 
 export type ContemplationType =
   // Astrology
@@ -67,10 +69,17 @@ export type ContemplationType =
   // Fixed Stars
   | 'fixedStarProfile'
   | 'fixedStarConjunction'
-  | 'fixedStarTransit';
+  | 'fixedStarTransit'
+  // Galactic Astrology
+  | 'galacticProfile'
+  | 'galacticPointReading'
+  | 'galacticAlignment'
+  // Cosmic Embodiment — Sprint R expansion
+  | 'elementalEmbodiment'
+  | 'sequenceEmbodiment';
 
 export interface FocusEntity {
-  type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment' | 'fixed-star';
+  type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment' | 'fixed-star' | 'galactic-point' | 'element';
   id: string;
   name: string;
   transitData?: TransitNatalAspect; // For transit aspects
@@ -123,6 +132,9 @@ function getIncludedSystems(category: ContemplationCategory): {
       return { ...base, humanDesign: true, geneKeys: true, bridges: true };
     case 'fixedStars':
       // Fixed stars are an astrological layer; include astrology context only
+      return { ...base, humanDesign: false, geneKeys: false, bridges: false };
+    case 'galacticAstrology':
+      // Galactic points are an astrological layer; include astrology context only
       return { ...base, humanDesign: false, geneKeys: false, bridges: false };
     default:
       return { astrology: true, humanDesign: true, geneKeys: true, bridges: true };
@@ -184,6 +196,16 @@ export function formatProfileContext(
     selection.type === 'fixedStarTransit'
   ) {
     sections.push(formatFixedStarContext(profile));
+  }
+
+  // Include Galactic Astrology context for galactic category or types
+  if (
+    selection.category === 'galacticAstrology' ||
+    selection.type === 'galacticProfile' ||
+    selection.type === 'galacticPointReading' ||
+    selection.type === 'galacticAlignment'
+  ) {
+    sections.push(formatGalacticContext(profile));
   }
 
   // Conditionally include Enrichment context (Numerology, Chakra, Alchemy)
@@ -1211,6 +1233,22 @@ function formatFocusHighlight(profile: AstroProfile, selection: ContemplationSel
       }
       break;
     }
+    case 'element': {
+      const el = elements.get(selection.focus.id);
+      if (el) {
+        outputLines.push(formatElementFocus(el as Element, profile));
+      }
+      break;
+    }
+    case 'sphere': {
+      // id format: "seq-{sphereSlug}-{gkNum}" — extract the trailing number
+      const match = selection.focus.id.match(/(\d+)$/);
+      const keyNumber = match ? parseInt(match[1]) : NaN;
+      if (!isNaN(keyNumber)) {
+        outputLines.push(formatGateKeyFocus(keyNumber, profile));
+      }
+      break;
+    }
   }
 
   return outputLines.join('\n');
@@ -1258,6 +1296,37 @@ ${planet1?.symbol} ${planet1?.name} ${aspectType?.symbol} ${aspectType?.name} ${
 Orb: ${aspect.orbDegree}°${aspect.orbMinute}'
 Direction: ${aspect.direction}
 Nature: ${aspectType?.nature}`;
+}
+
+function formatElementFocus(element: Element, profile: AstroProfile): string {
+  const outputLines: string[] = [];
+  outputLines.push(`\n${element.symbol} ${element.name} — Elemental Embodiment`);
+  outputLines.push(`Core Principle: ${element.corePrinciple}`);
+  outputLines.push(`Core Quality: ${element.coreQuality}`);
+  outputLines.push(`Key Traits: ${element.keyTraits.join(', ')}`);
+  outputLines.push(`Shadow Side: ${element.shadowSide}`);
+  outputLines.push(`Element Dynamics: ${element.elementDynamics}`);
+
+  // Planets in this element from natal chart
+  const planetsInElement = profile.placements.filter(p => {
+    const sign = signs.get(p.signId);
+    return sign?.elementId === element.id;
+  });
+
+  if (planetsInElement.length > 0) {
+    outputLines.push(`\nPlanets expressing through ${element.name} in this chart:`);
+    planetsInElement.forEach(p => {
+      const planet = planets.get(p.planetId);
+      const sign = signs.get(p.signId);
+      const house = houses.get(p.houseId);
+      outputLines.push(`  ${planet?.symbol ?? ''} ${planet?.name} in ${sign?.name} (${house?.name})`);
+    });
+  } else {
+    outputLines.push(`\nNote: No natal planets are placed in ${element.name} signs.`);
+    outputLines.push(`This elemental voice speaks to the integration and learning edge.`);
+  }
+
+  return outputLines.join('\n');
 }
 
 function formatGateKeyFocus(keyNumber: number, profile: AstroProfile): string {
@@ -1427,6 +1496,48 @@ export function getFocusOptions(
       });
     }
 
+    case 'galacticPointReading': {
+      const galConj = getGalacticConjunctions(profile.placements);
+      if (galConj.length === 0) return [];
+      return galConj.map((c) => ({
+        type: 'galactic-point' as const,
+        id: c.point.id,
+        name: `${c.point.name} (${planets.get(c.planetId)?.name ?? c.planetId}, ${c.orbDegree.toFixed(2)}° orb)`,
+      }));
+    }
+
+    case 'elementalEmbodiment': {
+      return ['fire', 'earth', 'air', 'water'].map(id => {
+        const el = elements.get(id);
+        return {
+          type: 'element' as const,
+          id,
+          name: el ? `${el.symbol} ${el.name}` : id,
+        };
+      });
+    }
+
+    case 'sequenceEmbodiment': {
+      const gk = profile.geneKeysProfile;
+      if (!gk) return [];
+      const sequenceSpheres: Array<{ sphere: typeof gk.lifesWork; sphereName: string }> = [
+        { sphere: gk.lifesWork, sphereName: "Life's Work" },
+        { sphere: gk.evolution,  sphereName: 'Evolution' },
+        { sphere: gk.radiance,   sphereName: 'Radiance' },
+        { sphere: gk.purpose,    sphereName: 'Purpose' },
+      ];
+      return sequenceSpheres.map(({ sphere, sphereName }) => {
+        const key = geneKeys.get(`gk-${sphere.geneKeyNumber}`);
+        // Use unique id: "seq-{sphereSlug}-{gkNum}" so same GK in two spheres stays distinct
+        const sphereSlug = sphereName.toLowerCase().replace(/[' ]/g, '');
+        return {
+          type: 'sphere' as const,
+          id: `seq-${sphereSlug}-${sphere.geneKeyNumber}`,
+          name: `${sphereName}: Gene Key ${sphere.geneKeyNumber}${key ? ` — ${key.name}` : ''}`,
+        };
+      });
+    }
+
     case 'fixedStarConjunction': {
       const conjunctions = getFixedStarConjunctions(profile.placements);
       return conjunctions.map((c) => ({
@@ -1522,6 +1633,94 @@ function formatFixedStarFocus(conj: import('../fixedStars').FixedStarConjunction
 
   return outputLines.join('\n');
 }
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// GALACTIC ASTROLOGY CONTEXT FORMATTERS
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function formatGalacticContext(profile: AstroProfile): string {
+  const conjunctions = getGalacticConjunctions(profile.placements);
+  const outputLines: string[] = [];
+  outputLines.push('\n[GALACTIC ASTROLOGY — NATAL ACTIVATIONS]');
+  outputLines.push('The major galactic points woven into this natal chart:');
+
+  if (conjunctions.length === 0) {
+    outputLines.push('  No natal planets fall within orb of the major galactic points.');
+    outputLines.push('  Note: Even without direct conjunctions, transits to galactic points activate collective themes.');
+  } else {
+    conjunctions.forEach((c) => {
+      const planet = planets.get(c.planetId);
+      const tier = c.isExact ? 'exact' : c.orbDegree <= 1.0 ? 'close' : 'wide';
+      outputLines.push(
+        `  ✦ ${c.point.name} conjunct ${planet?.name ?? c.planetId} — ${c.orbDegree.toFixed(2)}° orb [${tier}]`
+      );
+      outputLines.push(`    Archetype: ${c.point.archetype}`);
+      outputLines.push(`    Theme: ${c.point.contemplationTheme}`);
+      outputLines.push(`    Gift: ${c.point.gift}`);
+      outputLines.push(`    Challenge: ${c.point.challenge}`);
+    });
+  }
+
+  // Add current transit activations
+  const transitActivations = getGalacticTransitActivationsForContext(profile, conjunctions);
+  if (transitActivations) {
+    outputLines.push('\n[CURRENT GALACTIC TRANSIT ACTIVATIONS]');
+    outputLines.push(transitActivations);
+  }
+
+  return outputLines.join('\n');
+}
+
+function getGalacticTransitActivationsForContext(
+  _profile: AstroProfile,
+  natalConjunctions: GalacticConjunction[],
+): string {
+  try {
+    const weather = getCosmicWeather(new Date());
+    const activations = getGalacticTransitActivations(weather.positions, natalConjunctions);
+    if (activations.length === 0) return '';
+    return activations
+      .map((a) => {
+        const personal = a.isPersonal ? ' [personal — natal planet here]' : '';
+        return `  • ${a.transitPlanetName} activating ${a.point.name} — ${a.orbDegree.toFixed(2)}° orb${personal}`;
+      })
+      .join('\n');
+  } catch {
+    return '';
+  }
+}
+
+function formatGalacticPointFocus(conj: GalacticConjunction): string {
+  const planet = planets.get(conj.planetId);
+  const signName =
+    conj.point.zodiacSign.charAt(0).toUpperCase() + conj.point.zodiacSign.slice(1);
+  const outputLines: string[] = [];
+
+  outputLines.push(`\n✦ ${conj.point.name} conjunct ${planet?.name ?? conj.planetId}`);
+  outputLines.push(`Zodiac: ${signName} ${conj.point.zodiacDegree}°${String(conj.point.zodiacMinute).padStart(2, '0')}'`);
+  outputLines.push(`Ecliptic Longitude: ${conj.point.eclipticLongitude}°`);
+  outputLines.push(`Orb: ${conj.orbDegree.toFixed(2)}°${conj.isExact ? ' (exact)' : ''}`);
+
+  outputLines.push('\nARCHETYPE:');
+  outputLines.push(conj.point.archetype);
+
+  outputLines.push('\nDESCRIPTION:');
+  outputLines.push(conj.point.description);
+
+  outputLines.push('\nGIFT:');
+  outputLines.push(conj.point.gift);
+
+  outputLines.push('\nCHALLENGE:');
+  outputLines.push(conj.point.challenge);
+
+  outputLines.push('\nCONTEMPLATION THEME:');
+  outputLines.push(conj.point.contemplationTheme);
+
+  return outputLines.join('\n');
+}
+
+// Export for use in focus context building
+export { formatGalacticPointFocus };
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // ILOS CONTEXT INTEGRATION

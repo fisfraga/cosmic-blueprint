@@ -13,6 +13,7 @@ import type {
   AstroPoint,
   UniversalEntity,
   FixedStar,
+  GalacticPoint,
   // Human Design & Gene Keys
   HDGate,
   HDChannel,
@@ -51,6 +52,7 @@ import configurationsData from './universal/configurations.json';
 import relationshipsData from './universal/relationships.json';
 import pointsData from './universal/points.json';
 import fixedStarsData from './universal/fixed-stars.json';
+import galacticPointsData from './universal/galactic-points.json';
 import dignitiesData from './universal/dignities.json';
 import decansData from './universal/decans.json';
 
@@ -213,6 +215,10 @@ export const fixedStars = new Map<string, FixedStar>(
   (fixedStarsData as FixedStar[]).map((s) => [s.id, s])
 );
 
+export const galacticPoints = new Map<string, GalacticPoint>(
+  (galacticPointsData as GalacticPoint[]).map((p) => [p.id, p])
+);
+
 // Dignity type for the matrix
 export interface DignityEntry {
   id: string;
@@ -300,6 +306,7 @@ export function getEntityById(id: string): UniversalEntity | undefined {
     configurations.get(id) ||
     points.get(id) ||
     fixedStars.get(id) ||
+    galacticPoints.get(id) ||
     // Human Design & Gene Keys
     hdGates.get(id) ||
     hdChannels.get(id) ||
@@ -576,6 +583,7 @@ export function getEntityCounts(): Record<string, number> {
     configurations: configurations.size,
     points: points.size,
     fixedStars: fixedStars.size,
+    galacticPoints: galacticPoints.size,
     relationships: relationships.length,
     // Human Design & Gene Keys
     hdGates: hdGates.size,
@@ -617,6 +625,7 @@ export function getAllEntities(): UniversalEntity[] {
     ...Array.from(configurations.values()),
     ...Array.from(points.values()),
     ...Array.from(fixedStars.values()),
+    ...Array.from(galacticPoints.values()),
     // Human Design & Gene Keys
     ...Array.from(hdGates.values()),
     ...Array.from(hdChannels.values()),
@@ -1398,6 +1407,7 @@ export {
   relationshipsData,
   pointsData,
   fixedStarsData,
+  galacticPointsData,
   dignitiesData,
   decansData,
   // Human Design & Gene Keys

@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import type { AstroProfile } from '../../types';
 import type { ContemplationCategory, ContemplationType, FocusEntity } from '../../services/contemplation/context';
@@ -12,6 +12,7 @@ import {
   type ContemplationLevel,
   type ModelOption,
 } from '../../hooks/useContemplation';
+import { loadCustomTypes } from '../../services/contemplation/customTypes';
 
 const LEVEL_OPTIONS: { value: ContemplationLevel | 'all'; label: string }[] = [
   { value: 'all', label: 'All' },
@@ -27,6 +28,13 @@ const LEVEL_COLORS: Record<ContemplationLevel, string> = {
 };
 
 const LEVEL_FILTER_KEY = 'contemplation-level-filter';
+
+// Sub-section dividers for crossSystem — shown only in "All" level view
+const CROSSSYSTEM_SECTION_STARTS: Partial<Record<string, string>> = {
+  gateKeyOverview:      '⬡ Gate ↔ Key',
+  planetSphereSynthesis: '⟳ Multi-System Synthesis',
+  holisticReading:      '◈ Holistic Integration',
+};
 
 export interface CategorySelectorProps {
   profile: AstroProfile;
@@ -99,11 +107,13 @@ export function CategorySelector({
     ? getFocusOptions(profile, category, contemplationType)
     : [];
 
-  const filteredTypes = category
-    ? CONTEMPLATION_TYPES[category].filter(
-        (t) => levelFilter === 'all' || t.level === levelFilter
-      )
+  const allTypesForCategory: ContemplationTypeOption[] = category
+    ? [...CONTEMPLATION_TYPES[category], ...loadCustomTypes(category)]
     : [];
+
+  const filteredTypes = allTypesForCategory.filter(
+    (t) => levelFilter === 'all' || t.level === levelFilter
+  );
 
   return (
     <>
@@ -149,6 +159,7 @@ export function CategorySelector({
                   {cat === 'numerology' && 'Life Path and Birthday Number as living archetypes'}
                   {cat === 'cosmicEmbodiment' && 'Let any cosmic energy speak directly to you'}
                   {cat === 'fixedStars' && 'The ancient stellar gatekeepers in your chart'}
+                  {cat === 'galacticAstrology' && 'Galactic Center, Great Attractor, and cosmic portals'}
                 </p>
               </button>
             ))}
@@ -199,23 +210,35 @@ export function CategorySelector({
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {filteredTypes.length > 0 ? filteredTypes.map((type) => (
-              <button
-                key={type.id}
-                onClick={() => setContemplationType(type.id)}
-                className="p-4 rounded-xl bg-surface-overlay border border-theme-border-subtle hover:border-theme-border text-left transition-all"
-              >
-                <div className="flex items-start justify-between gap-2 mb-1">
-                  <h4 className="font-medium text-theme-text-primary">{type.name}</h4>
-                  {type.level && (
-                    <span className={`text-xs px-2 py-0.5 rounded-full border flex-shrink-0 ${LEVEL_COLORS[type.level]}`}>
-                      {type.level}
-                    </span>
-                  )}
-                </div>
-                <p className="text-theme-text-secondary text-sm">{type.description}</p>
-              </button>
-            )) : (
+            {filteredTypes.length > 0 ? filteredTypes.flatMap((type) => {
+              const elements: React.ReactNode[] = [];
+              // Insert sub-section header for crossSystem at "All" level view
+              if (category === 'crossSystem' && levelFilter === 'all' && CROSSSYSTEM_SECTION_STARTS[type.id]) {
+                elements.push(
+                  <p key={`section-${type.id}`} className="col-span-full text-xs text-theme-text-tertiary uppercase tracking-widest pt-3 pb-1 border-t border-theme-border-subtle">
+                    {CROSSSYSTEM_SECTION_STARTS[type.id]}
+                  </p>
+                );
+              }
+              elements.push(
+                <button
+                  key={type.id}
+                  onClick={() => setContemplationType(type.id)}
+                  className="p-4 rounded-xl bg-surface-overlay border border-theme-border-subtle hover:border-theme-border text-left transition-all"
+                >
+                  <div className="flex items-start justify-between gap-2 mb-1">
+                    <h4 className="font-medium text-theme-text-primary">{type.name}</h4>
+                    {type.level && (
+                      <span className={`text-xs px-2 py-0.5 rounded-full border flex-shrink-0 ${LEVEL_COLORS[type.level]}`}>
+                        {type.level}
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-theme-text-secondary text-sm">{type.description}</p>
+                </button>
+              );
+              return elements;
+            }) : (
               <p className="text-theme-text-tertiary text-sm col-span-2 py-4 text-center">
                 No {levelFilter} types in this category.{' '}
                 <button onClick={() => setLevelFilter('all')} className="text-theme-text-secondary hover:text-theme-text-primary underline">

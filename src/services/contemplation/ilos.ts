@@ -125,6 +125,7 @@ export function formatILOSContextForCategory(category: string): string {
 
     case 'cosmicEmbodiment':
     case 'fixedStars':
+    case 'galacticAstrology':
     case 'alchemy':
     default:
       return '';

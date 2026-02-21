@@ -249,6 +249,7 @@ export const d3EntityTypeColors: Record<string, string> = {
   point: '#E91E63',
   decan: '#8E44AD',
   'fixed-star': '#ECF0F1',
+  'galactic-point': '#8B5CF6',
   'hd-gate': '#F59E0B',
   'hd-channel': '#EAB308',
   'hd-center': '#D97706',
