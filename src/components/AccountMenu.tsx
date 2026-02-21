@@ -86,7 +86,7 @@ export function AccountMenu() {
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
-                  className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
+                  className="absolute right-0 mt-2 w-64 bg-surface-raised border border-theme-border rounded-xl shadow-2xl z-50 overflow-hidden"
                 >
                   {renderProfileList()}
                   {renderProfileActions()}
@@ -159,7 +159,7 @@ export function AccountMenu() {
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
-              className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
+              className="absolute right-0 mt-2 w-64 bg-surface-raised border border-theme-border rounded-xl shadow-2xl z-50 overflow-hidden"
             >
               {renderProfileList()}
               {renderProfileActions()}
@@ -210,7 +210,7 @@ export function AccountMenu() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute right-0 mt-2 w-64 bg-surface-base border border-theme-border-subtle rounded-xl shadow-xl z-50 overflow-hidden"
+            className="absolute right-0 mt-2 w-64 bg-surface-raised border border-theme-border rounded-xl shadow-2xl z-50 overflow-hidden"
           >
             {/* User info header */}
             <div className="px-4 py-3 border-b border-theme-border-subtle">

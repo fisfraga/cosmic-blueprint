@@ -55,7 +55,7 @@ export function SessionSidebar({
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 mb-1">
                     <span>{categoryInfo.icon}</span>
-                    <span className="font-medium text-white">{typeOption?.name || session.contemplationType}</span>
+                    <span className="font-medium text-theme-text-primary">{typeOption?.name || session.contemplationType}</span>
                   </div>
                   {session.focusEntity && (
                     <p className="text-theme-text-secondary text-sm mb-1">{session.focusEntity.name}</p>

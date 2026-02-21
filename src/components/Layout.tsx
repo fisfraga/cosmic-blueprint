@@ -123,7 +123,7 @@ function NavDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-0 mt-1 py-2 bg-surface-base border border-theme-border-subtle rounded-lg shadow-xl min-w-[200px] z-50"
+            className="absolute top-full left-0 mt-1 py-2 bg-surface-raised border border-theme-border rounded-lg shadow-2xl min-w-[200px] z-50"
           >
             {items.map((item) => (
               item.soon ? (
@@ -208,7 +208,7 @@ function LibraryDropdown({
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.15 }}
-            className="absolute top-full left-1/2 -translate-x-1/2 mt-1 py-4 px-4 bg-surface-base border border-theme-border-subtle rounded-lg shadow-xl z-50"
+            className="absolute top-full left-1/2 -translate-x-1/2 mt-1 py-4 px-4 bg-surface-raised border border-theme-border rounded-lg shadow-2xl z-50"
           >
             <div className="flex gap-8">
               {/* Astrology Column */}
@@ -493,7 +493,7 @@ export function Layout() {
               animate={{ x: 0 }}
               exit={{ x: '100%' }}
               transition={{ type: 'tween', duration: 0.3 }}
-              className="fixed right-0 top-0 bottom-0 w-72 bg-surface-base border-l border-theme-border-subtle z-50 md:hidden overflow-y-auto"
+              className="fixed right-0 top-0 bottom-0 w-72 bg-surface-raised border-l border-theme-border z-50 md:hidden overflow-y-auto"
             >
               <div className="p-4">
                 <div className="flex items-center justify-between mb-6">

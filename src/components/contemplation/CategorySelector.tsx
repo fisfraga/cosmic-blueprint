@@ -96,7 +96,7 @@ export function CategorySelector({
               >
                 <div className="flex items-center gap-3 mb-3">
                   <span className="text-3xl">{CATEGORY_INFO[cat].icon}</span>
-                  <h2 className="font-serif text-xl text-white">{CATEGORY_INFO[cat].name}</h2>
+                  <h2 className="font-serif text-xl text-theme-text-primary">{CATEGORY_INFO[cat].name}</h2>
                 </div>
                 <p className="text-theme-text-secondary text-sm">
                   {cat === 'astrology' && 'Explore planets, signs, houses, and aspects'}
@@ -130,7 +130,7 @@ export function CategorySelector({
           <div className={`p-4 rounded-xl bg-gradient-to-br ${CATEGORY_INFO[category].color} border mb-6`}>
             <div className="flex items-center gap-2">
               <span className="text-2xl">{CATEGORY_INFO[category].icon}</span>
-              <h2 className="font-serif text-lg text-white">{CATEGORY_INFO[category].name}</h2>
+              <h2 className="font-serif text-lg text-theme-text-primary">{CATEGORY_INFO[category].name}</h2>
             </div>
           </div>
 
@@ -220,7 +220,7 @@ export function CategorySelector({
           <div className={`p-6 rounded-xl bg-gradient-to-br ${CATEGORY_INFO[category!].color} border mb-6`}>
             <div className="flex items-center justify-center gap-2 mb-2">
               <span className="text-2xl">{CATEGORY_INFO[category!].icon}</span>
-              <h2 className="font-serif text-xl text-white">{selectedTypeOption?.name}</h2>
+              <h2 className="font-serif text-xl text-theme-text-primary">{selectedTypeOption?.name}</h2>
             </div>
             {focusEntity && (
               <p className="text-theme-text-secondary">{focusEntity.name}</p>
