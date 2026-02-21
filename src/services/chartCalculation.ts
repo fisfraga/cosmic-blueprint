@@ -24,7 +24,7 @@ import type {
   HDProfile,
   NumerologyProfile,
 } from '../types';
-import { getPlanetaryPositions, type PlanetaryPositions } from './ephemeris';
+import { getPlanetaryPositions, isRetrograde, type PlanetaryPositions } from './ephemeris';
 import { getGateByDegree, hdChannels } from '../data';
 import { enrichProfile } from './profileEnrichment';
 
@@ -96,6 +96,7 @@ function toPlanetaryPositions(
   ephemerisPositions: PlanetaryPositions
 ): PlanetaryPosition[] {
   const positions: PlanetaryPosition[] = [];
+  const date = ephemerisPositions.date;
 
   // Add all planets
   for (const planetId of PLANET_IDS) {
@@ -123,7 +124,7 @@ function toPlanetaryPositions(
           signId: getSignFromLongitude(longitude),
           degree,
           minute,
-          retrograde: false, // TODO: Calculate retrograde status
+          retrograde: isRetrograde(planetId, date),
         });
       }
     }

@@ -1,7 +1,7 @@
 // Transit Calculation Service
 // Uses accurate ephemeris data for planetary positions with simplified astronomical fallbacks
 
-import { getPlanetaryPositions, longitudeToZodiac } from './ephemeris';
+import { getPlanetaryPositions, isRetrograde, longitudeToZodiac } from './ephemeris';
 
 export interface TransitPosition {
   planetId: string;
@@ -71,9 +71,6 @@ const PLANETS = [
   { id: 'pluto', name: 'Pluto', symbol: '♇', orbitalPeriod: 90560, basePosition: 254 },
 ];
 
-// Reference epoch: January 1, 2000, 12:00 TT (J2000)
-const J2000 = new Date('2000-01-01T12:00:00Z').getTime();
-
 // Aspect definitions
 const ASPECTS = [
   { name: 'Conjunction', symbol: '☌', angle: 0, orb: 8, nature: 'neutral' as const },
@@ -82,54 +79,6 @@ const ASPECTS = [
   { name: 'Trine', symbol: '△', angle: 120, orb: 8, nature: 'harmonious' as const },
   { name: 'Opposition', symbol: '☍', angle: 180, orb: 8, nature: 'challenging' as const },
 ];
-
-function daysSinceJ2000(date: Date): number {
-  return (date.getTime() - J2000) / (1000 * 60 * 60 * 24);
-}
-
-// Simplified retrograde detection (approximate)
-function isRetrograde(planetId: string, date: Date): boolean {
-  // Mercury retrograde: ~3 times per year, ~3 weeks each
-  // This is a simplified approximation
-  if (planetId === 'mercury') {
-    const dayOfYear = Math.floor((date.getTime() - new Date(date.getFullYear(), 0, 0).getTime()) / (1000 * 60 * 60 * 24));
-    // Approximate retrograde windows (simplified)
-    const retroWindows = [
-      [10, 31], [105, 126], [200, 221], [295, 316]
-    ];
-    return retroWindows.some(([start, end]) => dayOfYear >= start && dayOfYear <= end);
-  }
-
-  // Venus retrograde: ~every 18 months, ~40 days
-  if (planetId === 'venus') {
-    const days = daysSinceJ2000(date);
-    const venusRetroCycle = 584; // synodic period
-    const posInCycle = ((days % venusRetroCycle) + venusRetroCycle) % venusRetroCycle;
-    return posInCycle > 540 || posInCycle < 40;
-  }
-
-  // Mars retrograde: ~every 26 months, ~2-2.5 months
-  if (planetId === 'mars') {
-    const days = daysSinceJ2000(date);
-    const marsRetroCycle = 780;
-    const posInCycle = ((days % marsRetroCycle) + marsRetroCycle) % marsRetroCycle;
-    return posInCycle > 700;
-  }
-
-  // Outer planets are retrograde roughly half the year
-  if (['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'].includes(planetId)) {
-    const days = daysSinceJ2000(date);
-    // Simplified: use sine wave to approximate
-    const period = planetId === 'jupiter' ? 399 :
-                   planetId === 'saturn' ? 378 :
-                   planetId === 'uranus' ? 370 :
-                   planetId === 'neptune' ? 367 : 366;
-    const phase = (days / period) * 2 * Math.PI;
-    return Math.sin(phase) > 0.3;
-  }
-
-  return false;
-}
 
 export function calculatePlanetPosition(planetId: string, date: Date = new Date()): TransitPosition | null {
   const planet = PLANETS.find(p => p.id === planetId);
