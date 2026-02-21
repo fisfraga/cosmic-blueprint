@@ -19,14 +19,15 @@ export default {
           tertiary: '#F7C548',
         },
         // Earth Element - Greens and browns
+        // WCAG: 400+ must meet 4.5:1 on neutral-900 (#18181B)
         earth: {
-          300: '#5D8A3D',
-          400: '#3D6A20',
-          500: '#2D5016',
-          600: '#234012',
-          700: '#1A300E',
-          primary: '#2D5016',
-          secondary: '#8B7355',
+          300: '#7DA85A',
+          400: '#6B9A45',
+          500: '#5A8A35',
+          600: '#4A7A28',
+          700: '#3A6A1E',
+          primary: '#5A8A35',
+          secondary: '#A89070',
           tertiary: '#C4A77D',
         },
         // Air Element - Blues and light blues
@@ -41,15 +42,16 @@ export default {
           tertiary: '#B8D4E3',
         },
         // Water Element - Teals and deep blues
+        // WCAG: 400+ must meet 4.5:1 on neutral-900 (#18181B)
         water: {
-          300: '#3D8A9A',
-          400: '#2A7589',
-          500: '#1A5F7A',
-          600: '#154D63',
-          700: '#103B4C',
-          primary: '#1A5F7A',
-          secondary: '#57C5B6',
-          tertiary: '#159895',
+          300: '#5AABBF',
+          400: '#4A9BB0',
+          500: '#3A8BA0',
+          600: '#2D7A90',
+          700: '#206A80',
+          primary: '#3A8BA0',
+          secondary: '#6DD0C2',
+          tertiary: '#2DB5A8',
         },
         // Human Design - Amber/Gold
         humandesign: {
@@ -113,12 +115,13 @@ export default {
           900: '#3d071e',
         },
         // Neutral - Dark theme colors
+        // WCAG: 500 bumped to meet 4.5:1 on 900/950 backgrounds
         neutral: {
           100: '#F5F5F7',
           200: '#E5E5E7',
           300: '#D1D1D3',
           400: '#A1A1A3',
-          500: '#71717A',
+          500: '#8A8A93',
           600: '#52525B',
           700: '#3F3F46',
           800: '#27272A',

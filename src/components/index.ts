@@ -17,3 +17,5 @@ export { ProfileSelector } from './ProfileSelector';
 export { CosmicWeatherWidget } from './CosmicWeatherWidget';
 export { TransitCalendar } from './TransitCalendar';
 export { InsightSaveButton } from './InsightSaveButton';
+export { LocationAutocomplete } from './LocationAutocomplete';
+export type { LocationAutocompleteProps } from './LocationAutocomplete';

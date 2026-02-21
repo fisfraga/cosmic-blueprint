@@ -301,6 +301,8 @@ export function BodyGraph({
         height={height}
         viewBox={`0 0 ${width} ${height}`}
         className="mx-auto"
+        role="img"
+        aria-label="Human Design body graph showing defined and undefined centers, channels, and gates"
       >
         {/* Background */}
         <rect width={width} height={height} fill="transparent" />
@@ -349,6 +351,26 @@ export function BodyGraph({
           </g>
         )}
       </svg>
+
+      {/* Visually hidden summary for screen readers */}
+      <div className="sr-only" role="status">
+        Human Design body graph.
+        {definedCenters.length > 0
+          ? ` Defined centers: ${Array.from(hdCenters.values())
+              .filter((c) => definedCentersSet.has(c.id))
+              .map((c) => c.name)
+              .join(', ')}.`
+          : ' No defined centers.'}
+        {definedChannels.length > 0
+          ? ` ${definedChannels.length} defined channel${definedChannels.length > 1 ? 's' : ''}.`
+          : ''}
+        {personalityGates.length > 0
+          ? ` ${personalityGates.length} personality gate${personalityGates.length > 1 ? 's' : ''}.`
+          : ''}
+        {designGates.length > 0
+          ? ` ${designGates.length} design gate${designGates.length > 1 ? 's' : ''}.`
+          : ''}
+      </div>
 
       {/* Tooltip */}
       {interactive && (hoveredCenter || hoveredGate || hoveredChannel) && (

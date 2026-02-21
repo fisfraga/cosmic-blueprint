@@ -5,6 +5,7 @@ import { SearchBar } from './SearchBar';
 import { Breadcrumb } from './Breadcrumb';
 import { ProfileSelector } from './ProfileSelector';
 import { UserMenu } from './UserMenu';
+import { useRouteAnnouncer } from '../hooks/useRouteAnnouncer';
 
 // Profile submenu - methodology-specific pages
 const profileItems = [
@@ -318,6 +319,9 @@ export function Layout() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  // Announce route changes to screen readers and manage focus
+  useRouteAnnouncer();
+
   const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
   };
@@ -341,6 +345,15 @@ export function Layout() {
       >
         Skip to main content
       </a>
+
+      {/* Live region for screen reader route-change announcements */}
+      <div
+        id="route-announcer"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+      />
 
       {/* Backdrop for closing dropdowns */}
       {openDropdown && (

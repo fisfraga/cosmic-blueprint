@@ -133,6 +133,7 @@ export function HouseSubstanceWheel({
         viewBox={`0 0 ${size} ${size}`}
         width={size}
         height={size}
+        role="img"
         aria-label="House Substance Wheel — 12 astrological houses"
       >
         <defs>

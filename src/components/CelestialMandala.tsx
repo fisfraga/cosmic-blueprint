@@ -110,7 +110,44 @@ export function CelestialMandala({
       .enter()
       .append('g')
       .attr('class', 'segment')
-      .style('cursor', 'pointer');
+      .attr('role', 'button')
+      .attr('tabindex', '0')
+      .attr('aria-label', (d) => `${d.data.name} — ${d.data.elementId} sign — ${d.data.keyPhrase}`)
+      .style('cursor', 'pointer')
+      .on('keydown', (event: KeyboardEvent, d) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          if (onSignSelect) {
+            onSignSelect(d.data);
+          } else {
+            navigate(`/signs/${d.data.id}`);
+          }
+        }
+      })
+      .on('focus', function (_event, d) {
+        setHoveredSign(d.data.id);
+        const pathEl = d3.select(this).select('path');
+        if (prefersReducedMotion) {
+          pathEl.attr('opacity', 1)
+            .attr('filter', `url(#glow-${d.data.elementId})`);
+        } else {
+          pathEl.transition().duration(200)
+            .attr('opacity', 1)
+            .attr('filter', `url(#glow-${d.data.elementId})`);
+        }
+      })
+      .on('blur', function (_event, d) {
+        setHoveredSign(null);
+        const pathEl = d3.select(this).select('path');
+        if (prefersReducedMotion) {
+          pathEl.attr('opacity', selectedSignId === d.data.id ? 1 : 0.8)
+            .attr('filter', selectedSignId === d.data.id ? `url(#glow-${d.data.elementId})` : 'none');
+        } else {
+          pathEl.transition().duration(200)
+            .attr('opacity', selectedSignId === d.data.id ? 1 : 0.8)
+            .attr('filter', selectedSignId === d.data.id ? `url(#glow-${d.data.elementId})` : 'none');
+        }
+      });
 
     segments
       .append('path')
@@ -224,7 +261,17 @@ export function CelestialMandala({
         width={size}
         height={size}
         className="transition-all duration-300"
+        role="img"
+        aria-label="Zodiac wheel chart showing twelve astrological signs arranged in a circle"
       />
+      {/* Visually hidden summary for screen readers */}
+      <div className="sr-only" role="status">
+        Zodiac wheel with {signs.length} signs: {signs.map((s) => s.name).join(', ')}.
+        {selectedSignId && (() => {
+          const selected = signs.find((s) => s.id === selectedSignId);
+          return selected ? ` Currently selected: ${selected.name}.` : '';
+        })()}
+      </div>
       {/* Tooltip */}
       {hoveredSignData && (
         <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-neutral-900/95 backdrop-blur-sm px-4 py-2 rounded-lg border border-neutral-700 text-center whitespace-nowrap">

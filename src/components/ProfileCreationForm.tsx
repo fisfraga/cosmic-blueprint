@@ -10,6 +10,8 @@ import {
   toHumanDesignProfile,
 } from '../services/profileDataParser';
 import type { AstroProfile, BirthData } from '../types';
+import { LocationAutocomplete } from './LocationAutocomplete';
+import type { GeocodingResult } from '../services/geocoding';
 
 // Common timezone options
 const TIMEZONE_OPTIONS = [
@@ -353,16 +355,24 @@ export function ProfileCreationForm({ onCancel, isNewProfile = false }: ProfileC
             </p>
           </div>
 
-          {/* City of Birth */}
+          {/* City of Birth — with geocoding autocomplete */}
           <div>
             <label className="block text-sm text-neutral-400 mb-1">City of Birth</label>
-            <input
-              type="text"
-              value={cityOfBirth}
-              onChange={(e) => setCityOfBirth(e.target.value)}
+            <LocationAutocomplete
+              initialValue={cityOfBirth}
               placeholder="e.g., New York, USA"
-              className="w-full px-4 py-2 bg-neutral-800 border border-neutral-700 rounded-lg text-white placeholder-neutral-500 focus:outline-none focus:border-purple-500"
+              onSelect={(result: GeocodingResult) => {
+                const label = result.city
+                  ? `${result.city}, ${result.country}`
+                  : result.displayName;
+                setCityOfBirth(label);
+                setLatitude(String(result.latitude));
+                setLongitude(String(result.longitude));
+              }}
             />
+            <p className="text-xs text-neutral-500 mt-1">
+              Type a city name to search — coordinates will be filled automatically
+            </p>
           </div>
 
           {/* Coordinates Toggle */}

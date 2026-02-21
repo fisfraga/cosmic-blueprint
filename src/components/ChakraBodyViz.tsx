@@ -142,6 +142,7 @@ export function ChakraBodyViz({ activeChakraId, className = '' }: ChakraBodyVizP
         viewBox={`0 0 ${W} ${H}`}
         width={W}
         height={H}
+        role="img"
         aria-label="Chakra body visualization — seven energy centers along the spine"
       >
         <defs>
