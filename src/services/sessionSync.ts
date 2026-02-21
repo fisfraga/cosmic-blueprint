@@ -27,16 +27,24 @@ export async function pushSessionToCloud(session: SavedSession, userId: string):
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('contemplation_sessions').upsert({
-    id: session.id,
-    user_id: userId,
-    category: session.category,
-    contemplation_type: session.contemplationType,
-    focus_entity: session.focusEntity ?? null,
-    messages: session.messages,
-    created_at: session.createdAt,
-    updated_at: session.updatedAt,
-  });
+  try {
+    const { error } = await supabase.from('contemplation_sessions').upsert({
+      id: session.id,
+      user_id: userId,
+      category: session.category,
+      contemplation_type: session.contemplationType,
+      focus_entity: session.focusEntity ?? null,
+      messages: session.messages,
+      profile_id: session.profileId ?? null,
+      created_at: session.createdAt,
+      updated_at: session.updatedAt,
+    });
+    if (error) {
+      console.error('Failed to push session to cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error pushing session to cloud:', err);
+  }
 }
 
 /**
@@ -46,7 +54,14 @@ export async function deleteSessionFromCloud(sessionId: string): Promise<void> {
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('contemplation_sessions').delete().eq('id', sessionId);
+  try {
+    const { error } = await supabase.from('contemplation_sessions').delete().eq('id', sessionId);
+    if (error) {
+      console.error('Failed to delete session from cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error deleting session from cloud:', err);
+  }
 }
 
 /**
@@ -70,6 +85,7 @@ export async function fetchSessionsFromCloud(userId: string): Promise<SavedSessi
     contemplationType: row.contemplation_type as SavedSession['contemplationType'],
     focusEntity: (row.focus_entity as SavedSession['focusEntity']) ?? null,
     messages: (row.messages as SavedSession['messages']) ?? [],
+    profileId: (row.profile_id as string | null) ?? undefined,
     createdAt: row.created_at as string,
     updatedAt: row.updated_at as string,
   }));

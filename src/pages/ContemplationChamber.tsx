@@ -243,7 +243,7 @@ const MODEL_OPTIONS: ModelOption[] = [
 ];
 
 export function ContemplationChamber() {
-  const { profile, isLoading, hasProfile } = useProfile();
+  const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
   const location = useLocation();
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
@@ -327,6 +327,8 @@ export function ContemplationChamber() {
     }
   }, [category, pathwayContext, location.state, searchParams]);
 
+  const activeProfileId = cosmicProfile?.meta.id;
+
   // Load saved sessions on mount; auto-resume if navigated here from SessionsLibrary
   useEffect(() => {
     const all = loadSessions();
@@ -359,6 +361,7 @@ export function ContemplationChamber() {
       contemplationType,
       focusEntity,
       messages,
+      profileId: activeProfileId,
       createdAt: existing?.createdAt ?? now,
       updatedAt: now,
     });

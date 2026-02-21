@@ -1,8 +1,10 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProfile } from '../context';
 import { signs, planets, houses, aspects, points, geneKeys, hdCenters, hdGates, hdChannels, chakras, codonRings, gkLines, getGateByDegree } from '../data';
 import { getCosmicWeather } from '../services/transits';
+import { exportUserData } from '../services/dataExport';
 import { LoadingSkeleton } from '../components';
 
 const elementColors = {
@@ -24,6 +26,7 @@ const aspectColors: Record<string, { bg: string; text: string }> = {
 export function Profile() {
   const { profile, isLoading, hasProfile } = useProfile();
   const navigate = useNavigate();
+  const [exportSuccess, setExportSuccess] = useState(false);
 
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
@@ -1195,6 +1198,40 @@ export function Profile() {
             <p className="text-neutral-500 text-sm">Deepen your elemental understanding</p>
           </div>
         </Link>
+      </div>
+
+      {/* Data Management */}
+      <div className="bg-neutral-900/50 rounded-xl p-6 border border-neutral-800">
+        <h2 className="font-serif text-xl text-white mb-4">Data Management</h2>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => {
+              exportUserData();
+              setExportSuccess(true);
+              setTimeout(() => setExportSuccess(false), 2000);
+            }}
+            className="flex items-center gap-2 px-4 py-2 bg-neutral-800 text-neutral-200 rounded-lg hover:bg-neutral-700 transition-colors text-sm"
+          >
+            {exportSuccess ? (
+              <>
+                <svg className="w-4 h-4 text-emerald-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+                <span className="text-emerald-400">Exported!</span>
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                </svg>
+                <span>Export My Data</span>
+              </>
+            )}
+          </button>
+          <p className="text-neutral-500 text-sm">
+            Download all your profiles, insights, sessions, and pathway progress as JSON.
+          </p>
+        </div>
       </div>
     </motion.div>
   );

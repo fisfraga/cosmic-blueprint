@@ -13,6 +13,7 @@ export interface SavedInsight {
   tags: string[];
   sessionId?: string;
   focusEntity?: string;
+  profileId?: string;
   createdAt: string;
 }
 

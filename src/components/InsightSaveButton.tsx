@@ -7,6 +7,7 @@ import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { saveInsight, getAllTags } from '../services/insights';
 import type { ContemplationCategory, ContemplationType } from '../services/contemplation/context';
+import { useProfile } from '../context/ProfileContext';
 
 interface InsightSaveButtonProps {
   content: string;
@@ -25,6 +26,7 @@ export function InsightSaveButton({
   focusEntity,
   onSaved,
 }: InsightSaveButtonProps) {
+  const { cosmicProfile } = useProfile();
   const [showModal, setShowModal] = useState(false);
   const [tags, setTags] = useState<string[]>([]);
   const [tagInput, setTagInput] = useState('');
@@ -68,6 +70,7 @@ export function InsightSaveButton({
       tags,
       sessionId,
       focusEntity,
+      profileId: cosmicProfile?.meta.id,
     });
     setSaved(true);
     setShowModal(false);

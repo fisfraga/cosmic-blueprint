@@ -1,9 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useMemo, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { loadInsights, deleteInsight } from '../services/insights';
 import type { SavedInsight } from '../services/insights';
 import { useAuth } from '../context/AuthContext';
+import { useProfile } from '../context/ProfileContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
 import { formatInsightAsTanaPaste, copyToClipboard } from '../services/tanaSync';
 
@@ -333,13 +334,28 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
 
 export function InsightLibrary() {
   const { user } = useAuth();
+  const { cosmicProfile, allProfiles } = useProfile();
   const [insights, setInsights] = useState<SavedInsight[]>([]);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
+  const [searchQuery, setSearchQuery] = useState('');
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
-  // Load insights from localStorage on mount
+  const activeProfileId = cosmicProfile?.meta.id;
+  // First profile ID for graceful degradation of legacy insights
+  const firstProfileId = allProfiles.length > 0 ? allProfiles[0].id : undefined;
+
+  // Load insights from localStorage on mount, filtered by active profile
   useEffect(() => {
-    setInsights(loadInsights());
-  }, []);
+    const all = loadInsights();
+    const profileFiltered = all.filter((i) => {
+      // Insights with matching profileId always show
+      if (i.profileId === activeProfileId) return true;
+      // Legacy insights (no profileId) show only when first/default profile is active
+      if (!i.profileId && activeProfileId === firstProfileId) return true;
+      return false;
+    });
+    setInsights(profileFiltered);
+  }, [activeProfileId, firstProfileId]);
 
   // Handle delete: remove from service then update local state
   const handleDelete = (id: string) => {
@@ -347,23 +363,54 @@ export function InsightLibrary() {
     setInsights((prev) => prev.filter((i) => i.id !== id));
   };
 
-  // Filtered insights
-  const filtered =
-    activeFilter === 'all'
-      ? insights
-      : insights.filter((i) => i.category === activeFilter);
+  // Search + category filtered insights
+  const filtered = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
 
-  // Counts per filter tab
-  const counts = FILTER_OPTIONS.reduce<Record<FilterCategory, number>>(
-    (acc, opt) => {
-      acc[opt.value] =
-        opt.value === 'all'
-          ? insights.length
-          : insights.filter((i) => i.category === opt.value).length;
-      return acc;
-    },
-    {} as Record<FilterCategory, number>
-  );
+    return insights.filter((i) => {
+      // Category filter
+      if (activeFilter !== 'all' && i.category !== activeFilter) return false;
+
+      // Search filter (AND with category)
+      if (query) {
+        const matchesContent = i.content.toLowerCase().includes(query);
+        const matchesFocus = i.focusEntity
+          ? i.focusEntity.toLowerCase().includes(query)
+          : false;
+        const matchesType = i.contemplationType.toLowerCase().includes(query);
+        if (!matchesContent && !matchesFocus && !matchesType) return false;
+      }
+
+      return true;
+    });
+  }, [insights, activeFilter, searchQuery]);
+
+  // Counts per filter tab (based on search-filtered insights so counts stay accurate)
+  const counts = useMemo(() => {
+    const query = searchQuery.trim().toLowerCase();
+
+    const searchFiltered = query
+      ? insights.filter((i) => {
+          const matchesContent = i.content.toLowerCase().includes(query);
+          const matchesFocus = i.focusEntity
+            ? i.focusEntity.toLowerCase().includes(query)
+            : false;
+          const matchesType = i.contemplationType.toLowerCase().includes(query);
+          return matchesContent || matchesFocus || matchesType;
+        })
+      : insights;
+
+    return FILTER_OPTIONS.reduce<Record<FilterCategory, number>>(
+      (acc, opt) => {
+        acc[opt.value] =
+          opt.value === 'all'
+            ? searchFiltered.length
+            : searchFiltered.filter((i) => i.category === opt.value).length;
+        return acc;
+      },
+      {} as Record<FilterCategory, number>,
+    );
+  }, [insights, searchQuery]);
 
   return (
     <div className="min-h-screen bg-neutral-950 px-4 py-10">
@@ -412,6 +459,62 @@ export function InsightLibrary() {
           <EmptyState />
         ) : (
           <div className="flex flex-col gap-6">
+            {/* Search input */}
+            <div role="search">
+              <div className="relative">
+                {/* Search icon */}
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-neutral-500"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+                <input
+                  ref={searchInputRef}
+                  type="text"
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === 'Escape') {
+                      setSearchQuery('');
+                      searchInputRef.current?.blur();
+                    }
+                  }}
+                  placeholder="Search insights..."
+                  aria-label="Search insights"
+                  className="w-full rounded-lg border border-neutral-800 bg-neutral-900/70 py-2.5 pl-10 pr-9 text-sm text-neutral-200 placeholder:text-neutral-500 transition-colors focus:border-amber-500/60 focus:outline-none focus:ring-1 focus:ring-amber-500/30"
+                />
+                {/* Clear (X) button */}
+                {searchQuery && (
+                  <button
+                    onClick={() => {
+                      setSearchQuery('');
+                      searchInputRef.current?.focus();
+                    }}
+                    aria-label="Clear search"
+                    className="absolute right-2.5 top-1/2 -translate-y-1/2 rounded p-0.5 text-neutral-500 transition-colors hover:text-neutral-300"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 20 20"
+                      fill="currentColor"
+                      className="h-4 w-4"
+                      aria-hidden="true"
+                    >
+                      <path d="M6.28 5.22a.75.75 0 00-1.06 1.06L8.94 10l-3.72 3.72a.75.75 0 101.06 1.06L10 11.06l3.72 3.72a.75.75 0 101.06-1.06L11.06 10l3.72-3.72a.75.75 0 00-1.06-1.06L10 8.94 6.28 5.22z" />
+                    </svg>
+                  </button>
+                )}
+              </div>
+            </div>
+
             {/* Filter bar */}
             <motion.div
               initial={{ opacity: 0 }}
@@ -425,7 +528,7 @@ export function InsightLibrary() {
               />
             </motion.div>
 
-            {/* No results for this filter */}
+            {/* No results for search + filter */}
             {filtered.length === 0 ? (
               <motion.p
                 key="no-results"
@@ -433,7 +536,9 @@ export function InsightLibrary() {
                 animate={{ opacity: 1 }}
                 className="py-12 text-center text-sm text-neutral-500"
               >
-                No insights in this category yet.
+                {searchQuery.trim()
+                  ? `No insights matching "${searchQuery.trim()}"${activeFilter !== 'all' ? ` in ${FILTER_OPTIONS.find((o) => o.value === activeFilter)?.label ?? activeFilter}` : ''}.`
+                  : 'No insights in this category yet.'}
               </motion.p>
             ) : (
               /* Insight cards */

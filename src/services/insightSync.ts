@@ -27,17 +27,25 @@ export async function pushInsightToCloud(insight: SavedInsight, userId: string):
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('saved_insights').upsert({
-    id: insight.id,
-    user_id: userId,
-    content: insight.content,
-    category: insight.category,
-    contemplation_type: insight.contemplationType,
-    tags: insight.tags,
-    session_id: insight.sessionId ?? null,
-    focus_entity: insight.focusEntity ?? null,
-    created_at: insight.createdAt,
-  });
+  try {
+    const { error } = await supabase.from('saved_insights').upsert({
+      id: insight.id,
+      user_id: userId,
+      content: insight.content,
+      category: insight.category,
+      contemplation_type: insight.contemplationType,
+      tags: insight.tags,
+      session_id: insight.sessionId ?? null,
+      focus_entity: insight.focusEntity ?? null,
+      profile_id: insight.profileId ?? null,
+      created_at: insight.createdAt,
+    });
+    if (error) {
+      console.error('Failed to push insight to cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error pushing insight to cloud:', err);
+  }
 }
 
 /**
@@ -47,7 +55,14 @@ export async function deleteInsightFromCloud(insightId: string): Promise<void> {
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('saved_insights').delete().eq('id', insightId);
+  try {
+    const { error } = await supabase.from('saved_insights').delete().eq('id', insightId);
+    if (error) {
+      console.error('Failed to delete insight from cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error deleting insight from cloud:', err);
+  }
 }
 
 /**
@@ -73,6 +88,7 @@ export async function fetchInsightsFromCloud(userId: string): Promise<SavedInsig
     tags: (row.tags as string[]) ?? [],
     sessionId: (row.session_id as string | null) ?? undefined,
     focusEntity: (row.focus_entity as string | null) ?? undefined,
+    profileId: (row.profile_id as string | null) ?? undefined,
     createdAt: row.created_at as string,
   }));
 }

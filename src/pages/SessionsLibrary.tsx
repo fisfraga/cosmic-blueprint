@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { loadSessions, deleteSession } from '../services/sessions';
 import type { SavedSession } from '../services/sessions';
 import { useAuth } from '../context/AuthContext';
+import { useProfile } from '../context/ProfileContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
 import { formatSessionAsTanaPaste, copyToClipboard } from '../services/tanaSync';
 
@@ -345,12 +346,23 @@ function FilterBar({ active, counts, onChange }: FilterBarProps) {
 
 export function SessionsLibrary() {
   const { user } = useAuth();
+  const { cosmicProfile, allProfiles } = useProfile();
   const [sessions, setSessions] = useState<SavedSession[]>([]);
   const [activeFilter, setActiveFilter] = useState<FilterCategory>('all');
 
+  const activeProfileId = cosmicProfile?.meta.id;
+  const firstProfileId = allProfiles.length > 0 ? allProfiles[0].id : undefined;
+
+  // Load sessions filtered by active profile
   useEffect(() => {
-    setSessions(loadSessions());
-  }, []);
+    const all = loadSessions();
+    const profileFiltered = all.filter((s) => {
+      if (s.profileId === activeProfileId) return true;
+      if (!s.profileId && activeProfileId === firstProfileId) return true;
+      return false;
+    });
+    setSessions(profileFiltered);
+  }, [activeProfileId, firstProfileId]);
 
   const handleDelete = (id: string) => {
     deleteSession(id);

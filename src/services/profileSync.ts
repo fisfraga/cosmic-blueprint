@@ -33,14 +33,21 @@ export async function pushProfileToCloud(
 
   const activeId = getActiveProfileId();
 
-  await supabase.from('cosmic_profiles').upsert({
-    id: profile.meta.id,
-    user_id: userId,
-    name: profile.meta.name,
-    profile_data: profile,
-    is_active: profile.meta.id === activeId,
-    updated_at: new Date().toISOString(),
-  });
+  try {
+    const { error } = await supabase.from('cosmic_profiles').upsert({
+      id: profile.meta.id,
+      user_id: userId,
+      name: profile.meta.name,
+      profile_data: profile,
+      is_active: profile.meta.id === activeId,
+      updated_at: new Date().toISOString(),
+    });
+    if (error) {
+      console.error('Failed to push profile to cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error pushing profile to cloud:', err);
+  }
 }
 
 /**
@@ -50,7 +57,14 @@ export async function deleteProfileFromCloud(profileId: string): Promise<void> {
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('cosmic_profiles').delete().eq('id', profileId);
+  try {
+    const { error } = await supabase.from('cosmic_profiles').delete().eq('id', profileId);
+    if (error) {
+      console.error('Failed to delete profile from cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error deleting profile from cloud:', err);
+  }
 }
 
 /**

@@ -31,17 +31,24 @@ export async function pushProgressToCloud(
   const supabase = getSupabaseClient();
   if (!supabase) return;
 
-  await supabase.from('pathway_progress').upsert({
-    id: `${userId}_${progress.pathwayId}`,
-    user_id: userId,
-    pathway_id: progress.pathwayId,
-    current_step_index: progress.currentStepIndex,
-    completed_steps: progress.completedSteps,
-    journal_entries: progress.journalEntries,
-    started_at: progress.startedAt,
-    last_activity_at: progress.lastActivityAt,
-    updated_at: new Date().toISOString(),
-  });
+  try {
+    const { error } = await supabase.from('pathway_progress').upsert({
+      id: `${userId}_${progress.pathwayId}`,
+      user_id: userId,
+      pathway_id: progress.pathwayId,
+      current_step_index: progress.currentStepIndex,
+      completed_steps: progress.completedSteps,
+      journal_entries: progress.journalEntries,
+      started_at: progress.startedAt,
+      last_activity_at: progress.lastActivityAt,
+      updated_at: new Date().toISOString(),
+    });
+    if (error) {
+      console.error('Failed to push pathway progress to cloud:', error.message);
+    }
+  } catch (err) {
+    console.error('Error pushing pathway progress to cloud:', err);
+  }
 }
 
 /**

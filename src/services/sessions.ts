@@ -21,6 +21,7 @@ export interface SavedSession {
   contemplationType: ContemplationType;
   focusEntity: FocusEntity | null;
   messages: Message[];
+  profileId?: string;
   createdAt: string;
   updatedAt: string;
 }
