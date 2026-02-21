@@ -1,5 +1,4 @@
 import { useState, useEffect, useMemo, useRef } from 'react';
-import { Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { loadInsights, deleteInsight } from '../services/insights';
 import type { SavedInsight } from '../services/insights';
@@ -7,6 +6,7 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
 import { formatInsightAsTanaPaste, copyToClipboard } from '../services/tanaSync';
+import { EmptyState } from '../components';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -252,38 +252,6 @@ function InsightCard({ insight, onDelete }: InsightCardProps) {
   );
 }
 
-// ─── Empty State ──────────────────────────────────────────────────────────────
-
-function EmptyState() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
-      className="mx-auto max-w-md"
-    >
-      <div className="rounded-2xl border border-neutral-800 bg-gradient-to-br from-purple-950/40 via-neutral-900/60 to-amber-950/30 p-10 text-center shadow-xl">
-        <div className="mb-4 text-5xl" role="img" aria-label="Candle">
-          🕯
-        </div>
-        <h2 className="mb-2 text-xl font-semibold text-neutral-100">
-          Your Contemplation Journal is Empty
-        </h2>
-        <p className="mb-6 text-sm leading-relaxed text-neutral-400">
-          Save insights during your contemplation sessions and they will appear
-          here as a personal record of your inner journey.
-        </p>
-        <Link
-          to="/contemplate"
-          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-600 to-purple-600 px-5 py-2.5 text-sm font-medium text-white shadow-md transition-opacity hover:opacity-90"
-        >
-          Begin a Contemplation
-        </Link>
-      </div>
-    </motion.div>
-  );
-}
-
 // ─── Filter Bar ───────────────────────────────────────────────────────────────
 
 interface FilterBarProps {
@@ -456,7 +424,12 @@ export function InsightLibrary() {
 
         {/* ── Content ── */}
         {insights.length === 0 ? (
-          <EmptyState />
+          <EmptyState
+            icon={<span role="img" aria-label="Candle">&#x1F56F;</span>}
+            title="No insights saved yet"
+            description="Save insights from your contemplation sessions to build your personal wisdom library"
+            action={{ label: 'Begin a Contemplation', to: '/contemplate' }}
+          />
         ) : (
           <div className="flex flex-col gap-6">
             {/* Search input */}

@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { MotionConfig } from 'framer-motion';
 import { Layout } from './components';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSkeleton } from './components/LoadingSkeleton';
@@ -88,6 +89,7 @@ const ProfileHDChannelDetail = lazy(() => import('./pages/profile/ProfileHDChann
 function App() {
   return (
     <ErrorBoundary>
+    <MotionConfig reducedMotion="user">
     <AuthProvider>
     <ProfileProvider>
       <BrowserRouter>
@@ -178,6 +180,7 @@ function App() {
         </BrowserRouter>
     </ProfileProvider>
     </AuthProvider>
+    </MotionConfig>
     </ErrorBoundary>
   );
 }

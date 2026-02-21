@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as d3 from 'd3';
 import { getSignsInOrder } from '../data';
+import { useReducedMotion } from '../hooks/useReducedMotion';
 import type { ZodiacSign } from '../types';
 
 interface CelestialMandalaProps {
@@ -25,6 +26,7 @@ export function CelestialMandala({
   const svgRef = useRef<SVGSVGElement>(null);
   const navigate = useNavigate();
   const [hoveredSign, setHoveredSign] = useState<string | null>(null);
+  const prefersReducedMotion = useReducedMotion();
   const signs = getSignsInOrder();
 
   useEffect(() => {
@@ -135,19 +137,27 @@ export function CelestialMandala({
       })
       .on('mouseenter', function (_event, d) {
         setHoveredSign(d.data.id);
-        d3.select(this)
-          .transition()
-          .duration(200)
-          .attr('opacity', 1)
-          .attr('filter', `url(#glow-${d.data.elementId})`);
+        const sel = d3.select(this);
+        if (prefersReducedMotion) {
+          sel.attr('opacity', 1)
+            .attr('filter', `url(#glow-${d.data.elementId})`);
+        } else {
+          sel.transition().duration(200)
+            .attr('opacity', 1)
+            .attr('filter', `url(#glow-${d.data.elementId})`);
+        }
       })
       .on('mouseleave', function (_event, d) {
         setHoveredSign(null);
-        d3.select(this)
-          .transition()
-          .duration(200)
-          .attr('opacity', selectedSignId === d.data.id ? 1 : 0.8)
-          .attr('filter', selectedSignId === d.data.id ? `url(#glow-${d.data.elementId})` : 'none');
+        const sel = d3.select(this);
+        if (prefersReducedMotion) {
+          sel.attr('opacity', selectedSignId === d.data.id ? 1 : 0.8)
+            .attr('filter', selectedSignId === d.data.id ? `url(#glow-${d.data.elementId})` : 'none');
+        } else {
+          sel.transition().duration(200)
+            .attr('opacity', selectedSignId === d.data.id ? 1 : 0.8)
+            .attr('filter', selectedSignId === d.data.id ? `url(#glow-${d.data.elementId})` : 'none');
+        }
       })
       .on('click', (_event, d) => {
         if (onSignSelect) {
@@ -203,7 +213,7 @@ export function CelestialMandala({
       .attr('fill', 'rgba(255, 255, 255, 0.7)')
       .text('Zodiac');
 
-  }, [signs, size, hoveredSign, selectedSignId, onSignSelect, navigate]);
+  }, [signs, size, hoveredSign, selectedSignId, onSignSelect, navigate, prefersReducedMotion]);
 
   const hoveredSignData = hoveredSign ? signs.find((s) => s.id === hoveredSign) : null;
 

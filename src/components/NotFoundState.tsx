@@ -38,44 +38,6 @@ export function NotFoundState({
   );
 }
 
-// Empty state for when data exists but is empty (e.g., no results)
-interface EmptyStateProps {
-  title?: string;
-  description?: string;
-  icon?: string;
-  action?: {
-    label: string;
-    onClick: () => void;
-  };
-}
-
-export function EmptyState({
-  title = 'No Results',
-  description = 'Try adjusting your filters or search criteria.',
-  icon = '◇',
-  action,
-}: EmptyStateProps) {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="text-center py-12 px-4"
-    >
-      <span className="text-4xl block mb-4 opacity-30">{icon}</span>
-      <h3 className="font-serif text-lg text-white mb-2">{title}</h3>
-      <p className="text-neutral-400 text-sm mb-4">{description}</p>
-      {action && (
-        <button
-          onClick={action.onClick}
-          className="text-sm text-blue-400 hover:text-blue-300 transition-colors"
-        >
-          {action.label}
-        </button>
-      )}
-    </motion.div>
-  );
-}
-
 // Profile required state - shown when a page requires a profile
 interface ProfileRequiredStateProps {
   title?: string;

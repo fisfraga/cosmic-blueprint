@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import { loadSessions, deleteSession } from '../services/sessions';
 import type { SavedSession } from '../services/sessions';
@@ -7,6 +7,7 @@ import { useAuth } from '../context/AuthContext';
 import { useProfile } from '../context/ProfileContext';
 import type { ContemplationCategory } from '../services/contemplation/context';
 import { formatSessionAsTanaPaste, copyToClipboard } from '../services/tanaSync';
+import { EmptyState } from '../components';
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -264,38 +265,6 @@ function SessionCard({ session, onDelete }: SessionCardProps) {
   );
 }
 
-// ─── Empty State ──────────────────────────────────────────────────────────────
-
-function EmptyState() {
-  return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.96 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 0.3 }}
-      className="mx-auto max-w-md"
-    >
-      <div className="rounded-2xl border border-neutral-800 bg-gradient-to-br from-purple-950/40 via-neutral-900/60 to-amber-950/30 p-10 text-center shadow-xl">
-        <div className="mb-4 text-5xl" role="img" aria-label="Spiral">
-          🌀
-        </div>
-        <h2 className="mb-2 text-xl font-semibold text-neutral-100">
-          No Sessions Yet
-        </h2>
-        <p className="mb-6 text-sm leading-relaxed text-neutral-400">
-          Your contemplation sessions are saved automatically as you explore.
-          Start a session to begin building your personal archive.
-        </p>
-        <Link
-          to="/contemplate"
-          className="inline-flex items-center gap-2 rounded-lg bg-gradient-to-r from-amber-600 to-purple-600 px-5 py-2.5 text-sm font-medium text-white shadow-md transition-opacity hover:opacity-90"
-        >
-          Enter Contemplation Chamber
-        </Link>
-      </div>
-    </motion.div>
-  );
-}
-
 // ─── Filter Bar ───────────────────────────────────────────────────────────────
 
 interface FilterBarProps {
@@ -427,7 +396,12 @@ export function SessionsLibrary() {
 
         {/* ── Content ── */}
         {sessions.length === 0 ? (
-          <EmptyState />
+          <EmptyState
+            icon={<span role="img" aria-label="Spiral">&#x1F300;</span>}
+            title="No sessions yet"
+            description="Start a contemplation to begin your journey of self-discovery"
+            action={{ label: 'Enter Contemplation Chamber', to: '/contemplate' }}
+          />
         ) : (
           <div className="flex flex-col gap-6">
             <motion.div
