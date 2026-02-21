@@ -1,0 +1,78 @@
+# Supabase local development stack
+# Usage: docker compose -f docker-compose.supabase.yml up -d
+# Studio: http://localhost:54323
+# API:    http://localhost:54321
+# DB:     postgresql://postgres:postgres@localhost:54322/postgres
+#
+# Reset:  docker compose -f docker-compose.supabase.yml down -v
+
+services:
+  db:
+    image: supabase/postgres:15.1.0.147
+    ports:
+      - "54322:5432"
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    volumes:
+      - supabase-db:/var/lib/postgresql/data
+      - ./supabase/migrations:/docker-entrypoint-initdb.d
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  meta:
+    image: supabase/postgres-meta:v0.68.0
+    ports:
+      - "54325:8080"
+    environment:
+      PG_META_PORT: 8080
+      PG_META_DB_HOST: db
+      PG_META_DB_PORT: 5432
+      PG_META_DB_NAME: postgres
+      PG_META_DB_USER: postgres
+      PG_META_DB_PASSWORD: postgres
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  kong:
+    image: kong:2.8.1
+    ports:
+      - "54321:8000"
+      - "54320:8443"
+    environment:
+      KONG_DATABASE: "off"
+      KONG_DECLARATIVE_CONFIG: /home/kong/kong.yml
+      KONG_DNS_ORDER: LAST,A,CNAME
+      KONG_PLUGINS: request-transformer,cors,key-auth,acl,basic-auth
+      KONG_NGINX_PROXY_PROXY_BUFFER_SIZE: 160k
+      KONG_NGINX_PROXY_PROXY_BUFFERS: 64 160k
+    volumes:
+      - ./supabase/.temp/kong.yml:/home/kong/kong.yml:ro
+    depends_on:
+      db:
+        condition: service_healthy
+    restart: unless-stopped
+
+  studio:
+    image: supabase/studio:20240101-cea346d
+    ports:
+      - "54323:3000"
+    environment:
+      STUDIO_PG_META_URL: http://meta:8080
+      POSTGRES_PASSWORD: postgres
+      SUPABASE_URL: http://kong:8000
+      SUPABASE_REST_URL: http://kong:8000/rest/v1/
+      SUPABASE_PUBLIC_URL: http://localhost:54321
+    depends_on:
+      - meta
+      - kong
+    restart: unless-stopped
+
+volumes:
+  supabase-db:

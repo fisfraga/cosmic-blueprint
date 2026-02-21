@@ -34,6 +34,10 @@ Thumbs.db
 supabase/.branches/
 supabase/.temp/
 
+# Nginx SSL certs (managed outside git)
+nginx/ssl/*.pem
+nginx/ssl/*.key
+
 # Test coverage
 coverage/
 
