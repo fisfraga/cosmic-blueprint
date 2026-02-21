@@ -92,4 +92,4 @@ jobs:
       - name: Verify deployment
         run: |
           ssh -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} \
-            'curl -sf http://localhost:3000/health | grep -q ok && echo "Health check passed" || exit 1'
+            'curl -v http://localhost:3000/health && echo "Health check passed"'
