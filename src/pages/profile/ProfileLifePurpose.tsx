@@ -12,6 +12,9 @@ import {
   houseNumFromId,
   getKeyArea,
   getCosmicVperSummary,
+  calculateElementalBalance,
+  ELEMENT_VPER,
+  ELEMENT_PRACTICES,
 } from '../../services/ilos';
 import type { VperPhase } from '../../types';
 
@@ -47,6 +50,16 @@ export function ProfileLifePurpose() {
     () => getCosmicVperSummary(temporalPositions).dominantPhase,
     [temporalPositions],
   );
+
+  const elementalBalance = useMemo(() => {
+    if (!profile?.placements) return null;
+    const ascSignId = profile.housePositions?.find(h => h.houseId === 'house-1')?.signId;
+    const mcSignId  = profile.housePositions?.find(h => h.houseId === 'house-10')?.signId;
+    return calculateElementalBalance(profile.placements, {
+      ascendantSignId: ascSignId,
+      midheaveSignId: mcSignId,
+    });
+  }, [profile]);
 
   if (isLoading) return <LoadingSkeleton variant="profile" />;
 
@@ -410,6 +423,88 @@ export function ProfileLifePurpose() {
               );
             })}
           </div>
+        </motion.section>
+      )}
+
+      {/* Section 5: Your Elemental Profile */}
+      {elementalBalance && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle"
+        >
+          <h2 className="text-xl font-semibold mb-2">Your Elemental Profile</h2>
+          <p className="text-sm text-theme-text-tertiary mb-5">
+            Count of personal planets (Sun–Mars) + ASC + MC by element — reveals your natural VPER phase and growth edge.
+          </p>
+
+          {/* 4-cell element grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+            {(['fire', 'air', 'earth', 'water'] as const).map(el => {
+              const cfg = VPER_CONFIG[ELEMENT_VPER[el]];
+              const count = elementalBalance[el];
+              const isDominant = el === elementalBalance.dominant;
+              const isWeakest  = el === elementalBalance.weakest;
+              return (
+                <div
+                  key={el}
+                  className={`rounded-lg p-3 border text-center ${
+                    count > 0
+                      ? `${cfg.color} ${cfg.borderColor}`
+                      : 'border-dashed border-theme-border-subtle opacity-60'
+                  }`}
+                >
+                  <div className={`text-2xl font-bold ${cfg.textColor}`}>{count}</div>
+                  <div className={`text-xs font-medium capitalize mt-1 ${cfg.textColor}`}>{el}</div>
+                  <div className="text-xs text-theme-text-tertiary mt-0.5">{cfg.icon} {ELEMENT_VPER[el]}</div>
+                  {isDominant && <div className="text-xs text-theme-text-tertiary mt-1">dominant</div>}
+                  {isWeakest  && <div className="text-xs text-theme-text-tertiary mt-1">growth edge</div>}
+                </div>
+              );
+            })}
+          </div>
+
+          {/* Dominant element */}
+          {elementalBalance.dominant && (
+            <p className="text-sm mb-2">
+              <span className="text-theme-text-secondary">Your dominant element is </span>
+              <span className="text-theme-text-primary font-medium capitalize">{elementalBalance.dominant}</span>
+              <span className="text-theme-text-secondary"> → </span>
+              <span className="capitalize">{ELEMENT_VPER[elementalBalance.dominant]}</span>
+              <span className="text-theme-text-secondary"> phase is your natural strength</span>
+            </p>
+          )}
+
+          {/* Growth edge */}
+          {elementalBalance.weakest && (
+            <>
+              <p className="text-sm mb-4">
+                <span className="text-theme-text-secondary">Your growth edge is </span>
+                <span className="text-theme-text-primary font-medium capitalize">{elementalBalance.weakest}</span>
+                <span className="text-theme-text-secondary"> → </span>
+                <span className="capitalize">{ELEMENT_VPER[elementalBalance.weakest]}</span>
+                <span className="text-theme-text-secondary"> phase invites development</span>
+              </p>
+              <div className="bg-surface-raised rounded-lg p-4 mb-4">
+                <p className="text-xs text-theme-text-tertiary uppercase tracking-wide mb-2">Growth Practices</p>
+                <ul className="space-y-2">
+                  {ELEMENT_PRACTICES[elementalBalance.weakest].map((practice, i) => (
+                    <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                      <span className="text-theme-text-tertiary mt-0.5 shrink-0">→</span>
+                      <span>{practice}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </>
+          )}
+
+          <Link
+            to="/contemplate"
+            className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
+          >
+            <span>✦</span> Deepen this reading in the Contemplation Chamber
+          </Link>
         </motion.section>
       )}
 
