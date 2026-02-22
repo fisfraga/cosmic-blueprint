@@ -10,7 +10,10 @@ import type {
   CosmicProfile,
   BirthData,
   ProfileMeta,
+  PersonalContext,
 } from '../types';
+import personalContextJson from '../data/ilos/personal-context.json';
+import activeSnapshotJson from '../data/ilos/active-snapshot.json';
 
 // Storage version constants
 export const CURRENT_PROFILE_VERSION = 2;
@@ -101,7 +104,47 @@ export function migrateToCosmicProfile(
     chartRulers: legacy.chartRulers,
 
     // Note: calculatedChart will be populated on first recalculation
+
+    // Seed personalContext from static ILOS files (non-blocking: stays undefined if shape unexpected)
+    personalContext: seedPersonalContextFromStaticFiles(),
   };
+}
+
+/**
+ * Derive an initial PersonalContext from the static ILOS JSON files.
+ * Returns undefined on any error to keep migration non-blocking.
+ */
+function seedPersonalContextFromStaticFiles(): PersonalContext | undefined {
+  try {
+    const recentWins = (activeSnapshotJson.wins || []).map(
+      (w: { name: string }) => w.name,
+    );
+    const activeProjects = (activeSnapshotJson.goals || []).map(
+      (g: { name: string; area?: string }, i: number) => ({
+        id: `project-${i}`,
+        name: g.name,
+        status: 'active' as const,
+        linkedKeyArea: undefined,
+      }),
+    );
+
+    return {
+      occupations: [],
+      specializations: [],
+      coreValues: [],
+      nonNegotiables: personalContextJson.nonNegotiables
+        ? [personalContextJson.nonNegotiables]
+        : [],
+      lifeManifesto: personalContextJson.identity || undefined,
+      activeProjects,
+      recentWins,
+      keyRelationships: [],
+      lastUpdated: new Date().toISOString(),
+    };
+  } catch {
+    // JSON shape was unexpected — personalContext stays undefined
+    return undefined;
+  }
 }
 
 /**

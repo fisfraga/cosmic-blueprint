@@ -749,6 +749,55 @@ export interface AlchemicalProfile {
 }
 
 // ------------------------------------
+// Personal Context (ILOS QUANTUM layer)
+// ------------------------------------
+
+export interface PersonalContextProject {
+  id: string;              // e.g. "project-cosmic-blueprint"
+  name: string;
+  description?: string;
+  status?: 'planning' | 'active' | 'review' | 'paused';
+  linkedKeyArea?: string;  // house ID e.g. "house-10"
+}
+
+export interface PersonalContextRelationship {
+  id: string;              // e.g. "rel-partner-maria"
+  name: string;
+  role: string;            // "business partner", "mentor", "life partner"
+}
+
+export interface PersonalContext {
+  lastUpdated?: string;    // ISO date
+
+  // Professional Context
+  occupations: string[];
+  workStyle?: 'solo' | 'collaborative' | 'hybrid';
+  specializations: string[];
+  professionalGoals?: string;
+  incomeStreams?: string[];
+
+  // Current Focus
+  activeProjects: PersonalContextProject[];
+  recentWins: string[];
+  activeKeyAreas?: string[];  // e.g. ["house-10", "house-7"]
+
+  // Values & Life
+  coreValues: string[];
+  nonNegotiables: string[];
+  lifeStage?: string;
+  primaryLocation?: string;
+  lifeManifesto?: string;
+
+  // Energy & Relationships
+  chronotype?: 'morning' | 'evening' | 'bimodal' | 'flexible';
+  energyPeakTimes?: string[];
+  depletionFactors?: string[];
+  recoveryNeeds?: string[];
+  keyRelationships: PersonalContextRelationship[];
+  spiritualPractices?: string[];
+}
+
+// ------------------------------------
 // Relationship Types
 // ------------------------------------
 
@@ -998,6 +1047,9 @@ export interface CosmicProfile {
   numerologyProfile?: NumerologyProfile;
   chakraActivations?: ChakraActivation[];
   alchemicalProfile?: AlchemicalProfile;
+
+  // Personal context (ILOS QUANTUM layer — per-user, editable)
+  personalContext?: PersonalContext;
 
   // Astrology placements (from existing AstroProfile)
   placements?: NatalPlacement[];
