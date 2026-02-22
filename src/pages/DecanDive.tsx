@@ -90,6 +90,11 @@ export function DecanDive() {
                   <p className="text-theme-text-secondary text-sm mt-1">
                     "{decan.keyword}" • Ruled by {planets.get(decan.rulerPlanetId)?.symbol}
                   </p>
+                  {decan.dimension && (
+                    <span className="mt-2 inline-block text-xs px-2 py-0.5 rounded-full bg-surface-overlay text-theme-text-tertiary capitalize">
+                      {decan.dimension}
+                    </span>
+                  )}
                 </motion.div>
               );
             })}
@@ -168,9 +173,16 @@ export function DecanDive() {
                           onClick={() => setSelectedDecan(decan)}
                         >
                           <div className="flex items-center justify-between mb-3">
-                            <span className={`text-sm font-medium ${colors.text}`}>
-                              Decan {decan.decanNumber}
-                            </span>
+                            <div className="flex items-center gap-2">
+                              <span className={`text-sm font-medium ${colors.text}`}>
+                                Decan {decan.decanNumber}
+                              </span>
+                              {decan.dimension && (
+                                <span className="text-xs px-2 py-0.5 rounded-full bg-surface-overlay text-theme-text-tertiary capitalize">
+                                  {decan.dimension}
+                                </span>
+                              )}
+                            </div>
                             <span className="text-xs text-theme-text-tertiary">{decan.degrees}</span>
                           </div>
 
@@ -273,6 +285,18 @@ export function DecanDive() {
                           </div>
                         </div>
                       </div>
+
+                      {/* Dimension */}
+                      {selectedDecan.dimension && (
+                        <div className="flex items-start gap-3 p-4 bg-surface-overlay rounded-lg border border-theme-border-subtle">
+                          <span className="text-xs px-2 py-1 rounded-full bg-surface-raised text-theme-text-secondary capitalize font-medium shrink-0">
+                            {selectedDecan.dimension}
+                          </span>
+                          <p className="text-theme-text-secondary text-sm leading-relaxed">
+                            {selectedDecan.dimensionDescription}
+                          </p>
+                        </div>
+                      )}
 
                       {/* Description */}
                       <div>

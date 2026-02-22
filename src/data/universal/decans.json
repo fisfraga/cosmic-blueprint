@@ -9,7 +9,10 @@
     "keyword": "Pioneer",
     "description": "The purest expression of Aries energy. Raw initiative, courage, and the spark of new beginnings. Here Mars rules with full force, bringing bold action and pioneering spirit.",
     "giftExpression": "Natural leadership, fearless initiative, ability to start new ventures",
-    "shadowExpression": "Impulsivity, aggression, difficulty seeing projects through"
+    "shadowExpression": "Impulsivity, aggression, difficulty seeing projects through",
+    "dimension": "physical",
+    "dimensionDescription": "Raw embodied initiative — energy moves through the body before thought catches up. The physical plane is where this decan's power is most directly felt.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "aries-2",
@@ -21,7 +24,10 @@
     "keyword": "Champion",
     "description": "Aries energy infused with Leo's solar radiance. The warrior becomes a champion, fighting for recognition and creative self-expression.",
     "giftExpression": "Charismatic leadership, creative courage, generous heroism",
-    "shadowExpression": "Ego battles, need for constant validation, dramatic conflicts"
+    "shadowExpression": "Ego battles, need for constant validation, dramatic conflicts",
+    "dimension": "mental",
+    "dimensionDescription": "Willpower applied with conscious intention — the mental dimension channels creative vision into purposeful action.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "aries-3",
@@ -33,7 +39,10 @@
     "keyword": "Explorer",
     "description": "Aries energy expanded by Jupiter's wisdom. The warrior becomes a philosophical explorer, seeking meaning through action and adventure.",
     "giftExpression": "Adventurous wisdom, optimistic courage, inspiring leadership",
-    "shadowExpression": "Overconfidence, reckless expansion, preachy aggression"
+    "shadowExpression": "Overconfidence, reckless expansion, preachy aggression",
+    "dimension": "spiritual",
+    "dimensionDescription": "The warrior guided by philosophy — inspired by higher meaning, action becomes a vehicle for soul expansion.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "taurus-1",
@@ -45,7 +54,10 @@
     "keyword": "Cultivator",
     "description": "The purest expression of Taurus energy. Deep appreciation for beauty, comfort, and material security. Venus rules here with sensual grace.",
     "giftExpression": "Natural abundance consciousness, artistic sensibility, steadfast loyalty",
-    "shadowExpression": "Possessiveness, resistance to change, excessive materialism"
+    "shadowExpression": "Possessiveness, resistance to change, excessive materialism",
+    "dimension": "physical",
+    "dimensionDescription": "Deep sensory presence — the body as sacred instrument of pleasure and material mastery. Security is felt first in the physical world.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "taurus-2",
@@ -57,7 +69,10 @@
     "keyword": "Craftsman",
     "description": "Taurus energy refined by Virgo's Mercury. The builder becomes a craftsman, applying practical intelligence to material creation.",
     "giftExpression": "Skilled craftsmanship, practical wisdom, productive efficiency",
-    "shadowExpression": "Perfectionism, critical materialism, worry about resources"
+    "shadowExpression": "Perfectionism, critical materialism, worry about resources",
+    "dimension": "mental",
+    "dimensionDescription": "Analytical intelligence applied to resources — the mental dimension refines material reality through discernment and craft.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "taurus-3",
@@ -69,7 +84,10 @@
     "keyword": "Builder",
     "description": "Taurus energy structured by Saturn's discipline. The cultivator becomes a master builder, creating lasting material achievements.",
     "giftExpression": "Patient mastery, enduring success, wise resource management",
-    "shadowExpression": "Rigid materialism, fear of loss, excessive caution"
+    "shadowExpression": "Rigid materialism, fear of loss, excessive caution",
+    "dimension": "spiritual",
+    "dimensionDescription": "Values that transcend materialism — discipline and long-term vision as expressions of the soul's deeper purpose.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "gemini-1",
@@ -81,7 +99,10 @@
     "keyword": "Messenger",
     "description": "The purest expression of Gemini energy. Quick wit, curiosity, and the dance of ideas. Mercury rules here with playful intelligence.",
     "giftExpression": "Brilliant communication, versatile thinking, social adaptability",
-    "shadowExpression": "Scattered focus, superficiality, nervous restlessness"
+    "shadowExpression": "Scattered focus, superficiality, nervous restlessness",
+    "dimension": "physical",
+    "dimensionDescription": "Mental agility expressed through movement and quick communication — information flows through the body as gesture, tone, and presence.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "gemini-2",
@@ -93,7 +114,10 @@
     "keyword": "Diplomat",
     "description": "Gemini energy harmonized by Libra's Venus. The messenger becomes a diplomat, using words to create beauty and connection.",
     "giftExpression": "Charming communication, artistic expression, social grace",
-    "shadowExpression": "People-pleasing words, indecisive communication, superficial harmony"
+    "shadowExpression": "People-pleasing words, indecisive communication, superficial harmony",
+    "dimension": "mental",
+    "dimensionDescription": "Relational intelligence at its most refined — the mind creates beauty through balanced exchange and harmonious discourse.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "gemini-3",
@@ -105,7 +129,10 @@
     "keyword": "Innovator",
     "description": "Gemini energy electrified by Aquarius's Uranus. The messenger becomes an innovator, channeling ideas that revolutionize thinking.",
     "giftExpression": "Genius insights, revolutionary ideas, humanitarian communication",
-    "shadowExpression": "Eccentric thinking, detached communication, mental rebellion"
+    "shadowExpression": "Eccentric thinking, detached communication, mental rebellion",
+    "dimension": "spiritual",
+    "dimensionDescription": "Universal language and collective ideas — thought becomes a bridge between individual minds and higher consciousness.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "cancer-1",
@@ -117,7 +144,10 @@
     "keyword": "Nurturer",
     "description": "The purest expression of Cancer energy. Deep emotional sensitivity, protective instincts, and soul-level nurturing. The Moon rules here with maternal wisdom.",
     "giftExpression": "Profound empathy, protective strength, emotional intelligence",
-    "shadowExpression": "Moodiness, over-protection, emotional manipulation"
+    "shadowExpression": "Moodiness, over-protection, emotional manipulation",
+    "dimension": "physical",
+    "dimensionDescription": "Instinctual emotional embodiment — feelings are registered in the body first, memory held in the physical self.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "cancer-2",
@@ -129,7 +159,10 @@
     "keyword": "Transformer",
     "description": "Cancer energy deepened by Scorpio's Pluto. The nurturer becomes a transformer, using emotional power to heal and regenerate.",
     "giftExpression": "Healing presence, emotional depth, transformative care",
-    "shadowExpression": "Emotional intensity, controlling nurturing, psychic manipulation"
+    "shadowExpression": "Emotional intensity, controlling nurturing, psychic manipulation",
+    "dimension": "mental",
+    "dimensionDescription": "Deep psychological intelligence — the mind navigates reality through emotional pattern recognition and ancestral wisdom.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "cancer-3",
@@ -141,7 +174,10 @@
     "keyword": "Mystic",
     "description": "Cancer energy dissolved by Pisces's Neptune. The nurturer becomes a mystic, offering spiritual compassion and transcendent care.",
     "giftExpression": "Spiritual nurturing, artistic sensitivity, unconditional love",
-    "shadowExpression": "Emotional confusion, martyrdom, escapist caregiving"
+    "shadowExpression": "Emotional confusion, martyrdom, escapist caregiving",
+    "dimension": "spiritual",
+    "dimensionDescription": "Transcendent compassion — the boundary between self and other dissolves into universal care beyond the personal.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "leo-1",
@@ -153,7 +189,10 @@
     "keyword": "Sovereign",
     "description": "The purest expression of Leo energy. Radiant self-expression, creative vitality, and natural authority. The Sun rules here with royal magnificence.",
     "giftExpression": "Authentic self-expression, generous leadership, creative brilliance",
-    "shadowExpression": "Ego inflation, attention seeking, dramatic self-centeredness"
+    "shadowExpression": "Ego inflation, attention seeking, dramatic self-centeredness",
+    "dimension": "physical",
+    "dimensionDescription": "Pure solar vitality — the radiant body at full expression, presence as power. The physical self as an act of creativity.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "leo-2",
@@ -165,7 +204,10 @@
     "keyword": "Inspirer",
     "description": "Leo energy expanded by Sagittarius's Jupiter. The sovereign becomes an inspirer, using creativity to spread wisdom and joy.",
     "giftExpression": "Inspiring leadership, generous teaching, optimistic creativity",
-    "shadowExpression": "Grandiosity, preachy self-expression, excessive pride"
+    "shadowExpression": "Grandiosity, preachy self-expression, excessive pride",
+    "dimension": "mental",
+    "dimensionDescription": "Creative intelligence fused with philosophical vision — the mind inspires and expands through joy, play, and generous ideals.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "leo-3",
@@ -177,7 +219,10 @@
     "keyword": "Warrior",
     "description": "Leo energy ignited by Aries's Mars. The sovereign becomes a warrior, courageously fighting for creative vision and personal honor.",
     "giftExpression": "Courageous creativity, protective leadership, passionate expression",
-    "shadowExpression": "Aggressive ego, combative pride, dominating presence"
+    "shadowExpression": "Aggressive ego, combative pride, dominating presence",
+    "dimension": "spiritual",
+    "dimensionDescription": "The courageous soul fully committed to its sacred calling — will and spirit unified in devoted self-expression.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "virgo-1",
@@ -189,7 +234,10 @@
     "keyword": "Analyst",
     "description": "The purest expression of Virgo energy. Precise analysis, practical service, and dedication to improvement. Mercury rules here with discerning wisdom.",
     "giftExpression": "Analytical brilliance, devoted service, healing precision",
-    "shadowExpression": "Over-analysis, critical perfectionism, anxious worry"
+    "shadowExpression": "Over-analysis, critical perfectionism, anxious worry",
+    "dimension": "physical",
+    "dimensionDescription": "The body as sacred instrument of service — precise physical mastery applied in devotion to health and craft.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "virgo-2",
@@ -201,7 +249,10 @@
     "keyword": "Master",
     "description": "Virgo energy structured by Capricorn's Saturn. The analyst becomes a master, applying discipline to achieve practical excellence.",
     "giftExpression": "Disciplined mastery, practical achievement, responsible service",
-    "shadowExpression": "Rigid perfectionism, cold efficiency, workaholic tendencies"
+    "shadowExpression": "Rigid perfectionism, cold efficiency, workaholic tendencies",
+    "dimension": "mental",
+    "dimensionDescription": "Systematic analytical intelligence — disciplined thought applied to achieving practical excellence over time.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "virgo-3",
@@ -213,7 +264,10 @@
     "keyword": "Healer",
     "description": "Virgo energy softened by Taurus's Venus. The analyst becomes a healer, bringing beauty and grace to practical service.",
     "giftExpression": "Healing arts, beautiful service, practical creativity",
-    "shadowExpression": "Critical aestheticism, material worry, sensual perfectionism"
+    "shadowExpression": "Critical aestheticism, material worry, sensual perfectionism",
+    "dimension": "spiritual",
+    "dimensionDescription": "Finding the sacred in ordinary acts of care — service and beauty merge in soulful dedication to wholeness.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "libra-1",
@@ -225,7 +279,10 @@
     "keyword": "Harmonizer",
     "description": "The purest expression of Libra energy. Natural diplomacy, aesthetic refinement, and the quest for balance. Venus rules here with graceful equilibrium.",
     "giftExpression": "Natural diplomacy, artistic refinement, relationship wisdom",
-    "shadowExpression": "Indecision, people-pleasing, superficial harmony"
+    "shadowExpression": "Indecision, people-pleasing, superficial harmony",
+    "dimension": "physical",
+    "dimensionDescription": "Relational harmony expressed through aesthetic presence — beauty as a physical reality experienced in form, space, and encounter.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "libra-2",
@@ -237,7 +294,10 @@
     "keyword": "Reformer",
     "description": "Libra energy electrified by Aquarius's Uranus. The harmonizer becomes a reformer, seeking justice through revolutionary change.",
     "giftExpression": "Social innovation, humanitarian justice, progressive partnerships",
-    "shadowExpression": "Rebellious relationships, detached diplomacy, erratic balance"
+    "shadowExpression": "Rebellious relationships, detached diplomacy, erratic balance",
+    "dimension": "mental",
+    "dimensionDescription": "Progressive intellectual balance — the mind seeks justice through innovative ideas that serve the collective good.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "libra-3",
@@ -249,7 +309,10 @@
     "keyword": "Mediator",
     "description": "Libra energy quickened by Gemini's Mercury. The harmonizer becomes a mediator, using communication to create understanding.",
     "giftExpression": "Brilliant negotiation, intellectual harmony, communicative grace",
-    "shadowExpression": "Overthinking relationships, nervous diplomacy, scattered balance"
+    "shadowExpression": "Overthinking relationships, nervous diplomacy, scattered balance",
+    "dimension": "spiritual",
+    "dimensionDescription": "The philosopher of relationship — higher synthesis of duality into complementary unity through conscious dialogue.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "scorpio-1",
@@ -261,7 +324,10 @@
     "keyword": "Alchemist",
     "description": "The purest expression of Scorpio energy. Profound transformation, psychological depth, and regenerative power. Pluto rules here with intense magnetism.",
     "giftExpression": "Transformative power, psychological insight, healing intensity",
-    "shadowExpression": "Obsessive control, destructive intensity, power manipulation"
+    "shadowExpression": "Obsessive control, destructive intensity, power manipulation",
+    "dimension": "physical",
+    "dimensionDescription": "Primal intensity fully embodied — transformation through physical presence, raw emotional power felt in the body.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "scorpio-2",
@@ -273,7 +339,10 @@
     "keyword": "Mystic",
     "description": "Scorpio energy dissolved by Pisces's Neptune. The alchemist becomes a mystic, using intuition to navigate the depths of consciousness.",
     "giftExpression": "Psychic sensitivity, spiritual transformation, compassionate depth",
-    "shadowExpression": "Delusional intensity, escapist obsession, martyred transformation"
+    "shadowExpression": "Delusional intensity, escapist obsession, martyred transformation",
+    "dimension": "mental",
+    "dimensionDescription": "Psychic intelligence and visionary depth — the mind as a portal to hidden realms, navigating the unseen with clarity.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "scorpio-3",
@@ -285,7 +354,10 @@
     "keyword": "Guardian",
     "description": "Scorpio energy softened by Cancer's Moon. The alchemist becomes a guardian, protecting through emotional transformation.",
     "giftExpression": "Protective transformation, emotional depth, nurturing intensity",
-    "shadowExpression": "Possessive protection, moody intensity, manipulative nurturing"
+    "shadowExpression": "Possessive protection, moody intensity, manipulative nurturing",
+    "dimension": "spiritual",
+    "dimensionDescription": "Emotional alchemy — healing through ancestral depth and the wisdom that arises from the unconscious.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "sagittarius-1",
@@ -297,7 +369,10 @@
     "keyword": "Philosopher",
     "description": "The purest expression of Sagittarius energy. Expansive wisdom, adventurous spirit, and the quest for truth. Jupiter rules here with boundless optimism.",
     "giftExpression": "Philosophical wisdom, adventurous spirit, inspiring optimism",
-    "shadowExpression": "Overconfidence, preachy righteousness, restless wandering"
+    "shadowExpression": "Overconfidence, preachy righteousness, restless wandering",
+    "dimension": "physical",
+    "dimensionDescription": "Embodied expansion — physical movement, travel, and adventure as vehicles for experiencing universal truth.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "sagittarius-2",
@@ -309,7 +384,10 @@
     "keyword": "Crusader",
     "description": "Sagittarius energy ignited by Aries's Mars. The philosopher becomes a crusader, fighting for beliefs and truth.",
     "giftExpression": "Courageous truth-seeking, passionate teaching, adventurous action",
-    "shadowExpression": "Aggressive preaching, impulsive wandering, combative beliefs"
+    "shadowExpression": "Aggressive preaching, impulsive wandering, combative beliefs",
+    "dimension": "mental",
+    "dimensionDescription": "Philosophical fire — bold mental conviction and the courage to actively pursue and defend truth.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "sagittarius-3",
@@ -321,7 +399,10 @@
     "keyword": "Visionary",
     "description": "Sagittarius energy illuminated by Leo's Sun. The philosopher becomes a visionary, radiating wisdom through creative expression.",
     "giftExpression": "Creative wisdom, generous teaching, radiant optimism",
-    "shadowExpression": "Grandiose beliefs, dramatic preaching, ego-driven philosophy"
+    "shadowExpression": "Grandiose beliefs, dramatic preaching, ego-driven philosophy",
+    "dimension": "spiritual",
+    "dimensionDescription": "The teacher who fully embodies their wisdom — solar consciousness illuminating a genuine path for others.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "capricorn-1",
@@ -333,7 +414,10 @@
     "keyword": "Architect",
     "description": "The purest expression of Capricorn energy. Disciplined ambition, structural mastery, and patient achievement. Saturn rules here with authoritative wisdom.",
     "giftExpression": "Strategic mastery, disciplined achievement, wise authority",
-    "shadowExpression": "Cold ambition, rigid control, fear-based limitation"
+    "shadowExpression": "Cold ambition, rigid control, fear-based limitation",
+    "dimension": "physical",
+    "dimensionDescription": "Disciplined physical mastery — the body as proof of sustained commitment and earned authority through time.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "capricorn-2",
@@ -345,7 +429,10 @@
     "keyword": "Patron",
     "description": "Capricorn energy softened by Taurus's Venus. The architect becomes a patron, building beauty and cultivating lasting value.",
     "giftExpression": "Beautiful achievement, stable success, graceful authority",
-    "shadowExpression": "Material ambition, possessive success, rigid aesthetics"
+    "shadowExpression": "Material ambition, possessive success, rigid aesthetics",
+    "dimension": "mental",
+    "dimensionDescription": "Value-centered intelligence — strategic thinking guided by enduring material principles and aesthetic discernment.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "capricorn-3",
@@ -357,7 +444,10 @@
     "keyword": "Administrator",
     "description": "Capricorn energy refined by Virgo's Mercury. The architect becomes an administrator, applying practical intelligence to systematic achievement.",
     "giftExpression": "Efficient leadership, practical wisdom, systematic mastery",
-    "shadowExpression": "Over-analysis of success, critical authority, workaholic perfectionism"
+    "shadowExpression": "Over-analysis of success, critical authority, workaholic perfectionism",
+    "dimension": "spiritual",
+    "dimensionDescription": "Sacred precision — integrating analytical mastery into the spiritual act of humble, devoted service.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "aquarius-1",
@@ -369,7 +459,10 @@
     "keyword": "Revolutionary",
     "description": "The purest expression of Aquarius energy. Revolutionary vision, humanitarian ideals, and the spark of genius. Uranus rules here with electric brilliance.",
     "giftExpression": "Genius innovation, humanitarian vision, revolutionary thinking",
-    "shadowExpression": "Rebellious detachment, eccentric alienation, cold idealism"
+    "shadowExpression": "Rebellious detachment, eccentric alienation, cold idealism",
+    "dimension": "physical",
+    "dimensionDescription": "Innovative presence — embodying the future now, the nervous system as conductor of electric collective change.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "aquarius-2",
@@ -381,7 +474,10 @@
     "keyword": "Networker",
     "description": "Aquarius energy quickened by Gemini's Mercury. The revolutionary becomes a networker, spreading ideas through brilliant communication.",
     "giftExpression": "Innovative communication, intellectual networking, progressive ideas",
-    "shadowExpression": "Scattered idealism, nervous detachment, superficial revolution"
+    "shadowExpression": "Scattered idealism, nervous detachment, superficial revolution",
+    "dimension": "mental",
+    "dimensionDescription": "Universal intelligence — synthesizing diverse ideas into revolutionary collective thought that serves humanity.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "aquarius-3",
@@ -393,7 +489,10 @@
     "keyword": "Idealist",
     "description": "Aquarius energy harmonized by Libra's Venus. The revolutionary becomes an idealist, seeking beauty in social progress.",
     "giftExpression": "Social harmony, artistic innovation, beautiful idealism",
-    "shadowExpression": "Detached relationships, cold aesthetics, impersonal love"
+    "shadowExpression": "Detached relationships, cold aesthetics, impersonal love",
+    "dimension": "spiritual",
+    "dimensionDescription": "Humanitarian love that transcends the personal — serving the collective heart through beauty and social vision.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   },
   {
     "id": "pisces-1",
@@ -405,7 +504,10 @@
     "keyword": "Dreamer",
     "description": "The purest expression of Pisces energy. Boundless compassion, spiritual sensitivity, and transcendent imagination. Neptune rules here with oceanic depth.",
     "giftExpression": "Spiritual sensitivity, artistic imagination, unconditional compassion",
-    "shadowExpression": "Escapist dreaming, boundary dissolution, victimhood patterns"
+    "shadowExpression": "Escapist dreaming, boundary dissolution, victimhood patterns",
+    "dimension": "physical",
+    "dimensionDescription": "Oceanic embodiment — the physical body as a permeable field of compassion, sensitivity, and spiritual openness.",
+    "absenceInterpretation": "Without planets here, the physical dimension of this sign energy may be less instinctual — a quality to consciously develop through embodied practices."
   },
   {
     "id": "pisces-2",
@@ -417,7 +519,10 @@
     "keyword": "Empath",
     "description": "Pisces energy nurtured by Cancer's Moon. The dreamer becomes an empath, using emotional sensitivity to heal and protect.",
     "giftExpression": "Healing empathy, protective intuition, nurturing spirituality",
-    "shadowExpression": "Emotional overwhelm, codependent compassion, moody escapism"
+    "shadowExpression": "Emotional overwhelm, codependent compassion, moody escapism",
+    "dimension": "mental",
+    "dimensionDescription": "Intuitive emotional intelligence — the mind navigates reality through feeling, memory, and protective instinct.",
+    "absenceInterpretation": "Without planets here, the mental dimension of this sign energy invites cultivation through study, reflection, and intentional inquiry."
   },
   {
     "id": "pisces-3",
@@ -429,6 +534,9 @@
     "keyword": "Shaman",
     "description": "Pisces energy deepened by Scorpio's Pluto. The dreamer becomes a shaman, navigating between worlds to bring transformation.",
     "giftExpression": "Shamanic power, transformative spirituality, regenerative compassion",
-    "shadowExpression": "Obsessive spirituality, manipulative mysticism, destructive escapism"
+    "shadowExpression": "Obsessive spirituality, manipulative mysticism, destructive escapism",
+    "dimension": "spiritual",
+    "dimensionDescription": "Transcendent transformation — dissolution of the ego into universal consciousness and the mystery of rebirth.",
+    "absenceInterpretation": "Without planets here, the spiritual dimension of this sign energy is a growth edge — an invitation to develop higher-octave practices aligned with this frequency."
   }
 ]

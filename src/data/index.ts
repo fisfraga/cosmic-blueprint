@@ -243,6 +243,10 @@ export interface DecanEntry {
   description: string;
   giftExpression: string;
   shadowExpression: string;
+  // Julia Balaz Three Decans enrichment (Sprint U)
+  dimension?: 'physical' | 'mental' | 'spiritual';
+  dimensionDescription?: string;
+  absenceInterpretation?: string;
 }
 
 export const decans = decansData as DecanEntry[];
@@ -266,6 +270,13 @@ export function getSignDecans(signId: string): DecanEntry[] {
  */
 export function getDecan(signId: string, decanNumber: 1 | 2 | 3): DecanEntry | undefined {
   return decans.find(d => d.signId === signId && d.decanNumber === decanNumber);
+}
+
+/**
+ * Get dimension name from decan number (Julia Balaz Three Decans)
+ */
+export function getDecanDimension(decanNumber: 1 | 2 | 3): 'physical' | 'mental' | 'spiritual' {
+  return ({ 1: 'physical', 2: 'mental', 3: 'spiritual' } as const)[decanNumber];
 }
 
 /**

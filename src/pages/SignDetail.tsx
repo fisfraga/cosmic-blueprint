@@ -1,5 +1,5 @@
 import { useParams, Link } from 'react-router-dom';
-import { signs, elements, planets, houses, chakras, getGatesBySign, getGeneKeysBySign } from '../data';
+import { signs, elements, planets, houses, chakras, getGatesBySign, getGeneKeysBySign, getSignDecans } from '../data';
 import { getPlacementsInSign } from '../data/userProfile';
 
 const POLARITY_LABEL: Record<string, string> = {
@@ -41,6 +41,12 @@ const VPER_LABELS: Record<string, string> = {
   review: 'Review',
 };
 
+const DIMENSION_COLORS: Record<string, { badge: string; text: string }> = {
+  physical: { badge: 'bg-earth-500/15 border-earth-500/30', text: 'text-earth-400' },
+  mental:   { badge: 'bg-air-500/15 border-air-500/30',     text: 'text-air-400'   },
+  spiritual:{ badge: 'bg-water-500/15 border-water-500/30', text: 'text-water-400'  },
+};
+
 export function SignDetail() {
   const { id } = useParams<{ id: string }>();
   const sign = id ? signs.get(id) : undefined;
@@ -68,6 +74,7 @@ export function SignDetail() {
   const hdGates = getGatesBySign(sign.id);
   const geneKeys = getGeneKeysBySign(sign.id);
   const relatedChakra = Array.from(chakras.values()).find(c => c.relatedSigns.includes(sign.id));
+  const signDecans = getSignDecans(sign.id);
 
   const colorClasses = elementColors[sign.elementId as keyof typeof elementColors] || elementColors.fire;
   const textColor = elementTextColors[sign.elementId as keyof typeof elementTextColors] || 'text-theme-text-secondary';
@@ -195,6 +202,47 @@ export function SignDetail() {
               <p className="text-theme-text-secondary leading-relaxed">{sign.managementGuidance}</p>
             </div>
           )}
+        </section>
+      )}
+
+      {/* Three Decans */}
+      {signDecans.length > 0 && (
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl mb-1">Three Decans</h2>
+          <p className="text-theme-text-tertiary text-sm mb-4">
+            Each sign is divided into three 10° segments — Physical, Mental, and Spiritual dimensions.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            {signDecans.map((decan) => {
+              const dim = decan.dimension;
+              const dimColors = dim ? (DIMENSION_COLORS[dim] ?? DIMENSION_COLORS.physical) : DIMENSION_COLORS.physical;
+              const rulerPlanet = planets.get(decan.rulerPlanetId);
+              return (
+                <div
+                  key={decan.id}
+                  className="p-4 rounded-lg border border-theme-border-subtle bg-surface-overlay hover:bg-surface-raised transition-colors"
+                >
+                  <div className="flex items-center justify-between mb-2">
+                    <span className="text-xs text-theme-text-tertiary">{decan.degrees}</span>
+                    {dim && (
+                      <span className={`text-xs px-2 py-0.5 rounded-full border capitalize ${dimColors.badge} ${dimColors.text}`}>
+                        {dim}
+                      </span>
+                    )}
+                  </div>
+                  <p className={`font-serif font-medium mb-1 ${textColor}`}>"{decan.keyword}"</p>
+                  <p className="text-xs text-theme-text-tertiary mb-2">
+                    Decan {decan.decanNumber} · {rulerPlanet?.symbol} {rulerPlanet?.name}
+                  </p>
+                  {decan.dimensionDescription && (
+                    <p className="text-xs text-theme-text-secondary leading-relaxed line-clamp-3">
+                      {decan.dimensionDescription}
+                    </p>
+                  )}
+                </div>
+              );
+            })}
+          </div>
         </section>
       )}
 
