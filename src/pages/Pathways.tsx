@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProfile } from '../context';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
+import { EntityStack } from '../components/entities/EntityStack';
+import { EntityLink } from '../components/entities/EntityLink';
+import { getEntity } from '../services/entities/registry';
 import { geneKeys, chakras, getGateByDegree } from '../data';
 import { getCosmicWeather, type TransitPosition } from '../services/transits';
 import {
@@ -18,6 +21,7 @@ import {
   type PathwayProgress,
   type PathwayStep,
 } from '../services/pathways';
+import type { EntityInfo } from '../services/entities/registry';
 
 type CosmicActivation = {
   pos: TransitPosition;
@@ -147,6 +151,7 @@ function PathwayDetail({
   onStepComplete,
   onReset,
   todayActivations = [],
+  onEntityClick,
 }: {
   pathway: Pathway;
   progress: PathwayProgress;
@@ -154,6 +159,7 @@ function PathwayDetail({
   onStepComplete: (stepId: string, journalEntry?: string) => void;
   onReset: () => void;
   todayActivations?: CosmicActivation[];
+  onEntityClick: (entity: EntityInfo) => void;
 }) {
   const [selectedStep, setSelectedStep] = useState<PathwayStep | null>(null);
   const [journalEntry, setJournalEntry] = useState('');
@@ -297,21 +303,13 @@ function PathwayDetail({
                     <p className="text-purple-400/80 text-xs uppercase tracking-wider mb-2">Cosmic Context Today</p>
                     <div className="flex flex-wrap gap-1.5">
                       {todayActivations.slice(0, 3).map((activation) => (
-                        <Link
+                        <EntityLink
                           key={activation.pos.planetId}
-                          to={`/human-design/${activation.gate.id}`}
-                          className="flex items-center gap-1 px-2 py-1 bg-humandesign-500/10 text-humandesign-300 rounded text-xs hover:bg-humandesign-500/20 transition-colors"
-                          onClick={(e) => e.stopPropagation()}
-                        >
-                          <span>{activation.pos.symbol}</span>
-                          <span>Gate {activation.gate.gateNumber}.{activation.line}</span>
-                          {activation.gk && (
-                            <span className="text-emerald-400/70"> · {activation.gk.gift.name}</span>
-                          )}
-                          {activation.chakra && (
-                            <span style={{ color: activation.chakra.colorHex }} className="ml-0.5">{activation.chakra.symbol}</span>
-                          )}
-                        </Link>
+                          entityId={activation.gate.id}
+                          displayName={`${activation.pos.symbol} Gate ${activation.gate.gateNumber}.${activation.line}${activation.gk ? ` · ${activation.gk.gift.name}` : ''}`}
+                          onClick={onEntityClick}
+                          showPreview={false}
+                        />
                       ))}
                     </div>
                   </div>
@@ -400,9 +398,23 @@ export function Pathways() {
   const [allProgress, setAllProgress] = useState<PathwayProgress[]>([]);
   const [selectedPathway, setSelectedPathway] = useState<Pathway | null>(null);
   const [selectedProgress, setSelectedProgress] = useState<PathwayProgress | null>(null);
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
 
   useEffect(() => {
     setAllProgress(loadAllProgress());
+  }, []);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      const already = prev.findIndex(e => e.id === entity.id);
+      if (already !== -1) return prev;
+      if (prev.length >= 2) return [prev[1], entity];
+      return [...prev, entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((id: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== id));
   }, []);
 
   const refreshProgress = () => {
@@ -488,176 +500,197 @@ export function Pathways() {
   );
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="max-w-6xl mx-auto"
-    >
-      {/* Header */}
-      <div className="text-center mb-8">
-        <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
-          Guided Pathways
-        </h1>
-        <p className="text-theme-text-secondary max-w-2xl mx-auto">
-          Structured contemplation journeys for deep self-discovery. Each pathway guides you through a series of themed contemplations with journaling prompts.
-        </p>
-      </div>
+    <div className="flex h-full">
+      <div className="flex-1 min-w-0 overflow-y-auto">
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          className="max-w-6xl mx-auto"
+        >
+          {/* Header */}
+          <div className="text-center mb-8">
+            <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
+              Guided Pathways
+            </h1>
+            <p className="text-theme-text-secondary max-w-2xl mx-auto">
+              Structured contemplation journeys for deep self-discovery. Each pathway guides you through a series of themed contemplations with journaling prompts.
+            </p>
+          </div>
 
-      {/* Today's Cosmic Tide */}
-      {todayActivations.length > 0 && (
-        <section className="mb-8 p-5 rounded-xl bg-gradient-to-r from-purple-500/10 to-humandesign-500/10 border border-purple-500/20">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-serif text-lg text-theme-text-primary flex items-center gap-2">
-              <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse inline-block"></span>
-              Today's Cosmic Tide
-            </h2>
-            <Link to="/transits" className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
-              Full forecast →
+          {/* Today's Cosmic Tide */}
+          {todayActivations.length > 0 && (
+            <section className="mb-8 p-5 rounded-xl bg-gradient-to-r from-purple-500/10 to-humandesign-500/10 border border-purple-500/20">
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="font-serif text-lg text-theme-text-primary flex items-center gap-2">
+                  <span className="w-2 h-2 bg-purple-400 rounded-full animate-pulse inline-block"></span>
+                  Today's Cosmic Tide
+                </h2>
+                <Link to="/transits" className="text-sm text-purple-400 hover:text-purple-300 transition-colors">
+                  Full forecast →
+                </Link>
+              </div>
+              <p className="text-theme-text-secondary text-sm mb-3">
+                {todayActivations.length} planet{todayActivations.length !== 1 ? 's are' : ' is'} transiting your natal gates — this energy deepens your contemplation work.
+              </p>
+              <div className="flex flex-wrap gap-2">
+                {todayActivations.map((activation) => {
+                  const entity = getEntity(activation.gate.id);
+                  return entity ? (
+                    <EntityLink
+                      key={activation.pos.planetId}
+                      entityId={activation.gate.id}
+                      displayName={`${activation.pos.symbol} Gate ${activation.gate.gateNumber}.${activation.line}${activation.gk ? ` · ${activation.gk.gift.name}` : ''}`}
+                      onClick={handleEntityClick}
+                    />
+                  ) : (
+                    <Link
+                      key={activation.pos.planetId}
+                      to={`/human-design/${activation.gate.id}`}
+                      className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-raised/80 hover:bg-surface-raised border border-humandesign-500/30 rounded-full text-sm transition-colors"
+                    >
+                      <span className="text-xl leading-none">{activation.pos.symbol}</span>
+                      <span className="text-humandesign-300 font-medium">Gate {activation.gate.gateNumber}.{activation.line}</span>
+                      {activation.gk && (
+                        <span className="text-emerald-400/80 text-xs">· {activation.gk.gift.name}</span>
+                      )}
+                      {activation.chakra && (
+                        <span style={{ color: activation.chakra.colorHex }} title={activation.chakra.name}>{activation.chakra.symbol}</span>
+                      )}
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* Active Pathways */}
+          {activePathways.length > 0 && (
+            <section className="mb-12">
+              <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Continue Your Journey</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {activePathways.map((pathway) => (
+                  <PathwayCard
+                    key={pathway.id}
+                    pathway={pathway}
+                    progress={allProgress.find(p => p.pathwayId === pathway.id) || null}
+                    onStart={() => handleStart(pathway)}
+                    onContinue={() => handleContinue(pathway)}
+                    onReset={() => handleReset(pathway.id)}
+                    activationCount={todayActivations.length}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Available Pathways */}
+          {availablePathways.length > 0 && (
+            <section className="mb-12">
+              <h2 className="font-serif text-2xl text-theme-text-primary mb-4">
+                {activePathways.length > 0 ? 'Explore More Pathways' : 'Choose Your Path'}
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {availablePathways.map((pathway) => (
+                  <PathwayCard
+                    key={pathway.id}
+                    pathway={pathway}
+                    progress={null}
+                    onStart={() => handleStart(pathway)}
+                    onContinue={() => {}}
+                    onReset={() => {}}
+                    activationCount={todayActivations.length}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Completed Pathways */}
+          {completedPathways.length > 0 && (
+            <section>
+              <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Completed Journeys</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                {completedPathways.map((pathway) => (
+                  <PathwayCard
+                    key={pathway.id}
+                    pathway={pathway}
+                    progress={allProgress.find(p => p.pathwayId === pathway.id) || null}
+                    onStart={() => {}}
+                    onContinue={() => handleContinue(pathway)}
+                    onReset={() => handleReset(pathway.id)}
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Pathway Detail Modal */}
+          <AnimatePresence>
+            {selectedPathway && selectedProgress && (
+              <PathwayDetail
+                pathway={selectedPathway}
+                progress={selectedProgress}
+                onClose={() => {
+                  setSelectedPathway(null);
+                  setSelectedProgress(null);
+                }}
+                onStepComplete={handleStepComplete}
+                onReset={() => handleReset(selectedPathway.id)}
+                todayActivations={todayActivations}
+                onEntityClick={handleEntityClick}
+              />
+            )}
+          </AnimatePresence>
+
+          {/* How Pathways Work */}
+          <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h3 className="font-serif text-lg text-theme-text-primary mb-4">How Guided Pathways Work</h3>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
+              <div>
+                <p className="text-purple-400 font-medium mb-1">1. Choose a Path</p>
+                <p className="text-theme-text-secondary">
+                  Select a pathway that resonates with your current journey and needs.
+                </p>
+              </div>
+              <div>
+                <p className="text-purple-400 font-medium mb-1">2. Contemplate Daily</p>
+                <p className="text-theme-text-secondary">
+                  Each step guides you to a themed contemplation in the chamber.
+                </p>
+              </div>
+              <div>
+                <p className="text-purple-400 font-medium mb-1">3. Journal Your Insights</p>
+                <p className="text-theme-text-secondary">
+                  Reflection prompts help you integrate what you discover.
+                </p>
+              </div>
+              <div>
+                <p className="text-purple-400 font-medium mb-1">4. Track Progress</p>
+                <p className="text-theme-text-secondary">
+                  Your journey is saved so you can continue anytime.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          {/* Quick Link to Contemplation */}
+          <div className="mt-8 text-center">
+            <Link
+              to="/contemplate"
+              className="text-purple-400 hover:text-purple-300 transition-colors"
+            >
+              Or explore freely in the Contemplation Chamber →
             </Link>
           </div>
-          <p className="text-theme-text-secondary text-sm mb-3">
-            {todayActivations.length} planet{todayActivations.length !== 1 ? 's are' : ' is'} transiting your natal gates — this energy deepens your contemplation work.
-          </p>
-          <div className="flex flex-wrap gap-2">
-            {todayActivations.map((activation) => (
-              <Link
-                key={activation.pos.planetId}
-                to={`/human-design/${activation.gate.id}`}
-                className="flex items-center gap-1.5 px-3 py-1.5 bg-surface-raised/80 hover:bg-surface-raised border border-humandesign-500/30 rounded-full text-sm transition-colors"
-              >
-                <span className="text-xl leading-none">{activation.pos.symbol}</span>
-                <span className="text-humandesign-300 font-medium">Gate {activation.gate.gateNumber}.{activation.line}</span>
-                {activation.gk && (
-                  <span className="text-emerald-400/80 text-xs">· {activation.gk.gift.name}</span>
-                )}
-                {activation.chakra && (
-                  <span style={{ color: activation.chakra.colorHex }} title={activation.chakra.name}>{activation.chakra.symbol}</span>
-                )}
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Active Pathways */}
-      {activePathways.length > 0 && (
-        <section className="mb-12">
-          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Continue Your Journey</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {activePathways.map((pathway) => (
-              <PathwayCard
-                key={pathway.id}
-                pathway={pathway}
-                progress={allProgress.find(p => p.pathwayId === pathway.id) || null}
-                onStart={() => handleStart(pathway)}
-                onContinue={() => handleContinue(pathway)}
-                onReset={() => handleReset(pathway.id)}
-                activationCount={todayActivations.length}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Available Pathways */}
-      {availablePathways.length > 0 && (
-        <section className="mb-12">
-          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">
-            {activePathways.length > 0 ? 'Explore More Pathways' : 'Choose Your Path'}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {availablePathways.map((pathway) => (
-              <PathwayCard
-                key={pathway.id}
-                pathway={pathway}
-                progress={null}
-                onStart={() => handleStart(pathway)}
-                onContinue={() => {}}
-                onReset={() => {}}
-                activationCount={todayActivations.length}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Completed Pathways */}
-      {completedPathways.length > 0 && (
-        <section>
-          <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Completed Journeys</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {completedPathways.map((pathway) => (
-              <PathwayCard
-                key={pathway.id}
-                pathway={pathway}
-                progress={allProgress.find(p => p.pathwayId === pathway.id) || null}
-                onStart={() => {}}
-                onContinue={() => handleContinue(pathway)}
-                onReset={() => handleReset(pathway.id)}
-              />
-            ))}
-          </div>
-        </section>
-      )}
-
-      {/* Pathway Detail Modal */}
-      <AnimatePresence>
-        {selectedPathway && selectedProgress && (
-          <PathwayDetail
-            pathway={selectedPathway}
-            progress={selectedProgress}
-            onClose={() => {
-              setSelectedPathway(null);
-              setSelectedProgress(null);
-            }}
-            onStepComplete={handleStepComplete}
-            onReset={() => handleReset(selectedPathway.id)}
-            todayActivations={todayActivations}
-          />
-        )}
-      </AnimatePresence>
-
-      {/* How Pathways Work */}
-      <section className="mt-12 bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h3 className="font-serif text-lg text-theme-text-primary mb-4">How Guided Pathways Work</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 text-sm">
-          <div>
-            <p className="text-purple-400 font-medium mb-1">1. Choose a Path</p>
-            <p className="text-theme-text-secondary">
-              Select a pathway that resonates with your current journey and needs.
-            </p>
-          </div>
-          <div>
-            <p className="text-purple-400 font-medium mb-1">2. Contemplate Daily</p>
-            <p className="text-theme-text-secondary">
-              Each step guides you to a themed contemplation in the chamber.
-            </p>
-          </div>
-          <div>
-            <p className="text-purple-400 font-medium mb-1">3. Journal Your Insights</p>
-            <p className="text-theme-text-secondary">
-              Reflection prompts help you integrate what you discover.
-            </p>
-          </div>
-          <div>
-            <p className="text-purple-400 font-medium mb-1">4. Track Progress</p>
-            <p className="text-theme-text-secondary">
-              Your journey is saved so you can continue anytime.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Quick Link to Contemplation */}
-      <div className="mt-8 text-center">
-        <Link
-          to="/contemplate"
-          className="text-purple-400 hover:text-purple-300 transition-colors"
-        >
-          Or explore freely in the Contemplation Chamber →
-        </Link>
+        </motion.div>
       </div>
-    </motion.div>
+
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
+    </div>
   );
 }
 
