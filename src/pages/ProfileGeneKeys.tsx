@@ -1,9 +1,11 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
 import { geneKeys, gkLines, codonRings, signs } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
+import { EntityStack, EntityLink } from '../components/entities';
+import type { EntityInfo } from '../services/entities';
 import type { GeneKeySphere } from '../types';
 
 function parsePlanetarySource(source: string): { isDesign: boolean; planetId: string } {
@@ -18,6 +20,19 @@ function parsePlanetarySource(source: string): { isDesign: boolean; planetId: st
 
 export function ProfileGeneKeys() {
   const { profile, isLoading, hasProfile } = useProfile();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   // Analyze repeated Gene Keys and Lines
   const analysis = useMemo(() => {
@@ -117,8 +132,8 @@ export function ProfileGeneKeys() {
     const houseNum = placement ? parseInt(placement.houseId.replace('house-', ''), 10) : null;
 
     return (
-      <Link
-        to={`/profile/gene-keys/${sphereKey}`}
+      <div
+        key={sphereKey}
         className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors group border border-theme-border-subtle hover:border-theme-border-subtle"
       >
         <div className="flex items-center justify-between mb-2">
@@ -134,11 +149,26 @@ export function ProfileGeneKeys() {
             )}
           </div>
         </div>
-        <p className="text-genekey-300 font-medium text-lg group-hover:text-genekey-200">
-          Key {data.geneKeyNumber}.{data.line}
-        </p>
+        <div className="flex items-center gap-1.5">
+          <p className="text-genekey-300 font-medium text-lg group-hover:text-genekey-200">
+            Key {data.geneKeyNumber}.{data.line}
+          </p>
+          <Link
+            to={`/profile/gene-keys/${sphereKey}`}
+            className="text-xs text-theme-text-muted hover:text-genekey-300 transition-colors"
+            title="Full sphere detail"
+            onClick={(e) => e.stopPropagation()}
+          >
+            →
+          </Link>
+        </div>
         {gk && (
-          <p className="text-theme-text-primary text-sm mt-1">{gk.name}</p>
+          <EntityLink
+            entityId={data.geneKeyId}
+            displayName={gk.name}
+            onClick={handleEntityClick}
+            className="text-sm mt-1 block"
+          />
         )}
         {gk && (
           <div className="mt-2 text-xs space-y-0.5">
@@ -152,7 +182,7 @@ export function ProfileGeneKeys() {
             Line {data.line}: {line.archetype}
           </p>
         )}
-      </Link>
+      </div>
     );
   };
 
@@ -160,8 +190,10 @@ export function ProfileGeneKeys() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-8"
+      className="flex h-full"
     >
+    <div className="flex-1 min-w-0 overflow-y-auto">
+    <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -340,14 +372,29 @@ export function ProfileGeneKeys() {
             {analysis.repeatedKeys.map(({ keyNumber, count, spheres }) => {
               const gk = geneKeys.get(`gene-key-${keyNumber}`);
               return gk ? (
-                <Link
+                <div
                   key={keyNumber}
-                  to={`/gene-keys/gene-key-${keyNumber}`}
-                  className="block p-4 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
+                  className="p-4 bg-surface-base/50 rounded-lg hover:bg-surface-overlay transition-colors"
                 >
                   <div className="flex items-start justify-between">
                     <div>
-                      <p className="text-genekey-300 font-medium text-lg">Key {keyNumber}: {gk.name}</p>
+                      <div className="flex items-center gap-1.5">
+                        <span className="text-genekey-300 font-medium text-lg">Key {keyNumber}:</span>
+                        <EntityLink
+                          entityId={`gene-key-${keyNumber}`}
+                          displayName={gk.name}
+                          onClick={handleEntityClick}
+                          className="font-medium text-lg"
+                        />
+                        <Link
+                          to={`/gene-keys/gene-key-${keyNumber}`}
+                          className="text-xs text-theme-text-muted hover:text-genekey-300 transition-colors"
+                          title="Full Gene Key detail"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          →
+                        </Link>
+                      </div>
                       <p className="text-theme-text-secondary text-sm mt-1">
                         Appears in: {spheres.join(', ')}
                       </p>
@@ -361,7 +408,7 @@ export function ProfileGeneKeys() {
                       ×{count}
                     </span>
                   </div>
-                </Link>
+                </div>
               ) : null;
             })}
           </div>
@@ -426,17 +473,31 @@ export function ProfileGeneKeys() {
                 .map(s => s.data.geneKeyNumber);
 
               return (
-                <Link
+                <div
                   key={ringId}
-                  to={`/gene-keys/codon-rings/${ringId}`}
                   className="bg-surface-overlay rounded-lg p-4 hover:bg-surface-interactive/50 transition-colors"
                 >
-                  <p className="text-genekey-300 font-medium">{ring.name}</p>
+                  <div className="flex items-center gap-1.5">
+                    <EntityLink
+                      entityId={ringId}
+                      displayName={ring.name}
+                      onClick={handleEntityClick}
+                      className="font-medium"
+                    />
+                    <Link
+                      to={`/gene-keys/codon-rings/${ringId}`}
+                      className="text-xs text-theme-text-muted hover:text-genekey-300 transition-colors"
+                      title="Full codon ring detail"
+                      onClick={(e) => e.stopPropagation()}
+                    >
+                      →
+                    </Link>
+                  </div>
                   <p className="text-theme-text-secondary text-sm mt-1">{ring.theme}</p>
                   <p className="text-theme-text-tertiary text-xs mt-2">
                     Your keys in this ring: {profileKeys.join(', ')}
                   </p>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -462,6 +523,15 @@ export function ProfileGeneKeys() {
           <span className="text-theme-text-secondary text-sm">Codon Rings</span>
         </Link>
       </div>
+    </div>
+    </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }

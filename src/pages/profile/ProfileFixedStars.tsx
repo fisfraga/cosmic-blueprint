@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { useMemo } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { useProfile } from '../../context';
 import { planets, points } from '../../data';
@@ -8,6 +8,8 @@ import { getFixedStarConjunctions, groupConjunctionsByExactness } from '../../se
 import type { FixedStarConjunction } from '../../services/fixedStars';
 import { computeParans, groupParansByStar, formatAngle } from '../../services/bradysParans';
 import type { ParanGroup } from '../../services/bradysParans';
+import { EntityStack, EntityLink } from '../../components/entities';
+import type { EntityInfo } from '../../services/entities';
 
 // ─── Sub-components ────────────────────────────────────────────────────────────
 
@@ -24,7 +26,7 @@ function OrbBadge({ orb, isExact }: { orb: number; isExact: boolean }) {
   );
 }
 
-function ConjunctionCard({ conj }: { conj: FixedStarConjunction }) {
+function ConjunctionCard({ conj, onEntityClick }: { conj: FixedStarConjunction; onEntityClick?: (entity: EntityInfo) => void }) {
   const planet = planets.get(conj.planetId) ?? points.get(conj.planetId);
   const signName =
     conj.star.zodiacPosition.sign.charAt(0).toUpperCase() +
@@ -42,11 +44,19 @@ function ConjunctionCard({ conj }: { conj: FixedStarConjunction }) {
           <span className="text-amber-400 text-2xl mt-0.5">★</span>
           <div>
             <div className="flex items-center gap-2 flex-wrap">
+              <EntityLink
+                entityId={conj.star.id}
+                displayName={conj.star.name}
+                onClick={onEntityClick}
+                className="font-serif text-lg font-medium"
+              />
               <Link
                 to={`/fixed-stars/${conj.star.id}`}
-                className="font-serif text-lg font-medium text-theme-text-primary hover:text-amber-300 transition-colors"
+                className="text-xs text-theme-text-muted hover:text-amber-300 transition-colors"
+                title="Full star profile"
+                onClick={(e) => e.stopPropagation()}
               >
-                {conj.star.name}
+                →
               </Link>
               {conj.star.isRoyalStar && (
                 <span className="text-xs px-2 py-0.5 rounded-full bg-amber-500/20 text-amber-300 border border-amber-500/30">
@@ -98,14 +108,6 @@ function ConjunctionCard({ conj }: { conj: FixedStarConjunction }) {
         </div>
       )}
 
-      <div className="flex items-center justify-end">
-        <Link
-          to={`/fixed-stars/${conj.star.id}`}
-          className="text-xs text-theme-text-muted hover:text-amber-400 transition-colors"
-        >
-          Full star profile →
-        </Link>
-      </div>
     </motion.div>
   );
 }
@@ -116,12 +118,14 @@ function TierSection({
   icon,
   conjunctions,
   accentClass,
+  onEntityClick,
 }: {
   title: string;
   description: string;
   icon: string;
   conjunctions: FixedStarConjunction[];
   accentClass: string;
+  onEntityClick?: (entity: EntityInfo) => void;
 }) {
   if (conjunctions.length === 0) return null;
   return (
@@ -134,7 +138,7 @@ function TierSection({
       <p className="text-sm text-theme-text-tertiary mb-4">{description}</p>
       <div className="space-y-4">
         {conjunctions.map((c) => (
-          <ConjunctionCard key={`${c.star.id}-${c.planetId}`} conj={c} />
+          <ConjunctionCard key={`${c.star.id}-${c.planetId}`} conj={c} onEntityClick={onEntityClick} />
         ))}
       </div>
     </section>
@@ -143,7 +147,7 @@ function TierSection({
 
 // ─── Parans Sub-components ────────────────────────────────────────────────────
 
-function ParanGroupCard({ group }: { group: ParanGroup }) {
+function ParanGroupCard({ group, onEntityClick }: { group: ParanGroup; onEntityClick?: (entity: EntityInfo) => void }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 8 }}
@@ -153,12 +157,22 @@ function ParanGroupCard({ group }: { group: ParanGroup }) {
       <div className="flex items-start gap-3">
         <span className="text-indigo-400 text-2xl mt-0.5">★</span>
         <div>
-          <Link
-            to={`/fixed-stars/${group.star.id}`}
-            className="font-serif text-lg font-medium text-theme-text-primary hover:text-indigo-300 transition-colors"
-          >
-            {group.star.name}
-          </Link>
+          <div className="flex items-center gap-1.5">
+            <EntityLink
+              entityId={group.star.id}
+              displayName={group.star.name}
+              onClick={onEntityClick}
+              className="font-serif text-lg font-medium"
+            />
+            <Link
+              to={`/fixed-stars/${group.star.id}`}
+              className="text-xs text-theme-text-muted hover:text-indigo-300 transition-colors"
+              title="Full star profile"
+              onClick={(e) => e.stopPropagation()}
+            >
+              →
+            </Link>
+          </div>
           <p className="text-sm text-indigo-300/80 italic">{group.star.archetype}</p>
           <p className="text-xs text-theme-text-muted">{group.star.constellation}</p>
         </div>
@@ -189,7 +203,7 @@ function ParanGroupCard({ group }: { group: ParanGroup }) {
   );
 }
 
-function ParansSection({ paranGroups }: { paranGroups: ParanGroup[] }) {
+function ParansSection({ paranGroups, onEntityClick }: { paranGroups: ParanGroup[]; onEntityClick?: (entity: EntityInfo) => void }) {
   if (paranGroups.length === 0) return null;
 
   const totalParans = paranGroups.reduce((sum, g) => sum + g.parans.length, 0);
@@ -209,7 +223,7 @@ function ParansSection({ paranGroups }: { paranGroups: ParanGroup[] }) {
       </p>
       <div className="space-y-4">
         {paranGroups.map((group) => (
-          <ParanGroupCard key={group.star.id} group={group} />
+          <ParanGroupCard key={group.star.id} group={group} onEntityClick={onEntityClick} />
         ))}
       </div>
     </section>
@@ -220,6 +234,19 @@ function ParansSection({ paranGroups }: { paranGroups: ParanGroup[] }) {
 
 export function ProfileFixedStars() {
   const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
@@ -245,6 +272,8 @@ export function ProfileFixedStars() {
   }, [cosmicProfile?.birthData]);
 
   return (
+    <div className="flex h-full">
+    <div className="flex-1 min-w-0 overflow-y-auto">
     <div className="space-y-10">
       {/* Header */}
       <div className="flex items-center justify-between">
@@ -317,6 +346,7 @@ export function ProfileFixedStars() {
         icon="✦"
         conjunctions={exact}
         accentClass="text-amber-400"
+        onEntityClick={handleEntityClick}
       />
 
       {/* Close conjunctions */}
@@ -326,6 +356,7 @@ export function ProfileFixedStars() {
         icon="◈"
         conjunctions={close}
         accentClass="text-yellow-400"
+        onEntityClick={handleEntityClick}
       />
 
       {/* Wide conjunctions */}
@@ -335,10 +366,11 @@ export function ProfileFixedStars() {
         icon="◇"
         conjunctions={wide}
         accentClass="text-theme-text-tertiary"
+        onEntityClick={handleEntityClick}
       />
 
       {/* Brady's Parans */}
-      <ParansSection paranGroups={paranGroups} />
+      <ParansSection paranGroups={paranGroups} onEntityClick={handleEntityClick} />
 
       {/* Footer note */}
       <section className="bg-surface-raised/20 rounded-xl p-5 border border-theme-border-subtle">
@@ -354,6 +386,15 @@ export function ProfileFixedStars() {
           (assuming 0° ecliptic latitude), so results for stars far from the ecliptic are less precise.
         </p>
       </section>
+    </div>
+    </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </div>
   );
 }

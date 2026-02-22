@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
@@ -7,12 +7,27 @@ import { LoadingSkeleton, ProfileRequiredState } from '../components';
 import { BodyGraphCentersOnly } from '../components/BodyGraph';
 import { NeutrinoWidget } from '../components/NeutrinoWidget';
 import { isNeutrinoConfigured } from '../config/neutrino';
+import { EntityStack, EntityLink } from '../components/entities';
+import type { EntityInfo } from '../services/entities';
 
 export function ProfileHumanDesign() {
   const { profile, isLoading, hasProfile } = useProfile();
   const [chartSource, setChartSource] = useState<'builtin' | 'neutrino'>('builtin');
   const [selectedCenterId, setSelectedCenterId] = useState<string | null>(null);
   const neutrinoConfigured = isNeutrinoConfigured();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   // Get selected center data for entity panel
   const selectedCenter = selectedCenterId ? hdCenters.get(selectedCenterId) : null;
@@ -79,8 +94,10 @@ export function ProfileHumanDesign() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-8"
+      className="flex h-full"
     >
+    <div className="flex-1 min-w-0 overflow-y-auto">
+    <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -368,14 +385,28 @@ export function ProfileHumanDesign() {
           </div>
           <div className="space-y-3">
             {definedChannels.map(({ id, channel }) => (
-              <Link
+              <div
                 key={id}
-                to={`/profile/human-design/channels/${channel.gate1Number}-${channel.gate2Number}`}
-                className="block p-4 bg-surface-overlay rounded-lg hover:bg-surface-interactive/50 transition-colors"
+                className="p-4 bg-surface-overlay rounded-lg hover:bg-surface-interactive/50 transition-colors"
               >
                 <div className="flex items-center justify-between">
                   <div>
-                    <p className="text-theme-text-primary font-medium">{channel.name}</p>
+                    <div className="flex items-center gap-2">
+                      <EntityLink
+                        entityId={id}
+                        displayName={channel.name}
+                        onClick={handleEntityClick}
+                        className="font-medium"
+                      />
+                      <Link
+                        to={`/profile/human-design/channels/${channel.gate1Number}-${channel.gate2Number}`}
+                        className="text-xs text-theme-text-muted hover:text-amber-300 transition-colors"
+                        title="Full channel detail"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        →
+                      </Link>
+                    </div>
                     <p className="text-amber-400 text-sm mt-0.5">
                       Gate {channel.gate1Number} — Gate {channel.gate2Number}
                     </p>
@@ -389,7 +420,7 @@ export function ProfileHumanDesign() {
                     {channel.description.slice(0, 120)}...
                   </p>
                 )}
-              </Link>
+              </div>
             ))}
           </div>
         </div>
@@ -411,15 +442,28 @@ export function ProfileHumanDesign() {
               const ring = gk?.codonRingId ? codonRings.get(gk.codonRingId) : null;
 
               return (
-                <Link
+                <div
                   key={`${gate.gateId}-${index}`}
-                  to={`/profile/human-design/gates/${gate.gateNumber}`}
-                  className="block p-3 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg transition-colors"
+                  className="p-3 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-amber-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                      {gateData && <span className="text-theme-text-secondary">{gateData.name}</span>}
+                      {gateData && (
+                        <EntityLink
+                          entityId={gate.gateId}
+                          displayName={gateData.name}
+                          onClick={handleEntityClick}
+                        />
+                      )}
+                      <Link
+                        to={`/profile/human-design/gates/${gate.gateNumber}`}
+                        className="text-xs text-theme-text-muted hover:text-amber-300 transition-colors"
+                        title="Full gate detail"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        →
+                      </Link>
                     </div>
                     <span className="text-theme-text-muted text-xs">{gate.planet}</span>
                   </div>
@@ -440,7 +484,7 @@ export function ProfileHumanDesign() {
                       </span>
                     )}
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -460,15 +504,28 @@ export function ProfileHumanDesign() {
               const ring = gk?.codonRingId ? codonRings.get(gk.codonRingId) : null;
 
               return (
-                <Link
+                <div
                   key={`${gate.gateId}-${index}`}
-                  to={`/profile/human-design/gates/${gate.gateNumber}`}
-                  className="block p-3 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg transition-colors"
+                  className="p-3 bg-surface-overlay hover:bg-surface-interactive/50 rounded-lg transition-colors"
                 >
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-2">
                       <span className="text-red-400 font-medium">{gate.gateNumber}.{gate.line}</span>
-                      {gateData && <span className="text-theme-text-secondary">{gateData.name}</span>}
+                      {gateData && (
+                        <EntityLink
+                          entityId={gate.gateId}
+                          displayName={gateData.name}
+                          onClick={handleEntityClick}
+                        />
+                      )}
+                      <Link
+                        to={`/profile/human-design/gates/${gate.gateNumber}`}
+                        className="text-xs text-theme-text-muted hover:text-amber-300 transition-colors"
+                        title="Full gate detail"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        →
+                      </Link>
                     </div>
                     <span className="text-theme-text-muted text-xs">{gate.planet}</span>
                   </div>
@@ -489,7 +546,7 @@ export function ProfileHumanDesign() {
                       </span>
                     )}
                   </div>
-                </Link>
+                </div>
               );
             })}
           </div>
@@ -551,6 +608,15 @@ export function ProfileHumanDesign() {
           <span className="text-theme-text-secondary text-sm">Types</span>
         </Link>
       </div>
+    </div>
+    </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }

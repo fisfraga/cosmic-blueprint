@@ -1,4 +1,4 @@
-import { useMemo } from 'react';
+import { useMemo, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { signs } from '../data';
@@ -9,6 +9,8 @@ import {
   getCosmicVperSummary,
 } from '../services/ilos';
 import type { VperPhase } from '../types';
+import { EntityStack, EntityLink } from '../components/entities';
+import type { EntityInfo } from '../services/entities';
 
 // Slow planets that define the collective cycle
 const SLOW_PLANET_IDS = ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
@@ -55,6 +57,19 @@ function VperPhaseBadge({ phase }: { phase: VperPhase }) {
 
 export function CosmicDashboard() {
   const cosmicWeather = useMemo(() => getCosmicWeather(), []);
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   const slowPositions = useMemo(
     () => cosmicWeather.positions.filter(p => SLOW_PLANET_IDS.includes(p.planetId)),
@@ -73,6 +88,8 @@ export function CosmicDashboard() {
   const dateLabel = today.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
 
   return (
+    <div className="flex h-full">
+    <div className="flex-1 min-w-0 overflow-y-auto">
     <div className="space-y-10 max-w-2xl mx-auto">
 
       {/* Header */}
@@ -159,15 +176,26 @@ export function CosmicDashboard() {
                     <span className="text-2xl text-theme-text-secondary shrink-0">{pos.symbol}</span>
                     <div>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span className="font-medium text-theme-text-primary">{pos.planetName}</span>
+                        <EntityLink
+                          entityId={pos.planetId}
+                          displayName={pos.planetName}
+                          onClick={handleEntityClick}
+                          className="font-medium"
+                        />
                         {pos.isRetrograde && (
                           <span className="text-xs px-1.5 py-0.5 bg-surface-raised rounded border border-theme-border text-theme-text-tertiary">
                             ℞
                           </span>
                         )}
                       </div>
-                      <div className="text-sm text-theme-text-secondary">
-                        {pos.signSymbol} {pos.signName} {pos.formattedDegree}
+                      <div className="text-sm text-theme-text-secondary flex items-center gap-1 flex-wrap">
+                        <span>{pos.signSymbol}</span>
+                        <EntityLink
+                          entityId={pos.signId}
+                          displayName={pos.signName}
+                          onClick={handleEntityClick}
+                        />
+                        <span>{pos.formattedDegree}</span>
                         {' · '}
                         <span className="text-theme-text-tertiary">H{houseNum} / {areaName}</span>
                       </div>
@@ -250,6 +278,15 @@ export function CosmicDashboard() {
         </div>
       </motion.section>
 
+    </div>
+    </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </div>
   );
 }
