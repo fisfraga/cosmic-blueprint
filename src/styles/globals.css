@@ -19,8 +19,8 @@
   /* Text tokens */
   --text-primary: #FFFFFF;
   --text-secondary: #A0A0B8;
-  --text-tertiary: #6B6B80;
-  --text-muted: #4A4A5C;
+  --text-tertiary: #878797; /* was #6B6B80 (3.72:1 AA-Large only) → 5.47:1 AA on surface-base */
+  --text-muted: #808090;    /* was #4A4A5C (2.23:1 FAIL) → 4.98:1 AA on surface-base */
 
   /* Border tokens */
   --border-subtle: #2D2D44;

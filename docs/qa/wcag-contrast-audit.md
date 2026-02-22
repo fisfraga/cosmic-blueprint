@@ -65,10 +65,37 @@
 |-------|--------|-------|
 | neutral-500 | #71717A | #8A8A93 |
 
+## Phase 2 Audit: CSS Custom Properties (2026-02-22)
+
+Deeper audit of `src/styles/globals.css` CSS custom properties (semantic text tokens) revealed two additional failures not covered by the initial Tailwind palette audit.
+
+### 4. `--text-tertiary` — AA-Large Only (MEDIUM)
+- **Before:** `#6B6B80` on surface-base (`#0D0D15`) — 3.72:1 — passes AA only for large text (≥18px/14px bold)
+- **Before:** `#6B6B80` on surface-raised (`#141420`) — 3.51:1 — same issue
+- **Used for:** Labels, descriptions, secondary info across all profile tabs and entity pages — often at 12-14px
+- **Fix:** `--text-tertiary: #878797` → 5.47:1 on surface-base, 5.16:1 on surface-raised — AA ✓ all surfaces
+- **Impact:** Broader than tailwind scale; this semantic token affects the entire app via `text-text-tertiary` classes
+
+### 5. `--text-muted` — FAIL (CRITICAL)
+- **Before:** `#4A4A5C` on surface-base (`#0D0D15`) — 2.23:1 — FAILS all thresholds
+- **Used for:** EntityLink captions, AuthModal disclaimers, `text-xs` body text; also placeholder text (exempt) and disabled states (exempt)
+- **Fix:** `--text-muted: #808090` → 4.98:1 on surface-base, 4.70:1 on surface-raised — AA ✓
+- **Note:** Placeholder text and disabled components are WCAG-exempt but fixing the token improves those cases as well
+
+### Tokens Passing (no action needed)
+| Token | Value | Min Contrast | Result |
+|-------|-------|-------------|--------|
+| `--text-primary` | `#FFFFFF` | 19.35:1 on surface-base | AAA ✓ |
+| `--text-secondary` | `#A0A0B8` | 6.67:1 on surface-overlay | AA ✓ |
+| `--border-subtle` | `#2D2D44` | Border only, exempt | — |
+| `--border-default` | `#3D3D58` | Border only, exempt | — |
+
 ## Methodology
 
-1. Reviewed all color tokens in `tailwind.config.js`
+1. Reviewed all color tokens in `tailwind.config.js` (Phase 1)
 2. Calculated contrast ratios against primary backgrounds (neutral-900, neutral-950)
 3. Identified tokens used for text that fall below WCAG AA 4.5:1 threshold
 4. Adjusted values to meet threshold while preserving visual character (hue, saturation)
 5. Verified build passes with updated colors
+6. Phase 2 (2026-02-22): Audited `src/styles/globals.css` CSS custom properties
+7. Fixed `--text-tertiary` and `--text-muted` semantic tokens — most impactful fixes for body text
