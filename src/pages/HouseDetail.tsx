@@ -46,6 +46,9 @@ export function HouseDetail() {
     Cadent: 'text-air-400 bg-air-500/10 border-air-500/30',
   };
 
+  const VPER_ICONS: Record<string, string> = { vision: '🔥', plan: '💨', execute: '🌱', review: '🌊' };
+  const VPER_LABELS: Record<string, string> = { vision: 'Vision', plan: 'Plan', execute: 'Execute', review: 'Review' };
+
   return (
     <div className="space-y-8 max-w-4xl mx-auto">
       {/* Header */}
@@ -127,6 +130,54 @@ export function HouseDetail() {
           ))}
         </div>
       </section>
+
+      {/* Life Key Area (ILOS) */}
+      {house.ilosKeyArea && (
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="font-serif text-xl">Life Key Area</h2>
+            {house.vperPhase && (
+              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-surface-overlay border border-theme-border-subtle text-theme-text-secondary">
+                <span>{VPER_ICONS[house.vperPhase]}</span>
+                <span>{VPER_LABELS[house.vperPhase]} Phase</span>
+              </span>
+            )}
+          </div>
+          <p className="text-lg font-medium text-theme-text-primary mb-2">{house.ilosKeyArea}</p>
+          <p className="text-theme-text-secondary text-sm mb-4">
+            In the Intentional Life OS, this house maps to the <strong>{house.ilosKeyArea}</strong> key area —
+            the domain of life where this house's themes most directly shape your real-world experience.
+          </p>
+          <Link
+            to="/life-areas"
+            className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
+          >
+            <span>→</span> Explore all 12 Life Key Areas
+          </Link>
+        </section>
+      )}
+
+      {/* Soul Purpose Role (Julia Balaz) */}
+      {(house.purposeRole || house.careerRelevance) && (
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <h2 className="font-serif text-xl mb-4">Soul Purpose Role</h2>
+          {house.purposeRole && (
+            <p className="text-theme-text-primary italic text-base mb-3">"{house.purposeRole}"</p>
+          )}
+          {house.careerRelevance && (
+            <div className="p-3 rounded-lg bg-surface-overlay border border-theme-border-subtle mb-4">
+              <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-1">Career & Vocation</p>
+              <p className="text-theme-text-secondary text-sm">{house.careerRelevance}</p>
+            </div>
+          )}
+          <Link
+            to="/contemplate"
+            className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
+          >
+            <span>✦</span> Explore your life purpose in the Contemplation Chamber
+          </Link>
+        </section>
+      )}
 
       {/* Meaning */}
       <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
