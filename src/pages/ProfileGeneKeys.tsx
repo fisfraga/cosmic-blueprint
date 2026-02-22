@@ -251,6 +251,105 @@ export function ProfileGeneKeys() {
         </div>
       </div>
 
+      {/* Golden Path Journey */}
+      <section className="bg-gradient-to-br from-genekey-500/10 to-genekey-600/5 rounded-xl p-6 border border-genekey-500/20">
+        <h2 className="font-serif text-xl mb-2 text-genekey-300">Golden Path Journey</h2>
+        <p className="text-sm text-theme-text-secondary mb-6">
+          The Golden Path unfolds in three movements: Genius (Activation) → Heart (Venus) → Contribution (Pearl). Each sequence builds on the last.
+        </p>
+
+        {/* Three-stage flow: vertical on mobile, horizontal on md+ */}
+        <div className="flex flex-col md:flex-row items-stretch md:items-center gap-4 mb-6">
+
+          {/* Stage 1: Activation — Life's Work sphere */}
+          {(() => {
+            const sphere = gkProfile.lifesWork;
+            const gk = sphere ? geneKeys.get(sphere.geneKeyId) : undefined;
+            const displayTitle = gk?.keyTitle ?? gk?.name ?? (sphere ? `Gene Key ${sphere.geneKeyNumber}` : undefined);
+            return (
+              <div className="flex-1 bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+                <p className="text-xs font-medium text-emerald-400 uppercase tracking-wide mb-2">Activation — Genius</p>
+                {gk && sphere ? (
+                  <>
+                    <p className="font-medium text-theme-text-primary text-sm mb-1">
+                      Gene Key {sphere.geneKeyNumber}: {displayTitle}
+                    </p>
+                    <p className="text-xs text-red-400">Shadow: {gk.shadow?.name}</p>
+                    <p className="text-xs text-emerald-400">Gift: {gk.gift?.name}</p>
+                  </>
+                ) : (
+                  <p className="text-sm text-theme-text-tertiary italic">Not yet calculated</p>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* Connector — right arrow on md+, down arrow on mobile */}
+          <div className="text-theme-text-muted text-2xl hidden md:flex items-center self-center">→</div>
+          <div className="text-theme-text-muted text-xl md:hidden self-center">↓</div>
+
+          {/* Stage 2: Venus — Core sphere (Sacred Wound) */}
+          {(() => {
+            const sphere = gkProfile.core;
+            const gk = sphere ? geneKeys.get(sphere.geneKeyId) : undefined;
+            const displayTitle = gk?.keyTitle ?? gk?.name ?? (sphere ? `Gene Key ${sphere.geneKeyNumber}` : undefined);
+            return (
+              <div className="flex-1 bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+                <p className="text-xs font-medium text-rose-400 uppercase tracking-wide mb-2">Venus — Heart</p>
+                {gk && sphere ? (
+                  <>
+                    <p className="font-medium text-theme-text-primary text-sm mb-1">
+                      Gene Key {sphere.geneKeyNumber}: {displayTitle}
+                    </p>
+                    <p className="text-xs text-red-400">Shadow: {gk.shadow?.name}</p>
+                    <p className="text-xs text-rose-400">Gift: {gk.gift?.name}</p>
+                  </>
+                ) : (
+                  <p className="text-sm text-theme-text-tertiary italic">Not yet calculated</p>
+                )}
+              </div>
+            );
+          })()}
+
+          {/* Connector */}
+          <div className="text-theme-text-muted text-2xl hidden md:flex items-center self-center">→</div>
+          <div className="text-theme-text-muted text-xl md:hidden self-center">↓</div>
+
+          {/* Stage 3: Pearl — Pearl sphere */}
+          {(() => {
+            const sphere = gkProfile.pearl;
+            const gk = sphere ? geneKeys.get(sphere.geneKeyId) : undefined;
+            const displayTitle = gk?.keyTitle ?? gk?.name ?? (sphere ? `Gene Key ${sphere.geneKeyNumber}` : undefined);
+            return (
+              <div className="flex-1 bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+                <p className="text-xs font-medium text-blue-400 uppercase tracking-wide mb-2">Pearl — Contribution</p>
+                {gk && sphere ? (
+                  <>
+                    <p className="font-medium text-theme-text-primary text-sm mb-1">
+                      Gene Key {sphere.geneKeyNumber}: {displayTitle}
+                    </p>
+                    <p className="text-xs text-red-400">Shadow: {gk.shadow?.name}</p>
+                    <p className="text-xs text-blue-400">Gift: {gk.gift?.name}</p>
+                  </>
+                ) : (
+                  <p className="text-sm text-theme-text-tertiary italic">Not yet calculated</p>
+                )}
+              </div>
+            );
+          })()}
+        </div>
+
+        {/* CTA */}
+        <div className="pt-4 border-t border-genekey-500/20">
+          <Link
+            to="/contemplate?type=goldenPathReading"
+            className="inline-flex items-center gap-2 text-sm text-genekey-400 hover:text-genekey-300 transition-colors"
+          >
+            Contemplate Full Journey →
+          </Link>
+        </div>
+      </section>
+
       {/* Activation Sequence */}
       <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
         <Link to="/gene-keys/sequences" className="group inline-block mb-4">
