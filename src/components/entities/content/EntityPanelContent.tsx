@@ -1,5 +1,15 @@
 import type { EntityInfo } from '../../../services/entities';
-import type { AstroProfile, Chakra, PersonalContextProject, PersonalContext } from '../../../types';
+import type {
+  AstroProfile,
+  AstroPoint,
+  Chakra,
+  HDAuthorityEntity,
+  HDLineEntity,
+  HDProfileEntity,
+  NumerologyNumber,
+  PersonalContextProject,
+  PersonalContext,
+} from '../../../types';
 import { getRelatedEntities } from '../../../services/entities';
 import { ChevronRightIcon } from '../../icons';
 import { GeneKeyContent } from './GeneKeyContent';
@@ -17,6 +27,9 @@ interface EntityPanelContentProps {
 
 const GENE_KEY_TYPES = new Set(['gene-key', 'codon-ring']);
 const HD_TYPES = new Set(['hd-gate', 'hd-channel', 'hd-center', 'hd-type']);
+const HD_AUTHORITY_TYPES = new Set(['hd-authority']);
+const HD_PROFILE_TYPES = new Set(['hd-profile']);
+const HD_LINE_TYPES = new Set(['hd-line', 'hd-variable']);
 const ASTROLOGY_TYPES = new Set(['planet', 'sign', 'house', 'element', 'aspect']);
 const PROFILE_TYPES = new Set([
   'profile-placement', 'profile-gk-placement', 'profile-hd-placement',
@@ -208,6 +221,412 @@ function OccupationContent({ entity }: { entity: EntityInfo }) {
   );
 }
 
+// ─── Point content renderer ─────────────────────────────────────────────────
+
+function PointContent({ entity }: { entity: EntityInfo }) {
+  const point = entity.data as AstroPoint;
+  if (!point) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Archetype badge */}
+      {point.archetype && (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {point.archetype}
+          </span>
+        </div>
+      )}
+
+      {/* Function and Meaning */}
+      {point.functionAndMeaning && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Meaning</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{point.functionAndMeaning}</p>
+        </div>
+      )}
+
+      {/* Contemplation questions */}
+      {point.contemplationQuestions && point.contemplationQuestions.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Reflections</h4>
+          <div className="space-y-2">
+            {point.contemplationQuestions.slice(0, 3).map((q, i) => (
+              <p key={i} className="text-sm text-theme-text-secondary italic leading-relaxed border-l-2 border-theme-border-subtle pl-3">
+                {q}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── HD Authority content renderer ─────────────────────────────────────────
+
+function HDAuthorityContent({ entity }: { entity: EntityInfo }) {
+  const auth = entity.data as HDAuthorityEntity;
+  if (!auth) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Center + percentage badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {auth.centerId && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            Centered in: {auth.centerId.replace('hd-center-', '').replace(/-/g, ' ')}
+          </span>
+        )}
+        {auth.percentage && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {auth.percentage} of people
+          </span>
+        )}
+      </div>
+
+      {/* Decision process */}
+      {auth.decisionProcess && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Decision Process</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{auth.decisionProcess}</p>
+        </div>
+      )}
+
+      {/* Timeframe */}
+      {auth.timeframe && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Timeframe</h4>
+          <p className="text-sm text-theme-text-secondary">{auth.timeframe}</p>
+        </div>
+      )}
+
+      {/* Signs of correct / incorrect */}
+      {auth.signs && (
+        <div className="space-y-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Signs</h4>
+          {auth.signs.correct && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Correct Decision</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{auth.signs.correct}</p>
+            </div>
+          )}
+          {auth.signs.incorrect && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Incorrect Decision</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{auth.signs.incorrect}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Practical guidance */}
+      {auth.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{auth.practicalGuidance}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── HD Profile content renderer ────────────────────────────────────────────
+
+function HDProfileContent({ entity }: { entity: EntityInfo }) {
+  const hdProfile = entity.data as HDProfileEntity;
+  if (!hdProfile) return null;
+
+  const profileLabel = `${hdProfile.personalityLine}/${hdProfile.designLine}`;
+
+  return (
+    <div className="space-y-4">
+      {/* Profile number badge */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs px-3 py-0.5 rounded-full bg-surface-raised text-theme-text-secondary font-semibold">
+          Profile {profileLabel}
+        </span>
+      </div>
+
+      {/* Life Theme */}
+      {hdProfile.lifeTheme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Life Theme</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hdProfile.lifeTheme}</p>
+        </div>
+      )}
+
+      {/* Gifts and Challenges */}
+      {hdProfile.gifts && hdProfile.gifts.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Gifts</h4>
+          <ul className="space-y-1">
+            {hdProfile.gifts.map((g, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-emerald-400 flex-shrink-0">+</span>
+                <span className="leading-snug">{g}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {hdProfile.challenges && hdProfile.challenges.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Challenges</h4>
+          <ul className="space-y-1">
+            {hdProfile.challenges.map((c, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-amber-400 flex-shrink-0">~</span>
+                <span className="leading-snug">{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Relationship style */}
+      {hdProfile.relationshipStyle && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Relationships</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hdProfile.relationshipStyle}</p>
+        </div>
+      )}
+
+      {/* Career guidance */}
+      {hdProfile.careerGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Career</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hdProfile.careerGuidance}</p>
+        </div>
+      )}
+
+      {/* Practical guidance */}
+      {hdProfile.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hdProfile.practicalGuidance}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── HD Line content renderer ────────────────────────────────────────────────
+
+function HDLineContent({ entity }: { entity: EntityInfo }) {
+  const line = entity.data as HDLineEntity;
+  if (!line) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Line number + archetype badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {line.lineNumber != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+            Line {line.lineNumber}
+          </span>
+        )}
+        {line.trigram && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {line.trigram} Trigram
+          </span>
+        )}
+      </div>
+
+      {/* Archetype */}
+      {line.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{line.archetype}</p>
+        </div>
+      )}
+
+      {/* Theme */}
+      {line.theme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Theme</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{line.theme}</p>
+        </div>
+      )}
+
+      {/* Healthy / Unhealthy expressions */}
+      {(line.healthyExpression || line.unhealthyExpression) && (
+        <div className="space-y-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Expressions</h4>
+          {line.healthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Healthy</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{line.healthyExpression}</p>
+            </div>
+          )}
+          {line.unhealthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Unhealthy</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{line.unhealthyExpression}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* In Personality / In Design */}
+      {(line.inPersonality || line.inDesign) && (
+        <div className="space-y-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Expressions by Position</h4>
+          {line.inPersonality && (
+            <div>
+              <span className="text-xs font-medium text-theme-text-tertiary">In Personality (Conscious): </span>
+              <span className="text-xs text-theme-text-secondary">{line.inPersonality}</span>
+            </div>
+          )}
+          {line.inDesign && (
+            <div>
+              <span className="text-xs font-medium text-theme-text-tertiary">In Design (Unconscious): </span>
+              <span className="text-xs text-theme-text-secondary">{line.inDesign}</span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Gifts and Challenges */}
+      {line.gifts && line.gifts.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Gifts</h4>
+          <ul className="space-y-1">
+            {line.gifts.map((g, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-emerald-400 flex-shrink-0">+</span>
+                <span className="leading-snug">{g}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      {line.challenges && line.challenges.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Challenges</h4>
+          <ul className="space-y-1">
+            {line.challenges.map((c, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-amber-400 flex-shrink-0">~</span>
+                <span className="leading-snug">{c}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Numerology content renderer ─────────────────────────────────────────────
+
+function NumerologyContent({ entity }: { entity: EntityInfo }) {
+  const num = entity.data as NumerologyNumber;
+  if (!num) return null;
+
+  const FREQ_COLORS = {
+    lower: 'text-rose-300',
+    aligned: 'text-sky-300',
+    highest: 'text-violet-300',
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Number badge + master number indicator */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-lg font-bold px-3 py-0.5 rounded-full bg-surface-raised text-theme-text-secondary">
+          {num.number}
+        </span>
+        {num.isMasterNumber && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-violet-300 font-semibold">
+            Master Number
+          </span>
+        )}
+      </div>
+
+      {/* Archetype */}
+      {num.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{num.archetype}</p>
+        </div>
+      )}
+
+      {/* Harmonic Tone — main description */}
+      {num.harmonicTone && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Harmonic Tone</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{num.harmonicTone}</p>
+        </div>
+      )}
+
+      {/* Correspondence badges */}
+      <div className="flex flex-wrap gap-1.5">
+        {num.planet && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Planet: {num.planet}
+          </span>
+        )}
+        {num.element && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Element: {num.element}
+          </span>
+        )}
+        {num.chakraId && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Chakra: {num.chakraId.replace('chakra-', '').replace(/-/g, ' ')}
+          </span>
+        )}
+      </div>
+
+      {/* Three-frequency section */}
+      <div className="space-y-2">
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Frequency Spectrum</h4>
+        {num.lowerExpression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.lower}`}>
+              Lower — {num.lowerExpression.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{num.lowerExpression.expression}</p>
+          </div>
+        )}
+        {num.alignedExpression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.aligned}`}>
+              Aligned — {num.alignedExpression.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{num.alignedExpression.expression}</p>
+          </div>
+        )}
+        {num.highestExpression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.highest}`}>
+              Highest — {num.highestExpression.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{num.highestExpression.expression}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Affirmation */}
+      {num.affirmation && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Affirmation</h4>
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed">"{num.affirmation}"</p>
+        </div>
+      )}
+
+      {/* Contemplative question */}
+      {num.contemplativeQuestion && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Reflection</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{num.contemplativeQuestion}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function EntityPanelContent({
   entity,
   colors,
@@ -287,6 +706,31 @@ export function EntityPanelContent({
       {/* Chakra */}
       {entity.type === 'chakra' && (
         <ChakraContent entity={entity} />
+      )}
+
+      {/* Point (North Node, South Node, Chiron, POF, Vertex, ASC, MC, etc.) */}
+      {entity.type === 'point' && (
+        <PointContent entity={entity} />
+      )}
+
+      {/* HD Authority */}
+      {HD_AUTHORITY_TYPES.has(entity.type) && (
+        <HDAuthorityContent entity={entity} />
+      )}
+
+      {/* HD Profile */}
+      {HD_PROFILE_TYPES.has(entity.type) && (
+        <HDProfileContent entity={entity} />
+      )}
+
+      {/* HD Line / HD Variable */}
+      {HD_LINE_TYPES.has(entity.type) && (
+        <HDLineContent entity={entity} />
+      )}
+
+      {/* Numerology number */}
+      {entity.type === 'numerology-number' && (
+        <NumerologyContent entity={entity} />
       )}
 
       {/* Personal project */}
