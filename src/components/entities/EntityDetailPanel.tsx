@@ -8,7 +8,7 @@ import React, { useEffect, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import type { EntityInfo } from '../../services/entities';
 import { useProfile } from '../../context';
-import { SYSTEM_COLORS, SYSTEM_LABELS, CATEGORY_LABELS, SIGN_ELEMENT_PANEL_COLORS } from './entityPanelConstants';
+import { SYSTEM_COLORS, SYSTEM_LABELS, CATEGORY_LABELS, SIGN_ELEMENT_PANEL_COLORS, CHAKRA_PANEL_COLORS, PERSONAL_ENTITY_COLORS } from './entityPanelConstants';
 import { getProfileSpheresForGeneKey } from './entityPanelUtils';
 import { EntityPanelHeader } from './EntityPanelHeader';
 import { EntityPanelFooter } from './EntityPanelFooter';
@@ -65,11 +65,24 @@ export function EntityDetailPanel({
   if (!entity) return null;
 
   let resolvedColors = SYSTEM_COLORS[entity.system];
+  // Signs: use element color
   if (entity.type === 'sign' && entity.data) {
     const elementId = (entity.data as { elementId?: string }).elementId;
     if (elementId && SIGN_ELEMENT_PANEL_COLORS[elementId as keyof typeof SIGN_ELEMENT_PANEL_COLORS]) {
       resolvedColors = SIGN_ELEMENT_PANEL_COLORS[elementId as keyof typeof SIGN_ELEMENT_PANEL_COLORS];
     }
+  }
+  // Elements: use their own element ID as color key
+  if (entity.type === 'element' && entity.id in SIGN_ELEMENT_PANEL_COLORS) {
+    resolvedColors = SIGN_ELEMENT_PANEL_COLORS[entity.id as keyof typeof SIGN_ELEMENT_PANEL_COLORS];
+  }
+  // Chakras: per-chakra color map
+  if (entity.type === 'chakra' && entity.id in CHAKRA_PANEL_COLORS) {
+    resolvedColors = CHAKRA_PANEL_COLORS[entity.id];
+  }
+  // Personal context entities: warm amber
+  if (entity.type === 'personal-project' || entity.type === 'occupation') {
+    resolvedColors = PERSONAL_ENTITY_COLORS;
   }
   const colors = resolvedColors;
   const systemLabel = SYSTEM_LABELS[entity.system];
@@ -91,7 +104,7 @@ export function EntityDetailPanel({
     return (
       <div
         className="bg-surface-base border border-theme-border-subtle rounded-xl shadow-lg
-          flex flex-col h-[600px] sticky top-4 animate-fade-in"
+          flex flex-col h-full animate-fade-in"
         role="region"
         aria-labelledby="entity-panel-title"
       >

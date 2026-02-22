@@ -225,6 +225,25 @@ const ELEMENT_STYLES: Record<string, {
   },
 };
 
+// Chakra-based styling
+const CHAKRA_LINK_STYLES: Record<string, {
+  bg: string; bgHover: string; border: string; text: string; textHover: string;
+}> = {
+  'chakra-1-root':         { bg: 'bg-red-500/10',    bgHover: 'hover:bg-red-500/20',    border: 'border-red-500/30',    text: 'text-red-300',    textHover: 'hover:text-red-200' },
+  'chakra-2-sacral':       { bg: 'bg-orange-500/10', bgHover: 'hover:bg-orange-500/20', border: 'border-orange-500/30', text: 'text-orange-300', textHover: 'hover:text-orange-200' },
+  'chakra-3-solar-plexus': { bg: 'bg-yellow-500/10', bgHover: 'hover:bg-yellow-500/20', border: 'border-yellow-500/30', text: 'text-yellow-300', textHover: 'hover:text-yellow-200' },
+  'chakra-4-heart':        { bg: 'bg-green-500/10',  bgHover: 'hover:bg-green-500/20',  border: 'border-green-500/30',  text: 'text-green-300',  textHover: 'hover:text-green-200' },
+  'chakra-5-throat':       { bg: 'bg-sky-500/10',    bgHover: 'hover:bg-sky-500/20',    border: 'border-sky-500/30',    text: 'text-sky-300',    textHover: 'hover:text-sky-200' },
+  'chakra-6-third-eye':    { bg: 'bg-indigo-500/10', bgHover: 'hover:bg-indigo-500/20', border: 'border-indigo-500/30', text: 'text-indigo-300', textHover: 'hover:text-indigo-200' },
+  'chakra-7-crown':        { bg: 'bg-violet-500/10', bgHover: 'hover:bg-violet-500/20', border: 'border-violet-500/30', text: 'text-violet-300', textHover: 'hover:text-violet-200' },
+};
+
+// Personal context entity styling — warm amber
+const PERSONAL_LINK_STYLE = {
+  bg: 'bg-amber-500/10', bgHover: 'hover:bg-amber-500/20', border: 'border-amber-400/30',
+  text: 'text-amber-300', textHover: 'hover:text-amber-200',
+};
+
 // Helper to get element-based styles for signs and elements
 function getElementStyles(entity: EntityInfo): typeof SYSTEM_STYLES[EntitySystem] | null {
   // For element entities, use their ID directly
@@ -241,6 +260,16 @@ function getElementStyles(entity: EntityInfo): typeof SYSTEM_STYLES[EntitySystem
     if (signData?.elementId && signData.elementId in ELEMENT_STYLES) {
       return ELEMENT_STYLES[signData.elementId];
     }
+  }
+
+  // For chakra entities, use per-chakra color
+  if (entity.type === 'chakra' && entity.id in CHAKRA_LINK_STYLES) {
+    return CHAKRA_LINK_STYLES[entity.id];
+  }
+
+  // For personal context entities, use amber
+  if (entity.type === 'personal-project' || entity.type === 'occupation') {
+    return PERSONAL_LINK_STYLE;
   }
 
   return null;

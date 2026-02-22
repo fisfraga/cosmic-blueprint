@@ -910,6 +910,12 @@ INTEGRATION:
 
 When exploring in this mode, always bridge cosmic insight with practical life application.
 Ground every cosmic observation in real goals, wins, and life areas.
+
+PERSONAL CONTEXT ENTITY REFERENCING:
+When the ILOS context includes occupation or active projects, reference them with entity links so the seeker can navigate directly to their personal context:
+- Occupation: [[pc-occupation|their role or title]]
+- Projects: [[pc-project-{id}|Project Name]] — use the exact project ID from the ACTIVE PROJECTS section of the ILOS context
+These links let the seeker open their personal context panel directly from the reading.
 `,
 
   numerology: `

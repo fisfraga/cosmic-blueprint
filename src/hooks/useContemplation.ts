@@ -29,6 +29,7 @@ import {
   type PathwayStep,
 } from '../services/pathways';
 import type { EntityInfo } from '../services/entities';
+import { registerPersonalContextEntities } from '../services/entities';
 import {
   type SavedSession,
   loadSessions,
@@ -388,6 +389,11 @@ export function useContemplation() {
   }, [category, pathwayContext, location.state, searchParams]);
 
   const activeProfileId = cosmicProfile?.meta.id;
+
+  // Keep personal context entities (PC-04) fresh in the entity registry
+  useEffect(() => {
+    registerPersonalContextEntities(cosmicProfile?.personalContext ?? undefined);
+  }, [cosmicProfile]);
 
   // Load saved sessions on mount; auto-resume if navigated here from SessionsLibrary
   useEffect(() => {

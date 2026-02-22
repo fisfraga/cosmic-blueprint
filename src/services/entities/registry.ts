@@ -78,6 +78,8 @@ import type {
   NatalAspect,
   NatalConfiguration,
   CosmicProfile,
+  // Personal context
+  PersonalContext,
   // Profile entity types
   AstrologyPlacementEntity,
   GeneKeysPlacementEntity,
@@ -139,6 +141,9 @@ export type EntityCategory =
   | 'profile-aspect'         // Astrology: aspect between two placements
   | 'profile-channel'        // Human Design: defined channel
   | 'profile-configuration'  // Astrology: aspect pattern
+  // Personal context entities (PC-04)
+  | 'personal-project'       // An active project from personalContext
+  | 'occupation'             // Occupation/role from personalContext
   // Legacy aliases (kept for backwards compatibility)
   | 'natal-placement'
   | 'natal-aspect';
@@ -1520,6 +1525,55 @@ class EntityRegistryService {
     return 'neutral';
   }
 
+  // ------------------------------------
+  // Personal Context Entity Management
+  // ------------------------------------
+
+  /**
+   * Register occupation and active projects from PersonalContext as clickable entities.
+   * Clears any previously registered pc-* entities first so this is idempotent.
+   */
+  registerPersonalContextEntities(ctx: PersonalContext | undefined): void {
+    // Remove any previously registered personal context entities
+    for (const id of Array.from(this.profileEntities.keys())) {
+      if (id.startsWith('pc-')) {
+        this.profileEntities.delete(id);
+      }
+    }
+
+    if (!ctx) return;
+
+    // Occupation entity
+    if (ctx.occupations && ctx.occupations.length > 0) {
+      const occEntity: EntityInfo = {
+        id: 'pc-occupation',
+        type: 'occupation',
+        name: ctx.occupations.join(', '),
+        system: 'shared',
+        description: ctx.professionalGoals || ctx.occupations.join(', '),
+        routePath: '/profile/personal-context',
+        data: ctx,
+        keywords: [...ctx.occupations, ...(ctx.specializations || [])],
+      };
+      this.profileEntities.set('pc-occupation', occEntity);
+    }
+
+    // Project entities
+    for (const project of ctx.activeProjects || []) {
+      const projEntity: EntityInfo = {
+        id: `pc-project-${project.id}`,
+        type: 'personal-project',
+        name: project.name,
+        system: 'shared',
+        description: project.description || project.name,
+        routePath: '/profile/personal-context',
+        data: project,
+        keywords: [project.status || '', project.linkedKeyArea || ''].filter(Boolean),
+      };
+      this.profileEntities.set(`pc-project-${project.id}`, projEntity);
+    }
+  }
+
   /**
    * Unregister the current profile's entities
    */
@@ -1730,3 +1784,5 @@ export const getPlacementsInHouse = (houseId: string) => entityRegistry.getPlace
 export const getAspectsInvolving = (planetId: string) => entityRegistry.getAspectsInvolving(planetId);
 export const getAspectsByType = (aspectId: string) => entityRegistry.getAspectsByType(aspectId);
 export const getEntityWithProfile = (id: string) => entityRegistry.getWithProfile(id);
+export const registerPersonalContextEntities = (ctx: PersonalContext | undefined) =>
+  entityRegistry.registerPersonalContextEntities(ctx);

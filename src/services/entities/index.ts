@@ -22,6 +22,7 @@ export {
   getAspectsInvolving,
   getAspectsByType,
   getEntityWithProfile,
+  registerPersonalContextEntities,
   type EntitySystem,
   type EntityCategory,
   type EntityInfo,

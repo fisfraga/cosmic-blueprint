@@ -1,5 +1,5 @@
 import type { EntityInfo } from '../../../services/entities';
-import type { AstroProfile } from '../../../types';
+import type { AstroProfile, Chakra, PersonalContextProject, PersonalContext } from '../../../types';
 import { getRelatedEntities } from '../../../services/entities';
 import { ChevronRightIcon } from '../../icons';
 import { GeneKeyContent } from './GeneKeyContent';
@@ -22,6 +22,191 @@ const PROFILE_TYPES = new Set([
   'profile-placement', 'profile-gk-placement', 'profile-hd-placement',
   'profile-aspect', 'profile-channel', 'profile-configuration',
 ]);
+
+// ─── Chakra content renderer ───────────────────────────────────────────────
+
+function ChakraContent({ entity }: { entity: EntityInfo }) {
+  const chakra = entity.data as Chakra;
+  if (!chakra) return null;
+
+  const STATUS_COLORS = {
+    constricted: 'text-rose-300',
+    flowing: 'text-emerald-300',
+    radiant: 'text-violet-300',
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Number + Sanskrit name */}
+      <div className="flex items-center gap-2">
+        <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+          Chakra {chakra.number}
+        </span>
+        {chakra.sanskritName && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary italic">
+            {chakra.sanskritName}
+          </span>
+        )}
+        {chakra.element && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {chakra.element}
+          </span>
+        )}
+      </div>
+
+      {/* Archetype + Life theme */}
+      {chakra.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary">{chakra.archetype}</p>
+        </div>
+      )}
+      {chakra.lifeTheme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Life Theme</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{chakra.lifeTheme}</p>
+        </div>
+      )}
+
+      {/* Three-frequency section */}
+      <div className="space-y-3">
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Frequencies</h4>
+        {chakra.constricted && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${STATUS_COLORS.constricted}`}>
+              Constricted — {chakra.constricted.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{chakra.constricted.expression}</p>
+          </div>
+        )}
+        {chakra.flowing && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${STATUS_COLORS.flowing}`}>
+              Flowing — {chakra.flowing.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{chakra.flowing.expression}</p>
+          </div>
+        )}
+        {chakra.radiant && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${STATUS_COLORS.radiant}`}>
+              Radiant — {chakra.radiant.name}
+            </div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{chakra.radiant.expression}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Body correlates */}
+      {chakra.bodyCorrelates && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Body</h4>
+          <p className="text-sm text-theme-text-secondary">{chakra.bodyCorrelates}</p>
+        </div>
+      )}
+
+      {/* Affirmation */}
+      {chakra.affirmation && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Affirmation</h4>
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed">"{chakra.affirmation}"</p>
+        </div>
+      )}
+
+      {/* Contemplative question */}
+      {chakra.contemplativeQuestion && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Reflection</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{chakra.contemplativeQuestion}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Personal project content renderer ─────────────────────────────────────
+
+function PersonalProjectContent({ entity }: { entity: EntityInfo }) {
+  const project = entity.data as PersonalContextProject;
+  if (!project) return null;
+
+  const STATUS_LABELS: Record<string, string> = {
+    planning: 'Planning',
+    active: 'Active',
+    review: 'Review',
+    paused: 'Paused',
+  };
+  const STATUS_COLORS: Record<string, string> = {
+    planning: 'text-sky-300',
+    active: 'text-emerald-300',
+    review: 'text-amber-300',
+    paused: 'text-theme-text-tertiary',
+  };
+
+  return (
+    <div className="space-y-3">
+      {project.status && (
+        <div className="flex items-center gap-2">
+          <span className={`text-xs font-medium ${STATUS_COLORS[project.status] || ''}`}>
+            ● {STATUS_LABELS[project.status] || project.status}
+          </span>
+        </div>
+      )}
+      {project.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">About</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{project.description}</p>
+        </div>
+      )}
+      {project.linkedKeyArea && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Life Area</h4>
+          <p className="text-sm text-theme-text-secondary">
+            {project.linkedKeyArea.replace('house-', 'House ')}
+          </p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Occupation content renderer ───────────────────────────────────────────
+
+function OccupationContent({ entity }: { entity: EntityInfo }) {
+  const ctx = entity.data as Partial<PersonalContext> | undefined;
+  if (!ctx) return null;
+
+  const occupations = (ctx as { occupations?: string[] }).occupations || [];
+
+  return (
+    <div className="space-y-3">
+      {occupations.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Roles</h4>
+          <div className="flex flex-wrap gap-1.5">
+            {occupations.map((occ, i) => (
+              <span key={i} className="px-2 py-0.5 text-xs rounded bg-surface-raised text-theme-text-secondary">
+                {occ}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+      {ctx.workStyle && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Work Style</h4>
+          <p className="text-sm text-theme-text-secondary capitalize">{ctx.workStyle}</p>
+        </div>
+      )}
+      {ctx.professionalGoals && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Goals</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{ctx.professionalGoals}</p>
+        </div>
+      )}
+    </div>
+  );
+}
 
 export function EntityPanelContent({
   entity,
@@ -97,6 +282,21 @@ export function EntityPanelContent({
 
       {PROFILE_TYPES.has(entity.type) && (
         <ProfileContent entity={entity} />
+      )}
+
+      {/* Chakra */}
+      {entity.type === 'chakra' && (
+        <ChakraContent entity={entity} />
+      )}
+
+      {/* Personal project */}
+      {entity.type === 'personal-project' && (
+        <PersonalProjectContent entity={entity} />
+      )}
+
+      {/* Occupation */}
+      {entity.type === 'occupation' && (
+        <OccupationContent entity={entity} />
       )}
 
       {/* Related Entities */}

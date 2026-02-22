@@ -1,13 +1,11 @@
 import type { EntitySystem } from '../../services/entities';
 import type { ElementColorKey } from '../../styles/colors';
 
+// Shared shape for panel color tokens
+export type PanelColors = { bg: string; border: string; accent: string; text: string };
+
 // System colors for header styling
-export const SYSTEM_COLORS: Record<EntitySystem, {
-  bg: string;
-  border: string;
-  accent: string;
-  text: string;
-}> = {
+export const SYSTEM_COLORS: Record<EntitySystem, PanelColors> = {
   astrology: {
     bg: 'bg-purple-900/50',
     border: 'border-purple-500/30',
@@ -36,16 +34,27 @@ export const SYSTEM_COLORS: Record<EntitySystem, {
 
 // Sign panel colors — element-based (fire/earth/air/water)
 // bg/border/text from elementColors; accent uses solid bg for badge/button consistency with SYSTEM_COLORS
-export const SIGN_ELEMENT_PANEL_COLORS: Record<ElementColorKey, {
-  bg: string;
-  border: string;
-  accent: string;
-  text: string;
-}> = {
+export const SIGN_ELEMENT_PANEL_COLORS: Record<ElementColorKey, PanelColors> = {
   fire:  { bg: 'bg-fire-500/10',  border: 'border-fire-500/30',  accent: 'bg-fire-500',  text: 'text-fire-400' },
   earth: { bg: 'bg-earth-500/10', border: 'border-earth-500/30', accent: 'bg-earth-500', text: 'text-earth-400' },
   air:   { bg: 'bg-air-500/10',   border: 'border-air-500/30',   accent: 'bg-air-500',   text: 'text-air-400' },
   water: { bg: 'bg-water-500/10', border: 'border-water-500/30', accent: 'bg-water-500', text: 'text-water-400' },
+};
+
+// Chakra panel colors — per-chakra static map (avoids dynamic Tailwind purge issues with colorHex)
+export const CHAKRA_PANEL_COLORS: Record<string, PanelColors> = {
+  'chakra-1-root':         { bg: 'bg-red-900/30',    border: 'border-red-500/30',    accent: 'bg-red-500',    text: 'text-red-300' },
+  'chakra-2-sacral':       { bg: 'bg-orange-900/30', border: 'border-orange-500/30', accent: 'bg-orange-500', text: 'text-orange-300' },
+  'chakra-3-solar-plexus': { bg: 'bg-yellow-900/30', border: 'border-yellow-500/30', accent: 'bg-yellow-500', text: 'text-yellow-300' },
+  'chakra-4-heart':        { bg: 'bg-green-900/30',  border: 'border-green-500/30',  accent: 'bg-green-500',  text: 'text-green-300' },
+  'chakra-5-throat':       { bg: 'bg-sky-900/30',    border: 'border-sky-500/30',    accent: 'bg-sky-500',    text: 'text-sky-300' },
+  'chakra-6-third-eye':    { bg: 'bg-indigo-900/30', border: 'border-indigo-500/30', accent: 'bg-indigo-500', text: 'text-indigo-300' },
+  'chakra-7-crown':        { bg: 'bg-violet-900/30', border: 'border-violet-500/30', accent: 'bg-violet-500', text: 'text-violet-300' },
+};
+
+// Personal context entity colors — warm amber
+export const PERSONAL_ENTITY_COLORS: PanelColors = {
+  bg: 'bg-amber-900/30', border: 'border-amber-400/30', accent: 'bg-amber-400', text: 'text-amber-300',
 };
 
 // System labels
@@ -86,6 +95,14 @@ export const CATEGORY_LABELS: Record<string, string> = {
   'codon-ring': 'Codon Ring',
   'amino-acid': 'Amino Acid',
   trigram: 'Trigram',
+  // Wisdom Traditions
+  'chakra': 'Chakra',
+  'numerology-number': 'Number',
+  'hermetic-principle': 'Principle',
+  'fixed-star': 'Fixed Star',
+  // Personal Context
+  'personal-project': 'Your Project',
+  'occupation': 'Your Occupation',
   // Profile entities
   'natal-placement': 'Your Placement',
   'natal-aspect': 'Your Aspect',
