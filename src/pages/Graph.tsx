@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { ConstellationGraph } from '../components';
-import type { RelationshipType, EntityType } from '../types';
+import { EntityStack } from '../components/entities/EntityStack';
+import { getEntity } from '../services/entities/registry';
+import type { EntityInfo } from '../services/entities/registry';
+import type { RelationshipType, EntityType, UniversalEntity } from '../types';
 
 const relationshipTypeGroups = [
   {
@@ -34,6 +37,7 @@ export function Graph() {
     'element',
   ]);
   const [graphSize, setGraphSize] = useState({ width: 900, height: 600 });
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
 
   // Calculate graph size based on window
   useEffect(() => {
@@ -47,6 +51,25 @@ export function Graph() {
     window.addEventListener('resize', updateSize);
     return () => window.removeEventListener('resize', updateSize);
   }, []);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      const already = prev.findIndex(e => e.id === entity.id);
+      if (already !== -1) return prev;
+      if (prev.length >= 2) return [prev[1], entity];
+      return [...prev, entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((id: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== id));
+  }, []);
+
+  // Bridge from UniversalEntity (D3 graph) → EntityInfo (registry)
+  const handleNodeSelect = useCallback((universalEntity: UniversalEntity) => {
+    const entity = getEntity(universalEntity.id);
+    if (entity) handleEntityClick(entity);
+  }, [handleEntityClick]);
 
   const toggleRelationshipGroup = (types: RelationshipType[]) => {
     const allSelected = types.every((t) => selectedRelationshipTypes.includes(t));
@@ -165,17 +188,25 @@ export function Graph() {
         )}
       </div>
 
-      {/* Graph */}
-      <div className="flex justify-center">
-        <ConstellationGraph
-          width={graphSize.width}
-          height={graphSize.height}
-          filterRelationshipTypes={
-            selectedRelationshipTypes.length > 0
-              ? selectedRelationshipTypes
-              : undefined
-          }
-          filterEntityTypes={selectedEntityTypes}
+      {/* Graph + EntityStack */}
+      <div className="flex h-full">
+        <div className="flex-1 min-w-0 overflow-hidden relative flex justify-center">
+          <ConstellationGraph
+            width={graphSize.width}
+            height={graphSize.height}
+            filterRelationshipTypes={
+              selectedRelationshipTypes.length > 0
+                ? selectedRelationshipTypes
+                : undefined
+            }
+            filterEntityTypes={selectedEntityTypes}
+            onSelectEntity={handleNodeSelect}
+          />
+        </div>
+        <EntityStack
+          entities={selectedEntities}
+          onCloseEntity={handleCloseEntity}
+          onEntityClick={handleEntityClick}
         />
       </div>
 
