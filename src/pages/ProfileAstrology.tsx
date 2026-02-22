@@ -278,25 +278,19 @@ export function ProfileAstrology() {
                     <td className="py-3">
                       {hdGate ? (
                         <div className="flex items-center gap-1.5">
-                          <Link
-                            to={`/human-design/${hdGate.id}`}
-                            onClick={(e) => e.stopPropagation()}
-                            className="text-xs font-serif text-humandesign-400 hover:text-humandesign-300 transition-colors"
-                            title={hdGate.name}
-                          >
-                            {hdGate.gateNumber}
-                          </Link>
+                          <EntityLink
+                            entityId={hdGate.id}
+                            displayName={String(hdGate.gateNumber)}
+                            onClick={handleEntityClick}
+                          />
                           {gk && (
                             <>
                               <span className="text-theme-text-muted">·</span>
-                              <Link
-                                to={`/gene-keys/${gk.id}`}
-                                onClick={(e) => e.stopPropagation()}
-                                className="text-xs font-serif text-genekey-400 hover:text-genekey-300 transition-colors"
-                                title={gk.name}
-                              >
-                                {gk.keyNumber}
-                              </Link>
+                              <EntityLink
+                                entityId={gk.id}
+                                displayName={String(gk.keyNumber)}
+                                onClick={handleEntityClick}
+                              />
                             </>
                           )}
                         </div>

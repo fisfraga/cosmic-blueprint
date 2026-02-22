@@ -1,9 +1,12 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useProfile } from '../context';
 import { planets, signs, geneKeys, numerologyNumbers, chakras, hermeticPrinciples } from '../data';
 import { CosmicWeatherWidget } from '../components/CosmicWeatherWidget';
+import { EntityStack } from '../components/entities';
+import { getEntity } from '../services/entities';
+import type { EntityInfo } from '../services/entities';
 import { useAuth } from '../context/AuthContext';
 import { loadInsights } from '../services/insights';
 import type { SavedInsight } from '../services/insights';
@@ -169,6 +172,19 @@ export function Home() {
   const navigate = useNavigate();
   const [expandedIdentity, setExpandedIdentity] = useState(false);
   const [recentInsights, setRecentInsights] = useState<SavedInsight[]>([]);
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   useEffect(() => {
     const all = loadInsights();
@@ -190,8 +206,9 @@ export function Home() {
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
-      className="space-y-14"
+      className="flex h-full"
     >
+      <div className="flex-1 min-w-0 overflow-y-auto space-y-14">
       {/* ── HERO ─────────────────────────────────────────────────────────────── */}
       <section className="relative text-center py-12 overflow-hidden">
         {/* Background sacred geometry decoration */}
@@ -274,22 +291,34 @@ export function Home() {
               </div>
               <div className="space-y-2">
                 {sunSign && (
-                  <Link to={`/signs/${sunSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                  <div
+                    className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group cursor-pointer"
+                    onClick={() => { const e = getEntity(sunSign.id); if (e) handleEntityClick(e); }}
+                  >
                     <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('sun')?.symbol}</span>
-                    <div><p className="text-theme-text-tertiary text-xs">Sun</p><p className="text-theme-text-primary text-sm">{sunSign.name}</p></div>
-                  </Link>
+                    <div className="flex-1"><p className="text-theme-text-tertiary text-xs">Sun</p><p className="text-theme-text-primary text-sm">{sunSign.name}</p></div>
+                    <Link to={`/signs/${sunSign.id}`} onClick={(e) => e.stopPropagation()} className="text-xs text-air-400 opacity-0 group-hover:opacity-100 transition-opacity">→</Link>
+                  </div>
                 )}
                 {moonSign && (
-                  <Link to={`/signs/${moonSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                  <div
+                    className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group cursor-pointer"
+                    onClick={() => { const e = getEntity(moonSign.id); if (e) handleEntityClick(e); }}
+                  >
                     <span className="w-7 h-7 flex items-center justify-center text-base bg-air-500/20 text-air-400 rounded-full">{planets.get('moon')?.symbol}</span>
-                    <div><p className="text-theme-text-tertiary text-xs">Moon</p><p className="text-theme-text-primary text-sm">{moonSign.name}</p></div>
-                  </Link>
+                    <div className="flex-1"><p className="text-theme-text-tertiary text-xs">Moon</p><p className="text-theme-text-primary text-sm">{moonSign.name}</p></div>
+                    <Link to={`/signs/${moonSign.id}`} onClick={(e) => e.stopPropagation()} className="text-xs text-air-400 opacity-0 group-hover:opacity-100 transition-opacity">→</Link>
+                  </div>
                 )}
                 {risingSign && (
-                  <Link to={`/signs/${risingSign.id}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group">
+                  <div
+                    className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-air-500/10 transition-colors group cursor-pointer"
+                    onClick={() => { const e = getEntity(risingSign.id); if (e) handleEntityClick(e); }}
+                  >
                     <span className="w-7 h-7 flex items-center justify-center text-xs bg-air-500/20 text-air-400 rounded-full font-medium">AC</span>
-                    <div><p className="text-theme-text-tertiary text-xs">Rising</p><p className="text-theme-text-primary text-sm">{risingSign.name}</p></div>
-                  </Link>
+                    <div className="flex-1"><p className="text-theme-text-tertiary text-xs">Rising</p><p className="text-theme-text-primary text-sm">{risingSign.name}</p></div>
+                    <Link to={`/signs/${risingSign.id}`} onClick={(e) => e.stopPropagation()} className="text-xs text-air-400 opacity-0 group-hover:opacity-100 transition-opacity">→</Link>
+                  </div>
                 )}
               </div>
               <Link to="/profile/astrology" className="mt-3 block text-xs text-air-400 hover:text-air-300 transition-colors">
@@ -312,10 +341,15 @@ export function Home() {
                   ].map(({ sphere, label }) => {
                     const gk = geneKeys.get(sphere.geneKeyId);
                     return (
-                      <Link key={sphere.geneKeyId} to={`/gene-keys/${sphere.geneKeyId}`} className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-genekey-500/10 transition-colors group">
+                      <div
+                        key={sphere.geneKeyId}
+                        className="flex items-center gap-3 p-2 -mx-2 rounded-lg hover:bg-genekey-500/10 transition-colors group cursor-pointer"
+                        onClick={() => { const e = getEntity(sphere.geneKeyId); if (e) handleEntityClick(e); }}
+                      >
                         <span className="w-7 h-7 flex items-center justify-center text-xs font-medium bg-genekey-500/20 text-genekey-400 rounded-full">{sphere.geneKeyNumber}</span>
-                        <div className="min-w-0"><p className="text-theme-text-tertiary text-xs">{label}</p><p className="text-theme-text-primary text-sm truncate">{gk?.gift.name}</p></div>
-                      </Link>
+                        <div className="flex-1 min-w-0"><p className="text-theme-text-tertiary text-xs">{label}</p><p className="text-theme-text-primary text-sm truncate">{gk?.gift.name}</p></div>
+                        <Link to={`/gene-keys/${sphere.geneKeyId}`} onClick={(e) => e.stopPropagation()} className="text-xs text-genekey-400 opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0">→</Link>
+                      </div>
                     );
                   })}
                 </div>
@@ -524,6 +558,14 @@ export function Home() {
           "The stars don't determine our destiny — they illuminate the path."
         </blockquote>
       </section>
+      </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }

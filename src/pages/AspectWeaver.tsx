@@ -1,9 +1,12 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
 import { planets, signs, aspects, getSignsInOrder } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
+import { EntityStack, EntityLink } from '../components/entities';
+import { getEntity } from '../services/entities';
+import type { EntityInfo } from '../services/entities';
 import {
   sortAspectsByPriority,
   getAspectPriorityTier,
@@ -37,6 +40,20 @@ const wheelPlanets = ['sun', 'moon', 'mercury', 'venus', 'mars', 'jupiter', 'sat
 
 export function AspectWeaver() {
   const { profile, isLoading, hasProfile } = useProfile();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
+
   const [selectedAspect, setSelectedAspect] = useState<NatalAspect | null>(null);
   const [hoveredAspect, setHoveredAspect] = useState<string | null>(null);
   const [filterAspectType, setFilterAspectType] = useState<string | null>(null);
@@ -117,8 +134,9 @@ export function AspectWeaver() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-6"
+      className="flex h-full"
     >
+      <div className="flex-1 min-w-0 overflow-y-auto space-y-6">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
@@ -401,25 +419,49 @@ export function AspectWeaver() {
                 </div>
               </div>
 
-              <div className="flex gap-2 mt-4">
-                <Link
-                  to={`/planets/${planet1.id}`}
-                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
-                >
-                  View {planet1.name}
-                </Link>
-                <Link
-                  to={`/planets/${planet2.id}`}
-                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
-                >
-                  View {planet2.name}
-                </Link>
-                <Link
-                  to={`/aspects/${aspectType.id}`}
-                  className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors"
-                >
-                  View {aspectType.name}
-                </Link>
+              <div className="flex gap-2 mt-4 flex-wrap items-center">
+                {(() => {
+                  const p1Entity = getEntity(planet1.id);
+                  const p2Entity = getEntity(planet2.id);
+                  const aspectEntity = getEntity(aspectType.id);
+                  return (
+                    <>
+                      {p1Entity ? (
+                        <EntityLink
+                          entityId={planet1.id}
+                          displayName={`View ${planet1.name}`}
+                          onClick={handleEntityClick}
+                        />
+                      ) : (
+                        <Link to={`/planets/${planet1.id}`} className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors">
+                          View {planet1.name}
+                        </Link>
+                      )}
+                      {p2Entity ? (
+                        <EntityLink
+                          entityId={planet2.id}
+                          displayName={`View ${planet2.name}`}
+                          onClick={handleEntityClick}
+                        />
+                      ) : (
+                        <Link to={`/planets/${planet2.id}`} className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors">
+                          View {planet2.name}
+                        </Link>
+                      )}
+                      {aspectEntity ? (
+                        <EntityLink
+                          entityId={aspectType.id}
+                          displayName={`View ${aspectType.name}`}
+                          onClick={handleEntityClick}
+                        />
+                      ) : (
+                        <Link to={`/aspects/${aspectType.id}`} className="px-3 py-1.5 bg-surface-raised hover:bg-surface-interactive text-theme-text-primary text-sm rounded transition-colors">
+                          View {aspectType.name}
+                        </Link>
+                      )}
+                    </>
+                  );
+                })()}
               </div>
             </motion.div>
           );
@@ -457,6 +499,14 @@ export function AspectWeaver() {
           })}
         </div>
       </div>
+      </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }
