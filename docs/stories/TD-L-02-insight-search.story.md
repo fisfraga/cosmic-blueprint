@@ -15,26 +15,26 @@ This is a pure frontend feature: localStorage is the primary store, so search is
 
 ## Acceptance Criteria
 
-- [ ] A search input is visible at the top of the Insight Library page
-- [ ] Typing in the search input filters insights in real time (no debounce needed for <200 items)
-- [ ] Search matches against: insight content text, entity name, contemplation type
-- [ ] Search is case-insensitive
-- [ ] Empty search shows all insights (no filter)
-- [ ] "No results" state shown with helpful text when search yields no matches
-- [ ] Search is combined with existing filters (by tradition, date range if implemented) using AND logic
-- [ ] Search input is cleared by pressing Escape or clicking an X button
-- [ ] Search state is NOT persisted (clears on page reload)
+- [x] A search input is visible at the top of the Insight Library page
+- [x] Typing in the search input filters insights in real time (no debounce needed for <200 items)
+- [x] Search matches against: insight content text, entity name, contemplation type
+- [x] Search is case-insensitive
+- [x] Empty search shows all insights (no filter)
+- [x] "No results" state shown with helpful text when search yields no matches
+- [x] Search is combined with existing filters (by tradition, date range if implemented) using AND logic
+- [x] Search input is cleared by pressing Escape or clicking an X button
+- [x] Search state is NOT persisted (clears on page reload)
 
 ## Tasks
 
-- [ ] Read the current Insight Library page component
-- [ ] Read `src/services/insights.ts` to understand the insight data shape
-- [ ] Add a `SearchInput` component or reuse an existing input component
-- [ ] Implement client-side filter function: `filterInsights(insights, query)`
-- [ ] Wire up filter to rendered insight list
-- [ ] Add "no results" empty state
-- [ ] Add Escape key handler to clear search
-- [ ] Run `npm run verify`
+- [x] Read the current Insight Library page component
+- [x] Read `src/services/insights.ts` to understand the insight data shape
+- [x] Add a `SearchInput` component or reuse an existing input component
+- [x] Implement client-side filter function: `filterInsights(insights, query)`
+- [x] Wire up filter to rendered insight list
+- [x] Add "no results" empty state
+- [x] Add Escape key handler to clear search
+- [x] Run `npm run verify`
 
 ## Scope
 
@@ -55,3 +55,32 @@ TD-L-01 recommended first (profile isolation ensures search operates within corr
 ## Definition of Done
 
 Search input on Insight Library filters insights in real time. No-results state present. `npm run verify` passes.
+
+---
+
+## Dev Agent Record
+
+**Agent:** @dev (Dex)
+**Completed:** 2026-02-22
+
+### Implementation Summary
+
+All search logic was implemented directly in `src/pages/InsightLibrary.tsx` — no new files created.
+
+**Changes made to `src/pages/InsightLibrary.tsx`:**
+
+- `searchQuery` state (`useState<string>('')`) and `searchInputRef` (`useRef<HTMLInputElement>`) added at the top of the component
+- `filtered` useMemo combines category filter AND search: trims + lowercases query, matches against `content`, `focusEntity` (the `SavedInsight` field corresponding to entity name), and `contemplationType`; returns all insights when query is empty
+- `counts` useMemo recalculates per-tab counts against the search-filtered subset so filter pill numbers stay accurate while the user types
+- Search input UI placed above the FilterBar inside the `insights.length > 0` branch: `role="search"` wrapper, SVG magnifier icon (pointer-events-none), `aria-label="Search insights"`, Escape key handler that clears and blurs, and a conditional X button (SVG × icon with `aria-label="Clear search"`) that restores focus to the input
+- No-results state: when `filtered.length === 0` and `insights.length > 0`, shows a contextual message — includes the active category name when a category filter is also active (e.g. "No insights matching "sun" in Astrology.")
+- The original `EmptyState` ("No insights saved yet") is shown only when `insights.length === 0`, preserving the correct distinction between zero insights vs zero results
+
+**Key decisions:**
+- Matched against `focusEntity` (not `entityName`) — this is the actual field on `SavedInsight`; the story spec used "entityName" as a conceptual label
+- No debounce added per spec ("no debounce needed for <200 items")
+- Search state is session-only (`useState`) — not persisted to localStorage or URL
+
+### Verify Result
+
+`npm run verify` — 337 tests passed, clean TypeScript build.
