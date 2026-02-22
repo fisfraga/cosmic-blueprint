@@ -1,6 +1,6 @@
 // Context builder for Contemplation Chamber AI
 // Full Chart Context Architecture - Harmonic Resonance
-import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile, Element } from '../../types';
+import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile, Element, PersonalContext } from '../../types';
 import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree } from '../../data';
 import { getFixedStarConjunctions } from '../fixedStars';
 import { getGalacticConjunctions, getGalacticTransitActivations, type GalacticConjunction } from '../galacticAstrology';
@@ -1744,9 +1744,10 @@ export { formatGalacticPointFocus };
  */
 export function appendILOSContext(
   profileContext: string,
-  category: ContemplationCategory
+  category: ContemplationCategory,
+  personalCtx?: PersonalContext,
 ): string {
-  const ilosSection = formatILOSContextForCategory(category);
+  const ilosSection = formatILOSContextForCategory(category, personalCtx);
   if (ilosSection) {
     return profileContext + '\n\n' + ilosSection;
   }

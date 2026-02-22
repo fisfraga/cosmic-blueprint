@@ -7,6 +7,7 @@ import personalContext from '../../data/ilos/personal-context.json';
 import activeSnapshot from '../../data/ilos/active-snapshot.json';
 import areaHouseBridge from '../../data/ilos/area-house-bridge.json';
 import methodology from '../../data/ilos/methodology.json';
+import type { PersonalContext } from '../../types';
 
 export interface ILOSContext {
   personalContext: typeof personalContext;
@@ -104,11 +105,11 @@ export function formatILOSContext(): string {
  * Category-specific ILOS context formatting.
  * Different categories get different levels of ILOS context.
  */
-export function formatILOSContextForCategory(category: string): string {
+export function formatILOSContextForCategory(category: string, personalCtx?: PersonalContext): string {
   switch (category) {
     case 'lifeOS':
     case 'crossSystem':
-      return formatFullILOSContext();
+      return formatFullILOSContext(personalCtx);
 
     case 'astrology':
       return formatAstrologyILOSContext();
@@ -132,16 +133,69 @@ export function formatILOSContextForCategory(category: string): string {
   }
 }
 
-function formatFullILOSContext(): string {
+function formatFullILOSContext(personalCtx?: PersonalContext): string {
   const sections: string[] = [];
 
   sections.push(formatILOSContext());
 
-  // Add personal context
-  sections.push('\n[PERSONAL CONTEXT]');
-  sections.push(`  Identity: ${personalContext.identity}`);
-  sections.push(`  Business: ${personalContext.businessContext}`);
-  sections.push(`  Non-negotiables: ${personalContext.nonNegotiables}`);
+  if (personalCtx) {
+    // Dynamic profile data — live per-user personal context
+    sections.push('\n[PERSONAL CONTEXT — Live Profile Data]');
+    if (personalCtx.occupations.length)
+      sections.push(`  Occupation: ${personalCtx.occupations.join(', ')}`);
+    if (personalCtx.workStyle)
+      sections.push(`  Work style: ${personalCtx.workStyle}`);
+    if (personalCtx.specializations?.length)
+      sections.push(`  Specializations: ${personalCtx.specializations.join(', ')}`);
+    if (personalCtx.professionalGoals)
+      sections.push(`  Professional goals: ${personalCtx.professionalGoals}`);
+    if (personalCtx.lifeStage)
+      sections.push(`  Life stage: ${personalCtx.lifeStage}`);
+    if (personalCtx.primaryLocation)
+      sections.push(`  Location: ${personalCtx.primaryLocation}`);
+
+    if (personalCtx.activeProjects?.length) {
+      sections.push('\n[ACTIVE PROJECTS]');
+      personalCtx.activeProjects.forEach(p => {
+        const status = p.status ? ` (${p.status})` : '';
+        const desc = p.description ? ` — ${p.description}` : '';
+        sections.push(`  • ${p.name}${status}${desc}`);
+      });
+    }
+
+    if (personalCtx.recentWins?.length) {
+      sections.push('\n[RECENT WINS]');
+      personalCtx.recentWins.forEach(w => sections.push(`  • ${w}`));
+    }
+
+    if (personalCtx.coreValues?.length) {
+      sections.push('\n[CORE VALUES]');
+      sections.push(`  • ${personalCtx.coreValues.join(', ')}`);
+    }
+
+    if (personalCtx.nonNegotiables?.length) {
+      sections.push('\n[NON-NEGOTIABLES]');
+      sections.push(`  • ${personalCtx.nonNegotiables.join(', ')}`);
+    }
+
+    if (personalCtx.keyRelationships?.length) {
+      sections.push('\n[KEY RELATIONSHIPS]');
+      personalCtx.keyRelationships.forEach(r =>
+        sections.push(`  • ${r.name} (${r.role})`)
+      );
+    }
+
+    if (personalCtx.lifeManifesto) {
+      sections.push('\n[LIFE MANIFESTO]');
+      sections.push(`  ${personalCtx.lifeManifesto}`);
+    }
+  } else {
+    // Static fallback — pre-PC-01 behavior
+    sections.push('\n[PERSONAL CONTEXT]');
+    sections.push(`  Identity: ${personalContext.identity}`);
+    sections.push(`  Business: ${personalContext.businessContext}`);
+    sections.push(`  Non-negotiables: ${personalContext.nonNegotiables}`);
+  }
 
   // Add area-house bridge summary
   sections.push('\n[AREA-HOUSE BRIDGE]');

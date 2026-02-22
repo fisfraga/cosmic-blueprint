@@ -465,7 +465,7 @@ export function useContemplation() {
     };
 
     const rawContext = formatProfileContext(profile, selection);
-    const contextWithILOS = appendILOSContext(rawContext, category);
+    const contextWithILOS = appendILOSContext(rawContext, category, cosmicProfile?.personalContext);
     const context = appendKnowledgeExcerpts(contextWithILOS, selection);
     const categoryPrompt = CATEGORY_PROMPTS[category] || CATEGORY_PROMPTS['crossSystem'];
     const typePrompt = getCustomPrompt(contemplationType) ?? CONTEMPLATION_TYPE_PROMPTS[contemplationType] ?? '';
