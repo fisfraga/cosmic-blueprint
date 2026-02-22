@@ -1,15 +1,11 @@
 /**
  * Astrology API Service
  *
- * This service provides an abstraction layer for external astrology APIs.
- * It handles the calculation of natal charts including placements, houses,
- * aspects, and elemental analysis.
+ * Abstraction layer for natal chart calculation (houses, aspects, placements).
+ * Gene Keys and Human Design are calculated locally (chartCalculation.ts).
  *
- * Gene Keys and Human Design are calculated locally (via chartCalculation.ts).
- * Traditional astrology (houses, aspects) requires this external API.
- *
- * Provider: FreeAstroAPI
- * Docs: https://freeastroapi.com/docs/western/natal
+ * Provider: Swiss Ephemeris via self-hosted Python microservice (astrology-service/).
+ * Proxied through Express /api/astrology → http://astrology-api:8000/chart/natal
  */
 
 import type {
@@ -41,8 +37,8 @@ export interface AstrologyAPIResponse {
   };
 }
 
-// FreeAstroAPI response structure
-interface FreeAstroPlanet {
+// Astrology service response structure (from astrology-service/app/models.py)
+interface AstroServicePlanet {
   name: string;
   sign: string;
   sign_num: number;
@@ -53,14 +49,14 @@ interface FreeAstroPlanet {
   speed?: number;
 }
 
-interface FreeAstroHouse {
+interface AstroServiceHouse {
   house: number;
   sign: string;
   sign_num: number;
   position: number;
 }
 
-interface FreeAstroAspect {
+interface AstroServiceAspect {
   p1_name: string;
   p2_name: string;
   aspect: string;
@@ -69,11 +65,10 @@ interface FreeAstroAspect {
   diff: number;
 }
 
-interface FreeAstroResponse {
-  subject?: { name?: string };
-  planets: FreeAstroPlanet[];
-  houses: FreeAstroHouse[];
-  aspects: FreeAstroAspect[];
+interface AstroServiceResponse {
+  planets: AstroServicePlanet[];
+  houses: AstroServiceHouse[];
+  aspects: AstroServiceAspect[];
 }
 
 // ============================================================================
@@ -169,10 +164,10 @@ function getAspectId(aspect: string): string | null {
 }
 
 /**
- * Transform FreeAstroAPI response to our format
+ * Transform astrology service response to our internal format
  */
-function transformFreeAstroResponse(
-  data: FreeAstroResponse,
+function transformAstroServiceResponse(
+  data: AstroServiceResponse,
   profileId: string
 ): AstrologyAPIResponse {
   // Transform planets to placements
@@ -198,7 +193,7 @@ function transformFreeAstroResponse(
       };
     });
 
-  // Transform houses
+  // Transform house cusps
   const housePositions: HousePosition[] = data.houses.map(h => {
     const signId = getSignId(h.sign);
     const degree = Math.floor(h.position);
@@ -315,7 +310,8 @@ function calculateElementalAnalysis(
 // ============================================================================
 
 /**
- * Fetch astrology chart from FreeAstroAPI via serverless function
+ * Fetch astrology chart from the Swiss Ephemeris microservice
+ * Proxied via Express /api/astrology → astrology-service:8000/chart/natal
  */
 export async function fetchAstrologyChart(
   birthData: BirthData
@@ -325,28 +321,37 @@ export async function fetchAstrologyChart(
     return null;
   }
 
+  const [year, month, day] = birthData.dateOfBirth.split('-').map(Number);
+  const [hour, minute] = birthData.timeOfBirth.split(':').map(Number);
+
   try {
-    console.log('Calling FreeAstroAPI via serverless function...');
+    console.log('Calling astrology service...');
 
     const response = await fetch('/api/astrology', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ birthData }),
+      body: JSON.stringify({
+        year, month, day, hour, minute,
+        latitude: birthData.latitude,
+        longitude: birthData.longitude,
+        timezone: birthData.timezone,
+        house_system: 'P',  // Placidus — configurable in future
+      }),
     });
 
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}));
-      console.error('FreeAstroAPI error:', response.status, errorData);
+      console.error('Astrology service error:', response.status, errorData);
       return null;
     }
 
-    const data: FreeAstroResponse = await response.json();
-    console.log('FreeAstroAPI response received');
+    const data: AstroServiceResponse = await response.json();
+    console.log('Astrology service response received');
 
     const profileId = `temp-${Date.now()}`;
-    return transformFreeAstroResponse(data, profileId);
+    return transformAstroServiceResponse(data, profileId);
   } catch (error) {
-    console.error('FreeAstroAPI call failed:', error);
+    console.error('Astrology service call failed:', error);
     return null;
   }
 }

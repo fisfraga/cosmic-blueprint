@@ -1,14 +1,12 @@
 /**
  * Astrology API Configuration
  *
- * Provider: FreeAstroAPI
- * Docs: https://freeastroapi.com/docs/western/natal
+ * Provider: Swiss Ephemeris (self-hosted via astrology-service/)
  *
  * Configuration via environment variables:
  * - VITE_ASTROLOGY_API_ENABLED: 'true' to enable API calls
  *
- * Server-side (in Vercel):
- * - FREEASTRO_API_KEY: Your API key from FreeAstroAPI
+ * The service is proxied via Express /api/astrology → astrology-service:8000
  */
 
 /**
@@ -23,5 +21,5 @@ export function isAstrologyAPIConfigured(): boolean {
  * Get provider name for display
  */
 export function getAstrologyProviderName(): string {
-  return isAstrologyAPIConfigured() ? 'FreeAstroAPI' : 'Not configured';
+  return isAstrologyAPIConfigured() ? 'Swiss Ephemeris' : 'Not configured';
 }

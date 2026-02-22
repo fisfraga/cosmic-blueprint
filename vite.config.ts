@@ -184,6 +184,17 @@ function claudeApiProxy(): Plugin {
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react(), claudeApiProxy()],
+  server: {
+    proxy: {
+      // Proxy /api/astrology to the local Python service during development.
+      // Start the service: cd astrology-service && uvicorn app.main:app --port 8000
+      '/api/astrology': {
+        target: 'http://localhost:8000',
+        rewrite: () => '/chart/natal',
+        changeOrigin: true,
+      },
+    },
+  },
   resolve: {
     alias: {
       '@': '/src',

@@ -217,6 +217,31 @@ app.post('/api/claude', express.json({ limit: '2mb' }), async (req, res) => {
   }
 });
 
+// --- Astrology API proxy (AA-02) ---
+const ASTROLOGY_SERVICE_URL = process.env.ASTROLOGY_SERVICE_URL || 'http://astrology-api:8000';
+
+app.post('/api/astrology', express.json({ limit: '50kb' }), async (req, res) => {
+  try {
+    const serviceRes = await fetch(`${ASTROLOGY_SERVICE_URL}/chart/natal`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(req.body),
+    });
+
+    if (!serviceRes.ok) {
+      const err = await serviceRes.json().catch(() => ({}));
+      console.error('Astrology service error:', serviceRes.status, err);
+      return res.status(serviceRes.status).json({ error: 'Astrology service error' });
+    }
+
+    const data = await serviceRes.json();
+    return res.json(data);
+  } catch (error) {
+    console.error('Astrology service unreachable:', error);
+    return res.status(503).json({ error: 'Astrology service unavailable' });
+  }
+});
+
 // --- Static files ---
 app.use(express.static(join(__dirname, 'dist')));
 

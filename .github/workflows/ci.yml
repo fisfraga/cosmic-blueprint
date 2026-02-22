@@ -40,3 +40,59 @@ jobs:
           name: dist
           path: dist/
           retention-days: 7
+
+  verify-astrology-service:
+    name: Validate Astrology Service
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: astrology-service/requirements.txt
+
+      - name: Install dependencies
+        working-directory: astrology-service
+        run: pip install -r requirements.txt
+
+      - name: Validate imports and routes
+        working-directory: astrology-service
+        run: |
+          python -c "
+          from app.models import ChartRequest, ChartResponse
+          from app.calculator import calculate_natal_chart
+          from app.main import app
+          routes = [r.path for r in app.routes]
+          assert '/health' in routes, 'Missing /health route'
+          assert '/chart/natal' in routes, 'Missing /chart/natal route'
+          print('✓ All imports OK')
+          print('✓ Routes:', routes)
+          "
+
+      - name: Run smoke test calculation
+        working-directory: astrology-service
+        run: |
+          python -c "
+          from app.models import ChartRequest
+          from app.calculator import calculate_natal_chart
+          req = ChartRequest(
+              year=2000, month=6, day=21, hour=12, minute=0,
+              latitude=51.5074, longitude=-0.1278,
+              timezone='Europe/London', house_system='P'
+          )
+          result = calculate_natal_chart(req)
+          assert len(result.planets) >= 10, f'Expected >= 10 planets, got {len(result.planets)}'
+          assert len(result.houses) == 12, f'Expected 12 houses, got {len(result.houses)}'
+          sun = next(p for p in result.planets if p.name == 'Sun')
+          # Summer solstice: Sun near 0° Cancer = ~90° absolute
+          assert 88 < sun.abs_pos < 92, f'Summer solstice Sun expected ~90°, got {sun.abs_pos}'
+          print(f'✓ Planets: {len(result.planets)}')
+          print(f'✓ Houses: {len(result.houses)}')
+          print(f'✓ Aspects: {len(result.aspects)}')
+          print(f'✓ Sun at {sun.abs_pos:.2f}° (summer solstice)')
+          "

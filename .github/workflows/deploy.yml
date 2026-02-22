@@ -19,6 +19,8 @@ jobs:
     name: Build, Push & Deploy
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    # Require both CI jobs to pass before deploying
+    # (workflow_run triggers only when ALL jobs in the CI workflow succeed)
     permissions:
       contents: read
       packages: write
@@ -46,13 +48,32 @@ jobs:
             type=sha,prefix=sha-
             type=raw,value=latest,enable={{is_default_branch}}
 
-      - name: Build and push Docker image
+      - name: Build and push app image
         uses: docker/build-push-action@v5
         with:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Extract metadata (astrology service)
+        id: meta-astro
+        uses: docker/metadata-action@v5
+        with:
+          images: ghcr.io/${{ github.repository_owner }}/cosmic-blueprint-astrology
+          tags: |
+            type=sha,prefix=sha-
+            type=raw,value=latest,enable={{is_default_branch}}
+
+      - name: Build and push astrology service image
+        uses: docker/build-push-action@v5
+        with:
+          context: ./astrology-service
+          push: true
+          tags: ${{ steps.meta-astro.outputs.tags }}
+          labels: ${{ steps.meta-astro.outputs.labels }}
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
@@ -70,16 +91,25 @@ jobs:
             echo "Logging into ghcr.io..."
             echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u fisfraga --password-stdin
 
-            echo "Pulling latest image..."
+            echo "Pulling latest images..."
             docker pull ghcr.io/fisfraga/cosmic-blueprint:latest
+            docker pull ghcr.io/fisfraga/cosmic-blueprint-astrology:latest
 
             cd /opt/cosmic-blueprint
 
-            echo "Rolling update..."
+            echo "Restarting astrology service..."
+            docker compose -f docker-compose.prod.yml pull astrology-api
+            docker compose -f docker-compose.prod.yml up -d --no-deps astrology-api
+
+            echo "Waiting for astrology service health check..."
+            sleep 10
+            docker compose -f docker-compose.prod.yml ps astrology-api
+
+            echo "Rolling update for app..."
             docker compose -f docker-compose.prod.yml pull app
             docker compose -f docker-compose.prod.yml up -d --no-deps --remove-orphans app
 
-            echo "Waiting for health check..."
+            echo "Waiting for app health check..."
             sleep 5
             docker compose -f docker-compose.prod.yml ps
 
