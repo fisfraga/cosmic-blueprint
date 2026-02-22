@@ -1,7 +1,10 @@
+import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { gkSequences, gkSpheres, geneKeys, aminoAcids } from '../data';
 import { useProfile } from '../context';
 import type { GKSequenceEntity } from '../types';
+import { EntityStack } from '../components/entities/EntityStack';
+import type { EntityInfo } from '../services/entities/registry';
 
 // Sequence colors
 const SEQUENCE_COLORS: Record<string, { bg: string; text: string; border: string; accent: string }> = {
@@ -29,6 +32,19 @@ export function GKSequenceDetail() {
   const { id } = useParams<{ id: string }>();
   const { profile } = useProfile();
   const sequence = id ? gkSequences.get(id) : undefined;
+
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      const already = prev.findIndex(e => e.id === entity.id);
+      if (already !== -1) return prev;
+      if (prev.length >= 2) return [prev[1], entity];
+      return [...prev, entity];
+    });
+  }, []);
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   // Not found state
   if (!sequence) {
@@ -96,180 +112,196 @@ export function GKSequenceDetail() {
   const sphereDetails = (sequence as GKSequenceEntity).primeGifts || (sequence as GKSequenceEntity).coreSpheres || [];
 
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
-      {/* Header */}
-      <header className={`text-center py-8 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border}`}>
-        <div className="text-5xl mb-4">{sequence.symbol}</div>
-        <h1 className="font-serif text-4xl font-medium mb-2">{sequence.name}</h1>
-        <p className="text-xl text-theme-text-secondary italic">{sequence.theme}</p>
+    <div className="flex h-full">
+      <div className="flex-1 min-w-0 overflow-y-auto">
+        <div className="space-y-8 max-w-4xl mx-auto">
+          {/* Header */}
+          <header className={`text-center py-8 rounded-2xl bg-gradient-to-br ${colors.bg} border ${colors.border}`}>
+            <div className="text-5xl mb-4">{sequence.symbol}</div>
+            <h1 className="font-serif text-4xl font-medium mb-2">{sequence.name}</h1>
+            <p className="text-xl text-theme-text-secondary italic">{sequence.theme}</p>
 
-        {/* Meta Pills */}
-        <div className="flex items-center justify-center gap-3 text-sm flex-wrap mt-4">
-          <span className={`px-3 py-1.5 ${colors.accent} text-theme-text-primary rounded-full`}>
-            Sequence {sequence.sequenceOrder}
-          </span>
-          <span className="px-3 py-1.5 bg-surface-base/50 text-theme-text-secondary rounded-full">
-            {sequence.spheres?.length || 0} Spheres
-          </span>
-        </div>
-      </header>
-
-      {/* Primary Question */}
-      {sequence.primaryQuestion && (
-        <section className={`bg-gradient-to-br ${colors.bg} rounded-xl p-6 border ${colors.border}`}>
-          <h2 className={`font-serif text-lg mb-2 ${colors.text}`}>Primary Question</h2>
-          <p className="text-xl text-theme-text-primary font-medium italic">"{sequence.primaryQuestion}"</p>
-        </section>
-      )}
-
-      {/* Description */}
-      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h2 className="font-serif text-xl mb-4">Overview</h2>
-        <p className="text-theme-text-secondary leading-relaxed">{sequence.description}</p>
-      </section>
-
-      {/* Transformation & Focus */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {sequence.transformation && (
-          <section className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20">
-            <h2 className="font-serif text-lg mb-3 text-emerald-400">Transformation</h2>
-            <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.transformation}</p>
-          </section>
-        )}
-        {sequence.contemplationFocus && (
-          <section className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
-            <h2 className="font-serif text-lg mb-3 text-purple-400">Contemplation Focus</h2>
-            <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.contemplationFocus}</p>
-          </section>
-        )}
-      </div>
-
-      {/* Spheres in this Sequence */}
-      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h2 className="font-serif text-xl mb-4">Spheres in This Sequence</h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          {sphereDetails.map((detail, idx) => {
-            const sphereId = sequence.spheres?.[idx];
-            const profileGK = sphereId ? getProfileGeneKey(sphereId) : null;
-
-            return (
-              <div
-                key={idx}
-                className={`p-4 rounded-lg bg-surface-overlay border ${colors.border}`}
-              >
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <h4 className={`font-medium ${colors.text}`}>{detail.sphere}</h4>
-                    <p className="text-xs text-theme-text-tertiary mt-0.5">{detail.planet}</p>
-                  </div>
-                  {profileGK && (() => {
-                    const gk = geneKeys.get(`gk-${profileGK}`);
-                    const amino = gk?.aminoAcidId ? aminoAcids.get(gk.aminoAcidId) : undefined;
-                    return (
-                      <Link
-                        to={`/gene-keys/gk-${profileGK}`}
-                        className="flex items-center gap-1.5 px-2 py-1 bg-emerald-900/30 rounded text-emerald-400 text-sm hover:bg-emerald-900/50 transition-colors"
-                      >
-                        <span>GK {profileGK}</span>
-                        {amino && (
-                          <span className="text-genekey-500 font-mono text-xs" title={amino.name}>
-                            {amino.symbol}
-                          </span>
-                        )}
-                      </Link>
-                    );
-                  })()}
-                </div>
-                <p className="text-sm text-theme-text-secondary mt-2">{detail.description}</p>
-              </div>
-            );
-          })}
-        </div>
-      </section>
-
-      {/* Your Profile Section */}
-      {profile?.geneKeysProfile && sequenceSpheres.length > 0 && (
-        <section className="bg-emerald-900/20 rounded-xl p-6 border border-emerald-500/20">
-          <h2 className="font-serif text-xl mb-4 text-emerald-400">Your {sequence.name}</h2>
-          <div className="grid md:grid-cols-2 gap-3">
-            {sequence.spheres?.map(sphereId => {
-              const gkNumber = getProfileGeneKey(sphereId);
-              if (!gkNumber) return null;
-
-              // Find sphere name from sphereDetails
-              const sphereDetail = sphereDetails.find(d =>
-                d.sphere.toLowerCase().replace(/['\s]/g, '-').includes(sphereId.replace('-', ''))
-              ) || sphereDetails[sequence.spheres?.indexOf(sphereId) || 0];
-
-              return (
-                <Link
-                  key={sphereId}
-                  to={`/gene-keys/gk-${gkNumber}`}
-                  className="flex items-center justify-between p-3 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors"
-                >
-                  <span className="text-theme-text-secondary">{sphereDetail?.sphere || sphereId}</span>
-                  <span className="text-emerald-400 font-medium">Gene Key {gkNumber}</span>
-                </Link>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {/* Practical Guidance */}
-      {sequence.practicalGuidance && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-4">Practical Guidance</h2>
-          <p className="text-theme-text-secondary leading-relaxed">{sequence.practicalGuidance}</p>
-        </section>
-      )}
-
-      {/* Keywords */}
-      {sequence.keywords && sequence.keywords.length > 0 && (
-        <section className="flex flex-wrap gap-2 justify-center">
-          {sequence.keywords.map((keyword, i) => (
-            <span
-              key={i}
-              className={`px-3 py-1.5 bg-surface-raised ${colors.text} rounded-full text-sm`}
-            >
-              {keyword}
-            </span>
-          ))}
-        </section>
-      )}
-
-      {/* Pathways */}
-      {sequence.pathways && sequence.pathways.length > 0 && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-4">Pathways</h2>
-          <div className="flex flex-wrap gap-3">
-            {sequence.pathways.map((pathway, i) => (
-              <span
-                key={i}
-                className="px-4 py-2 bg-surface-overlay border border-theme-border-subtle rounded-lg text-theme-text-secondary capitalize"
-              >
-                {pathway.replace(/-/g, ' ')}
+            {/* Meta Pills */}
+            <div className="flex items-center justify-center gap-3 text-sm flex-wrap mt-4">
+              <span className={`px-3 py-1.5 ${colors.accent} text-theme-text-primary rounded-full`}>
+                Sequence {sequence.sequenceOrder}
               </span>
-            ))}
-          </div>
-        </section>
-      )}
+              <span className="px-3 py-1.5 bg-surface-base/50 text-theme-text-secondary rounded-full">
+                {sequence.spheres?.length || 0} Spheres
+              </span>
+            </div>
+          </header>
 
-      {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
-        <Link
-          to="/gene-keys/sequences"
-          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
-        >
-          ← All Sequences
-        </Link>
-        <Link
-          to="/gene-keys/spheres"
-          className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
-        >
-          All Spheres →
-        </Link>
-      </nav>
+          {/* Primary Question */}
+          {sequence.primaryQuestion && (
+            <section className={`bg-gradient-to-br ${colors.bg} rounded-xl p-6 border ${colors.border}`}>
+              <h2 className={`font-serif text-lg mb-2 ${colors.text}`}>Primary Question</h2>
+              <p className="text-xl text-theme-text-primary font-medium italic">"{sequence.primaryQuestion}"</p>
+            </section>
+          )}
+
+          {/* Description */}
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-4">Overview</h2>
+            <p className="text-theme-text-secondary leading-relaxed">{sequence.description}</p>
+          </section>
+
+          {/* Transformation & Focus */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {sequence.transformation && (
+              <section className="bg-gradient-to-br from-emerald-500/10 to-emerald-600/5 rounded-xl p-6 border border-emerald-500/20">
+                <h2 className="font-serif text-lg mb-3 text-emerald-400">Transformation</h2>
+                <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.transformation}</p>
+              </section>
+            )}
+            {sequence.contemplationFocus && (
+              <section className="bg-gradient-to-br from-purple-500/10 to-purple-600/5 rounded-xl p-6 border border-purple-500/20">
+                <h2 className="font-serif text-lg mb-3 text-purple-400">Contemplation Focus</h2>
+                <p className="text-theme-text-secondary leading-relaxed text-sm">{sequence.contemplationFocus}</p>
+              </section>
+            )}
+          </div>
+
+          {/* Spheres in this Sequence */}
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-4">Spheres in This Sequence</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {sphereDetails.map((detail, idx) => {
+                const sphereId = sequence.spheres?.[idx];
+                const profileGK = sphereId ? getProfileGeneKey(sphereId) : null;
+
+                return (
+                  <div
+                    key={idx}
+                    className={`p-4 rounded-lg bg-surface-overlay border ${colors.border}`}
+                  >
+                    <div className="flex items-start justify-between gap-3">
+                      <div>
+                        <h4 className={`font-medium ${colors.text}`}>{detail.sphere}</h4>
+                        <p className="text-xs text-theme-text-tertiary mt-0.5">{detail.planet}</p>
+                      </div>
+                      {profileGK && (() => {
+                        const gk = geneKeys.get(`gk-${profileGK}`);
+                        const amino = gk?.aminoAcidId ? aminoAcids.get(gk.aminoAcidId) : undefined;
+                        return (
+                          <div
+                            className="flex items-center gap-1.5 px-2 py-1 bg-emerald-900/30 rounded text-emerald-400 text-sm hover:bg-emerald-900/50 transition-colors cursor-pointer"
+                            onClick={() => gk && handleEntityClick(gk as unknown as EntityInfo)}
+                          >
+                            <span>GK {profileGK}</span>
+                            {amino && (
+                              <span className="text-genekey-500 font-mono text-xs" title={amino.name}>
+                                {amino.symbol}
+                              </span>
+                            )}
+                            <Link
+                              to={`/gene-keys/gk-${profileGK}`}
+                              className="text-xs text-emerald-400/60 hover:text-emerald-400 ml-0.5"
+                              onClick={e => e.stopPropagation()}
+                            >
+                              →
+                            </Link>
+                          </div>
+                        );
+                      })()}
+                    </div>
+                    <p className="text-sm text-theme-text-secondary mt-2">{detail.description}</p>
+                  </div>
+                );
+              })}
+            </div>
+          </section>
+
+          {/* Your Profile Section */}
+          {profile?.geneKeysProfile && sequenceSpheres.length > 0 && (
+            <section className="bg-emerald-900/20 rounded-xl p-6 border border-emerald-500/20">
+              <h2 className="font-serif text-xl mb-4 text-emerald-400">Your {sequence.name}</h2>
+              <div className="grid md:grid-cols-2 gap-3">
+                {sequence.spheres?.map(sphereId => {
+                  const gkNumber = getProfileGeneKey(sphereId);
+                  if (!gkNumber) return null;
+
+                  // Find sphere name from sphereDetails
+                  const sphereDetail = sphereDetails.find(d =>
+                    d.sphere.toLowerCase().replace(/['\s]/g, '-').includes(sphereId.replace('-', ''))
+                  ) || sphereDetails[sequence.spheres?.indexOf(sphereId) || 0];
+
+                  return (
+                    <Link
+                      key={sphereId}
+                      to={`/gene-keys/gk-${gkNumber}`}
+                      className="flex items-center justify-between p-3 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors"
+                    >
+                      <span className="text-theme-text-secondary">{sphereDetail?.sphere || sphereId}</span>
+                      <span className="text-emerald-400 font-medium">Gene Key {gkNumber}</span>
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* Practical Guidance */}
+          {sequence.practicalGuidance && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-4">Practical Guidance</h2>
+              <p className="text-theme-text-secondary leading-relaxed">{sequence.practicalGuidance}</p>
+            </section>
+          )}
+
+          {/* Keywords */}
+          {sequence.keywords && sequence.keywords.length > 0 && (
+            <section className="flex flex-wrap gap-2 justify-center">
+              {sequence.keywords.map((keyword, i) => (
+                <span
+                  key={i}
+                  className={`px-3 py-1.5 bg-surface-raised ${colors.text} rounded-full text-sm`}
+                >
+                  {keyword}
+                </span>
+              ))}
+            </section>
+          )}
+
+          {/* Pathways */}
+          {sequence.pathways && sequence.pathways.length > 0 && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-4">Pathways</h2>
+              <div className="flex flex-wrap gap-3">
+                {sequence.pathways.map((pathway, i) => (
+                  <span
+                    key={i}
+                    className="px-4 py-2 bg-surface-overlay border border-theme-border-subtle rounded-lg text-theme-text-secondary capitalize"
+                  >
+                    {pathway.replace(/-/g, ' ')}
+                  </span>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {/* Navigation */}
+          <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+            <Link
+              to="/gene-keys/sequences"
+              className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
+            >
+              ← All Sequences
+            </Link>
+            <Link
+              to="/gene-keys/spheres"
+              className="text-theme-text-secondary hover:text-theme-text-primary transition-colors"
+            >
+              All Spheres →
+            </Link>
+          </nav>
+        </div>
+      </div>
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </div>
   );
 }
