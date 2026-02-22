@@ -1,8 +1,11 @@
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { useProfile } from '../../context';
 import { LoadingSkeleton } from '../../components';
+import { EntityDetailPanel } from '../../components/entities/EntityDetailPanel';
+import { getEntityWithProfile, registerPersonalContextEntities } from '../../services/entities';
+import type { EntityInfo } from '../../services/entities';
 import type {
   PersonalContext,
   PersonalContextProject,
@@ -193,6 +196,7 @@ function Tag({ label }: { label: string }) {
 export function ProfilePersonalContext() {
   const { cosmicProfile, saveCosmicProfile, isLoading } = useProfile();
   const [editingSection, setEditingSection] = useState<EditSection>(null);
+  const [openEntity, setOpenEntity] = useState<EntityInfo | null>(null);
 
   // Draft state per section (populated when user opens edit mode)
   const [profDraft, setProfDraft] = useState<Partial<PersonalContext>>({});
@@ -201,6 +205,11 @@ export function ProfilePersonalContext() {
   const [energyDraft, setEnergyDraft] = useState<Partial<PersonalContext>>({});
 
   const ctx = useMemo(() => cosmicProfile?.personalContext, [cosmicProfile]);
+
+  // Keep PC-04 entities registered whenever profile context changes
+  useEffect(() => {
+    registerPersonalContextEntities(cosmicProfile?.personalContext ?? undefined);
+  }, [cosmicProfile]);
 
   if (isLoading) return <LoadingSkeleton variant="page" />;
 
@@ -301,6 +310,15 @@ export function ProfilePersonalContext() {
           <div className="flex flex-wrap gap-2">
             {ctx.occupations.map(o => <Tag key={o} label={o} />)}
           </div>
+          <button
+            onClick={() => {
+              const entity = getEntityWithProfile('pc-occupation');
+              if (entity) setOpenEntity(entity);
+            }}
+            className="mt-2 text-xs text-amber-400 hover:text-amber-300 transition-colors flex items-center gap-1"
+          >
+            View Occupation Profile →
+          </button>
         </div>
       ) : (
         <EmptyHint>Add your occupation so the AI knows your professional context. Click ✎ to edit.</EmptyHint>
@@ -454,10 +472,20 @@ export function ProfilePersonalContext() {
           <p className="text-xs text-theme-text-tertiary mb-2 uppercase tracking-wide">Active Projects</p>
           <div className="space-y-2">
             {ctx.activeProjects.map(p => (
-              <div key={p.id} className="p-3 bg-surface-overlay rounded-lg border border-theme-border-subtle">
+              <div
+                key={p.id}
+                onClick={() => {
+                  const entity = getEntityWithProfile(`pc-project-${p.id}`);
+                  if (entity) setOpenEntity(entity);
+                }}
+                className="p-3 bg-surface-overlay rounded-lg border border-theme-border-subtle cursor-pointer hover:border-amber-500/30 transition-colors group"
+              >
                 <div className="flex items-center justify-between">
-                  <p className="text-sm font-medium text-theme-text-primary">{p.name}</p>
-                  {p.status && <Tag label={p.status} />}
+                  <p className="text-sm font-medium text-theme-text-primary group-hover:text-amber-300 transition-colors">{p.name}</p>
+                  <div className="flex items-center gap-2">
+                    {p.status && <Tag label={p.status} />}
+                    <span className="text-xs text-theme-text-tertiary group-hover:text-amber-400 transition-colors">→</span>
+                  </div>
                 </div>
                 {p.description && (
                   <p className="text-xs text-theme-text-secondary mt-1">{p.description}</p>
@@ -819,6 +847,26 @@ export function ProfilePersonalContext() {
           Open Contemplation Chamber
         </Link>
       </div>
+
+      {/* Entity Detail Panel overlay */}
+      {openEntity && (
+        <>
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-black/50 z-40"
+            onClick={() => setOpenEntity(null)}
+          />
+          {/* Panel */}
+          <div className="fixed right-0 top-0 h-full w-[420px] z-50 overflow-hidden shadow-2xl">
+            <EntityDetailPanel
+              entity={openEntity}
+              onClose={() => setOpenEntity(null)}
+              onEntityClick={(e) => setOpenEntity(e)}
+              mode="sidebar"
+            />
+          </div>
+        </>
+      )}
     </motion.div>
   );
 }
