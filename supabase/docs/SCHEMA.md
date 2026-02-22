@@ -24,12 +24,13 @@ Cosmic Blueprint uses **Supabase** (PostgreSQL + Auth + RLS) as an optional clou
 ## Tables
 
 ### 1. `public.saved_insights`
-*Migration: 001_initial_schema.sql*
+*Migrations: 001_initial_schema.sql, 007_add_profile_id.sql*
 
 | Column | Type | Nullable | Default | Notes |
 |--------|------|----------|---------|-------|
 | `id` | TEXT | NOT NULL | — | Primary key (app-generated) |
 | `user_id` | UUID | NOT NULL | — | FK → `auth.users(id)` ON DELETE CASCADE |
+| `profile_id` | TEXT | NULL | — | Active profile ID for multi-profile isolation (added 007) |
 | `content` | TEXT | NOT NULL | — | Insight body text |
 | `category` | TEXT | NOT NULL | — | Contemplation category |
 | `contemplation_type` | TEXT | NOT NULL | — | Specific contemplation type |
@@ -42,6 +43,7 @@ Cosmic Blueprint uses **Supabase** (PostgreSQL + Auth + RLS) as an optional clou
 **Indexes:**
 - `idx_saved_insights_user_id` ON `(user_id)`
 - `idx_saved_insights_created_at` ON `(user_id, created_at DESC)`
+- `idx_saved_insights_profile_id` ON `(profile_id)` (added 007)
 
 **RLS Policies:**
 - `SELECT`: `auth.uid() = user_id`
@@ -110,7 +112,7 @@ Cosmic Blueprint uses **Supabase** (PostgreSQL + Auth + RLS) as an optional clou
 ---
 
 ### 4. `contemplation_sessions` ⚠️
-*Migration: 003_contemplation_sessions.sql*
+*Migrations: 003_contemplation_sessions.sql, 007_add_profile_id.sql*
 
 > **Note:** This table is created **without `public.` schema prefix** in migration 003, unlike the other 3 tables. It defaults to `public` schema in PostgreSQL/Supabase, but represents a naming inconsistency.
 
@@ -118,6 +120,7 @@ Cosmic Blueprint uses **Supabase** (PostgreSQL + Auth + RLS) as an optional clou
 |--------|------|----------|---------|-------|
 | `id` | TEXT | NOT NULL | — | Primary key |
 | `user_id` | UUID | NOT NULL | — | FK → `auth.users(id)` ON DELETE CASCADE |
+| `profile_id` | TEXT | NULL | — | Active profile ID for multi-profile isolation (added 007) |
 | `category` | TEXT | NOT NULL | — | Contemplation category |
 | `contemplation_type` | TEXT | NOT NULL | — | Specific type |
 | `focus_entity` | JSONB | NULL | — | Full entity object (not just ID) |
@@ -128,6 +131,7 @@ Cosmic Blueprint uses **Supabase** (PostgreSQL + Auth + RLS) as an optional clou
 **Indexes:**
 - `idx_contemplation_sessions_user_id` ON `(user_id)`
 - `idx_contemplation_sessions_updated_at` ON `(user_id, updated_at DESC)`
+- `idx_contemplation_sessions_profile_id` ON `(profile_id)` (added 007)
 
 **RLS Policies:**
 - `SELECT`: `auth.uid() = user_id`
