@@ -139,6 +139,7 @@ export function ConstellationGraph({
     svg.selectAll('*').remove();
 
     // Get all entities and filter if needed
+    // (title/desc appended after nodes are built below for accurate counts)
     let allEntities = getAllEntities();
     if (filterEntityTypes && filterEntityTypes.length > 0) {
       allEntities = allEntities.filter((e) => filterEntityTypes.includes(e.type));
@@ -177,6 +178,12 @@ export function ConstellationGraph({
         color:
           relationshipColors[relationship.relationshipType as RelationshipType] || '#666666',
       }));
+
+    // SVG accessibility: embed title and desc for screen readers
+    svg.append('title').text('Constellation — cosmic entity relationship graph');
+    svg.append('desc').text(
+      `Force-directed graph connecting ${nodes.length} cosmic entities across ${links.length} relationships. Drag to pan, scroll to zoom, Tab to navigate nodes.`
+    );
 
     // Settle the simulation instantly when user prefers reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -339,6 +346,38 @@ export function ConstellationGraph({
         handleNodeDoubleClick(d.entity);
       });
 
+    // Keyboard accessibility: Tab-navigable nodes with Enter/Space activation
+    node
+      .attr('tabindex', '0')
+      .attr('role', 'button')
+      .attr('aria-label', (d: GraphNode) => `${d.entity.name} — ${d.entity.type}`)
+      .on('keydown', (event: KeyboardEvent, d) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          handleNodeClick(d.entity);
+        }
+      })
+      .on('focus', function (_event, d) {
+        setHoveredNode(d.id);
+        d3.select(this).select('circle').attr('filter', 'url(#glow)');
+        const connectedNodeIds = new Set<string>();
+        link.each(function (l) {
+          const sourceId = typeof l.source === 'object' ? (l.source as GraphNode).id : String(l.source);
+          const targetId = typeof l.target === 'object' ? (l.target as GraphNode).id : String(l.target);
+          if (sourceId === d.id || targetId === d.id) {
+            connectedNodeIds.add(sourceId);
+            connectedNodeIds.add(targetId);
+            d3.select(this).attr('stroke-opacity', 1).attr('stroke-width', 2.5);
+          }
+        });
+      })
+      .on('blur', function () {
+        setHoveredNode(null);
+        d3.select(this).select('circle').attr('filter', null);
+        link.attr('stroke-opacity', 0.4).attr('stroke-width', 1.5);
+        node.attr('opacity', 1);
+      });
+
     // Update positions on simulation tick
     simulation.on('tick', () => {
       link
@@ -405,12 +444,33 @@ export function ConstellationGraph({
 
   return (
     <div className="relative">
+      {/* Skip link for keyboard users */}
+      <a
+        href="#after-constellation"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-1/2 focus:-translate-x-1/2 focus:z-20 focus:px-3 focus:py-1.5 focus:bg-surface-base focus:text-theme-text-primary focus:rounded focus:border focus:border-theme-border"
+      >
+        Skip visualization
+      </a>
       <svg
         ref={svgRef}
         width={width}
         height={height}
         className="bg-surface-base/50 rounded-lg border border-theme-border-subtle"
+        role="img"
+        aria-label="Constellation relationship graph connecting cosmic entities"
+        aria-describedby="constellation-live"
       />
+      <div id="after-constellation" />
+      {/* aria-live region: announces focused node to screen readers */}
+      <div
+        id="constellation-live"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+        className="sr-only"
+      >
+        {hoveredNode && hoveredEntity ? `${hoveredEntity.name} — ${hoveredEntity.type}` : ''}
+      </div>
 
       {/* Legend */}
       <div className="absolute top-4 left-4 bg-surface-base/90 backdrop-blur-sm rounded-lg p-3 border border-theme-border-subtle">

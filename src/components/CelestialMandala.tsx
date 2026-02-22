@@ -34,6 +34,12 @@ export function CelestialMandala({
     const svg = d3.select(svgRef.current);
     svg.selectAll('*').remove();
 
+    // Embed title + desc for SVG-aware screen readers
+    svg.append('title').text('Zodiac wheel — twelve astrological signs');
+    svg.append('desc').text(
+      `Zodiac wheel showing all twelve signs: ${signs.map(s => `${s.name} (${s.elementId} — ${s.keyPhrase})`).join('; ')}`
+    );
+
     const width = size;
     const height = size;
     const centerX = width / 2;

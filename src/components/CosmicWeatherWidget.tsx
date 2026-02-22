@@ -48,6 +48,7 @@ function PlanetCard({
         ${hasAspects ? 'bg-surface-raised border border-theme-border' : 'bg-surface-raised/60'}
         transition-all
       `}
+      aria-label={`${position.planetName} in ${position.signName} at ${position.formattedDegree}${position.isRetrograde ? ', retrograde' : ''}${hasAspects ? `, ${natalAspects.length} natal aspect${natalAspects.length !== 1 ? 's' : ''}` : ''}`}
     >
       {/* Planet symbol and sign */}
       <div className="flex items-center gap-1.5">
@@ -132,6 +133,8 @@ export function CosmicWeatherWidget() {
       initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
       className="bg-gradient-to-br from-surface-raised to-surface-base border border-theme-border-subtle rounded-xl overflow-hidden"
+      role="region"
+      aria-label="Current cosmic weather"
     >
       {/* Header */}
       <div className="px-5 py-4 border-b border-theme-border-subtle/50 flex items-center justify-between">

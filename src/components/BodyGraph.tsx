@@ -93,6 +93,7 @@ export function BodyGraph({
         strokeLinecap="round"
         opacity={isDefined ? 1 : 0.3}
         cursor={interactive ? 'pointer' : 'default'}
+        aria-label={`Channel ${channel.gate1}-${channel.gate2} — ${isDefined ? 'Active' : 'Inactive'}`}
         onClick={() => interactive && onChannelClick?.(channelId)}
         onMouseEnter={() => interactive && setHoveredChannel(channelId)}
         onMouseLeave={() => setHoveredChannel(null)}
@@ -132,6 +133,7 @@ export function BodyGraph({
       onClick: handleClick,
       onMouseEnter: () => interactive && setHoveredCenter(center.id),
       onMouseLeave: () => setHoveredCenter(null),
+      'aria-label': `${center.name} — ${isDefined ? 'Defined' : 'Undefined'}`,
     };
 
     switch (pos.shape) {
@@ -200,7 +202,12 @@ export function BodyGraph({
     }
 
     return (
-      <g key={`gate-${gateNumber}`}>
+      <g
+        key={`gate-${gateNumber}`}
+        aria-label={isDefined
+          ? `Gate ${gateNumber} — ${isPersonality && isDesign ? 'Personality and Design' : isPersonality ? 'Personality' : 'Design'}`
+          : `Gate ${gateNumber}`}
+      >
         <circle
           cx={x}
           cy={y}
@@ -606,6 +613,8 @@ export function BodyGraphCentersOnly({
         height={height}
         viewBox={`0 0 ${width} ${height}`}
         className="mx-auto"
+        role="img"
+        aria-label="Human Design body graph showing center positions"
       >
         {/* Background */}
         <rect width={width} height={height} fill="transparent" />
