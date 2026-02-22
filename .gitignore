@@ -41,5 +41,8 @@ nginx/ssl/*.key
 # Test coverage
 coverage/
 
+# Raw personal input materials (books, courses, PDFs — never in git)
+_DATA/
+
 # TypeScript build info
 *.tsbuildinfo

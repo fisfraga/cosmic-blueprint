@@ -153,8 +153,5 @@ Tana Paste export buttons are available directly in the `/insights` and `/sessio
 
 ## Key Reference Files
 
-- `_Data/Cosmic Copilot Data/CONTEXT.md` — Full project vision and philosophy
-- `_Data/Cosmic Copilot Data/cosmic-copilot-system-architecture.md` — Implementation blueprint
-- `_Data/Cosmic Copilot Data/cosmic-copilot-data-schema.md` — TypeScript interfaces specification
 - `_Workstation/planning/00-MASTER-PLAN-INDEX.md` — Master planning index
 - `docs/contemplation-ai-architecture.md` — Contemplation Chamber AI design
