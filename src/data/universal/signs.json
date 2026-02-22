@@ -24,7 +24,11 @@
       "aries-1-cassiopeia",
       "aries-2-cetus",
       "aries-3-perseus"
-    ]
+    ],
+    "shadowExpression": "Impulsive, aggressive, self-centered",
+    "lightExpression": "Brave, pioneering, natural leader",
+    "managementGuidance": "Embrace courage; practice patience and consideration of others",
+    "vperPhase": "vision"
   },
   {
     "id": "taurus",
@@ -51,7 +55,11 @@
       "taurus-1-orion",
       "taurus-2-eridanus",
       "taurus-3-auriga"
-    ]
+    ],
+    "shadowExpression": "Materialistic, stubborn, resistant to change",
+    "lightExpression": "Stable, loyal, sensual, persistent",
+    "managementGuidance": "Value stability; practice flexibility and openness",
+    "vperPhase": "execute"
   },
   {
     "id": "gemini",
@@ -77,7 +85,11 @@
       "gemini-1-lepus",
       "gemini-2-canis-major",
       "gemini-3-canis-minor"
-    ]
+    ],
+    "shadowExpression": "Indecisive, restless, superficial",
+    "lightExpression": "Versatile, witty, curious, articulate",
+    "managementGuidance": "Enjoy curiosity; cultivate focus and deeper connections",
+    "vperPhase": "plan"
   },
   {
     "id": "cancer",
@@ -103,7 +115,11 @@
       "cancer-1-ursa-minor",
       "cancer-2-ursa-major",
       "cancer-3-argo-navis"
-    ]
+    ],
+    "shadowExpression": "Moody, clingy, fear of rejection",
+    "lightExpression": "Empathetic, nurturing, intuitive",
+    "managementGuidance": "Nurture others; set healthy emotional boundaries",
+    "vperPhase": "review"
   },
   {
     "id": "leo",
@@ -130,7 +146,11 @@
       "leo-1-hydra",
       "leo-2-crater",
       "leo-3-corvus"
-    ]
+    ],
+    "shadowExpression": "Arrogant, attention-seeking, domineering",
+    "lightExpression": "Vibrant, generous, charismatic, creative",
+    "managementGuidance": "Practice humility; shine light on others",
+    "vperPhase": "vision"
   },
   {
     "id": "virgo",
@@ -156,7 +176,11 @@
       "virgo-1-coma-berenices",
       "virgo-2-centaurus",
       "virgo-3-bootes"
-    ]
+    ],
+    "shadowExpression": "Perfectionist, overcritical, anxiety-prone",
+    "lightExpression": "Analytical, reliable, health-conscious",
+    "managementGuidance": "Use analytical skills; practice self-compassion",
+    "vperPhase": "execute"
   },
   {
     "id": "libra",
@@ -183,7 +207,11 @@
       "libra-1-crux",
       "libra-2-lupus",
       "libra-3-corona-borealis"
-    ]
+    ],
+    "shadowExpression": "Indecisive, conflict-avoidant, people-pleasing",
+    "lightExpression": "Diplomatic, harmonious, artistically gifted",
+    "managementGuidance": "Foster harmony; practice decisive assertiveness",
+    "vperPhase": "plan"
   },
   {
     "id": "scorpio",
@@ -211,7 +239,11 @@
       "scorpio-1-hercules",
       "scorpio-2-ophiuchus",
       "scorpio-3-serpens"
-    ]
+    ],
+    "shadowExpression": "Secretive, jealous, holds grudges",
+    "lightExpression": "Passionate, transformative, resilient, insightful",
+    "managementGuidance": "Channel intensity; practice forgiveness and openness",
+    "vperPhase": "review"
   },
   {
     "id": "sagittarius",
@@ -237,7 +269,11 @@
       "sagittarius-1-lyra",
       "sagittarius-2-ara",
       "sagittarius-3-draco"
-    ]
+    ],
+    "shadowExpression": "Restless, tactless, impatient, lacks detail",
+    "lightExpression": "Optimistic, philosophical, adventurous, honest",
+    "managementGuidance": "Embrace optimism; be mindful of bluntness; commit to detail",
+    "vperPhase": "vision"
   },
   {
     "id": "capricorn",
@@ -264,7 +300,11 @@
       "capricorn-1-sagitta",
       "capricorn-2-aquila",
       "capricorn-3-delphinus"
-    ]
+    ],
+    "shadowExpression": "Workaholic, emotionally reserved, dictatorial",
+    "lightExpression": "Ambitious, disciplined, responsible, practical",
+    "managementGuidance": "Use ambition; avoid rigidity; find joy beyond achievement",
+    "vperPhase": "execute"
   },
   {
     "id": "aquarius",
@@ -291,7 +331,11 @@
       "aquarius-1-piscis-austrinus",
       "aquarius-2-pegasus",
       "aquarius-3-cygnus"
-    ]
+    ],
+    "shadowExpression": "Emotionally detached, aloof, stubborn",
+    "lightExpression": "Independent, humanitarian, innovative, progressive",
+    "managementGuidance": "Embrace innovation; practice emotional connection",
+    "vperPhase": "plan"
   },
   {
     "id": "pisces",
@@ -319,6 +363,10 @@
       "pisces-1-band",
       "pisces-2-andromeda",
       "pisces-3-cepheus"
-    ]
+    ],
+    "shadowExpression": "Escapism, over-sensitive, over-idealization",
+    "lightExpression": "Empathetic, artistic, intuitive, compassionate",
+    "managementGuidance": "Cultivate compassion; avoid escapism; set boundaries",
+    "vperPhase": "review"
   }
 ]

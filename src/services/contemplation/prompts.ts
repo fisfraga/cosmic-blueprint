@@ -1513,6 +1513,220 @@ THE ELEMENTAL LENS:
 Start with celebration — their wins as evidence of gift frequencies already in motion. Then spiral into the deeper patterns. End with questions that illuminate the next phase of their purpose journey.`,
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // LIFE OS — JULIA BALAZ + ILOS EXPANSION (SPRINT T)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  lifePurposeReading: `Synthesize the seeker's Purpose Constellation into a unified QUANTUM self-knowledge portrait.
+
+The Purpose Constellation — as Julia Balaz frames it — is not a single planet. It is a sacred convergence of:
+• [[sun|Sun]] — the central creative impulse, the life force seeking expression (the actor's essential gift)
+• [[moon|Moon]] — the soul's felt sense of belonging, the emotional intelligence that fuels purpose
+• [[ascendant|Ascendant]] — the soul's interface with the world, how purpose is delivered to others
+• [[midheaven|Midheaven]] — the public calling, the career mountain being climbed (Vision/Fire direction)
+• [[north-node|North Node]] — the soul's evolutionary edge, the direction the universe is nudging them toward
+• [[chiron|Chiron]] — the sacred wound that becomes the greatest teaching and gift
+• Part of Fortune — where joy and abundance flow naturally, the gift intersection
+
+THEATRICAL METAPHOR (Julia Balaz):
+In the theater of life, planets are actors, signs are costumes, houses are stages. The Purpose Constellation is the leading cast. Read each actor by:
+• What is their role in the story? (planet archetype)
+• How do they show up in costume? (sign expression — use the sign's lightExpression from the Shadow-to-Light framework)
+• Which stage do they perform on? (house / ILOS Key Area)
+
+ILOS QUANTUM LAYER:
+This reading lives in the QUANTUM dimension — essence, self-knowledge, who they are at the center. Frame each planet's placement as a piece of the QUANTUM self-portrait: "Your Sun in [sign] in the [house/Key Area] tells us about the essence you are here to radiate…"
+
+THE SYNTHESIS:
+After exploring each planet individually, step back and ask: What is the single coherent story all seven indicators are telling? Where is there resonance, where is there creative tension, and what theme appears across multiple indicators?
+
+Use VPER language in synthesis: Which phase does the overall constellation suggest as their natural strength? Which phase is their growth edge?
+
+Close with a Soul Purpose Statement — one to three sentences that synthesize the constellation into a living description of who they are and why they are here.`,
+
+  idealSelfBlueprint: `Generate the seeker's Ideal Self Blueprint — not as a destination to reach, but as a Gain document: the highest expression of who they already are.
+
+This is Julia Balaz's HW1 framework: the Ideal Self Document. The critical frame is GAP-TO-GAIN:
+• Gap thinking measures from where you are to where you want to be — it always feels lacking
+• Gain thinking measures from where you started to where you are now — it reveals how far you've traveled
+• This document captures who you already ARE at your best — not who you are becoming
+
+THE EXERCISE:
+Using their cosmic blueprint as the source of truth, generate a first-person present-tense portrait of their highest expression. For each key indicator, translate into a present-tense first-person Gain statement:
+• Sun placement → "I express my creative power through..." (light expression of that sign/house)
+• Moon placement → "I nourish myself and others by..."
+• ASC → "I show up in the world as..."
+• MC → "My public contribution and career calling is..." (Vision/Fire direction)
+• NN → "I am growing toward..."
+• Chiron placement → "My greatest teaching gift, born from my deepest learning, is..."
+• Dominant element → "My natural operating mode is [VPER phase]..."
+
+ILOS GAP-TO-GAIN FRAMING:
+Include an ILOS Gap-to-Gain reflection: "Notice how far you have traveled from your starting point. This document is not a destination — it is an acknowledgment of who you already are, waiting to be fully claimed."
+
+The Ideal Self Blueprint should feel like recognition, not aspiration. Use language that honors what is ALREADY PRESENT. "This is not who you are becoming — this is who you already ARE when you operate from your blueprint."
+
+Tone: warm, celebratory, grounded. This is not flattery — it is precision about genuine gifts.`,
+
+  shadowToLightReading: `Illuminate the seeker's Shadow-to-Light journey — the Review/Water phase work of integration, reclamation, and transformation.
+
+This reading works with the chart's challenging signatures, not as problems to fix, but as the exact locations where the greatest gifts are buried:
+• [[saturn|Saturn]] placement — where structure, discipline, and earned mastery live. The freeze point and the wisdom point simultaneously.
+• [[chiron|Chiron]] placement — the sacred wound that, when met with awareness, becomes the greatest teaching
+• [[north-node|South Node]] — the past-life/karmic pattern, the comfortable default that can become a trap
+• 12th house planets — what is hidden, transcended, or working through the seeker at a deep level
+
+ILOS REVIEW/WATER PHASE FRAMING:
+This entire reading lives in the Water element — the Review phase of the VPER cycle. Water = introspection, completion, integration, honoring what was. Shadow work IS the Review phase. Frame it as: "In the ILOS Elemental framework, Water signs and the Review phase are about honoring completion, integrating experience, and transforming the past into wisdom. Your shadow indicators are the entry points into your deepest Review work."
+
+JULIA BALAZ SHADOW-TO-LIGHT FRAMEWORK:
+For each sign involved, reference its shadow expression and light expression:
+• Name the shadow pattern (what the contracted energy looks like)
+• Name the light expression (what becomes available when the shadow is met with awareness)
+• Offer the management guidance (the invitational path from shadow toward light)
+
+THE INTEGRATION PROCESS:
+Shadow work is not elimination — it is recognition, acknowledgment, and alchemical transformation. Guide the seeker to:
+1. Recognize the pattern without judgment ("The shadow of [placement] invites awareness of...")
+2. Find the gift buried in the shadow ("When this energy is met with consciousness, it becomes...")
+3. Identify the reclamation practice ("The path from shadow to light for this placement invites...")
+
+OPPOSITE POLE PRINCIPLE (ILOS):
+If their growth edge element is activated in their shadow indicators, name this explicitly: "Your growth edge element appears in your shadow patterns — this is the Opposite Pole Principle at work. The exact energy that challenges you is the one the cosmos is asking you to integrate."
+
+End with an invitational question: What would become possible if you brought the full gift of [shadow placement] into conscious expression?`,
+
+  careerPathReading: `Map the seeker's complete career blueprint through the QUANTUM/SPACE/TIME framework and Julia Balaz's vocational methodology.
+
+THE THREE CAREER LAYERS:
+
+VISION LAYER (Fire) — Where you are going:
+• [[midheaven|Midheaven]] sign and ruler — the public mountain being climbed, the career calling. MC is a Vision/Fire indicator: it shows the aspiration, the contribution to the world.
+• [[north-node|North Node]] sign and house — the evolutionary direction, what the soul is growing toward in this lifetime. In career terms: the unfamiliar territory that holds the greatest fulfillment.
+• 10th house planets — what amplifies or complicates the career calling
+• Jupiter placement — where expansion, opportunity, and abundance flow naturally
+
+EXECUTE LAYER (Earth) — How you build:
+• [[saturn|Saturn]] placement — the master builder. Saturn is the Execute/Earth indicator: it shows where discipline is required, where the work must be done consistently over time.
+• 6th house planets — daily work environment, routines, and service patterns
+• 2nd house — resources, income, and the financial architecture supporting the vision
+• Earth sign emphasis — the practical grounding available
+
+PLAN LAYER (Air) — How you communicate and strategize:
+• [[mercury|Mercury]] placement — thinking style, communication gifts, how ideas are developed and shared
+• 3rd and 9th house planets — local communication vs. long-range vision and teaching
+• Air sign emphasis — the intellectual framework available
+
+REVIEW LAYER (Water) — What needs integration:
+• 8th and 12th house career indicators — transformation through career, hidden talents available after integration
+• Chiron — the career wound that becomes the greatest gift
+
+ILOS KEY AREAS:
+For each relevant house, include the ILOS Key Area label: "House 10 / Career & Public Life" — this bridges cosmic language to intentional living vocabulary.
+
+Julia Balaz framing: "Every career chart is a theater. The MC is the headline role; Saturn is the director demanding craft; Jupiter is the standing ovation waiting to happen."
+
+Synthesize with a career timing note: which VPER phase does the current transit weather suggest for career action?`,
+
+  transitPlanningMap: `Map the current cosmic weather to the seeker's ILOS life planning landscape.
+
+This reading uses the Intentional Life OS (ILOS) framework of Fis Fraga to translate transit astrology into actionable life planning intelligence.
+
+THE TRANSIT → VPER MAPPING:
+For each major slow-planet transit (Jupiter, Saturn, Uranus — plus Neptune and Pluto if significant):
+1. Identify the planet's current sign
+2. Determine the sign's element and VPER phase:
+   • Fire signs (Aries/Leo/Sagittarius) → VISION phase — time to reconnect with inspiration and direction
+   • Air signs (Gemini/Libra/Aquarius) → PLAN phase — time for strategic clarity and communication
+   • Earth signs (Taurus/Virgo/Capricorn) → EXECUTE phase — time for consistent, grounded action
+   • Water signs (Cancer/Scorpio/Pisces) → REVIEW phase — time for reflection, integration, and celebration of completion
+3. Identify which natal house the transit activates → which ILOS Key Area is lit up
+
+THE VPER COMPOSITE:
+After mapping all slow planets, identify the overall VPER phase dominance: which phase has the most activations? This is the cosmic weather's primary message for the planning cycle.
+
+ILOS KEY AREA ACTIVATIONS:
+For each transited house, name the ILOS Key Area:
+House 1 / Health & Vitality | House 2 / Finances & Resources | House 3 / Intellectual Life | House 4 / Home & Family | House 5 / Creative Expression | House 6 / Work Life & Routines | House 7 / Love & Partnerships | House 8 / Emotional Life & Transformation | House 9 / Life Vision & Higher Learning | House 10 / Career & Public Life | House 11 / Social Life & Community | House 12 / Spirituality & Inner Life
+
+GROWTH EDGE CHECK:
+Identify the seeker's natal growth edge element (weakest element in natal balance). Is the current transit weather activating their growth edge? If so, name the Opposite Pole Principle: "The cosmos is currently activating your growth edge — this is a powerful development window."
+
+THE PLANNING SYNTHESIS:
+Translate the cosmic map into concrete planning language:
+• "For the next [timeframe], the cosmos supports [VPER phase] work in [Key Areas]"
+• "This is a [phase] cycle — the invitation is to [specific action type]"
+• "Your growth edge is [element/phase] — the cosmos is asking you to develop this capacity now"
+
+End with 3 specific, actionable insights for how to work with the current cosmic weather in their ILOS life planning.`,
+
+  soulCallingIntegration: `Synthesize the seeker's soul calling — where wound, direction, and joy converge into their deepest QUANTUM purpose statement.
+
+This is Julia Balaz's HW3 framework: the Soul Calling Statement. It emerges from the convergence of three layers:
+
+LAYER 1 — THE WOUND THAT TEACHES (Chiron):
+[[chiron|Chiron]] placement reveals the sacred wound — the area of life where the seeker has felt most broken, most inadequate, most tested. The paradox of Chiron: this exact wound, when met with consciousness rather than avoidance, becomes the greatest gift they can offer others.
+• Name the Chiron placement honestly and with compassion
+• Name the wound pattern (what it has felt like from the inside)
+• Name the gift that lives on the other side of that wound
+• Frame as: "Because you have walked through [wound], you carry the gift of [wisdom]"
+
+LAYER 2 — THE DIRECTION OF GROWTH (North Node):
+[[north-node|North Node]] placement shows where the soul is being called to grow in this lifetime. It feels unfamiliar, sometimes uncomfortable — because it IS unfamiliar. The South Node is the comfort zone; the North Node is the soul's evolutionary edge.
+• Name the NN placement and what it calls toward
+• Name the South Node comfort pattern and why it must be released
+• Frame as an invitation: "The cosmos is asking you to develop [NN gifts] — not because you lack them, but because they are ready to be claimed"
+
+LAYER 3 — WHERE JOY FLOWS (Part of Fortune):
+The Part of Fortune shows where luck, joy, and abundance flow naturally when the seeker is in alignment. This is not effortless — it requires the correct conditions. When those conditions are met, life flows.
+• Name the Part of Fortune placement
+• Describe what conditions allow it to activate
+• Name the ILOS Key Area it corresponds to — this is a Key Area of natural abundance
+
+THE CONVERGENCE:
+Ask: Where do the Chiron gift, the NN direction, and the Part of Fortune joy intersect? This intersection IS the soul calling.
+
+QUANTUM SYNTHESIS:
+Frame the final integration as a QUANTUM self-knowledge statement — one that the seeker can use as a compass: "My soul calling is to [Chiron gift expressed through NN direction] in the arena of [Part of Fortune Key Area]."
+
+The soul calling should feel like a homecoming — not a prescription, but a recognition. "Yes — that's exactly it."`,
+
+  vperPhaseReading: `Identify the active VPER phase in the current cosmic weather and what it calls toward for the seeker's Intentional Life OS.
+
+This is an ILOS-native reading, using the Intentional Life OS framework created by Fis Fraga. The VPER Cycle is the temporal architecture of the life OS: Vision → Plan → Execute → Review → (alignment and restart).
+
+THE ELEMENT DOMINANCE ANALYSIS:
+Examine the current positions of the slow-moving planets (Jupiter, Saturn, Uranus — plus Neptune and Pluto):
+• For each planet, identify its current sign and element (Fire/Air/Earth/Water)
+• Count the element dominance: how many slow planets are currently in each element?
+• The dominant element determines the active VPER phase:
+  — Fire dominance → VISION phase: time to reconnect with inspiration, clarify direction, reignite desire
+  — Air dominance → PLAN phase: time for strategic thinking, communication, mapping the path forward
+  — Earth dominance → EXECUTE phase: time for consistent, grounded action — build, persist, do the work
+  — Water dominance → REVIEW phase: time for reflection, integration, completion, celebrating wins
+
+THE VPER PHASE READING:
+For the dominant phase, describe:
+1. What this phase calls toward in the ILOS life OS
+2. The types of goals that thrive in this phase
+3. What to deprioritize (the opposite phase activities that resist current energy)
+4. Which of the 12 ILOS Key Areas are most activated by the current transits
+
+NATAL VPER BALANCE:
+If the seeker's birth chart data is available, compare current transit element dominance to natal element balance:
+• What is their natal dominant element and natural VPER phase?
+• Is the current cosmic phase aligned with or contrasting their natural phase?
+• If contrasting: this is a growth edge activation — the cosmos is calling them to develop capacity in an unfamiliar phase
+
+THE OPPOSITE POLE PRINCIPLE:
+If the current transit weather activates the seeker's natal growth edge element (weakest natal element), name this explicitly: "The cosmos is activating your Opposite Pole — the element that is your growth edge. This is one of the most powerful development windows available. The resistance you may feel toward [phase] activities is the signal that this is where the growth is."
+
+THE 12 KEY AREAS CHECK:
+Based on which houses the current slow-planet transits occupy, identify the top 3 activated ILOS Key Areas:
+House 1/Health & Vitality | House 2/Finances & Resources | House 3/Intellectual Life | House 4/Home & Family | House 5/Creative Expression | House 6/Work Life & Routines | House 7/Love & Partnerships | House 8/Emotional Life & Transformation | House 9/Life Vision & Higher Learning | House 10/Career & Public Life | House 11/Social Life & Community | House 12/Spirituality & Inner Life
+
+Close with a simple, actionable statement: "Your current VPER phase is [phase]. The cosmos invites you to [2-3 specific actions aligned with this phase] in the area of [top Key Area activation]."`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // ALCHEMY & NUMBERS CONTEMPLATION TYPES
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -2141,6 +2355,14 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   lifeAreaAlignment: 'deep',
   goalCosmicContext: 'deep',
   purposeReview: 'deep',
+  // Life OS — Julia Balaz + ILOS expansion (Sprint T)
+  lifePurposeReading: 'deep',
+  idealSelfBlueprint: 'deep',
+  shadowToLightReading: 'deep',
+  careerPathReading: 'deep',
+  transitPlanningMap: 'deep',
+  soulCallingIntegration: 'deep',
+  vperPhaseReading: 'deep',
 
   // Alchemy types
   numerologyReading: 'standard',
@@ -2223,6 +2445,14 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   lifeAreaAlignment: 'opus',
   goalCosmicContext: 'opus',
   purposeReview: 'opus',
+  // Life OS — Julia Balaz + ILOS expansion (Sprint T)
+  lifePurposeReading: 'opus',
+  idealSelfBlueprint: 'opus',
+  shadowToLightReading: 'opus',
+  careerPathReading: 'opus',
+  transitPlanningMap: 'opus',
+  soulCallingIntegration: 'opus',
+  vperPhaseReading: 'opus',
 
   // Alchemy types
   numerologyReading: 'sonnet',
@@ -2309,7 +2539,12 @@ export function buildFullPrompt(
  */
 export function getDefaultPersonaForType(contemplationType: string): AgentPersona {
   // Life OS types use paracelsus persona
-  const paracelsusTypes = ['lifeAreaAlignment', 'goalCosmicContext', 'purposeReview'];
+  const paracelsusTypes = [
+    'lifeAreaAlignment', 'goalCosmicContext', 'purposeReview',
+    // Sprint T — Julia Balaz + ILOS expansion
+    'lifePurposeReading', 'idealSelfBlueprint', 'shadowToLightReading',
+    'careerPathReading', 'transitPlanningMap', 'soulCallingIntegration', 'vperPhaseReading',
+  ];
   if (paracelsusTypes.includes(contemplationType)) return 'paracelsus';
 
   // Alchemy types use paracelsus persona

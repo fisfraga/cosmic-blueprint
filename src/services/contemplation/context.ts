@@ -61,6 +61,14 @@ export type ContemplationType =
   | 'lifeAreaAlignment'
   | 'goalCosmicContext'
   | 'purposeReview'
+  // Life OS — Julia Balaz + ILOS expansion (Sprint T)
+  | 'lifePurposeReading'
+  | 'idealSelfBlueprint'
+  | 'shadowToLightReading'
+  | 'careerPathReading'
+  | 'transitPlanningMap'
+  | 'soulCallingIntegration'
+  | 'vperPhaseReading'
   // Alchemy & Numbers
   | 'numerologyReading'
   | 'numerologyOverview'

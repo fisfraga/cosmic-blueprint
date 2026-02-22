@@ -15,10 +15,12 @@ const profileItems = [
   { path: '/profile/gene-keys', label: 'Gene Keys', icon: '✧', description: 'Golden Path journey' },
   { path: '/profile/human-design', label: 'Human Design', icon: '⬡', description: 'Body graph & type' },
   { path: '/profile/fixed-stars', label: 'Fixed Stars', icon: '★', description: 'Star conjunctions' },
+  { path: '/profile/life-purpose', label: 'Life Purpose', icon: '◈', description: 'Purpose & soul calling' },
 ];
 
 // Explore Tools - Interactive visualizations
 const exploreItems = [
+  { path: '/dashboard', label: 'Cosmic Dashboard', icon: '✦', description: 'VPER phase + Key Areas' },
   { path: '/wheel', label: 'Celestial Wheel', icon: '☉', description: 'Zodiac mandala' },
   { path: '/graph', label: 'Cosmic Graph', icon: '⚭', description: 'Relationship map' },
   { path: '/weaver', label: 'Aspect Weaver', icon: '⟁', description: 'Aspect explorer' },

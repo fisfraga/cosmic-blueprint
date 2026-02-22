@@ -113,6 +113,74 @@ describe('CONTEMPLATION_TYPES structural completeness', () => {
   });
 });
 
+// ─── Sprint T — lifeOS Julia Balaz + ILOS expansion ─────────────────────────
+
+describe('Sprint T lifeOS expansion', () => {
+  const lifeOSTypes = CONTEMPLATION_TYPES['lifeOS'];
+  const lifeOSIds = lifeOSTypes.map(t => t.id);
+
+  it('lifeOS has 10 types after Sprint T expansion (3 existing + 7 new)', () => {
+    expect(lifeOSTypes.length).toBe(10);
+  });
+
+  it('all 7 new Sprint T types are present in lifeOS', () => {
+    const sprintTTypes: ContemplationType[] = [
+      'lifePurposeReading',
+      'idealSelfBlueprint',
+      'shadowToLightReading',
+      'careerPathReading',
+      'transitPlanningMap',
+      'soulCallingIntegration',
+      'vperPhaseReading',
+    ];
+    for (const typeId of sprintTTypes) {
+      expect(lifeOSIds, `Missing Sprint T type: ${typeId}`).toContain(typeId);
+    }
+  });
+
+  it('vperPhaseReading is registered with level advanced', () => {
+    const vper = lifeOSTypes.find(t => t.id === 'vperPhaseReading');
+    expect(vper).toBeDefined();
+    expect(vper?.level).toBe('advanced');
+  });
+
+  it('soulCallingIntegration is registered with level master', () => {
+    const soulCalling = lifeOSTypes.find(t => t.id === 'soulCallingIntegration');
+    expect(soulCalling).toBeDefined();
+    expect(soulCalling?.level).toBe('master');
+  });
+
+  it('all new Sprint T types have non-empty name and description', () => {
+    const sprintTIds = [
+      'lifePurposeReading', 'idealSelfBlueprint', 'shadowToLightReading',
+      'careerPathReading', 'transitPlanningMap', 'soulCallingIntegration', 'vperPhaseReading',
+    ];
+    for (const id of sprintTIds) {
+      const t = lifeOSTypes.find(opt => opt.id === id);
+      expect(t, `Type ${id} not found`).toBeDefined();
+      expect(t?.name.length, `${id} name should not be empty`).toBeGreaterThan(0);
+      expect(t?.description.length, `${id} description should not be empty`).toBeGreaterThan(0);
+    }
+  });
+
+  it('no Sprint T type requires needsFocus (all work without a specific entity)', () => {
+    const sprintTIds = [
+      'lifePurposeReading', 'idealSelfBlueprint', 'shadowToLightReading',
+      'careerPathReading', 'transitPlanningMap', 'soulCallingIntegration', 'vperPhaseReading',
+    ];
+    for (const id of sprintTIds) {
+      const t = lifeOSTypes.find(opt => opt.id === id);
+      expect(t?.needsFocus, `${id} should not require needsFocus`).toBeFalsy();
+    }
+  });
+
+  it('existing lifeOS types are preserved after Sprint T expansion', () => {
+    expect(lifeOSIds).toContain('lifeAreaAlignment' as ContemplationType);
+    expect(lifeOSIds).toContain('goalCosmicContext' as ContemplationType);
+    expect(lifeOSIds).toContain('purposeReview' as ContemplationType);
+  });
+});
+
 // ─── migrateSessionCategory ───────────────────────────────────────────────────
 
 function makeSession(overrides: Partial<SavedSession> = {}): SavedSession {

@@ -85,6 +85,8 @@ export interface Planet extends AstroEntity {
 
 export type Modality = 'Cardinal' | 'Fixed' | 'Mutable';
 
+export type VperPhase = 'vision' | 'plan' | 'execute' | 'review';
+
 export interface ZodiacSign extends AstroEntity {
   type: 'sign';
   symbol: string;
@@ -102,6 +104,11 @@ export interface ZodiacSign extends AstroEntity {
   traits: string;
   bodyPart: string;
   decanIds: string[];
+  // Julia Balaz Shadow-to-Light framework + ILOS VPER phase
+  shadowExpression?: string;
+  lightExpression?: string;
+  managementGuidance?: string;
+  vperPhase?: VperPhase;
 }
 
 // ------------------------------------

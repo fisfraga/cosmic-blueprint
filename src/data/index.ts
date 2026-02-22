@@ -40,6 +40,7 @@ import type {
   NumerologyNumber,
   Chakra,
   HermeticPrinciple,
+  VperPhase,
 } from '../types';
 
 // Raw JSON imports - Astrology
@@ -425,6 +426,16 @@ export function getSignsByElement(elementId: string): ZodiacSign[] {
 export function getSignsByModality(modality: ZodiacSign['signModality']): ZodiacSign[] {
   return Array.from(signs.values())
     .filter((s) => s.signModality === modality)
+    .sort((a, b) => a.orderInZodiac - b.orderInZodiac);
+}
+
+/**
+ * Get signs by VPER phase (ILOS Elemental Intelligence framework)
+ * vision=Fire, plan=Air, execute=Earth, review=Water
+ */
+export function getSignsByVperPhase(phase: VperPhase): ZodiacSign[] {
+  return Array.from(signs.values())
+    .filter((s) => s.vperPhase === phase)
     .sort((a, b) => a.orderInZodiac - b.orderInZodiac);
 }
 

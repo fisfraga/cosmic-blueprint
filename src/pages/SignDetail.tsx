@@ -27,6 +27,20 @@ const elementTextColors = {
   water: 'text-water-400',
 };
 
+const VPER_ICONS: Record<string, string> = {
+  vision: '🔥',
+  plan: '💨',
+  execute: '🌱',
+  review: '🌊',
+};
+
+const VPER_LABELS: Record<string, string> = {
+  vision: 'Vision',
+  plan: 'Plan',
+  execute: 'Execute',
+  review: 'Review',
+};
+
 export function SignDetail() {
   const { id } = useParams<{ id: string }>();
   const sign = id ? signs.get(id) : undefined;
@@ -146,6 +160,41 @@ export function SignDetail() {
         <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
           <h2 className="font-serif text-xl mb-4">Key Traits</h2>
           <p className="text-theme-text-secondary leading-relaxed">{sign.traits}</p>
+        </section>
+      )}
+
+      {/* Shadow → Light (Julia Balaz / ILOS) */}
+      {(sign.shadowExpression || sign.lightExpression) && (
+        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="font-serif text-xl">Shadow → Light</h2>
+            {sign.vperPhase && (
+              <span className={`flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-surface-overlay border border-theme-border-subtle ${textColor}`}>
+                <span>{VPER_ICONS[sign.vperPhase]}</span>
+                <span>{VPER_LABELS[sign.vperPhase]} Phase</span>
+              </span>
+            )}
+          </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            {sign.shadowExpression && (
+              <div className="p-4 rounded-lg bg-rose-500/5 border border-rose-500/20">
+                <div className="text-xs uppercase tracking-wider text-rose-400 mb-2">Shadow Expression</div>
+                <p className="text-theme-text-secondary italic leading-relaxed">{sign.shadowExpression}</p>
+              </div>
+            )}
+            {sign.lightExpression && (
+              <div className="p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
+                <div className="text-xs uppercase tracking-wider text-emerald-400 mb-2">Light Expression</div>
+                <p className="text-theme-text-secondary italic leading-relaxed">{sign.lightExpression}</p>
+              </div>
+            )}
+          </div>
+          {sign.managementGuidance && (
+            <div className="mt-4 p-4 rounded-lg bg-surface-overlay border border-theme-border-subtle">
+              <div className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Working with this Energy</div>
+              <p className="text-theme-text-secondary leading-relaxed">{sign.managementGuidance}</p>
+            </div>
+          )}
         </section>
       )}
 
