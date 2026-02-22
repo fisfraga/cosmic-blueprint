@@ -1,7 +1,7 @@
 # Story TD-K-04: Test Suite for `chartCalculation.ts`
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 8
 **Agent:** @dev (Dex)
 

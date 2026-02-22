@@ -1,7 +1,7 @@
 # Story TD-L-02: Full-Text Search for Insight Library
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** L
-**Status:** Ready
+**Status:** Done
 **Points:** 5
 **Agent:** @dev (Dex)
 

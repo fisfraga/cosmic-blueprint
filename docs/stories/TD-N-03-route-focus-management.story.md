@@ -1,7 +1,7 @@
 # Story TD-N-03: Route Change Focus Management
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** N
-**Status:** Ready
+**Status:** Done
 **Points:** 3
 **Agent:** @dev (Dex)
 

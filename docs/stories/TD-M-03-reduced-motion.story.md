@@ -1,7 +1,7 @@
 # Story TD-M-03: Add `prefers-reduced-motion` Support
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** M
-**Status:** Ready
+**Status:** Done
 **Points:** 3
 **Agent:** @dev (Dex)
 

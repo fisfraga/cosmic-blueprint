@@ -1,7 +1,7 @@
 # Story TD-M-04: Empty States for New Users
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** M
-**Status:** Ready
+**Status:** Done
 **Points:** 3
 **Agent:** @dev (Dex)
 

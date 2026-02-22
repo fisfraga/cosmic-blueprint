@@ -1,7 +1,7 @@
 # Story TD-L-04: Expand Service Test Coverage to 60%
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** L
-**Status:** Ready
+**Status:** Done
 **Points:** 13
 **Agent:** @dev (Dex)
 

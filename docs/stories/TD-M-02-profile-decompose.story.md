@@ -1,7 +1,7 @@
 # Story TD-M-02: Decompose `Profile.tsx`
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** M
-**Status:** Ready
+**Status:** Done
 **Points:** 8
 **Agent:** @dev (Dex)
 

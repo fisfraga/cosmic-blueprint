@@ -1,7 +1,7 @@
 # Story TD-L-05: CSP Headers + API Key Documentation
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** L
-**Status:** Ready
+**Status:** Done
 **Points:** 2
 **Agent:** @dev (Dex)
 
