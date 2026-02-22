@@ -52,6 +52,11 @@ export function GeneKeyDetail() {
           <header className="text-center py-8">
             <div className="text-6xl mb-4 font-serif text-genekey-400">{geneKey.keyNumber}</div>
             <h1 className="font-serif text-4xl font-medium mb-2">{geneKey.name}</h1>
+            {geneKey.keyTitle && (
+              <p className="text-base text-theme-text-tertiary italic mb-1">
+                {geneKey.keyTitle}
+              </p>
+            )}
             <p className="text-xl text-theme-text-secondary italic mb-4">Gene Key {geneKey.keyNumber}</p>
 
             {/* Spectrum Pills */}

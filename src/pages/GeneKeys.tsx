@@ -307,9 +307,12 @@ function GeneKeyCard({ geneKey }: { geneKey: GeneKey }) {
         </span>
       </div>
 
-      <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-2">
+      <h3 className="font-serif text-lg text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-1">
         {geneKey.name}
       </h3>
+      {geneKey.keyTitle && (
+        <p className="text-xs text-theme-text-tertiary italic mb-2">{geneKey.keyTitle}</p>
+      )}
 
       {/* Shadow → Gift → Siddhi */}
       <div className="space-y-1 text-sm">
