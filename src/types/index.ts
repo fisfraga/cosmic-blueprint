@@ -537,6 +537,9 @@ export interface CodonRing extends AstroEntity {
   geneKeyIds: string[];
   aminoAcidId?: string;
   aminoAcid?: string; // Direct name (e.g., "Arginine")
+  // Richard Rudd biological completeness layer (Sprint Y)
+  aminoAcids?: string[];        // Array of amino acid names this ring codes for (replaces singular for multi-acid rings)
+  transformationTheme?: string; // Single-sentence collective transformation arc for AI context use
   theme: string;
   collectivePurpose: string;
   primaryThemes?: string[];
