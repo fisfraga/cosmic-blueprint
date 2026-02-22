@@ -35,14 +35,13 @@ const ZODIAC_SIGNS = [
 ];
 
 /**
- * Get accurate True Node and Chiron longitudes from Swiss Ephemeris
+ * Get accurate True Node longitude from Swiss Ephemeris
  * via Kerykeion Python helper. The input date should be UTC.
+ * South Node is derived in TypeScript as TN + 180°.
  */
-function getAccurateTrueNodeAndChiron(utcDate: Date): {
+function getAccurateTrueNode(utcDate: Date): {
   trueNodeLon: number;
-  chironLon: number;
   trueNodeRetro: boolean;
-  chironRetro: boolean;
 } | null {
   try {
     const y = utcDate.getUTCFullYear();
@@ -55,9 +54,7 @@ function getAccurateTrueNodeAndChiron(utcDate: Date): {
     const result = JSON.parse(output);
     return {
       trueNodeLon: result.true_node as number,
-      chironLon: result.chiron as number,
       trueNodeRetro: result.true_node_retrograde as boolean,
-      chironRetro: result.chiron_retrograde as boolean,
     };
   } catch (err) {
     console.warn('  Warning: Kerykeion lookup failed, using approximate values:', String(err).split('\n')[0]);
@@ -66,17 +63,23 @@ function getAccurateTrueNodeAndChiron(utcDate: Date): {
 }
 
 /**
- * Override True Node and Chiron entries in a PlanetaryPosition array
- * with values from Swiss Ephemeris.
+ * Override True Node and South Node entries in a PlanetaryPosition array
+ * with values derived from Swiss Ephemeris.
+ * South Node = True Node + 180° (exact same pattern as Earth = Sun + 180°).
  */
 function patchPositions(
   positions: PlanetaryPosition[],
-  data: { trueNodeLon: number; chironLon: number; trueNodeRetro: boolean; chironRetro: boolean }
+  data: { trueNodeLon: number; trueNodeRetro: boolean }
 ): PlanetaryPosition[] {
+  // South Node longitude is always TN + 180°, and it moves in the same direction
+  const southNodeLon = (data.trueNodeLon + 180) % 360;
+  // South Node is retrograde when True Node is retrograde (they move together)
+  const southNodeRetro = data.trueNodeRetro;
+
   return positions.map(p => {
-    if (p.planetId === 'true-node' || p.planetId === 'chiron') {
-      const lon = p.planetId === 'true-node' ? data.trueNodeLon : data.chironLon;
-      const retro = p.planetId === 'true-node' ? data.trueNodeRetro : data.chironRetro;
+    if (p.planetId === 'true-node' || p.planetId === 'south-node') {
+      const lon = p.planetId === 'true-node' ? data.trueNodeLon : southNodeLon;
+      const retro = p.planetId === 'true-node' ? data.trueNodeRetro : southNodeRetro;
       const normalizedLon = ((lon % 360) + 360) % 360;
       const signIndex = Math.floor(normalizedLon / 30);
       const degreeInSign = normalizedLon % 30;
@@ -116,11 +119,11 @@ function buildCosmicProfile(
   const result = calculateProfilesFromBirthData(birthData);
   const chart = result.calculatedChart!;
 
-  // Step 2: Get accurate True Node + Chiron from Swiss Ephemeris
-  console.log(`  Fetching natal TN + Chiron (Swiss Ephemeris)...`);
-  const natalAcc = getAccurateTrueNodeAndChiron(new Date(chart.natalDate));
-  console.log(`  Fetching design TN + Chiron (Swiss Ephemeris)...`);
-  const designAcc = getAccurateTrueNodeAndChiron(new Date(chart.designDate));
+  // Step 2: Get accurate True Node from Swiss Ephemeris (South Node derived as TN+180°)
+  console.log(`  Fetching natal True Node (Swiss Ephemeris)...`);
+  const natalAcc = getAccurateTrueNode(new Date(chart.natalDate));
+  console.log(`  Fetching design True Node (Swiss Ephemeris)...`);
+  const designAcc = getAccurateTrueNode(new Date(chart.designDate));
 
   if (natalAcc && designAcc) {
     // Step 3: Patch positions with exact values

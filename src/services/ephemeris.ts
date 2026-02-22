@@ -40,7 +40,7 @@ export interface PlanetaryPositions {
   neptune: number;
   pluto: number;
   'true-node': number;
-  chiron: number;
+  'south-node': number;
 }
 
 // Map planet IDs to astronomy-engine Body enum
@@ -161,81 +161,20 @@ function calculateTrueLunarNode(date: Date): number {
 }
 
 // ============================================================================
-// Chiron (2060 Chiron) — Keplerian orbital elements
-// Calibrated against Swiss Ephemeris reference positions.
-// Osculating elements sourced from JPL SBDB, epoch J2000.0.
-// Accurate to approximately 1–3 degrees for dates 1970–2050.
+// South Node — exactly opposite the True Lunar Node (ascending node).
+// South Node = (True Node longitude + 180°) % 360°
+// This is the same arithmetic used for Earth = Sun + 180°.
 // ============================================================================
 
 /**
- * Solve Kepler's equation  M = E - e·sin(E)  for the eccentric anomaly E.
- * Uses Newton-Raphson iteration.
- */
-function solveKeplerEquation(M_deg: number, e: number): number {
-  const toRad = Math.PI / 180;
-  let E = M_deg * toRad;
-  for (let i = 0; i < 50; i++) {
-    const dE = (M_deg * toRad - E + e * Math.sin(E)) / (1 - e * Math.cos(E));
-    E += dE;
-    if (Math.abs(dE) < 1e-10) break;
-  }
-  return E; // radians
-}
-
-/**
- * Calculate Chiron's ecliptic longitude using Keplerian orbital mechanics.
+ * Calculate the South Lunar Node (descending node) ecliptic longitude.
  *
- * Orbital elements (J2000.0 epoch, from JPL SBDB):
- *   a = 13.64846 AU, e = 0.37955, i = 6.94963°
- *   Ω = 209.3543°, ω = 339.4416°, period = 18417.2 days
- *   M₀ = 29.30° (calibrated so that Chiron's position matches Swiss Ephemeris
- *        at known reference dates in the 1990s–2000s)
- *
- * Accuracy: ~1–3° vs Swiss Ephemeris; sufficient for HD gate assignment.
+ * The South Node is always exactly opposite the True (North) Node:
+ *   South Node = (True Node + 180°) mod 360°
  */
-function calculateChironLongitude(date: Date): number {
-  const JD = julianDay(date);
-  const t = JD - 2451545.0; // days from J2000.0
-
-  const e = 0.37955;
-  const i_deg = 6.94963;
-  const Omega_deg = 209.3543;
-  const omega_deg = 339.4416;
-  const period_days = 18417.2;
-  // M₀ at J2000.0 — calibrated against Swiss Ephemeris reference positions
-  const M0_deg = 29.3;
-
-  const n = 360 / period_days; // deg/day
-  const M = ((M0_deg + n * t) % 360 + 360) % 360;
-
-  const E = solveKeplerEquation(M, e); // radians
-  const toRad = Math.PI / 180;
-  const toDeg = 180 / Math.PI;
-
-  // True anomaly from eccentric anomaly
-  const nu =
-    2 *
-    Math.atan2(
-      Math.sqrt(1 + e) * Math.sin(E / 2),
-      Math.sqrt(1 - e) * Math.cos(E / 2)
-    ) *
-    toDeg;
-
-  // Argument of latitude
-  const u = ((nu + omega_deg) % 360 + 360) % 360;
-  const u_rad = u * toRad;
-  const Omega = Omega_deg * toRad;
-  const ir = i_deg * toRad;
-
-  // Convert to ecliptic longitude
-  const x =
-    Math.cos(Omega) * Math.cos(u_rad) -
-    Math.sin(Omega) * Math.sin(u_rad) * Math.cos(ir);
-  const y =
-    Math.sin(Omega) * Math.cos(u_rad) +
-    Math.cos(Omega) * Math.sin(u_rad) * Math.cos(ir);
-
-  return ((Math.atan2(y, x) * toDeg) % 360 + 360) % 360;
+function calculateSouthNode(date: Date): number {
+  const trueNode = calculateTrueLunarNode(date);
+  return (trueNode + 180) % 360;
 }
 
 /**
@@ -266,9 +205,9 @@ function getPositionsFromData(date: Date): PlanetaryPositions | null {
     uranus: positions[7],
     neptune: positions[8],
     pluto: positions[9],
-    // True Node and Chiron are not in the pre-computed table; calculate directly.
+    // True Node and South Node are not in the pre-computed table; calculate directly.
     'true-node': calculateTrueLunarNode(date),
-    chiron: calculateChironLongitude(date),
+    'south-node': calculateSouthNode(date),
   };
 }
 
@@ -312,8 +251,8 @@ function calculatePositions(date: Date): PlanetaryPositions {
     pluto: calculateLongitude('pluto', date),
     // True Node via Meeus (astronomy-engine lacks this body)
     'true-node': calculateTrueLunarNode(date),
-    // Chiron via Keplerian orbital elements (astronomy-engine lacks this body)
-    chiron: calculateChironLongitude(date),
+    // South Node is exactly opposite True Node (same as Earth = Sun + 180°)
+    'south-node': calculateSouthNode(date),
   };
 }
 
@@ -397,8 +336,9 @@ export function isRetrograde(planetId: string, date: Date): boolean {
   }
 
   // True Node moves retrograde on average but with oscillations;
-  // Chiron can be retrograde or direct. Both are handled by the diff check below.
-  if (planetId === 'true-node' || planetId === 'chiron') {
+  // South Node is always opposite True Node — it moves in the same direction.
+  // Both are handled by the diff check below.
+  if (planetId === 'true-node' || planetId === 'south-node') {
     const pos1 = getPlanetaryPositions(date);
     const pos2 = getPlanetaryPositions(
       new Date(date.getTime() - 86400000)

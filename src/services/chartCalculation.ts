@@ -45,7 +45,7 @@ const PLANET_IDS = [
   'neptune',
   'pluto',
   'true-node',
-  'chiron',
+  'south-node',
 ] as const;
 
 // Zodiac signs for position mapping
@@ -212,7 +212,7 @@ export function toGateActivations(
   isPersonality: boolean
 ): HDGateActivation[] {
   const activations: HDGateActivation[] = [];
-  // 13-planet HD model: Sun, Earth, Moon, 8 traditional planets + True Node + Chiron
+  // 13-planet HD model: Sun, Earth, Moon, 8 traditional planets + True Node + South Node
   const planetOrder = [
     'sun',
     'earth',
@@ -226,7 +226,7 @@ export function toGateActivations(
     'neptune',
     'pluto',
     'true-node',
-    'chiron',
+    'south-node',
   ];
 
   // Map planet IDs to display names used in gate activations
@@ -243,7 +243,7 @@ export function toGateActivations(
     neptune: 'Neptune',
     pluto: 'Pluto',
     'true-node': 'True Node',
-    chiron: 'Chiron',
+    'south-node': 'South Node',
   };
 
   for (const planetId of planetOrder) {
@@ -491,6 +491,71 @@ function getHDProfile(
 }
 
 /**
+ * Determine HD definition type by counting connected components
+ * in the center graph formed by defined channels.
+ *
+ * Definition rules (correct algorithm):
+ * - No Definition:    0 defined centers
+ * - Single:           1 connected component
+ * - Split:            2 connected components
+ * - Triple Split:     3 connected components
+ * - Quadruple Split:  4+ connected components
+ *
+ * NOTE: Channel count is NOT a valid proxy — 4 channels can form 1 connected
+ * chain (Single) or 4 disconnected pairs (Quadruple Split).
+ */
+function calculateDefinitionType(
+  definedCenterIds: string[],
+  definedChannelIds: string[]
+): HDDefinition {
+  if (definedCenterIds.length === 0) return 'No Definition';
+
+  // Build adjacency list for all defined centers
+  const adjacency = new Map<string, Set<string>>();
+  for (const centerId of definedCenterIds) {
+    adjacency.set(centerId, new Set());
+  }
+
+  // Populate edges from defined channels
+  const definedChannelSet = new Set(definedChannelIds);
+  hdChannels.forEach((channel, channelId) => {
+    if (
+      definedChannelSet.has(channelId) &&
+      channel.center1Id &&
+      channel.center2Id
+    ) {
+      adjacency.get(channel.center1Id)?.add(channel.center2Id);
+      adjacency.get(channel.center2Id)?.add(channel.center1Id);
+    }
+  });
+
+  // Count connected components via BFS
+  const visited = new Set<string>();
+  let componentCount = 0;
+
+  for (const startCenter of definedCenterIds) {
+    if (visited.has(startCenter)) continue;
+    componentCount++;
+    const queue = [startCenter];
+    visited.add(startCenter);
+    while (queue.length > 0) {
+      const current = queue.shift()!;
+      for (const neighbor of (adjacency.get(current) ?? [])) {
+        if (!visited.has(neighbor)) {
+          visited.add(neighbor);
+          queue.push(neighbor);
+        }
+      }
+    }
+  }
+
+  if (componentCount === 1) return 'Single';
+  if (componentCount === 2) return 'Split';
+  if (componentCount === 3) return 'Triple Split';
+  return 'Quadruple Split';
+}
+
+/**
  * Calculate Human Design profile from positions
  * Note: This is a simplified calculation. Full HD requires:
  * - Complete channel mapping
@@ -529,16 +594,8 @@ export function calculateHumanDesignProfile(
     designSun?.line || 1
   );
 
-  // Determine definition type based on how centers connect
-  const definitionType = definedCenterIds.length === 0
-    ? 'No Definition'
-    : definedChannelIds.length <= 2
-      ? 'Single'
-      : definedChannelIds.length <= 4
-        ? 'Split'
-        : definedChannelIds.length <= 6
-          ? 'Triple Split'
-          : 'Quadruple Split';
+  // Determine definition type using graph connectivity (BFS)
+  const definitionType = calculateDefinitionType(definedCenterIds, definedChannelIds);
 
   return {
     type: hdType,

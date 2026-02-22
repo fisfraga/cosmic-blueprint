@@ -68,7 +68,7 @@ describe('chartCalculation', () => {
       expect(chart.designDate).toMatch(/^\d{4}-\d{2}-\d{2}T/);
     });
 
-    it('returns 13 natal positions (10 planets + earth + true-node + chiron)', () => {
+    it('returns 13 natal positions (10 planets + earth + true-node + south-node)', () => {
       const chart = calculateFullChart(gemini2024BirthData);
       expect(chart.natalPositions.length).toBe(13);
       const planetIds = chart.natalPositions.map(p => p.planetId);
@@ -84,7 +84,7 @@ describe('chartCalculation', () => {
       expect(planetIds).toContain('neptune');
       expect(planetIds).toContain('pluto');
       expect(planetIds).toContain('true-node');
-      expect(planetIds).toContain('chiron');
+      expect(planetIds).toContain('south-node');
     });
 
     it('returns 13 design positions', () => {

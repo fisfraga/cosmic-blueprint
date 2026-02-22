@@ -17,7 +17,7 @@
     "cityOfBirth": "Rio de Janeiro"
   },
   "calculatedChart": {
-    "calculatedAt": "2026-02-22T19:49:44.304Z",
+    "calculatedAt": "2026-02-22T22:25:54.623Z",
     "calculationVersion": "1.0.0",
     "source": "local",
     "natalDate": "1998-01-19T08:20:00.000Z",
@@ -110,6 +110,22 @@
         "degree": 7,
         "minute": 20,
         "retrograde": false
+      },
+      {
+        "planetId": "true-node",
+        "longitude": 161.307458,
+        "signId": "virgo",
+        "degree": 11,
+        "minute": 18,
+        "retrograde": false
+      },
+      {
+        "planetId": "south-node",
+        "longitude": 341.307458,
+        "signId": "pisces",
+        "degree": 11,
+        "minute": 18,
+        "retrograde": false
       }
     ],
     "designPositions": [
@@ -200,6 +216,22 @@
         "degree": 4,
         "minute": 10,
         "retrograde": false
+      },
+      {
+        "planetId": "true-node",
+        "longitude": 168.987473,
+        "signId": "virgo",
+        "degree": 18,
+        "minute": 59,
+        "retrograde": false
+      },
+      {
+        "planetId": "south-node",
+        "longitude": 348.987473,
+        "signId": "pisces",
+        "degree": 18,
+        "minute": 59,
+        "retrograde": false
       }
     ],
     "natalGates": [
@@ -279,6 +311,20 @@
         "line": 2,
         "isPersonality": true,
         "planet": "Pluto"
+      },
+      {
+        "gateId": "gate-40",
+        "gateNumber": 40,
+        "line": 6,
+        "isPersonality": true,
+        "planet": "True Node"
+      },
+      {
+        "gateId": "gate-37",
+        "gateNumber": 37,
+        "line": 6,
+        "isPersonality": true,
+        "planet": "South Node"
       }
     ],
     "designGates": [
@@ -358,6 +404,20 @@
         "line": 5,
         "isPersonality": false,
         "planet": "Pluto"
+      },
+      {
+        "gateId": "gate-47",
+        "gateNumber": 47,
+        "line": 3,
+        "isPersonality": false,
+        "planet": "True Node"
+      },
+      {
+        "gateId": "gate-22",
+        "gateNumber": 22,
+        "line": 3,
+        "isPersonality": false,
+        "planet": "South Node"
       }
     ]
   },
@@ -506,7 +566,7 @@
     "strategy": "Wait to Respond",
     "authority": "Emotional",
     "profile": "3/5",
-    "definition": "Split",
+    "definition": "Single",
     "incarnationCross": "Cross of 60/56 | 50/3",
     "personalityGates": [
       {
@@ -585,6 +645,20 @@
         "line": 2,
         "isPersonality": true,
         "planet": "Pluto"
+      },
+      {
+        "gateId": "gate-40",
+        "gateNumber": 40,
+        "line": 6,
+        "isPersonality": true,
+        "planet": "True Node"
+      },
+      {
+        "gateId": "gate-37",
+        "gateNumber": 37,
+        "line": 6,
+        "isPersonality": true,
+        "planet": "South Node"
       }
     ],
     "designGates": [
@@ -664,6 +738,20 @@
         "line": 5,
         "isPersonality": false,
         "planet": "Pluto"
+      },
+      {
+        "gateId": "gate-47",
+        "gateNumber": 47,
+        "line": 3,
+        "isPersonality": false,
+        "planet": "True Node"
+      },
+      {
+        "gateId": "gate-22",
+        "gateNumber": 22,
+        "line": 3,
+        "isPersonality": false,
+        "planet": "South Node"
       }
     ],
     "definedCenterIds": [
@@ -676,7 +764,8 @@
     "definedChannelIds": [
       "channel-3-60",
       "channel-26-44",
-      "channel-30-41"
+      "channel-30-41",
+      "channel-37-40"
     ],
     "coreIdentity": {
       "sun": {
