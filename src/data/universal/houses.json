@@ -22,7 +22,11 @@
       "How do I naturally present myself to others?",
       "What first impressions do I make?",
       "How do I approach new beginnings?"
-    ]
+    ],
+    "ilosKeyArea": "Health & Vitality",
+    "vperPhase": "vision",
+    "careerRelevance": "Identity & personal brand in professional sphere",
+    "purposeRole": "The stage of self — how you enter every arena"
   },
   {
     "id": "house-2",
@@ -47,7 +51,11 @@
       "What do I truly value beyond material possessions?",
       "How do I relate to money and security?",
       "What natural talents can I cultivate?"
-    ]
+    ],
+    "ilosKeyArea": "Finances & Resources",
+    "vperPhase": "execute",
+    "careerRelevance": "Earning values, natural talents convertible to income",
+    "purposeRole": "The stage of resources — what you build your purpose on"
   },
   {
     "id": "house-3",
@@ -73,7 +81,11 @@
       "How do I best learn and process information?",
       "What is my relationship with siblings and neighbors?",
       "How do I communicate my ideas?"
-    ]
+    ],
+    "ilosKeyArea": "Communication & Learning",
+    "vperPhase": "plan",
+    "careerRelevance": "Communication style, teaching, local entrepreneurship",
+    "purposeRole": "The stage of voice — how your purpose reaches others"
   },
   {
     "id": "house-4",
@@ -99,7 +111,11 @@
       "What does home mean to me?",
       "How do my roots influence who I am today?",
       "What emotional patterns do I carry from family?"
-    ]
+    ],
+    "ilosKeyArea": "Home & Family",
+    "vperPhase": "review",
+    "careerRelevance": "Private work, remote work, ancestral patterns in career",
+    "purposeRole": "The foundation stage — what you need in place before building"
   },
   {
     "id": "house-5",
@@ -126,7 +142,11 @@
       "How do I express my creativity?",
       "What brings me genuine joy and pleasure?",
       "How do I approach romance and play?"
-    ]
+    ],
+    "ilosKeyArea": "Creativity & Joy",
+    "vperPhase": "vision",
+    "careerRelevance": "Creative direction, authentic expression in work, performance",
+    "purposeRole": "The pleasure stage — where purpose becomes joy"
   },
   {
     "id": "house-6",
@@ -152,7 +172,11 @@
       "What daily practices support my wellbeing?",
       "How do I serve others in practical ways?",
       "What skills am I developing?"
-    ]
+    ],
+    "ilosKeyArea": "Work & Wellness",
+    "vperPhase": "execute",
+    "careerRelevance": "Daily work expression, service design, health in career",
+    "purposeRole": "The craft stage — how purpose becomes disciplined practice"
   },
   {
     "id": "house-7",
@@ -177,7 +201,11 @@
       "What qualities do I seek in partners?",
       "How do I maintain balance in relationships?",
       "What do my relationships teach me about myself?"
-    ]
+    ],
+    "ilosKeyArea": "Relationships & Partnerships",
+    "vperPhase": "plan",
+    "careerRelevance": "Partnership career patterns, collaborative ventures",
+    "purposeRole": "The mirror stage — what you are becoming through others"
   },
   {
     "id": "house-8",
@@ -203,7 +231,11 @@
       "What am I being asked to transform?",
       "How do I relate to shared resources and intimacy?",
       "What psychological depths am I exploring?"
-    ]
+    ],
+    "ilosKeyArea": "Transformation & Depth",
+    "vperPhase": "review",
+    "careerRelevance": "Transformation facilitation, research, other people's resources",
+    "purposeRole": "The depth stage — where purpose meets shadow work"
   },
   {
     "id": "house-9",
@@ -230,7 +262,11 @@
       "What beliefs serve my highest evolution?",
       "How do I balance seeking truth with living truth?",
       "What cultural or spiritual traditions call to my soul?"
-    ]
+    ],
+    "ilosKeyArea": "Growth & Vision",
+    "vperPhase": "vision",
+    "careerRelevance": "Vision, philosophy, teaching at scale, publishing",
+    "purposeRole": "The meaning stage — how purpose expands into worldview"
   },
   {
     "id": "house-10",
@@ -257,7 +293,11 @@
       "How do I balance personal ambition with service to the whole?",
       "What form of mastery is my soul seeking?",
       "How do I use worldly success as a platform for consciousness?"
-    ]
+    ],
+    "ilosKeyArea": "Career & Public Life",
+    "vperPhase": "execute",
+    "careerRelevance": "Public vocation, reputation, career achievement",
+    "purposeRole": "The pinnacle stage — the visible expression of purpose"
   },
   {
     "id": "house-11",
@@ -283,7 +323,11 @@
       "What communities align with my soul's mission?",
       "How do I contribute to positive social change?",
       "What vision of the future lives within my heart?"
-    ]
+    ],
+    "ilosKeyArea": "Community & Purpose",
+    "vperPhase": "plan",
+    "careerRelevance": "Collective mission, community leadership, systemic change",
+    "purposeRole": "The community stage — where purpose serves the whole"
   },
   {
     "id": "house-12",
@@ -311,6 +355,10 @@
       "What is my soul's relationship with the Divine?",
       "How do I serve from ego-less compassion?",
       "What patterns am I releasing from this and past lifetimes?"
-    ]
+    ],
+    "ilosKeyArea": "Spirituality & Inner Life",
+    "vperPhase": "review",
+    "careerRelevance": "Hidden gift, spiritual service, behind-the-scenes mastery",
+    "purposeRole": "The invisible stage — the gift you give before you know it"
   }
 ]

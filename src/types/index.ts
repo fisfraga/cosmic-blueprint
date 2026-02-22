@@ -128,6 +128,11 @@ export interface House extends AstroEntity {
   lifeAreaFocus: string[];
   meaningAndRepresentation: string;
   contemplationQuestions: string[];
+  // ILOS + Julia Balaz enrichment (Sprint U)
+  ilosKeyArea?: string;       // e.g. "Health & Vitality" — ILOS 12 Key Area name
+  vperPhase?: VperPhase;      // 'vision' | 'plan' | 'execute' | 'review'
+  careerRelevance?: string;   // Julia Balaz: career/vocation framing for this house
+  purposeRole?: string;       // Julia Balaz: soul purpose role framing for this house
 }
 
 // ------------------------------------
