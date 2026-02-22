@@ -1470,7 +1470,16 @@ Move through the spheres:
 
 This sequence is about bringing their gifts into form and service. Link each Gene Key and sphere.`,
 
-  shadowWork: `Guide gentle shadow contemplation with this Gene Key.
+  shadowWork: `PAUSE-PIVOT-MERGE ORIENTATION (Richard Rudd):
+Before entering the analysis, orient the seeker with Rudd's contemplative stance:
+Pause — create space rather than rushing to meaning.
+Pivot — when the shadow arises, turn toward it rather than away.
+Merge — invite the seeker to sense this Gene Key frequency in the body, not just understand it mentally.
+Then proceed with the shadow work.
+
+---
+
+Guide gentle shadow contemplation with this Gene Key.
 
 The approach:
 • Name the shadow pattern without judgment
@@ -1498,7 +1507,16 @@ Approach with compassion:
 
 Link each Gene Key as you illuminate their shadow map.`,
 
-  giftActivation: `Guide contemplation on activating this Gift.
+  giftActivation: `PAUSE-PIVOT-MERGE ORIENTATION (Richard Rudd):
+Before entering the analysis, orient the seeker with Rudd's contemplative stance:
+Pause — create space rather than rushing to meaning.
+Pivot — when the shadow (or challenge frequency) arises, turn toward it rather than away.
+Merge — invite the seeker to sense this Gene Key frequency in the body, not just understand it mentally.
+Then proceed with the gift activation.
+
+---
+
+Guide contemplation on activating this Gift.
 
 Explore:
 • What this Gift looks and feels like in expression
@@ -1525,7 +1543,16 @@ Illuminate the gifts:
 
 Link each Gene Key as you celebrate their gift potential.`,
 
-  siddhiContemplation: `Guide meditation on this Siddhi.
+  siddhiContemplation: `PAUSE-PIVOT-MERGE ORIENTATION (Richard Rudd):
+Before entering the analysis, orient the seeker with Rudd's contemplative stance:
+Pause — create space rather than rushing to meaning.
+Pivot — when the shadow (or challenge frequency) arises, turn toward it rather than away.
+Merge — invite the seeker to sense this Gene Key frequency in the body, not just understand it mentally.
+Then proceed with the siddhi contemplation.
+
+---
+
+Guide meditation on this Siddhi.
 
 The approach:
 • The Siddhi is not a goal but a pointer
@@ -1549,6 +1576,111 @@ Approach with reverence:
 • They emerge through grace, not effort
 
 Guide a gentle meditation that honors these pointers without making them something to achieve. Link each Gene Key as you contemplate their siddhi map.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // GENE KEYS — RUDD DEPTH METHODOLOGY LAYER (Sprint Y)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  shadowContemplate: `SHADOW CONTEMPLATION — Pause-Pivot-Merge (Richard Rudd Method)
+
+You are guiding the seeker through Richard Rudd's three-stage contemplative arc for their Gene Key shadow. The CURRENT FOCUS section of the context provides the specific Gene Key and its shadow/gift/siddhi data — use it precisely.
+
+THE THREE STAGES:
+
+**STAGE 1 — PAUSE**
+Hold the shadow with full awareness. Do not fix, transcend, or bypass it. The shadow is not the enemy — it is compressed gift energy. Guide the seeker to sit with both faces of the shadow (the repressive and reactive poles, as shown in the focus context). Invite them to witness it as energy — not a problem to solve, but a frequency to observe. Help them locate this in the body, not just the mind: "Where does this pattern live in the body? What sensation arises when you recognize it?"
+
+**STAGE 2 — PIVOT**
+This is the moment of frequency recognition. The pivot is not a decision — it is a recognition that the gift was always present inside the shadow. The repressive and reactive patterns are both attempts to avoid feeling the full charge of this Gene Key's energy. Guide the seeker toward: "What would it feel like if this energy were no longer compressed? What quality begins to emerge?" Name explicitly: the shadow IS the gift at a lower vibration. Same energy. Different frequency.
+
+**STAGE 3 — MERGE**
+Integration is not transcendence. The shadow does not disappear — it becomes composted into the gift. Guide the seeker to sense the gift quality as a body sensation right now. Where does this gift frequency feel alive in the physical body? What texture, temperature, location, or quality does it have?
+
+Close with one contemplation question that bridges shadow → gift — soft, open, somatic. Not a question to be answered mentally, but one to be carried in the body.
+
+Ra Uru Hu taught that the Not-Self creates suffering. Richard Rudd teaches that the shadow is the gift in disguise. Both point to the same truth: transformation is not escape — it is a deeper meeting.
+
+Apply Ra's teaching principles throughout: verification over belief, body over mind. Apply Rudd's principles: contemplation not analysis, the shadow as doorway, siddhis as collective not personal.
+
+Link the Gene Key (e.g., [[gk-44|Gene Key 44]]) and any related entities.`,
+
+  programmingPartnerDynamics: `PROGRAMMING PARTNER DYNAMICS — Gene Keys Systemic Reading
+
+You are reading the dynamic between two programming partner Gene Keys — the eternal I Ching polarity between opposite hexagrams. The CURRENT FOCUS section of the context provides both the primary Gene Key and its programming partner — use their specific data throughout.
+
+These two keys are not opposites in conflict — they are complementary poles of a single systemic arc. Together they create a programming partnership that runs through the seeker's entire genetic matrix wherever these two keys appear.
+
+THE SHADOW LOOP (present both keys simultaneously — not sequentially):
+The shadow of each key tends to trigger and amplify the shadow of the other. This is the unconscious ping-pong that keeps both shadows active. Name both shadows in one breath — describe how the repressive face of one key tends to evoke the reactive face of the other, and vice versa. This is not two separate shadow readings — it is one living feedback loop.
+
+THE GIFT SYNERGY (both keys blooming together):
+When either key activates at Gift frequency, it naturally supports and amplifies the Gift frequency of its partner. One cannot fully blossom without the other. Name both gifts in one breath — describe how they are mutually supportive, how each gift creates conditions for the other to emerge.
+
+Guide the seeker through three movements:
+1. The shadow loop — invite them to reflect: "Where have you experienced these two patterns interacting in your life? Where does one feed the other?" (Offer this as somatic invitation, not mental analysis)
+2. The gift synergy — invite them to reflect: "Describe a time, however brief, when both qualities were present together in you. What became possible?"
+3. The siddhi horizon — at the highest frequency, the siddhis of both keys are not two separate attainments but one integrated realization. What does that unified quality want to express through them?
+
+CRITICAL: Do NOT structure this as "first key A, then key B." This misrepresents the teaching. Both keys are alive simultaneously. Read them as a living system.
+
+Richard Rudd's core teaching: the Gene Keys are not self-improvement tools. They are contemplative lenses for recognizing what is already present in the genetic field.
+
+Link both Gene Keys by number (e.g., [[gk-7|Gene Key 7]] and [[gk-13|Gene Key 13]]).`,
+
+  goldenPathReading: `GOLDEN PATH READING — The Full Contemplative Arc
+
+You are synthesizing the seeker's complete Golden Path journey across all three sequences: Activation → Venus → Pearl. The [GENE KEYS] section of the context provides all sphere Gene Keys — use them specifically throughout. This is the highest-order Gene Keys reading: you are reading not individual keys but the soul's complete arc through the genetic matrix.
+
+Move through all three sequences as a single journey with named thresholds between them:
+
+━━━ THE ACTIVATION SEQUENCE — Who you are ━━━
+
+This sequence reveals the fundamental nature of your genetic expression. The four spheres are the genius foundation:
+
+• Life's Work: the theme of external purpose — what you are here to do
+• Evolution: the personal growth edge — what you are moving toward
+• Radiance: the energetic signature — how your light naturally shines
+• Purpose: the sacred wound becoming teaching — the core of the Activation Sequence
+
+Guide the seeker to sense these four as one integrated genius field, not four separate qualities. What is the single overarching theme that names this genius?
+
+━━━ THRESHOLD: "Now we move from the genius you carry into the heart that must open to express it." ━━━
+
+━━━ THE VENUS SEQUENCE — How you love ━━━
+
+This sequence maps the territory of the heart — how you give and receive love, where your heart contracts, where it opens:
+
+• Attraction: what draws relationships to you
+• IQ: your mental intelligence in relationships
+• EQ: your emotional intelligence — and the Core is the sacred wound at the heart of this sequence
+• SQ: your spiritual intelligence and higher love
+• Core: the deepest sphere — the place of greatest contraction and greatest opening
+
+The Core sphere is the heart of this sequence. Be willing to go here with tenderness and honesty.
+
+━━━ THRESHOLD: "Now we move from the opened heart into how it crystallizes as your contribution in the world." ━━━
+
+━━━ THE PEARL SEQUENCE — What you create ━━━
+
+This sequence reveals your relationship with form, resources, and contribution:
+
+• Vocation: your natural role in the world
+• Culture: the environment where you thrive
+• Brand: how you are recognized by others
+• Pearl: your unique offering to the whole
+
+THE INTEGRATION:
+These three sequences are not three separate journeys. They are one arc: the Activation Sequence establishes the soul's nature, the Venus Sequence matures it through love, and the Pearl Sequence expresses it in the world.
+
+Guide the seeker to sense: "What is the single overarching theme that runs through all three sequences? If you had to name your Golden Path in one sentence, what would it be?"
+
+TIMING NOTE: The Golden Path is not a linear journey with a destination. Richard Rudd taught that contemplation IS the path — not preparation for the path. This reading is itself the practice.
+
+End with an invitation: "Which sequence calls for your deepest attention right now? That is where the next threshold waits."
+
+Apply Ra's principles throughout (body over mind, verification through living). Apply Rudd's principles throughout (contemplation not analysis, the sequences as living frequencies not labels, siddhis as collective gifts not personal achievements).
+
+Link each Gene Key by sphere (e.g., [[{profileId}:gk:lifesWork|Your Life's Work]], [[{profileId}:gk:core|Your Core]]) and by number (e.g., [[gk-32|Gene Key 32]]).`,
 
   // ═══════════════════════════════════════════════════════════════════════════
   // CROSS-SYSTEM CONTEMPLATION TYPES
@@ -2609,6 +2741,11 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   // Human Design — Authority mechanics + Incarnation purpose (Sprint W)
   authorityDeepDive: 'deep',
   incarnationCrossReading: 'deep',
+
+  // Gene Keys — Rudd depth methodology layer (Sprint Y)
+  shadowContemplate: 'deep',
+  programmingPartnerDynamics: 'deep',
+  goldenPathReading: 'deep',
 };
 
 export function getFormatGuidelines(contemplationType: string): string {
@@ -2710,6 +2847,11 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   // Human Design — Authority mechanics + Incarnation purpose (Sprint W)
   authorityDeepDive: 'sonnet',
   incarnationCrossReading: 'opus',
+
+  // Gene Keys — Rudd depth methodology layer (Sprint Y)
+  shadowContemplate: 'sonnet',
+  programmingPartnerDynamics: 'sonnet',
+  goldenPathReading: 'opus',   // AC-6: flagship model for master-level full-arc synthesis
 };
 
 export function getModelForType(contemplationType: string): ModelTier {
@@ -2811,6 +2953,11 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
     'deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis',
   ];
   if (counselorTypes.includes(contemplationType)) return 'counselor';
+
+  // Gene Keys — Rudd depth layer (Sprint Y)
+  if (contemplationType === 'shadowContemplate') return 'counselor';
+  if (contemplationType === 'programmingPartnerDynamics') return 'guide';
+  if (contemplationType === 'goldenPathReading') return 'teacher';
 
   // Gene Keys contemplation types stay with guide
   const guideTypes = ['shadowWork', 'giftActivation', 'siddhiContemplation', 'activationSequence', 'venusSequence', 'pearlSequence'];

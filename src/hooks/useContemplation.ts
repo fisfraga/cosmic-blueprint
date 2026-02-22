@@ -224,6 +224,10 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'activationSequence',  name: 'Activation Sequence',  description: 'The path of Purpose',                                level: 'master' },
     { id: 'venusSequence',       name: 'Venus Sequence',       description: 'The path of the Heart',                              level: 'master' },
     { id: 'pearlSequence',       name: 'Pearl Sequence',       description: 'The path of Prosperity',                             level: 'master' },
+    // Sprint Y — Richard Rudd depth methodology layer
+    { id: 'shadowContemplate',          name: 'Shadow Contemplation',           description: "Pause-Pivot-Merge arc — meet the shadow's repressive and reactive poles as a somatic practice",                needsFocus: true, level: 'advanced' },
+    { id: 'programmingPartnerDynamics', name: 'Programming Partner Dynamics',   description: 'Dual-key systemic reading — shadow loop and gift synergy between opposite hexagram partners', needsFocus: true, level: 'advanced' },
+    { id: 'goldenPathReading',          name: 'Golden Path Reading',            description: 'Full Activation → Venus → Pearl arc synthesis — one integrated narrative across all three sequences',          level: 'master' },
   ],
   crossSystem: [
     { id: 'gateKeyOverview',         name: 'All Gate-Key Bridges',      description: 'Explore how all your gates connect to Gene Keys',                                                           level: 'beginner' },

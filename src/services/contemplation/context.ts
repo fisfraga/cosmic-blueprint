@@ -1,7 +1,7 @@
 // Context builder for Contemplation Chamber AI
 // Full Chart Context Architecture - Harmonic Resonance
 import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile, Element, PersonalContext } from '../../types';
-import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree } from '../../data';
+import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree, getProgrammingPartner } from '../../data';
 import { getFixedStarConjunctions } from '../fixedStars';
 import { getGalacticConjunctions, getGalacticTransitActivations, type GalacticConjunction } from '../galacticAstrology';
 import { calculateTransitNatalAspects, type TransitNatalAspect } from '../transitAspects';
@@ -56,6 +56,10 @@ export type ContemplationType =
   | 'giftOverview'
   | 'siddhiContemplation'
   | 'siddhiOverview'
+  // Sprint Y — Richard Rudd depth methodology layer
+  | 'shadowContemplate'          // Pause-Pivot-Merge shadow witnessing practice (advanced, Counselor)
+  | 'programmingPartnerDynamics' // Dual-key shadow loop + gift synergy reading (advanced, Guide)
+  | 'goldenPathReading'          // Full three-sequence integrated narrative arc (master, Teacher)
   // Cross-system
   | 'gateKeyBridge'
   | 'gateKeyOverview'
@@ -1228,6 +1232,15 @@ function formatFocusHighlight(profile: AstroProfile, selection: ContemplationSel
     case 'geneKey': {
       const keyNumber = parseInt(selection.focus.id.replace(/^(gate-|gk-)/, ''));
       outputLines.push(formatGateKeyFocus(keyNumber, profile));
+      // For programmingPartnerDynamics: also inject the programming partner Gene Key
+      if (selection.type === 'programmingPartnerDynamics') {
+        const primaryKey = geneKeys.get(`gk-${keyNumber}`);
+        const partnerKey = primaryKey ? getProgrammingPartner(`gk-${keyNumber}`) : undefined;
+        if (partnerKey) {
+          const partnerNum = parseInt(partnerKey.id.replace('gk-', ''));
+          outputLines.push(formatProgrammingPartnerFocus(keyNumber, partnerNum));
+        }
+      }
       break;
     }
     case 'channel': {
@@ -1381,6 +1394,31 @@ function formatGateKeyFocus(keyNumber: number, profile: AstroProfile): string {
   return outputLines.join('\n');
 }
 
+function formatProgrammingPartnerFocus(primaryKeyNumber: number, partnerKeyNumber: number): string {
+  const primaryKey = geneKeys.get(`gk-${primaryKeyNumber}`);
+  const partnerKey = geneKeys.get(`gk-${partnerKeyNumber}`);
+
+  if (!primaryKey || !partnerKey) return '';
+
+  const outputLines: string[] = [];
+  outputLines.push(`
+━━━ PROGRAMMING PARTNER DYNAMICS ━━━
+
+FOCUS GENE KEY: Gene Key ${primaryKeyNumber} — ${primaryKey.name || ''}
+  Shadow: ${primaryKey.shadow.name} (Repressive: ${primaryKey.shadow.repressiveNature || 'contracted withdrawal'} / Reactive: ${primaryKey.shadow.reactiveNature || 'projected outward'})
+  Gift: ${primaryKey.gift.name} — ${primaryKey.gift.keyExpression || primaryKey.gift.description || ''}
+  Siddhi: ${primaryKey.siddhi.name}
+
+PROGRAMMING PARTNER: Gene Key ${partnerKeyNumber} — ${partnerKey.name || ''}
+  Shadow: ${partnerKey.shadow.name} (Repressive: ${partnerKey.shadow.repressiveNature || 'contracted withdrawal'} / Reactive: ${partnerKey.shadow.reactiveNature || 'projected outward'})
+  Gift: ${partnerKey.gift.name} — ${partnerKey.gift.keyExpression || partnerKey.gift.description || ''}
+  Siddhi: ${partnerKey.siddhi.name}
+
+Relationship: Gene Key ${primaryKeyNumber} and Gene Key ${partnerKeyNumber} are opposite hexagrams in the 64-key wheel — programming partners whose shadows feed each other in a closed loop.`);
+
+  return outputLines.join('\n');
+}
+
 function formatChannelFocus(channel: { gate1Number: number; gate2Number: number; name: string; circuitType: string; theme: string; center1Id: string; center2Id: string }): string {
   const gate1 = hdGates.get(`gate-${channel.gate1Number}`);
   const gate2 = hdGates.get(`gate-${channel.gate2Number}`);
@@ -1496,10 +1534,13 @@ export function getFocusOptions(
         name: c.name,
       }));
 
+    // Sprint Y — Rudd depth layer: shadowContemplate + programmingPartnerDynamics share the same focus entity logic as shadowWork
     case 'shadowWork':
     case 'giftActivation':
     case 'siddhiContemplation':
-    case 'gateKeyBridge': {
+    case 'gateKeyBridge':
+    case 'shadowContemplate':
+    case 'programmingPartnerDynamics': {
       const gk = profile.geneKeysProfile;
       if (!gk) return [];
       const spheres = [gk.lifesWork, gk.evolution, gk.radiance, gk.purpose, gk.attraction, gk.iq, gk.eq, gk.sq, gk.vocation, gk.culture, gk.pearl];

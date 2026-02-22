@@ -381,3 +381,76 @@ describe('Sprint W humanDesign authority + incarnation cross types', () => {
     }
   });
 });
+
+// ─── Sprint Y — Gene Keys Rudd depth methodology layer ────────────────────────
+
+describe('Sprint Y geneKeys Rudd depth layer', () => {
+  const gkTypes = CONTEMPLATION_TYPES['geneKeys'];
+  const gkIds = gkTypes.map(t => t.id);
+
+  it('shadowContemplate is in geneKeys category', () => {
+    expect(gkIds).toContain('shadowContemplate' as ContemplationType);
+  });
+
+  it('programmingPartnerDynamics is in geneKeys category', () => {
+    expect(gkIds).toContain('programmingPartnerDynamics' as ContemplationType);
+  });
+
+  it('goldenPathReading is in geneKeys category', () => {
+    expect(gkIds).toContain('goldenPathReading' as ContemplationType);
+  });
+
+  it('shadowContemplate has level advanced', () => {
+    const t = gkTypes.find(t => t.id === 'shadowContemplate');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
+  });
+
+  it('programmingPartnerDynamics has level advanced', () => {
+    const t = gkTypes.find(t => t.id === 'programmingPartnerDynamics');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
+  });
+
+  it('goldenPathReading has level master', () => {
+    const t = gkTypes.find(t => t.id === 'goldenPathReading');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('master');
+  });
+
+  it('shadowContemplate and programmingPartnerDynamics require a focus entity (needsFocus)', () => {
+    const shadowT = gkTypes.find(t => t.id === 'shadowContemplate');
+    const partnerT = gkTypes.find(t => t.id === 'programmingPartnerDynamics');
+    expect(shadowT?.needsFocus).toBe(true);
+    expect(partnerT?.needsFocus).toBe(true);
+  });
+
+  it('goldenPathReading does NOT require a focus entity (full-profile reading)', () => {
+    const t = gkTypes.find(t => t.id === 'goldenPathReading');
+    expect(t?.needsFocus).toBeFalsy();
+  });
+
+  it('all Sprint Y types have non-empty name and description', () => {
+    const yIds = ['shadowContemplate', 'programmingPartnerDynamics', 'goldenPathReading'];
+    for (const id of yIds) {
+      const t = gkTypes.find(opt => opt.id === id);
+      expect(t, `Type ${id} not found`).toBeDefined();
+      expect(t?.name.length, `${id} name should not be empty`).toBeGreaterThan(0);
+      expect(t?.description.length, `${id} description should not be empty`).toBeGreaterThan(0);
+    }
+  });
+
+  it('Sprint Y types do not appear in other categories', () => {
+    const yTypes: ContemplationType[] = ['shadowContemplate', 'programmingPartnerDynamics', 'goldenPathReading'];
+    const nonGKCategories: ContemplationCategory[] = [
+      'astrology', 'humanDesign', 'crossSystem', 'lifeOS',
+      'alchemy', 'numerology', 'cosmicEmbodiment', 'fixedStars', 'galacticAstrology',
+    ];
+    for (const cat of nonGKCategories) {
+      const ids = CONTEMPLATION_TYPES[cat].map(t => t.id);
+      for (const typeId of yTypes) {
+        expect(ids, `${typeId} should not appear in ${cat}`).not.toContain(typeId);
+      }
+    }
+  });
+});
