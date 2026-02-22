@@ -69,6 +69,9 @@ export type ContemplationType =
   | 'transitPlanningMap'
   | 'soulCallingIntegration'
   | 'vperPhaseReading'
+  // Life OS — ILOS Elemental VPER expansion (Sprint U)
+  | 'elementalProfileReading'
+  | 'oppositePolePractice'
   // Alchemy & Numbers
   | 'numerologyReading'
   | 'numerologyOverview'

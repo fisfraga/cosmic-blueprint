@@ -119,8 +119,8 @@ describe('Sprint T lifeOS expansion', () => {
   const lifeOSTypes = CONTEMPLATION_TYPES['lifeOS'];
   const lifeOSIds = lifeOSTypes.map(t => t.id);
 
-  it('lifeOS has 10 types after Sprint T expansion (3 existing + 7 new)', () => {
-    expect(lifeOSTypes.length).toBe(10);
+  it('lifeOS has 12 types after Sprint U expansion (3 existing + 7 Sprint T + 2 Sprint U)', () => {
+    expect(lifeOSTypes.length).toBe(12);
   });
 
   it('all 7 new Sprint T types are present in lifeOS', () => {
@@ -178,6 +178,24 @@ describe('Sprint T lifeOS expansion', () => {
     expect(lifeOSIds).toContain('lifeAreaAlignment' as ContemplationType);
     expect(lifeOSIds).toContain('goalCosmicContext' as ContemplationType);
     expect(lifeOSIds).toContain('purposeReview' as ContemplationType);
+  });
+
+  // Sprint U — Elemental VPER types
+  it('Sprint U elemental types are registered in lifeOS', () => {
+    expect(lifeOSIds).toContain('elementalProfileReading' as ContemplationType);
+    expect(lifeOSIds).toContain('oppositePolePractice' as ContemplationType);
+  });
+
+  it('elementalProfileReading is registered with level beginner', () => {
+    const t = lifeOSTypes.find(t => t.id === 'elementalProfileReading');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('beginner');
+  });
+
+  it('oppositePolePractice is registered with level advanced', () => {
+    const t = lifeOSTypes.find(t => t.id === 'oppositePolePractice');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
   });
 });
 

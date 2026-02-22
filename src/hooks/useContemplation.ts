@@ -235,7 +235,9 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'careerPathReading',    name: 'Career Path Reading',    description: 'MC and NN as Vision/Fire direction; Saturn and 6th house as Execute/Earth structure — your career blueprint',   level: 'advanced' },
     { id: 'transitPlanningMap',   name: 'Transit Planning Map',   description: 'Current slow-planet transits mapped to VPER phases and ILOS Key Areas — your temporal activation landscape',   level: 'advanced' },
     { id: 'soulCallingIntegration', name: 'Soul Calling',         description: 'Chiron wound → NN direction → Part of Fortune joy convergence — your QUANTUM essence synthesis',                level: 'master' },
-    { id: 'vperPhaseReading',     name: 'VPER Phase Reading',     description: 'Which VPER phase (Vision/Plan/Execute/Review) is activated by current transit element dominance',               level: 'advanced' },
+    { id: 'vperPhaseReading',         name: 'VPER Phase Reading',           description: 'Which VPER phase (Vision/Plan/Execute/Review) is activated by current transit element dominance',                                                          level: 'advanced' },
+    { id: 'elementalProfileReading',  name: 'Elemental Profile Reading',    description: 'Calculates natal element balance (Fire/Air/Earth/Water) and reveals your VPER strengths, growth edge, and one development practice.',                             level: 'beginner' },
+    { id: 'oppositePolePractice',     name: 'Opposite Pole Growth Practice', description: 'Identifies your weakest element across ILOS, Gene Keys, and Julia Balaz frameworks — generates 3 specific weekly practices and detects transit power windows.', level: 'advanced' },
   ],
   alchemy: [
     { id: 'chakraAwareness',   name: 'Chakra Activations', description: 'Explore which chakras are activated by your planetary placements',                        level: 'advanced' },
