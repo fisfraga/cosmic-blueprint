@@ -39,13 +39,35 @@ New users who create their first profile are dropped into an app with no guidanc
 
 ## Tasks
 
-- [ ] Read the Insight Library page, Pathways page, and Sessions page components
-- [ ] Create `src/components/EmptyState.tsx`
-- [ ] Wire `EmptyState` into Insight Library page
-- [ ] Wire `EmptyState` into Pathways page
-- [ ] Wire `EmptyState` into Sessions page (if page exists)
-- [ ] Test: verify empty states show when clearing localStorage and creating fresh profile
-- [ ] Run `npm run verify`
+- [x] Read the Insight Library page, Pathways page, and Sessions page components
+- [x] Create `src/components/EmptyState.tsx`
+- [x] Wire `EmptyState` into Insight Library page
+- [x] Wire `EmptyState` into Pathways page
+- [x] Wire `EmptyState` into Sessions page (if page exists)
+- [x] Test: verify empty states show when clearing localStorage and creating fresh profile
+- [x] Run `npm run verify`
+
+## Dev Agent Record
+
+### File List
+
+- `src/components/EmptyState.tsx` — NEW: shared EmptyState component (icon, title, description, action props; Link from react-router-dom for CTA)
+- `src/components/index.ts` — MODIFIED: exports EmptyState and EmptyStateProps (already added prior to dev session)
+- `src/pages/InsightLibrary.tsx` — WIRED: EmptyState shown when insights.length === 0
+- `src/pages/SessionsLibrary.tsx` — WIRED: EmptyState shown when sessions.length === 0
+- `src/pages/Pathways.tsx` — WIRED: EmptyState shown when activePathways.length === 0 (no in-progress journeys)
+
+### Debug Log
+
+- EmptyState.tsx already existed with a more flexible prop API (icon: ReactNode, title, description, action union type) than the story Technical Notes suggested — kept this richer API since both InsightLibrary and SessionsLibrary already used it.
+- InsightLibrary and SessionsLibrary already had EmptyState import and wiring in place.
+- Only Pathways.tsx required changes: added EmptyState import and wired into the active pathways section conditional.
+
+### Change Log
+
+| Date | Agent | Change |
+|------|-------|--------|
+| 2026-02-22 | @dev | Wired EmptyState into Pathways.tsx (activePathways empty state); confirmed InsightLibrary + SessionsLibrary already wired; verify passes (337 tests, clean build) |
 
 ## Scope
 

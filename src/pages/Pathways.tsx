@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import { useProfile } from '../context';
-import { LoadingSkeleton, ProfileRequiredState } from '../components';
+import { EmptyState, LoadingSkeleton, ProfileRequiredState } from '../components';
 import { EntityStack } from '../components/entities/EntityStack';
 import { EntityLink } from '../components/entities/EntityLink';
 import { getEntity } from '../services/entities/registry';
@@ -563,8 +563,8 @@ export function Pathways() {
             </section>
           )}
 
-          {/* Active Pathways */}
-          {activePathways.length > 0 && (
+          {/* Active Pathways — or empty state when none in progress */}
+          {activePathways.length > 0 ? (
             <section className="mb-12">
               <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Continue Your Journey</h2>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -580,6 +580,15 @@ export function Pathways() {
                   />
                 ))}
               </div>
+            </section>
+          ) : (
+            <section className="mb-12">
+              <EmptyState
+                icon={<span role="img" aria-label="Star">&#x1F31F;</span>}
+                title="Your journey hasn't started yet"
+                description="Explore guided pathways to deepen your self-understanding."
+                action={{ label: 'Explore Pathways', to: '/pathways' }}
+              />
             </section>
           )}
 
