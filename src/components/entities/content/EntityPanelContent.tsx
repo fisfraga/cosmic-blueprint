@@ -1,14 +1,17 @@
 import type { EntityInfo } from '../../../services/entities';
 import type {
   AstroProfile,
+  AspectConfiguration,
   AstroPoint,
   Chakra,
   Decan,
+  FixedStar,
   GalacticPoint,
   GKSphereEntity,
   HDAuthorityEntity,
   HDLineEntity,
   HDProfileEntity,
+  HDStrategyEntity,
   HermeticPrinciple,
   NumerologyNumber,
   PersonalContextProject,
@@ -973,6 +976,323 @@ function GKSphereContent({ entity }: { entity: EntityInfo }) {
   );
 }
 
+// ─── Fixed Star content renderer ─────────────────────────────────────────────
+
+function FixedStarContent({ entity }: { entity: EntityInfo }) {
+  const star = entity.data as FixedStar;
+  if (!star) return null;
+
+  const zp = star.zodiacPosition;
+  const signLabel = zp?.sign
+    ? zp.sign.charAt(0).toUpperCase() + zp.sign.slice(1)
+    : '';
+
+  return (
+    <div className="space-y-4">
+      {/* Position row */}
+      <div className="flex flex-wrap items-center gap-2">
+        {zp && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-mono">
+            {zp.degree}°{zp.minute}' {signLabel}
+          </span>
+        )}
+        {star.constellation && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {star.constellation}
+          </span>
+        )}
+        {star.magnitude != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {star.magnitude} mag
+          </span>
+        )}
+      </div>
+
+      {/* Royal Star / Behenian badges */}
+      {(star.isRoyalStar || star.isBehenian) && (
+        <div className="flex flex-wrap items-center gap-2">
+          {star.isRoyalStar && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-amber-300 font-semibold">
+              Royal Star{star.royalStarTitle ? ` — ${star.royalStarTitle}` : ''}
+            </span>
+          )}
+          {star.isBehenian && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-indigo-300 font-semibold">
+              Behenian Star
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Planetary nature */}
+      {star.nature && star.nature.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Planetary Nature</h4>
+          <div className="flex flex-wrap gap-1.5">
+            {star.nature.map((planet, i) => (
+              <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+                {planet}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Alternate names */}
+      {star.alternateNames && star.alternateNames.length > 0 && (
+        <p className="text-xs text-theme-text-tertiary italic">
+          Also known as: {star.alternateNames.join(', ')}
+        </p>
+      )}
+
+      {/* Archetype */}
+      {star.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{star.archetype}</p>
+        </div>
+      )}
+
+      {/* Gift / Shadow */}
+      {(star.giftExpression || star.shadowExpression) && (
+        <div className="space-y-2">
+          {star.giftExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Gift Expression</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{star.giftExpression}</p>
+            </div>
+          )}
+          {star.shadowExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Shadow Expression</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{star.shadowExpression}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Traditional Meaning */}
+      {star.traditionalMeaning && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Traditional Meaning</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{star.traditionalMeaning}</p>
+        </div>
+      )}
+
+      {/* Body Association */}
+      {star.bodyAssociation && (
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-theme-text-tertiary">Body:</span>
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {star.bodyAssociation}
+          </span>
+        </div>
+      )}
+
+      {/* Contemplation Questions */}
+      {star.contemplationQuestions && star.contemplationQuestions.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Reflections</h4>
+          <div className="space-y-2">
+            {star.contemplationQuestions.slice(0, 3).map((q, i) => (
+              <p key={i} className="text-sm text-theme-text-secondary italic leading-relaxed border-l-2 border-theme-border-subtle pl-3">
+                {q}
+              </p>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Configuration content renderer ──────────────────────────────────────────
+
+function ConfigurationContent({ entity }: { entity: EntityInfo }) {
+  const config = entity.data as AspectConfiguration;
+  if (!config) return null;
+
+  const NATURE_COLORS: Record<string, string> = {
+    Harmonious: 'text-emerald-300',
+    Challenging: 'text-amber-400',
+    Neutral: 'text-sky-300',
+  };
+  const NATURE_BG: Record<string, string> = {
+    Harmonious: 'bg-emerald-950/40',
+    Challenging: 'bg-amber-950/40',
+    Neutral: 'bg-sky-950/40',
+  };
+
+  const natureColor = NATURE_COLORS[config.nature] || 'text-theme-text-secondary';
+  const natureBg = NATURE_BG[config.nature] || 'bg-surface-raised';
+
+  return (
+    <div className="space-y-4">
+      {/* Keyword + nature + shape badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {config.keyword && (
+          <span className={`text-xs px-3 py-0.5 rounded-full font-semibold ${natureBg} ${natureColor}`}>
+            {config.keyword}
+          </span>
+        )}
+        {config.nature && (
+          <span className={`text-xs px-2 py-0.5 rounded bg-surface-raised ${natureColor}`}>
+            {config.nature}
+          </span>
+        )}
+        {config.shape && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {config.shape}
+          </span>
+        )}
+      </div>
+
+      {/* Orb range + aspect count */}
+      <div className="flex flex-wrap items-center gap-2">
+        {config.orbRange && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Orb: {config.orbRange}
+          </span>
+        )}
+        {config.requiredAspectCount != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {config.requiredAspectCount} aspects
+          </span>
+        )}
+      </div>
+
+      {/* Elemental pattern callout */}
+      {config.elementalPattern && (
+        <div className="rounded-lg border border-theme-border-subtle px-3 py-2 bg-surface-raised/40">
+          <p className="text-xs text-theme-text-tertiary italic">{config.elementalPattern}</p>
+        </div>
+      )}
+
+      {/* Explanation */}
+      {config.explanation && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Sacred Geometry</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{config.explanation}</p>
+        </div>
+      )}
+
+      {/* Impact */}
+      {config.impact && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">How It Manifests</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{config.impact}</p>
+        </div>
+      )}
+
+      {/* Integration Practice */}
+      {config.integrationPractice && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Practice</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{config.integrationPractice}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── HD Strategy content renderer ─────────────────────────────────────────────
+
+function HDStrategyContent({ entity }: { entity: EntityInfo }) {
+  const strategy = entity.data as HDStrategyEntity;
+  if (!strategy) return null;
+
+  const formatTypeLabel = (typeId: string) =>
+    typeId
+      .replace('hd-type-', '')
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+
+  return (
+    <div className="space-y-4">
+      {/* HD Type association badges */}
+      {strategy.hdTypeIds && strategy.hdTypeIds.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">For HD Types</h4>
+          <div className="flex flex-wrap gap-1.5">
+            {strategy.hdTypeIds.map((typeId, i) => (
+              <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-amber-300 font-semibold">
+                {formatTypeLabel(typeId)}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Practical Guidance */}
+      {strategy.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Practical Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{strategy.practicalGuidance}</p>
+        </div>
+      )}
+
+      {/* Sign of Correctness / Incorrectness */}
+      {(strategy.signOfCorrectness || strategy.signOfIncorrectness) && (
+        <div className="space-y-2">
+          {strategy.signOfCorrectness && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Sign of Correctness</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{strategy.signOfCorrectness}</p>
+            </div>
+          )}
+          {strategy.signOfIncorrectness && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Sign of Incorrectness</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{strategy.signOfIncorrectness}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Keywords */}
+      {strategy.keywords && strategy.keywords.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {strategy.keywords.map((kw, i) => (
+            <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+              {kw}
+            </span>
+          ))}
+        </div>
+      )}
+
+      {/* Examples */}
+      {strategy.examples && strategy.examples.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Examples</h4>
+          <ul className="space-y-1.5">
+            {strategy.examples.map((ex, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-sky-400 flex-shrink-0 mt-0.5">›</span>
+                <span className="leading-snug">{ex}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Common Misunderstandings */}
+      {strategy.commonMisunderstandings && strategy.commonMisunderstandings.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Common Misunderstandings</h4>
+          <ul className="space-y-1.5">
+            {strategy.commonMisunderstandings.map((m, i) => (
+              <li key={i} className="text-sm text-theme-text-secondary flex gap-2">
+                <span className="text-amber-400 flex-shrink-0 mt-0.5">~</span>
+                <span className="leading-snug">{m}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function EntityPanelContent({
   entity,
   colors,
@@ -1107,6 +1427,21 @@ export function EntityPanelContent({
       {/* GK Sphere */}
       {entity.type === 'gk-sphere' && (
         <GKSphereContent entity={entity} />
+      )}
+
+      {/* Fixed Star */}
+      {entity.type === 'fixed-star' && (
+        <FixedStarContent entity={entity} />
+      )}
+
+      {/* Aspect Configuration */}
+      {entity.type === 'configuration' && (
+        <ConfigurationContent entity={entity} />
+      )}
+
+      {/* HD Strategy */}
+      {entity.type === 'hd-strategy' && (
+        <HDStrategyContent entity={entity} />
       )}
 
       {/* Related Entities */}
