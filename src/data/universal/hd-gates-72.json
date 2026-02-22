@@ -11,7 +11,9 @@
     "overlapping64GateSegment": 1,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 1
   },
   {
     "id": "lost-octave-2",
@@ -25,7 +27,9 @@
     "overlapping64GateSegment": 2,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 1
   },
   {
     "id": "lost-octave-3",
@@ -39,7 +43,9 @@
     "overlapping64GateSegment": 3,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 2
   },
   {
     "id": "lost-octave-4",
@@ -53,7 +59,9 @@
     "overlapping64GateSegment": 4,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 2
   },
   {
     "id": "lost-octave-5",
@@ -67,7 +75,9 @@
     "overlapping64GateSegment": 5,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 3
   },
   {
     "id": "lost-octave-6",
@@ -81,7 +91,9 @@
     "overlapping64GateSegment": 5,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 3
   },
   {
     "id": "lost-octave-7",
@@ -95,7 +107,9 @@
     "overlapping64GateSegment": 6,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 4
   },
   {
     "id": "lost-octave-8",
@@ -109,7 +123,9 @@
     "overlapping64GateSegment": 7,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 4
   },
   {
     "id": "lost-octave-9",
@@ -123,7 +139,9 @@
     "overlapping64GateSegment": 8,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 5
   },
   {
     "id": "lost-octave-10",
@@ -137,7 +155,9 @@
     "overlapping64GateSegment": 9,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 5
   },
   {
     "id": "lost-octave-11",
@@ -151,7 +171,9 @@
     "overlapping64GateSegment": 10,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 6
   },
   {
     "id": "lost-octave-12",
@@ -165,7 +187,9 @@
     "overlapping64GateSegment": 11,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 6
   },
   {
     "id": "lost-octave-13",
@@ -179,7 +203,9 @@
     "overlapping64GateSegment": 12,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 7
   },
   {
     "id": "lost-octave-14",
@@ -193,7 +219,9 @@
     "overlapping64GateSegment": 13,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 7
   },
   {
     "id": "lost-octave-15",
@@ -207,7 +235,9 @@
     "overlapping64GateSegment": 13,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 8
   },
   {
     "id": "lost-octave-16",
@@ -221,7 +251,9 @@
     "overlapping64GateSegment": 14,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 8
   },
   {
     "id": "lost-octave-17",
@@ -235,7 +267,9 @@
     "overlapping64GateSegment": 15,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 9
   },
   {
     "id": "lost-octave-18",
@@ -249,7 +283,9 @@
     "overlapping64GateSegment": 16,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 9
   },
   {
     "id": "lost-octave-19",
@@ -263,7 +299,9 @@
     "overlapping64GateSegment": 17,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 10
   },
   {
     "id": "lost-octave-20",
@@ -277,7 +315,9 @@
     "overlapping64GateSegment": 18,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 10
   },
   {
     "id": "lost-octave-21",
@@ -291,7 +331,9 @@
     "overlapping64GateSegment": 19,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 11
   },
   {
     "id": "lost-octave-22",
@@ -305,7 +347,9 @@
     "overlapping64GateSegment": 20,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 11
   },
   {
     "id": "lost-octave-23",
@@ -319,7 +363,9 @@
     "overlapping64GateSegment": 21,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 12
   },
   {
     "id": "lost-octave-24",
@@ -333,7 +379,9 @@
     "overlapping64GateSegment": 21,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 12
   },
   {
     "id": "lost-octave-25",
@@ -347,7 +395,9 @@
     "overlapping64GateSegment": 22,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 13
   },
   {
     "id": "lost-octave-26",
@@ -361,7 +411,9 @@
     "overlapping64GateSegment": 23,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 13
   },
   {
     "id": "lost-octave-27",
@@ -375,7 +427,9 @@
     "overlapping64GateSegment": 24,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 14
   },
   {
     "id": "lost-octave-28",
@@ -389,7 +443,9 @@
     "overlapping64GateSegment": 25,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 14
   },
   {
     "id": "lost-octave-29",
@@ -403,7 +459,9 @@
     "overlapping64GateSegment": 26,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 15
   },
   {
     "id": "lost-octave-30",
@@ -417,7 +475,9 @@
     "overlapping64GateSegment": 27,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 15
   },
   {
     "id": "lost-octave-31",
@@ -431,7 +491,9 @@
     "overlapping64GateSegment": 28,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 16
   },
   {
     "id": "lost-octave-32",
@@ -445,7 +507,9 @@
     "overlapping64GateSegment": 29,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 16
   },
   {
     "id": "lost-octave-33",
@@ -459,7 +523,9 @@
     "overlapping64GateSegment": 29,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 17
   },
   {
     "id": "lost-octave-34",
@@ -473,7 +539,9 @@
     "overlapping64GateSegment": 30,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 17
   },
   {
     "id": "lost-octave-35",
@@ -487,7 +555,9 @@
     "overlapping64GateSegment": 31,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 18
   },
   {
     "id": "lost-octave-36",
@@ -501,7 +571,9 @@
     "overlapping64GateSegment": 32,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 18
   },
   {
     "id": "lost-octave-37",
@@ -515,7 +587,9 @@
     "overlapping64GateSegment": 33,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 19
   },
   {
     "id": "lost-octave-38",
@@ -529,7 +603,9 @@
     "overlapping64GateSegment": 34,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 19
   },
   {
     "id": "lost-octave-39",
@@ -543,7 +619,9 @@
     "overlapping64GateSegment": 35,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 20
   },
   {
     "id": "lost-octave-40",
@@ -557,7 +635,9 @@
     "overlapping64GateSegment": 36,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 20
   },
   {
     "id": "lost-octave-41",
@@ -571,7 +651,9 @@
     "overlapping64GateSegment": 37,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 21
   },
   {
     "id": "lost-octave-42",
@@ -585,7 +667,9 @@
     "overlapping64GateSegment": 37,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 21
   },
   {
     "id": "lost-octave-43",
@@ -599,7 +683,9 @@
     "overlapping64GateSegment": 38,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 22
   },
   {
     "id": "lost-octave-44",
@@ -613,7 +699,9 @@
     "overlapping64GateSegment": 39,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 22
   },
   {
     "id": "lost-octave-45",
@@ -627,7 +715,9 @@
     "overlapping64GateSegment": 40,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 23
   },
   {
     "id": "lost-octave-46",
@@ -641,7 +731,9 @@
     "overlapping64GateSegment": 41,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 23
   },
   {
     "id": "lost-octave-47",
@@ -655,7 +747,9 @@
     "overlapping64GateSegment": 42,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 24
   },
   {
     "id": "lost-octave-48",
@@ -669,7 +763,9 @@
     "overlapping64GateSegment": 43,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 24
   },
   {
     "id": "lost-octave-49",
@@ -683,7 +779,9 @@
     "overlapping64GateSegment": 44,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 25
   },
   {
     "id": "lost-octave-50",
@@ -697,7 +795,9 @@
     "overlapping64GateSegment": 45,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 25
   },
   {
     "id": "lost-octave-51",
@@ -711,7 +811,9 @@
     "overlapping64GateSegment": 45,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 26
   },
   {
     "id": "lost-octave-52",
@@ -725,7 +827,9 @@
     "overlapping64GateSegment": 46,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 26
   },
   {
     "id": "lost-octave-53",
@@ -739,7 +843,9 @@
     "overlapping64GateSegment": 47,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 27
   },
   {
     "id": "lost-octave-54",
@@ -753,7 +859,9 @@
     "overlapping64GateSegment": 48,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 27
   },
   {
     "id": "lost-octave-55",
@@ -767,7 +875,9 @@
     "overlapping64GateSegment": 49,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 28
   },
   {
     "id": "lost-octave-56",
@@ -781,7 +891,9 @@
     "overlapping64GateSegment": 50,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 28
   },
   {
     "id": "lost-octave-57",
@@ -795,7 +907,9 @@
     "overlapping64GateSegment": 51,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 29
   },
   {
     "id": "lost-octave-58",
@@ -809,7 +923,9 @@
     "overlapping64GateSegment": 52,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 29
   },
   {
     "id": "lost-octave-59",
@@ -823,7 +939,9 @@
     "overlapping64GateSegment": 53,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 30
   },
   {
     "id": "lost-octave-60",
@@ -837,7 +955,9 @@
     "overlapping64GateSegment": 53,
     "gateNumber": null,
     "name": null,
-    "description": null
+    "description": null,
+    "isMasterGate": false,
+    "decanNumber": 30
   },
   {
     "id": "lost-octave-61",
@@ -851,20 +971,34 @@
     "overlapping64GateSegment": 54,
     "gateNumber": 61,
     "name": "The Cave",
-    "description": "Gate of Inner Truth. Capricorn Cardinal Earth. I Ching: Inner Truth / Central Return. Alchemy: Fermentation. Tarot: The Devil. Paired with Gate 62 (Ark of the Covenant).",
-    "iChingName": "Inner Truth",
+    "description": "Gate of Inner Truth. Capricorn Cardinal Earth gate paired with Gate 62. I Ching: Inner Truth / Central Return / Confirming. Alchemy: Fermentation. Tarot: The Devil (Major) / Four of Pentacles (Minor). Angel: Mitzrael - Internal Reparation.",
+    "isMasterGate": true,
+    "decanNumber": 31,
+    "iChingName": "Inner Truth - Central Return - Confirming",
     "masterGateZodiacSign": "capricorn",
     "masterGatePlanet": "saturn",
     "masterGateElement": "earth",
     "signModality": "cardinal",
+    "zodiacSymbol": "♑︎",
     "star": "Sea Goat",
+    "crystal": "Garnet – Dragon's Eye",
     "musicalNote": "C",
+    "musicalTone": "DO - UT",
     "hertzFrequency": 126,
     "alchemyStage": "Fermentation",
     "tarotCardMajor": "The Devil",
+    "tarotCardMinor": "Four of Pentacles – Earth",
+    "egyptianAstrology": "Amun Ra",
+    "divineName": "Van Mem Bet – Water Healing",
+    "angel": "Mitzrael - Internal Reparation",
+    "topHexagram": "Wind (☴)",
+    "bottomHexagram": "Lake (☱)",
+    "hexagramFamily": "Youngest Daughter - Eldest Daughter",
+    "topLine": "Yang (—)",
     "hermeticLaw": null,
     "mysticalPerfection": null,
-    "superPartnerGateNumber": 62
+    "superPartnerGateNumber": 62,
+    "tanaNodeId": "nO_dgzzPyUch"
   },
   {
     "id": "lost-octave-62",
@@ -879,6 +1013,8 @@
     "gateNumber": 62,
     "name": "Ark of the Covenant",
     "description": "Gate of the Ark. Cancer Cardinal Water. I Ching: Small Exceeding / Preponderance of the Small. Alchemy: Multiplication. Tarot: The Chariot. Paired with Gate 61 (The Cave).",
+    "isMasterGate": true,
+    "decanNumber": 31,
     "iChingName": "Small Exceeding",
     "masterGateZodiacSign": "cancer",
     "masterGatePlanet": "moon",
@@ -906,6 +1042,8 @@
     "gateNumber": 63,
     "name": "Gnosis",
     "description": "Gate of Gnosis. Pisces Mutable Water. I Ching: After Completion / Already Fording. Alchemy: Projection. Tarot: The Moon. Paired with Gate 64 (Our Lady).",
+    "isMasterGate": true,
+    "decanNumber": 32,
     "iChingName": "After Completion",
     "masterGateZodiacSign": "pisces",
     "masterGatePlanet": "neptune",
@@ -933,6 +1071,8 @@
     "gateNumber": 64,
     "name": "Our Lady",
     "description": "Gate of Our Lady. Virgo Mutable Earth. I Ching: Before Completion / Not Yet Fording. Alchemy: Cibation. Tarot: The Hermit. Paired with Gate 63 (Gnosis).",
+    "isMasterGate": true,
+    "decanNumber": 32,
     "iChingName": "Before Completion",
     "masterGateZodiacSign": "virgo",
     "masterGatePlanet": "mercury",
@@ -960,6 +1100,8 @@
     "gateNumber": 65,
     "name": "Lion Heart — Alpha",
     "description": "Gate of the Lion Heart (Alpha). Leo Fixed Fire. I Ching: The Army / Leading. Hermetic Law: Mentalism. Alchemy: Coagulation. Mystical Perfection: Mahima. Tarot: Strength. Star: Regulus. Paired with Gate 66 (Aquarian Womb-Man).",
+    "isMasterGate": true,
+    "decanNumber": 33,
     "iChingName": "The Army",
     "masterGateZodiacSign": "leo",
     "masterGatePlanet": "sun",
@@ -987,6 +1129,8 @@
     "gateNumber": 66,
     "name": "Aquarian Womb-Man — Divine Feminine XX",
     "description": "Gate of the Divine Feminine / Aquarian Womb-Man. Aquarius Fixed Air. I Ching: Fellowship of Man / Concording People. Hermetic Law: Polarity. Alchemy: Calcination. Mystical Perfection: Prakamya. Tarot: The Star. Star: Fomalhaut. Paired with Gate 65 (Lion Heart).",
+    "isMasterGate": true,
+    "decanNumber": 33,
     "iChingName": "Fellowship of Man",
     "masterGateZodiacSign": "aquarius",
     "masterGatePlanet": "uranus",
@@ -1014,6 +1158,8 @@
     "gateNumber": 67,
     "name": "The Mystic",
     "description": "Gate of the Mystic. Sagittarius Mutable Fire. I Ching: Waiting / Nourishment. Hermetic Law: Correspondence. Alchemy: Conjunction. Mystical Perfection: Anima. Tarot: Temperance. Paired with Gate 68 (Twin Lovers).",
+    "isMasterGate": true,
+    "decanNumber": 34,
     "iChingName": "Waiting",
     "masterGateZodiacSign": "sagittarius",
     "masterGatePlanet": "jupiter",
@@ -1041,6 +1187,8 @@
     "gateNumber": 68,
     "name": "Twin Lovers",
     "description": "Gate of the Twin Lovers. Gemini Mutable Air. I Ching: Progress / Prospering. Hermetic Law: Cause and Effect. Alchemy: Separation. Mystical Perfection: Prapti. Tarot: The Lovers. Star: Castor and Pollux. Paired with Gate 67 (The Mystic).",
+    "isMasterGate": true,
+    "decanNumber": 34,
     "iChingName": "Progress",
     "masterGateZodiacSign": "gemini",
     "masterGatePlanet": "mercury",
@@ -1068,6 +1216,8 @@
     "gateNumber": 69,
     "name": "Yin Yang — Divine Masculine XY",
     "description": "Gate of the Divine Masculine / Yin Yang. Aries Cardinal Fire. I Ching: Difficulty at the Beginning. Hermetic Law: Gender. Alchemy: Dissolution. Mystical Perfection: Isitva. Tarot: The Emperor. Paired with Gate 70 (Rest as Peace).",
+    "isMasterGate": true,
+    "decanNumber": 35,
     "iChingName": "Difficulty at the Beginning",
     "masterGateZodiacSign": "aries",
     "masterGatePlanet": "mars",
@@ -1095,6 +1245,8 @@
     "gateNumber": 70,
     "name": "Rest as Peace — Omega",
     "description": "Gate of Rest as Peace (Omega). Libra Cardinal Air. I Ching: The Cauldron / Holding. Hermetic Law: Synchronization. Alchemy: Sublimation. Mystical Perfection: Laghima. Tarot: Justice. Paired with Gate 69 (Divine Masculine).",
+    "isMasterGate": true,
+    "decanNumber": 35,
     "iChingName": "The Cauldron",
     "masterGateZodiacSign": "libra",
     "masterGatePlanet": "venus",
@@ -1122,6 +1274,8 @@
     "gateNumber": 71,
     "name": "The Holy Spirit",
     "description": "Gate of The Holy Spirit. Scorpio Fixed Water. I Ching: The Creative / Force / The Key. Hermetic Law: Vibration. Alchemy: Distillation. Mystical Perfection: Vastiva. Tarot: Death. Star: Antares. Paired with Gate 72 (The Holy Grail).",
+    "isMasterGate": true,
+    "decanNumber": 36,
     "iChingName": "The Creative",
     "masterGateZodiacSign": "scorpio",
     "masterGatePlanet": "pluto",
@@ -1149,6 +1303,8 @@
     "gateNumber": 72,
     "name": "The Holy Grail",
     "description": "Gate of The Holy Grail. Taurus Fixed Earth. I Ching: The Receptive. Hermetic Law: Rhythm. Alchemy: Exaltation. Mystical Perfection: Garima. Tarot: The Hierophant. Star: Aldebaran. Paired with Gate 71 (The Holy Spirit).",
+    "isMasterGate": true,
+    "decanNumber": 36,
     "iChingName": "The Receptive",
     "masterGateZodiacSign": "taurus",
     "masterGatePlanet": "venus",

@@ -37,6 +37,8 @@ export type EntityType =
   | 'trigram'
   // Unified entities (combining GK + HD perspectives)
   | 'line'
+  // Lost Octave (Robert Comber 72-gate extended system)
+  | 'lo-gate'
   // Wisdom Traditions (cross-system bridge entities)
   | 'numerology-number'
   | 'chakra'
@@ -347,7 +349,8 @@ export interface HDGate extends AstroEntity {
 /**
  * Lost Octave 72-gate system (Robert James Comber).
  * Each gate = 5.000° exactly. Same wheel origin as the 64-gate system (358.25°).
- * gateNumber and name are null until populated from the Comber source book.
+ * gateNumber and name are null for segments 1–60 (source not yet available).
+ * The 12 master gates (gateNumbers 61–72) are fully populated from the Comber source.
  */
 export interface HDGate72 {
   id: string;                      // "lost-octave-{segmentNumber}"
@@ -359,9 +362,11 @@ export interface HDGate72 {
   startSign: string;               // IANA sign ID of the start degree
   startDegree: number;             // degree within the start sign (0-30)
   overlapping64GateSegment: number; // which 64-gate segment this 72-gate segment most overlaps
-  gateNumber: number | null;       // future: gate number from Comber book
-  name: string | null;             // future: gate name from Comber book
-  description: string | null;      // future: gate description from Comber book
+  gateNumber: number | null;       // Comber's gate number (1–72); null for unpopulated segments
+  name: string | null;             // gate name from Comber book; null for unpopulated segments
+  description: string | null;      // gate description; null for unpopulated segments
+  isMasterGate: boolean;           // true if gateNumber is 61–72 (one per zodiac sign, fully populated)
+  decanNumber: number;             // 1–36; two segments per decan: ceil(segmentNumber / 2)
 }
 
 export type HDStreamType = 'Knowing' | 'Centering' | 'Logic' | 'Abstract' | 'Sensing' | 'Defense' | 'Ego' | 'Community' | 'Integration';
