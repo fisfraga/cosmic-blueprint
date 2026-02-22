@@ -1,8 +1,11 @@
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
 import { signs, planets, houses, aspects, points, dignities, geneKeys, chakras, getGateByDegree, signPositionToAbsoluteDegree } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
+import { EntityStack, EntityLink } from '../components/entities';
+import type { EntityInfo } from '../services/entities';
 
 const elementColors = {
   fire: { bg: 'bg-fire-500', text: 'text-fire-400', bar: 'bg-fire-500' },
@@ -26,6 +29,19 @@ const aspectColors: Record<string, { bg: string; text: string }> = {
 
 export function ProfileAstrology() {
   const { profile, isLoading, hasProfile } = useProfile();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
@@ -69,8 +85,11 @@ export function ProfileAstrology() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="space-y-8"
+      className="flex h-full"
     >
+      {/* Main content */}
+      <div className="flex-1 min-w-0 overflow-y-auto">
+      <div className="space-y-8">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
@@ -217,17 +236,37 @@ export function ProfileAstrology() {
                 const gk = hdGate?.geneKeyId ? geneKeys.get(hdGate.geneKeyId) : undefined;
 
                 return (
-                  <tr key={placement.id} className="hover:bg-surface-raised/30 cursor-pointer" onClick={() => window.location.href = `/profile/astrology/placements/${placement.planetId}`}>
+                  <tr key={placement.id} className="hover:bg-surface-raised/30">
                     <td className="py-3">
-                      <Link to={`/profile/astrology/placements/${placement.planetId}`} className="flex items-center gap-2 hover:text-amber-300">
-                        <span className="text-lg">{planet?.symbol}</span>
-                        <span className="text-theme-text-primary">{planet?.name}</span>
-                      </Link>
+                      <div className="flex items-center gap-2">
+                        <span className="text-lg text-theme-text-secondary">{planet?.symbol}</span>
+                        {planet ? (
+                          <EntityLink
+                            entityId={placement.planetId}
+                            displayName={planet.name}
+                            onClick={handleEntityClick}
+                          />
+                        ) : null}
+                        <Link
+                          to={`/profile/astrology/placements/${placement.planetId}`}
+                          className="text-xs text-theme-text-muted hover:text-amber-300 transition-colors"
+                          title="Full placement detail"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          →
+                        </Link>
+                      </div>
                     </td>
                     <td className="py-3">
                       <div className="flex items-center gap-1">
                         <span className={signColors?.text}>{sign?.symbol}</span>
-                        <span className="text-theme-text-secondary">{sign?.name}</span>
+                        {sign ? (
+                          <EntityLink
+                            entityId={placement.signId}
+                            displayName={sign.name}
+                            onClick={handleEntityClick}
+                          />
+                        ) : null}
                       </div>
                     </td>
                     <td className="py-3 text-theme-text-secondary">
@@ -509,6 +548,15 @@ export function ProfileAstrology() {
           <span className="text-theme-text-secondary text-sm">Aspects</span>
         </Link>
       </div>
+      </div>
+      </div>
+
+      {/* Entity Stack — side panels for entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }

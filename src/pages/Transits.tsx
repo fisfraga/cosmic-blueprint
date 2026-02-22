@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react';
+import { useState, useEffect, useMemo, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useNavigate } from 'react-router-dom';
 import {
@@ -24,6 +24,8 @@ import {
   getPersonalTransitActivations,
   type TransitStarActivation,
 } from '../services/fixedStars';
+import { EntityStack, EntityLink } from '../components/entities';
+import type { EntityInfo } from '../services/entities';
 
 type ViewMode = 'day' | 'calendar';
 
@@ -31,10 +33,12 @@ function TransitCard({
   position,
   index,
   natalGateNumbers,
+  onEntityClick,
 }: {
   position: TransitPosition;
   index: number;
   natalGateNumbers?: Set<number>;
+  onEntityClick?: (entity: EntityInfo) => void;
 }) {
   const interpretation = getTransitInterpretation(position);
 
@@ -60,28 +64,29 @@ function TransitCard({
       <div className="flex items-center justify-between mb-3">
         <div className="flex items-center gap-3">
           <span className="text-3xl">{position.symbol}</span>
-          <div>
-            <Link
-              to={`/planets/${position.planetId}`}
-              className="font-medium text-lg text-theme-text-primary hover:text-purple-400 transition-colors"
-            >
-              {position.planetName}
-            </Link>
+          <div className="flex items-center gap-2 flex-wrap">
+            <EntityLink
+              entityId={position.planetId}
+              displayName={position.planetName}
+              onClick={onEntityClick}
+              className="font-medium text-lg"
+            />
             {position.isRetrograde && (
-              <span className="ml-2 text-xs bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded">
+              <span className="text-xs bg-amber-500/20 text-amber-400 px-1.5 py-0.5 rounded">
                 ℞ Retrograde
               </span>
             )}
           </div>
         </div>
         <div className="text-right">
-          <Link
-            to={`/signs/${position.signId}`}
-            className="flex items-center gap-1 text-theme-text-secondary hover:text-theme-text-primary transition-colors text-lg"
-          >
-            <span className="text-xl">{position.signSymbol}</span>
-            <span>{position.signName}</span>
-          </Link>
+          <div className="flex items-center gap-1 justify-end">
+            <span className="text-xl text-theme-text-secondary">{position.signSymbol}</span>
+            <EntityLink
+              entityId={position.signId}
+              displayName={position.signName}
+              onClick={onEntityClick}
+            />
+          </div>
           <span className="text-theme-text-tertiary text-sm">{position.formattedDegree}</span>
         </div>
       </div>
@@ -310,8 +315,21 @@ export function Transits() {
   const [selectedDate, setSelectedDate] = useState<Date>(new Date());
   const [showAllNatalAspects, setShowAllNatalAspects] = useState(false);
   const [viewMode, setViewMode] = useState<ViewMode>('day');
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const { profile } = useProfile();
   const navigate = useNavigate();
+
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      if (prev.some(e => e.id === entity.id)) return prev;
+      if (prev.length < 2) return [...prev, entity];
+      return [prev[1], entity];
+    });
+  }, []);
+
+  const handleCloseEntity = useCallback((entityId: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
+  }, []);
 
   useEffect(() => {
     setWeather(getCosmicWeather(selectedDate));
@@ -382,8 +400,11 @@ export function Transits() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="max-w-6xl mx-auto"
+      className="flex h-full"
     >
+      {/* Main content */}
+      <div className="flex-1 min-w-0 overflow-y-auto">
+      <div className="max-w-6xl mx-auto">
       {/* Header */}
       <div className="text-center mb-8">
         <h1 className="font-serif text-4xl font-medium text-theme-text-primary mb-3">
@@ -511,7 +532,7 @@ export function Transits() {
           <h2 className="font-serif text-2xl text-theme-text-primary mb-4">Planetary Positions</h2>
           <div className="space-y-3">
             {weather.positions.map((position, index) => (
-              <TransitCard key={position.planetId} position={position} index={index} natalGateNumbers={natalGateNumbers} />
+              <TransitCard key={position.planetId} position={position} index={index} natalGateNumbers={natalGateNumbers} onEntityClick={handleEntityClick} />
             ))}
           </div>
         </section>
@@ -823,6 +844,15 @@ export function Transits() {
           </div>
         </div>
       </section>
+      </div>
+      </div>
+
+      {/* Entity Stack — side panels for planet/sign entity details */}
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </motion.div>
   );
 }
