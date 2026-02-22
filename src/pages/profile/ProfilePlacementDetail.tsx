@@ -1,3 +1,4 @@
+import { useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useParams } from 'react-router-dom';
 import { useProfile } from '../../context';
@@ -9,6 +10,8 @@ import {
   getCurrentProfileId,
 } from '../../services/entities/registry';
 import type { AstrologyPlacementEntity, ProfileAspectEntity } from '../../types';
+import { EntityStack } from '../../components/entities/EntityStack';
+import type { EntityInfo } from '../../services/entities/registry';
 
 const elementColors: Record<string, { bg: string; text: string; border: string }> = {
   fire: { bg: 'bg-fire-500/10', text: 'text-fire-400', border: 'border-fire-500/30' },
@@ -20,6 +23,18 @@ const elementColors: Record<string, { bg: string; text: string; border: string }
 export function ProfilePlacementDetail() {
   const { planetId } = useParams<{ planetId: string }>();
   const { profile, isLoading, hasProfile } = useProfile();
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      const already = prev.findIndex(e => e.id === entity.id);
+      if (already !== -1) return prev;
+      if (prev.length >= 2) return [prev[1], entity];
+      return [...prev, entity];
+    });
+  }, []);
+  const handleCloseEntity = useCallback((id: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== id));
+  }, []);
 
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
@@ -71,239 +86,273 @@ export function ProfilePlacementDetail() {
   });
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      className="space-y-8"
-    >
-      {/* Header */}
-      <div>
-        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
-          ← Back to Astrology Profile
-        </Link>
-        <div className="flex items-center gap-4 mt-2">
-          <span className="text-5xl">{planet?.symbol}</span>
-          <div>
-            <h1 className="font-serif text-3xltext-theme-text-primary">{placement.displayName}</h1>
-            <p className="text-theme-text-secondary mt-1">
-              {placement.degree}°{placement.minute}' {sign?.name}
-              {placement.retrograde && <span className="text-amber-400 ml-2">℞ Retrograde</span>}
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* Core Relationship Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        {/* Planet Card */}
-        <Link
-          to={planet?.routePath || '#'}
-          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors`}
-        >
-          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Planet</p>
-          <div className="flex items-center gap-3">
-            <span className="text-3xl">{planet?.symbol}</span>
+    <div className="flex h-full">
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        className="flex-1 min-w-0 overflow-y-auto space-y-8"
+      >
+        {/* Header */}
+        <div>
+          <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm mb-2 inline-block">
+            ← Back to Astrology Profile
+          </Link>
+          <div className="flex items-center gap-4 mt-2">
+            <span className="text-5xl">{planet?.symbol}</span>
             <div>
-              <p className="text-theme-text-primary font-medium">{planet?.name}</p>
-              <p className="text-theme-text-secondary text-sm">
-                {(planet?.data as { archetype?: string })?.archetype}
+              <h1 className="font-serif text-3xltext-theme-text-primary">{placement.displayName}</h1>
+              <p className="text-theme-text-secondary mt-1">
+                {placement.degree}°{placement.minute}' {sign?.name}
+                {placement.retrograde && <span className="text-amber-400 ml-2">℞ Retrograde</span>}
               </p>
             </div>
           </div>
-        </Link>
+        </div>
 
-        {/* Sign Card */}
-        <Link
-          to={sign?.routePath || '#'}
-          className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors`}
-        >
-          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Sign</p>
-          <div className="flex items-center gap-3">
-            <span className={`text-3xl ${colors.text}`}>{sign?.symbol}</span>
-            <div>
-              <p className="text-theme-text-primary font-medium">{sign?.name}</p>
-              <p className="text-theme-text-secondary text-sm capitalize">{elementId} Sign</p>
+        {/* Core Relationship Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          {/* Planet Card */}
+          <div
+            className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors cursor-pointer`}
+            onClick={() => planet && handleEntityClick(planet)}
+          >
+            <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Planet</p>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl">{planet?.symbol}</span>
+              <div>
+                <p className="text-theme-text-primary font-medium">{planet?.name}</p>
+                <p className="text-theme-text-secondary text-sm">
+                  {(planet?.data as { archetype?: string })?.archetype}
+                </p>
+              </div>
             </div>
-          </div>
-        </Link>
-
-        {/* House Card */}
-        <Link
-          to={house?.routePath || '#'}
-          className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors"
-        >
-          <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">House</p>
-          <div className="flex items-center gap-3">
-            <span className="text-3xl text-amber-400">{house?.symbol}</span>
-            <div>
-              <p className="text-theme-text-primary font-medium">{house?.name}</p>
-              <p className="text-theme-text-secondary text-sm">
-                {(house?.data as { houseType?: string })?.houseType}
-              </p>
-            </div>
-          </div>
-        </Link>
-      </div>
-
-      {/* Additional Details Row */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {/* Degree */}
-        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
-          <p className="text-theme-text-tertiary text-xs mb-1">Position</p>
-          <p className="text-theme-text-primary font-medium">{placement.degree}°{placement.minute}'</p>
-          <p className="text-theme-text-secondary text-xs mt-1">{sign?.name}</p>
-        </div>
-
-        {/* Dignity */}
-        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
-          <p className="text-theme-text-tertiary text-xs mb-1">Dignity</p>
-          {dignity ? (
-            <>
-              <p className={`font-medium ${
-                ['domicile', 'exaltation'].includes(placement.dignityId || '')
-                  ? 'text-emerald-400'
-                  : 'text-rose-400'
-              }`}>
-                {(dignity.data as { dignityType?: string })?.dignityType}
-              </p>
-              <p className="text-theme-text-secondary text-xs mt-1">Essential Dignity</p>
-            </>
-          ) : (
-            <p className="text-theme-text-muted">Peregrine</p>
-          )}
-        </div>
-
-        {/* Decan */}
-        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
-          <p className="text-theme-text-tertiary text-xs mb-1">Decan</p>
-          {decan ? (
-            <p className="text-theme-text-primary font-medium">{decan.name}</p>
-          ) : (
-            <p className="text-theme-text-muted">—</p>
-          )}
-        </div>
-
-        {/* Chart Ruler */}
-        <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
-          <p className="text-theme-text-tertiary text-xs mb-1">Chart Status</p>
-          {placement.isChartRuler ? (
-            <p className="text-yellow-400 font-medium">
-              Chart Ruler ({placement.isChartRuler})
-            </p>
-          ) : (
-            <p className="text-theme-text-muted">—</p>
-          )}
-        </div>
-      </div>
-
-      {/* Archetypal Expression */}
-      <div className={`${colors.bg} border ${colors.border} rounded-xl p-6`}>
-        <h2 className="font-serif text-xl text-theme-text-primary mb-4">Archetypal Expression</h2>
-        <p className="text-theme-text-secondary leading-relaxed">
-          <span className="text-theme-text-primary font-medium">{planet?.name}</span> represents{' '}
-          {(planet?.data as { functionAndMeaning?: string })?.functionAndMeaning?.split('.')[0] || 'a core archetype'}.
-          In <span className={colors.text}>{sign?.name}</span>, this energy expresses through{' '}
-          {signData?.elementId} qualities, finding its arena of expression in the{' '}
-          <span className="text-amber-300">{house?.name}</span> — the realm of{' '}
-          {(house?.data as { lifeAreaFocus?: string[] })?.lifeAreaFocus?.join(', ') || 'specific life areas'}.
-        </p>
-      </div>
-
-      {/* Cross-System Connections */}
-      {(placement.geneKeyNumber || placement.hdGateNumber) && (
-        <div className="bg-gradient-to-br from-purple-500/10 to-amber-500/10 rounded-xl p-6 border border-purple-500/20">
-          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Cross-System Connections</h2>
-          <div className="grid md:grid-cols-2 gap-4">
-            {placement.geneKeyNumber && (
+            {planet && (
               <Link
-                to={`/gene-keys/gk-${placement.geneKeyNumber}`}
-                className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
+                to={planet.routePath || '#'}
+                className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary mt-2 inline-block"
+                onClick={e => e.stopPropagation()}
               >
-                <p className="text-genekey-400 text-xs mb-1">Gene Key</p>
-                <p className="text-theme-text-primary font-medium">Gene Key {placement.geneKeyNumber}</p>
-                <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
+                Full profile →
               </Link>
             )}
-            {placement.hdGateNumber && (
+          </div>
+
+          {/* Sign Card */}
+          <div
+            className={`${colors.bg} border ${colors.border} rounded-xl p-5 hover:bg-surface-overlay transition-colors cursor-pointer`}
+            onClick={() => sign && handleEntityClick(sign)}
+          >
+            <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">Sign</p>
+            <div className="flex items-center gap-3">
+              <span className={`text-3xl ${colors.text}`}>{sign?.symbol}</span>
+              <div>
+                <p className="text-theme-text-primary font-medium">{sign?.name}</p>
+                <p className="text-theme-text-secondary text-sm capitalize">{elementId} Sign</p>
+              </div>
+            </div>
+            {sign && (
               <Link
-                to={`/human-design/gate-${placement.hdGateNumber}`}
-                className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
+                to={sign.routePath || '#'}
+                className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary mt-2 inline-block"
+                onClick={e => e.stopPropagation()}
               >
-                <p className="text-amber-400 text-xs mb-1">Human Design Gate</p>
-                <p className="text-theme-text-primary font-medium">Gate {placement.hdGateNumber}</p>
-                <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
+                Full profile →
+              </Link>
+            )}
+          </div>
+
+          {/* House Card */}
+          <div
+            className="bg-surface-base/50 border border-theme-border-subtle rounded-xl p-5 hover:bg-surface-overlay transition-colors cursor-pointer"
+            onClick={() => house && handleEntityClick(house)}
+          >
+            <p className="text-theme-text-tertiary text-xs mb-2 uppercase tracking-wider">House</p>
+            <div className="flex items-center gap-3">
+              <span className="text-3xl text-amber-400">{house?.symbol}</span>
+              <div>
+                <p className="text-theme-text-primary font-medium">{house?.name}</p>
+                <p className="text-theme-text-secondary text-sm">
+                  {(house?.data as { houseType?: string })?.houseType}
+                </p>
+              </div>
+            </div>
+            {house && (
+              <Link
+                to={house.routePath || '#'}
+                className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary mt-2 inline-block"
+                onClick={e => e.stopPropagation()}
+              >
+                Full profile →
               </Link>
             )}
           </div>
         </div>
-      )}
 
-      {/* Aspects Involving This Planet */}
-      {aspectsInvolving.length > 0 && (
-        <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl text-theme-text-primary mb-4">
-            Aspects ({aspectsInvolving.length})
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
-            {aspectsInvolving.map((aspectInfo) => {
-              const aspectData = aspectInfo.data as ProfileAspectEntity;
-              const aspectType = getEntity(aspectData.aspectId);
-              const otherPlanetId = aspectData.planet1Id === planetId
-                ? aspectData.planet2Id
-                : aspectData.planet1Id;
-              const otherPlanet = getEntity(otherPlanetId);
+        {/* Additional Details Row */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Degree */}
+          <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Position</p>
+            <p className="text-theme-text-primary font-medium">{placement.degree}°{placement.minute}'</p>
+            <p className="text-theme-text-secondary text-xs mt-1">{sign?.name}</p>
+          </div>
 
-              const aspectColors: Record<string, string> = {
-                conjunction: 'bg-white/10 text-white',
-                trine: 'bg-blue-500/10 text-blue-400',
-                sextile: 'bg-emerald-500/10 text-emerald-400',
-                square: 'bg-rose-500/10 text-rose-400',
-                opposition: 'bg-purple-500/10 text-purple-400',
-                quincunx: 'bg-amber-500/10 text-amber-400',
-              };
-              const colorClass = aspectColors[aspectData.aspectId] || 'bg-surface-raised text-theme-text-secondary';
+          {/* Dignity */}
+          <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Dignity</p>
+            {dignity ? (
+              <>
+                <p className={`font-medium ${
+                  ['domicile', 'exaltation'].includes(placement.dignityId || '')
+                    ? 'text-emerald-400'
+                    : 'text-rose-400'
+                }`}>
+                  {(dignity.data as { dignityType?: string })?.dignityType}
+                </p>
+                <p className="text-theme-text-secondary text-xs mt-1">Essential Dignity</p>
+              </>
+            ) : (
+              <p className="text-theme-text-muted">Peregrine</p>
+            )}
+          </div>
 
-              return (
+          {/* Decan */}
+          <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Decan</p>
+            {decan ? (
+              <p className="text-theme-text-primary font-medium">{decan.name}</p>
+            ) : (
+              <p className="text-theme-text-muted">—</p>
+            )}
+          </div>
+
+          {/* Chart Ruler */}
+          <div className="bg-surface-base/50 rounded-lg p-4 border border-theme-border-subtle">
+            <p className="text-theme-text-tertiary text-xs mb-1">Chart Status</p>
+            {placement.isChartRuler ? (
+              <p className="text-yellow-400 font-medium">
+                Chart Ruler ({placement.isChartRuler})
+              </p>
+            ) : (
+              <p className="text-theme-text-muted">—</p>
+            )}
+          </div>
+        </div>
+
+        {/* Archetypal Expression */}
+        <div className={`${colors.bg} border ${colors.border} rounded-xl p-6`}>
+          <h2 className="font-serif text-xl text-theme-text-primary mb-4">Archetypal Expression</h2>
+          <p className="text-theme-text-secondary leading-relaxed">
+            <span className="text-theme-text-primary font-medium">{planet?.name}</span> represents{' '}
+            {(planet?.data as { functionAndMeaning?: string })?.functionAndMeaning?.split('.')[0] || 'a core archetype'}.
+            In <span className={colors.text}>{sign?.name}</span>, this energy expresses through{' '}
+            {elementId} qualities, finding its arena of expression in the{' '}
+            <span className="text-amber-300">{house?.name}</span> — the realm of{' '}
+            {(house?.data as { lifeAreaFocus?: string[] })?.lifeAreaFocus?.join(', ') || 'specific life areas'}.
+          </p>
+        </div>
+
+        {/* Cross-System Connections */}
+        {(placement.geneKeyNumber || placement.hdGateNumber) && (
+          <div className="bg-gradient-to-br from-purple-500/10 to-amber-500/10 rounded-xl p-6 border border-purple-500/20">
+            <h2 className="font-serif text-xl text-theme-text-primary mb-4">Cross-System Connections</h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {placement.geneKeyNumber && (
                 <Link
-                  key={aspectInfo.id}
-                  to={`/profile/astrology/aspects/${aspectData.planet1Id}-${aspectData.planet2Id}`}
-                  className={`p-3 ${colorClass} rounded-lg hover:opacity-80 transition-opacity`}
+                  to={`/gene-keys/gk-${placement.geneKeyNumber}`}
+                  className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
                 >
-                  <div className="flex items-center gap-2">
-                    <span className="text-lg">{planet?.symbol}</span>
-                    <span className="text-sm">{aspectType?.symbol}</span>
-                    <span className="text-lg">{otherPlanet?.symbol}</span>
-                  </div>
-                  <p className="text-theme-text-secondary text-xs mt-1">
-                    {aspectType?.name} {otherPlanet?.name} ({aspectData.orbDegree}°{aspectData.orbMinute}')
-                  </p>
+                  <p className="text-genekey-400 text-xs mb-1">Gene Key</p>
+                  <p className="text-theme-text-primary font-medium">Gene Key {placement.geneKeyNumber}</p>
+                  <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
                 </Link>
-              );
-            })}
+              )}
+              {placement.hdGateNumber && (
+                <Link
+                  to={`/human-design/gate-${placement.hdGateNumber}`}
+                  className="bg-surface-base/50 rounded-lg p-4 hover:bg-surface-overlay transition-colors"
+                >
+                  <p className="text-amber-400 text-xs mb-1">Human Design Gate</p>
+                  <p className="text-theme-text-primary font-medium">Gate {placement.hdGateNumber}</p>
+                  <p className="text-theme-text-secondary text-xs mt-1">Same zodiacal degree</p>
+                </Link>
+              )}
+            </div>
           </div>
+        )}
+
+        {/* Aspects Involving This Planet */}
+        {aspectsInvolving.length > 0 && (
+          <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl text-theme-text-primary mb-4">
+              Aspects ({aspectsInvolving.length})
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3">
+              {aspectsInvolving.map((aspectInfo) => {
+                const aspectData = aspectInfo.data as ProfileAspectEntity;
+                const aspectType = getEntity(aspectData.aspectId);
+                const otherPlanetId = aspectData.planet1Id === planetId
+                  ? aspectData.planet2Id
+                  : aspectData.planet1Id;
+                const otherPlanet = getEntity(otherPlanetId);
+
+                const aspectColorMap: Record<string, string> = {
+                  conjunction: 'bg-white/10 text-white',
+                  trine: 'bg-blue-500/10 text-blue-400',
+                  sextile: 'bg-emerald-500/10 text-emerald-400',
+                  square: 'bg-rose-500/10 text-rose-400',
+                  opposition: 'bg-purple-500/10 text-purple-400',
+                  quincunx: 'bg-amber-500/10 text-amber-400',
+                };
+                const colorClass = aspectColorMap[aspectData.aspectId] || 'bg-surface-raised text-theme-text-secondary';
+
+                return (
+                  <Link
+                    key={aspectInfo.id}
+                    to={`/profile/astrology/aspects/${aspectData.planet1Id}-${aspectData.planet2Id}`}
+                    className={`p-3 ${colorClass} rounded-lg hover:opacity-80 transition-opacity`}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="text-lg">{planet?.symbol}</span>
+                      <span className="text-sm">{aspectType?.symbol}</span>
+                      <span className="text-lg">{otherPlanet?.symbol}</span>
+                    </div>
+                    <p className="text-theme-text-secondary text-xs mt-1">
+                      {aspectType?.name} {otherPlanet?.name} ({aspectData.orbDegree}°{aspectData.orbMinute}')
+                    </p>
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
+
+        {/* Contemplation Link */}
+        <div className="flex justify-center">
+          <Link
+            to={`/contemplate?focus=placement&planet=${planetId}`}
+            className="px-6 py-3 bg-amber-500/20 text-amber-300 rounded-lg hover:bg-amber-500/30 transition-colors"
+          >
+            Contemplate this Placement
+          </Link>
         </div>
-      )}
 
-      {/* Contemplation Link */}
-      <div className="flex justify-center">
-        <Link
-          to={`/contemplate?focus=placement&planet=${planetId}`}
-          className="px-6 py-3 bg-amber-500/20 text-amber-300 rounded-lg hover:bg-amber-500/30 transition-colors"
-        >
-          Contemplate this Placement
-        </Link>
-      </div>
-
-      {/* Navigation Links */}
-      <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
-        <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
-          ← All Placements
-        </Link>
-        <Link to={planet?.routePath || '#'} className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
-          {planet?.name} in Astrology →
-        </Link>
-      </div>
-    </motion.div>
+        {/* Navigation Links */}
+        <div className="flex justify-between pt-4 border-t border-theme-border-subtle">
+          <Link to="/profile/astrology" className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
+            ← All Placements
+          </Link>
+          <Link to={planet?.routePath || '#'} className="text-theme-text-secondary hover:text-theme-text-primary text-sm">
+            {planet?.name} in Astrology →
+          </Link>
+        </div>
+      </motion.div>
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
+    </div>
   );
 }
 
