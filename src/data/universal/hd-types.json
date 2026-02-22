@@ -45,7 +45,13 @@
       "Dalai Lama",
       "Mozart",
       "Elvis Presley"
-    ]
+    ],
+    "deconditioningJourney": "For Generators, deconditioning is the slow unlearning of a lifetime of initiating. The early phase (months 1-12) is uncomfortable — the mind insists on going out and 'making things happen' and does not easily yield. The middle phase (years 2-4) brings genuine response experiences: opportunities that arrive and produce a clear Sacral 'yes' feel qualitatively different from what was forced. The later phase (years 5-7) is somatic consolidation — the gut response becomes audible before the mind translates it. The body learns to wait. Full deconditioning is not intellectual acceptance of the strategy; it is the body's nervous system resetting toward magnetism rather than initiation.",
+    "auraMechanism": "The Generator's aura is open and enveloping — it draws life toward it. Ra taught that this is not metaphor but a mechanical function: the Generator's field literally attracts the right things to respond to. Initiating breaks this function. Waiting keeps the aura's magnetism active.",
+    "enteringCorrectlyGuidance": "A Generator who enters a job, relationship, or project through a genuine Sacral response carries sustainable energy from the first moment. A Generator who enters by initiating — by 'making it happen' through mental planning — carries a conditioning burden from the start that becomes harder to resolve over time.",
+    "raQuote": "The mind of the Generator will always want to initiate. It will always come up with reasons why you should go for something. That's conditioning. Wait.",
+    "experimentInstruction": "For 90 days: before taking any significant action, pause and ask your Sacral a yes/no question about it. Notice the gut response — the 'uh-huh' or 'uhn-uhn' — before the mind speaks. Track: What did you initiate anyway? What did you respond to? Compare the quality of energy in each category.",
+    "vperPhase": "Execute"
   },
   {
     "id": "hd-type-manifesting-generator",
@@ -93,7 +99,13 @@
       "Jimi Hendrix",
       "Marie Curie",
       "Clint Eastwood"
-    ]
+    ],
+    "deconditioningJourney": "For Manifesting Generators, deconditioning involves two concurrent processes: learning to respond before acting (Generator layer) and learning to inform before moving fast (Manifestor layer). The early phase struggles with the multi-passionate nature — the MG starts many things without finishing and feels guilty. The middle phase discovers that Sacral response plus informing produces a different quality of outcome — less resistance, more sustainable momentum. The later phase integrates the MG's natural skip-step genius with the authority of response: not every step, but the right steps, at the right pace.",
+    "auraMechanism": "The MG's aura is open and enveloping like the Generator's, but with a dynamic quality that moves energy faster. The aura's function is to attract AND to catalyze — it draws opportunities and then accelerates through them. The aura needs both response AND informing to function correctly: response activates the magnetic field, informing clears the path.",
+    "enteringCorrectlyGuidance": "An MG who enters correctly — Sacral response followed by informing those who will be affected — enters with both life force and cleared resistance. An MG who enters by initiating and skipping the inform step enters into a field of accumulated resistance that compounds with each new step.",
+    "raQuote": "The Manifesting Generator is a hybrid. They need to respond first, then inform. In that order. Always.",
+    "experimentInstruction": "For 90 days: before starting anything new, ask two questions in sequence. First: is there a Sacral 'yes'? Second: who needs to know before I move? Practice the inform step even when it feels unnecessary. Track: what changed in how others respond to your initiatives?",
+    "vperPhase": "Execute"
   },
   {
     "id": "hd-type-projector",
@@ -139,7 +151,13 @@
       "Princess Diana",
       "Marilyn Monroe",
       "Nelson Mandela"
-    ]
+    ],
+    "deconditioningJourney": "For Projectors, deconditioning is the gradual release of the need to push. The early phase is often the most painful — Projectors who have been working like Generators arrive at burnout before deconditioning begins. Stopping is itself the first act of deconditioning. The middle phase involves learning the felt difference between genuine invitation and polite acknowledgment — only the former carries sustainable energy. The later phase cultivates the study and mastery that makes recognition and invitation natural: the Projector becomes so fluent in what they see that the right people inevitably seek them out.",
+    "auraMechanism": "The Projector's aura is focused and penetrating — it sees into others deeply. Ra described it as a laser compared to the Generator's floodlight. This aura is not designed to work on its own; it is designed to be recognized by others and then used to guide their energy. Without recognition, the Projector's aura is simply penetrating — and that can feel threatening rather than inviting.",
+    "enteringCorrectlyGuidance": "A Projector who enters a career role, relationship, or community through a genuine invitation that recognizes their specific capacities enters with their aura supported. A Projector who pushes into a situation without invitation enters into an energetic environment that does not sustain them — leading to bitterness no matter how good their guidance.",
+    "raQuote": "Do not accept anything less than an invitation. Understand that whatever is going to fulfill you, whether it's the work you do or the love you have, whatever it may be, it must come from invitation.",
+    "experimentInstruction": "For 90 days: in the areas of career, relationship, and where you live — offer nothing without a clear invitation. Study your one true interest deeply. When bitterness arises, treat it as information: something was attempted without proper recognition. Track: what invitations arrived when you stopped reaching?",
+    "vperPhase": "Plan"
   },
   {
     "id": "hd-type-manifestor",
@@ -187,7 +205,13 @@
       "Johnny Depp",
       "George W. Bush",
       "Adolf Hitler"
-    ]
+    ],
+    "deconditioningJourney": "For Manifestors, deconditioning is not about slowing down but about releasing the anger that comes from constant resistance. The early phase involves recognizing the anger — often masked as impatience, indignation, or a sense of being controlled. The middle phase is learning to inform: not asking permission, but reducing friction. The experience of being given space rather than meeting resistance is often startling for Manifestors accustomed to fighting. The later phase is peace — the Manifestor discovers that informing paradoxically creates more freedom, not less.",
+    "auraMechanism": "The Manifestor's aura is closed and repelling — it creates a bubble of independence. Ra explained this is not a flaw but the mechanism by which Manifestors get the space they need to initiate. The repelling quality is what others feel as the Manifestor's intensity or unapproachability. Informing is the key that opens the closed aura enough to let action move through without triggering defensive resistance in others.",
+    "enteringCorrectlyGuidance": "A Manifestor who enters a new project or relationship by informing those who will be affected enters with the path cleared. A Manifestor who enters by simply acting — without informing — immediately generates resistance that must be managed for the entire arc of that engagement.",
+    "raQuote": "Inform before you act — not to ask permission, but to let others know. The more you inform, the more freedom you'll actually experience.",
+    "experimentInstruction": "For 90 days: before every significant action, identify who will be affected and tell them what you are going to do — not what you might do, but what you are going to do. Track: how does resistance change? Notice the quality of peace when you have informed versus the quality of anger when you have not.",
+    "vperPhase": "Vision"
   },
   {
     "id": "hd-type-reflector",
@@ -233,6 +257,12 @@
       "Fyodor Dostoevsky",
       "H.G. Wells",
       "Ammachi"
-    ]
+    ],
+    "deconditioningJourney": "For Reflectors, deconditioning is the slowest of all types — appropriately, since the lunar cycle is their natural rhythm. The early phase is identity confusion: with no defined centers, the Reflector has been whatever the environment made them. The middle phase is learning to witness rather than identify — noticing 'this is not me; this is what I am sampling' across the day's energy shifts. The later phase is the discovery of the Reflector's true consistency: not in their definition (they have none) but in their unique way of sampling, reflecting, and evaluating. The deconditioning milestone is the first major decision made after a full lunar cycle — and the quality difference between that decision and a rushed one.",
+    "auraMechanism": "The Reflector's aura is resistant and sampling — it tastes everything but is not absorbed by anything. Ra described it as protective: the sampling quality keeps Reflectors from being permanently conditioned by any one energy, but only if the aura is not overwhelmed by long-term immersion in unhealthy environments. The aura requires healthy environments the way a measuring instrument requires calibration conditions.",
+    "enteringCorrectlyGuidance": "A Reflector who enters a situation — especially a living environment, community, or partnership — after a full lunar cycle of sensing into it enters with genuine clarity about whether this environment is healthy for their sampling function. A Reflector who enters quickly, driven by excitement or pressure, inherits whatever that environment amplifies — including its pathologies.",
+    "raQuote": "The Reflector is the mirror of the health of the collective. They sample everything. The only question is: what is worth sampling?",
+    "experimentInstruction": "For 90 days: before any major decision — career, relationship, living situation — give yourself a minimum of 29 days. Talk about the decision with at least five different people throughout. Track how your feeling about the decision changes across the cycle. Notice: is there a stable thread beneath the changes, or do you feel differently each time?",
+    "vperPhase": "Review"
   }
 ]

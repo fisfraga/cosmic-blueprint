@@ -378,6 +378,13 @@ export interface HDTypeEntity extends AstroEntity {
   signatureBehavior: string;
   practicalGuidance: string;
   famousExamples: string[];
+  // Ra Uru Hu depth layer
+  deconditioningJourney?: string;
+  auraMechanism?: string;
+  enteringCorrectlyGuidance?: string;
+  raQuote?: string;
+  experimentInstruction?: string;
+  vperPhase?: string;
 }
 
 export interface HDStrategyEntity extends AstroEntity {
