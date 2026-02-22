@@ -109,6 +109,7 @@ export type EntityCategory =
   | 'decan'
   | 'dignity'
   | 'fixed-star'
+  | 'galactic-point'
   // Human Design
   | 'hd-type'
   | 'hd-strategy'

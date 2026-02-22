@@ -3,9 +3,13 @@ import type {
   AstroProfile,
   AstroPoint,
   Chakra,
+  Decan,
+  GalacticPoint,
+  GKSphereEntity,
   HDAuthorityEntity,
   HDLineEntity,
   HDProfileEntity,
+  HermeticPrinciple,
   NumerologyNumber,
   PersonalContextProject,
   PersonalContext,
@@ -627,6 +631,348 @@ function NumerologyContent({ entity }: { entity: EntityInfo }) {
   );
 }
 
+// ─── Galactic Point content renderer ────────────────────────────────────────
+
+function GalacticPointContent({ entity }: { entity: EntityInfo }) {
+  const gp = entity.data as GalacticPoint;
+  if (!gp) return null;
+
+  const signLabel = gp.zodiacSign
+    ? gp.zodiacSign.charAt(0).toUpperCase() + gp.zodiacSign.slice(1)
+    : '';
+
+  return (
+    <div className="space-y-4">
+      {/* Position + archetype badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {(gp.zodiacDegree != null || gp.zodiacMinute != null) && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-mono">
+            {gp.zodiacDegree ?? 0}°{gp.zodiacMinute ?? 0}' {signLabel}
+          </span>
+        )}
+        {gp.archetype && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary italic">
+            {gp.archetype}
+          </span>
+        )}
+      </div>
+
+      {/* Description */}
+      {gp.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">About</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{gp.description}</p>
+        </div>
+      )}
+
+      {/* Cosmic Gift */}
+      {gp.gift && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-teal-300">Cosmic Gift</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{gp.gift}</p>
+        </div>
+      )}
+
+      {/* Integration Challenge */}
+      {gp.challenge && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-amber-300">Integration Challenge</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{gp.challenge}</p>
+        </div>
+      )}
+
+      {/* Contemplation Theme */}
+      {gp.contemplationTheme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Contemplation Theme</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{gp.contemplationTheme}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Decan content renderer ──────────────────────────────────────────────────
+
+function DecanContent({ entity }: { entity: EntityInfo }) {
+  const decan = entity.data as Decan;
+  if (!decan) return null;
+
+  const capitalizeId = (id: string) =>
+    id ? id.charAt(0).toUpperCase() + id.slice(1) : '';
+
+  const isDifferentModern =
+    decan.modernRulingPlanetId &&
+    decan.modernRulingPlanetId !== decan.rulingPlanetId;
+
+  return (
+    <div className="space-y-4">
+      {/* Decan number + sign badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {decan.decanNumber != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+            Decan {decan.decanNumber}
+          </span>
+        )}
+        {decan.zodiacSignId && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {capitalizeId(decan.zodiacSignId)}
+          </span>
+        )}
+        {decan.elementId && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {capitalizeId(decan.elementId)}
+          </span>
+        )}
+      </div>
+
+      {/* Active Period */}
+      {decan.dateRange && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Active Period</h4>
+          <p className="text-sm text-theme-text-secondary">{decan.dateRange}</p>
+        </div>
+      )}
+
+      {/* Archetype */}
+      {decan.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{decan.archetype}</p>
+        </div>
+      )}
+
+      {/* Ruling planets */}
+      <div>
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Ruling Planets</h4>
+        <div className="flex flex-wrap gap-1.5">
+          {decan.rulingPlanetId && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+              {capitalizeId(decan.rulingPlanetId)} (traditional)
+            </span>
+          )}
+          {isDifferentModern && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+              {capitalizeId(decan.modernRulingPlanetId)} (modern)
+            </span>
+          )}
+        </div>
+      </div>
+
+      {/* Description */}
+      {decan.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">About</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{decan.description}</p>
+        </div>
+      )}
+
+      {/* Complementary decan reference */}
+      {decan.complementaryDecanId && (
+        <div>
+          <span className="text-xs text-theme-text-tertiary">
+            Complementary: <span className="text-theme-text-secondary">{decan.complementaryDecanId}</span>
+          </span>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Hermetic Principle content renderer ─────────────────────────────────────
+
+function HermeticContent({ entity }: { entity: EntityInfo }) {
+  const hp = entity.data as HermeticPrinciple;
+  if (!hp) return null;
+
+  const FREQ_COLORS = {
+    shadow: 'text-rose-300',
+    gift: 'text-emerald-300',
+    siddhi: 'text-violet-300',
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Number + latin name */}
+      <div className="flex flex-wrap items-center gap-2">
+        {hp.number != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+            Principle {hp.number}
+          </span>
+        )}
+        {hp.latinName && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary italic">
+            {hp.latinName}
+          </span>
+        )}
+      </div>
+
+      {/* Statement — prominent */}
+      {hp.statement && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed font-medium">
+            "{hp.statement}"
+          </p>
+        </div>
+      )}
+
+      {/* Essence */}
+      {hp.essence && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Essence</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hp.essence}</p>
+        </div>
+      )}
+
+      {/* Three-frequency section */}
+      <div className="space-y-2">
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Frequency Spectrum</h4>
+        {hp.shadow?.expression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.shadow}`}>Shadow</div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{hp.shadow.expression}</p>
+          </div>
+        )}
+        {hp.gift?.expression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.gift}`}>Gift</div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{hp.gift.expression}</p>
+          </div>
+        )}
+        {hp.siddhi?.expression && (
+          <div className="rounded-lg bg-surface-raised p-3">
+            <div className={`text-xs font-semibold mb-1 ${FREQ_COLORS.siddhi}`}>Siddhi</div>
+            <p className="text-xs text-theme-text-secondary leading-relaxed">{hp.siddhi.expression}</p>
+          </div>
+        )}
+      </div>
+
+      {/* Practice */}
+      {hp.practice && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Practice</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hp.practice}</p>
+        </div>
+      )}
+
+      {/* Correspondence badges */}
+      <div className="flex flex-wrap gap-1.5">
+        {hp.element && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Element: {hp.element}
+          </span>
+        )}
+        {hp.planet && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Planet: {hp.planet}
+          </span>
+        )}
+      </div>
+
+      {/* Astrology Application */}
+      {hp.astrologyApplication && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Astrology Application</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hp.astrologyApplication}</p>
+        </div>
+      )}
+
+      {/* Gene Keys Application */}
+      {hp.geneKeysApplication && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Gene Keys Application</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{hp.geneKeysApplication}</p>
+        </div>
+      )}
+
+      {/* Contemplative Question */}
+      {hp.contemplativeQuestion && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Reflection</h4>
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed">{hp.contemplativeQuestion}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── GK Sphere content renderer ──────────────────────────────────────────────
+
+function GKSphereContent({ entity }: { entity: EntityInfo }) {
+  const sphere = entity.data as GKSphereEntity;
+  if (!sphere) return null;
+
+  const formatSequence = (seq: string) => {
+    if (!seq) return '';
+    // "Activation" → "Activation Sequence", "Venus" → "Venus Sequence", etc.
+    if (seq === 'Activation' || seq === 'Venus' || seq === 'Pearl') {
+      return `${seq} Sequence`;
+    }
+    return seq;
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Sequence badge */}
+      {sphere.sequence && (
+        <div className="flex flex-wrap items-center gap-2">
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {formatSequence(sphere.sequence)}
+          </span>
+          {sphere.planetarySource && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+              {sphere.planetarySource}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Theme */}
+      {sphere.theme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Theme</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{sphere.theme}</p>
+        </div>
+      )}
+
+      {/* Question */}
+      {sphere.question && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Core Question</h4>
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed border-l-2 border-theme-border-subtle pl-3">
+            {sphere.question}
+          </p>
+        </div>
+      )}
+
+      {/* Practical Guidance */}
+      {sphere.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Practical Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{sphere.practicalGuidance}</p>
+        </div>
+      )}
+
+      {/* Relationship (to partner sphere) */}
+      {sphere.relationship && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Sphere Relationship</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{sphere.relationship}</p>
+        </div>
+      )}
+
+      {/* Partner sphere reference */}
+      {sphere.partnerSphere && (
+        <div>
+          <span className="text-xs text-theme-text-tertiary">
+            Partner Sphere: <span className="text-theme-text-secondary">{sphere.partnerSphere}</span>
+          </span>
+        </div>
+      )}
+    </div>
+  );
+}
+
 export function EntityPanelContent({
   entity,
   colors,
@@ -741,6 +1087,26 @@ export function EntityPanelContent({
       {/* Occupation */}
       {entity.type === 'occupation' && (
         <OccupationContent entity={entity} />
+      )}
+
+      {/* Galactic Point */}
+      {entity.type === 'galactic-point' && (
+        <GalacticPointContent entity={entity} />
+      )}
+
+      {/* Decan */}
+      {entity.type === 'decan' && (
+        <DecanContent entity={entity} />
+      )}
+
+      {/* Hermetic Principle */}
+      {entity.type === 'hermetic-principle' && (
+        <HermeticContent entity={entity} />
+      )}
+
+      {/* GK Sphere */}
+      {entity.type === 'gk-sphere' && (
+        <GKSphereContent entity={entity} />
       )}
 
       {/* Related Entities */}
