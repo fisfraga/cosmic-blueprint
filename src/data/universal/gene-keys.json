@@ -32,7 +32,8 @@
     "degreeStart": 223.625,
     "degreeEnd": 229.25,
     "url": "https://genekeys.com/gene-key-1/",
-    "description": "Gene Key 1: Entropy → Freshness → Beauty. This key invites contemplation on the transformation from Entropy to Beauty through the gift of Freshness."
+    "description": "Gene Key 1: Entropy → Freshness → Beauty. This key invites contemplation on the transformation from Entropy to Beauty through the gift of Freshness.",
+    "keyTitle": "From Entropy To Syntropy"
   },
   {
     "id": "gk-2",
@@ -67,7 +68,8 @@
     "degreeStart": 58.125,
     "degreeEnd": 63.75,
     "url": "https://genekeys.com/gene-key-2/",
-    "description": "Gene Key 2: Dislocation → Orientation → Unity. This key invites contemplation on the transformation from Dislocation to Unity through the gift of Orientation."
+    "description": "Gene Key 2: Dislocation → Orientation → Unity. This key invites contemplation on the transformation from Dislocation to Unity through the gift of Orientation.",
+    "keyTitle": "Returning To The One"
   },
   {
     "id": "gk-3",
@@ -102,7 +104,8 @@
     "degreeStart": 30,
     "degreeEnd": 35.625,
     "url": "https://genekeys.com/gene-key-3/",
-    "description": "Gene Key 3: Chaos → Innovation → Innocence. This key invites contemplation on the transformation from Chaos to Innocence through the gift of Innovation."
+    "description": "Gene Key 3: Chaos → Innovation → Innocence. This key invites contemplation on the transformation from Chaos to Innocence through the gift of Innovation.",
+    "keyTitle": "Through The Eyes Of A Child"
   },
   {
     "id": "gk-4",
@@ -137,7 +140,8 @@
     "degreeStart": 123.875,
     "degreeEnd": 129.5,
     "url": "https://genekeys.com/gene-key-4/",
-    "description": "Gene Key 4: Intolerance → Understanding → Forgiveness. This key invites contemplation on the transformation from Intolerance to Forgiveness through the gift of Understanding."
+    "description": "Gene Key 4: Intolerance → Understanding → Forgiveness. This key invites contemplation on the transformation from Intolerance to Forgiveness through the gift of Understanding.",
+    "keyTitle": "A Universal Panacea"
   },
   {
     "id": "gk-5",
@@ -172,7 +176,8 @@
     "degreeStart": 235,
     "degreeEnd": 240.625,
     "url": "https://genekeys.com/gene-key-5/",
-    "description": "Gene Key 5: Impatience → Patience → Timelessness. This key invites contemplation on the transformation from Impatience to Timelessness through the gift of Patience."
+    "description": "Gene Key 5: Impatience → Patience → Timelessness. This key invites contemplation on the transformation from Impatience to Timelessness through the gift of Patience.",
+    "keyTitle": "The Ending Of Time"
   },
   {
     "id": "gk-6",
@@ -207,7 +212,8 @@
     "degreeStart": 153.875,
     "degreeEnd": 159.5,
     "url": "https://genekeys.com/gene-key-6/",
-    "description": "Gene Key 6: Conflict → Diplomacy → Peace. This key invites contemplation on the transformation from Conflict to Peace through the gift of Diplomacy."
+    "description": "Gene Key 6: Conflict → Diplomacy → Peace. This key invites contemplation on the transformation from Conflict to Peace through the gift of Diplomacy.",
+    "keyTitle": "The Path To Peace"
   },
   {
     "id": "gk-7",
@@ -242,7 +248,8 @@
     "degreeStart": 129.5,
     "degreeEnd": 135.125,
     "url": "https://genekeys.com/gene-key-7/",
-    "description": "Gene Key 7: Division → Guidance → Virtue. This key invites contemplation on the transformation from Division to Virtue through the gift of Guidance."
+    "description": "Gene Key 7: Division → Guidance → Virtue. This key invites contemplation on the transformation from Division to Virtue through the gift of Guidance.",
+    "keyTitle": "Virtue Is Its Own Reward"
   },
   {
     "id": "gk-8",
@@ -277,7 +284,8 @@
     "degreeStart": 45,
     "degreeEnd": 50.625,
     "url": "https://genekeys.com/gene-key-8/",
-    "description": "Gene Key 8: Mediocrity → Style → Exquisiteness. This key invites contemplation on the transformation from Mediocrity to Exquisiteness through the gift of Style."
+    "description": "Gene Key 8: Mediocrity → Style → Exquisiteness. This key invites contemplation on the transformation from Mediocrity to Exquisiteness through the gift of Style.",
+    "keyTitle": "Diamond Of The Self"
   },
   {
     "id": "gk-9",
@@ -312,7 +320,8 @@
     "degreeStart": 229.25,
     "degreeEnd": 234.875,
     "url": "https://genekeys.com/gene-key-9/",
-    "description": "Gene Key 9: Inertia → Determination → Invincibility. This key invites contemplation on the transformation from Inertia to Invincibility through the gift of Determination."
+    "description": "Gene Key 9: Inertia → Determination → Invincibility. This key invites contemplation on the transformation from Inertia to Invincibility through the gift of Determination.",
+    "keyTitle": "The Power Of The Infinitesimal"
   },
   {
     "id": "gk-10",
@@ -347,7 +356,8 @@
     "degreeStart": 240,
     "degreeEnd": 245.625,
     "url": "https://genekeys.com/gene-key-10/",
-    "description": "Gene Key 10: Self-Obsession → Naturalness → Being. This key invites contemplation on the transformation from Self-Obsession to Being through the gift of Naturalness."
+    "description": "Gene Key 10: Self-Obsession → Naturalness → Being. This key invites contemplation on the transformation from Self-Obsession to Being through the gift of Naturalness.",
+    "keyTitle": "Being At Ease"
   },
   {
     "id": "gk-11",
@@ -382,7 +392,8 @@
     "degreeStart": 240.625,
     "degreeEnd": 246.25,
     "url": "https://genekeys.com/gene-key-11/",
-    "description": "Gene Key 11: Obscurity → Idealism → Light. This key invites contemplation on the transformation from Obscurity to Light through the gift of Idealism."
+    "description": "Gene Key 11: Obscurity → Idealism → Light. This key invites contemplation on the transformation from Obscurity to Light through the gift of Idealism.",
+    "keyTitle": "The Light Of Eden"
   },
   {
     "id": "gk-12",
@@ -417,7 +428,8 @@
     "degreeStart": 75.125,
     "degreeEnd": 80.75,
     "url": "https://genekeys.com/gene-key-12/",
-    "description": "Gene Key 12: Vanity → Discrimination → Purity. This key invites contemplation on the transformation from Vanity to Purity through the gift of Discrimination."
+    "description": "Gene Key 12: Vanity → Discrimination → Purity. This key invites contemplation on the transformation from Vanity to Purity through the gift of Discrimination.",
+    "keyTitle": "A Pure Heart"
   },
   {
     "id": "gk-13",
@@ -452,7 +464,8 @@
     "degreeStart": 279.5,
     "degreeEnd": 285.125,
     "url": "https://genekeys.com/gene-key-13/",
-    "description": "Gene Key 13: Discord → Discernment → Empathy. This key invites contemplation on the transformation from Discord to Empathy through the gift of Discernment."
+    "description": "Gene Key 13: Discord → Discernment → Empathy. This key invites contemplation on the transformation from Discord to Empathy through the gift of Discernment.",
+    "keyTitle": "Listening Through Love"
   },
   {
     "id": "gk-14",
@@ -487,7 +500,8 @@
     "degreeStart": 210,
     "degreeEnd": 215.625,
     "url": "https://genekeys.com/gene-key-14/",
-    "description": "Gene Key 14: Compromise → Competence → Bounteousness. This key invites contemplation on the transformation from Compromise to Bounteousness through the gift of Competence."
+    "description": "Gene Key 14: Compromise → Competence → Bounteousness. This key invites contemplation on the transformation from Compromise to Bounteousness through the gift of Competence.",
+    "keyTitle": "Radiating Prosperity"
   },
   {
     "id": "gk-15",
@@ -522,7 +536,8 @@
     "degreeStart": 80.75,
     "degreeEnd": 86.375,
     "url": "https://genekeys.com/gene-key-15/",
-    "description": "Gene Key 15: Dullness → Magnetism → Florescence. This key invites contemplation on the transformation from Dullness to Florescence through the gift of Magnetism."
+    "description": "Gene Key 15: Dullness → Magnetism → Florescence. This key invites contemplation on the transformation from Dullness to Florescence through the gift of Magnetism.",
+    "keyTitle": "An Eternally Flowering Spring"
   },
   {
     "id": "gk-16",
@@ -557,7 +572,8 @@
     "degreeStart": 60,
     "degreeEnd": 65.625,
     "url": "https://genekeys.com/gene-key-16/",
-    "description": "Gene Key 16: Indifference → Versatility → Mastery. This key invites contemplation on the transformation from Indifference to Mastery through the gift of Versatility."
+    "description": "Gene Key 16: Indifference → Versatility → Mastery. This key invites contemplation on the transformation from Indifference to Mastery through the gift of Versatility.",
+    "keyTitle": "Magical Genius"
   },
   {
     "id": "gk-17",
@@ -592,7 +608,8 @@
     "degreeStart": 5.625,
     "degreeEnd": 11.25,
     "url": "https://genekeys.com/gene-key-17/",
-    "description": "Gene Key 17: Opinion →  → Omniscience. This key invites contemplation on the transformation from Opinion to Omniscience through the gift of ."
+    "description": "Gene Key 17: Opinion →  → Omniscience. This key invites contemplation on the transformation from Opinion to Omniscience through the gift of .",
+    "keyTitle": "The Eye"
   },
   {
     "id": "gk-18",
@@ -627,7 +644,8 @@
     "degreeStart": 165.125,
     "degreeEnd": 170.75,
     "url": "https://genekeys.com/gene-key-18/",
-    "description": "Gene Key 18: Judgement → Integrity → Perfection. This key invites contemplation on the transformation from Judgement to Perfection through the gift of Integrity."
+    "description": "Gene Key 18: Judgement → Integrity → Perfection. This key invites contemplation on the transformation from Judgement to Perfection through the gift of Integrity.",
+    "keyTitle": "The Healing Power Of Mind"
   },
   {
     "id": "gk-19",
@@ -662,7 +680,8 @@
     "degreeStart": 273.875,
     "degreeEnd": 279.5,
     "url": "https://genekeys.com/gene-key-19/",
-    "description": "Gene Key 19:  → Sensitivity → Sacrifice. This key invites contemplation on the transformation from  to Sacrifice through the gift of Sensitivity."
+    "description": "Gene Key 19:  → Sensitivity → Sacrifice. This key invites contemplation on the transformation from  to Sacrifice through the gift of Sensitivity.",
+    "keyTitle": "The Future Human Being"
   },
   {
     "id": "gk-20",
@@ -697,7 +716,8 @@
     "degreeStart": 50.625,
     "degreeEnd": 56.25,
     "url": "https://genekeys.com/gene-key-20/",
-    "description": "Gene Key 20: Superficiality → Self → Presence. This key invites contemplation on the transformation from Superficiality to Presence through the gift of Self."
+    "description": "Gene Key 20: Superficiality → Self → Presence. This key invites contemplation on the transformation from Superficiality to Presence through the gift of Self.",
+    "keyTitle": "The Sacred Om"
   },
   {
     "id": "gk-21",
@@ -732,7 +752,8 @@
     "degreeStart": 11.25,
     "degreeEnd": 16.875,
     "url": "https://genekeys.com/gene-key-21/",
-    "description": "Gene Key 21: Control → Authority → Valour. This key invites contemplation on the transformation from Control to Valour through the gift of Authority."
+    "description": "Gene Key 21: Control → Authority → Valour. This key invites contemplation on the transformation from Control to Valour through the gift of Authority.",
+    "keyTitle": "A Noble Life"
   },
   {
     "id": "gk-22",
@@ -767,7 +788,8 @@
     "degreeStart": 309.5,
     "degreeEnd": 315.125,
     "url": "https://genekeys.com/gene-key-22/",
-    "description": "Gene Key 22: Dishonour → Graciousness → Grace. This key invites contemplation on the transformation from Dishonour to Grace through the gift of Graciousness."
+    "description": "Gene Key 22: Dishonour → Graciousness → Grace. This key invites contemplation on the transformation from Dishonour to Grace through the gift of Graciousness.",
+    "keyTitle": "Grace Under Pressure"
   },
   {
     "id": "gk-23",
@@ -802,7 +824,8 @@
     "degreeStart": 39.5,
     "degreeEnd": 45.125,
     "url": "https://genekeys.com/gene-key-23/",
-    "description": "Gene Key 23: Complexity → Simplicity → Quintessence. This key invites contemplation on the transformation from Complexity to Quintessence through the gift of Simplicity."
+    "description": "Gene Key 23: Complexity → Simplicity → Quintessence. This key invites contemplation on the transformation from Complexity to Quintessence through the gift of Simplicity.",
+    "keyTitle": "The Alchemy Of Simplicity"
   },
   {
     "id": "gk-24",
@@ -837,7 +860,8 @@
     "degreeStart": 35.625,
     "degreeEnd": 41.25,
     "url": "https://genekeys.com/gene-key-24/",
-    "description": "Gene Key 24: Addiction → Invention → Silence. This key invites contemplation on the transformation from Addiction to Silence through the gift of Invention."
+    "description": "Gene Key 24: Addiction → Invention → Silence. This key invites contemplation on the transformation from Addiction to Silence through the gift of Invention.",
+    "keyTitle": "Silence – The Ultimate Addiction"
   },
   {
     "id": "gk-25",
@@ -872,7 +896,8 @@
     "degreeStart": 0,
     "degreeEnd": 5.625,
     "url": "https://genekeys.com/gene-key-25/",
-    "description": "Gene Key 25: Constriction → Acceptance → . This key invites contemplation on the transformation from Constriction to  through the gift of Acceptance."
+    "description": "Gene Key 25: Constriction → Acceptance → . This key invites contemplation on the transformation from Constriction to  through the gift of Acceptance.",
+    "keyTitle": "The Myth Of The Sacred Wound"
   },
   {
     "id": "gk-26",
@@ -907,7 +932,8 @@
     "degreeStart": 240.625,
     "degreeEnd": 246.25,
     "url": "https://genekeys.com/gene-key-26/",
-    "description": "Gene Key 26: Pride → Artfulness → Invisibility. This key invites contemplation on the transformation from Pride to Invisibility through the gift of Artfulness."
+    "description": "Gene Key 26: Pride → Artfulness → Invisibility. This key invites contemplation on the transformation from Pride to Invisibility through the gift of Artfulness.",
+    "keyTitle": "Sacred Tricksters"
   },
   {
     "id": "gk-27",
@@ -942,7 +968,8 @@
     "degreeStart": 30,
     "degreeEnd": 35.625,
     "url": "https://genekeys.com/gene-key-27/",
-    "description": "Gene Key 27: Selfishness → Altruism → Selflessness. This key invites contemplation on the transformation from Selfishness to Selflessness through the gift of Altruism."
+    "description": "Gene Key 27: Selfishness → Altruism → Selflessness. This key invites contemplation on the transformation from Selfishness to Selflessness through the gift of Altruism.",
+    "keyTitle": "Food Of The Gods"
   },
   {
     "id": "gk-28",
@@ -977,7 +1004,8 @@
     "degreeStart": 195.125,
     "degreeEnd": 200.75,
     "url": "https://genekeys.com/gene-key-28/",
-    "description": "Gene Key 28: Purposelessness → Totality → Immortality. This key invites contemplation on the transformation from Purposelessness to Immortality through the gift of Totality."
+    "description": "Gene Key 28: Purposelessness → Totality → Immortality. This key invites contemplation on the transformation from Purposelessness to Immortality through the gift of Totality.",
+    "keyTitle": "Embracing The Dark Side"
   },
   {
     "id": "gk-29",
@@ -1012,7 +1040,8 @@
     "degreeStart": 135.125,
     "degreeEnd": 140.75,
     "url": "https://genekeys.com/gene-key-29/",
-    "description": "Gene Key 29:  → Commitment → Devotion. This key invites contemplation on the transformation from  to Devotion through the gift of Commitment."
+    "description": "Gene Key 29:  → Commitment → Devotion. This key invites contemplation on the transformation from  to Devotion through the gift of Commitment.",
+    "keyTitle": "Leaping Into The Void"
   },
   {
     "id": "gk-30",
@@ -1047,7 +1076,8 @@
     "degreeStart": 290.75,
     "degreeEnd": 296.375,
     "url": "https://genekeys.com/gene-key-30/",
-    "description": "Gene Key 30: Desire → Lightness → Rapture. This key invites contemplation on the transformation from Desire to Rapture through the gift of Lightness."
+    "description": "Gene Key 30: Desire → Lightness → Rapture. This key invites contemplation on the transformation from Desire to Rapture through the gift of Lightness.",
+    "keyTitle": "Celestial Fire"
   },
   {
     "id": "gk-31",
@@ -1082,7 +1112,8 @@
     "degreeStart": 110.75,
     "degreeEnd": 116.375,
     "url": "https://genekeys.com/gene-key-31/",
-    "description": "Gene Key 31: Arrogance → Leadership → Humility. This key invites contemplation on the transformation from Arrogance to Humility through the gift of Leadership."
+    "description": "Gene Key 31: Arrogance → Leadership → Humility. This key invites contemplation on the transformation from Arrogance to Humility through the gift of Leadership.",
+    "keyTitle": "Sounding Your Truth"
   },
   {
     "id": "gk-32",
@@ -1117,7 +1148,8 @@
     "degreeStart": 183.875,
     "degreeEnd": 189.5,
     "url": "https://genekeys.com/gene-key-32/",
-    "description": "Gene Key 32: Failure → Preservation → Veneration. This key invites contemplation on the transformation from Failure to Veneration through the gift of Preservation."
+    "description": "Gene Key 32: Failure → Preservation → Veneration. This key invites contemplation on the transformation from Failure to Veneration through the gift of Preservation.",
+    "keyTitle": "Ancestral Reverence"
   },
   {
     "id": "gk-33",
@@ -1152,7 +1184,8 @@
     "degreeStart": 116.375,
     "degreeEnd": 122,
     "url": "https://genekeys.com/gene-key-33/",
-    "description": "Gene Key 33: Forgetting → Mindfulness → Revelation. This key invites contemplation on the transformation from Forgetting to Revelation through the gift of Mindfulness."
+    "description": "Gene Key 33: Forgetting → Mindfulness → Revelation. This key invites contemplation on the transformation from Forgetting to Revelation through the gift of Mindfulness.",
+    "keyTitle": "The Final Revelation"
   },
   {
     "id": "gk-34",
@@ -1187,7 +1220,8 @@
     "degreeStart": 215.625,
     "degreeEnd": 221.25,
     "url": "https://genekeys.com/gene-key-34/",
-    "description": "Gene Key 34: Force → Strength → Majesty. This key invites contemplation on the transformation from Force to Majesty through the gift of Strength."
+    "description": "Gene Key 34: Force → Strength → Majesty. This key invites contemplation on the transformation from Force to Majesty through the gift of Strength.",
+    "keyTitle": "The Beauty Of The Beast"
   },
   {
     "id": "gk-35",
@@ -1222,7 +1256,8 @@
     "degreeStart": 65.625,
     "degreeEnd": 71.25,
     "url": "https://genekeys.com/gene-key-35/",
-    "description": "Gene Key 35: Hunger → Adventure → Boundlessness. This key invites contemplation on the transformation from Hunger to Boundlessness through the gift of Adventure."
+    "description": "Gene Key 35: Hunger → Adventure → Boundlessness. This key invites contemplation on the transformation from Hunger to Boundlessness through the gift of Adventure.",
+    "keyTitle": "Wormholes And Miracles"
   },
   {
     "id": "gk-36",
@@ -1257,7 +1292,8 @@
     "degreeStart": 315.125,
     "degreeEnd": 320.75,
     "url": "https://genekeys.com/gene-key-36/",
-    "description": "Gene Key 36: Turbulence → Humanity → Compassion. This key invites contemplation on the transformation from Turbulence to Compassion through the gift of Humanity."
+    "description": "Gene Key 36: Turbulence → Humanity → Compassion. This key invites contemplation on the transformation from Turbulence to Compassion through the gift of Humanity.",
+    "keyTitle": "Becoming Human"
   },
   {
     "id": "gk-37",
@@ -1292,7 +1328,8 @@
     "degreeStart": 300,
     "degreeEnd": 305.625,
     "url": "https://genekeys.com/gene-key-37/",
-    "description": "Gene Key 37: Weakness → Equality → Tenderness. This key invites contemplation on the transformation from Weakness to Tenderness through the gift of Equality."
+    "description": "Gene Key 37: Weakness → Equality → Tenderness. This key invites contemplation on the transformation from Weakness to Tenderness through the gift of Equality.",
+    "keyTitle": "Family Alchemy"
   },
   {
     "id": "gk-38",
@@ -1327,7 +1364,8 @@
     "degreeStart": 251.25,
     "degreeEnd": 256.875,
     "url": "https://genekeys.com/gene-key-38/",
-    "description": "Gene Key 38: Struggle → Perseverance → Honour. This key invites contemplation on the transformation from Struggle to Honour through the gift of Perseverance."
+    "description": "Gene Key 38: Struggle → Perseverance → Honour. This key invites contemplation on the transformation from Struggle to Honour through the gift of Perseverance.",
+    "keyTitle": "The Warrior Of Light"
   },
   {
     "id": "gk-39",
@@ -1362,7 +1400,8 @@
     "degreeStart": 90,
     "degreeEnd": 95.625,
     "url": "https://genekeys.com/gene-key-39/",
-    "description": "Gene Key 39: Provocation → Dynamism → Liberation. This key invites contemplation on the transformation from Provocation to Liberation through the gift of Dynamism."
+    "description": "Gene Key 39: Provocation → Dynamism → Liberation. This key invites contemplation on the transformation from Provocation to Liberation through the gift of Dynamism.",
+    "keyTitle": "The Tension Of Transcendence"
   },
   {
     "id": "gk-40",
@@ -1397,7 +1436,8 @@
     "degreeStart": 140.75,
     "degreeEnd": 146.375,
     "url": "https://genekeys.com/gene-key-40/",
-    "description": "Gene Key 40: Exhaustion → Resolve → . This key invites contemplation on the transformation from Exhaustion to  through the gift of Resolve."
+    "description": "Gene Key 40: Exhaustion → Resolve → . This key invites contemplation on the transformation from Exhaustion to  through the gift of Resolve.",
+    "keyTitle": "The Will To Surrender"
   },
   {
     "id": "gk-41",
@@ -1432,7 +1472,8 @@
     "degreeStart": 270,
     "degreeEnd": 275.625,
     "url": "https://genekeys.com/gene-key-41/",
-    "description": "Gene Key 41: Fantasy → Anticipation → Emanation. This key invites contemplation on the transformation from Fantasy to Emanation through the gift of Anticipation."
+    "description": "Gene Key 41: Fantasy → Anticipation → Emanation. This key invites contemplation on the transformation from Fantasy to Emanation through the gift of Anticipation.",
+    "keyTitle": "The Prime Emanation"
   },
   {
     "id": "gk-42",
@@ -1467,7 +1508,8 @@
     "degreeStart": 22.5,
     "degreeEnd": 28.125,
     "url": "https://genekeys.com/gene-key-42/",
-    "description": "Gene Key 42: Expectation → Detachment → Celebration. This key invites contemplation on the transformation from Expectation to Celebration through the gift of Detachment."
+    "description": "Gene Key 42: Expectation → Detachment → Celebration. This key invites contemplation on the transformation from Expectation to Celebration through the gift of Detachment.",
+    "keyTitle": "Letting Go Of Living And Dying"
   },
   {
     "id": "gk-43",
@@ -1502,7 +1544,8 @@
     "degreeStart": 200.75,
     "degreeEnd": 206.375,
     "url": "https://genekeys.com/gene-key-43/",
-    "description": "Gene Key 43: Deafness → Insight → Epiphany. This key invites contemplation on the transformation from Deafness to Epiphany through the gift of Insight."
+    "description": "Gene Key 43: Deafness → Insight → Epiphany. This key invites contemplation on the transformation from Deafness to Epiphany through the gift of Insight.",
+    "keyTitle": "Breakthrough"
   },
   {
     "id": "gk-44",
@@ -1537,7 +1580,8 @@
     "degreeStart": 206.375,
     "degreeEnd": 212,
     "url": "https://genekeys.com/gene-key-44/",
-    "description": "Gene Key 44: Interference → Teamwork → Synarchy. This key invites contemplation on the transformation from Interference to Synarchy through the gift of Teamwork."
+    "description": "Gene Key 44: Interference → Teamwork → Synarchy. This key invites contemplation on the transformation from Interference to Synarchy through the gift of Teamwork.",
+    "keyTitle": "Karmic Relationships"
   },
   {
     "id": "gk-45",
@@ -1572,7 +1616,8 @@
     "degreeStart": 71.25,
     "degreeEnd": 76.875,
     "url": "https://genekeys.com/gene-key-45/",
-    "description": "Gene Key 45: Dominance → Synergy → Communion. This key invites contemplation on the transformation from Dominance to Communion through the gift of Synergy."
+    "description": "Gene Key 45: Dominance → Synergy → Communion. This key invites contemplation on the transformation from Dominance to Communion through the gift of Synergy.",
+    "keyTitle": "Cosmic Communion"
   },
   {
     "id": "gk-46",
@@ -1607,7 +1652,8 @@
     "degreeStart": 159.5,
     "degreeEnd": 165.125,
     "url": "https://genekeys.com/gene-key-46/",
-    "description": "Gene Key 46: Seriousness → Delight → Ecstasy. This key invites contemplation on the transformation from Seriousness to Ecstasy through the gift of Delight."
+    "description": "Gene Key 46: Seriousness → Delight → Ecstasy. This key invites contemplation on the transformation from Seriousness to Ecstasy through the gift of Delight.",
+    "keyTitle": "A Science Of Luck"
   },
   {
     "id": "gk-47",
@@ -1642,7 +1688,8 @@
     "degreeStart": 150,
     "degreeEnd": 155.625,
     "url": "https://genekeys.com/gene-key-47/",
-    "description": "Gene Key 47: Oppression → Transmutation → Transfiguration. This key invites contemplation on the transformation from Oppression to Transfiguration through the gift of Transmutation."
+    "description": "Gene Key 47: Oppression → Transmutation → Transfiguration. This key invites contemplation on the transformation from Oppression to Transfiguration through the gift of Transmutation.",
+    "keyTitle": "Transmuting The Past"
   },
   {
     "id": "gk-48",
@@ -1677,7 +1724,8 @@
     "degreeStart": 170.75,
     "degreeEnd": 176.375,
     "url": "https://genekeys.com/gene-key-48/",
-    "description": "Gene Key 48: Inadequacy → Resourcefulness → Wisdom. This key invites contemplation on the transformation from Inadequacy to Wisdom through the gift of Resourcefulness."
+    "description": "Gene Key 48: Inadequacy → Resourcefulness → Wisdom. This key invites contemplation on the transformation from Inadequacy to Wisdom through the gift of Resourcefulness.",
+    "keyTitle": "The Wonder Of Uncertainty"
   },
   {
     "id": "gk-49",
@@ -1712,7 +1760,8 @@
     "degreeStart": 285.125,
     "degreeEnd": 290.75,
     "url": "https://genekeys.com/gene-key-49/",
-    "description": "Gene Key 49: Reaction → Revolution → Rebirth. This key invites contemplation on the transformation from Reaction to Rebirth through the gift of Revolution."
+    "description": "Gene Key 49: Reaction → Revolution → Rebirth. This key invites contemplation on the transformation from Reaction to Rebirth through the gift of Revolution.",
+    "keyTitle": "Changing The World From The Inside"
   },
   {
     "id": "gk-50",
@@ -1747,7 +1796,8 @@
     "degreeStart": 189.5,
     "degreeEnd": 195.125,
     "url": "https://genekeys.com/gene-key-50/",
-    "description": "Gene Key 50: Corruption → Equilibrium → Harmony. This key invites contemplation on the transformation from Corruption to Harmony through the gift of Equilibrium."
+    "description": "Gene Key 50: Corruption → Equilibrium → Harmony. This key invites contemplation on the transformation from Corruption to Harmony through the gift of Equilibrium.",
+    "keyTitle": "Cosmic Order"
   },
   {
     "id": "gk-51",
@@ -1782,7 +1832,8 @@
     "degreeStart": 16.875,
     "degreeEnd": 22.5,
     "url": "https://genekeys.com/gene-key-51/",
-    "description": "Gene Key 51: Agitation → Initiative → Awakening. This key invites contemplation on the transformation from Agitation to Awakening through the gift of Initiative."
+    "description": "Gene Key 51: Agitation → Initiative → Awakening. This key invites contemplation on the transformation from Agitation to Awakening through the gift of Initiative.",
+    "keyTitle": "Initiative To Initiation"
   },
   {
     "id": "gk-52",
@@ -1817,7 +1868,8 @@
     "degreeStart": 95.625,
     "degreeEnd": 101.25,
     "url": "https://genekeys.com/gene-key-52/",
-    "description": "Gene Key 52: Stress → Restraint → Stillness. This key invites contemplation on the transformation from Stress to Stillness through the gift of Restraint."
+    "description": "Gene Key 52: Stress → Restraint → Stillness. This key invites contemplation on the transformation from Stress to Stillness through the gift of Restraint.",
+    "keyTitle": "The Stillpoint"
   },
   {
     "id": "gk-53",
@@ -1852,7 +1904,8 @@
     "degreeStart": 101.25,
     "degreeEnd": 106.875,
     "url": "https://genekeys.com/gene-key-53/",
-    "description": "Gene Key 53: Immaturity → Expansion → Superabundance. This key invites contemplation on the transformation from Immaturity to Superabundance through the gift of Expansion."
+    "description": "Gene Key 53: Immaturity → Expansion → Superabundance. This key invites contemplation on the transformation from Immaturity to Superabundance through the gift of Expansion.",
+    "keyTitle": "Evolving Beyond Evolution"
   },
   {
     "id": "gk-54",
@@ -1887,7 +1940,8 @@
     "degreeStart": 256.875,
     "degreeEnd": 262.5,
     "url": "https://genekeys.com/gene-key-54/",
-    "description": "Gene Key 54: Greed → Aspiration → Ascension. This key invites contemplation on the transformation from Greed to Ascension through the gift of Aspiration."
+    "description": "Gene Key 54: Greed → Aspiration → Ascension. This key invites contemplation on the transformation from Greed to Ascension through the gift of Aspiration.",
+    "keyTitle": "The Serpent Path"
   },
   {
     "id": "gk-55",
@@ -1922,7 +1976,8 @@
     "degreeStart": 296.375,
     "degreeEnd": 302,
     "url": "https://genekeys.com/gene-key-55/",
-    "description": "Gene Key 55: Victimization → Freedom → Freedom. This key invites contemplation on the transformation from Victimization to Freedom through the gift of Freedom."
+    "description": "Gene Key 55: Victimization → Freedom → Freedom. This key invites contemplation on the transformation from Victimization to Freedom through the gift of Freedom.",
+    "keyTitle": "The Dragonfly's Dream"
   },
   {
     "id": "gk-56",
@@ -1957,7 +2012,8 @@
     "degreeStart": 106.875,
     "degreeEnd": 112.5,
     "url": "https://genekeys.com/gene-key-56/",
-    "description": "Gene Key 56: Distraction → Enrichment → Intoxication. This key invites contemplation on the transformation from Distraction to Intoxication through the gift of Enrichment."
+    "description": "Gene Key 56: Distraction → Enrichment → Intoxication. This key invites contemplation on the transformation from Distraction to Intoxication through the gift of Enrichment.",
+    "keyTitle": "Divine Indulgence"
   },
   {
     "id": "gk-57",
@@ -1992,7 +2048,8 @@
     "degreeStart": 176.375,
     "degreeEnd": 182,
     "url": "https://genekeys.com/gene-key-57/",
-    "description": "Gene Key 57: Unease → Intuition → Clarity. This key invites contemplation on the transformation from Unease to Clarity through the gift of Intuition."
+    "description": "Gene Key 57: Unease → Intuition → Clarity. This key invites contemplation on the transformation from Unease to Clarity through the gift of Intuition.",
+    "keyTitle": "A Gentle Wind"
   },
   {
     "id": "gk-58",
@@ -2027,7 +2084,8 @@
     "degreeStart": 245.625,
     "degreeEnd": 251.25,
     "url": "https://genekeys.com/gene-key-58/",
-    "description": "Gene Key 58: Dissatisfaction → Vitality → Bliss. This key invites contemplation on the transformation from Dissatisfaction to Bliss through the gift of Vitality."
+    "description": "Gene Key 58: Dissatisfaction → Vitality → Bliss. This key invites contemplation on the transformation from Dissatisfaction to Bliss through the gift of Vitality.",
+    "keyTitle": "From Stress To Bliss"
   },
   {
     "id": "gk-59",
@@ -2062,7 +2120,8 @@
     "degreeStart": 146.375,
     "degreeEnd": 152,
     "url": "https://genekeys.com/gene-key-59/",
-    "description": "Gene Key 59: Dishonesty → Intimacy → Transparency. This key invites contemplation on the transformation from Dishonesty to Transparency through the gift of Intimacy."
+    "description": "Gene Key 59: Dishonesty → Intimacy → Transparency. This key invites contemplation on the transformation from Dishonesty to Transparency through the gift of Intimacy.",
+    "keyTitle": "The Dragon In Your Genome"
   },
   {
     "id": "gk-60",
@@ -2097,7 +2156,8 @@
     "degreeStart": 262.5,
     "degreeEnd": 268.125,
     "url": "https://genekeys.com/gene-key-60/",
-    "description": "Gene Key 60: Limitation → Realism → Justice. This key invites contemplation on the transformation from Limitation to Justice through the gift of Realism."
+    "description": "Gene Key 60: Limitation → Realism → Justice. This key invites contemplation on the transformation from Limitation to Justice through the gift of Realism.",
+    "keyTitle": "The Cracking Of The Vessel"
   },
   {
     "id": "gk-61",
@@ -2132,7 +2192,8 @@
     "degreeStart": 262.5,
     "degreeEnd": 268.125,
     "url": "https://genekeys.com/gene-key-61/",
-    "description": "Gene Key 61: Psychosis → Inspiration → Sanctity. This key invites contemplation on the transformation from Psychosis to Sanctity through the gift of Inspiration."
+    "description": "Gene Key 61: Psychosis → Inspiration → Sanctity. This key invites contemplation on the transformation from Psychosis to Sanctity through the gift of Inspiration.",
+    "keyTitle": "The Holy Of Holies"
   },
   {
     "id": "gk-62",
@@ -2167,7 +2228,8 @@
     "degreeStart": 106.875,
     "degreeEnd": 112.5,
     "url": "https://genekeys.com/gene-key-62/",
-    "description": "Gene Key 62: Intellect → Precision → Impeccability. This key invites contemplation on the transformation from Intellect to Impeccability through the gift of Precision."
+    "description": "Gene Key 62: Intellect → Precision → Impeccability. This key invites contemplation on the transformation from Intellect to Impeccability through the gift of Precision.",
+    "keyTitle": "The Language Of Light"
   },
   {
     "id": "gk-63",
@@ -2202,7 +2264,8 @@
     "degreeStart": 303.875,
     "degreeEnd": 309.5,
     "url": "https://genekeys.com/gene-key-63/",
-    "description": "Gene Key 63: Doubt → Inquiry → Truth. This key invites contemplation on the transformation from Doubt to Truth through the gift of Inquiry."
+    "description": "Gene Key 63: Doubt → Inquiry → Truth. This key invites contemplation on the transformation from Doubt to Truth through the gift of Inquiry.",
+    "keyTitle": "Reaching The Source"
   },
   {
     "id": "gk-64",
@@ -2237,6 +2300,7 @@
     "degreeStart": 146.375,
     "degreeEnd": 152,
     "url": "https://genekeys.com/gene-key-64/",
-    "description": "Gene Key 64: Confusion → Imagination → Illumination. This key invites contemplation on the transformation from Confusion to Illumination through the gift of Imagination."
+    "description": "Gene Key 64: Confusion → Imagination → Illumination. This key invites contemplation on the transformation from Confusion to Illumination through the gift of Imagination.",
+    "keyTitle": "The Aurora"
   }
 ]

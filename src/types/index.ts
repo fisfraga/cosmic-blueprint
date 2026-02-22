@@ -500,6 +500,8 @@ export interface FrequencyExpression {
 export interface GeneKey extends AstroEntity {
   type: 'gene-key';
   keyNumber: number; // 1-64
+  // Sprint Y — Archetype chapter title from Gene Keys book (e.g., "From Entropy to Syntropy")
+  keyTitle?: string;
   shadow: FrequencyExpression;
   gift: FrequencyExpression;
   siddhi: FrequencyExpression;
