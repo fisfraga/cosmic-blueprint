@@ -411,6 +411,10 @@ export interface HDAuthorityEntity extends AstroEntity {
     correct: string;
     incorrect: string;
   };
+  // Ra Uru Hu somatic depth layer (Sprint W)
+  waveMechanic?: string | null;
+  somaticCue?: string;
+  commonOverride?: string;
 }
 
 export interface HDLineEntity extends AstroEntity {
@@ -448,6 +452,10 @@ export interface HDProfileEntity extends AstroEntity {
   relationshipStyle: string;
   careerGuidance: string;
   practicalGuidance: string;
+  // Ra Uru Hu destiny classification (Sprint W)
+  destinyType?: 'Right Angle' | 'Left Angle' | 'Juxtaposition';
+  crossActivationAge?: string;
+  costumeMeaning?: string;
 }
 
 export type HDVariableCategory = 'Determination' | 'Cognition' | 'Environment' | 'Motivation';

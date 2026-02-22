@@ -24,7 +24,10 @@
     "signs": {
       "correct": "Decisions feel solid over time. You don't regret choices made with emotional clarity.",
       "incorrect": "Impulsive decisions during emotional highs or lows lead to regret when the wave passes."
-    }
+    },
+    "waveMechanic": "The emotional wave moves through highs, lows, and neutral points in a natural cycle. Ra's core teaching: 'There is no truth in the now for emotional authority.' No decision is final until the wave has moved through at least one complete cycle and clarity emerges in the absence of emotional charge — not excitement, not depression, but a quiet knowing.",
+    "somaticCue": "A sense of settled knowing — not excitement, not dread, but a stillness that persists across multiple emotional states. The signal is the absence of reactivity rather than the presence of a feeling. When the same decision still feels right after a high AND after a low, that is clarity.",
+    "commonOverride": "Deciding in a moment of emotional high ('I'm so excited, this is right!') or emotional low ('I have to decide now or lose the opportunity'). The mind mistakes emotional intensity for clarity. The pattern: treating the peak of the wave as the decision point rather than waiting for the neutral."
   },
   {
     "id": "hd-authority-sacral",
@@ -51,7 +54,10 @@
     "signs": {
       "correct": "Following gut responses leads to satisfaction and sustained energy.",
       "incorrect": "Overriding the Sacral with mental justifications leads to frustration and exhaustion."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "The Sacral sound: a gut-level 'uh-huh' (yes) or 'uhn-uhn' (no) that arises before words form. Ra taught it as a literal sound — not metaphorical. The gut responds to yes/no questions with a visceral pull toward or away, located in the belly below the navel. The signal is immediate and pre-verbal.",
+    "commonOverride": "Asking 'why does my gut say yes to this?' and then rationalizing. The Sacral's response is not explainable by the mind; it simply is. The most common pattern: the gut says no, but the mind lists reasons why it should be yes — and the mind wins. The result is the Generator working at things they weren't designed to work at."
   },
   {
     "id": "hd-authority-splenic",
@@ -78,7 +84,10 @@
     "signs": {
       "correct": "Following intuitive hits leads to safety, well-being, and being in the right place at the right time.",
       "incorrect": "Ignoring or missing splenic hits can lead to unhealthy situations, wrong timing, or danger."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "An instantaneous, quiet knowing — a subtle shiver, a feeling of wrongness or rightness that arises once before the mind activates. Ra: 'The Spleen speaks once. And it speaks quietly. You have to be present to hear it.' Often experienced as a subtle physical sensation — a contraction, a lightness, or a brief flash of knowing in the moment.",
+    "commonOverride": "The mind says 'I'll think about it' or 'let me make sure' — but the Splenic hit has already spoken and will not repeat. The most common pattern: the hit was clear, the mind second-guessed it, and the person later says 'I knew from the beginning.' Splenic beings who have been deeply conditioned often cannot hear the signal at all — it has been overridden so many times it has gone quiet."
   },
   {
     "id": "hd-authority-ego",
@@ -106,7 +115,10 @@
     "signs": {
       "correct": "Following heart's desires gives you willpower to complete things. You feel self-worth and material stability.",
       "incorrect": "Overcommitting or making promises your heart isn't in leads to broken commitments and depleted willpower."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "A sense of genuine desire located in the heart/chest area — the question is whether the heart is actually in it. Ra: 'Will I?' is the Ego authority's self-inquiry. Not 'should I?' (that's the not-self asking). Not 'can I?' (that's the mind). But 'do I actually want this?' — felt as a real pull from the chest, not manufactured willpower.",
+    "commonOverride": "Committing based on what sounds correct to others or what seems like the noble/responsible choice, rather than genuine desire. Undefined Ego conditioning at play: proving worth through overcommitment. The pattern: agreeing to things the heart is not in because 'I should be able to handle this.'"
   },
   {
     "id": "hd-authority-self-projected",
@@ -133,7 +145,10 @@
     "signs": {
       "correct": "When speaking your truth, you feel aligned and clear about your direction.",
       "incorrect": "Making decisions without expressing them, or following others' advice over your own knowing, leads to identity confusion."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "The truth is heard when speaking out loud to a trusted sounding board — not a person who gives advice, but someone who listens without agenda. The clarity emerges in the Projector's own voice, not from the listener's response. Ra: 'You need to hear yourself speak your truth. The voice carries the knowing.' The signal: a sentence that comes out and feels unmistakably true.",
+    "commonOverride": "Thinking through the decision in the head rather than speaking it aloud. Or seeking advice (opinions) instead of sounding boards (listeners). The mind assumes it already knows what it will say, so it skips the speaking step. But the Self-Projected authority requires the act of voicing — the clarity is not available through internal reflection alone."
   },
   {
     "id": "hd-authority-mental",
@@ -161,7 +176,10 @@
     "signs": {
       "correct": "The right environments and conversations bring natural clarity. Decisions feel right when processed this way.",
       "incorrect": "Rushing decisions or being in wrong environments leads to unclear, regrettable choices."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "No inner authority — the signal is the environment itself and trusted outer voices. Clarity comes through the process of speaking to multiple people across multiple environments and listening to what consistently resonates. The cue is not a feeling but a pattern that emerges through multiple conversations: what keeps coming up as the right choice when speaking in different contexts?",
+    "commonOverride": "Trying to decide alone, in isolation, without speaking the decision aloud to others. Or seeking one authoritative answer from one trusted source rather than gathering resonance across multiple conversations. The pattern: treating this as a mental decision when it is actually a relational and environmental one."
   },
   {
     "id": "hd-authority-lunar",
@@ -188,6 +206,9 @@
     "signs": {
       "correct": "Decisions made after a full cycle feel clear and aligned. Life brings delightful surprises.",
       "incorrect": "Rushing decisions leads to disappointment and feeling lost or disconnected."
-    }
+    },
+    "waveMechanic": null,
+    "somaticCue": "The 28-day lunar cycle is the Reflector's decision-making timeframe — not a feeling but a process. The signal is consistency across the full moon cycle: how does the decision feel when the moon is in different gates? The 'cue' is the absence of a consistent no across the entire lunar transit. If after 28 days it still feels potentially right, that is the Reflector's yes.",
+    "commonOverride": "Deciding in response to social or situational pressure before the 28-day cycle completes. Or deciding when the moon is in a gate that creates a misleadingly negative impression. The pattern: treating urgency as a legitimate reason to bypass the only process that gives Reflectors reliable guidance."
   }
 ]

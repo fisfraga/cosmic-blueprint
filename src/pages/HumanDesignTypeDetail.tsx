@@ -9,6 +9,7 @@ export function HumanDesignTypeDetail() {
   const { id } = useParams<{ id: string }>();
   const hdType = id ? hdTypes.get(id) : undefined;
 
+  const [arcExpanded, setArcExpanded] = useState(false);
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const handleEntityClick = useCallback((entity: EntityInfo) => {
     setSelectedEntities(prev => {
@@ -139,6 +140,51 @@ export function HumanDesignTypeDetail() {
             <h2 className="font-serif text-xl mb-4 text-humandesign-300">Practical Guidance</h2>
             <p className="text-theme-text-secondary leading-relaxed">{hdType.practicalGuidance}</p>
           </section>
+
+          {/* Living the Experiment — Ra Uru Hu */}
+          {hdType.raQuote && (
+            <section className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
+              <h2 className="font-serif text-xl mb-4 text-humandesign-300">Living the Experiment</h2>
+
+              <blockquote className="border-l-4 border-humandesign-500 pl-4 italic text-theme-text-secondary mb-6">
+                <p className="mb-2">{hdType.raQuote}</p>
+                <footer className="text-xs text-humandesign-400/70 not-italic">— Ra Uru Hu</footer>
+              </blockquote>
+
+              {hdType.experimentInstruction && (
+                <div className="mb-4">
+                  <h3 className="font-medium text-humandesign-400 mb-2">The 90-Day Experiment</h3>
+                  <p className="text-theme-text-secondary leading-relaxed">{hdType.experimentInstruction}</p>
+                </div>
+              )}
+
+              {hdType.deconditioningJourney && (
+                <div className="mb-6">
+                  <h3 className="font-medium text-neutral-300 mb-2">Deconditioning Arc</h3>
+                  <p className="text-theme-text-secondary leading-relaxed">
+                    {arcExpanded ? hdType.deconditioningJourney : hdType.deconditioningJourney.slice(0, 180) + '...'}
+                  </p>
+                  {hdType.deconditioningJourney.length > 180 && (
+                    <button
+                      onClick={() => setArcExpanded(v => !v)}
+                      className="text-xs text-humandesign-400 hover:text-humandesign-300 mt-1"
+                    >
+                      {arcExpanded ? 'Show less' : 'Read more'}
+                    </button>
+                  )}
+                </div>
+              )}
+
+              <div className="pt-4 border-t border-humandesign-500/20">
+                <Link
+                  to="/contemplate"
+                  className="inline-flex items-center gap-2 text-sm text-humandesign-400 hover:text-humandesign-300 transition-colors"
+                >
+                  Set Up Your Experiment →
+                </Link>
+              </div>
+            </section>
+          )}
 
           {/* Defined Centers */}
           {definedCenters.length > 0 && (

@@ -330,3 +330,54 @@ describe('Sprint V humanDesign Ra Uru Hu depth layer', () => {
     }
   });
 });
+
+// ─── Sprint W — Authority mechanics + Incarnation purpose ────────────────────
+
+describe('Sprint W humanDesign authority + incarnation cross types', () => {
+  const hdTypes = CONTEMPLATION_TYPES['humanDesign'];
+  const hdIds = hdTypes.map(t => t.id);
+
+  it('authorityDeepDive is in humanDesign category', () => {
+    expect(hdIds).toContain('authorityDeepDive' as ContemplationType);
+  });
+
+  it('incarnationCrossReading is in humanDesign category', () => {
+    expect(hdIds).toContain('incarnationCrossReading' as ContemplationType);
+  });
+
+  it('authorityDeepDive has level advanced', () => {
+    const t = hdTypes.find(t => t.id === 'authorityDeepDive');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
+  });
+
+  it('incarnationCrossReading has level master', () => {
+    const t = hdTypes.find(t => t.id === 'incarnationCrossReading');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('master');
+  });
+
+  it('Sprint W types do not appear in other categories', () => {
+    const wTypes: ContemplationType[] = ['authorityDeepDive', 'incarnationCrossReading'];
+    const nonHDCategories: ContemplationCategory[] = [
+      'astrology', 'geneKeys', 'crossSystem', 'lifeOS',
+      'alchemy', 'numerology', 'cosmicEmbodiment', 'fixedStars', 'galacticAstrology',
+    ];
+    for (const cat of nonHDCategories) {
+      const ids = CONTEMPLATION_TYPES[cat].map(t => t.id);
+      for (const typeId of wTypes) {
+        expect(ids, `${typeId} should not appear in ${cat}`).not.toContain(typeId);
+      }
+    }
+  });
+
+  it('all Sprint W types have non-empty name and description', () => {
+    const wIds = ['authorityDeepDive', 'incarnationCrossReading'];
+    for (const id of wIds) {
+      const t = hdTypes.find(opt => opt.id === id);
+      expect(t, `Type ${id} not found`).toBeDefined();
+      expect(t?.name.length, `${id} name should not be empty`).toBeGreaterThan(0);
+      expect(t?.description.length, `${id} description should not be empty`).toBeGreaterThan(0);
+    }
+  });
+});

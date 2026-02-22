@@ -210,6 +210,9 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'deconditioningJourney', name: 'Deconditioning Journey',   description: 'Map your 7-year somatic deconditioning arc',           level: 'advanced' },
     { id: 'typeExperimentSetup',   name: 'Type Experiment Setup',    description: '90-day personalized experiment for your type',         level: 'beginner' },
     { id: 'notSelfDiagnosis',      name: 'Not-Self Diagnosis',       description: 'Scan your undefined centers for active conditioning',  level: 'advanced' },
+    // Ra Uru Hu authority mechanics + incarnation purpose (Sprint W)
+    { id: 'authorityDeepDive',       name: 'Authority Deep Dive',       description: 'Somatic mechanics of your authority — the body cue, the wave, and how the mind overrides it',     level: 'advanced' },
+    { id: 'incarnationCrossReading', name: 'Incarnation Cross Reading', description: 'Four-gate life theme reading — your soul\'s overarching purpose across all three wisdom systems', level: 'master' },
   ],
   geneKeys: [
     { id: 'shadowOverview',      name: 'All Shadows',          description: 'Explore all your shadow patterns',                    level: 'beginner' },

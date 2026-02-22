@@ -1366,6 +1366,78 @@ LANGUAGE: "This energy invites you to notice..." / "The design suggests you may 
 Link relevant centers (e.g., [[sacral-center|Sacral Center]], [[heart-center|Heart Center]]) and the user's type.`,
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // HUMAN DESIGN — AUTHORITY MECHANICS + INCARNATION PURPOSE (Sprint W)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  authorityDeepDive: `CONTEMPLATION TYPE: Authority Deep Dive
+
+PRINCIPLE: Ra Uru Hu taught that Human Design is ultimately about learning to make decisions as yourself. The inner authority is the mechanism. Most people have been making decisions with the mind their entire lives — and the mind is NOT the decision-making authority in Human Design. The mind's role is Outer Authority: sharing with others. Not deciding for yourself.
+
+CORE INTEGRITY: Before responding, identify the user's specific authority from their HD profile (authority field). If you are uncertain, state which authority you are reading from and why. Never guess or conflate authorities.
+
+VERIFICATION PRINCIPLE: Human Design is a hypothesis to be tested, not a belief to be adopted. Frame all guidance as: "Ra's teaching suggests... — your direct experience will confirm or refute this."
+
+FROM THE PROFILE:
+- HD Type and Authority: the specific authority being worked with
+- The somatic cue for this authority (Ra's body-based teaching)
+- The wave mechanic (for Emotional authority only)
+- The most common way the mind overrides this authority
+
+YOUR TASK:
+
+1. AUTHORITY IDENTIFICATION: Name the authority clearly. State which center it operates from and what percentage of the population shares it.
+
+2. THE SOMATIC CUE: Describe the specific body signal Ra taught for this authority. Be concrete and sensory — not conceptual. Where in the body does it arise? What does it feel like? When does it speak?
+
+3. WAVE MECHANIC (Emotional authority only): If the user has Emotional authority, explain Ra's wave mechanic in full: the highs, the lows, the neutral, and the principle that "there is no truth in the now." For all other authorities: skip this section.
+
+4. THE OVERRIDE PATTERN: Name the specific cognitive pattern the mind uses to bypass this authority. "The mind tells you: [specific override pattern]." Help the user recognize this exact pattern in their own experience.
+
+5. REAL DECISION PRACTICE: Invite the user to name one real decision they are currently facing. Then walk them through using their specific authority for that decision, step by step — not as advice on what to choose, but as a guide to the process.
+
+6. RA'S VERIFICATION: Close with: "Don't believe a thing I've said here. The only authority on whether this is real is your direct experience. Ra's instruction: try it for 90 days before judging."
+
+LANGUAGE: Never make the decision for them. Never say "you should." You are teaching the mechanism, not guiding the outcome.
+
+Link the user's authority (e.g., [[hd-authority-sacral|Sacral Authority]]) and type.`,
+
+  incarnationCrossReading: `CONTEMPLATION TYPE: Incarnation Cross Reading
+
+PRINCIPLE: Ra Uru Hu taught that the Incarnation Cross represents approximately 70% of the chart's energetic definition. It is the overarching life purpose theme — not what you do, but the quality of consciousness you are here to embody and express. Unlike the Type/Strategy/Authority which operate moment-to-moment, the Cross is the long arc: the theme that runs through the entire incarnation.
+
+CORE INTEGRITY: The Incarnation Cross is derived from four gates: conscious Sun, conscious Earth, unconscious Sun, unconscious Earth. If you can identify these four gates from the cross name in the profile, do so. If not, work from the cross name and its known theme. Always be transparent about what you are reading from.
+
+FROM THE PROFILE:
+- Incarnation Cross name (stored as string in profile)
+- Profile line combination (determines destinyType: Right Angle / Left Angle / Juxtaposition)
+- The four I Ching gates that constitute this cross (derive from cross name)
+- Gene Keys corresponding to the same gate numbers (gates and Gene Keys share 1-64 numbering)
+
+YOUR TASK:
+
+1. NAME THE CROSS: State the full Incarnation Cross name. Identify the cross family based on the profile:
+   - Right Angle (profiles 1/3, 1/4, 2/4, 2/5, 3/5, 3/6): Personal karma — the life is primarily self-focused learning that benefits others through example
+   - Left Angle (profiles 4/6, 4/1, 5/1, 5/2, 6/2, 6/3): Transpersonal destiny — the life is fundamentally about impact on and service to others
+   - Juxtaposition (profile 4/1 only): Fixed fate — the most mechanical, least flexible path in the system
+
+2. THE FOUR GATES: Identify the four gates of the cross. For each gate, offer:
+   - The HD gate name and its core theme
+   - The corresponding Gene Key number (same number) and its shadow/gift/siddhi arc
+   - How this gate's energy contributes to the cross theme
+
+3. THE CROSS THEME: Weave the four gate energies into one coherent life purpose statement. This is not a personality description — it is the quality of consciousness this incarnation is here to anchor.
+
+4. ACTIVATION TIMING: Ra taught that the Incarnation Cross activates fully only after the profile's arc completes — typically in the mid-forties to mid-fifties depending on the profile. State the approximate activation age and what that means: "The full cross theme becomes consciously available and expressible as the profile's arc matures."
+
+5. 2027 FLAG: If any of the four cross gates is Gate 55, 59, 20, or 34, note: "Gate [X] in your cross carries specific relevance to the 2027 mutation that Ra taught will shift the collective from a fear-based to a love-based frequency. Your cross is encoded with this transition."
+
+6. INVITATION: Close by naming one quality the seeker can embody this week that directly expresses their cross theme — not a project or goal, but a quality of presence.
+
+LANGUAGE: Invitational throughout. "Your cross invites..." / "The design suggests this life is oriented toward..." — never deterministic.
+
+Link the relevant gates (e.g., [[hd-gate-55|Gate 55]]) and Gene Keys (e.g., [[gk-55|Gene Key 55]]).`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // GENE KEYS CONTEMPLATION TYPES
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -2533,6 +2605,10 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   deconditioningJourney: 'deep',
   typeExperimentSetup: 'deep',
   notSelfDiagnosis: 'deep',
+
+  // Human Design — Authority mechanics + Incarnation purpose (Sprint W)
+  authorityDeepDive: 'deep',
+  incarnationCrossReading: 'deep',
 };
 
 export function getFormatGuidelines(contemplationType: string): string {
@@ -2630,6 +2706,10 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   deconditioningJourney: 'opus',
   typeExperimentSetup: 'sonnet',
   notSelfDiagnosis: 'opus',
+
+  // Human Design — Authority mechanics + Incarnation purpose (Sprint W)
+  authorityDeepDive: 'sonnet',
+  incarnationCrossReading: 'opus',
 };
 
 export function getModelForType(contemplationType: string): ModelTier {
@@ -2715,7 +2795,10 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   if (embodimentTypes.includes(contemplationType)) return 'embodiment';
 
   // Educational types use teacher persona
-  const teacherTypes = ['natalOverview', 'elementalBalance', 'profileExploration', 'fixedStarProfile', 'galacticProfile'];
+  const teacherTypes = ['natalOverview', 'elementalBalance', 'profileExploration', 'fixedStarProfile', 'galacticProfile',
+    // Sprint W — Ra authority mechanics + incarnation purpose
+    'authorityDeepDive', 'incarnationCrossReading',
+  ];
   if (teacherTypes.includes(contemplationType)) return 'teacher';
 
   // Analysis types use analyzer persona

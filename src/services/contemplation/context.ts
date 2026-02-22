@@ -43,6 +43,9 @@ export type ContemplationType =
   | 'deconditioningJourney'
   | 'typeExperimentSetup'
   | 'notSelfDiagnosis'
+  // Human Design — Authority mechanics + Incarnation purpose (Sprint W)
+  | 'authorityDeepDive'
+  | 'incarnationCrossReading'
   // Gene Keys
   | 'activationSequence'
   | 'venusSequence'
