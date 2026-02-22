@@ -1,6 +1,6 @@
 import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { hdGates72, hdGates, signs } from '../data';
+import { hdGates72, hdGates, geneKeys, signs } from '../data';
 import { EntityStack } from '../components/entities/EntityStack';
 import type { EntityInfo } from '../services/entities/registry';
 
@@ -65,6 +65,11 @@ export function LostOctaveDetail() {
     ? signs.get(overlappingHDGate.tropicalSignId)
     : undefined;
 
+  // Corresponding Gene Key (shares the same number as the overlapping HD gate for segments 1-60)
+  const correspondingGK = gate.overlapping64GateSegment && !isMasterGate
+    ? geneKeys.get(`gk-${gate.overlapping64GateSegment}`)
+    : undefined;
+
   // Start sign info
   const startSign = signs.get(gate.startSign);
 
@@ -76,13 +81,20 @@ export function LostOctaveDetail() {
   const prevGate = currentIndex > 0 ? allGatesSorted[currentIndex - 1] : undefined;
   const nextGate = currentIndex < allGatesSorted.length - 1 ? allGatesSorted[currentIndex + 1] : undefined;
 
-  // Extra fields (may be populated in future data releases)
+  // Extra fields — full master gate fields + legacy extra fields
   const extraFields = gate as {
     crystal?: string;
     musicalTone?: string;
+    musicalNote?: string;
+    hertzFrequency?: number;
+    alchemyStage?: string;
+    tarotCardMajor?: string;
+    hermeticLaw?: string;
+    mysticalPerfection?: string;
     egyptianAstrology?: string;
     divineName?: string;
     angel?: string;
+    superPartnerGateNumber?: number;
     isMasterGate?: boolean;
     decanNumber?: number;
   };
@@ -240,43 +252,161 @@ export function LostOctaveDetail() {
             )}
           </section>
 
-          {/* Extra fields (crystal, musical tone, etc.) — shown when populated */}
-          {(extraFields.crystal || extraFields.musicalTone || extraFields.egyptianAstrology ||
-            extraFields.divineName || extraFields.angel) && (
+          {/* Section A: Gene Key Bridge (segments 1-60 only) */}
+          {correspondingGK && (
             <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-              <h2 className="font-serif text-lg mb-4 text-humandesign-300">Extended Correspondences</h2>
+              <h2 className="font-serif text-lg mb-4 text-genekey-300">Gene Key Correspondence</h2>
+              <p className="text-theme-text-secondary text-sm mb-4">
+                Lost Octave segment {gate.segmentNumber} overlaps with Human Design Gate {gate.overlapping64GateSegment},
+                which corresponds to Gene Key {gate.overlapping64GateSegment} in Richard Rudd's system.
+                All three traditions share the same I Ching hexagram lineage.
+              </p>
+
+              <Link
+                to={`/gene-keys/gk-${gate.overlapping64GateSegment}`}
+                className="block bg-genekey-500/10 rounded-lg p-4 border border-genekey-500/30 hover:border-genekey-500/60 transition-colors group mb-4"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <span className="text-2xl font-serif text-genekey-400">
+                    {correspondingGK.keyNumber}
+                  </span>
+                  {correspondingGK.keyTitle && (
+                    <span className="text-xs text-theme-text-tertiary italic">{correspondingGK.keyTitle}</span>
+                  )}
+                </div>
+                <h3 className="font-serif text-theme-text-primary group-hover:text-genekey-300 transition-colors mb-3">
+                  Gene Key {correspondingGK.keyNumber}
+                </h3>
+
+                {/* Shadow / Gift / Siddhi trio */}
+                <div className="flex flex-wrap gap-2">
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-red-500/20 text-red-300 border border-red-500/30">
+                    Shadow: {correspondingGK.shadow.name}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                    Gift: {correspondingGK.gift.name}
+                  </span>
+                  <span className="px-3 py-1 rounded-full text-xs font-medium bg-genekey-500/20 text-genekey-300 border border-genekey-500/30">
+                    Siddhi: {correspondingGK.siddhi.name}
+                  </span>
+                </div>
+
+                {correspondingGK.siddhi.keyExpression && (
+                  <p className="text-sm text-genekey-400/80 mt-3 line-clamp-2">
+                    {correspondingGK.siddhi.keyExpression}
+                  </p>
+                )}
+
+                <span className="text-xs text-genekey-400 mt-3 inline-block">
+                  Explore Gene Key {gate.overlapping64GateSegment} &#8250;
+                </span>
+              </Link>
+            </section>
+          )}
+
+          {/* Section B: Master Gate Extended Correspondences (segments 61-72) */}
+          {isMasterGate && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-lg mb-4 text-humandesign-300">Master Gate Correspondences</h2>
+              <p className="text-theme-text-secondary text-sm mb-5">
+                Master Gates carry the full Comber correspondence system — linking musical frequency,
+                alchemical stages, Hermetic Laws, Tarot arcana, and sacred traditions into a unified field.
+              </p>
+
               <div className="grid sm:grid-cols-2 gap-4">
+                {/* Musical */}
+                {(extraFields.musicalNote || extraFields.hertzFrequency) && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Musical Frequency</p>
+                    <p className="text-theme-text-primary font-medium">
+                      {[extraFields.musicalNote, extraFields.hertzFrequency ? `${extraFields.hertzFrequency} Hz` : null]
+                        .filter(Boolean)
+                        .join(' — ')}
+                    </p>
+                    {extraFields.musicalTone && (
+                      <p className="text-xs text-theme-text-tertiary mt-0.5">{extraFields.musicalTone}</p>
+                    )}
+                  </div>
+                )}
+
+                {/* Alchemy */}
+                {extraFields.alchemyStage && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Alchemical Stage</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.alchemyStage}</p>
+                  </div>
+                )}
+
+                {/* Tarot */}
+                {extraFields.tarotCardMajor && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Tarot Major Arcana</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.tarotCardMajor}</p>
+                  </div>
+                )}
+
+                {/* Hermetic Law */}
+                {extraFields.hermeticLaw && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Hermetic Law</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.hermeticLaw}</p>
+                  </div>
+                )}
+
+                {/* Mystical Perfection */}
+                {extraFields.mysticalPerfection && (
+                  <div className="bg-surface-raised rounded-lg p-3 sm:col-span-2">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Mystical Perfection</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.mysticalPerfection}</p>
+                  </div>
+                )}
+
+                {/* Crystal */}
                 {extraFields.crystal && (
-                  <div>
+                  <div className="bg-surface-raised rounded-lg p-3">
                     <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Crystal</p>
-                    <p className="text-theme-text-primary">{extraFields.crystal}</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.crystal}</p>
                   </div>
                 )}
-                {extraFields.musicalTone && (
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Musical Tone</p>
-                    <p className="text-theme-text-primary">{extraFields.musicalTone}</p>
-                  </div>
-                )}
+
+                {/* Egyptian Astrology */}
                 {extraFields.egyptianAstrology && (
-                  <div>
+                  <div className="bg-surface-raised rounded-lg p-3">
                     <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Egyptian Astrology</p>
-                    <p className="text-theme-text-primary">{extraFields.egyptianAstrology}</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.egyptianAstrology}</p>
                   </div>
                 )}
-                {extraFields.divineName && (
-                  <div>
-                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Divine Name</p>
-                    <p className="text-theme-text-primary">{extraFields.divineName}</p>
-                  </div>
-                )}
+
+                {/* Angel */}
                 {extraFields.angel && (
-                  <div>
+                  <div className="bg-surface-raised rounded-lg p-3">
                     <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Angel</p>
-                    <p className="text-theme-text-primary">{extraFields.angel}</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.angel}</p>
+                  </div>
+                )}
+
+                {/* Divine Name */}
+                {extraFields.divineName && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Divine Name</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.divineName}</p>
                   </div>
                 )}
               </div>
+
+              {/* Super Partner Gate */}
+              {extraFields.superPartnerGateNumber && (
+                <div className="mt-4 pt-4 border-t border-theme-border-subtle">
+                  <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Paired Master Gate</p>
+                  <Link
+                    to={`/library/lost-octave/lost-octave-${extraFields.superPartnerGateNumber}`}
+                    className="inline-flex items-center gap-2 text-humandesign-400 hover:text-humandesign-300 transition-colors text-sm"
+                  >
+                    <span>Segment {extraFields.superPartnerGateNumber} — Gate {extraFields.superPartnerGateNumber}</span>
+                    <span>&#8250;</span>
+                  </Link>
+                </div>
+              )}
             </section>
           )}
 
