@@ -1,7 +1,7 @@
 # Story TD-L-03: User Data Export Feature
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** L
-**Status:** Ready
+**Status:** Done
 **Points:** 5
 **Agent:** @dev (Dex)
 
@@ -31,13 +31,13 @@ Users store their birth data, insights, and contemplation sessions in Cosmic Blu
 
 ## Tasks
 
-- [ ] Read the Profile page and settings area to determine where to place the button
-- [ ] Create `src/services/dataExport.ts` with `exportUserData(): void` function
-- [ ] Implement data collection from all localStorage keys
-- [ ] Implement JSON blob creation and download trigger
-- [ ] Add export button to Profile Settings UI
-- [ ] Show success toast/notification after export
-- [ ] Run `npm run verify`
+- [x] Read the Profile page and settings area to determine where to place the button
+- [x] Create `src/services/dataExport.ts` with `exportUserData(): void` function
+- [x] Implement data collection from all localStorage keys
+- [x] Implement JSON blob creation and download trigger
+- [x] Add export button to Profile Settings UI
+- [x] Show success toast/notification after export
+- [x] Run `npm run verify`
 
 ## Scope
 
@@ -76,3 +76,25 @@ function exportUserData(): void {
 ## Definition of Done
 
 "Export My Data" button downloads a complete JSON file. Export includes all localStorage data. `npm run verify` passes.
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- `src/services/dataExport.ts` already existed with full implementation: `exportUserData()` collecting profiles, insights, sessions, pathwayProgress from localStorage, creating JSON Blob and triggering download
+- `ProfileHeader.tsx` already imported `exportUserData` and had a "Data Management" section with Export button, `exportSuccess` useState, success state with green checkmark resetting after 2000ms
+- Story audit only — no code changes required
+
+### File List
+| File | Action |
+|------|--------|
+| `src/services/dataExport.ts` | Already implemented |
+| `src/components/profile/ProfileHeader.tsx` | Already implemented |
+
+### Change Log
+- 2026-02-22: @dev (Dex) — Confirmed TD-L-03 already implemented in ProfileHeader.tsx and dataExport.ts; updated story status to Done
+
