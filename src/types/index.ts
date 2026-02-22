@@ -315,6 +315,10 @@ export interface HDCenter extends AstroEntity {
   undefinedMeaning: string;
   gateIds: string[];
   colorScheme: string;
+  // Ra Uru Hu conditioning layer
+  undefinedWisdom?: string;
+  undefinedConditioning?: string;
+  conditioningQuestion?: string;
 }
 
 export interface HDGate extends AstroEntity {

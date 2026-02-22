@@ -8,6 +8,9 @@
     "biologicalCorrelate": "Pineal Gland",
     "definedMeaning": "Consistent access to inspiration and mental pressure to think",
     "undefinedMeaning": "Wisdom about what questions are worth pursuing",
+    "undefinedWisdom": "Wisdom about which questions are genuinely worth pursuing. The undefined Head accumulates perspective on the infinite variety of questions humans ask, without being defined by any one direction of inquiry.",
+    "undefinedConditioning": "Taking on others' mental pressure as if it were personally meaningful. The mind feels obligated to think about and answer questions that are not its own, leading to mental overload and a sense of constant intellectual urgency.",
+    "conditioningQuestion": "Am I thinking about this question because it genuinely interests me, or because someone else's mental pressure is moving through me?",
     "gateIds": [
       "gate-64",
       "gate-61",
@@ -25,6 +28,9 @@
     "biologicalCorrelate": "Pituitary Gland",
     "definedMeaning": "Consistent way of conceptualizing and processing information",
     "undefinedMeaning": "Wisdom about different ways of thinking and mental flexibility",
+    "undefinedWisdom": "Wisdom about the multiplicity of perspectives. The undefined Ajna can hold many mental frameworks simultaneously without needing to be certain, accumulating understanding of how differently minds can process the same reality.",
+    "undefinedConditioning": "Pretending certainty when none exists. The undefined Ajna amplifies others' fixed mental positions and feels pressure to arrive at conclusions, producing false confidence or chronic indecision.",
+    "conditioningQuestion": "Am I claiming certainty here because I actually know, or because the uncertainty feels uncomfortable?",
     "gateIds": [
       "gate-47",
       "gate-24",
@@ -45,6 +51,9 @@
     "biologicalCorrelate": "Thyroid and Parathyroid",
     "definedMeaning": "Consistent way of expressing and manifesting",
     "undefinedMeaning": "Wisdom about when and how to speak",
+    "undefinedWisdom": "Wisdom about when speaking serves and when it doesn't. The undefined Throat learns to recognize genuine moments of invitation versus performative speaking, developing sensitivity to authentic communication timing.",
+    "undefinedConditioning": "Speaking to attract attention or to make things happen through words. The undefined Throat amplifies others' voices and develops strategies to get noticed — interrupting, over-explaining, or talking when not truly called to speak.",
+    "conditioningQuestion": "Am I speaking because something genuine needs to be expressed, or to get attention or make something happen?",
     "gateIds": [
       "gate-62",
       "gate-23",
@@ -70,6 +79,9 @@
     "biologicalCorrelate": "Liver and Blood",
     "definedMeaning": "Consistent sense of identity, direction, and love",
     "undefinedMeaning": "Wisdom about identity and direction, able to sample many paths",
+    "undefinedWisdom": "Wisdom about direction and identity through resonance with many paths. The undefined G accumulates understanding of what love and direction look like across a wide variety of people and situations.",
+    "undefinedConditioning": "Searching for identity and direction in others. The undefined G feels the identity and love of those around it and tries to adopt their direction as its own, losing the thread of what is personally correct.",
+    "conditioningQuestion": "Am I moving in this direction because it resonates with who I am, or because I've absorbed someone else's sense of purpose?",
     "gateIds": [
       "gate-1",
       "gate-2",
@@ -92,6 +104,9 @@
     "biologicalCorrelate": "Heart, Stomach, Gallbladder, Thymus",
     "definedMeaning": "Consistent access to willpower and self-worth",
     "undefinedMeaning": "Wisdom about what is truly worth commitment",
+    "undefinedWisdom": "Wisdom about what is genuinely worth committing to. The undefined Heart develops sensitivity to authentic willpower versus ego-driven proving, recognizing true value in others and in situations.",
+    "undefinedConditioning": "Constantly trying to prove self-worth. The undefined Heart amplifies others' willpower and ego energy, creating an illusion of sustainable commitment capacity. Over-promising, over-committing, and making pledges the body cannot keep — driven by the belief that worth must be demonstrated. Ra called this THE not-self center: the most pervasive conditioning pattern in the human design system.",
+    "conditioningQuestion": "Am I making this commitment because my heart is genuinely in it, or to prove I am enough?",
     "gateIds": [
       "gate-21",
       "gate-51",
@@ -110,6 +125,9 @@
     "biologicalCorrelate": "Ovaries and Testes",
     "definedMeaning": "Consistent access to life force, work energy, and sexuality",
     "undefinedMeaning": "Wisdom about when enough is enough",
+    "undefinedWisdom": "Wisdom about when enough is enough. The undefined Sacral develops profound understanding of work, life force, and sustainability — knowing the natural limits of energy by witnessing and sampling without being defined by it.",
+    "undefinedConditioning": "Working past the body's limits to keep up with Generator energy. The undefined Sacral amplifies Sacral energy from defined beings and treats it as its own life force. The mind says 'keep going' using borrowed energy, leading to chronic depletion.",
+    "conditioningQuestion": "Am I continuing because my body genuinely wants to, or because I absorbed someone else's energy and mistook it for mine?",
     "gateIds": [
       "gate-5",
       "gate-14",
@@ -133,6 +151,9 @@
     "biologicalCorrelate": "Lungs, Kidneys, Pancreas, Nervous System",
     "definedMeaning": "Consistent emotional wave; clarity comes over time",
     "undefinedMeaning": "Wisdom about emotions; can sense emotional field of others",
+    "undefinedWisdom": "Emotional empathy and sensitivity to the emotional field of others. The undefined Solar Plexus can read a room and understand emotional dynamics without being swept away — accumulating wisdom about the full spectrum of human feeling.",
+    "undefinedConditioning": "Avoiding conflict to keep the emotional environment comfortable. The undefined Solar Plexus amplifies others' emotional waves and develops strategies to prevent emotional peaks and crashes — saying what people want to hear, not raising difficult truths, or making decisions based on mood rather than clarity.",
+    "conditioningQuestion": "Am I avoiding this conversation to protect the peace, or is this actually not the right time to speak?",
     "gateIds": [
       "gate-6",
       "gate-37",
@@ -154,6 +175,9 @@
     "biologicalCorrelate": "Spleen, Lymphatic System, T-cells",
     "definedMeaning": "Consistent access to intuition and survival instincts",
     "undefinedMeaning": "Wisdom about health and safety; can sense others fears",
+    "undefinedWisdom": "Wisdom about fear and what is genuinely healthy or unhealthy. The undefined Spleen develops sensitivity to the instinctual field — reading others' survival fears without being immobilized by them, and accumulating understanding of what creates true wellbeing.",
+    "undefinedConditioning": "Holding onto people, situations, and patterns that are no longer healthy out of fear. The undefined Spleen amplifies Splenic fear from the environment and generates resistance to change and endings, even when those endings are clearly correct.",
+    "conditioningQuestion": "Am I staying in this situation because it serves my wellbeing, or because letting go feels unsafe?",
     "gateIds": [
       "gate-48",
       "gate-57",
@@ -175,6 +199,9 @@
     "biologicalCorrelate": "Adrenal Glands",
     "definedMeaning": "Consistent way of handling stress and pressure",
     "undefinedMeaning": "Wisdom about pressure; can amplify stress from environment",
+    "undefinedWisdom": "Equanimity under pressure. The undefined Root accumulates wisdom about what is genuinely urgent versus what the environment makes feel urgent, developing a capacity to stay grounded amid others' adrenal states.",
+    "undefinedConditioning": "Acting to relieve pressure rather than acting when correct. The undefined Root amplifies adrenaline and urgency from the environment, driving action on whatever will release the pressure fastest — producing hurried decisions that bypass Strategy and Authority.",
+    "conditioningQuestion": "Am I moving on this because it's the right time, or because the pressure of waiting feels unbearable?",
     "gateIds": [
       "gate-58",
       "gate-38",
