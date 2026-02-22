@@ -8,15 +8,21 @@ import type {
   FixedStar,
   GalacticPoint,
   GKSphereEntity,
+  GKSequenceEntity,
   HDAuthorityEntity,
   HDLineEntity,
   HDProfileEntity,
   HDStrategyEntity,
+  HDVariableEntity,
   HermeticPrinciple,
   NumerologyNumber,
+  AminoAcid,
+  Trigram,
+  Line,
   PersonalContextProject,
   PersonalContext,
 } from '../../../types';
+import type { DignityEntry } from '../../../data';
 import { getRelatedEntities } from '../../../services/entities';
 import { ChevronRightIcon } from '../../icons';
 import { GeneKeyContent } from './GeneKeyContent';
@@ -36,7 +42,7 @@ const GENE_KEY_TYPES = new Set(['gene-key', 'codon-ring']);
 const HD_TYPES = new Set(['hd-gate', 'hd-channel', 'hd-center', 'hd-type']);
 const HD_AUTHORITY_TYPES = new Set(['hd-authority']);
 const HD_PROFILE_TYPES = new Set(['hd-profile']);
-const HD_LINE_TYPES = new Set(['hd-line', 'hd-variable']);
+const HD_LINE_TYPES = new Set(['hd-line']);
 const ASTROLOGY_TYPES = new Set(['planet', 'sign', 'house', 'element', 'aspect']);
 const PROFILE_TYPES = new Set([
   'profile-placement', 'profile-gk-placement', 'profile-hd-placement',
@@ -1293,6 +1299,590 @@ function HDStrategyContent({ entity }: { entity: EntityInfo }) {
   );
 }
 
+// ─── GK Sequence content renderer ─────────────────────────────────────────────
+
+function GKSequenceContent({ entity }: { entity: EntityInfo }) {
+  const seq = entity.data as GKSequenceEntity;
+  if (!seq) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Sequence order badge */}
+      <div className="flex flex-wrap items-center gap-2">
+        {seq.sequenceOrder != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+            Sequence {seq.sequenceOrder}
+          </span>
+        )}
+        {entity.symbol && (
+          <span className="text-base opacity-70">{entity.symbol}</span>
+        )}
+      </div>
+
+      {/* Theme */}
+      {seq.theme && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Theme</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{seq.theme}</p>
+        </div>
+      )}
+
+      {/* Primary Question — prominent italic bordered card */}
+      {seq.primaryQuestion && (
+        <div className="rounded-lg border border-theme-border-subtle p-3 bg-surface-raised/50">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Primary Question</h4>
+          <p className="text-sm text-theme-text-secondary italic leading-relaxed">
+            {seq.primaryQuestion}
+          </p>
+        </div>
+      )}
+
+      {/* Description */}
+      {seq.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">About</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{seq.description}</p>
+        </div>
+      )}
+
+      {/* Spheres in this sequence */}
+      {seq.spheres && seq.spheres.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Spheres</h4>
+          <div className="flex flex-wrap gap-1.5">
+            {seq.spheres.map((sphere, i) => (
+              <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary capitalize">
+                {sphere.replace(/-/g, ' ')}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Contemplation Focus */}
+      {seq.contemplationFocus && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Contemplation Focus</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed italic">{seq.contemplationFocus}</p>
+        </div>
+      )}
+
+      {/* Key Integration Insight */}
+      {seq.transformation && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-violet-300">Key Integration</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{seq.transformation}</p>
+        </div>
+      )}
+
+      {/* Practical Guidance */}
+      {seq.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{seq.practicalGuidance}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── HD Variable content renderer ─────────────────────────────────────────────
+
+function HDVariableContent({ entity }: { entity: EntityInfo }) {
+  const variable = entity.data as HDVariableEntity;
+  if (!variable) return null;
+
+  return (
+    <div className="space-y-4">
+      {/* Category + Arrow badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {variable.category && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-amber-300 font-semibold">
+            {variable.category}
+          </span>
+        )}
+        {variable.arrow && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {variable.arrow} Arrow
+          </span>
+        )}
+        {variable.arrowPosition && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {variable.arrowPosition}
+          </span>
+        )}
+      </div>
+
+      {/* Color / Tone badge */}
+      {(variable.color != null || variable.colorName) && (
+        <div className="flex flex-wrap items-center gap-2">
+          {variable.color != null && variable.colorName && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-sky-300">
+              Color {variable.color}: {variable.colorName}
+            </span>
+          )}
+          {variable.tone != null && (
+            <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+              Tone {variable.tone}
+            </span>
+          )}
+        </div>
+      )}
+
+      {/* Category description */}
+      {variable.categoryDescription && (
+        <p className="text-xs text-theme-text-tertiary italic leading-relaxed">{variable.categoryDescription}</p>
+      )}
+
+      {/* Description */}
+      {variable.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">About</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{variable.description}</p>
+        </div>
+      )}
+
+      {/* Physical Application */}
+      {variable.physicalApplication && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-emerald-300">Physical Application</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{variable.physicalApplication}</p>
+        </div>
+      )}
+
+      {/* Mental / Psychological Application */}
+      {variable.mentalApplication && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-sky-300">Mental Application</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{variable.mentalApplication}</p>
+        </div>
+      )}
+
+      {/* Healthy / Unhealthy Expressions (Motivation category) */}
+      {(variable.healthyExpression || variable.unhealthyExpression) && (
+        <div className="space-y-2">
+          {variable.healthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Healthy</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{variable.healthyExpression}</p>
+            </div>
+          )}
+          {variable.unhealthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Unhealthy</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{variable.unhealthyExpression}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Practical Guidance */}
+      {variable.practicalGuidance && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Practical Guidance</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{variable.practicalGuidance}</p>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Amino Acid content renderer ───────────────────────────────────────────────
+
+function AminoAcidContent({ entity }: { entity: EntityInfo }) {
+  const acid = entity.data as AminoAcid;
+  if (!acid) return null;
+
+  const formatGeneKeyId = (id: string) => {
+    // "gk-10" → "Gene Key 10"
+    return id.replace('gk-', 'Gene Key ');
+  };
+
+  const formatRingId = (id: string) => {
+    // "ring-of-humanity" → "Ring of Humanity"
+    return id
+      .replace('ring-of-', 'Ring of ')
+      .replace(/-/g, ' ')
+      .replace(/\b\w/g, (c) => c.toUpperCase());
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Abbreviation + symbol + type badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {acid.abbreviation && (
+          <span className="text-xs px-3 py-0.5 rounded-full bg-surface-raised text-theme-text-secondary font-mono font-bold">
+            {acid.abbreviation}
+          </span>
+        )}
+        {entity.symbol && acid.symbol && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {acid.symbol}
+          </span>
+        )}
+        {acid.aminoAcidType && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-amber-300 font-semibold">
+            {acid.aminoAcidType}
+          </span>
+        )}
+      </div>
+
+      {/* Chemical Nature — brief italic callout */}
+      {acid.chemicalNature && (
+        <p className="text-xs text-theme-text-tertiary italic leading-relaxed border-l-2 border-theme-border-subtle pl-3">
+          {acid.chemicalNature}
+        </p>
+      )}
+
+      {/* Physiological Role */}
+      {acid.physiologicalRole && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Physical Function</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{acid.physiologicalRole}</p>
+        </div>
+      )}
+
+      {/* Consciousness Quality — the key Gene Keys insight */}
+      {acid.consciousnessQuality && (
+        <div className="rounded-lg bg-surface-raised p-3">
+          <div className="text-xs font-semibold mb-1 text-violet-300">Consciousness Quality</div>
+          <p className="text-xs text-theme-text-secondary leading-relaxed">{acid.consciousnessQuality}</p>
+        </div>
+      )}
+
+      {/* Codon Ring association */}
+      {acid.codonRingId && (
+        <div className="flex items-center gap-2">
+          <span className="text-xs text-theme-text-tertiary">Codon Ring:</span>
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {formatRingId(acid.codonRingId)}
+          </span>
+        </div>
+      )}
+
+      {/* Gene Key IDs as badges */}
+      {acid.geneKeyIds && acid.geneKeyIds.length > 0 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Gene Keys</h4>
+          <div className="flex flex-wrap gap-1.5">
+            {acid.geneKeyIds.map((id, i) => (
+              <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+                {formatGeneKeyId(id)}
+              </span>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Trigram content renderer ──────────────────────────────────────────────────
+
+function TrigramContent({ entity }: { entity: EntityInfo }) {
+  const trigram = entity.data as Trigram;
+  if (!trigram) return null;
+
+  // Render I Ching line visual (yang = solid bar, yin = broken bar)
+  const renderLine = (lineType: 'yin' | 'yang', idx: number) => {
+    if (lineType === 'yang') {
+      return (
+        <div key={idx} className="h-2 bg-theme-text-secondary rounded-sm opacity-80" />
+      );
+    }
+    // yin: two short bars with gap in middle
+    return (
+      <div key={idx} className="flex gap-1">
+        <div className="h-2 flex-1 bg-theme-text-secondary rounded-sm opacity-80" />
+        <div className="h-2 w-3" />
+        <div className="h-2 flex-1 bg-theme-text-secondary rounded-sm opacity-80" />
+      </div>
+    );
+  };
+
+  return (
+    <div className="space-y-4">
+      {/* Chinese name + symbol + number badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {trigram.chineseName && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-medium">
+            {trigram.chineseName}
+          </span>
+        )}
+        {entity.symbol && (
+          <span className="text-base opacity-80">{entity.symbol}</span>
+        )}
+        {trigram.trigramNumber != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            #{trigram.trigramNumber}
+          </span>
+        )}
+      </div>
+
+      {/* Three-line visual representation */}
+      {trigram.lines && trigram.lines.length === 3 && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Lines</h4>
+          <div className="w-24 space-y-1.5">
+            {/* Render top-to-bottom: lines[2] is top, lines[0] is bottom */}
+            {[...trigram.lines].reverse().map((l, idx) => renderLine(l, idx))}
+          </div>
+        </div>
+      )}
+
+      {/* Nature + attribute + element badges */}
+      <div className="flex flex-wrap gap-1.5">
+        {trigram.nature && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {trigram.nature}
+          </span>
+        )}
+        {trigram.attribute && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary">
+            {trigram.attribute}
+          </span>
+        )}
+        {trigram.element && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {trigram.element}
+          </span>
+        )}
+        {trigram.direction && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {trigram.direction}
+          </span>
+        )}
+        {trigram.season && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {trigram.season}
+          </span>
+        )}
+        {trigram.bodyPart && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            Body: {trigram.bodyPart}
+          </span>
+        )}
+      </div>
+
+      {/* Image and Meaning */}
+      {trigram.image && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Image</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{trigram.image}</p>
+        </div>
+      )}
+
+      {/* Description */}
+      {trigram.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Meaning</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{trigram.description}</p>
+        </div>
+      )}
+
+      {/* Gene Keys correlation */}
+      {trigram.geneKeyCorrelation && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Gene Keys Correlation</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{trigram.geneKeyCorrelation}</p>
+        </div>
+      )}
+
+      {/* Upper / Lower Trigram meaning */}
+      {(trigram.upperTrigram || trigram.lowerTrigram) && (
+        <div className="space-y-2">
+          {trigram.upperTrigram && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-sky-300">As Upper Trigram</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{trigram.upperTrigram}</p>
+            </div>
+          )}
+          {trigram.lowerTrigram && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-amber-300">As Lower Trigram</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{trigram.lowerTrigram}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Keywords */}
+      {trigram.keywords && trigram.keywords.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {trigram.keywords.map((kw, i) => (
+            <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+              {kw}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Line (unified GK + HD) content renderer ──────────────────────────────────
+
+function LineContent({ entity }: { entity: EntityInfo }) {
+  const line = entity.data as Line;
+  if (!line) return null;
+
+  const gk = line.geneKeys;
+  const hd = line.humanDesign;
+
+  return (
+    <div className="space-y-4">
+      {/* Line number + archetype + trigram badges */}
+      <div className="flex flex-wrap items-center gap-2">
+        {line.lineNumber != null && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+            Line {line.lineNumber}
+          </span>
+        )}
+        {line.trigram && line.trigramPosition && (
+          <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+            {line.trigram} Trigram – {line.trigramPosition}
+          </span>
+        )}
+      </div>
+
+      {/* Archetype */}
+      {line.archetype && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Archetype</h4>
+          <p className="text-sm text-theme-text-secondary font-medium">{line.archetype}</p>
+        </div>
+      )}
+
+      {/* Summary */}
+      {line.summary && (
+        <div>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{line.summary}</p>
+        </div>
+      )}
+
+      {/* Gene Keys: Gift / Shadow — two-card block */}
+      {gk && (gk.gift || gk.shadow) && (
+        <div className="space-y-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Gene Keys Spectrum</h4>
+          {gk.gift && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Gift</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{gk.gift}</p>
+            </div>
+          )}
+          {gk.shadow && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Shadow</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{gk.shadow}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Human Design context */}
+      {hd && (hd.healthyExpression || hd.unhealthyExpression) && (
+        <div className="space-y-2">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary">Human Design</h4>
+          {hd.healthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-emerald-300">Healthy Expression</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{hd.healthyExpression}</p>
+            </div>
+          )}
+          {hd.unhealthyExpression && (
+            <div className="rounded-lg bg-surface-raised p-3">
+              <div className="text-xs font-semibold mb-1 text-rose-300">Unhealthy Expression</div>
+              <p className="text-xs text-theme-text-secondary leading-relaxed">{hd.unhealthyExpression}</p>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* HD: In Personality / In Design */}
+      {hd && (hd.inPersonality || hd.inDesign) && (
+        <div className="space-y-1">
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">HD Position Expressions</h4>
+          {hd.inPersonality && (
+            <div>
+              <span className="text-xs font-medium text-theme-text-tertiary">Personality (Conscious): </span>
+              <span className="text-xs text-theme-text-secondary">{hd.inPersonality}</span>
+            </div>
+          )}
+          {hd.inDesign && (
+            <div>
+              <span className="text-xs font-medium text-theme-text-tertiary">Design (Unconscious): </span>
+              <span className="text-xs text-theme-text-secondary">{hd.inDesign}</span>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* Keywords */}
+      {line.keywords && line.keywords.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {line.keywords.map((kw, i) => (
+            <span key={i} className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+              {kw}
+            </span>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
+// ─── Dignity content renderer ──────────────────────────────────────────────────
+
+function DignityContent({ entity }: { entity: EntityInfo }) {
+  const dignity = entity.data as DignityEntry;
+  if (!dignity) return null;
+
+  const capitalizeId = (id: string) =>
+    id ? id.charAt(0).toUpperCase() + id.slice(1) : '';
+
+  const DIGNITY_COLORS: Record<string, string> = {
+    Domicile: 'text-amber-300',
+    Exaltation: 'text-sky-300',
+    Detriment: 'text-rose-300',
+    Fall: 'text-amber-500',
+  };
+
+  const dignityColor = DIGNITY_COLORS[dignity.dignityType] || 'text-theme-text-secondary';
+
+  return (
+    <div className="space-y-4">
+      {/* Dignity type badge */}
+      <div className="flex flex-wrap items-center gap-2">
+        {dignity.dignityType && (
+          <span className={`text-xs px-3 py-0.5 rounded-full bg-surface-raised font-semibold ${dignityColor}`}>
+            {dignity.dignityType}
+          </span>
+        )}
+      </div>
+
+      {/* Planet + Sign heading */}
+      <div>
+        <p className="text-sm text-theme-text-secondary font-medium">
+          {capitalizeId(dignity.planetId)} in {capitalizeId(dignity.signId)}
+        </p>
+      </div>
+
+      {/* Description */}
+      {dignity.description && (
+        <div>
+          <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Interpretation</h4>
+          <p className="text-sm text-theme-text-secondary leading-relaxed">{dignity.description}</p>
+        </div>
+      )}
+
+      {/* Explanatory note */}
+      <p className="text-xs text-theme-text-tertiary italic leading-relaxed">
+        Planetary dignity describes the quality of a planet's expression based on its sign position.
+      </p>
+    </div>
+  );
+}
+
 export function EntityPanelContent({
   entity,
   colors,
@@ -1442,6 +2032,36 @@ export function EntityPanelContent({
       {/* HD Strategy */}
       {entity.type === 'hd-strategy' && (
         <HDStrategyContent entity={entity} />
+      )}
+
+      {/* GK Sequence */}
+      {entity.type === 'gk-sequence' && (
+        <GKSequenceContent entity={entity} />
+      )}
+
+      {/* HD Variable */}
+      {entity.type === 'hd-variable' && (
+        <HDVariableContent entity={entity} />
+      )}
+
+      {/* Amino Acid */}
+      {entity.type === 'amino-acid' && (
+        <AminoAcidContent entity={entity} />
+      )}
+
+      {/* Trigram */}
+      {entity.type === 'trigram' && (
+        <TrigramContent entity={entity} />
+      )}
+
+      {/* Unified Line (GK + HD) */}
+      {entity.type === 'line' && (
+        <LineContent entity={entity} />
+      )}
+
+      {/* Dignity */}
+      {entity.type === 'dignity' && (
+        <DignityContent entity={entity} />
       )}
 
       {/* Related Entities */}
