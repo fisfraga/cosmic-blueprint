@@ -90,6 +90,7 @@ const ProfileHDPlacementDetail = lazy(() => import('./pages/profile/ProfileHDPla
 const ProfileHDChannelDetail = lazy(() => import('./pages/profile/ProfileHDChannelDetail'));
 const ProfileFixedStars = lazy(() => import('./pages/profile/ProfileFixedStars'));
 const ProfileLifePurpose = lazy(() => import('./pages/profile/ProfileLifePurpose'));
+const ProfilePersonalContext = lazy(() => import('./pages/profile/ProfilePersonalContext'));
 const CosmicDashboard = lazy(() => import('./pages/CosmicDashboard'));
 
 function App() {
@@ -119,6 +120,7 @@ function App() {
               <Route path="profile/human-design/channels/:channelId" element={<ProfileHDChannelDetail />} />
               <Route path="profile/fixed-stars" element={<ProfileFixedStars />} />
               <Route path="profile/life-purpose" element={<ProfileLifePurpose />} />
+              <Route path="profile/personal-context" element={<ProfilePersonalContext />} />
               <Route path="dashboard" element={<CosmicDashboard />} />
                 <Route path="realms" element={<ElementRealms />} />
                 <Route path="planets" element={<Planets />} />

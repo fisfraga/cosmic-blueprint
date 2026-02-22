@@ -16,6 +16,7 @@ const profileItems = [
   { path: '/profile/human-design', label: 'Human Design', icon: '⬡', description: 'Body graph & type' },
   { path: '/profile/fixed-stars', label: 'Fixed Stars', icon: '★', description: 'Star conjunctions' },
   { path: '/profile/life-purpose', label: 'Life Purpose', icon: '◈', description: 'Purpose & soul calling' },
+  { path: '/profile/personal-context', label: 'Personal Context', icon: '◎', description: 'Your ILOS context for AI readings' },
 ];
 
 // Explore Tools - Interactive visualizations
