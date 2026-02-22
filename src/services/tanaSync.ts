@@ -154,6 +154,63 @@ export function formatSessionsAsTanaPaste(sessions: SavedSession[]): string {
   return sessions.map(formatSessionAsTanaPaste).join('\n');
 }
 
+// ─── ILOS Export Formatters ───────────────────────────────────────────────────
+
+/**
+ * Format an Elemental Profile Reading result as a Tana QUANTUM node
+ * Source: ILOS Elemental VPER — self-knowledge layer
+ */
+export function formatElementalProfileNode(
+  elementalData: {
+    distribution: Record<string, number>;  // e.g. { fire: 3, earth: 4, air: 2, water: 1 }
+    dominantElement: string;
+    weakElement: string;
+    vperStrength: string;  // e.g. "execute"
+    vperGrowthEdge: string;  // e.g. "vision"
+    growthPractices: string[];
+  }
+): string {
+  const lines = [
+    `- Elemental Profile`,
+    `  - Distribution:: Fire ${elementalData.distribution.fire ?? 0} · Earth ${elementalData.distribution.earth ?? 0} · Air ${elementalData.distribution.air ?? 0} · Water ${elementalData.distribution.water ?? 0}`,
+    `  - Dominant Element:: ${elementalData.dominantElement}`,
+    `  - Weak Element:: ${elementalData.weakElement}`,
+    `  - VPER Strength:: ${elementalData.vperStrength}`,
+    `  - VPER Growth Edge:: ${elementalData.vperGrowthEdge}`,
+  ];
+  if (elementalData.growthPractices.length > 0) {
+    lines.push(`  - Growth Practices::`);
+    elementalData.growthPractices.forEach(p => lines.push(`    - ${p}`));
+  }
+  return lines.join('\n');
+}
+
+/**
+ * Format a VPER phase insight as a Tana TIME node entry
+ * Source: ILOS TIME dimension — weekly/monthly planning context
+ */
+export function formatVperPhaseInsight(
+  vperData: {
+    currentPhase: string;       // e.g. "execute"
+    phaseLabel: string;         // e.g. "Execute / Earth"
+    activeKeyAreas: string[];   // e.g. ["Work & Wellness", "Finances & Resources"]
+    cosmicContext: string;      // 1-sentence description of current transits
+    suggestedFocus: string;     // 1 action/focus recommendation
+  }
+): string {
+  const lines = [
+    `- VPER Phase Insight`,
+    `  - Current Phase:: ${vperData.phaseLabel}`,
+    `  - Cosmic Context:: ${vperData.cosmicContext}`,
+    `  - Suggested Focus:: ${vperData.suggestedFocus}`,
+  ];
+  if (vperData.activeKeyAreas.length > 0) {
+    lines.push(`  - Active Key Areas::`);
+    vperData.activeKeyAreas.forEach(area => lines.push(`    - ${area}`));
+  }
+  return lines.join('\n');
+}
+
 // ─── Clipboard Utility ────────────────────────────────────────────────────────
 
 /**

@@ -319,6 +319,8 @@ export interface HDCenter extends AstroEntity {
   undefinedWisdom?: string;
   undefinedConditioning?: string;
   conditioningQuestion?: string;
+  // ILOS elemental bridge
+  element?: string;
 }
 
 export interface HDGate extends AstroEntity {

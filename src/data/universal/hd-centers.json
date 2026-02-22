@@ -17,6 +17,7 @@
       "gate-63"
     ],
     "colorScheme": "yellow",
+    "element": "fire",
     "description": "The Head Center is a pressure center that creates mental pressure to understand and make sense of life."
   },
   {
@@ -40,6 +41,7 @@
       "gate-11"
     ],
     "colorScheme": "green",
+    "element": "air",
     "description": "The Ajna Center is the center of conceptualization, processing, and mental awareness."
   },
   {
@@ -68,6 +70,7 @@
       "gate-16"
     ],
     "colorScheme": "brown",
+    "element": "air",
     "description": "The Throat Center is the center of communication, expression, and manifestation."
   },
   {
@@ -93,6 +96,7 @@
       "gate-46"
     ],
     "colorScheme": "amber",
+    "element": "fire",
     "description": "The G Center is the center of identity, love, and direction in life."
   },
   {
@@ -114,6 +118,7 @@
       "gate-40"
     ],
     "colorScheme": "red",
+    "element": "fire",
     "description": "The Heart Center is a motor center associated with willpower, ego, and self-worth."
   },
   {
@@ -140,6 +145,7 @@
       "gate-34"
     ],
     "colorScheme": "orange",
+    "element": "earth",
     "description": "The Sacral Center is the powerful motor that provides life force energy for Generators."
   },
   {
@@ -164,6 +170,7 @@
       "gate-49"
     ],
     "colorScheme": "gold",
+    "element": "water",
     "description": "The Solar Plexus is both a motor and awareness center, governing emotions and feelings."
   },
   {
@@ -188,6 +195,7 @@
       "gate-18"
     ],
     "colorScheme": "brown",
+    "element": "earth",
     "description": "The Spleen Center is the oldest awareness center, governing intuition, health, and survival."
   },
   {
@@ -214,6 +222,7 @@
       "gate-41"
     ],
     "colorScheme": "brown",
+    "element": "earth",
     "description": "The Root Center is a motor and pressure center, providing adrenaline fuel and drive."
   }
 ]
