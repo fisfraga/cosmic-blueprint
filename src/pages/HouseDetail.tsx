@@ -1,10 +1,26 @@
+import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { houses, signs, planets, chakras, hdGates, geneKeys } from '../data';
 import { getPlacementsInHouse } from '../data/userProfile';
+import { EntityStack } from '../components/entities/EntityStack';
+import type { EntityInfo } from '../services/entities/registry';
 
 export function HouseDetail() {
   const { id } = useParams<{ id: string }>();
   const house = id ? houses.get(id) : undefined;
+
+  const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+  const handleEntityClick = useCallback((entity: EntityInfo) => {
+    setSelectedEntities(prev => {
+      const already = prev.findIndex(e => e.id === entity.id);
+      if (already !== -1) return prev;
+      if (prev.length >= 2) return [prev[1], entity];
+      return [...prev, entity];
+    });
+  }, []);
+  const handleCloseEntity = useCallback((id: string) => {
+    setSelectedEntities(prev => prev.filter(e => e.id !== id));
+  }, []);
 
   if (!house) {
     return (
@@ -50,308 +66,352 @@ export function HouseDetail() {
   const VPER_LABELS: Record<string, string> = { vision: 'Vision', plan: 'Plan', execute: 'Execute', review: 'Review' };
 
   return (
-    <div className="space-y-8 max-w-4xl mx-auto">
-      {/* Header */}
-      <header className="text-center py-8">
-        <div className="text-6xl mb-4 font-serif">{house.houseNumber}</div>
-        <h1 className="font-serif text-4xl font-medium mb-2">{house.name}</h1>
-        <div className="flex items-center justify-center gap-4 mt-4 text-sm">
-          <span className={`px-3 py-1 rounded-full border ${houseTypeColors[house.houseType]}`}>
-            {house.houseType} House
-          </span>
-          {rulingSign && (
-            <span className="px-3 py-1 bg-surface-raised rounded-full">
-              {rulingSign.symbol} {rulingSign.name}
-            </span>
-          )}
-          {/* World half badge */}
-          <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium ${
-            house.worldHalf === 'inner'
-              ? 'border-amber-500/30 bg-amber-500/10 text-amber-300'
-              : 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300'
-          }`}>
-            {house.worldHalf === 'inner' ? '◉ Inner World' : '◎ Outer World'}
-          </span>
-        </div>
-      </header>
-
-      {/* My Placements in this House */}
-      {myPlacements.length > 0 && (
-        <section className="rounded-xl p-6 border border-purple-500/30 bg-gradient-to-br from-purple-500/10 to-purple-600/5">
-          <h2 className="font-serif text-xl mb-4 text-purple-300">My Placements in the {house.name}</h2>
-          <div className="grid gap-3 sm:grid-cols-2">
-            {myPlacements.map((placement) => {
-              const placementSign = signs.get(placement.signId);
-              return (
-                <div
-                  key={placement.planetId}
-                  className={`flex items-center justify-between p-3 rounded-lg ${
-                    placement.placementType === 'planet'
-                      ? 'bg-surface-raised/60'
-                      : 'bg-surface-raised/40 border border-theme-border-subtle/50'
-                  }`}
-                >
-                  <div className="flex items-center gap-3">
-                    <span className="text-2xl">{placement.planetSymbol}</span>
-                    <div>
-                      <div className="font-medium">
-                        {placement.planetName}
-                        {placement.isRetrograde && (
-                          <span className="text-xs text-red-400 ml-1">R</span>
-                        )}
-                      </div>
-                      <div className="text-xs text-theme-text-secondary">
-                        in {placementSign?.name}
-                        {placement.dignity && (
-                          <span className="text-amber-400 ml-1">({placement.dignity})</span>
-                        )}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-sm text-theme-text-secondary">{placement.degree}</div>
-                </div>
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {/* Life Areas */}
-      <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h2 className="font-serif text-xl mb-4">Life Area Focus</h2>
-        <div className="flex flex-wrap gap-2">
-          {house.lifeAreaFocus.map((area, index) => (
-            <span
-              key={index}
-              className="px-4 py-2 bg-surface-raised rounded-lg text-theme-text-secondary"
-            >
-              {area}
-            </span>
-          ))}
-        </div>
-      </section>
-
-      {/* Life Key Area (ILOS) */}
-      {house.ilosKeyArea && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <div className="flex items-center justify-between mb-3">
-            <h2 className="font-serif text-xl">Life Key Area</h2>
-            {house.vperPhase && (
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-surface-overlay border border-theme-border-subtle text-theme-text-secondary">
-                <span>{VPER_ICONS[house.vperPhase]}</span>
-                <span>{VPER_LABELS[house.vperPhase]} Phase</span>
+    <div className="flex h-full">
+      <div className="flex-1 min-w-0 overflow-y-auto">
+        <div className="space-y-8 max-w-4xl mx-auto">
+          {/* Header */}
+          <header className="text-center py-8">
+            <div className="text-6xl mb-4 font-serif">{house.houseNumber}</div>
+            <h1 className="font-serif text-4xl font-medium mb-2">{house.name}</h1>
+            <div className="flex items-center justify-center gap-4 mt-4 text-sm">
+              <span className={`px-3 py-1 rounded-full border ${houseTypeColors[house.houseType]}`}>
+                {house.houseType} House
               </span>
+              {rulingSign && (
+                <span className="px-3 py-1 bg-surface-raised rounded-full">
+                  {rulingSign.symbol} {rulingSign.name}
+                </span>
+              )}
+              {/* World half badge */}
+              <span className={`inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-sm font-medium ${
+                house.worldHalf === 'inner'
+                  ? 'border-amber-500/30 bg-amber-500/10 text-amber-300'
+                  : 'border-indigo-500/30 bg-indigo-500/10 text-indigo-300'
+              }`}>
+                {house.worldHalf === 'inner' ? '◉ Inner World' : '◎ Outer World'}
+              </span>
+            </div>
+          </header>
+
+          {/* My Placements in this House */}
+          {myPlacements.length > 0 && (
+            <section className="rounded-xl p-6 border border-purple-500/30 bg-gradient-to-br from-purple-500/10 to-purple-600/5">
+              <h2 className="font-serif text-xl mb-4 text-purple-300">My Placements in the {house.name}</h2>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {myPlacements.map((placement) => {
+                  const placementSign = signs.get(placement.signId);
+                  return (
+                    <div
+                      key={placement.planetId}
+                      className={`flex items-center justify-between p-3 rounded-lg ${
+                        placement.placementType === 'planet'
+                          ? 'bg-surface-raised/60'
+                          : 'bg-surface-raised/40 border border-theme-border-subtle/50'
+                      }`}
+                    >
+                      <div className="flex items-center gap-3">
+                        <span className="text-2xl">{placement.planetSymbol}</span>
+                        <div>
+                          <div className="font-medium">
+                            {placement.planetName}
+                            {placement.isRetrograde && (
+                              <span className="text-xs text-red-400 ml-1">R</span>
+                            )}
+                          </div>
+                          <div className="text-xs text-theme-text-secondary">
+                            in {placementSign?.name}
+                            {placement.dignity && (
+                              <span className="text-amber-400 ml-1">({placement.dignity})</span>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-sm text-theme-text-secondary">{placement.degree}</div>
+                    </div>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* Life Areas */}
+          <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-4">Life Area Focus</h2>
+            <div className="flex flex-wrap gap-2">
+              {house.lifeAreaFocus.map((area, index) => (
+                <span
+                  key={index}
+                  className="px-4 py-2 bg-surface-raised rounded-lg text-theme-text-secondary"
+                >
+                  {area}
+                </span>
+              ))}
+            </div>
+          </section>
+
+          {/* Life Key Area (ILOS) */}
+          {house.ilosKeyArea && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <div className="flex items-center justify-between mb-3">
+                <h2 className="font-serif text-xl">Life Key Area</h2>
+                {house.vperPhase && (
+                  <span className="flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-surface-overlay border border-theme-border-subtle text-theme-text-secondary">
+                    <span>{VPER_ICONS[house.vperPhase]}</span>
+                    <span>{VPER_LABELS[house.vperPhase]} Phase</span>
+                  </span>
+                )}
+              </div>
+              <p className="text-lg font-medium text-theme-text-primary mb-2">{house.ilosKeyArea}</p>
+              <p className="text-theme-text-secondary text-sm mb-4">
+                In the Intentional Life OS, this house maps to the <strong>{house.ilosKeyArea}</strong> key area —
+                the domain of life where this house's themes most directly shape your real-world experience.
+              </p>
+              <Link
+                to="/life-areas"
+                className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
+              >
+                <span>→</span> Explore all 12 Life Key Areas
+              </Link>
+            </section>
+          )}
+
+          {/* Soul Purpose Role (Julia Balaz) */}
+          {(house.purposeRole || house.careerRelevance) && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-4">Soul Purpose Role</h2>
+              {house.purposeRole && (
+                <p className="text-theme-text-primary italic text-base mb-3">"{house.purposeRole}"</p>
+              )}
+              {house.careerRelevance && (
+                <div className="p-3 rounded-lg bg-surface-overlay border border-theme-border-subtle mb-4">
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-1">Career & Vocation</p>
+                  <p className="text-theme-text-secondary text-sm">{house.careerRelevance}</p>
+                </div>
+              )}
+              <Link
+                to="/contemplate"
+                className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
+              >
+                <span>✦</span> Explore your life purpose in the Contemplation Chamber
+              </Link>
+            </section>
+          )}
+
+          {/* Meaning */}
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-4">Meaning & Representation</h2>
+            <p className="text-theme-text-secondary leading-relaxed">{house.meaningAndRepresentation}</p>
+            {house.worldHalfTheme && (
+              <p className={`mt-3 text-sm font-medium ${house.worldHalf === 'inner' ? 'text-amber-400/70' : 'text-indigo-400/70'}`}>
+                {house.worldHalfTheme}
+              </p>
+            )}
+          </section>
+
+          {/* Rulers */}
+          <div className="grid md:grid-cols-2 gap-6">
+            {rulingSign && (
+              <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+                <h2 className="font-serif text-xl mb-4">Natural Sign</h2>
+                <div
+                  className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors cursor-pointer"
+                  onClick={() => handleEntityClick(rulingSign as unknown as EntityInfo)}
+                >
+                  <span className="text-3xl">{rulingSign.symbol}</span>
+                  <div>
+                    <div className="font-medium text-lg">{rulingSign.name}</div>
+                    <div className="text-sm text-theme-text-secondary">{rulingSign.keyPhrase}</div>
+                  </div>
+                  <Link
+                    to={`/signs/${rulingSign.id}`}
+                    className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary ml-auto"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    →
+                  </Link>
+                </div>
+              </section>
+            )}
+
+            {rulingPlanet && (
+              <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+                <h2 className="font-serif text-xl mb-4">Natural Ruler</h2>
+                <div
+                  className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors cursor-pointer"
+                  onClick={() => handleEntityClick(rulingPlanet as unknown as EntityInfo)}
+                >
+                  <span className="text-3xl">{rulingPlanet.symbol}</span>
+                  <div>
+                    <div className="font-medium text-lg">{rulingPlanet.name}</div>
+                    <div className="text-sm text-theme-text-secondary">{rulingPlanet.archetype}</div>
+                  </div>
+                  <Link
+                    to={`/planets/${rulingPlanet.id}`}
+                    className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary ml-auto"
+                    onClick={e => e.stopPropagation()}
+                  >
+                    →
+                  </Link>
+                </div>
+              </section>
             )}
           </div>
-          <p className="text-lg font-medium text-theme-text-primary mb-2">{house.ilosKeyArea}</p>
-          <p className="text-theme-text-secondary text-sm mb-4">
-            In the Intentional Life OS, this house maps to the <strong>{house.ilosKeyArea}</strong> key area —
-            the domain of life where this house's themes most directly shape your real-world experience.
-          </p>
-          <Link
-            to="/life-areas"
-            className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
-          >
-            <span>→</span> Explore all 12 Life Key Areas
-          </Link>
-        </section>
-      )}
 
-      {/* Soul Purpose Role (Julia Balaz) */}
-      {(house.purposeRole || house.careerRelevance) && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-4">Soul Purpose Role</h2>
-          {house.purposeRole && (
-            <p className="text-theme-text-primary italic text-base mb-3">"{house.purposeRole}"</p>
-          )}
-          {house.careerRelevance && (
-            <div className="p-3 rounded-lg bg-surface-overlay border border-theme-border-subtle mb-4">
-              <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-1">Career & Vocation</p>
-              <p className="text-theme-text-secondary text-sm">{house.careerRelevance}</p>
-            </div>
-          )}
-          <Link
-            to="/contemplate"
-            className="inline-flex items-center gap-1.5 text-sm text-air-400 hover:text-air-300 transition-colors"
-          >
-            <span>✦</span> Explore your life purpose in the Contemplation Chamber
-          </Link>
-        </section>
-      )}
-
-      {/* Meaning */}
-      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h2 className="font-serif text-xl mb-4">Meaning & Representation</h2>
-        <p className="text-theme-text-secondary leading-relaxed">{house.meaningAndRepresentation}</p>
-        {house.worldHalfTheme && (
-          <p className={`mt-3 text-sm font-medium ${house.worldHalf === 'inner' ? 'text-amber-400/70' : 'text-indigo-400/70'}`}>
-            {house.worldHalfTheme}
-          </p>
-        )}
-      </section>
-
-      {/* Rulers */}
-      <div className="grid md:grid-cols-2 gap-6">
-        {rulingSign && (
-          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-            <h2 className="font-serif text-xl mb-4">Natural Sign</h2>
-            <Link
-              to={`/signs/${rulingSign.id}`}
-              className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
-            >
-              <span className="text-3xl">{rulingSign.symbol}</span>
-              <div>
-                <div className="font-medium text-lg">{rulingSign.name}</div>
-                <div className="text-sm text-theme-text-secondary">{rulingSign.keyPhrase}</div>
-              </div>
-            </Link>
-          </section>
-        )}
-
-        {rulingPlanet && (
-          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-            <h2 className="font-serif text-xl mb-4">Natural Ruler</h2>
-            <Link
-              to={`/planets/${rulingPlanet.id}`}
-              className="flex items-center gap-3 p-3 bg-surface-overlay hover:bg-surface-raised rounded-lg transition-colors"
-            >
-              <span className="text-3xl">{rulingPlanet.symbol}</span>
-              <div>
-                <div className="font-medium text-lg">{rulingPlanet.name}</div>
-                <div className="text-sm text-theme-text-secondary">{rulingPlanet.archetype}</div>
-              </div>
-            </Link>
-          </section>
-        )}
-      </div>
-
-      {/* Chakra Resonance */}
-      {relatedChakra && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-4">Chakra Resonance</h2>
-          <p className="text-theme-text-tertiary text-sm mb-4">
-            In astrological alchemy, each house activates a specific energy center —
-            the chakra whose qualities mirror the life area this house governs.
-          </p>
-          <Link
-            to={`/chakras/${relatedChakra.id}`}
-            className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle mb-4"
-          >
-            <div
-              className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
-              style={{ backgroundColor: relatedChakra.colorHex + '33', border: `2px solid ${relatedChakra.colorHex}66` }}
-            >
-              {relatedChakra.symbol}
-            </div>
-            <div>
-              <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
-              <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
-              <p className="text-theme-text-tertiary text-xs mt-1">{relatedChakra.lifeTheme}</p>
-            </div>
-          </Link>
-          {relatedChakra.alchemyNote && (
-            <div
-              className="p-4 rounded-lg bg-surface-raised/30 border-l-2"
-              style={{ borderLeftColor: relatedChakra.colorHex + '90' }}
-            >
-              <p className="text-theme-text-secondary text-sm italic leading-relaxed">
-                "{relatedChakra.alchemyNote}"
+          {/* Chakra Resonance */}
+          {relatedChakra && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-4">Chakra Resonance</h2>
+              <p className="text-theme-text-tertiary text-sm mb-4">
+                In astrological alchemy, each house activates a specific energy center —
+                the chakra whose qualities mirror the life area this house governs.
               </p>
-            </div>
-          )}
-        </section>
-      )}
-
-      {/* Cross-System Resonance: HD Gates & Gene Keys */}
-      {(houseGates.length > 0 || houseGeneKeys.length > 0) && (
-        <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-2">Cross-System Resonance</h2>
-          <p className="text-theme-text-tertiary text-sm mb-4">
-            Via the natural sign of this house ({rulingSign?.name}), these HD Gates and Gene Keys carry
-            the same archetypal energy in the body graph and genetic wisdom.
-          </p>
-          {houseGates.length > 0 && (
-            <div className="mb-4">
-              <h3 className="text-humandesign-400 text-sm font-medium mb-2">Human Design Gates</h3>
-              <div className="flex flex-wrap gap-2">
-                {houseGates.map(gate => (
-                  <Link
-                    key={gate.id}
-                    to={`/human-design/${gate.id}`}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-humandesign-500/10 rounded-lg hover:bg-humandesign-500/20 transition-colors text-sm"
-                  >
-                    <span className="font-serif text-humandesign-400">{gate.gateNumber}</span>
-                    <span className="text-theme-text-secondary">{gate.name}</span>
-                  </Link>
-                ))}
+              <div
+                className="flex items-center gap-4 p-4 rounded-lg bg-surface-overlay hover:bg-surface-raised transition-colors border border-theme-border-subtle mb-4 cursor-pointer"
+                onClick={() => handleEntityClick(relatedChakra as unknown as EntityInfo)}
+              >
+                <div
+                  className="w-12 h-12 rounded-full flex-shrink-0 flex items-center justify-center text-xl"
+                  style={{ backgroundColor: relatedChakra.colorHex + '33', border: `2px solid ${relatedChakra.colorHex}66` }}
+                >
+                  {relatedChakra.symbol}
+                </div>
+                <div>
+                  <p className="text-theme-text-primary font-medium">{relatedChakra.name}</p>
+                  <p className="text-theme-text-secondary text-sm italic">{relatedChakra.sanskritName}</p>
+                  <p className="text-theme-text-tertiary text-xs mt-1">{relatedChakra.lifeTheme}</p>
+                </div>
+                <Link
+                  to={`/chakras/${relatedChakra.id}`}
+                  className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary ml-auto"
+                  onClick={e => e.stopPropagation()}
+                >
+                  Full profile →
+                </Link>
               </div>
-            </div>
+              {relatedChakra.alchemyNote && (
+                <div
+                  className="p-4 rounded-lg bg-surface-raised/30 border-l-2"
+                  style={{ borderLeftColor: relatedChakra.colorHex + '90' }}
+                >
+                  <p className="text-theme-text-secondary text-sm italic leading-relaxed">
+                    "{relatedChakra.alchemyNote}"
+                  </p>
+                </div>
+              )}
+            </section>
           )}
-          {houseGeneKeys.length > 0 && (
-            <div>
-              <h3 className="text-genekey-400 text-sm font-medium mb-2">Gene Keys</h3>
-              <div className="flex flex-wrap gap-2">
-                {houseGeneKeys.map(gk => (
-                  <Link
-                    key={gk.id}
-                    to={`/gene-keys/${gk.id}`}
-                    className="flex items-center gap-1.5 px-3 py-1.5 bg-genekey-500/10 rounded-lg hover:bg-genekey-500/20 transition-colors text-sm"
-                  >
-                    <span className="font-serif text-genekey-400">{gk.keyNumber}</span>
-                    <span className="text-theme-text-secondary">{gk.name}</span>
-                    <span className="text-theme-text-muted">·</span>
-                    <span className="text-emerald-400/70 text-xs">{gk.gift.name}</span>
-                  </Link>
+
+          {/* Cross-System Resonance: HD Gates & Gene Keys */}
+          {(houseGates.length > 0 || houseGeneKeys.length > 0) && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-2">Cross-System Resonance</h2>
+              <p className="text-theme-text-tertiary text-sm mb-4">
+                Via the natural sign of this house ({rulingSign?.name}), these HD Gates and Gene Keys carry
+                the same archetypal energy in the body graph and genetic wisdom.
+              </p>
+              {houseGates.length > 0 && (
+                <div className="mb-4">
+                  <h3 className="text-humandesign-400 text-sm font-medium mb-2">Human Design Gates</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {houseGates.map(gate => (
+                      <div
+                        key={gate.id}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-humandesign-500/10 rounded-lg hover:bg-humandesign-500/20 transition-colors text-sm cursor-pointer"
+                        onClick={() => handleEntityClick(gate as unknown as EntityInfo)}
+                      >
+                        <span className="font-serif text-humandesign-400">{gate.gateNumber}</span>
+                        <span className="text-theme-text-secondary">{gate.name}</span>
+                        <Link
+                          to={`/human-design/${gate.id}`}
+                          className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary"
+                          onClick={e => e.stopPropagation()}
+                        >
+                          →
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+              {houseGeneKeys.length > 0 && (
+                <div>
+                  <h3 className="text-genekey-400 text-sm font-medium mb-2">Gene Keys</h3>
+                  <div className="flex flex-wrap gap-2">
+                    {houseGeneKeys.map(gk => (
+                      <div
+                        key={gk.id}
+                        className="flex items-center gap-1.5 px-3 py-1.5 bg-genekey-500/10 rounded-lg hover:bg-genekey-500/20 transition-colors text-sm cursor-pointer"
+                        onClick={() => handleEntityClick(gk as unknown as EntityInfo)}
+                      >
+                        <span className="font-serif text-genekey-400">{gk.keyNumber}</span>
+                        <span className="text-theme-text-secondary">{gk.name}</span>
+                        <span className="text-theme-text-muted">·</span>
+                        <span className="text-emerald-400/70 text-xs">{gk.gift.name}</span>
+                        <Link
+                          to={`/gene-keys/${gk.id}`}
+                          className="text-xs text-theme-text-tertiary hover:text-theme-text-secondary"
+                          onClick={e => e.stopPropagation()}
+                        >
+                          →
+                        </Link>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
+
+          {/* Contemplation Questions */}
+          {house.contemplationQuestions && house.contemplationQuestions.length > 0 && (
+            <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-4">Contemplation Questions</h2>
+              <ul className="space-y-3">
+                {house.contemplationQuestions.map((question, index) => (
+                  <li key={index} className="flex gap-3 text-theme-text-secondary">
+                    <span className="text-theme-text-tertiary">{index + 1}.</span>
+                    <span className="italic">{question}</span>
+                  </li>
                 ))}
-              </div>
-            </div>
+              </ul>
+            </section>
           )}
-        </section>
-      )}
 
-      {/* Contemplation Questions */}
-      {house.contemplationQuestions && house.contemplationQuestions.length > 0 && (
-        <section className="bg-gradient-to-br from-neutral-800/50 to-neutral-900/50 rounded-xl p-6 border border-theme-border-subtle">
-          <h2 className="font-serif text-xl mb-4">Contemplation Questions</h2>
-          <ul className="space-y-3">
-            {house.contemplationQuestions.map((question, index) => (
-              <li key={index} className="flex gap-3 text-theme-text-secondary">
-                <span className="text-theme-text-tertiary">{index + 1}.</span>
-                <span className="italic">{question}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )}
+          {/* House Type Explanation */}
+          <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+            <h2 className="font-serif text-xl mb-4">About {house.houseType} Houses</h2>
+            <p className="text-theme-text-secondary leading-relaxed">
+              {house.houseType === 'Angular' && (
+                "Angular houses (1st, 4th, 7th, 10th) are the most powerful positions in the chart. Planets here express themselves strongly and visibly. These houses represent the cardinal points of identity, home, relationships, and career."
+              )}
+              {house.houseType === 'Succedent' && (
+                "Succedent houses (2nd, 5th, 8th, 11th) follow the angular houses and represent resources, values, and consolidation of the angular house themes. Planets here provide stability and depth."
+              )}
+              {house.houseType === 'Cadent' && (
+                "Cadent houses (3rd, 6th, 9th, 12th) are houses of learning, adaptation, and transition. Planets here work more subtly, influencing mental processes and behind-the-scenes activities."
+              )}
+            </p>
+          </section>
 
-      {/* House Type Explanation */}
-      <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-        <h2 className="font-serif text-xl mb-4">About {house.houseType} Houses</h2>
-        <p className="text-theme-text-secondary leading-relaxed">
-          {house.houseType === 'Angular' && (
-            "Angular houses (1st, 4th, 7th, 10th) are the most powerful positions in the chart. Planets here express themselves strongly and visibly. These houses represent the cardinal points of identity, home, relationships, and career."
-          )}
-          {house.houseType === 'Succedent' && (
-            "Succedent houses (2nd, 5th, 8th, 11th) follow the angular houses and represent resources, values, and consolidation of the angular house themes. Planets here provide stability and depth."
-          )}
-          {house.houseType === 'Cadent' && (
-            "Cadent houses (3rd, 6th, 9th, 12th) are houses of learning, adaptation, and transition. Planets here work more subtly, influencing mental processes and behind-the-scenes activities."
-          )}
-        </p>
-      </section>
-
-      {/* Navigation */}
-      <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
-        <Link to={`/houses/${prevHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
-          &larr; {prevHouse.name}
-        </Link>
-        <Link to="/houses" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
-          All Houses
-        </Link>
-        <Link to={`/houses/${nextHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
-          {nextHouse.name} &rarr;
-        </Link>
-      </nav>
+          {/* Navigation */}
+          <nav className="flex justify-between pt-6 border-t border-theme-border-subtle">
+            <Link to={`/houses/${prevHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
+              &larr; {prevHouse.name}
+            </Link>
+            <Link to="/houses" className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
+              All Houses
+            </Link>
+            <Link to={`/houses/${nextHouse.id}`} className="text-theme-text-secondary hover:text-theme-text-primary transition-colors">
+              {nextHouse.name} &rarr;
+            </Link>
+          </nav>
+        </div>
+      </div>
+      <EntityStack
+        entities={selectedEntities}
+        onCloseEntity={handleCloseEntity}
+        onEntityClick={handleEntityClick}
+      />
     </div>
   );
 }
