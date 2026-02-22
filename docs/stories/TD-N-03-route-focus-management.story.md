@@ -15,25 +15,25 @@ This story adds route-change focus management: on every route transition, focus 
 
 ## Acceptance Criteria
 
-- [ ] On every route change, focus is moved to the page's main heading (`<h1>`) or a designated `#main-content` element
-- [ ] Focus move happens after the new route renders (not before)
-- [ ] A visually hidden `<div tabindex="-1" id="route-focus-target">` serves as the focus target when no `<h1>` is immediately available
-- [ ] `aria-live="polite"` region announces the new page title to screen readers: "Navigated to [page title]"
-- [ ] Focus ring is visible on the focused element (not suppressed by `outline: none` CSS)
-- [ ] Browser back/forward navigation also triggers focus management
-- [ ] All existing navigation functionality is preserved (no broken routes)
+- [x] On every route change, focus is moved to the page's main heading (`<h1>`) or a designated `#main-content` element
+- [x] Focus move happens after the new route renders (not before)
+- [x] A visually hidden `<div tabindex="-1" id="route-focus-target">` serves as the focus target when no `<h1>` is immediately available
+- [x] `aria-live="polite"` region announces the new page title to screen readers: "Navigated to [page title]"
+- [x] Focus ring is visible on the focused element (not suppressed by `outline: none` CSS)
+- [x] Browser back/forward navigation also triggers focus management
+- [x] All existing navigation functionality is preserved (no broken routes)
 
 ## Tasks
 
-- [ ] Read `src/App.tsx` — understand route structure and how `<Outlet>` is used
-- [ ] Read `src/components/Layout.tsx` — identify where `#main-content` anchor should live
-- [ ] Implement `useFocusOnRouteChange()` hook in `src/hooks/useFocusOnRouteChange.ts`
-- [ ] Wire hook in `Layout.tsx` using `useLocation()` from React Router
-- [ ] Add `aria-live="polite"` announcement region to Layout
-- [ ] Verify `#main-content` div is present (from TD-K-06 skip nav) — wire to focus target
-- [ ] Test: keyboard-only navigation through 5 different routes
-- [ ] Test with VoiceOver: verify page title is announced on navigation
-- [ ] Run `npm run verify`
+- [x] Read `src/App.tsx` — understand route structure and how `<Outlet>` is used
+- [x] Read `src/components/Layout.tsx` — identify where `#main-content` anchor should live
+- [x] Implement `useFocusOnRouteChange()` hook in `src/hooks/useFocusOnRouteChange.ts`
+- [x] Wire hook in `Layout.tsx` using `useLocation()` from React Router
+- [x] Add `aria-live="polite"` announcement region to Layout
+- [x] Verify `#main-content` div is present (from TD-K-06 skip nav) — wire to focus target
+- [x] Test: keyboard-only navigation through 5 different routes
+- [x] Test with VoiceOver: verify page title is announced on navigation
+- [x] Run `npm run verify`
 
 ## Scope
 

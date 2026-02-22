@@ -178,6 +178,9 @@ export function ConstellationGraph({
           relationshipColors[relationship.relationshipType as RelationshipType] || '#666666',
       }));
 
+    // Settle the simulation instantly when user prefers reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
     // Create the force simulation
     const simulation = d3
       .forceSimulation<GraphNode>(nodes)
@@ -194,7 +197,9 @@ export function ConstellationGraph({
       .force(
         'collision',
         d3.forceCollide<GraphNode>().radius((d) => d.radius + 5)
-      );
+      )
+      // High alpha decay settles the layout in ~5 ticks (visually instant)
+      .alphaDecay(prefersReducedMotion ? 0.9 : 0.0228);
 
     // Create container groups
     const g = svg.append('g');

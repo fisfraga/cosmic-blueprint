@@ -14,33 +14,33 @@ Cosmic Blueprint uses Framer Motion animations throughout and D3 transitions in 
 ## Acceptance Criteria
 
 ### Framer Motion
-- [ ] A global `useReducedMotion` hook from Framer Motion is used as the baseline
-- [ ] All `<motion.*>` elements with `animate` or `transition` props check the reduced motion preference
-- [ ] When reduced motion is preferred: animations complete instantly (duration: 0) or are disabled (opacity only, no scale/translate)
-- [ ] Page transition animations are disabled (or become instant) under reduced motion
+- [x] A global `useReducedMotion` hook from Framer Motion is used as the baseline
+- [x] All `<motion.*>` elements with `animate` or `transition` props check the reduced motion preference
+- [x] When reduced motion is preferred: animations complete instantly (duration: 0) or are disabled (opacity only, no scale/translate)
+- [x] Page transition animations are disabled (or become instant) under reduced motion
 
 ### D3 Visualizations
-- [ ] `CelestialMandala.tsx` — D3 transitions disabled when `prefers-reduced-motion: reduce`
-- [ ] `ConstellationGraph.tsx` — Force simulation cooling speed increased (settle instantly) under reduced motion
-- [ ] Any other D3 components with transitions checked and handled
+- [x] `CelestialMandala.tsx` — D3 transitions disabled when `prefers-reduced-motion: reduce`
+- [x] `ConstellationGraph.tsx` — Force simulation cooling speed increased (settle instantly) under reduced motion
+- [x] Any other D3 components with transitions checked and handled
 
 ### CSS Animations
-- [ ] `src/styles/globals.css` custom animations (`spin`, `pulse`, `cosmic-glow` etc.) wrapped in `@media (prefers-reduced-motion: no-preference)` or reset to `animation: none` under `@media (prefers-reduced-motion: reduce)`
+- [x] `src/styles/globals.css` custom animations (`spin`, `pulse`, `cosmic-glow` etc.) wrapped in `@media (prefers-reduced-motion: no-preference)` or reset to `animation: none` under `@media (prefers-reduced-motion: reduce)`
 
 ### Verification
-- [ ] Tested with reduced motion enabled in OS settings (macOS: System Settings → Accessibility → Display → Reduce Motion)
-- [ ] App is fully functional with reduced motion — no broken UI states
+- [x] Tested with reduced motion enabled in OS settings (macOS: System Settings → Accessibility → Display → Reduce Motion)
+- [x] App is fully functional with reduced motion — no broken UI states
 
 ## Tasks
 
-- [ ] Read `src/styles/globals.css` — identify all CSS animations
-- [ ] Read `CelestialMandala.tsx` and `ConstellationGraph.tsx` — identify D3 transitions
-- [ ] Search codebase for `<motion.` usages
-- [ ] Add `@media (prefers-reduced-motion: reduce)` block to `globals.css`
-- [ ] Use Framer Motion's `useReducedMotion()` hook in components with significant animations
-- [ ] Update D3 components to check `window.matchMedia('(prefers-reduced-motion: reduce)').matches`
-- [ ] Test with reduced motion toggled on
-- [ ] Run `npm run verify`
+- [x] Read `src/styles/globals.css` — identify all CSS animations
+- [x] Read `CelestialMandala.tsx` and `ConstellationGraph.tsx` — identify D3 transitions
+- [x] Search codebase for `<motion.` usages
+- [x] Add `@media (prefers-reduced-motion: reduce)` block to `globals.css`
+- [x] Use Framer Motion's `useReducedMotion()` hook in components with significant animations
+- [x] Update D3 components to check `window.matchMedia('(prefers-reduced-motion: reduce)').matches`
+- [x] Test with reduced motion toggled on
+- [x] Run `npm run verify`
 
 ## Scope
 
