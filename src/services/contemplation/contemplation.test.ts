@@ -261,3 +261,72 @@ describe('loadCustomTypes', () => {
     }
   });
 });
+
+// ─── Sprint V — Ra Uru Hu HD depth layer ─────────────────────────────────────
+
+describe('Sprint V humanDesign Ra Uru Hu depth layer', () => {
+  const hdTypes = CONTEMPLATION_TYPES['humanDesign'];
+  const hdIds = hdTypes.map(t => t.id);
+
+  it('deconditioningJourney is in humanDesign category', () => {
+    expect(hdIds).toContain('deconditioningJourney' as ContemplationType);
+  });
+
+  it('typeExperimentSetup is in humanDesign category', () => {
+    expect(hdIds).toContain('typeExperimentSetup' as ContemplationType);
+  });
+
+  it('notSelfDiagnosis is in humanDesign category', () => {
+    expect(hdIds).toContain('notSelfDiagnosis' as ContemplationType);
+  });
+
+  it('deconditioningJourney has level advanced', () => {
+    const t = hdTypes.find(t => t.id === 'deconditioningJourney');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
+  });
+
+  it('typeExperimentSetup has level beginner', () => {
+    const t = hdTypes.find(t => t.id === 'typeExperimentSetup');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('beginner');
+  });
+
+  it('notSelfDiagnosis has level advanced', () => {
+    const t = hdTypes.find(t => t.id === 'notSelfDiagnosis');
+    expect(t).toBeDefined();
+    expect(t?.level).toBe('advanced');
+  });
+
+  it('Sprint V types do not appear in other categories', () => {
+    const v03Types: ContemplationType[] = ['deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis'];
+    const nonHDCategories: ContemplationCategory[] = [
+      'astrology', 'geneKeys', 'crossSystem', 'lifeOS',
+      'alchemy', 'numerology', 'cosmicEmbodiment', 'fixedStars', 'galacticAstrology',
+    ];
+    for (const cat of nonHDCategories) {
+      const ids = CONTEMPLATION_TYPES[cat].map(t => t.id);
+      for (const typeId of v03Types) {
+        expect(ids, `${typeId} should not appear in ${cat}`).not.toContain(typeId);
+      }
+    }
+  });
+
+  it('Sprint V types do not require needsFocus (full-profile readings)', () => {
+    const v03Ids = ['deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis'];
+    for (const id of v03Ids) {
+      const t = hdTypes.find(opt => opt.id === id);
+      expect(t?.needsFocus, `${id} should not require needsFocus`).toBeFalsy();
+    }
+  });
+
+  it('all Sprint V types have non-empty name and description', () => {
+    const v03Ids = ['deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis'];
+    for (const id of v03Ids) {
+      const t = hdTypes.find(opt => opt.id === id);
+      expect(t, `Type ${id} not found`).toBeDefined();
+      expect(t?.name.length, `${id} name should not be empty`).toBeGreaterThan(0);
+      expect(t?.description.length, `${id} description should not be empty`).toBeGreaterThan(0);
+    }
+  });
+});

@@ -1284,6 +1284,88 @@ Explore:
 Link their profile (e.g., [[hd-profile-3-5|3/5 Profile]]) and the individual lines.`,
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // HUMAN DESIGN — RA URU HU DEPTH LAYER (Sprint V)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  deconditioningJourney: `CONTEMPLATION TYPE: Deconditioning Journey
+
+PRINCIPLE: Ra Uru Hu taught that deconditioning from a lifetime of conditioning takes approximately seven years — not as an intellectual process, but as a somatic one. The body must be allowed to live its life through Strategy and Authority long enough for the nervous system to reset. You are here to help the seeker understand where they may be in that arc and what is being asked of them now.
+
+VERIFICATION PRINCIPLE: Never present this as fact. Human Design is a hypothesis to be tested. Always frame as: "This is what the design suggests — your own experience will confirm or refute it."
+
+BODY IS AUTHORITY: Never instruct the seeker to think their way to clarity. The mind is not the decision-maker. Your role is to help them orient toward the body's signals, not toward mental analysis.
+
+FROM THE PROFILE:
+- HD Type and its deconditioningJourney content
+- Authority type and its somatic cue
+- Undefined Centers: each center NOT in the user's definedCenterIds, with undefinedConditioning for each
+
+YOUR TASK:
+1. Frame where the seeker may be in the deconditioning arc for their type — acknowledge that only their direct experience can confirm this
+2. Identify the two or three undefined centers most likely generating the strongest conditioning (usually those connected to relational environment — Solar Plexus, Sacral, Heart)
+3. For each, offer: the wisdom potential (undefinedWisdom), the conditioning pattern (undefinedConditioning), and the diagnostic question (conditioningQuestion) — inviting somatic self-inquiry, not mental analysis
+4. Close with what Ra called the key shift: "I'm not this; this is what is moving through me right now" — the witness position toward undefined centers
+5. Offer one somatic practice for this week aligned with their type's deconditioning arc
+
+LANGUAGE: Never say "you are conditioned." Say "this energy invites you to notice..." / "the design suggests you may be experiencing..." / "one possibility is..."
+
+Link the user's type (e.g., [[hd-type-generator|Generator]]) and relevant centers.`,
+
+  typeExperimentSetup: `CONTEMPLATION TYPE: Type Experiment Setup
+
+PRINCIPLE: Ra Uru Hu's core teaching: "Don't believe a thing I tell you. Try it for yourself." Human Design is not a belief system — it is a hypothesis to be verified through 90 days of lived experiment. You are here to set up a specific, personalized experiment for this seeker.
+
+FROM THE PROFILE:
+- HD Type with strategyId and experimentInstruction content
+- Authority type with its somatic cue
+- Not-Self Theme (notSelfEmotion) — the signal that the experiment is needed
+- Signature Emotion (signatureEmotion) — the signal the experiment is working
+
+YOUR TASK — Generate a complete 90-day experiment protocol:
+
+1. THE CORE EXPERIMENT: State the type-specific strategy in the most concrete, behavioral terms possible. What does "wait to respond" look like in a real day? What counts as "informing"? What does a genuine invitation feel like vs. a polite acknowledgment? Use the experimentInstruction content as the seed.
+
+2. THREE OBSERVABLE METRICS: What can the seeker actually track over 90 days?
+   - Metric 1: Frequency of the Not-Self Theme emotion (how often does it arise, and in what contexts?)
+   - Metric 2: Quality of decisions made through authority vs. through mental analysis — compare outcomes over time
+   - Metric 3: Type-specific signal (Generators: did the gut actually respond? Projectors: was there a clear invitation? etc.)
+
+3. AUTHORITY PRACTICE: Walk them through their specific authority applied to one real decision they are currently facing. Name the decision. Walk through the exact somatic process step by step.
+
+4. THE DIAGNOSTIC SIGNAL: Explain that the Not-Self Theme emotion is not failure — it is information. Every time it arises, the experiment has just provided a data point.
+
+5. THE SUCCESS SIGNAL: Describe what the Signature Emotion feels like in the body — how they will know the experiment is working.
+
+TONE: Encouraging but non-directive. You are a fellow experimenter, not a teacher delivering truth.
+
+Link the user's type (e.g., [[hd-type-projector|Projector]]) and strategy.`,
+
+  notSelfDiagnosis: `CONTEMPLATION TYPE: Not-Self Diagnosis
+
+PRINCIPLE: Ra Uru Hu taught that the Not-Self is the accumulated conditioning the mind misidentifies as "me." The mechanism: undefined centers absorb and amplify energy from defined beings in the environment. Without Strategy and Authority, the mind takes this amplified energy and treats it as identity or decision-making signal. The diagnosis is not judgment — it is mechanical recognition.
+
+ANTI-PATTERN WARNING: Never frame undefined centers as problems, weaknesses, or things to be fixed. Explicitly: "Treating Open Centers as Problems" was Ra's primary anti-pattern. Undefined centers are where wisdom accumulates AND where conditioning operates — both are true.
+
+FROM THE PROFILE:
+- Defined Centers: those in the user's definedCenterIds
+- Undefined Centers: all 9 centers NOT in definedCenterIds
+- For each undefined center: undefinedWisdom, undefinedConditioning, conditioningQuestion
+
+YOUR TASK:
+1. Open by naming the defined centers — these are consistent and reliable. "These centers are yours."
+2. For each undefined center, offer a three-part frame:
+   a. WISDOM POTENTIAL: undefinedWisdom — what this openness accumulates
+   b. CONDITIONING PATTERN: undefinedConditioning — what the mind does with borrowed energy
+   c. DIAGNOSTIC QUESTION: conditioningQuestion — Ra's self-inquiry question, offered as an invitation, not a test
+3. After the scan, invite the seeker to notice: which conditioning pattern resonates most with recent experiences? Which feels most active right now?
+4. Offer Ra's key frame: "I'm not this; this is what is moving through me right now." Explain the witness position — not detachment, but recognition.
+5. Close with: the Not-Self emotion is the alarm that wakes you up. When it arises, pause, apply the conditioningQuestion for the most active undefined center, and return to Strategy and Authority.
+
+LANGUAGE: "This energy invites you to notice..." / "The design suggests you may be experiencing..." — never deterministic.
+
+Link relevant centers (e.g., [[sacral-center|Sacral Center]], [[heart-center|Heart Center]]) and the user's type.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // GENE KEYS CONTEMPLATION TYPES
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -2446,6 +2528,11 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   galacticProfile: 'deep',
   galacticPointReading: 'deep',
   galacticAlignment: 'standard',
+
+  // Human Design — Ra Uru Hu depth layer (Sprint V)
+  deconditioningJourney: 'deep',
+  typeExperimentSetup: 'deep',
+  notSelfDiagnosis: 'deep',
 };
 
 export function getFormatGuidelines(contemplationType: string): string {
@@ -2538,6 +2625,11 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   galacticProfile: 'opus',
   galacticPointReading: 'opus',
   galacticAlignment: 'sonnet',
+
+  // Human Design — Ra Uru Hu depth layer (Sprint V)
+  deconditioningJourney: 'opus',
+  typeExperimentSetup: 'sonnet',
+  notSelfDiagnosis: 'opus',
 };
 
 export function getModelForType(contemplationType: string): ModelTier {
@@ -2631,7 +2723,10 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   if (analyzerTypes.includes(contemplationType)) return 'analyzer';
 
   // Life guidance types use counselor persona
-  const counselorTypes = ['transitOverview', 'transitReading', 'typeStrategy', 'authorityCheckIn', 'centerAwareness', 'fixedStarTransit', 'galacticAlignment'];
+  const counselorTypes = ['transitOverview', 'transitReading', 'typeStrategy', 'authorityCheckIn', 'centerAwareness', 'fixedStarTransit', 'galacticAlignment',
+    // Ra Uru Hu deconditioning types (Sprint V)
+    'deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis',
+  ];
   if (counselorTypes.includes(contemplationType)) return 'counselor';
 
   // Gene Keys contemplation types stay with guide

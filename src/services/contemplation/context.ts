@@ -39,6 +39,10 @@ export type ContemplationType =
   | 'centerAwareness'
   | 'centerOverview'
   | 'profileExploration'
+  // Human Design — Ra Uru Hu experimental depth layer (Sprint V)
+  | 'deconditioningJourney'
+  | 'typeExperimentSetup'
+  | 'notSelfDiagnosis'
   // Gene Keys
   | 'activationSequence'
   | 'venusSequence'

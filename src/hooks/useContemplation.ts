@@ -205,7 +205,11 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'gateContemplation',  name: 'Gate Contemplation', description: 'Explore a specific gate',         needsFocus: true,             level: 'advanced' },
     { id: 'channelExploration', name: 'Channel Exploration',description: 'Explore a specific channel',      needsFocus: true,             level: 'advanced' },
     { id: 'centerAwareness',    name: 'Center Awareness',   description: 'Explore a specific center',       needsFocus: true,             level: 'advanced' },
-    { id: 'profileExploration', name: 'Profile Lines',      description: 'Your conscious/unconscious roles',                              level: 'beginner' },
+    { id: 'profileExploration',    name: 'Profile Lines',            description: 'Your conscious/unconscious roles',                    level: 'beginner' },
+    // Ra Uru Hu experimental depth layer (Sprint V)
+    { id: 'deconditioningJourney', name: 'Deconditioning Journey',   description: 'Map your 7-year somatic deconditioning arc',           level: 'advanced' },
+    { id: 'typeExperimentSetup',   name: 'Type Experiment Setup',    description: '90-day personalized experiment for your type',         level: 'beginner' },
+    { id: 'notSelfDiagnosis',      name: 'Not-Self Diagnosis',       description: 'Scan your undefined centers for active conditioning',  level: 'advanced' },
   ],
   geneKeys: [
     { id: 'shadowOverview',      name: 'All Shadows',          description: 'Explore all your shadow patterns',                    level: 'beginner' },
