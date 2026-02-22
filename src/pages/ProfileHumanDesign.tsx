@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
-import { hdGates, hdCenters, hdChannels, hdTypes, geneKeys, hdLines, codonRings } from '../data';
+import { hdGates, hdCenters, hdChannels, hdTypes, geneKeys, hdLines, codonRings, hdAuthorities } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
 import { BodyGraphCentersOnly } from '../components/BodyGraph';
 import { NeutrinoWidget } from '../components/NeutrinoWidget';
@@ -77,6 +77,20 @@ export function ProfileHumanDesign() {
       </div>
     );
   }
+
+  // Authority deep dive lookup
+  const AUTHORITY_ID_MAP: Record<string, string> = {
+    'Emotional': 'hd-authority-emotional',
+    'Sacral': 'hd-authority-sacral',
+    'Splenic': 'hd-authority-splenic',
+    'Ego/Heart': 'hd-authority-ego',
+    'Self/G': 'hd-authority-self-projected',
+    'Mental/None': 'hd-authority-mental',
+    'Lunar': 'hd-authority-lunar',
+  };
+  const authorityEntity = hdProfile.authority
+    ? hdAuthorities.get(AUTHORITY_ID_MAP[hdProfile.authority] ?? '')
+    : undefined;
 
   // All 9 centers
   const allCenters = [
@@ -263,6 +277,69 @@ export function ProfileHumanDesign() {
           </Link>
         </div>
       </div>
+
+      {/* Your Decision Authority — deep dive section */}
+      {authorityEntity && (
+        <div className="bg-humandesign-500/10 rounded-xl p-6 border border-humandesign-500/20 mb-6">
+          <h2 className="font-serif text-xl text-theme-text-primary mb-1">Your Decision Authority</h2>
+          <p className="text-amber-300 font-medium mb-4">{authorityEntity.name}</p>
+
+          {/* How It Works + Timeframe row */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <div>
+              <p className="text-theme-text-tertiary text-xs uppercase tracking-wide mb-1">How It Works</p>
+              <p className="text-theme-text-secondary text-sm leading-relaxed">{authorityEntity.decisionProcess}</p>
+            </div>
+            <div>
+              <p className="text-theme-text-tertiary text-xs uppercase tracking-wide mb-1">Timeframe</p>
+              <p className="text-theme-text-secondary text-sm">{authorityEntity.timeframe}</p>
+            </div>
+          </div>
+
+          {/* Somatic Cue */}
+          {authorityEntity.somaticCue && (
+            <div className="bg-amber-500/10 rounded-lg p-3 mb-3">
+              <p className="text-amber-300 text-xs uppercase tracking-wide mb-1">Body Signal</p>
+              <p className="text-theme-text-secondary text-sm">{authorityEntity.somaticCue}</p>
+            </div>
+          )}
+
+          {/* Common Override */}
+          {authorityEntity.commonOverride && (
+            <div className="bg-surface-base/50 rounded-lg p-3 mb-3 border border-theme-border-subtle">
+              <p className="text-theme-text-tertiary text-xs uppercase tracking-wide mb-1">Common Override</p>
+              <p className="text-theme-text-muted text-sm">{authorityEntity.commonOverride}</p>
+            </div>
+          )}
+
+          {/* Wave Mechanic — Emotional authority only */}
+          {authorityEntity.id === 'hd-authority-emotional' && authorityEntity.waveMechanic && (
+            <div className="mb-3">
+              <p className="text-theme-text-tertiary text-xs uppercase tracking-wide mb-1">Wave Mechanics</p>
+              <p className="text-theme-text-secondary text-sm">{authorityEntity.waveMechanic}</p>
+            </div>
+          )}
+
+          {/* Signs: correct / incorrect */}
+          <div className="grid grid-cols-2 gap-3 mb-4">
+            <div className="bg-emerald-500/10 rounded-lg p-3">
+              <p className="text-emerald-400 text-xs uppercase tracking-wide mb-1">In Alignment</p>
+              <p className="text-theme-text-secondary text-sm">{authorityEntity.signs.correct}</p>
+            </div>
+            <div className="bg-amber-500/5 rounded-lg p-3 border border-amber-500/20">
+              <p className="text-amber-400/60 text-xs uppercase tracking-wide mb-1">Off-Track</p>
+              <p className="text-theme-text-muted text-sm">{authorityEntity.signs.incorrect}</p>
+            </div>
+          </div>
+
+          <Link
+            to={`/human-design/authorities/${authorityEntity.id}`}
+            className="text-amber-300 text-sm hover:underline"
+          >
+            Full Authority Guide →
+          </Link>
+        </div>
+      )}
 
       {/* Profile Lines Detail */}
       <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
