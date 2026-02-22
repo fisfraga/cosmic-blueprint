@@ -1,6 +1,6 @@
 # HOTFIX-02: Fix Retrograde Status Calculation
 
-**Status:** Ready
+**Status:** Done
 **Priority:** HIGH
 **Points:** 3
 **Source:** DB-AUDIT HIGH-01
@@ -18,11 +18,11 @@ As a user viewing my transits or natal chart, I need to see which planets are re
 
 ## Acceptance Criteria
 
-- [ ] Given a planet that is astronomically retrograde (apparent backward motion), the system returns `retrograde: true`
-- [ ] Given a planet that is direct (normal motion), the system returns `retrograde: false`
-- [ ] The calculation works for all planets (Mercury through Pluto; Sun and Moon are never retrograde)
-- [ ] Transit positions include correct retrograde status
-- [ ] Natal chart positions include correct retrograde status at birth time
+- [x] Given a planet that is astronomically retrograde (apparent backward motion), the system returns `retrograde: true`
+- [x] Given a planet that is direct (normal motion), the system returns `retrograde: false`
+- [x] The calculation works for all planets (Mercury through Pluto; Sun and Moon are never retrograde)
+- [x] Transit positions include correct retrograde status
+- [x] Natal chart positions include correct retrograde status at birth time
 
 ## Dev Notes
 
@@ -76,3 +76,19 @@ The ephemeris service already provides daily positions, so this is essentially a
 - `src/services/chartCalculation.ts` (modify — retrograde calculation)
 - `src/services/transits.ts` (modify — if retrograde is hardcoded here too)
 - `src/services/chartCalculation.test.ts` (add retrograde test cases)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

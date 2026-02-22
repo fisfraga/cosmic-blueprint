@@ -1,6 +1,6 @@
 # Sprint S: Brady's Parans — Heliacal Rising/Setting
 
-**Status:** Ready
+**Status:** Done
 **Priority:** Medium
 **Points:** 5
 
@@ -17,11 +17,11 @@ Brady's Parans (from Bernadette Brady's work) identify fixed stars that share an
 
 ## Acceptance Criteria
 
-- [ ] Given birth lat/lng and date, compute for each fixed star when it rises, sets, culminates, and anti-culminates on the birth date
-- [ ] For each star angle event, check if any natal planet was also on an angle at that time
-- [ ] Display paran results grouped by star in ProfileFixedStars page
-- [ ] If a star makes no parans, it is not shown in the parans section
-- [ ] Parans are computed using the existing `astronomy-engine` library
+- [x] Given birth lat/lng and date, compute for each fixed star when it rises, sets, culminates, and anti-culminates on the birth date
+- [x] For each star angle event, check if any natal planet was also on an angle at that time
+- [x] Display paran results grouped by star in ProfileFixedStars page
+- [x] If a star makes no parans, it is not shown in the parans section
+- [x] Parans are computed using the existing `astronomy-engine` library
 
 ## Dev Notes
 
@@ -50,3 +50,19 @@ Fixed stars in `fixed-stars.json` only have `eclipticLongitude` (no RA/Dec). The
 ## Scope
 **IN:** Paran computation for all 15 fixed stars in fixed-stars.json, display in ProfileFixedStars
 **OUT:** Interpretation text for parans, paran search for transiting planets (natal only), per-star RA/Dec data enrichment
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

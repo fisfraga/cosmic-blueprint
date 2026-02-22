@@ -1,6 +1,6 @@
 # O-05: Production Environment & Secrets Management
 
-**Status:** Ready
+**Status:** Done
 **Priority:** MEDIUM
 **Points:** 5
 **Sprint:** O — Infrastructure
@@ -21,13 +21,13 @@ Currently:
 
 ## Acceptance Criteria
 
-- [ ] `.env.production.example` documents all required production environment variables
-- [ ] Clear separation: which vars are build-time (`VITE_*`) vs runtime (server-side)
-- [ ] `docker-compose.prod.yml` references env vars without embedding secrets in files
-- [ ] Supabase self-hosted keys (JWT secret, anon key, service role key) documented
-- [ ] Guide covers generating Supabase JWT keys for self-hosted deployment
-- [ ] `.env.production` is in `.gitignore` (verify)
-- [ ] `docs/guides/environment-variables.md` maps every variable to its purpose and required context
+- [x] `.env.production.example` documents all required production environment variables
+- [x] Clear separation: which vars are build-time (`VITE_*`) vs runtime (server-side)
+- [x] `docker-compose.prod.yml` references env vars without embedding secrets in files
+- [x] Supabase self-hosted keys (JWT secret, anon key, service role key) documented
+- [x] Guide covers generating Supabase JWT keys for self-hosted deployment
+- [x] `.env.production` is in `.gitignore` (verify)
+- [x] `docs/guides/environment-variables.md` maps every variable to its purpose and required context
 
 ## Dev Notes
 
@@ -91,3 +91,19 @@ The `.env.production` file lives on the VPS at `/opt/cosmic-blueprint/.env.produ
 - `docs/guides/environment-variables.md` (new)
 - `.gitignore` (verify — ensure .env.production is excluded)
 - `docker-compose.prod.yml` (modify — env_file reference)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

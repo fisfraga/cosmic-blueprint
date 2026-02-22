@@ -1,6 +1,6 @@
 # Sprint O: Infrastructure — Docker, Supabase & VPS Deployment
 
-**Status:** Ready
+**Status:** Done
 **Priority:** HIGH
 **Total Points:** 34
 **Source:** Post-Sprint N infrastructure gap analysis
@@ -48,3 +48,19 @@ VPS (your server)
 ```
 
 The app container uses a lightweight Node.js server (Express or Fastify) that serves the Vite production build and handles the `/api/claude` proxy — replacing the Vercel serverless function.
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

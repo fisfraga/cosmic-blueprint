@@ -1,6 +1,6 @@
 # O-06: Health Checks, Logging & Monitoring Baseline
 
-**Status:** Ready
+**Status:** Done
 **Priority:** MEDIUM
 **Points:** 3
 **Sprint:** O — Infrastructure
@@ -21,13 +21,13 @@ The production server (from O-01) will have a basic `/health` endpoint, but:
 
 ## Acceptance Criteria
 
-- [ ] `GET /health` returns JSON: `{ status: "ok", version: "...", uptime: N }`
-- [ ] `GET /health` checks database connectivity (Supabase ping) and returns degraded status if DB is unreachable
-- [ ] All HTTP requests logged in structured JSON format (timestamp, method, path, status, duration_ms)
-- [ ] API errors logged with stack traces in production
-- [ ] Docker Compose configures log rotation (`max-size`, `max-file`)
-- [ ] Docker health check auto-restarts unhealthy containers
-- [ ] `scripts/check-health.sh` — simple curl-based health check for external monitoring (cron/uptime services)
+- [x] `GET /health` returns JSON: `{ status: "ok", version: "...", uptime: N }`
+- [x] `GET /health` checks database connectivity (Supabase ping) and returns degraded status if DB is unreachable
+- [x] All HTTP requests logged in structured JSON format (timestamp, method, path, status, duration_ms)
+- [x] API errors logged with stack traces in production
+- [x] Docker Compose configures log rotation (`max-size`, `max-file`)
+- [x] Docker health check auto-restarts unhealthy containers
+- [x] `scripts/check-health.sh` — simple curl-based health check for external monitoring (cron/uptime services)
 
 ## Dev Notes
 
@@ -125,3 +125,19 @@ exit 0
 - `docker-compose.prod.yml` (modify — add logging config)
 - `scripts/check-health.sh` (new)
 - `package.json` (modify — if adding pino dependency)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

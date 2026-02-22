@@ -1,6 +1,6 @@
 # O-03: Nginx Reverse Proxy + SSL/TLS
 
-**Status:** Ready
+**Status:** Done
 **Priority:** HIGH
 **Points:** 5
 **Sprint:** O — Infrastructure
@@ -20,14 +20,14 @@ The app container (O-01) listens on port 3000 internally. Without a reverse prox
 
 ## Acceptance Criteria
 
-- [ ] Nginx config proxies `yourdomain.com` → app container on port 3000
-- [ ] SSL certificates auto-provisioned via Let's Encrypt (certbot)
-- [ ] HTTP → HTTPS redirect enforced
-- [ ] Security headers applied (HSTS, X-Frame-Options, X-Content-Type-Options, CSP)
-- [ ] WebSocket upgrade supported (for Supabase Realtime, if needed)
-- [ ] Supabase Studio accessible only from localhost or via SSH tunnel (not publicly exposed)
-- [ ] Nginx container defined in `docker-compose.prod.yml`
-- [ ] Certificate auto-renewal via certbot cron or timer
+- [x] Nginx config proxies `yourdomain.com` → app container on port 3000
+- [x] SSL certificates auto-provisioned via Let's Encrypt (certbot)
+- [x] HTTP → HTTPS redirect enforced
+- [x] Security headers applied (HSTS, X-Frame-Options, X-Content-Type-Options, CSP)
+- [x] WebSocket upgrade supported (for Supabase Realtime, if needed)
+- [x] Supabase Studio accessible only from localhost or via SSH tunnel (not publicly exposed)
+- [x] Nginx container defined in `docker-compose.prod.yml`
+- [x] Certificate auto-renewal via certbot cron or timer
 
 ## Dev Notes
 
@@ -138,3 +138,19 @@ docker compose -f docker-compose.prod.yml run --rm certbot certonly \
 - `nginx/nginx.conf` (new)
 - `nginx/conf.d/default.conf` (new)
 - `scripts/init-ssl.sh` (new)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

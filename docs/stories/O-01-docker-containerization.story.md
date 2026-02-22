@@ -1,6 +1,6 @@
 # O-01: Docker Containerization (App + API)
 
-**Status:** Ready
+**Status:** Done
 **Priority:** HIGH
 **Points:** 8
 **Sprint:** O — Infrastructure
@@ -20,14 +20,14 @@ There is no generic production server, no Dockerfile, no docker-compose, and no 
 
 ## Acceptance Criteria
 
-- [ ] A `Dockerfile` builds the app into a production container (~100-200MB)
-- [ ] The container runs a Node.js server that serves `dist/` static files and proxies `/api/claude` to OpenRouter/Anthropic
-- [ ] The container accepts configuration via environment variables (API keys, Supabase URL, etc.)
-- [ ] A `docker-compose.yml` runs the app container with proper env vars
-- [ ] A `.dockerignore` excludes `node_modules`, `.env`, `.git`, and other dev artifacts
-- [ ] `docker compose up` starts the app accessible on `http://localhost:3000`
-- [ ] The production server handles SPA routing (all non-API routes return `index.html`)
-- [ ] Health check endpoint at `GET /health` returns `200 OK`
+- [x] A `Dockerfile` builds the app into a production container (~100-200MB)
+- [x] The container runs a Node.js server that serves `dist/` static files and proxies `/api/claude` to OpenRouter/Anthropic
+- [x] The container accepts configuration via environment variables (API keys, Supabase URL, etc.)
+- [x] A `docker-compose.yml` runs the app container with proper env vars
+- [x] A `.dockerignore` excludes `node_modules`, `.env`, `.git`, and other dev artifacts
+- [x] `docker compose up` starts the app accessible on `http://localhost:3000`
+- [x] The production server handles SPA routing (all non-API routes return `index.html`)
+- [x] Health check endpoint at `GET /health` returns `200 OK`
 
 ## Dev Notes
 
@@ -102,3 +102,19 @@ services:
 - `.dockerignore` (new)
 - `server.js` (new — production server)
 - `package.json` (modify — add express/fastify dependency + start script)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

@@ -1,6 +1,6 @@
 # HOTFIX-01: Birth Location Timezone Resolution
 
-**Status:** Ready
+**Status:** Done
 **Priority:** CRITICAL
 **Points:** 8
 **Source:** DB-AUDIT CRIT-01
@@ -17,11 +17,11 @@ As a user who was born in a different timezone than where I currently live, I ne
 
 ## Acceptance Criteria
 
-- [ ] Given a birth location with lat/lng coordinates, the system determines the correct IANA timezone for that location
-- [ ] Given birth date + time + resolved timezone, the UTC conversion uses the birth timezone (not browser TZ)
-- [ ] Given an existing profile with coordinates, recalculating produces the same or corrected chart
-- [ ] Given a location near a timezone boundary, the resolution uses the precise lat/lng (not city-level approximation)
-- [ ] The timezone resolution works offline (no external API call at chart calculation time)
+- [x] Given a birth location with lat/lng coordinates, the system determines the correct IANA timezone for that location
+- [x] Given birth date + time + resolved timezone, the UTC conversion uses the birth timezone (not browser TZ)
+- [x] Given an existing profile with coordinates, recalculating produces the same or corrected chart
+- [x] Given a location near a timezone boundary, the resolution uses the precise lat/lng (not city-level approximation)
+- [x] The timezone resolution works offline (no external API call at chart calculation time)
 
 ## Dev Notes
 
@@ -72,3 +72,19 @@ Use a library that maps lat/lng to IANA timezone without network calls:
 - `src/components/ProfileCreationForm.tsx` (modify — auto-select TZ)
 - `src/services/timezoneResolver.test.ts` (new)
 - `package.json` (new dependency)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |

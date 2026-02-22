@@ -1,6 +1,6 @@
 # O-04: CI/CD Pipeline — Docker Build → Registry → VPS Deploy
 
-**Status:** Ready
+**Status:** Done
 **Priority:** HIGH
 **Points:** 8
 **Sprint:** O — Infrastructure
@@ -23,14 +23,14 @@ Currently deploying requires manual steps: SSH into VPS, pull code, rebuild, res
 
 ## Acceptance Criteria
 
-- [ ] GitHub Actions workflow builds Docker image on push to main
-- [ ] Image pushed to GitHub Container Registry (ghcr.io)
-- [ ] VPS pulls new image and restarts containers via SSH deploy step
-- [ ] Deploy only triggers after CI (lint + test + build) passes
-- [ ] Failed deploys don't take down the running app (blue-green or rolling)
-- [ ] Deploy status visible in GitHub Actions
-- [ ] Manual deploy trigger available via `workflow_dispatch`
-- [ ] Rollback possible by re-running a previous successful deploy
+- [x] GitHub Actions workflow builds Docker image on push to main
+- [x] Image pushed to GitHub Container Registry (ghcr.io)
+- [x] VPS pulls new image and restarts containers via SSH deploy step
+- [x] Deploy only triggers after CI (lint + test + build) passes
+- [x] Failed deploys don't take down the running app (blue-green or rolling)
+- [x] Deploy status visible in GitHub Actions
+- [x] Manual deploy trigger available via `workflow_dispatch`
+- [x] Rollback possible by re-running a previous successful deploy
 
 ## Dev Notes
 
@@ -130,3 +130,19 @@ Or re-run a previous successful deploy workflow in GitHub Actions.
 
 - `.github/workflows/deploy.yml` (new)
 - `docs/guides/vps-setup.md` (new — initial VPS configuration steps)
+
+---
+
+## Dev Agent Record
+
+### Agent Model Used
+Claude Sonnet 4.6
+
+### Debug Log
+- Story audit: confirmed fully implemented via codebase inspection
+- No code changes required
+
+### Change Log
+| Date | Author | Change |
+|------|--------|--------|
+| 2026-02-22 | @dev (Dex) | Confirmed already implemented; Status → Done |
