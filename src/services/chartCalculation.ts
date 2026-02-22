@@ -31,7 +31,7 @@ import { enrichProfile } from './profileEnrichment';
 // Calculation version for tracking
 const CALCULATION_VERSION = '1.0.0';
 
-// Planet IDs in standard order
+// Planet IDs in standard order (13-planet Human Design model)
 const PLANET_IDS = [
   'sun',
   'earth',
@@ -44,6 +44,8 @@ const PLANET_IDS = [
   'uranus',
   'neptune',
   'pluto',
+  'true-node',
+  'chiron',
 ] as const;
 
 // Zodiac signs for position mapping
@@ -201,13 +203,16 @@ function getGateAndLine(longitude: number): { gateNumber: number; line: number }
 }
 
 /**
- * Convert planetary positions to HD Gate activations
+ * Convert planetary positions to HD Gate activations.
+ * Exported so that scripts (e.g. calculate-profiles.ts) can recompute gate
+ * activations after injecting accurate positions from an external source.
  */
-function toGateActivations(
+export function toGateActivations(
   positions: PlanetaryPosition[],
   isPersonality: boolean
 ): HDGateActivation[] {
   const activations: HDGateActivation[] = [];
+  // 13-planet HD model: Sun, Earth, Moon, 8 traditional planets + True Node + Chiron
   const planetOrder = [
     'sun',
     'earth',
@@ -220,9 +225,11 @@ function toGateActivations(
     'uranus',
     'neptune',
     'pluto',
+    'true-node',
+    'chiron',
   ];
 
-  // Map planet names for HD compatibility
+  // Map planet IDs to display names used in gate activations
   const planetNameMap: Record<string, string> = {
     sun: 'Sun',
     earth: 'Earth',
@@ -235,6 +242,8 @@ function toGateActivations(
     uranus: 'Uranus',
     neptune: 'Neptune',
     pluto: 'Pluto',
+    'true-node': 'True Node',
+    chiron: 'Chiron',
   };
 
   for (const planetId of planetOrder) {

@@ -4,13 +4,89 @@
  * Uses the existing chart calculation pipeline to compute
  * full CosmicProfile v2 fixtures for Felipe and Duda Fraga.
  *
+ * True Node and Chiron positions are fetched from Swiss Ephemeris via a
+ * Kerykeion Python helper for maximum accuracy, then injected into the chart
+ * to override the Meeus/Keplerian approximations from ephemeris.ts.
+ *
  * Run with: npx vite-node scripts/calculate-profiles.ts
  */
 
-import { calculateProfilesFromBirthData } from '../src/services/chartCalculation';
-import type { BirthData, CosmicProfile } from '../src/types';
+import {
+  calculateProfilesFromBirthData,
+  calculateHumanDesignProfile,
+  toGateActivations,
+} from '../src/services/chartCalculation';
+import type { BirthData, CosmicProfile, PlanetaryPosition } from '../src/types';
 import { writeFileSync } from 'fs';
-import { resolve } from 'path';
+import { resolve, dirname } from 'path';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+
+// ESM-compatible __dirname
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+// Path to Python venv in astrology-service
+const PYTHON_BIN = resolve(__dirname, '../astrology-service/.venv/bin/python3');
+const HELPER_SCRIPT = resolve(__dirname, 'get-true-node-chiron.py');
+
+const ZODIAC_SIGNS = [
+  'aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo',
+  'libra', 'scorpio', 'sagittarius', 'capricorn', 'aquarius', 'pisces',
+];
+
+/**
+ * Get accurate True Node and Chiron longitudes from Swiss Ephemeris
+ * via Kerykeion Python helper. The input date should be UTC.
+ */
+function getAccurateTrueNodeAndChiron(utcDate: Date): {
+  trueNodeLon: number;
+  chironLon: number;
+  trueNodeRetro: boolean;
+  chironRetro: boolean;
+} | null {
+  try {
+    const y = utcDate.getUTCFullYear();
+    const m = utcDate.getUTCMonth() + 1;
+    const d = utcDate.getUTCDate();
+    const h = utcDate.getUTCHours();
+    const min = utcDate.getUTCMinutes();
+    const cmd = `${PYTHON_BIN} ${HELPER_SCRIPT} ${y} ${m} ${d} ${h} ${min} 0 0 UTC`;
+    const output = execSync(cmd, { encoding: 'utf8' }).trim();
+    const result = JSON.parse(output);
+    return {
+      trueNodeLon: result.true_node as number,
+      chironLon: result.chiron as number,
+      trueNodeRetro: result.true_node_retrograde as boolean,
+      chironRetro: result.chiron_retrograde as boolean,
+    };
+  } catch (err) {
+    console.warn('  Warning: Kerykeion lookup failed, using approximate values:', String(err).split('\n')[0]);
+    return null;
+  }
+}
+
+/**
+ * Override True Node and Chiron entries in a PlanetaryPosition array
+ * with values from Swiss Ephemeris.
+ */
+function patchPositions(
+  positions: PlanetaryPosition[],
+  data: { trueNodeLon: number; chironLon: number; trueNodeRetro: boolean; chironRetro: boolean }
+): PlanetaryPosition[] {
+  return positions.map(p => {
+    if (p.planetId === 'true-node' || p.planetId === 'chiron') {
+      const lon = p.planetId === 'true-node' ? data.trueNodeLon : data.chironLon;
+      const retro = p.planetId === 'true-node' ? data.trueNodeRetro : data.chironRetro;
+      const normalizedLon = ((lon % 360) + 360) % 360;
+      const signIndex = Math.floor(normalizedLon / 30);
+      const degreeInSign = normalizedLon % 30;
+      const degree = Math.floor(degreeInSign);
+      const minute = Math.floor((degreeInSign - degree) * 60);
+      return { ...p, longitude: lon, signId: ZODIAC_SIGNS[signIndex], degree, minute, retrograde: retro };
+    }
+    return p;
+  });
+}
 
 const felipeBirthData: BirthData = {
   dateOfBirth: '1994-10-18',
@@ -36,7 +112,31 @@ function buildCosmicProfile(
   name: string,
   relationship: string
 ): CosmicProfile {
+  // Step 1: Run standard calculation (uses Meeus/Keplerian for TN + Chiron)
   const result = calculateProfilesFromBirthData(birthData);
+  const chart = result.calculatedChart!;
+
+  // Step 2: Get accurate True Node + Chiron from Swiss Ephemeris
+  console.log(`  Fetching natal TN + Chiron (Swiss Ephemeris)...`);
+  const natalAcc = getAccurateTrueNodeAndChiron(new Date(chart.natalDate));
+  console.log(`  Fetching design TN + Chiron (Swiss Ephemeris)...`);
+  const designAcc = getAccurateTrueNodeAndChiron(new Date(chart.designDate));
+
+  if (natalAcc && designAcc) {
+    // Step 3: Patch positions with exact values
+    chart.natalPositions = patchPositions(chart.natalPositions, natalAcc);
+    chart.designPositions = patchPositions(chart.designPositions, designAcc);
+
+    // Step 4: Recompute gate activations with accurate positions
+    chart.natalGates = toGateActivations(chart.natalPositions, true);
+    chart.designGates = toGateActivations(chart.designPositions, false);
+
+    // Step 5: Recompute HD profile with accurate gate activations
+    result.humanDesignProfile = calculateHumanDesignProfile(
+      chart.natalPositions,
+      chart.designPositions
+    );
+  }
 
   return {
     profileVersion: 2,
@@ -49,7 +149,7 @@ function buildCosmicProfile(
       lastViewedAt: '2026-02-22T00:00:00.000Z',
     },
     birthData,
-    calculatedChart: result.calculatedChart,
+    calculatedChart: chart,
     geneKeysProfile: result.geneKeysProfile,
     humanDesignProfile: result.humanDesignProfile,
     numerologyProfile: result.numerologyProfile,

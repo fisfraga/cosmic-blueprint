@@ -32,7 +32,7 @@ def _house_to_int(raw: object) -> int:
 PLANET_ATTRS = [
     "sun", "moon", "mercury", "venus", "mars",
     "jupiter", "saturn", "uranus", "neptune", "pluto",
-    "mean_node",  # North Node — maps to 'Mean_Node' in name
+    "true_node",  # True North Node (lunar ascending node)
     "chiron",
 ]
 

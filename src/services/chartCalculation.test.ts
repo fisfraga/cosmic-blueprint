@@ -68,9 +68,9 @@ describe('chartCalculation', () => {
       expect(chart.designDate).toMatch(/^\d{4}-\d{2}-\d{2}T/);
     });
 
-    it('returns 11 natal positions (10 planets + earth)', () => {
+    it('returns 13 natal positions (10 planets + earth + true-node + chiron)', () => {
       const chart = calculateFullChart(gemini2024BirthData);
-      expect(chart.natalPositions.length).toBe(11);
+      expect(chart.natalPositions.length).toBe(13);
       const planetIds = chart.natalPositions.map(p => p.planetId);
       expect(planetIds).toContain('sun');
       expect(planetIds).toContain('earth');
@@ -83,11 +83,13 @@ describe('chartCalculation', () => {
       expect(planetIds).toContain('uranus');
       expect(planetIds).toContain('neptune');
       expect(planetIds).toContain('pluto');
+      expect(planetIds).toContain('true-node');
+      expect(planetIds).toContain('chiron');
     });
 
-    it('returns 11 design positions', () => {
+    it('returns 13 design positions', () => {
       const chart = calculateFullChart(gemini2024BirthData);
-      expect(chart.designPositions.length).toBe(11);
+      expect(chart.designPositions.length).toBe(13);
     });
 
     it('returns natal and design gate activations', () => {
@@ -136,7 +138,7 @@ describe('chartCalculation', () => {
       }
     });
 
-    it('all 11 planets have valid sign placements', () => {
+    it('all 13 planets have valid sign placements', () => {
       const chart = calculateFullChart(gemini2024BirthData);
       const validSigns = [
         'aries', 'taurus', 'gemini', 'cancer', 'leo', 'virgo',
@@ -178,7 +180,7 @@ describe('chartCalculation', () => {
       const chart = calculateFullChart(gemini2024BirthData);
       // Not all planets may map to gates (depends on getGateByDegree coverage)
       expect(chart.natalGates.length).toBeGreaterThan(0);
-      expect(chart.natalGates.length).toBeLessThanOrEqual(11);
+      expect(chart.natalGates.length).toBeLessThanOrEqual(13);
       // Verify Sun always has a gate
       const sunGate = chart.natalGates.find(g => g.planet === 'Sun');
       expect(sunGate).toBeDefined();
@@ -429,13 +431,13 @@ describe('chartCalculation', () => {
         cityOfBirth: 'Test',
       };
       const chart = calculateFullChart(midnightBirth);
-      expect(chart.natalPositions.length).toBe(11);
+      expect(chart.natalPositions.length).toBe(13);
       expect(chart.natalGates.length).toBeGreaterThan(0);
     });
 
     it('handles out-of-range birth date (before 2020, uses fallback)', () => {
       const chart = calculateFullChart(freddieBirthData);
-      expect(chart.natalPositions.length).toBe(11);
+      expect(chart.natalPositions.length).toBe(13);
       // Sun should be in Virgo for Sept 5
       const sun = chart.natalPositions.find(p => p.planetId === 'sun')!;
       expect(sun.signId).toBe('virgo');
