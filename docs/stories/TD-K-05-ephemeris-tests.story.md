@@ -1,7 +1,7 @@
 # Story TD-K-05: Test Suite for `ephemeris.ts`
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 5
 **Agent:** @dev (Dex)
 

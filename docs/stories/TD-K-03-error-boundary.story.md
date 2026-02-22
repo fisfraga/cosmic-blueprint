@@ -1,7 +1,7 @@
 # Story TD-K-03: Global React Error Boundary
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 2
 **Agent:** @dev (Dex)
 

@@ -1,7 +1,7 @@
 # Story TD-K-06: Quick Wins Batch
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 5
 **Agent:** @dev (Dex)
 
