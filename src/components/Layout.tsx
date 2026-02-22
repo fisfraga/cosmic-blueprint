@@ -55,6 +55,7 @@ const humanDesignItems = [
   { path: '/human-design/profiles', label: 'Profiles', icon: '⟁' },
   { path: '/human-design/lines', label: 'Lines', icon: '▵' },
   { path: '/human-design/variables', label: 'Variables', icon: '⚡' },
+  { path: '/library/lost-octave', label: 'Lost Octave', icon: '\u25C7' },
 ];
 
 // Gene Keys Library

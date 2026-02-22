@@ -10,6 +10,7 @@ import type {
   GKSphereEntity,
   GKSequenceEntity,
   HDAuthorityEntity,
+  HDGate72,
   HDLineEntity,
   HDProfileEntity,
   HDStrategyEntity,
@@ -1831,6 +1832,64 @@ function LineContent({ entity }: { entity: EntityInfo }) {
   );
 }
 
+// ─── Lost Octave gate content renderer ────────────────────────────────────────
+
+function LostOctaveGateContent({ entity }: { entity: EntityInfo }) {
+  const gate = entity.data as HDGate72 & { isMasterGate?: boolean; decanNumber?: number };
+  if (!gate) return null;
+
+  const isMasterGate = gate.isMasterGate ?? false;
+  const decanNumber = gate.decanNumber ?? Math.ceil(gate.segmentNumber / 2);
+
+  return (
+    <div className="space-y-4">
+      {/* Segment + master badge */}
+      <div className="flex flex-wrap items-center gap-2">
+        <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-secondary font-semibold">
+          Segment {gate.segmentNumber} of 72
+        </span>
+        {isMasterGate && (
+          <span className="text-xs px-2 py-0.5 rounded bg-humandesign-500/30 text-humandesign-300 font-medium">
+            Master Gate
+          </span>
+        )}
+        <span className="text-xs px-2 py-0.5 rounded bg-surface-raised text-theme-text-tertiary">
+          Decan {decanNumber}
+        </span>
+      </div>
+
+      {/* Zodiac span */}
+      <div>
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Zodiac Span</h4>
+        <p className="text-sm text-theme-text-secondary capitalize">
+          {gate.startDegree.toFixed(1)}° {gate.startSign} &ndash; 5° arc
+        </p>
+        <p className="text-xs text-theme-text-tertiary mt-0.5">
+          {gate.degreeStart.toFixed(2)}° &ndash; {gate.degreeEnd.toFixed(2)}° (absolute)
+        </p>
+      </div>
+
+      {/* HD Bridge */}
+      <div>
+        <h4 className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">HD 64-Gate Overlap</h4>
+        <p className="text-sm text-theme-text-secondary">
+          Gate {gate.overlapping64GateSegment}
+        </p>
+      </div>
+
+      {/* View full detail link */}
+      <div className="pt-2">
+        <a
+          href={`/library/lost-octave/${gate.id}`}
+          className="text-xs text-humandesign-400 hover:text-humandesign-300 transition-colors"
+        >
+          View full detail &#8250;
+        </a>
+      </div>
+    </div>
+  );
+}
+
 // ─── Dignity content renderer ──────────────────────────────────────────────────
 
 function DignityContent({ entity }: { entity: EntityInfo }) {
@@ -2062,6 +2121,11 @@ export function EntityPanelContent({
       {/* Dignity */}
       {entity.type === 'dignity' && (
         <DignityContent entity={entity} />
+      )}
+
+      {/* Lost Octave Gate */}
+      {entity.type === 'lo-gate' && (
+        <LostOctaveGateContent entity={entity} />
       )}
 
       {/* Related Entities */}

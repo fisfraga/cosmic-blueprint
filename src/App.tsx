@@ -81,6 +81,9 @@ const Chakras = lazy(() => import('./pages/Chakras'));
 const ChakraDetail = lazy(() => import('./pages/ChakraDetail'));
 const HermeticPrinciples = lazy(() => import('./pages/HermeticPrinciples'));
 const HermeticPrincipleDetail = lazy(() => import('./pages/HermeticPrincipleDetail'));
+// Lost Octave Library
+const LostOctaveList = lazy(() => import('./pages/LostOctaveList'));
+const LostOctaveDetail = lazy(() => import('./pages/LostOctaveDetail'));
 // Profile entity detail pages
 const ProfilePlacementDetail = lazy(() => import('./pages/profile/ProfilePlacementDetail'));
 const ProfileAspectDetail = lazy(() => import('./pages/profile/ProfileAspectDetail'));
@@ -181,6 +184,9 @@ function App() {
                 <Route path="insights" element={<InsightLibrary />} />
                 <Route path="sessions" element={<SessionsLibrary />} />
                 <Route path="life-areas" element={<LifeAreas />} />
+                {/* Lost Octave Library — specific routes before dynamic :id */}
+                <Route path="library/lost-octave/:id" element={<LostOctaveDetail />} />
+                <Route path="library/lost-octave" element={<LostOctaveList />} />
                 {/* Wisdom Traditions */}
                 <Route path="numerology" element={<Numerology />} />
                 <Route path="numerology/:id" element={<NumerologyDetail />} />

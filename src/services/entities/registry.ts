@@ -17,6 +17,7 @@ import {
   fixedStars,
   // Human Design
   hdGates,
+  hdGates72,
   hdChannels,
   hdCenters,
   hdTypes,
@@ -50,6 +51,7 @@ import type {
   AspectConfiguration,
   AstroPoint,
   HDGate,
+  HDGate72,
   HDChannel,
   HDCenter,
   HDTypeEntity,
@@ -121,6 +123,8 @@ export type EntityCategory =
   | 'hd-line'
   | 'hd-variable'
   | 'incarnation-cross'
+  // Lost Octave (Robert Comber 72-gate extended system)
+  | 'lo-gate'
   // Gene Keys
   | 'gene-key'
   | 'gk-sphere'
@@ -196,6 +200,7 @@ class EntityRegistryService {
     this.registerGeneKeysEntities();
     this.registerSharedEntities();
     this.registerWisdomTraditionEntities();
+    this.registerLostOctaveEntities();
 
     console.log(`[EntityRegistry] Initialized with ${this.registry.size} entities`);
   }
@@ -703,6 +708,31 @@ class EntityRegistryService {
         data: line,
         keywords: line.keywords,
         relatedIds: line.relatedLineId ? [line.relatedLineId] : [],
+      });
+    });
+  }
+
+  // ------------------------------------
+  // Lost Octave Entities (Robert Comber 72-gate extended system)
+  // ------------------------------------
+
+  private registerLostOctaveEntities(): void {
+    hdGates72.forEach((gate: HDGate72, id: string) => {
+      const displayName = gate.name ?? `Segment ${gate.segmentNumber}`;
+      this.register({
+        id,
+        type: 'lo-gate',
+        name: displayName,
+        system: 'humanDesign',
+        description: gate.description ?? undefined,
+        routePath: `/library/lost-octave/${id}`,
+        data: gate,
+        keywords: [
+          gate.startSign,
+          `segment-${gate.segmentNumber}`,
+          gate.tropicalSignId,
+        ],
+        relatedIds: [`gate-${gate.overlapping64GateSegment}`],
       });
     });
   }
