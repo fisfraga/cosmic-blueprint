@@ -2,7 +2,7 @@ import { useMemo, useState, useCallback } from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { useProfile } from '../context';
-import { hdGates, hdCenters, hdChannels, geneKeys, hdLines, codonRings } from '../data';
+import { hdGates, hdCenters, hdChannels, hdTypes, geneKeys, hdLines, codonRings } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
 import { BodyGraphCentersOnly } from '../components/BodyGraph';
 import { NeutrinoWidget } from '../components/NeutrinoWidget';
@@ -425,6 +425,91 @@ export function ProfileHumanDesign() {
           </div>
         </div>
       )}
+
+      {/* Not-Self Awareness — Ra Uru Hu conditioning framework */}
+      {(() => {
+        const ALL_CENTER_IDS = [
+          'head-center', 'ajna-center', 'throat-center', 'g-center', 'heart-center',
+          'sacral-center', 'spleen-center', 'solar-plexus-center', 'root-center',
+        ];
+        const undefinedCenterEntities = ALL_CENTER_IDS
+          .filter(id => !definedCenterIds.has(id))
+          .map(id => hdCenters.get(id))
+          .filter(Boolean) as NonNullable<ReturnType<typeof hdCenters.get>>[];
+
+        const typeEntity = Array.from(hdTypes.values()).find(t => t.name === hdProfile.type);
+        const notSelfEmotion = typeEntity?.notSelfEmotion ?? 'Not-Self emotion';
+
+        return (
+          <div className="bg-surface-base/50 rounded-xl p-6 border border-humandesign-500/20">
+            <h2 className="font-serif text-xl text-humandesign-300 mb-4">Not-Self Awareness</h2>
+
+            {undefinedCenterEntities.length === 0 ? (
+              <p className="text-theme-text-secondary">
+                All your centers are defined — you have consistent, reliable energy throughout.
+              </p>
+            ) : (
+              <>
+                {/* Not-Self emotion banner */}
+                <div className="mb-6 p-4 bg-humandesign-500/10 rounded-lg border border-humandesign-500/20">
+                  <p className="text-theme-text-secondary">
+                    <span className="font-semibold text-humandesign-300">{notSelfEmotion}</span>
+                    {' '}is your Not-Self signal. When you notice it arising, your design invites you back to your Strategy.
+                  </p>
+                </div>
+
+                {/* Undefined center cards */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  {undefinedCenterEntities.map(center => (
+                    <div
+                      key={center.id}
+                      className="bg-surface-overlay rounded-lg p-4 border border-theme-border-subtle"
+                    >
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="font-medium text-theme-text-primary">{center.name}</h3>
+                        <Link
+                          to={`/human-design/centers/${center.id}`}
+                          className="text-xs text-theme-text-tertiary hover:text-humandesign-400 transition-colors"
+                        >
+                          Detail →
+                        </Link>
+                      </div>
+                      {center.undefinedWisdom && (
+                        <div className="mb-2">
+                          <p className="text-xs text-humandesign-400 mb-1">Wisdom of Openness</p>
+                          <p className="text-theme-text-secondary text-sm leading-relaxed">{center.undefinedWisdom}</p>
+                        </div>
+                      )}
+                      {center.undefinedConditioning && (
+                        <div className="mb-2">
+                          <p className="text-xs text-neutral-400 mb-1">Conditioning Pattern</p>
+                          <p className="text-theme-text-secondary text-sm leading-relaxed">{center.undefinedConditioning}</p>
+                        </div>
+                      )}
+                      {center.conditioningQuestion && (
+                        <blockquote className="border-l-4 border-humandesign-500 pl-3 italic text-sm text-theme-text-secondary mt-2">
+                          {center.conditioningQuestion}
+                        </blockquote>
+                      )}
+                      {!center.undefinedWisdom && (
+                        <p className="text-theme-text-secondary text-sm">{center.undefinedMeaning}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA */}
+                <Link
+                  to="/contemplate"
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-humandesign-500/20 text-humandesign-300 rounded-lg hover:bg-humandesign-500/30 transition-colors text-sm"
+                >
+                  Run Your Not-Self Diagnosis
+                </Link>
+              </>
+            )}
+          </div>
+        );
+      })()}
 
       {/* All Gates */}
       <div className="grid md:grid-cols-2 gap-6">
