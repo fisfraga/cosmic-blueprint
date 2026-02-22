@@ -2,11 +2,16 @@ import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { hdCenters, hdGates, getGatesByCenter, getChannelsForCenter, geneKeys, chakras } from '../data';
 import { EntityStack } from '../components/entities/EntityStack';
+import { useProfile } from '../context';
 import type { EntityInfo } from '../services/entities/registry';
 
 export function HumanDesignCenterDetail() {
   const { id } = useParams<{ id: string }>();
   const center = id ? hdCenters.get(id) : undefined;
+
+  const { profile } = useProfile();
+  const isDefinedForUser = profile?.humanDesignProfile?.definedCenterIds.includes(center?.id ?? '') ?? false;
+  const [conditioningExpanded, setConditioningExpanded] = useState(true);
 
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -88,17 +93,76 @@ export function HumanDesignCenterDetail() {
             </section>
           )}
 
-          {/* Defined vs Undefined */}
-          <section className="grid md:grid-cols-2 gap-4">
-            <div className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
-              <h2 className="font-serif text-xl mb-3 text-humandesign-300">Defined</h2>
-              <p className="text-theme-text-secondary">{center.definedMeaning}</p>
-            </div>
-            <div className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
-              <h2 className="font-serif text-xl mb-3 text-theme-text-secondary">Undefined</h2>
-              <p className="text-theme-text-secondary">{center.undefinedMeaning}</p>
-            </div>
-          </section>
+          {/* Defined vs Undefined — Ra Uru Hu conditioning framework */}
+          {isDefinedForUser ? (
+            <section className="bg-gradient-to-br from-humandesign-500/10 to-humandesign-600/5 rounded-xl p-6 border border-humandesign-500/20">
+              <h2 className="font-serif text-xl mb-3 text-humandesign-300">Your Center Is Defined</h2>
+              <p className="text-theme-text-secondary mb-3">{center.definedMeaning}</p>
+              <p className="text-sm text-humandesign-400/70">
+                Defined centers are consistent and reliable — this is a stable part of who you are.
+              </p>
+            </section>
+          ) : (
+            <section className="bg-surface-base/50 rounded-xl border border-theme-border-subtle overflow-hidden">
+              <button
+                className="w-full flex items-center justify-between p-6 text-left hover:bg-surface-raised transition-colors"
+                onClick={() => setConditioningExpanded(v => !v)}
+              >
+                <h2 className="font-serif text-xl text-theme-text-primary">
+                  {profile ? 'If Your Center Is Undefined' : 'Undefined Center — Ra Uru Hu Framework'}
+                </h2>
+                <span className="text-theme-text-tertiary text-sm ml-4">{conditioningExpanded ? '▲' : '▼'}</span>
+              </button>
+
+              {conditioningExpanded && (
+                <div className="px-6 pb-6 space-y-6">
+                  {!profile && (
+                    <p className="text-theme-text-tertiary text-sm">
+                      For those with this center undefined — this is what openness here accumulates and what the mind may do with borrowed energy.
+                    </p>
+                  )}
+
+                  {/* Sub-section 1: Wisdom of Openness */}
+                  {center.undefinedWisdom && (
+                    <div>
+                      <h3 className="font-medium text-humandesign-400 mb-2">Wisdom of Openness</h3>
+                      <p className="text-theme-text-secondary leading-relaxed">{center.undefinedWisdom}</p>
+                    </div>
+                  )}
+
+                  {/* Sub-section 2: Conditioning Pattern */}
+                  {center.undefinedConditioning && (
+                    <div>
+                      <h3 className="font-medium text-neutral-300 mb-2">Conditioning Pattern</h3>
+                      <p className="text-theme-text-secondary leading-relaxed">{center.undefinedConditioning}</p>
+                    </div>
+                  )}
+
+                  {/* Sub-section 3: Diagnostic Question — pull-quote */}
+                  {center.conditioningQuestion && (
+                    <blockquote className="border-l-4 border-humandesign-500 pl-4 italic text-theme-text-secondary">
+                      <p>{center.conditioningQuestion}</p>
+                    </blockquote>
+                  )}
+
+                  {/* Fallback to basic undefinedMeaning if Ra fields not present */}
+                  {!center.undefinedWisdom && (
+                    <p className="text-theme-text-secondary">{center.undefinedMeaning}</p>
+                  )}
+
+                  {/* CTA */}
+                  <div className="pt-2 border-t border-theme-border-subtle">
+                    <Link
+                      to="/contemplate?type=notSelfDiagnosis"
+                      className="inline-flex items-center gap-2 text-sm text-humandesign-400 hover:text-humandesign-300 transition-colors"
+                    >
+                      Explore Your Not-Self Patterns →
+                    </Link>
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
 
           {/* Gates in this Center */}
           <section>
