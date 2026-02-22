@@ -16,6 +16,7 @@ import type {
   GalacticPoint,
   // Human Design & Gene Keys
   HDGate,
+  HDGate72,
   HDChannel,
   HDCenter,
   HDCircuitType,
@@ -59,6 +60,7 @@ import decansData from './universal/decans.json';
 
 // Raw JSON imports - Human Design & Gene Keys
 import hdGatesData from './universal/hd-gates.json';
+import hdGates72Data from './universal/hd-gates-72.json';
 import hdChannelsData from './universal/hd-channels.json';
 import hdCentersData from './universal/hd-centers.json';
 import hdTypesData from './universal/hd-types.json';
@@ -122,6 +124,11 @@ export const points = new Map<string, AstroPoint>(
 
 export const hdGates = new Map<string, HDGate>(
   (hdGatesData as HDGate[]).map((g) => [g.id, g])
+);
+
+/** Lost Octave 72-gate system. Keyed by "lost-octave-{segmentNumber}". */
+export const hdGates72 = new Map<string, HDGate72>(
+  (hdGates72Data as HDGate72[]).map((g) => [g.id, g])
 );
 
 export const hdChannels = new Map<string, HDChannel>(
@@ -1206,6 +1213,47 @@ export function getGateByDegree(absoluteDegree: number): { gate: HDGate; line: n
 }
 
 /**
+ * Convert a zodiac degree (0-360) to the corresponding Lost Octave 72-gate segment and line.
+ * Lost Octave system: 72 gates × 5.000° each, wheel start = 358.25° (Pisces 28°15').
+ * Each gate is further divided into 6 lines of 0.8333° each.
+ *
+ * NOTE: Gate numbers (gateNumber field) are not yet populated — pending Comber source book.
+ * This function returns the segment and line based purely on degree position.
+ *
+ * @param absoluteDegree - Degree in absolute terms (0-360), where 0° = 0° Aries
+ * @returns Object with gate (HDGate72) and line (1-6), or undefined if not found
+ */
+export function getGateByDegree72(absoluteDegree: number): { gate: HDGate72; line: number } | undefined {
+  const normalizedDegree = ((absoluteDegree % 360) + 360) % 360;
+
+  for (const gate of hdGates72.values()) {
+    const start = gate.degreeStart;
+    const end = gate.degreeEnd;
+
+    // Handle gates that cross 0° (e.g., 358.25° to 3.25° for segment 1)
+    if (start > end) {
+      if (normalizedDegree >= start || normalizedDegree < end) {
+        const gateSpan = (360 - start) + end;
+        const positionInGate = normalizedDegree >= start
+          ? normalizedDegree - start
+          : (360 - start) + normalizedDegree;
+        const line = Math.floor((positionInGate / gateSpan) * 6) + 1;
+        return { gate, line: Math.min(Math.max(line, 1), 6) };
+      }
+    } else {
+      if (normalizedDegree >= start && normalizedDegree < end) {
+        const gateSpan = end - start;
+        const positionInGate = normalizedDegree - start;
+        const line = Math.floor((positionInGate / gateSpan) * 6) + 1;
+        return { gate, line: Math.min(Math.max(line, 1), 6) };
+      }
+    }
+  }
+
+  return undefined;
+}
+
+/**
  * Convert sign position (sign + degree) to absolute degree
  * @param signId - The zodiac sign ID
  * @param degree - Degree within the sign (0-30)
@@ -1434,6 +1482,7 @@ export {
   decansData,
   // Human Design & Gene Keys
   hdGatesData,
+  hdGates72Data,
   hdChannelsData,
   hdCentersData,
   hdTypesData,

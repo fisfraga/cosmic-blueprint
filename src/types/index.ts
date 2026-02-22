@@ -344,6 +344,26 @@ export interface HDGate extends AstroEntity {
   lineDescriptions?: string[];
 }
 
+/**
+ * Lost Octave 72-gate system (Robert James Comber).
+ * Each gate = 5.000° exactly. Same wheel origin as the 64-gate system (358.25°).
+ * gateNumber and name are null until populated from the Comber source book.
+ */
+export interface HDGate72 {
+  id: string;                      // "lost-octave-{segmentNumber}"
+  type: 'lo-gate';
+  segmentNumber: number;           // 1–72
+  tropicalSignId: string;          // e.g. "aries", "pisces/aries"
+  degreeStart: number;             // absolute ecliptic longitude (0-360), wheel start = 358.25°
+  degreeEnd: number;               // degreeStart + 5.0 (may wrap: start > end means crosses 0°)
+  startSign: string;               // IANA sign ID of the start degree
+  startDegree: number;             // degree within the start sign (0-30)
+  overlapping64GateSegment: number; // which 64-gate segment this 72-gate segment most overlaps
+  gateNumber: number | null;       // future: gate number from Comber book
+  name: string | null;             // future: gate name from Comber book
+  description: string | null;      // future: gate description from Comber book
+}
+
 export type HDStreamType = 'Knowing' | 'Centering' | 'Logic' | 'Abstract' | 'Sensing' | 'Defense' | 'Ego' | 'Community' | 'Integration';
 
 export interface HDChannel extends AstroEntity {
