@@ -76,7 +76,7 @@ app.get('/health', (_req, res) => {
 });
 
 // --- Claude API proxy (O-01) ---
-app.post('/api/claude', express.json({ limit: '50kb' }), async (req, res) => {
+app.post('/api/claude', express.json({ limit: '2mb' }), async (req, res) => {
   // Rate limiting
   const clientIp = getClientIp(req);
   const { allowed, retryAfter } = checkRateLimit(clientIp);
