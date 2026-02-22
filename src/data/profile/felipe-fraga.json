@@ -502,8 +502,8 @@
     }
   },
   "humanDesignProfile": {
-    "type": "Reflector",
-    "strategy": "Wait for Lunar Cycle",
+    "type": "Projector",
+    "strategy": "Wait for Invitation",
     "authority": "Emotional",
     "profile": "5/1",
     "definition": "Single",

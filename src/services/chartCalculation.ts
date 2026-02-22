@@ -384,24 +384,44 @@ function calculateDefinedCenters(
 }
 
 /**
- * Determine HD Type from defined centers
- * This is a simplified version - full calculation requires channel analysis
+ * Motor-to-Throat channel IDs in the Human Design system.
+ * A motor center (Heart, Solar Plexus, Sacral, Root) must be connected to Throat
+ * via a defined channel for Manifestor or Manifesting Generator status.
  */
-function determineHDType(definedCenterIds: string[]): HDType {
-  const hasSacral = definedCenterIds.includes('sacral-center');
-  const hasMotorToThroat = definedCenterIds.includes('throat-center'); // Simplified
+const MOTOR_TO_THROAT_CHANNEL_IDS = new Set([
+  'channel-12-22', // Solar Plexus <-> Throat
+  'channel-20-34', // Sacral <-> Throat
+  'channel-21-45', // Heart <-> Throat
+  'channel-35-36', // Solar Plexus <-> Throat
+]);
 
-  if (!hasSacral && !hasMotorToThroat) {
+/**
+ * Determine HD Type from defined centers and channels.
+ *
+ * HD Type rules:
+ * - Reflector: No defined centers (all 9 undefined) — ~1% of population
+ * - Generator: Sacral defined, no motor-to-throat connection
+ * - Manifesting Generator: Sacral defined + motor connected to Throat via channel
+ * - Manifestor: No Sacral, but a motor center is connected to Throat via channel
+ * - Projector: No Sacral, no motor-to-throat connection (may have other centers defined)
+ */
+function determineHDType(definedCenterIds: string[], definedChannelIds: string[]): HDType {
+  const hasSacral = definedCenterIds.includes('sacral-center');
+  const hasMotorToThroat = definedChannelIds.some((id) =>
+    MOTOR_TO_THROAT_CHANNEL_IDS.has(id)
+  );
+
+  if (definedCenterIds.length === 0) {
     return 'Reflector';
-  }
-  if (!hasSacral && hasMotorToThroat) {
-    return 'Manifestor';
   }
   if (hasSacral && hasMotorToThroat) {
     return 'Manifesting Generator';
   }
   if (hasSacral) {
     return 'Generator';
+  }
+  if (hasMotorToThroat) {
+    return 'Manifestor';
   }
   return 'Projector';
 }
@@ -493,7 +513,7 @@ export function calculateHumanDesignProfile(
     designGates
   );
 
-  const hdType = determineHDType(definedCenterIds);
+  const hdType = determineHDType(definedCenterIds, definedChannelIds);
   const authority = determineHDAuthority(definedCenterIds);
   const profile = getHDProfile(
     personalitySun?.line || 5,
