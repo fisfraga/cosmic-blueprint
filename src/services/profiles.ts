@@ -12,6 +12,7 @@
 import type { AstroProfile, CosmicProfile, ProfileMeta } from '../types';
 import { getAsCosmicProfile, cosmicToAstroProfile } from './profileMigration';
 import felipeData from '../data/profile/felipe.json';
+import dudaData from '../data/profile/duda-fraga.json';
 
 // Re-export ProfileMeta type for backwards compatibility
 export type { ProfileMeta };
@@ -21,6 +22,7 @@ export type { ProfileMeta };
 const PROFILES_KEY = 'cosmic-copilot-profiles';
 const ACTIVE_PROFILE_KEY = 'cosmic-copilot-active-profile-id';
 const SEED_KEY = 'cosmic-copilot-seeded';
+const SEED_V2_KEY = 'cosmic-copilot-seeded-v2';
 const MAX_PROFILES = 10;
 
 // ─── localStorage I/O ────────────────────────────────────────────────────────
@@ -202,29 +204,52 @@ export function updateProfileRelationship(profileId: string, relationship: strin
 // ─── First-run seed ───────────────────────────────────────────────────────────
 
 /**
- * Seeds Felipe Fraga's profile into localStorage on the very first run.
- * A SEED_KEY flag prevents re-seeding if the user later clears their profiles.
- * This gives every new visitor a working profile to explore the app immediately.
+ * Seeds Felipe + Duda profiles into localStorage on first run.
+ *
+ * Three cases:
+ * - Both SEED_KEY + SEED_V2_KEY present → no-op (fully seeded)
+ * - Neither present (fresh install) → seed both profiles, activate Felipe
+ * - Only SEED_KEY present (existing user upgrading) → append Duda if absent,
+ *   leave active profile unchanged, set SEED_V2_KEY
  */
 function seedDefaultProfileOnFirstRun(): void {
   try {
     if (typeof window === 'undefined') return;
-    if (localStorage.getItem(SEED_KEY)) return; // already seeded
 
-    const cosmic = getAsCosmicProfile(felipeData as unknown as AstroProfile);
-    const seeded: CosmicProfile = {
-      ...cosmic,
-      meta: {
-        ...cosmic.meta,
-        id: 'felipe-fraga',
-        createdAt: '2024-10-18T08:10:00.000Z',
-        lastViewedAt: new Date().toISOString(),
-      },
-    };
+    const hasSeedV1 = !!localStorage.getItem(SEED_KEY);
+    const hasSeedV2 = !!localStorage.getItem(SEED_V2_KEY);
 
-    writeToStorage([seeded]);
-    localStorage.setItem(ACTIVE_PROFILE_KEY, seeded.meta.id);
-    localStorage.setItem(SEED_KEY, '1');
+    if (hasSeedV1 && hasSeedV2) return; // Fully seeded — no-op
+
+    const dudaCosmic = getAsCosmicProfile(dudaData as unknown as AstroProfile);
+
+    if (!hasSeedV1) {
+      // Fresh install — seed both Felipe and Duda
+      const felipeCosmic = getAsCosmicProfile(felipeData as unknown as AstroProfile);
+      const felipeSeeded: CosmicProfile = {
+        ...felipeCosmic,
+        meta: {
+          ...felipeCosmic.meta,
+          id: 'felipe-fraga',
+          createdAt: '2024-10-18T08:10:00.000Z',
+          lastViewedAt: new Date().toISOString(),
+        },
+      };
+
+      writeToStorage([felipeSeeded, dudaCosmic]);
+      localStorage.setItem(ACTIVE_PROFILE_KEY, felipeSeeded.meta.id);
+      localStorage.setItem(SEED_KEY, '1');
+      localStorage.setItem(SEED_V2_KEY, '1');
+    } else {
+      // Existing user — append Duda if not already present
+      const profiles = readFromStorage();
+      const dudaAlreadyExists = profiles.some((p) => p.meta.id === 'duda-fraga-19980119');
+      if (!dudaAlreadyExists) {
+        profiles.push(dudaCosmic);
+        writeToStorage(profiles);
+      }
+      localStorage.setItem(SEED_V2_KEY, '1');
+    }
   } catch {
     // localStorage may be unavailable (SSR, strict privacy modes)
   }
