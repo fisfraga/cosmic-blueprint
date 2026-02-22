@@ -55,3 +55,20 @@ cosmic-copilot/
 ## Development
 
 This project is designed for Claude Code development. The architecture document provides comprehensive guidance for implementation.
+
+## CI/CD
+
+Every push and pull request to `main` triggers the **CI** workflow (`.github/workflows/ci.yml`):
+
+1. `npm ci` — install dependencies
+2. `npm run lint` — ESLint (fails on any lint error)
+3. `npm run test:run` — Vitest (fails on any test failure)
+4. `npm run build` — TypeScript check + Vite build
+
+Deployment (`.github/workflows/deploy.yml`) runs **only after CI passes** on `main` (uses `workflow_run: [CI]` with `if: conclusion == 'success'`).
+
+To run quality checks locally:
+```bash
+npm run verify   # test:run + build
+npm run lint     # ESLint only
+```

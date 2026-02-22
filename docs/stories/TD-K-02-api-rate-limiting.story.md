@@ -1,7 +1,7 @@
 # Story TD-K-02: Rate Limiting on `/api/claude` Endpoint
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 5
 **Agent:** @dev (Dex)
 
@@ -26,10 +26,10 @@ The Vercel serverless function `api/claude.ts` proxies requests to the Anthropic
 - [x] Add `CORS_ALLOWED_ORIGIN` check — reject requests not from `VITE_APP_URL` or `localhost`
 - [x] Implement in-memory rate limiter (simple Map with TTL) per IP
 - [x] Add `MAX_REQUEST_SIZE_BYTES` check on request body
-- [ ] Update `vercel.json` to add origin header if needed
-- [ ] Add `VITE_APP_URL` to environment documentation
-- [ ] Test: verify 429 is returned after 20 rapid requests
-- [ ] Test: verify normal in-app usage is unaffected
+- [x] Update `vercel.json` to add origin header if needed
+- [x] Add `VITE_APP_URL` to environment documentation
+- [x] Test: verify 429 is returned after 20 rapid requests
+- [x] Test: verify normal in-app usage is unaffected
 
 ## Scope
 

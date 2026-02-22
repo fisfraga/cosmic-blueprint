@@ -1,7 +1,7 @@
 # Story TD-K-01: Add CI/CD Quality Gates
 **Epic:** EPIC-TD-01 — Technical Debt Resolution
 **Sprint:** K
-**Status:** InProgress
+**Status:** Done
 **Points:** 3
 **Agent:** @devops (Gage) + @dev (Dex)
 
@@ -25,8 +25,8 @@ The CI/CD pipeline (`.github/workflows/`) currently runs on every push, but its 
 - [x] Audit existing `.github/workflows/` files — identify what currently runs
 - [x] Add or update workflow to run: `npm ci && npm run lint && npm run test:run && npm run build`
 - [x] Ensure workflow triggers on: `push` (all branches) and `pull_request` (to main)
-- [ ] Verify Vercel deployment only proceeds after CI passes
-- [ ] Document CI setup in README
+- [x] Verify Vercel deployment only proceeds after CI passes
+- [x] Document CI setup in README
 
 ## Scope
 
