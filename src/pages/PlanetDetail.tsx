@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { planets, signs, points, geneKeys, chakras, codonRings, getGateByDegree, signPositionToAbsoluteDegree } from '../data';
 import { getPlacementByPlanetId } from '../data/userProfile';
+import { useProfile } from '../context';
 import { EntityStack } from '../components/entities/EntityStack';
 import type { EntityInfo } from '../services/entities/registry';
 import type { Planet } from '../types';
@@ -11,6 +12,7 @@ export function PlanetDetail() {
   const planet = id ? (planets.get(id) || points.get(id)) : undefined;
   const isPlanet = planet?.type === 'planet';
   const planetData = isPlanet ? (planet as Planet) : undefined;
+  const { profile } = useProfile();
 
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -41,8 +43,8 @@ export function PlanetDetail() {
     ? planet.signsRuled.map((signId) => signs.get(signId)).filter(Boolean)
     : [];
 
-  // Get user's placement for this planet
-  const myPlacement = id ? getPlacementByPlanetId(id) : undefined;
+  // Get active profile's placement for this planet
+  const myPlacement = id ? getPlacementByPlanetId(id, profile) : undefined;
   const placementSign = myPlacement ? signs.get(myPlacement.signId) : undefined;
 
   // Derive the HD gate and gene key activated by the planet's zodiac degree

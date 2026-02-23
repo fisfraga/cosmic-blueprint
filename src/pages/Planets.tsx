@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import { getTraditionalPlanets, getModernPlanets, points } from '../data';
 import { EntityCard } from '../components/EntityCard';
 import { getPlacementByPlanetId } from '../data/userProfile';
+import { useProfile } from '../context';
 
 // Group points by type for display
 const keyPoints = ['ascendant', 'midheaven', 'north-node', 'south-node'];
@@ -11,6 +12,7 @@ export function Planets() {
   const traditionalPlanets = getTraditionalPlanets();
   const modernPlanets = getModernPlanets();
   const allPoints = Array.from(points.values());
+  const { profile } = useProfile();
 
   return (
     <div className="space-y-8">
@@ -80,7 +82,7 @@ export function Planets() {
             .filter(p => keyPoints.includes(p.id))
             .sort((a, b) => keyPoints.indexOf(a.id) - keyPoints.indexOf(b.id))
             .map((point) => {
-              const placement = getPlacementByPlanetId(point.id);
+              const placement = getPlacementByPlanetId(point.id, profile);
               return (
                 <Link
                   key={point.id}
@@ -117,7 +119,7 @@ export function Planets() {
             .filter(p => otherPoints.includes(p.id))
             .sort((a, b) => otherPoints.indexOf(a.id) - otherPoints.indexOf(b.id))
             .map((point) => {
-              const placement = getPlacementByPlanetId(point.id);
+              const placement = getPlacementByPlanetId(point.id, profile);
               return (
                 <Link
                   key={point.id}

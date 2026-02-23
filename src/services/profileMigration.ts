@@ -71,6 +71,7 @@ export function extractProfileMeta(
     dateOfBirth: profile.dateOfBirth,
     createdAt: profile.createdAt || new Date().toISOString(),
     lastViewedAt: profile.lastViewedAt || new Date().toISOString(),
+    ...(profile.chartImage ? { natalChartImagePath: profile.chartImage } : {}),
   };
 }
 

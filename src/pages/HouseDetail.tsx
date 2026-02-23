@@ -2,12 +2,14 @@ import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { houses, signs, planets, chakras, hdGates, geneKeys } from '../data';
 import { getPlacementsInHouse } from '../data/userProfile';
+import { useProfile } from '../context';
 import { EntityStack } from '../components/entities/EntityStack';
 import type { EntityInfo } from '../services/entities/registry';
 
 export function HouseDetail() {
   const { id } = useParams<{ id: string }>();
   const house = id ? houses.get(id) : undefined;
+  const { profile } = useProfile();
 
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -35,7 +37,7 @@ export function HouseDetail() {
 
   const rulingSign = signs.get(house.rulingSignId);
   const rulingPlanet = planets.get(house.rulingPlanetId);
-  const myPlacements = getPlacementsInHouse(house.houseNumber);
+  const myPlacements = getPlacementsInHouse(house.houseNumber, profile);
   const relatedChakra = Array.from(chakras.values()).find(c => c.relatedHouses.includes(house.houseNumber));
 
   // Derive HD Gates and Gene Keys via the house's natural sign

@@ -3,11 +3,13 @@ import { Link, useNavigate } from 'react-router-dom';
 import { geneKeys, chakras, getGateByDegree } from '../../data';
 import { getCosmicWeather } from '../../services/transits';
 import { exportUserData } from '../../services/dataExport';
+import { useProfile } from '../../context';
 import { elementColors, getSignData, getPlanetData, type ProfileTabProps } from './profileConstants';
 
 export function ProfileHeader({ profile }: ProfileTabProps) {
   const navigate = useNavigate();
   const [exportSuccess, setExportSuccess] = useState(false);
+  const { cosmicProfile } = useProfile();
 
   const { elementalAnalysis, chartRulers } = profile;
 
@@ -57,17 +59,19 @@ export function ProfileHeader({ profile }: ProfileTabProps) {
         <p className="text-theme-text-tertiary text-sm mt-1">{profile.cityOfBirth}</p>
       </div>
 
-      {/* Natal Chart */}
-      <div className="flex justify-center">
-        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-md">
-          <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
-          <img
-            src="/images/astrology/Natal-Chart-Felipe-Fraga.png"
-            alt="Natal Chart"
-            className="w-full rounded-lg"
-          />
+      {/* Natal Chart — only shown if a chart image path is stored in the profile */}
+      {cosmicProfile?.meta?.natalChartImagePath && (
+        <div className="flex justify-center">
+          <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-md">
+            <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
+            <img
+              src={cosmicProfile.meta.natalChartImagePath}
+              alt={`${profile.name} Natal Chart`}
+              className="w-full rounded-lg"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Today in Your Chart */}
       {allGateNumbers.size > 0 && (

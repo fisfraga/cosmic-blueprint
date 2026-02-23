@@ -28,7 +28,7 @@ const aspectColors: Record<string, { bg: string; text: string }> = {
 };
 
 export function ProfileAstrology() {
-  const { profile, isLoading, hasProfile } = useProfile();
+  const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
 
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -110,17 +110,19 @@ export function ProfileAstrology() {
         </Link>
       </div>
 
-      {/* Natal Chart Image */}
-      <div className="flex justify-center">
-        <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-lg">
-          <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
-          <img
-            src="/images/astrology/Natal-Chart-Felipe-Fraga.png"
-            alt="Natal Chart"
-            className="w-full rounded-lg"
-          />
+      {/* Natal Chart Image — only shown if a chart image path is stored in the profile */}
+      {cosmicProfile?.meta?.natalChartImagePath && (
+        <div className="flex justify-center">
+          <div className="bg-surface-base/50 rounded-xl p-4 border border-theme-border-subtle max-w-lg">
+            <h3 className="font-serif text-lg text-theme-text-primary mb-3 text-center">Natal Chart</h3>
+            <img
+              src={cosmicProfile.meta.natalChartImagePath}
+              alt={`${profile?.name ?? ''} Natal Chart`}
+              className="w-full rounded-lg"
+            />
+          </div>
         </div>
-      </div>
+      )}
 
       {/* Key Signatures */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

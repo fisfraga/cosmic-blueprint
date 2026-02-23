@@ -2,6 +2,7 @@ import { useState, useCallback } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { signs, elements, planets, houses, chakras, getGatesBySign, getGeneKeysBySign, getSignDecans } from '../data';
 import { getPlacementsInSign } from '../data/userProfile';
+import { useProfile } from '../context';
 import { EntityStack } from '../components/entities/EntityStack';
 import type { EntityInfo } from '../services/entities/registry';
 
@@ -53,6 +54,7 @@ const DIMENSION_COLORS: Record<string, { badge: string; text: string }> = {
 export function SignDetail() {
   const { id } = useParams<{ id: string }>();
   const sign = id ? signs.get(id) : undefined;
+  const { profile } = useProfile();
 
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -86,7 +88,7 @@ export function SignDetail() {
   const ruledHouse = Array.from(houses.values()).find(
     (h) => h.rulingSignId === sign.id
   );
-  const myPlacements = getPlacementsInSign(sign.id);
+  const myPlacements = getPlacementsInSign(sign.id, profile);
   const hdGates = getGatesBySign(sign.id);
   const geneKeys = getGeneKeysBySign(sign.id);
   const relatedChakra = Array.from(chakras.values()).find(c => c.relatedSigns.includes(sign.id));

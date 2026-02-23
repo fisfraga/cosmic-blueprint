@@ -1071,6 +1071,7 @@ export interface ProfileMeta {
   dateOfBirth: string;
   createdAt: string;
   lastViewedAt: string;
+  natalChartImagePath?: string; // optional path to a pre-made natal chart image
 }
 
 /**
