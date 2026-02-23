@@ -6,6 +6,7 @@ import { Breadcrumb } from './Breadcrumb';
 import { AccountMenu } from './AccountMenu';
 import { ThemeToggle } from './ThemeToggle';
 import { useRouteAnnouncer } from '../hooks/useRouteAnnouncer';
+import { useFeatureFlags } from '../context';
 
 // Profile submenu - methodology-specific pages
 const profileItems = [
@@ -174,13 +175,24 @@ function NavDropdown({
 // Library Mega Dropdown with 3 columns
 function LibraryDropdown({
   isOpen,
-  onToggle
+  onToggle,
+  visibleAstrologyItems,
+  visibleHumanDesignItems,
+  showWisdom,
 }: {
   isOpen: boolean;
   onToggle: () => void;
+  visibleAstrologyItems: typeof astrologyItems;
+  visibleHumanDesignItems: typeof humanDesignItems;
+  showWisdom: boolean;
 }) {
   const location = useLocation();
-  const allItems = [...astrologyItems, ...humanDesignItems, ...geneKeysItems, ...wisdomTraditionItems];
+  const allItems = [
+    ...visibleAstrologyItems,
+    ...visibleHumanDesignItems,
+    ...geneKeysItems,
+    ...(showWisdom ? wisdomTraditionItems : []),
+  ];
   const isActive = allItems.some(item =>
     location.pathname === item.path || location.pathname.startsWith(item.path + '/')
   );
@@ -221,7 +233,7 @@ function LibraryDropdown({
               <div className="min-w-[140px]">
                 <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Astrology</p>
                 <div className="space-y-0.5">
-                  {astrologyItems.map((item) => (
+                  {visibleAstrologyItems.map((item) => (
                     <NavLink
                       key={item.path}
                       to={item.path}
@@ -245,7 +257,7 @@ function LibraryDropdown({
               <div className="min-w-[140px]">
                 <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Human Design</p>
                 <div className="space-y-0.5">
-                  {humanDesignItems.map((item) => (
+                  {visibleHumanDesignItems.map((item) => (
                     <NavLink
                       key={item.path}
                       to={item.path}
@@ -290,28 +302,30 @@ function LibraryDropdown({
               </div>
 
               {/* Wisdom Traditions Column */}
-              <div className="min-w-[140px]">
-                <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Wisdom</p>
-                <div className="space-y-0.5">
-                  {wisdomTraditionItems.map((item) => (
-                    <NavLink
-                      key={item.path}
-                      to={item.path}
-                      onClick={onToggle}
-                      className={({ isActive }) =>
-                        `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
-                          isActive
-                            ? 'bg-surface-raised text-theme-text-primary'
-                            : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
-                        }`
-                      }
-                    >
-                      <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
-                      {item.label}
-                    </NavLink>
-                  ))}
+              {showWisdom && (
+                <div className="min-w-[140px]">
+                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2 px-2">Wisdom</p>
+                  <div className="space-y-0.5">
+                    {wisdomTraditionItems.map((item) => (
+                      <NavLink
+                        key={item.path}
+                        to={item.path}
+                        onClick={onToggle}
+                        className={({ isActive }) =>
+                          `flex items-center gap-2 px-2 py-1.5 rounded text-sm transition-colors ${
+                            isActive
+                              ? 'bg-surface-raised text-theme-text-primary'
+                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
+                          }`
+                        }
+                      >
+                        <span className="w-4 text-center" aria-hidden="true">{item.icon}</span>
+                        {item.label}
+                      </NavLink>
+                    ))}
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           </motion.div>
         )}
@@ -324,9 +338,21 @@ export function Layout() {
   const location = useLocation();
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { isEnabled } = useFeatureFlags();
 
   // Announce route changes to screen readers and manage focus
   useRouteAnnouncer();
+
+  // Feature-flagged nav items (all flags default true — zero visible change until toggled)
+  const visibleAstrologyItems = astrologyItems.filter(item => {
+    if (item.path === '/fixed-stars') return isEnabled('library.fixedStars');
+    return true;
+  });
+  const visibleHumanDesignItems = humanDesignItems.filter(item => {
+    if (item.path === '/library/lost-octave') return isEnabled('library.lostOctave');
+    return true;
+  });
+  const showWisdom = isEnabled('library.wisdomTraditions');
 
   const handleDropdownToggle = (dropdown: string) => {
     setOpenDropdown(openDropdown === dropdown ? null : dropdown);
@@ -423,6 +449,9 @@ export function Layout() {
               <LibraryDropdown
                 isOpen={openDropdown === 'library'}
                 onToggle={() => handleDropdownToggle('library')}
+                visibleAstrologyItems={visibleAstrologyItems}
+                visibleHumanDesignItems={visibleHumanDesignItems}
+                showWisdom={showWisdom}
               />
 
             </nav>
@@ -443,6 +472,19 @@ export function Layout() {
                 ✧ Journal
               </NavLink>
               <ThemeToggle />
+              <NavLink
+                to="/settings"
+                title="Settings"
+                className={({ isActive }) =>
+                  `p-2 rounded-lg text-sm transition-colors ${
+                    isActive
+                      ? 'bg-surface-raised text-theme-text-primary'
+                      : 'text-theme-text-tertiary hover:text-theme-text-secondary hover:bg-surface-overlay'
+                  }`
+                }
+              >
+                ⚙
+              </NavLink>
               <AccountMenu />
               <SearchBar />
             </div>
@@ -598,7 +640,7 @@ export function Layout() {
                 <div className="mb-6">
                   <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Astrology</p>
                   <div className="space-y-1">
-                    {astrologyItems.map((item) => (
+                    {visibleAstrologyItems.map((item) => (
                       <NavLink
                         key={item.path}
                         to={item.path}
@@ -622,7 +664,7 @@ export function Layout() {
                 <div className="mb-6">
                   <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Human Design</p>
                   <div className="space-y-1">
-                    {humanDesignItems.map((item) => (
+                    {visibleHumanDesignItems.map((item) => (
                       <NavLink
                         key={item.path}
                         to={item.path}
@@ -667,27 +709,47 @@ export function Layout() {
                 </div>
 
                 {/* Wisdom Traditions Section */}
-                <div className="mb-6">
-                  <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Wisdom Traditions</p>
-                  <div className="space-y-1">
-                    {wisdomTraditionItems.map((item) => (
-                      <NavLink
-                        key={item.path}
-                        to={item.path}
-                        onClick={handleMobileNavClick}
-                        className={({ isActive }) =>
-                          `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
-                            isActive
-                              ? 'bg-surface-raised text-theme-text-primary'
-                              : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
-                          }`
-                        }
-                      >
-                        <span aria-hidden="true">{item.icon}</span>
-                        {item.label}
-                      </NavLink>
-                    ))}
+                {showWisdom && (
+                  <div className="mb-6">
+                    <p className="text-xs text-theme-text-tertiary uppercase tracking-wider mb-2">Wisdom Traditions</p>
+                    <div className="space-y-1">
+                      {wisdomTraditionItems.map((item) => (
+                        <NavLink
+                          key={item.path}
+                          to={item.path}
+                          onClick={handleMobileNavClick}
+                          className={({ isActive }) =>
+                            `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                              isActive
+                                ? 'bg-surface-raised text-theme-text-primary'
+                                : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
+                            }`
+                          }
+                        >
+                          <span aria-hidden="true">{item.icon}</span>
+                          {item.label}
+                        </NavLink>
+                      ))}
+                    </div>
                   </div>
+                )}
+
+                {/* Settings */}
+                <div className="pt-4 border-t border-theme-border-subtle">
+                  <NavLink
+                    to="/settings"
+                    onClick={handleMobileNavClick}
+                    className={({ isActive }) =>
+                      `flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors ${
+                        isActive
+                          ? 'bg-surface-raised text-theme-text-primary'
+                          : 'text-theme-text-secondary hover:text-theme-text-primary hover:bg-surface-overlay'
+                      }`
+                    }
+                  >
+                    <span aria-hidden="true">⚙</span>
+                    Settings
+                  </NavLink>
                 </div>
 
               </div>

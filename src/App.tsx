@@ -4,7 +4,7 @@ import { MotionConfig } from 'framer-motion';
 import { Layout } from './components';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { LoadingSkeleton } from './components/LoadingSkeleton';
-import { ProfileProvider, ThemeProvider } from './context';
+import { ProfileProvider, ThemeProvider, FeatureFlagsProvider } from './context';
 import { AuthProvider } from './context/AuthContext';
 
 // Lazy load pages for code-splitting
@@ -95,6 +95,7 @@ const ProfileFixedStars = lazy(() => import('./pages/profile/ProfileFixedStars')
 const ProfileLifePurpose = lazy(() => import('./pages/profile/ProfileLifePurpose'));
 const ProfilePersonalContext = lazy(() => import('./pages/profile/ProfilePersonalContext'));
 const CosmicDashboard = lazy(() => import('./pages/CosmicDashboard'));
+const Settings = lazy(() => import('./pages/Settings'));
 
 function App() {
   return (
@@ -103,6 +104,7 @@ function App() {
     <MotionConfig reducedMotion="user">
     <AuthProvider>
     <ProfileProvider>
+    <FeatureFlagsProvider>
       <BrowserRouter>
         <Suspense fallback={<LoadingSkeleton variant="page" />}>
           <Routes>
@@ -194,10 +196,13 @@ function App() {
                 <Route path="chakras/:id" element={<ChakraDetail />} />
                 <Route path="hermetic" element={<HermeticPrinciples />} />
                 <Route path="hermetic/:id" element={<HermeticPrincipleDetail />} />
+                {/* Settings */}
+                <Route path="settings" element={<Settings />} />
               </Route>
             </Routes>
           </Suspense>
         </BrowserRouter>
+    </FeatureFlagsProvider>
     </ProfileProvider>
     </AuthProvider>
     </MotionConfig>

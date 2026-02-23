@@ -13,6 +13,8 @@ import {
   type ModelOption,
 } from '../../hooks/useContemplation';
 import { loadCustomTypes } from '../../services/contemplation/customTypes';
+import { useFeatureFlags } from '../../context';
+import { CATEGORY_FLAG_MAP, TYPE_FLAG_MAP } from '../../services/featureFlags';
 
 const LEVEL_OPTIONS: { value: ContemplationLevel | 'all'; label: string }[] = [
   { value: 'all', label: 'All' },
@@ -85,6 +87,8 @@ export function CategorySelector({
   goBack,
   startContemplation,
 }: CategorySelectorProps) {
+  const { isEnabled } = useFeatureFlags();
+
   const [levelFilter, setLevelFilter] = useState<ContemplationLevel | 'all'>(() => {
     try {
       const stored = localStorage.getItem(LEVEL_FILTER_KEY);
@@ -111,9 +115,12 @@ export function CategorySelector({
     ? [...CONTEMPLATION_TYPES[category], ...loadCustomTypes(category)]
     : [];
 
-  const filteredTypes = allTypesForCategory.filter(
-    (t) => levelFilter === 'all' || t.level === levelFilter
-  );
+  const filteredTypes = allTypesForCategory
+    .filter(t => {
+      const flagId = TYPE_FLAG_MAP[t.id as ContemplationType];
+      return !flagId || isEnabled(flagId);
+    })
+    .filter(t => levelFilter === 'all' || t.level === levelFilter);
 
   return (
     <>
@@ -139,7 +146,12 @@ export function CategorySelector({
           )}
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {(Object.keys(CATEGORY_INFO) as ContemplationCategory[]).map((cat) => (
+            {(Object.keys(CATEGORY_INFO) as ContemplationCategory[])
+              .filter(cat => {
+                const flagId = CATEGORY_FLAG_MAP[cat];
+                return !flagId || isEnabled(flagId);
+              })
+              .map((cat) => (
               <button
                 key={cat}
                 onClick={() => setCategory(cat)}
@@ -160,6 +172,7 @@ export function CategorySelector({
                   {cat === 'cosmicEmbodiment' && 'Let any cosmic energy speak directly to you'}
                   {cat === 'fixedStars' && 'The ancient stellar gatekeepers in your chart'}
                   {cat === 'galacticAstrology' && 'Galactic Center, Great Attractor, and cosmic portals'}
+                  {cat === 'yearAhead' && 'Annual forecasts, solar returns, and personal year cycles'}
                 </p>
               </button>
             ))}
