@@ -14,7 +14,7 @@ function createLocalStorageMock() {
     removeItem: vi.fn((key: string) => { store.delete(key); }),
     clear: vi.fn(() => { store.clear(); }),
     get length() { return store.size; },
-    key: vi.fn((_: number) => null),
+    key: vi.fn(() => null),
   };
 }
 

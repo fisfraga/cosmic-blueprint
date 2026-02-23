@@ -443,6 +443,7 @@ export function useContemplation() {
       updatedAt: now,
     });
     setSavedSessions(loadSessions());
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [currentSessionId, category, contemplationType, focusEntity, messages]);
 
   useEffect(() => {
