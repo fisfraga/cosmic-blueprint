@@ -1,421 +1,421 @@
 {
   "profileVersion": 2,
   "meta": {
-    "id": "felipe-fraga-19941018",
-    "name": "Felipe Fraga",
-    "relationship": "self",
-    "dateOfBirth": "1994-10-18",
+    "id": "catarina-goldani-19930810",
+    "name": "Catarina Goldani",
+    "relationship": "partner",
+    "dateOfBirth": "1993-08-10",
     "createdAt": "2026-02-22T00:00:00.000Z",
     "lastViewedAt": "2026-02-22T00:00:00.000Z"
   },
   "birthData": {
-    "dateOfBirth": "1994-10-18",
-    "timeOfBirth": "08:10",
+    "dateOfBirth": "1993-08-10",
+    "timeOfBirth": "17:05",
     "timezone": "America/Sao_Paulo",
     "latitude": -22.9068,
     "longitude": -43.1729,
     "cityOfBirth": "Rio de Janeiro"
   },
   "calculatedChart": {
-    "calculatedAt": "2026-02-23T12:42:16.645Z",
+    "calculatedAt": "2026-02-23T12:42:18.406Z",
     "calculationVersion": "1.0.0",
     "source": "local",
-    "natalDate": "1994-10-18T10:10:00.000Z",
-    "designDate": "1994-07-19T17:21:00.937Z",
+    "natalDate": "1993-08-10T20:05:00.000Z",
+    "designDate": "1993-05-10T20:47:53.437Z",
     "natalPositions": [
       {
         "planetId": "sun",
-        "longitude": 204.8045602163863,
-        "signId": "libra",
-        "degree": 24,
-        "minute": 48,
+        "longitude": 138.18731374857725,
+        "signId": "leo",
+        "degree": 18,
+        "minute": 11,
         "retrograde": false
       },
       {
         "planetId": "earth",
-        "longitude": 24.804560216386335,
-        "signId": "aries",
-        "degree": 24,
-        "minute": 48,
+        "longitude": 318.18731374857725,
+        "signId": "aquarius",
+        "degree": 18,
+        "minute": 11,
         "retrograde": false
       },
       {
         "planetId": "moon",
-        "longitude": 12.799381951133402,
-        "signId": "aries",
-        "degree": 12,
-        "minute": 47,
+        "longitude": 50.412629696193086,
+        "signId": "taurus",
+        "degree": 20,
+        "minute": 24,
         "retrograde": false
       },
       {
         "planetId": "mercury",
-        "longitude": 210.99060554119765,
-        "signId": "scorpio",
+        "longitude": 120.89945602005815,
+        "signId": "leo",
         "degree": 0,
-        "minute": 59,
-        "retrograde": true
+        "minute": 53,
+        "retrograde": false
       },
       {
         "planetId": "venus",
-        "longitude": 227.46688698639133,
-        "signId": "scorpio",
-        "degree": 17,
-        "minute": 28,
-        "retrograde": true
+        "longitude": 100.25088068801112,
+        "signId": "cancer",
+        "degree": 10,
+        "minute": 15,
+        "retrograde": false
       },
       {
         "planetId": "mars",
-        "longitude": 127.53460032768352,
-        "signId": "leo",
-        "degree": 7,
-        "minute": 32,
+        "longitude": 179.2383944454099,
+        "signId": "virgo",
+        "degree": 29,
+        "minute": 14,
         "retrograde": false
       },
       {
         "planetId": "jupiter",
-        "longitude": 228.6161806871214,
-        "signId": "scorpio",
-        "degree": 18,
-        "minute": 36,
+        "longitude": 191.31594574196413,
+        "signId": "libra",
+        "degree": 11,
+        "minute": 18,
         "retrograde": false
       },
       {
         "planetId": "saturn",
-        "longitude": 336.0893138417345,
-        "signId": "pisces",
-        "degree": 6,
-        "minute": 5,
+        "longitude": 327.63950426730884,
+        "signId": "aquarius",
+        "degree": 27,
+        "minute": 38,
         "retrograde": true
       },
       {
         "planetId": "uranus",
-        "longitude": 292.5002218546646,
+        "longitude": 289.09594827530054,
         "signId": "capricorn",
-        "degree": 22,
-        "minute": 30,
-        "retrograde": false
+        "degree": 19,
+        "minute": 5,
+        "retrograde": true
       },
       {
         "planetId": "neptune",
-        "longitude": 290.64386643409193,
+        "longitude": 289.0057969579931,
         "signId": "capricorn",
-        "degree": 20,
-        "minute": 38,
-        "retrograde": false
+        "degree": 19,
+        "minute": 0,
+        "retrograde": true
       },
       {
         "planetId": "pluto",
-        "longitude": 236.70183138261456,
+        "longitude": 232.73944391668897,
         "signId": "scorpio",
-        "degree": 26,
-        "minute": 42,
+        "degree": 22,
+        "minute": 44,
         "retrograde": false
       },
       {
         "planetId": "true-node",
-        "longitude": 224.82592,
-        "signId": "scorpio",
-        "degree": 14,
-        "minute": 49,
-        "retrograde": true
+        "longitude": 249.541113,
+        "signId": "sagittarius",
+        "degree": 9,
+        "minute": 32,
+        "retrograde": false
       },
       {
         "planetId": "south-node",
-        "longitude": 44.825919999999996,
-        "signId": "taurus",
-        "degree": 14,
-        "minute": 49,
-        "retrograde": true
+        "longitude": 69.541113,
+        "signId": "gemini",
+        "degree": 9,
+        "minute": 32,
+        "retrograde": false
       }
     ],
     "designPositions": [
       {
         "planetId": "sun",
-        "longitude": 116.805499944609,
-        "signId": "cancer",
-        "degree": 26,
-        "minute": 48,
+        "longitude": 50.18826285267206,
+        "signId": "taurus",
+        "degree": 20,
+        "minute": 11,
         "retrograde": false
       },
       {
         "planetId": "earth",
-        "longitude": 296.805499944609,
-        "signId": "capricorn",
-        "degree": 26,
-        "minute": 48,
+        "longitude": 230.18826285267207,
+        "signId": "scorpio",
+        "degree": 20,
+        "minute": 11,
         "retrograde": false
       },
       {
         "planetId": "moon",
-        "longitude": 255.62202710973864,
-        "signId": "sagittarius",
-        "degree": 15,
-        "minute": 37,
+        "longitude": 290.05612353987135,
+        "signId": "capricorn",
+        "degree": 20,
+        "minute": 3,
         "retrograde": false
       },
       {
         "planetId": "mercury",
-        "longitude": 96.56329345446562,
-        "signId": "cancer",
-        "degree": 6,
-        "minute": 33,
+        "longitude": 43.96799399136486,
+        "signId": "taurus",
+        "degree": 13,
+        "minute": 58,
         "retrograde": false
       },
       {
         "planetId": "venus",
-        "longitude": 159.49535535067312,
-        "signId": "virgo",
+        "longitude": 9.390285691120768,
+        "signId": "aries",
         "degree": 9,
-        "minute": 29,
+        "minute": 23,
         "retrograde": false
       },
       {
         "planetId": "mars",
-        "longitude": 71.07254179799973,
-        "signId": "gemini",
-        "degree": 11,
-        "minute": 4,
+        "longitude": 126.33322992996462,
+        "signId": "leo",
+        "degree": 6,
+        "minute": 19,
         "retrograde": false
       },
       {
         "planetId": "jupiter",
-        "longitude": 215.2278957114259,
-        "signId": "scorpio",
+        "longitude": 185.4291421657813,
+        "signId": "libra",
         "degree": 5,
-        "minute": 13,
-        "retrograde": false
-      },
-      {
-        "planetId": "saturn",
-        "longitude": 341.83294077541507,
-        "signId": "pisces",
-        "degree": 11,
-        "minute": 49,
+        "minute": 25,
         "retrograde": true
       },
       {
+        "planetId": "saturn",
+        "longitude": 329.5801406732569,
+        "signId": "aquarius",
+        "degree": 29,
+        "minute": 34,
+        "retrograde": false
+      },
+      {
         "planetId": "uranus",
-        "longitude": 294.25800250618926,
+        "longitude": 292.10301973894263,
         "signId": "capricorn",
+        "degree": 22,
+        "minute": 6,
+        "retrograde": true
+      },
+      {
+        "planetId": "neptune",
+        "longitude": 291.0669722563382,
+        "signId": "capricorn",
+        "degree": 21,
+        "minute": 4,
+        "retrograde": true
+      },
+      {
+        "planetId": "pluto",
+        "longitude": 234.25502973229914,
+        "signId": "scorpio",
         "degree": 24,
         "minute": 15,
         "retrograde": true
       },
       {
-        "planetId": "neptune",
-        "longitude": 291.8271685574022,
-        "signId": "capricorn",
-        "degree": 21,
-        "minute": 49,
-        "retrograde": true
-      },
-      {
-        "planetId": "pluto",
-        "longitude": 235.3576234016541,
-        "signId": "scorpio",
-        "degree": 25,
-        "minute": 21,
-        "retrograde": true
-      },
-      {
         "planetId": "true-node",
-        "longitude": 231.77836,
-        "signId": "scorpio",
-        "degree": 21,
-        "minute": 46,
-        "retrograde": true
+        "longitude": 252.32376,
+        "signId": "sagittarius",
+        "degree": 12,
+        "minute": 19,
+        "retrograde": false
       },
       {
         "planetId": "south-node",
-        "longitude": 51.77836000000002,
-        "signId": "taurus",
-        "degree": 21,
-        "minute": 46,
-        "retrograde": true
+        "longitude": 72.32376,
+        "signId": "gemini",
+        "degree": 12,
+        "minute": 19,
+        "retrograde": false
       }
     ],
     "natalGates": [
       {
-        "gateId": "gate-32",
-        "gateNumber": 32,
-        "line": 5,
+        "gateId": "gate-7",
+        "gateNumber": 7,
+        "line": 6,
         "isPersonality": true,
         "planet": "Sun"
       },
       {
-        "gateId": "gate-42",
-        "gateNumber": 42,
-        "line": 5,
+        "gateId": "gate-13",
+        "gateNumber": 13,
+        "line": 6,
         "isPersonality": true,
         "planet": "Earth"
       },
       {
-        "gateId": "gate-21",
-        "gateNumber": 21,
-        "line": 4,
+        "gateId": "gate-23",
+        "gateNumber": 23,
+        "line": 2,
         "isPersonality": true,
         "planet": "Moon"
       },
       {
-        "gateId": "gate-50",
-        "gateNumber": 50,
+        "gateId": "gate-56",
+        "gateNumber": 56,
         "line": 5,
         "isPersonality": true,
         "planet": "Mercury"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 5,
+        "gateId": "gate-39",
+        "gateNumber": 39,
+        "line": 1,
         "isPersonality": true,
         "planet": "Venus"
       },
       {
-        "gateId": "gate-31",
-        "gateNumber": 31,
-        "line": 6,
+        "gateId": "gate-46",
+        "gateNumber": 46,
+        "line": 2,
         "isPersonality": true,
         "planet": "Mars"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 6,
+        "gateId": "gate-48",
+        "gateNumber": 48,
+        "line": 2,
         "isPersonality": true,
         "planet": "Jupiter"
       },
       {
-        "gateId": "gate-37",
-        "gateNumber": 37,
-        "line": 1,
+        "gateId": "gate-30",
+        "gateNumber": 30,
+        "line": 4,
         "isPersonality": true,
         "planet": "Saturn"
       },
       {
-        "gateId": "gate-61",
-        "gateNumber": 61,
-        "line": 2,
+        "gateId": "gate-54",
+        "gateNumber": 54,
+        "line": 5,
         "isPersonality": true,
         "planet": "Uranus"
       },
       {
         "gateId": "gate-54",
         "gateNumber": 54,
-        "line": 6,
+        "line": 5,
         "isPersonality": true,
         "planet": "Neptune"
       },
       {
-        "gateId": "gate-14",
-        "gateNumber": 14,
-        "line": 3,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 5,
         "isPersonality": true,
         "planet": "Pluto"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 2,
+        "gateId": "gate-9",
+        "gateNumber": 9,
+        "line": 5,
         "isPersonality": true,
         "planet": "True Node"
       },
       {
-        "gateId": "gate-2",
-        "gateNumber": 2,
-        "line": 2,
+        "gateId": "gate-16",
+        "gateNumber": 16,
+        "line": 5,
         "isPersonality": true,
         "planet": "South Node"
       }
     ],
     "designGates": [
       {
-        "gateId": "gate-56",
-        "gateNumber": 56,
-        "line": 1,
+        "gateId": "gate-23",
+        "gateNumber": 23,
+        "line": 2,
         "isPersonality": false,
         "planet": "Sun"
       },
       {
-        "gateId": "gate-60",
-        "gateNumber": 60,
-        "line": 1,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 2,
         "isPersonality": false,
         "planet": "Earth"
       },
       {
-        "gateId": "gate-5",
-        "gateNumber": 5,
-        "line": 5,
+        "gateId": "gate-54",
+        "gateNumber": 54,
+        "line": 6,
         "isPersonality": false,
         "planet": "Moon"
       },
       {
-        "gateId": "gate-52",
-        "gateNumber": 52,
-        "line": 3,
+        "gateId": "gate-2",
+        "gateNumber": 2,
+        "line": 1,
         "isPersonality": false,
         "planet": "Mercury"
       },
       {
-        "gateId": "gate-40",
-        "gateNumber": 40,
-        "line": 4,
+        "gateId": "gate-17",
+        "gateNumber": 17,
+        "line": 6,
         "isPersonality": false,
         "planet": "Venus"
       },
       {
-        "gateId": "gate-16",
-        "gateNumber": 16,
-        "line": 6,
+        "gateId": "gate-31",
+        "gateNumber": 31,
+        "line": 5,
         "isPersonality": false,
         "planet": "Mars"
       },
       {
-        "gateId": "gate-28",
-        "gateNumber": 28,
-        "line": 4,
+        "gateId": "gate-18",
+        "gateNumber": 18,
+        "line": 2,
         "isPersonality": false,
         "planet": "Jupiter"
       },
       {
-        "gateId": "gate-63",
-        "gateNumber": 63,
-        "line": 1,
+        "gateId": "gate-30",
+        "gateNumber": 30,
+        "line": 6,
         "isPersonality": false,
         "planet": "Saturn"
       },
       {
         "gateId": "gate-61",
         "gateNumber": 61,
-        "line": 4,
+        "line": 2,
         "isPersonality": false,
         "planet": "Uranus"
       },
       {
         "gateId": "gate-61",
         "gateNumber": 61,
-        "line": 2,
+        "line": 1,
         "isPersonality": false,
         "planet": "Neptune"
       },
       {
-        "gateId": "gate-14",
-        "gateNumber": 14,
-        "line": 1,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 6,
         "isPersonality": false,
         "planet": "Pluto"
       },
       {
-        "gateId": "gate-43",
-        "gateNumber": 43,
-        "line": 4,
+        "gateId": "gate-5",
+        "gateNumber": 5,
+        "line": 2,
         "isPersonality": false,
         "planet": "True Node"
       },
       {
-        "gateId": "gate-23",
-        "gateNumber": 23,
-        "line": 4,
+        "gateId": "gate-35",
+        "gateNumber": 35,
+        "line": 2,
         "isPersonality": false,
         "planet": "South Node"
       }
@@ -424,99 +424,99 @@
   "geneKeysProfile": {
     "lifesWork": {
       "sphereName": "Life's Work",
-      "geneKeyId": "gk-32",
-      "geneKeyNumber": 32,
-      "line": 5,
+      "geneKeyId": "gk-7",
+      "geneKeyNumber": 7,
+      "line": 6,
       "planetarySource": "Natal Sun"
     },
     "evolution": {
       "sphereName": "Evolution",
-      "geneKeyId": "gk-42",
-      "geneKeyNumber": 42,
-      "line": 5,
+      "geneKeyId": "gk-13",
+      "geneKeyNumber": 13,
+      "line": 6,
       "planetarySource": "Natal Earth"
     },
     "radiance": {
       "sphereName": "Radiance",
-      "geneKeyId": "gk-56",
-      "geneKeyNumber": 56,
-      "line": 1,
+      "geneKeyId": "gk-23",
+      "geneKeyNumber": 23,
+      "line": 2,
       "planetarySource": "Pre-Natal / Design Sun"
     },
     "purpose": {
       "sphereName": "Purpose",
-      "geneKeyId": "gk-60",
-      "geneKeyNumber": 60,
-      "line": 1,
+      "geneKeyId": "gk-43",
+      "geneKeyNumber": 43,
+      "line": 2,
       "planetarySource": "Pre-Natal / Design Earth"
     },
     "attraction": {
       "sphereName": "Attraction",
-      "geneKeyId": "gk-5",
-      "geneKeyNumber": 5,
-      "line": 5,
+      "geneKeyId": "gk-54",
+      "geneKeyNumber": 54,
+      "line": 6,
       "planetarySource": "Pre-Natal / Design Moon"
     },
     "iq": {
       "sphereName": "IQ",
-      "geneKeyId": "gk-1",
-      "geneKeyNumber": 1,
-      "line": 5,
+      "geneKeyId": "gk-39",
+      "geneKeyNumber": 39,
+      "line": 1,
       "planetarySource": "Natal Venus"
     },
     "eq": {
       "sphereName": "EQ",
-      "geneKeyId": "gk-31",
-      "geneKeyNumber": 31,
-      "line": 6,
+      "geneKeyId": "gk-46",
+      "geneKeyNumber": 46,
+      "line": 2,
       "planetarySource": "Natal Mars"
     },
     "sq": {
       "sphereName": "SQ",
-      "geneKeyId": "gk-40",
-      "geneKeyNumber": 40,
-      "line": 4,
+      "geneKeyId": "gk-17",
+      "geneKeyNumber": 17,
+      "line": 6,
       "planetarySource": "Pre-Natal / Design Venus"
     },
     "core": {
       "sphereName": "Core",
-      "geneKeyId": "gk-16",
-      "geneKeyNumber": 16,
-      "line": 6,
+      "geneKeyId": "gk-31",
+      "geneKeyNumber": 31,
+      "line": 5,
       "planetarySource": "Pre-Natal / Design Mars"
     },
     "vocation": {
       "sphereName": "Vocation",
-      "geneKeyId": "gk-16",
-      "geneKeyNumber": 16,
-      "line": 6,
+      "geneKeyId": "gk-31",
+      "geneKeyNumber": 31,
+      "line": 5,
       "planetarySource": "Pre-Natal / Design Mars"
     },
     "culture": {
       "sphereName": "Culture",
-      "geneKeyId": "gk-28",
-      "geneKeyNumber": 28,
-      "line": 4,
+      "geneKeyId": "gk-18",
+      "geneKeyNumber": 18,
+      "line": 2,
       "planetarySource": "Pre-Natal / Design Jupiter"
     },
     "pearl": {
       "sphereName": "Pearl",
-      "geneKeyId": "gk-1",
-      "geneKeyNumber": 1,
-      "line": 6,
+      "geneKeyId": "gk-48",
+      "geneKeyNumber": 48,
+      "line": 2,
       "planetarySource": "Natal Jupiter"
     },
     "brand": {
       "sphereName": "Brand",
-      "geneKeyId": "gk-32",
-      "geneKeyNumber": 32,
-      "line": 5,
+      "geneKeyId": "gk-7",
+      "geneKeyNumber": 7,
+      "line": 6,
       "planetarySource": "Natal Sun"
     },
     "relating": {
       "sphereName": "Relating",
-      "geneKeyId": "gk-50",
-      "geneKeyNumber": 50,
+      "geneKeyId": "gk-56",
+      "geneKeyNumber": 56,
       "line": 5,
       "planetarySource": "Natal Mercury"
     },
@@ -524,32 +524,32 @@
       "sphereName": "Creativity",
       "geneKeyId": "gk-61",
       "geneKeyNumber": 61,
-      "line": 4,
+      "line": 2,
       "planetarySource": "Pre-Natal / Design Uranus"
     },
     "stability": {
       "sphereName": "Stability",
-      "geneKeyId": "gk-63",
-      "geneKeyNumber": 63,
-      "line": 1,
+      "geneKeyId": "gk-30",
+      "geneKeyNumber": 30,
+      "line": 6,
       "planetarySource": "Pre-Natal / Design Saturn"
     },
     "coreIdentity": {
       "sun": {
-        "geneKeyId": "gk-32",
-        "geneKeyNumber": 32,
-        "line": 5,
+        "geneKeyId": "gk-7",
+        "geneKeyNumber": 7,
+        "line": 6,
         "sphereName": "Life's Work"
       },
       "moon": {
-        "geneKeyId": "gk-21",
-        "geneKeyNumber": 21,
-        "line": 4,
+        "geneKeyId": "gk-23",
+        "geneKeyNumber": 23,
+        "line": 2,
         "sphereName": "Emotional Core"
       },
       "mercury": {
-        "geneKeyId": "gk-50",
-        "geneKeyNumber": 50,
+        "geneKeyId": "gk-56",
+        "geneKeyNumber": 56,
         "line": 5,
         "sphereName": "Relating"
       },
@@ -562,230 +562,225 @@
     }
   },
   "humanDesignProfile": {
-    "type": "Generator",
-    "strategy": "Wait to Respond",
-    "authority": "Emotional",
-    "profile": "5/1",
-    "definition": "Quadruple Split",
-    "incarnationCross": "Cross of 32/42 | 56/60",
+    "type": "Projector",
+    "strategy": "Wait for Invitation",
+    "authority": "Splenic",
+    "profile": "6/2",
+    "definition": "Single",
+    "incarnationCross": "Cross of 7/13 | 23/43",
     "personalityGates": [
       {
-        "gateId": "gate-32",
-        "gateNumber": 32,
-        "line": 5,
+        "gateId": "gate-7",
+        "gateNumber": 7,
+        "line": 6,
         "isPersonality": true,
         "planet": "Sun"
       },
       {
-        "gateId": "gate-42",
-        "gateNumber": 42,
-        "line": 5,
+        "gateId": "gate-13",
+        "gateNumber": 13,
+        "line": 6,
         "isPersonality": true,
         "planet": "Earth"
       },
       {
-        "gateId": "gate-21",
-        "gateNumber": 21,
-        "line": 4,
+        "gateId": "gate-23",
+        "gateNumber": 23,
+        "line": 2,
         "isPersonality": true,
         "planet": "Moon"
       },
       {
-        "gateId": "gate-50",
-        "gateNumber": 50,
+        "gateId": "gate-56",
+        "gateNumber": 56,
         "line": 5,
         "isPersonality": true,
         "planet": "Mercury"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 5,
+        "gateId": "gate-39",
+        "gateNumber": 39,
+        "line": 1,
         "isPersonality": true,
         "planet": "Venus"
       },
       {
-        "gateId": "gate-31",
-        "gateNumber": 31,
-        "line": 6,
+        "gateId": "gate-46",
+        "gateNumber": 46,
+        "line": 2,
         "isPersonality": true,
         "planet": "Mars"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 6,
+        "gateId": "gate-48",
+        "gateNumber": 48,
+        "line": 2,
         "isPersonality": true,
         "planet": "Jupiter"
       },
       {
-        "gateId": "gate-37",
-        "gateNumber": 37,
-        "line": 1,
+        "gateId": "gate-30",
+        "gateNumber": 30,
+        "line": 4,
         "isPersonality": true,
         "planet": "Saturn"
       },
       {
-        "gateId": "gate-61",
-        "gateNumber": 61,
-        "line": 2,
+        "gateId": "gate-54",
+        "gateNumber": 54,
+        "line": 5,
         "isPersonality": true,
         "planet": "Uranus"
       },
       {
         "gateId": "gate-54",
         "gateNumber": 54,
-        "line": 6,
+        "line": 5,
         "isPersonality": true,
         "planet": "Neptune"
       },
       {
-        "gateId": "gate-14",
-        "gateNumber": 14,
-        "line": 3,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 5,
         "isPersonality": true,
         "planet": "Pluto"
       },
       {
-        "gateId": "gate-1",
-        "gateNumber": 1,
-        "line": 2,
+        "gateId": "gate-9",
+        "gateNumber": 9,
+        "line": 5,
         "isPersonality": true,
         "planet": "True Node"
       },
       {
-        "gateId": "gate-2",
-        "gateNumber": 2,
-        "line": 2,
+        "gateId": "gate-16",
+        "gateNumber": 16,
+        "line": 5,
         "isPersonality": true,
         "planet": "South Node"
       }
     ],
     "designGates": [
       {
-        "gateId": "gate-56",
-        "gateNumber": 56,
-        "line": 1,
+        "gateId": "gate-23",
+        "gateNumber": 23,
+        "line": 2,
         "isPersonality": false,
         "planet": "Sun"
       },
       {
-        "gateId": "gate-60",
-        "gateNumber": 60,
-        "line": 1,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 2,
         "isPersonality": false,
         "planet": "Earth"
       },
       {
-        "gateId": "gate-5",
-        "gateNumber": 5,
-        "line": 5,
+        "gateId": "gate-54",
+        "gateNumber": 54,
+        "line": 6,
         "isPersonality": false,
         "planet": "Moon"
       },
       {
-        "gateId": "gate-52",
-        "gateNumber": 52,
-        "line": 3,
+        "gateId": "gate-2",
+        "gateNumber": 2,
+        "line": 1,
         "isPersonality": false,
         "planet": "Mercury"
       },
       {
-        "gateId": "gate-40",
-        "gateNumber": 40,
-        "line": 4,
+        "gateId": "gate-17",
+        "gateNumber": 17,
+        "line": 6,
         "isPersonality": false,
         "planet": "Venus"
       },
       {
-        "gateId": "gate-16",
-        "gateNumber": 16,
-        "line": 6,
+        "gateId": "gate-31",
+        "gateNumber": 31,
+        "line": 5,
         "isPersonality": false,
         "planet": "Mars"
       },
       {
-        "gateId": "gate-28",
-        "gateNumber": 28,
-        "line": 4,
+        "gateId": "gate-18",
+        "gateNumber": 18,
+        "line": 2,
         "isPersonality": false,
         "planet": "Jupiter"
       },
       {
-        "gateId": "gate-63",
-        "gateNumber": 63,
-        "line": 1,
+        "gateId": "gate-30",
+        "gateNumber": 30,
+        "line": 6,
         "isPersonality": false,
         "planet": "Saturn"
       },
       {
         "gateId": "gate-61",
         "gateNumber": 61,
-        "line": 4,
+        "line": 2,
         "isPersonality": false,
         "planet": "Uranus"
       },
       {
         "gateId": "gate-61",
         "gateNumber": 61,
-        "line": 2,
+        "line": 1,
         "isPersonality": false,
         "planet": "Neptune"
       },
       {
-        "gateId": "gate-14",
-        "gateNumber": 14,
-        "line": 1,
+        "gateId": "gate-43",
+        "gateNumber": 43,
+        "line": 6,
         "isPersonality": false,
         "planet": "Pluto"
       },
       {
-        "gateId": "gate-43",
-        "gateNumber": 43,
-        "line": 4,
+        "gateId": "gate-5",
+        "gateNumber": 5,
+        "line": 2,
         "isPersonality": false,
         "planet": "True Node"
       },
       {
-        "gateId": "gate-23",
-        "gateNumber": 23,
-        "line": 4,
+        "gateId": "gate-35",
+        "gateNumber": 35,
+        "line": 2,
         "isPersonality": false,
         "planet": "South Node"
       }
     ],
     "definedCenterIds": [
       "g-center",
-      "sacral-center",
       "throat-center",
-      "ajna-center",
       "spleen-center",
-      "root-center",
-      "solar-plexus-center",
-      "heart-center"
+      "ajna-center"
     ],
     "definedChannelIds": [
-      "channel-2-14",
-      "channel-23-43",
-      "channel-32-54",
-      "channel-37-40"
+      "channel-7-31",
+      "channel-16-48",
+      "channel-23-43"
     ],
     "coreIdentity": {
       "sun": {
-        "gateId": "gate-32",
-        "gateNumber": 32,
-        "line": 5,
+        "gateId": "gate-7",
+        "gateNumber": 7,
+        "line": 6,
         "centerName": "Spleen"
       },
       "moon": {
-        "gateId": "gate-21",
-        "gateNumber": 21,
-        "line": 4,
+        "gateId": "gate-23",
+        "gateNumber": 23,
+        "line": 2,
         "centerName": "Heart"
       },
       "mercury": {
-        "gateId": "gate-50",
-        "gateNumber": 50,
+        "gateId": "gate-56",
+        "gateNumber": 56,
         "line": 5,
         "centerName": "Spleen"
       },
@@ -798,10 +793,9 @@
     }
   },
   "numerologyProfile": {
-    "lifePathNumber": 33,
-    "birthdayNumber": 9,
-    "lifePathBase": 6,
-    "lifePathEntityId": "num-33",
-    "birthdayEntityId": "num-9"
+    "lifePathNumber": 4,
+    "birthdayNumber": 1,
+    "lifePathEntityId": "num-4",
+    "birthdayEntityId": "num-1"
   }
 }

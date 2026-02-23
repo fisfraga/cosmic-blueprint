@@ -13,6 +13,7 @@ import type { AstroProfile, CosmicProfile, ProfileMeta } from '../types';
 import { getAsCosmicProfile, cosmicToAstroProfile } from './profileMigration';
 import felipeData from '../data/profile/felipe.json';
 import dudaData from '../data/profile/duda-fraga.json';
+import catarinaData from '../data/profile/catarina-goldani.json';
 
 // Re-export ProfileMeta type for backwards compatibility
 export type { ProfileMeta };
@@ -23,6 +24,7 @@ const PROFILES_KEY = 'cosmic-copilot-profiles';
 const ACTIVE_PROFILE_KEY = 'cosmic-copilot-active-profile-id';
 const SEED_KEY = 'cosmic-copilot-seeded';
 const SEED_V2_KEY = 'cosmic-copilot-seeded-v2';
+const SEED_V3_KEY = 'cosmic-copilot-seeded-v3';
 const MAX_PROFILES = 10;
 
 // ─── localStorage I/O ────────────────────────────────────────────────────────
@@ -209,13 +211,15 @@ export function updateProfileRelationship(profileId: string, relationship: strin
 // ─── First-run seed ───────────────────────────────────────────────────────────
 
 /**
- * Seeds Felipe + Duda profiles into localStorage on first run.
+ * Seeds default profiles into localStorage on first run.
  *
- * Three cases:
- * - Both SEED_KEY + SEED_V2_KEY present → no-op (fully seeded)
- * - Neither present (fresh install) → seed both profiles, activate Felipe
- * - Only SEED_KEY present (existing user upgrading) → append Duda if absent,
- *   leave active profile unchanged, set SEED_V2_KEY
+ * v1: Felipe | v2: + Duda | v3: + Catarina
+ *
+ * Cases:
+ * - All seed flags present → no-op (fully seeded)
+ * - Neither present (fresh install) → seed all profiles, activate Felipe
+ * - Missing v2/v3 (existing user upgrading) → append missing profiles,
+ *   leave active profile unchanged, set missing seed flags
  */
 function seedDefaultProfileOnFirstRun(): void {
   try {
@@ -223,13 +227,15 @@ function seedDefaultProfileOnFirstRun(): void {
 
     const hasSeedV1 = !!localStorage.getItem(SEED_KEY);
     const hasSeedV2 = !!localStorage.getItem(SEED_V2_KEY);
+    const hasSeedV3 = !!localStorage.getItem(SEED_V3_KEY);
 
-    if (hasSeedV1 && hasSeedV2) return; // Fully seeded — no-op
+    if (hasSeedV1 && hasSeedV2 && hasSeedV3) return; // Fully seeded — no-op
 
     const dudaCosmic = getAsCosmicProfile(dudaData as unknown as AstroProfile);
+    const catarinaCosmic = getAsCosmicProfile(catarinaData as unknown as AstroProfile);
 
     if (!hasSeedV1) {
-      // Fresh install — seed both Felipe and Duda
+      // Fresh install — seed all profiles
       const felipeCosmic = getAsCosmicProfile(felipeData as unknown as AstroProfile);
       const felipeSeeded: CosmicProfile = {
         ...felipeCosmic,
@@ -241,19 +247,34 @@ function seedDefaultProfileOnFirstRun(): void {
         },
       };
 
-      writeToStorage([felipeSeeded, dudaCosmic]);
+      writeToStorage([felipeSeeded, dudaCosmic, catarinaCosmic]);
       localStorage.setItem(ACTIVE_PROFILE_KEY, felipeSeeded.meta.id);
       localStorage.setItem(SEED_KEY, '1');
       localStorage.setItem(SEED_V2_KEY, '1');
+      localStorage.setItem(SEED_V3_KEY, '1');
     } else {
-      // Existing user — append Duda if not already present
+      // Existing user — append missing profiles
       const profiles = readFromStorage();
-      const dudaAlreadyExists = profiles.some((p) => p.meta.id === 'duda-fraga-19980119');
-      if (!dudaAlreadyExists) {
-        profiles.push(dudaCosmic);
+
+      if (!hasSeedV2) {
+        const dudaAlreadyExists = profiles.some((p) => p.meta.id === 'duda-fraga-19980119');
+        if (!dudaAlreadyExists) {
+          profiles.push(dudaCosmic);
+        }
+        localStorage.setItem(SEED_V2_KEY, '1');
+      }
+
+      if (!hasSeedV3) {
+        const catarinaAlreadyExists = profiles.some((p) => p.meta.id === 'catarina-goldani-19930810');
+        if (!catarinaAlreadyExists) {
+          profiles.push(catarinaCosmic);
+        }
+        localStorage.setItem(SEED_V3_KEY, '1');
+      }
+
+      if (!hasSeedV2 || !hasSeedV3) {
         writeToStorage(profiles);
       }
-      localStorage.setItem(SEED_V2_KEY, '1');
     }
   } catch {
     // localStorage may be unavailable (SSR, strict privacy modes)

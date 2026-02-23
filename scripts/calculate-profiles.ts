@@ -109,6 +109,15 @@ const dudaBirthData: BirthData = {
   cityOfBirth: 'Rio de Janeiro',
 };
 
+const catarinaBirthData: BirthData = {
+  dateOfBirth: '1993-08-10',
+  timeOfBirth: '17:05',
+  timezone: 'America/Sao_Paulo',
+  latitude: -22.9068,
+  longitude: -43.1729,
+  cityOfBirth: 'Rio de Janeiro',
+};
+
 function buildCosmicProfile(
   birthData: BirthData,
   id: string,
@@ -177,6 +186,15 @@ const dudaProfile = buildCosmicProfile(
   'partner'
 );
 
+// Calculate Catarina
+console.log('=== Calculating Catarina Goldani ===');
+const catarinaProfile = buildCosmicProfile(
+  catarinaBirthData,
+  'catarina-goldani-19930810',
+  'Catarina Goldani',
+  'partner'
+);
+
 // Write files
 const profileDir = resolve(__dirname, '../src/data/profile');
 
@@ -191,6 +209,12 @@ writeFileSync(
   JSON.stringify(dudaProfile, null, 2) + '\n'
 );
 console.log('Wrote: src/data/profile/duda-fraga.json');
+
+writeFileSync(
+  resolve(profileDir, 'catarina-goldani.json'),
+  JSON.stringify(catarinaProfile, null, 2) + '\n'
+);
+console.log('Wrote: src/data/profile/catarina-goldani.json');
 
 // Print human-readable summary
 function printSummary(label: string, profile: CosmicProfile) {
@@ -242,5 +266,6 @@ function printSummary(label: string, profile: CosmicProfile) {
 
 printSummary('Felipe Fraga', felipeProfile);
 printSummary('Duda Fraga', dudaProfile);
+printSummary('Catarina Goldani', catarinaProfile);
 
 console.log('\n=== Done ===');

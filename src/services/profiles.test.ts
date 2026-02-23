@@ -56,9 +56,10 @@ describe('Profile Service', () => {
     vi.resetModules();
     mockStorage = createLocalStorageMock();
     vi.stubGlobal('localStorage', mockStorage);
-    // Prevent seeding from running by setting both seed keys
+    // Prevent seeding from running by setting all seed keys
     mockStorage.setItem('cosmic-copilot-seeded', '1');
     mockStorage.setItem('cosmic-copilot-seeded-v2', '1');
+    mockStorage.setItem('cosmic-copilot-seeded-v3', '1');
   });
 
   async function importProfiles() {
@@ -288,24 +289,28 @@ describe('Profile Service', () => {
   });
 
   describe('seedDefaultProfileOnFirstRun', () => {
-    it('fresh install: seeds both Felipe and Duda, Felipe is active', async () => {
-      // Clear both seed flags so seeding runs from scratch
+    it('fresh install: seeds Felipe, Duda, and Catarina; Felipe is active', async () => {
+      // Clear all seed flags so seeding runs from scratch
       mockStorage.removeItem('cosmic-copilot-seeded');
       mockStorage.removeItem('cosmic-copilot-seeded-v2');
+      mockStorage.removeItem('cosmic-copilot-seeded-v3');
 
       const { loadAllProfiles, getActiveProfileId } = await importProfiles();
 
       const profiles = loadAllProfiles();
-      expect(profiles).toHaveLength(2);
+      expect(profiles).toHaveLength(3);
       expect(profiles[0].meta.id).toBe('felipe-fraga');
       expect(profiles[1].meta.id).toBe('duda-fraga-19980119');
       expect(profiles[1].meta.relationship).toBe('partner');
+      expect(profiles[2].meta.id).toBe('catarina-goldani-19930810');
+      expect(profiles[2].meta.relationship).toBe('partner');
       expect(getActiveProfileId()).toBe('felipe-fraga');
     });
 
-    it('existing user (v1 only): appends Duda without changing active profile', async () => {
-      // beforeEach set SEED_KEY; remove SEED_V2_KEY to simulate upgrade path
+    it('existing user (v1 only): appends Duda and Catarina without changing active profile', async () => {
+      // beforeEach set SEED_KEY; remove SEED_V2_KEY + SEED_V3_KEY to simulate upgrade path
       mockStorage.removeItem('cosmic-copilot-seeded-v2');
+      mockStorage.removeItem('cosmic-copilot-seeded-v3');
       const felipeProfile = makeCosmicProfile({ meta: { id: 'felipe-fraga', name: 'Felipe Fraga', relationship: 'Me', dateOfBirth: '1994-10-18', createdAt: '2024-10-18T08:10:00.000Z', lastViewedAt: '2024-10-18T08:10:00.000Z' } });
       mockStorage.setItem('cosmic-copilot-profiles', JSON.stringify([felipeProfile]));
       mockStorage.setItem('cosmic-copilot-active-profile-id', 'felipe-fraga');
@@ -313,13 +318,30 @@ describe('Profile Service', () => {
       const { loadAllProfiles, getActiveProfileId } = await importProfiles();
 
       const profiles = loadAllProfiles();
-      expect(profiles).toHaveLength(2);
+      expect(profiles).toHaveLength(3);
       expect(profiles.some((p) => p.meta.id === 'duda-fraga-19980119')).toBe(true);
+      expect(profiles.some((p) => p.meta.id === 'catarina-goldani-19930810')).toBe(true);
       expect(getActiveProfileId()).toBe('felipe-fraga'); // Active unchanged
     });
 
-    it('v2 already seeded: no-op (both flags set)', async () => {
-      // beforeEach already set both SEED_KEY and SEED_V2_KEY — no-op expected
+    it('v2 user upgrading to v3: appends Catarina only', async () => {
+      // SEED_KEY + SEED_V2_KEY set by beforeEach; remove SEED_V3_KEY to trigger v3 upgrade
+      mockStorage.removeItem('cosmic-copilot-seeded-v3');
+      const felipeProfile = makeCosmicProfile({ meta: { id: 'felipe-fraga', name: 'Felipe Fraga', relationship: 'Me', dateOfBirth: '1994-10-18', createdAt: '2024-10-18T08:10:00.000Z', lastViewedAt: '2024-10-18T08:10:00.000Z' } });
+      const dudaProfile = makeCosmicProfile({ meta: { id: 'duda-fraga-19980119', name: 'Duda Fraga', relationship: 'partner', dateOfBirth: '1998-01-19', createdAt: '2026-02-22T00:00:00.000Z', lastViewedAt: '2026-02-22T00:00:00.000Z' } });
+      mockStorage.setItem('cosmic-copilot-profiles', JSON.stringify([felipeProfile, dudaProfile]));
+      mockStorage.setItem('cosmic-copilot-active-profile-id', 'felipe-fraga');
+
+      const { loadAllProfiles, getActiveProfileId } = await importProfiles();
+
+      const profiles = loadAllProfiles();
+      expect(profiles).toHaveLength(3);
+      expect(profiles[2].meta.id).toBe('catarina-goldani-19930810');
+      expect(getActiveProfileId()).toBe('felipe-fraga'); // Active unchanged
+    });
+
+    it('v3 already seeded: no-op (all flags set)', async () => {
+      // beforeEach already set all three seed flags — no-op expected
 
       const { loadAllProfiles } = await importProfiles();
 
@@ -327,19 +349,35 @@ describe('Profile Service', () => {
     });
 
     it('idempotent: Duda not duplicated if already present during v1→v2 upgrade', async () => {
-      // Existing user already has both profiles; remove SEED_V2_KEY to trigger upgrade path
+      // Existing user already has both profiles; remove SEED_V2_KEY + SEED_V3_KEY to trigger upgrade path
       mockStorage.removeItem('cosmic-copilot-seeded-v2');
+      mockStorage.removeItem('cosmic-copilot-seeded-v3');
       const felipeProfile = makeCosmicProfile({ meta: { id: 'felipe-fraga', name: 'Felipe Fraga', relationship: 'Me', dateOfBirth: '1994-10-18', createdAt: '2024-10-18T08:10:00.000Z', lastViewedAt: '2024-10-18T08:10:00.000Z' } });
       const dudaProfile = makeCosmicProfile({ meta: { id: 'duda-fraga-19980119', name: 'Duda Fraga', relationship: 'partner', dateOfBirth: '1998-01-19', createdAt: '2026-02-22T00:00:00.000Z', lastViewedAt: '2026-02-22T00:00:00.000Z' } });
       mockStorage.setItem('cosmic-copilot-profiles', JSON.stringify([felipeProfile, dudaProfile]));
       mockStorage.setItem('cosmic-copilot-active-profile-id', 'felipe-fraga');
-      // SEED_KEY set by beforeEach; SEED_V2_KEY removed above
 
       const { loadAllProfiles } = await importProfiles();
 
       const profiles = loadAllProfiles();
-      expect(profiles).toHaveLength(2); // No duplicate
+      expect(profiles).toHaveLength(3); // Only Catarina appended
       expect(profiles.filter((p) => p.meta.id === 'duda-fraga-19980119')).toHaveLength(1);
+      expect(profiles.filter((p) => p.meta.id === 'catarina-goldani-19930810')).toHaveLength(1);
+    });
+
+    it('idempotent: Catarina not duplicated if already present during v2→v3 upgrade', async () => {
+      // User already has all 3 profiles manually; remove SEED_V3_KEY to trigger v3 path
+      mockStorage.removeItem('cosmic-copilot-seeded-v3');
+      const felipeProfile = makeCosmicProfile({ meta: { id: 'felipe-fraga', name: 'Felipe Fraga', relationship: 'Me', dateOfBirth: '1994-10-18', createdAt: '2024-10-18T08:10:00.000Z', lastViewedAt: '2024-10-18T08:10:00.000Z' } });
+      const dudaProfile = makeCosmicProfile({ meta: { id: 'duda-fraga-19980119', name: 'Duda Fraga', relationship: 'partner', dateOfBirth: '1998-01-19', createdAt: '2026-02-22T00:00:00.000Z', lastViewedAt: '2026-02-22T00:00:00.000Z' } });
+      const catarinaProfile = makeCosmicProfile({ meta: { id: 'catarina-goldani-19930810', name: 'Catarina Goldani', relationship: 'partner', dateOfBirth: '1993-08-10', createdAt: '2026-02-23T00:00:00.000Z', lastViewedAt: '2026-02-23T00:00:00.000Z' } });
+      mockStorage.setItem('cosmic-copilot-profiles', JSON.stringify([felipeProfile, dudaProfile, catarinaProfile]));
+
+      const { loadAllProfiles } = await importProfiles();
+
+      const profiles = loadAllProfiles();
+      expect(profiles).toHaveLength(3); // No duplicate
+      expect(profiles.filter((p) => p.meta.id === 'catarina-goldani-19930810')).toHaveLength(1);
     });
   });
 });
