@@ -345,7 +345,7 @@ export function isRetrograde(planetId: string, date: Date): boolean {
     );
     const today = pos1[planetId as keyof PlanetaryPositions] as number;
     const yesterday = pos2[planetId as keyof PlanetaryPositions] as number;
-    let diff = (today as number) - (yesterday as number);
+    const diff = (today as number) - (yesterday as number);
     if (diff > 180) return true;
     if (diff < -180) return false;
     return diff < 0;
@@ -358,7 +358,7 @@ export function isRetrograde(planetId: string, date: Date): boolean {
   );
 
   // Calculate the difference in longitude
-  let diff = today - yesterday;
+  const diff = today - yesterday;
 
   // Handle 0°/360° wraparound: if the absolute difference is > 180°,
   // the planet crossed the 0° boundary

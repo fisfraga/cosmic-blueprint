@@ -248,6 +248,12 @@ export function ProfileFixedStars() {
     setSelectedEntities(prev => prev.filter(e => e.id !== entityId));
   }, []);
 
+  // Compute Brady's Parans (memoized — must be before early returns per Rules of Hooks)
+  const paranGroups = useMemo(() => {
+    if (!cosmicProfile?.birthData) return [];
+    return groupParansByStar(computeParans(cosmicProfile.birthData));
+  }, [cosmicProfile?.birthData]);
+
   if (isLoading) {
     return <LoadingSkeleton variant="profile" />;
   }
@@ -264,12 +270,6 @@ export function ProfileFixedStars() {
   const conjunctions = getFixedStarConjunctions(profile.placements);
   const { exact, close, wide } = groupConjunctionsByExactness(conjunctions);
   const totalCount = conjunctions.length;
-
-  // Compute Brady's Parans (memoized — computeParans involves astronomy-engine calculations)
-  const paranGroups = useMemo(() => {
-    if (!cosmicProfile?.birthData) return [];
-    return groupParansByStar(computeParans(cosmicProfile.birthData));
-  }, [cosmicProfile?.birthData]);
 
   return (
     <div className="flex h-full">
