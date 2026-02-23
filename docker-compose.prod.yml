@@ -14,8 +14,8 @@ services:
       - NODE_ENV=production
       - ASTROLOGY_SERVICE_URL=http://astrology-api:8000
     env_file: .env.production
-    expose:
-      - "3000"
+    ports:
+      - "3000:3000"
     healthcheck:
       test: ["CMD", "wget", "-q", "--spider", "http://localhost:3000/health"]
       interval: 30s
