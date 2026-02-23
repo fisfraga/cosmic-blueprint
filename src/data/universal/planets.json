@@ -17,7 +17,8 @@
     "planetImportance": 4,
     "signsRuled": ["leo"],
     "giftExpression": "Authentic leadership, creative radiance, generous heart, inspiring presence, clear sense of purpose, confident self-expression, vital life force",
-    "shadowExpression": "Ego inflation, narcissism, need for constant attention, arrogance, inability to see others' perspectives, domineering behavior, pride that blocks growth"
+    "shadowExpression": "Ego inflation, narcissism, need for constant attention, arrogance, inability to see others' perspectives, domineering behavior, pride that blocks growth",
+    "debraRoleMetaphor": "Chairperson of the board — your essential nature and identity"
   },
   {
     "id": "moon",
@@ -37,7 +38,8 @@
     "planetImportance": 4,
     "signsRuled": ["cancer"],
     "giftExpression": "Deep empathy, intuitive wisdom, emotional intelligence, nurturing presence, psychic sensitivity, ancestral healing, natural rhythms",
-    "shadowExpression": "Moodiness, emotional manipulation, clinging to the past, victim consciousness, inability to self-soothe, projecting emotions onto others, fear of change"
+    "shadowExpression": "Moodiness, emotional manipulation, clinging to the past, victim consciousness, inability to self-soothe, projecting emotions onto others, fear of change",
+    "debraRoleMetaphor": "Emotional body and maternal wisdom — how you feel and need nurturing"
   },
   {
     "id": "mercury",
@@ -57,7 +59,8 @@
     "planetImportance": 2,
     "signsRuled": ["gemini", "virgo"],
     "giftExpression": "Clear communication, quick wit, adaptability, learning ability, intellectual curiosity, mental agility, bridging understanding",
-    "shadowExpression": "Mental restlessness, gossip, superficial thinking, communication breakdowns, information overload, nervous anxiety, scattered focus"
+    "shadowExpression": "Mental restlessness, gossip, superficial thinking, communication breakdowns, information overload, nervous anxiety, scattered focus",
+    "debraRoleMetaphor": "Winged messenger — how you think, communicate, and process information"
   },
   {
     "id": "venus",
@@ -77,7 +80,8 @@
     "planetImportance": 2,
     "signsRuled": ["taurus", "libra"],
     "giftExpression": "Aesthetic beauty, harmonious relationships, artistic creativity, diplomatic grace, appreciation of life's pleasures, loving kindness, natural magnetism",
-    "shadowExpression": "Vanity, superficiality, codependency, materialism, avoiding conflict at all costs, people-pleasing, jealousy in relationships"
+    "shadowExpression": "Vanity, superficiality, codependency, materialism, avoiding conflict at all costs, people-pleasing, jealousy in relationships",
+    "debraRoleMetaphor": "HR Director — how you relate, attract, and create harmony"
   },
   {
     "id": "mars",
@@ -97,7 +101,8 @@
     "planetImportance": 2,
     "signsRuled": ["aries", "scorpio"],
     "giftExpression": "Courageous action, healthy assertiveness, passionate pursuit, protective strength, dynamic leadership, warrior spirit, constructive anger, vital energy, decisive initiative",
-    "shadowExpression": "Aggression, impatience, anger outbursts, domination, reckless impulsiveness, violence, destructive competition, bullying behavior, inability to control temper"
+    "shadowExpression": "Aggression, impatience, anger outbursts, domination, reckless impulsiveness, violence, destructive competition, bullying behavior, inability to control temper",
+    "debraRoleMetaphor": "Direct action force — how you assert, pursue, and express will"
   },
   {
     "id": "jupiter",
@@ -117,7 +122,8 @@
     "planetImportance": 2,
     "signsRuled": ["sagittarius", "pisces"],
     "giftExpression": "Generous spirit, philosophical wisdom, cultural bridge-building, inspiring teaching, ethical leadership, natural abundance, expansive vision",
-    "shadowExpression": "Overindulgence, dogmatism, false optimism, excess, judgmental attitudes, spiritual bypassing, unrealistic expectations"
+    "shadowExpression": "Overindulgence, dogmatism, false optimism, excess, judgmental attitudes, spiritual bypassing, unrealistic expectations",
+    "debraRoleMetaphor": "Jolly Santa Claus — where you expand, grow, and receive abundance"
   },
   {
     "id": "saturn",
@@ -137,7 +143,8 @@
     "planetImportance": 4,
     "signsRuled": ["capricorn", "aquarius"],
     "giftExpression": "Practical wisdom, disciplined mastery, reliable leadership, patient building, authentic authority, structural integrity, mature responsibility",
-    "shadowExpression": "Rigidity, pessimism, harsh self-criticism, fear of failure, authoritarian control, depression from limitations, perfectionism"
+    "shadowExpression": "Rigidity, pessimism, harsh self-criticism, fear of failure, authoritarian control, depression from limitations, perfectionism",
+    "debraRoleMetaphor": "Stern COO and Taskmaster — the life lesson you came here to master"
   },
   {
     "id": "uranus",
@@ -157,7 +164,8 @@
     "planetImportance": 1,
     "signsRuled": ["aquarius"],
     "giftExpression": "Visionary innovation, humanitarian service, authentic individuality, breakthrough insights, progressive leadership, revolutionary consciousness, freedom advocacy",
-    "shadowExpression": "Chaotic rebellion, detachment from feeling, shocking behavior for its own sake, restless instability, rejection of all structure, erratic changes"
+    "shadowExpression": "Chaotic rebellion, detachment from feeling, shocking behavior for its own sake, restless instability, rejection of all structure, erratic changes",
+    "debraRoleMetaphor": "Revolutionary thinker — where you rebel, innovate, and break patterns"
   },
   {
     "id": "neptune",
@@ -177,7 +185,8 @@
     "planetImportance": 1,
     "signsRuled": ["pisces"],
     "giftExpression": "Divine compassion, artistic inspiration, spiritual devotion, healing presence, transcendent love, mystical awareness, universal connection",
-    "shadowExpression": "Escapism, delusion, victim consciousness, addiction, spiritual bypassing, boundary confusion, martyrdom complex"
+    "shadowExpression": "Escapism, delusion, victim consciousness, addiction, spiritual bypassing, boundary confusion, martyrdom complex",
+    "debraRoleMetaphor": "Mystic dreamer — where you dissolve, transcend, and seek the divine"
   },
   {
     "id": "pluto",
@@ -197,6 +206,7 @@
     "planetImportance": 1,
     "signsRuled": ["scorpio"],
     "giftExpression": "Profound healing, transformative power, psychological insight, regenerative capacity, evolutionary wisdom, depth perception, authentic empowerment",
-    "shadowExpression": "Obsessive control, destructive behavior, power struggles, fear of transformation, underground manipulation, vindictiveness, compulsive patterns"
+    "shadowExpression": "Obsessive control, destructive behavior, power struggles, fear of transformation, underground manipulation, vindictiveness, compulsive patterns",
+    "debraRoleMetaphor": "Unconscious transformer — where deep metamorphosis and power dynamics play out"
   }
 ]

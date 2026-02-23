@@ -28,7 +28,9 @@
     "shadowExpression": "Impulsive, aggressive, self-centered",
     "lightExpression": "Brave, pioneering, natural leader",
     "managementGuidance": "Embrace courage; practice patience and consideration of others",
-    "vperPhase": "vision"
+    "vperPhase": "vision",
+    "debraSignMedicine": "Physical movement, loud singing, expressing anger, exercise",
+    "debraGremlinTheme": "I keep making things about me; people get mad at me without warning"
   },
   {
     "id": "taurus",
@@ -59,7 +61,9 @@
     "shadowExpression": "Materialistic, stubborn, resistant to change",
     "lightExpression": "Stable, loyal, sensual, persistent",
     "managementGuidance": "Value stability; practice flexibility and openness",
-    "vperPhase": "execute"
+    "vperPhase": "execute",
+    "debraSignMedicine": "Stay home guilt-free, baking and cooking, nature and gardening, home refresh",
+    "debraGremlinTheme": "I'm not good enough; I'm boring; I'm falling behind; why can't I motivate?"
   },
   {
     "id": "gemini",
@@ -89,7 +93,9 @@
     "shadowExpression": "Indecisive, restless, superficial",
     "lightExpression": "Versatile, witty, curious, articulate",
     "managementGuidance": "Enjoy curiosity; cultivate focus and deeper connections",
-    "vperPhase": "plan"
+    "vperPhase": "plan",
+    "debraSignMedicine": "Talk and journal, moving meditation (yoga or dance), grounding (barefoot walking), structured friendship",
+    "debraGremlinTheme": "I can't focus; I'm faking it; nobody really knows me; I keep abandoning things"
   },
   {
     "id": "cancer",
@@ -119,7 +125,9 @@
     "shadowExpression": "Moody, clingy, fear of rejection",
     "lightExpression": "Empathetic, nurturing, intuitive",
     "managementGuidance": "Nurture others; set healthy emotional boundaries",
-    "vperPhase": "review"
+    "vperPhase": "review",
+    "debraSignMedicine": "Alone time to reboot, therapy, physical touch, limiting emotional absorption",
+    "debraGremlinTheme": "Everything bad keeps happening to me; nobody cares; life is too hard"
   },
   {
     "id": "leo",
@@ -150,7 +158,9 @@
     "shadowExpression": "Arrogant, attention-seeking, domineering",
     "lightExpression": "Vibrant, generous, charismatic, creative",
     "managementGuidance": "Practice humility; shine light on others",
-    "vperPhase": "vision"
+    "vperPhase": "vision",
+    "debraSignMedicine": "Creative expression, perform and shine without needing applause, give love freely",
+    "debraGremlinTheme": "Nobody appreciates me; I need more attention; I'm only lovable when performing"
   },
   {
     "id": "virgo",
@@ -180,7 +190,9 @@
     "shadowExpression": "Perfectionist, overcritical, anxiety-prone",
     "lightExpression": "Analytical, reliable, health-conscious",
     "managementGuidance": "Use analytical skills; practice self-compassion",
-    "vperPhase": "execute"
+    "vperPhase": "execute",
+    "debraSignMedicine": "Selfless service, accept imperfection, forgive self, measure life by feeling not results",
+    "debraGremlinTheme": "Nothing is ever good enough; I'm failing; I should be doing better"
   },
   {
     "id": "libra",
@@ -211,7 +223,9 @@
     "shadowExpression": "Indecisive, conflict-avoidant, people-pleasing",
     "lightExpression": "Diplomatic, harmonious, artistically gifted",
     "managementGuidance": "Foster harmony; practice decisive assertiveness",
-    "vperPhase": "plan"
+    "vperPhase": "plan",
+    "debraSignMedicine": "Identity independent of relationship, find peace within, self-completion practice",
+    "debraGremlinTheme": "I need a relationship to feel whole; I'm too dependent on others' approval"
   },
   {
     "id": "scorpio",
@@ -243,7 +257,9 @@
     "shadowExpression": "Secretive, jealous, holds grudges",
     "lightExpression": "Passionate, transformative, resilient, insightful",
     "managementGuidance": "Channel intensity; practice forgiveness and openness",
-    "vperPhase": "review"
+    "vperPhase": "review",
+    "debraSignMedicine": "Face shadow directly, transform pain into power, release control, trust practice",
+    "debraGremlinTheme": "I can't trust anyone; if I let go I lose control; the dark side is always pulling"
   },
   {
     "id": "sagittarius",
@@ -273,7 +289,9 @@
     "shadowExpression": "Restless, tactless, impatient, lacks detail",
     "lightExpression": "Optimistic, philosophical, adventurous, honest",
     "managementGuidance": "Embrace optimism; be mindful of bluntness; commit to detail",
-    "vperPhase": "vision"
+    "vperPhase": "vision",
+    "debraSignMedicine": "Tell uncomfortable truths with compassion, purposeful travel, finish something",
+    "debraGremlinTheme": "I can't commit to anything; I just escape when things get hard"
   },
   {
     "id": "capricorn",
@@ -304,7 +322,9 @@
     "shadowExpression": "Workaholic, emotionally reserved, dictatorial",
     "lightExpression": "Ambitious, disciplined, responsible, practical",
     "managementGuidance": "Use ambition; avoid rigidity; find joy beyond achievement",
-    "vperPhase": "execute"
+    "vperPhase": "execute",
+    "debraSignMedicine": "Service beyond personal gain, compassion for those without your drive, humility",
+    "debraGremlinTheme": "I'm only valuable through my achievements; I can never rest; others are lazy"
   },
   {
     "id": "aquarius",
@@ -335,7 +355,9 @@
     "shadowExpression": "Emotionally detached, aloof, stubborn",
     "lightExpression": "Independent, humanitarian, innovative, progressive",
     "managementGuidance": "Embrace innovation; practice emotional connection",
-    "vperPhase": "plan"
+    "vperPhase": "plan",
+    "debraSignMedicine": "Study the emotional body, feel feelings rather than think them",
+    "debraGremlinTheme": "I don't belong anywhere; nobody understands me; emotions are a waste of time"
   },
   {
     "id": "pisces",
@@ -367,6 +389,8 @@
     "shadowExpression": "Escapism, over-sensitive, over-idealization",
     "lightExpression": "Empathetic, artistic, intuitive, compassionate",
     "managementGuidance": "Cultivate compassion; avoid escapism; set boundaries",
-    "vperPhase": "review"
+    "vperPhase": "review",
+    "debraSignMedicine": "Grounding practices, follow through on commitments, find faith in reality rather than escaping it",
+    "debraGremlinTheme": "Reality is too harsh; I want to disappear; nothing ever works out"
   }
 ]

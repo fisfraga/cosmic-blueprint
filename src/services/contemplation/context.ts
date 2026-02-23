@@ -31,6 +31,8 @@ export type ContemplationType =
   | 'elementalBalance'
   | 'transitOverview'
   | 'transitReading'
+  // Debra Silverman psychological astrology (Sprint AA)
+  | 'gremlinWitnessing'
   // Human Design
   | 'typeStrategy'
   | 'authorityCheckIn'
@@ -85,6 +87,9 @@ export type ContemplationType =
   // Life OS — ILOS Elemental VPER expansion (Sprint U)
   | 'elementalProfileReading'
   | 'oppositePolePractice'
+  // Life OS — Debra Silverman psychological astrology (Sprint AA)
+  | 'observerActivation'
+  | 'signMedicinePrescription'
   // Alchemy & Numbers
   | 'numerologyReading'
   | 'numerologyOverview'

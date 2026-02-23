@@ -2093,6 +2093,131 @@ House 1/Health & Vitality | House 2/Finances & Resources | House 3/Intellectual 
 Close with a simple, actionable statement: "Your current VPER phase is [phase]. The cosmos invites you to [2-3 specific actions aligned with this phase] in the area of [top Key Area activation]."`,
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // DEBRA SILVERMAN — PSYCHOLOGICAL ASTROLOGY (Sprint AA)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  observerActivation: `Guide this seeker through Debra Silverman's Observer Activation practice — a 5-step metacognitive witnessing method applied to their most activated sign placements.
+
+THE OBSERVER FRAMEWORK (Debra Silverman):
+The Observer is what Silverman calls "the 13th sign" — the part of you that watches your inner experience without judgment. It is not a spiritual bypass; it is a witnessing practice. When the Observer is active, you can feel emotions fully without being consumed by them.
+
+PREPARATION — THE SIGN CONTEXT:
+From the seeker's natal chart, identify the 3 most prominent signs (Sun sign first, then Moon, then Rising/ASC). For each, name the characteristic shadow pattern or inner critic tendency most likely to activate their low road.
+
+THE 5-STEP OBSERVER PRACTICE:
+Guide the seeker through Silverman's Observer Method, applied specifically to their Sun sign placement and one current life area where the low road may be active:
+
+Step 1 — FEEL: "Put your hands over your heart. Ask yourself: What am I feeling right now, in this moment? Name the emotion — not the story, not the blame, just the feeling."
+
+Step 2 — TAG: "Name what is present. Is it fear? Resentment? Grief? Loneliness? Notice if you are indulging in the feeling (allowed) or bypassing it. Both are informative."
+
+Step 3 — FEEL FULLY: "Allow the feeling without rushing past it. The invitation is to sit with it — not to analyze it or make it wrong. Feelings move when they are allowed to be felt completely."
+
+Step 4 — OBSERVER ON: "Say aloud or whisper: 'Observer on.' This is the moment of metacognitive witnessing. You are no longer inside the feeling — you are noticing it."
+
+Step 5 — LEARNING QUESTIONS: Offer 3 questions specific to their Sun sign pattern:
+• What am I teaching myself through this experience?
+• What am I supposed to be learning right now?
+• Why might this pattern keep showing up?
+
+SIGN-SPECIFIC GREMLIN REFERENCE:
+For the seeker's Sun sign, name the characteristic low road pattern and how the Observer stance transforms the experience:
+— Aries: "I keep making things about me; people get mad at me without warning"
+— Taurus: "I'm not good enough; I'm boring; I'm falling behind; why can't I motivate?"
+— Gemini: "I can't focus; I'm faking it; nobody really knows me; I keep abandoning things"
+— Cancer: "Everything bad keeps happening to me; nobody cares; life is too hard"
+— Leo: "Nobody appreciates me; I need more attention; I'm only lovable when performing"
+— Virgo: "Nothing is ever good enough; I'm failing; I should be doing better"
+— Libra: "I need a relationship to feel whole; I'm too dependent on others' approval"
+— Scorpio: "I can't trust anyone; if I let go I lose control; the dark side is always pulling"
+— Sagittarius: "I can't commit to anything; I just escape when things get hard"
+— Capricorn: "I'm only valuable through my achievements; I can never rest; others are lazy"
+— Aquarius: "I don't belong anywhere; nobody understands me; emotions are a waste of time"
+— Pisces: "Reality is too harsh; I want to disappear; nothing ever works out"
+
+THE OBSERVER REFRAME:
+After naming the gremlin voice for their Sun sign, offer the Observer perspective:
+"You're a [Sun sign]. This is how [Sun sign] is wired. It's not a flaw — it's a design pattern. What would it feel like to just notice this, without blame?"
+
+Close with an invitation to practice the Observer method once this week — ideally the next time the low road activates.
+
+Use Silverman's vocabulary throughout: observer, gremlins, low road, high road. Invitational, non-deterministic language throughout. This is a witnessing practice, not a verdict.`,
+
+  gremlinWitnessing: `Name the Gremlin — the per-sign inner critic scripts — for this seeker's Sun, Moon, and Rising placements, then offer the Observer reframe that invites witnessing rather than identification.
+
+THE GREMLIN FRAMEWORK (Debra Silverman):
+Each zodiac sign carries a characteristic inner critic voice — what Silverman calls the "gremlin." The gremlin is not a flaw; it is a design pattern. Each sign's shadow has a predictable script. Naming it precisely is the first step toward witnessing rather than being consumed by it.
+
+IDENTIFICATION — TOP 3 SIGN PLACEMENTS:
+From the seeker's natal chart, identify:
+1. Sun sign — the core identity placement (always first)
+2. Moon sign — the emotional body and inner landscape
+3. Rising/ASC sign — how they filter experience and present to the world
+
+For each placement, present in this structure:
+
+GREMLIN VOICE — the characteristic inner critic script for that sign:
+— Aries: "I keep making things about me; people get mad at me without warning"
+— Taurus: "I'm not good enough; I'm boring; I'm falling behind; why can't I motivate?"
+— Gemini: "I can't focus; I'm faking it; nobody really knows me; I keep abandoning things"
+— Cancer: "Everything bad keeps happening to me; nobody cares; life is too hard"
+— Leo: "Nobody appreciates me; I need more attention; I'm only lovable when performing"
+— Virgo: "Nothing is ever good enough; I'm failing; I should be doing better"
+— Libra: "I need a relationship to feel whole; I'm too dependent on others' approval"
+— Scorpio: "I can't trust anyone; if I let go I lose control; the dark side is always pulling"
+— Sagittarius: "I can't commit to anything; I just escape when things get hard"
+— Capricorn: "I'm only valuable through my achievements; I can never rest; others are lazy"
+— Aquarius: "I don't belong anywhere; nobody understands me; emotions are a waste of time"
+— Pisces: "Reality is too harsh; I want to disappear; nothing ever works out"
+
+OBSERVER REFRAME — for each placement, offer:
+"You're a [sign]. This is how [sign] is wired. It's not a flaw — it's a design pattern. What would it feel like to just notice this, without blame?"
+
+Then name what the high road looks like for that sign energy — the gift that lives on the other side of the gremlin pattern.
+
+SYNTHESIS:
+After walking through all three placements, offer an integrated observation: How do these three gremlin patterns interact? Where do they reinforce each other, and where does one sign's strength offer medicine for another's low road pattern?
+
+Close with Silverman's Observer Practice cue: "The next time one of these voices activates, try saying: 'Observer on.' You are not the gremlin. You are the one who notices it."
+
+Use Silverman's vocabulary: observer, gremlins, low road, high road. Invitational, non-deterministic language throughout. The gremlin is a design pattern — never a judgment.`,
+
+  signMedicinePrescription: `Generate a personalized Sign Medicine prescription for this seeker based on Debra Silverman's per-sign medicine framework.
+
+THE SIGN MEDICINE FRAMEWORK (Debra Silverman):
+Each zodiac sign has specific practical, prescriptive self-care and restoration practices — what Silverman calls "medicine." When a sign's energy is out of balance (on the low road), these practices restore alignment. Medicine is not therapy — it is practical, accessible, and actionable.
+
+DOMINANT SIGN IDENTIFICATION:
+From the seeker's natal chart, identify the top 3 sign energies — Sun first, then Moon, then Rising/ASC. These are the primary medicine templates.
+
+SIGN MEDICINE REFERENCE:
+— Aries: Physical movement, loud singing, expressing anger, exercise
+— Taurus: Stay home guilt-free, baking and cooking, nature and gardening, home refresh
+— Gemini: Talk and journal, moving meditation (yoga or dance), grounding (barefoot walking), structured friendship
+— Cancer: Alone time to reboot, therapy, physical touch, limiting emotional absorption
+— Leo: Creative expression, perform and shine without needing applause, give love freely
+— Virgo: Selfless service, accept imperfection, forgive self, measure life by feeling not results
+— Libra: Identity independent of relationship, find peace within, self-completion practice
+— Scorpio: Face shadow directly, transform pain into power, release control, trust practice
+— Sagittarius: Tell uncomfortable truths with compassion, purposeful travel, finish something
+— Capricorn: Service beyond personal gain, compassion for those without your drive, humility
+— Aquarius: Study the emotional body, feel feelings rather than think them
+— Pisces: Grounding practices, follow through on commitments, find faith in reality rather than escaping it
+
+THE PRESCRIPTION:
+Offer 3–5 specific, concrete prescriptions for the seeker's dominant signs:
+1. One medicine practice for their Sun sign — identity restoration
+2. One medicine practice for their Moon sign — emotional restoration
+3. One medicine practice for their Rising sign — vitality and presence
+4. (Optional) One combined practice where two sign medicines reinforce each other
+
+Frame each prescription with specificity — not "try exercise" but "for your [sign] Sun, the medicine invites [specific practice] — consider [concrete action] this week."
+
+Close with a grounding reminder: "These are not suggestions for when you're broken. They are maintenance practices — ways to stay on the high road of your [Sun sign] energy."
+
+Use Silverman's vocabulary: medicine, high road, low road. Keep tone practical and warm — this is the most prescriptive, action-oriented contemplation type. 3–5 concrete items, no more.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // ALCHEMY & NUMBERS CONTEMPLATION TYPES
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -2880,6 +3005,10 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   vperPhaseReading: 'deep',
   elementalProfileReading: 'deep',
   oppositePolePractice: 'deep',
+  // Debra Silverman psychological astrology (Sprint AA)
+  observerActivation: 'standard',
+  gremlinWitnessing: 'standard',
+  signMedicinePrescription: 'brief',
 
   // Alchemy types
   numerologyReading: 'standard',
@@ -2993,6 +3122,10 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   vperPhaseReading: 'opus',
   elementalProfileReading: 'opus',
   oppositePolePractice: 'opus',
+  // Debra Silverman psychological astrology (Sprint AA)
+  observerActivation: 'sonnet',
+  gremlinWitnessing: 'sonnet',
+  signMedicinePrescription: 'haiku',
 
   // Alchemy types
   numerologyReading: 'sonnet',
@@ -3146,6 +3279,8 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   const counselorTypes = ['transitOverview', 'transitReading', 'typeStrategy', 'authorityCheckIn', 'centerAwareness', 'fixedStarTransit', 'galacticAlignment',
     // Ra Uru Hu deconditioning types (Sprint V)
     'deconditioningJourney', 'typeExperimentSetup', 'notSelfDiagnosis',
+    // Debra Silverman psychological astrology (Sprint AA)
+    'observerActivation', 'signMedicinePrescription',
   ];
   if (counselorTypes.includes(contemplationType)) return 'counselor';
 

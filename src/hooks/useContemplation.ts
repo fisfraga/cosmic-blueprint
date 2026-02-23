@@ -195,6 +195,8 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'aspectExploration',    name: 'Aspect Exploration',     description: 'Understand planetary dialogues',            needsFocus: true,         level: 'advanced' },
     { id: 'elementalBalance',     name: 'Elemental Balance',      description: 'Explore your element distribution',                                 level: 'advanced' },
     { id: 'configurationReading', name: 'Configuration Reading',  description: 'Interpret aspect patterns',                 needsFocus: true,         level: 'advanced' },
+    // Debra Silverman psychological astrology (Sprint AA)
+    { id: 'gremlinWitnessing',    name: 'Gremlin Witnessing',     description: 'Name your per-sign inner critic scripts and meet them with the Observer reframe',                level: 'beginner' },
   ],
   humanDesign: [
     { id: 'typeStrategy',       name: 'Type & Strategy',    description: 'Your energy type and decision-making',                           level: 'beginner' },
@@ -249,7 +251,10 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'soulCallingIntegration', name: 'Soul Calling',         description: 'Chiron wound → NN direction → Part of Fortune joy convergence — your QUANTUM essence synthesis',                level: 'master' },
     { id: 'vperPhaseReading',         name: 'VPER Phase Reading',           description: 'Which VPER phase (Vision/Plan/Execute/Review) is activated by current transit element dominance',                                                          level: 'advanced' },
     { id: 'elementalProfileReading',  name: 'Elemental Profile Reading',    description: 'Calculates natal element balance (Fire/Air/Earth/Water) and reveals your VPER strengths, growth edge, and one development practice.',                             level: 'beginner' },
-    { id: 'oppositePolePractice',     name: 'Opposite Pole Growth Practice', description: 'Identifies your weakest element across ILOS, Gene Keys, and Julia Balaz frameworks — generates 3 specific weekly practices and detects transit power windows.', level: 'advanced' },
+    { id: 'oppositePolePractice',      name: 'Opposite Pole Growth Practice', description: 'Identifies your weakest element across ILOS, Gene Keys, and Julia Balaz frameworks — generates 3 specific weekly practices and detects transit power windows.', level: 'advanced' },
+    // Debra Silverman psychological astrology (Sprint AA)
+    { id: 'observerActivation',        name: 'Observer Activation',           description: "Silverman's 5-step metacognitive witnessing practice applied to your Sun sign's gremlin pattern",                                                                    level: 'beginner' },
+    { id: 'signMedicinePrescription',  name: 'Sign Medicine Prescription',    description: 'Practical per-sign self-care prescriptions for restoring balance across your Sun, Moon, and Rising signs',                                                             level: 'beginner' },
   ],
   alchemy: [
     { id: 'chakraAwareness',   name: 'Chakra Activations', description: 'Explore which chakras are activated by your planetary placements',                        level: 'advanced' },

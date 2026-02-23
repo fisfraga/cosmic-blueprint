@@ -79,6 +79,8 @@ export interface Planet extends AstroEntity {
   signsRuled: string[];
   giftExpression: string;
   shadowExpression: string;
+  // Debra Silverman psychological astrology (Sprint AA)
+  debraRoleMetaphor?: string;
 }
 
 // ------------------------------------
@@ -111,6 +113,9 @@ export interface ZodiacSign extends AstroEntity {
   lightExpression?: string;
   managementGuidance?: string;
   vperPhase?: VperPhase;
+  // Debra Silverman psychological astrology (Sprint AA)
+  debraSignMedicine?: string;
+  debraGremlinTheme?: string;
 }
 
 // ------------------------------------

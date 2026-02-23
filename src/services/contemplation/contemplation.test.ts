@@ -119,8 +119,8 @@ describe('Sprint T lifeOS expansion', () => {
   const lifeOSTypes = CONTEMPLATION_TYPES['lifeOS'];
   const lifeOSIds = lifeOSTypes.map(t => t.id);
 
-  it('lifeOS has 12 types after Sprint U expansion (3 existing + 7 Sprint T + 2 Sprint U)', () => {
-    expect(lifeOSTypes.length).toBe(12);
+  it('lifeOS has 14 types after Sprint AA expansion (3 existing + 7 Sprint T + 2 Sprint U + 2 Sprint AA)', () => {
+    expect(lifeOSTypes.length).toBe(14);
   });
 
   it('all 7 new Sprint T types are present in lifeOS', () => {
