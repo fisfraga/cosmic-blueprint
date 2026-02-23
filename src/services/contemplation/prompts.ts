@@ -2218,6 +2218,132 @@ Close with a grounding reminder: "These are not suggestions for when you're brok
 Use Silverman's vocabulary: medicine, high road, low road. Keep tone practical and warm — this is the most prescriptive, action-oriented contemplation type. 3–5 concrete items, no more.`,
 
   // ═══════════════════════════════════════════════════════════════════════════
+  // ISADORA SYNTHESIS — MULTI-SYSTEM SYNTHESIS SUITE (Sprint BB)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  multiSystemActivationReading: `Read the seeker's four core activations — Personality Sun, Personality Earth, Design Sun, Design Earth — as a single integrated identity arc that speaks across all three wisdom systems simultaneously.
+
+THE SOLAR CLUSTER FRAMEWORK:
+The four-gate solar cluster is the highest-volume area of a person's blueprint — the Personality Sun alone governs approximately 70% of conscious identity expression. Reading all four together reveals the creative tension and the soul's anchoring arc.
+
+STRUCTURE FOR THIS READING:
+1. **The Personality Pair** — Personality Sun (what you're here to consciously express and shine) + Personality Earth (what grounds and anchors you). Name the Gene Key, shadow, and gift for each. Name the line resonance if available (chakra, element, evolutionary arc). How do these two speak to each other across Astrology, HD, and Gene Keys?
+
+2. **The Design Pair** — Design Sun (the deeper soul purpose beneath conscious awareness) + Design Earth (the unconscious grounding force). These operate more subtly — they are felt rather than consciously known. Name them with the same richness.
+
+3. **The Tension and the Arc** — What is the creative tension between the Personality pair and the Design pair? Where do they challenge each other, and where do they form a coherent whole? What are the cross-system bridges — does the same theme echo in the Astrology placement, the HD gate, and the GK shadow/gift?
+
+4. **The Integration Invitation** — What is this solar cluster as a whole inviting the seeker toward? What is the unified arc when all four are woven together?
+
+Use synthesis vocabulary: "solar cluster," "personality pair," "design pair," "activation arc." Invitational, non-deterministic language throughout. This is the most important reading in the blueprint — give it the depth it deserves.`,
+
+  embodimentPortalReading: `Guide the seeker into their current activation or focus entity through its line's somatic resonance — the chakra, element, and evolutionary process that form the embodiment portal into that gate.
+
+THE LINE AS EMBODIMENT PORTAL:
+Every gate/sphere has a line decimal (e.g., Gate 32.5 = Line 5). The line is not just a behavioral archetype — it is a somatic entry point. The chakra it resonates with tells you WHERE in the body this activation lives. The element tells you HOW it wants to move. The evolutionary arc tells you WHAT this activation is teaching through the body.
+
+SOMATIC ENTRY SEQUENCE:
+1. **Identify the line** — What is the line decimal of the focus activation? (e.g., Line 3 = Solar Plexus / Fire / Martyr arc). If no focus entity is provided, use the seeker's Personality Sun line.
+
+2. **Locate it in the body** — Name the chakra and what it governs. Invite the seeker to bring awareness there. "Place your awareness at your [chakra location] and breathe into it."
+
+3. **Feel the element** — How does this element want to express? Earth invites stillness and rootedness. Water moves in waves. Fire ignites upward. Air circulates. Ether reaches. Spirit dissolves. Suggest a somatic practice appropriate to this element.
+
+4. **Meet the evolutionary arc** — Name the shadow pattern (how this line can feel contracted) and the gift (how it opens). Invite the seeker to notice which frequency they're currently in, without judgment.
+
+5. **Bridge to the Gene Key** — How does this line's evolutionary arc connect to the shadow and gift of the specific Gene Key? What is the somatic path from shadow to gift for this activation?
+
+Use invitational, embodied language throughout. "Your body may be asking for…", "This activation invites…", "Notice what arises when…". This is a somatic practice, not an intellectual exercise.`,
+
+  ancestralIntegrationContemplation: `Read the seeker's Design Mars sphere as their ancestral integration activation — the evolutionary responsibility their soul chose, the wound carried through lineage, and the integration path their blueprint offers.
+
+THE DESIGN MARS SPHERE (Ancestral Integration / Core in the Venus Sequence):
+Design Mars represents the deepest unconscious conditioning layer — the ancestral material carried in the body, not the conscious mind. This is the activation where old patterns from the ancestral field meet the soul's evolutionary intention. Reading it with awareness can be profoundly liberating.
+
+STRUCTURE FOR THIS CONTEMPLATION:
+1. **The Activation** — Name the Design Mars Gene Key, gate, and line. What is the shadow frequency that runs through the ancestral field for this activation? This is not a personal failing — it is a pattern inherited and carried.
+
+2. **The Ancestral Story** — What kind of wound does this shadow suggest has been carried through lineage? (Use invitational framing: "This shadow may reflect a lineage pattern of…", "Your ancestors may have navigated…"). Reference the line's ancestralIntegration wound if available.
+
+3. **The Design-Side Wisdom** — Design activations operate unconsciously and are often more deeply rooted than Personality activations. How does the unconscious nature of this activation affect how the pattern shows up? It is often felt in the body before it is understood by the mind.
+
+4. **The Gift as Integration Path** — What does the gift frequency of this Gene Key offer as the integration path? How does moving from shadow toward gift represent the resolution of what was carried? Reference the line's ancestralIntegration remedy if available.
+
+5. **The Evolutionary Responsibility** — Frame this not as a burden but as a soul-level choice: "Your blueprint suggests you chose this activation because you are capable of completing what previous generations could not. The integration you do here is a gift to those who come after."
+
+Counselor voice: warm, non-judgmental, holding the weight of this material with care. No deterministic statements. This is a sacred invitation, not a verdict.`,
+
+  innerLandscapeAwareness: `Walk the seeker through the four developmental imprinting layers of their Venus Sequence as a self-inquiry practice — distinguishing the mental gift pattern from the emotional imprint, naming the inner child need, and illuminating what each layer is asking for.
+
+THE FOUR DEVELOPMENTAL IMPRINTING LAYERS:
+
+**Layer 1: Mental Gift Pattern (IQ Sphere — Personality Venus)**
+Ages 14-21 developmental window. How the mind learned to be brilliant and how it learned to protect itself through brilliance. This is where the mental gift was either celebrated or suppressed.
+
+**Layer 2: Emotional Imprint (EQ Sphere — Personality Mars)**
+Ages 7-14 developmental window. The emotional defense pattern that formed in response to not being fully met. The love language beneath the defense — what the heart was actually asking for.
+
+**Layer 3: Inner Grounding (SQ Sphere — Design Saturn)**
+Ages 0-7 developmental window. The earliest developmental need — the basic sense of safety and groundedness that either was or wasn't consistently available. This layer runs the deepest.
+
+**Layer 4: Ancestral Integration (Core Sphere — Design Mars)**
+Pre-birth conditioning — what was inherited before conscious memory. The ancestral pattern that the soul stepped into at birth.
+
+SELF-INQUIRY PRACTICE STRUCTURE:
+For each layer, invite the seeker to:
+1. Notice the activation (Gene Key, gate, line) — name the shadow and gift
+2. Ask: "Where do I recognize this pattern in my current life?"
+3. Ask: "What is this layer asking for — not from others, but from me, for myself?"
+4. Invite compassion: "This pattern was not a mistake — it was an adaptation. What would change if I held it with understanding rather than resistance?"
+
+Use counselor voice: gentle, spacious, holding the full weight of the person's developmental history with warmth. Move slowly. Invite pausing. The inner landscape is not meant to be rushed through.`,
+
+  incarnationCrossIntegration: `Read the seeker's four-activation solar cluster as a developmental arc — the tension between Life's Work and Evolution, and how Purpose and Radiance anchor the whole into a coherent soul direction.
+
+THE INCARNATION CROSS AS DEVELOPMENTAL ARC:
+The four core activations (Life's Work, Evolution, Radiance, Purpose) form the Incarnation Cross — the soul's overarching developmental theme. Rather than reading them as four separate activations, this reading explores them as one unified arc: the tension that generates movement, and the anchoring that gives direction.
+
+CROSS READING STRUCTURE:
+
+**The Tension Pair: Life's Work & Evolution**
+Life's Work (Personality Sun) is what you're here to consciously express. Evolution (Personality Earth) is what grounds and anchors that expression in embodied reality. They are often in tension: the shining force and the grounding force. What is the creative friction between them? Where does the Soul have to hold both simultaneously?
+
+**The Anchoring Pair: Radiance & Purpose**
+Radiance (Design Sun) is the deeper soul purpose operating below conscious awareness — how you shine without knowing you're shining. Purpose (Design Earth) is the unconscious grounding — the bedrock that makes the whole structure possible.
+
+**The Full Arc**
+How do all four speak to each other? What cross-system theme echoes across Astrology (the signs/houses of the four placements), Human Design (the gates and their centers), and Gene Keys (the shadow/gift/siddhi spectrum)?
+
+**The Invitation**
+Frame the cross not as a fixed fate but as a living journey: "This cross invites you to move from carrying its tension to being supported by it — from experiencing these four activations as competing forces to experiencing them as the four cardinal directions of a unified soul purpose."
+
+Use guide voice: narrative, truth-seeking, spacious. The seeker is walking toward something, not standing still.`,
+
+  fullBlueprintJourney: `Take the seeker on a complete narrative journey through all three Gene Keys sequences — Activation (identity), Venus (relational), and Pearl (expansion/legacy) — as one integrated developmental arc, naming which chapter they are in and what each layer is cultivating.
+
+THE THREE-SEQUENCE DEVELOPMENTAL ARC:
+The Golden Path is not three separate sequences — it is one developmental journey in three chapters. Activation is the foundation: who you are. Venus is the deepening: how you love and relate. Pearl is the flowering: what you contribute and leave behind. Moving through them in order reveals not just individual activations but the arc of a life.
+
+JOURNEY STRUCTURE:
+
+**Chapter 1: The Activation Sequence (Identity Layer)**
+The four core activations (Life's Work, Evolution, Radiance, Purpose) as the solar cluster. This is the foundation — 70%+ of conscious blueprint energy lives here. What is the soul's core identity arc? What tension and what integration does this chapter hold?
+
+**Chapter 2: The Venus Sequence (Relational Layer)**
+The five relational spheres (Attraction, IQ, EQ, SQ, Core/Ancestral Integration). This is where identity meets intimacy — where the developmental history is stored, and where the deepest transformation happens through relationship. What is the seeker's relational arc? What is still being healed here? What is being opened?
+
+**Chapter 3: The Pearl Sequence (Expansion Layer)**
+The legacy spheres (Vocation, Culture, Brand, Pearl). This is the outward expression of everything cultivated through identity and relationship — how the seeker's gifts reach the world. What is the service layer? The legacy? The expansion driver?
+
+**The Chapter You're In**
+Invite the seeker to notice which sequence chapter feels most alive or most activating right now. This is not a fixed position — but there is often a current "primary sequence" that the soul is moving through most intensely. Name what that chapter's cultivation looks like.
+
+**Cross-System Synthesis**
+Weave the Astrology placements and HD gates into the reading — not as separate information but as the same story told in different languages. The seeker's natal chart and bodygraph are a third and fourth perspective on the same arc revealed by the Gene Keys sequences.
+
+Teacher voice: educational, comprehensive, narrative. This is a master-level synthesis — give it the full depth it deserves.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
   // ALCHEMY & NUMBERS CONTEMPLATION TYPES
   // ═══════════════════════════════════════════════════════════════════════════
 
@@ -2510,6 +2636,95 @@ THE TRIPLE CONVERGENCE
 • Practical invitation: how does this triple-pointed purpose want to express in actual life choices, work, and contribution?
 
 Reference specific numbers, keys, and placements throughout. Use entity links: [[gk-X|Gene Key X]], [[sun|Sun]], [[midheaven|Midheaven]], [[north-node|North Node]].`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // INTEGRATED BLUEPRINT READING GENERATOR (Sprint BB)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  integratedBlueprintReading: `You are generating a complete, written Integrated Blueprint Reading — a structured document that synthesizes the seeker's Astrology, Human Design, and Gene Keys activations into a single coherent narrative in five chapters.
+
+═══════════════════════════════════════════════════════════════════
+CROSS-SYSTEM VOCABULARY GUIDE (use throughout the reading)
+═══════════════════════════════════════════════════════════════════
+• Solar cluster — the four core activation spheres (Life's Work, Evolution, Radiance, Purpose)
+• Developmental arc — the sequence of sequences (identity → relational → expansion)
+• Ancestral integration point — the Design Mars activation (Core sphere)
+• Embodiment portal — the chakra/element entry for a given line
+• Expansion driver — the Jupiter sphere / legacy motivation
+• Inner grounding — the SQ layer (Design Saturn, early developmental imprint)
+• Emotional imprint — the EQ layer (Personality Mars, ages 7-14 developmental pattern)
+• Mental gift pattern — the IQ layer (Personality Venus, mind's mode of brilliance)
+• Personality pair — Personality Sun + Personality Earth
+• Design pair — Design Sun + Design Earth
+
+═══════════════════════════════════════════════════════════════════
+VOICE PRINCIPLES (mandatory throughout)
+═══════════════════════════════════════════════════════════════════
+• "Your blueprint invites…" not "You are…"
+• "This activation may be pointing toward…" not "This means…"
+• Every shadow is named without judgment — it is a starting point, not a verdict
+• Cross-system bridges are woven naturally — do not announce "in Gene Keys this is X"
+• Speak to the seeker in second person throughout, as invitation and reflection
+
+═══════════════════════════════════════════════════════════════════
+FIVE-CHAPTER STRUCTURE (generate all five, in order)
+═══════════════════════════════════════════════════════════════════
+
+## Chapter 1: The Solar Cluster
+
+Read the four core activation spheres (Life's Work, Evolution, Radiance, Purpose) as an integrated identity arc:
+• Name each activation: gene key, gate, line — shadow and gift
+• Read the Personality pair (Life's Work + Evolution) as the conscious arc: what shines and what grounds
+• Read the Design pair (Radiance + Purpose) as the unconscious arc: the soul purpose operating below awareness
+• Name the creative tension between the pairs and the integration invitation
+• Bridge all four through their Astrology house/sign placement and their HD gate/center — find the cross-system theme
+• Close with: what is this solar cluster as a whole calling toward?
+
+## Chapter 2: The Six Keys
+
+Read each of the four core activations through its line's resonance as the embodiment portal:
+• For each activation, name its line decimal (e.g., "32.5 = Line 5")
+• Name the line's chakra resonance and element — where in the body does this live?
+• Name the line's evolutionary arc (shadow → gift → theme)
+• How does the specific Gene Key's shadow/gift express through this particular line's somatic signature?
+• Close with: what somatic practice might this cluster of activations be asking for?
+
+## Chapter 3: The Relational Arc
+
+Read the Venus Sequence spheres (Attraction, IQ, EQ, SQ, Core) as a developmental story:
+• Mental gift pattern (IQ sphere): what the mind excels at, and how it learned to protect itself through brilliance
+• Emotional imprint (EQ sphere): the defense pattern and the love language beneath it
+• Inner grounding (SQ sphere): the earliest developmental need — what was or wasn't available in those first years
+• Ancestral integration point (Core sphere / Design Mars): what was inherited, and what the soul chose to complete
+• The Attraction sphere: the relational attractor field — what draws close
+• Close with: what is the overall arc of this relational layer? What is it moving toward?
+
+## Chapter 4: The Inner Landscape
+
+Offer a self-map of the four developmental imprinting layers as named, compassionate understanding:
+• Distill each layer to its essential pattern and its integration invitation
+• Name any cross-layer themes — where multiple layers speak the same developmental language
+• Offer one integration invitation for each layer: not a prescription but a gentle question
+• Close with: "Your inner landscape is not a wound map — it is a map of where the deepest growth is available"
+
+## Chapter 5: The Expansion Arc
+
+Read the Pearl Sequence (Vocation, Culture, Brand, Pearl) as the legacy and contribution layer:
+• Vocation sphere: the life's work expressed outward — contribution to community
+• Culture sphere: the Mercury function — how this blueprint communicates its gifts
+• Brand sphere: the expansion driver — what the Jupiter sphere is calling toward
+• Pearl sphere: the distillation — what the whole blueprint is building toward as legacy
+• Close with: what trajectory is this blueprint pointing toward in the world? What wants to be contributed through this specific combination of activations?
+
+═══════════════════════════════════════════════════════════════════
+FORMATTING
+═══════════════════════════════════════════════════════════════════
+• Use chapter headings as formatted above (## Chapter N: Title)
+• Use section headers within chapters (### or bold)
+• Write in flowing paragraphs, not bullet lists — this is a document, not a summary
+• Each chapter should be 300-500 words
+• Total reading: approximately 1500-2500 words
+• Close the reading with a brief integrative epilogue (2-3 sentences) that holds the whole arc`,
 
   // ═══════════════════════════════════════════════════════════════════════════
   // YEAR AHEAD CONTEMPLATION TYPES (Sprint II)
@@ -3010,6 +3225,15 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   gremlinWitnessing: 'standard',
   signMedicinePrescription: 'brief',
 
+  // Isadora Synthesis — multi-system synthesis suite (Sprint BB)
+  multiSystemActivationReading: 'deep',
+  embodimentPortalReading: 'standard',
+  ancestralIntegrationContemplation: 'deep',
+  innerLandscapeAwareness: 'standard',
+  incarnationCrossIntegration: 'standard',
+  fullBlueprintJourney: 'deep',
+  integratedBlueprintReading: 'deep',
+
   // Alchemy types
   numerologyReading: 'standard',
   numerologyOverview: 'brief',
@@ -3126,6 +3350,15 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   observerActivation: 'sonnet',
   gremlinWitnessing: 'sonnet',
   signMedicinePrescription: 'haiku',
+
+  // Isadora Synthesis — multi-system synthesis suite (Sprint BB)
+  multiSystemActivationReading: 'opus',
+  embodimentPortalReading: 'sonnet',
+  ancestralIntegrationContemplation: 'opus',
+  innerLandscapeAwareness: 'sonnet',
+  incarnationCrossIntegration: 'sonnet',
+  fullBlueprintJourney: 'opus',
+  integratedBlueprintReading: 'opus',
 
   // Alchemy types
   numerologyReading: 'sonnet',
@@ -3299,6 +3532,15 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   // Gene Keys contemplation types stay with guide
   const guideTypes = ['shadowWork', 'giftActivation', 'siddhiContemplation', 'activationSequence', 'venusSequence', 'pearlSequence'];
   if (guideTypes.includes(contemplationType)) return 'guide';
+
+  // Isadora Synthesis — multi-system synthesis suite (Sprint BB)
+  if (contemplationType === 'multiSystemActivationReading') return 'teacher';
+  if (contemplationType === 'embodimentPortalReading') return 'embodiment';
+  if (contemplationType === 'ancestralIntegrationContemplation') return 'counselor';
+  if (contemplationType === 'innerLandscapeAwareness') return 'counselor';
+  if (contemplationType === 'incarnationCrossIntegration') return 'guide';
+  if (contemplationType === 'fullBlueprintJourney') return 'teacher';
+  if (contemplationType === 'integratedBlueprintReading') return 'teacher';
 
   // Default to guide
   return 'guide';

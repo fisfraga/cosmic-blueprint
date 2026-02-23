@@ -28,15 +28,87 @@ export function LineDetail() {
         <h1 className="font-serif text-4xl font-medium mb-2">{line.name}</h1>
         <p className="text-xl text-indigo-400 mb-2">{line.archetype}</p>
         <p className="text-theme-text-secondary max-w-2xl mx-auto">{line.summary}</p>
-        <div className="flex justify-center gap-4 mt-4 text-sm">
+        <div className="flex justify-center gap-4 mt-4 text-sm flex-wrap">
           <span className="px-3 py-1 bg-indigo-500/10 text-indigo-300 rounded-lg">
             {line.trigram} Trigram
           </span>
           <span className="px-3 py-1 bg-surface-raised text-theme-text-secondary rounded-lg">
             {line.trigramPosition} Position
           </span>
+          {line.chakraResonance && (
+            <span className="px-3 py-1 bg-violet-500/10 text-violet-300 rounded-lg">
+              {line.chakraResonance} Chakra
+            </span>
+          )}
+          {line.elementalExpression && (
+            <span className="px-3 py-1 bg-teal-500/10 text-teal-300 rounded-lg">
+              {line.elementalExpression} Element
+            </span>
+          )}
+          {line.signPair && (
+            <span className="px-3 py-1 bg-amber-500/10 text-amber-300 rounded-lg">
+              {line.signPair.active} / {line.signPair.receptive}
+            </span>
+          )}
         </div>
       </header>
+
+      {/* Cross-System Resonance Layer (Sprint BB) */}
+      {(line.evolutionaryProcess || line.communicationGuardian || line.expansionDriving) && (
+        <section className="bg-gradient-to-br from-violet-500/10 to-teal-500/5 rounded-xl p-6 border border-violet-500/20">
+          <h2 className="font-serif text-xl mb-4 text-violet-300">Cross-System Resonance</h2>
+          <div className="space-y-4">
+            {line.evolutionaryProcess && (
+              <div>
+                <h3 className="text-sm font-medium text-violet-400 mb-2">Evolutionary Arc</h3>
+                <div className="grid md:grid-cols-3 gap-3">
+                  <div className="p-3 bg-red-500/10 rounded-lg border border-red-500/20">
+                    <p className="text-xs text-red-400 mb-1">Shadow</p>
+                    <p className="text-theme-text-secondary text-sm">{line.evolutionaryProcess.shadow}</p>
+                  </div>
+                  <div className="p-3 bg-emerald-500/10 rounded-lg border border-emerald-500/20">
+                    <p className="text-xs text-emerald-400 mb-1">Gift</p>
+                    <p className="text-theme-text-secondary text-sm">{line.evolutionaryProcess.gift}</p>
+                  </div>
+                  <div className="p-3 bg-violet-500/10 rounded-lg border border-violet-500/20">
+                    <p className="text-xs text-violet-400 mb-1">Theme</p>
+                    <p className="text-theme-text-secondary text-sm italic">{line.evolutionaryProcess.theme}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+            <div className="grid md:grid-cols-2 gap-4">
+              {line.communicationGuardian && (
+                <div>
+                  <h3 className="text-sm font-medium text-teal-400 mb-1">Communication Guardian</h3>
+                  <p className="text-theme-text-secondary text-sm">{line.communicationGuardian}</p>
+                </div>
+              )}
+              {line.expansionDriving && (
+                <div>
+                  <h3 className="text-sm font-medium text-amber-400 mb-1">Expansion Driver</h3>
+                  <p className="text-theme-text-secondary text-sm">{line.expansionDriving}</p>
+                </div>
+              )}
+            </div>
+            {line.innerGrounding && (
+              <div>
+                <h3 className="text-sm font-medium text-blue-400 mb-2">Inner Grounding</h3>
+                <div className="grid md:grid-cols-2 gap-3">
+                  <div className="p-3 bg-blue-500/10 rounded-lg border border-blue-500/20">
+                    <p className="text-xs text-blue-400 mb-1">Core Need</p>
+                    <p className="text-theme-text-secondary text-sm">{line.innerGrounding.coreNeed}</p>
+                  </div>
+                  <div className="p-3 bg-surface-base/50 rounded-lg border border-theme-border-subtle">
+                    <p className="text-xs text-theme-text-muted mb-1">When Denied</p>
+                    <p className="text-theme-text-secondary text-sm">{line.innerGrounding.whenDenied}</p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Keywords */}
       <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">

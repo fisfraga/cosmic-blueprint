@@ -695,6 +695,16 @@ export interface Line extends AstroEntity {
   relatedLineId?: string; // Harmony partner line
   harmonyDescription?: string;
   lifePhases?: LineLifePhases; // Only for Line 6
+  // Sprint BB — Isadora Synthesis cross-system resonance layer
+  chakraResonance?: string;
+  elementalExpression?: string;
+  signPair?: { active: string; receptive: string };
+  evolutionaryProcess?: { shadow: string; gift: string; theme: string };
+  ancestralIntegration?: { wound: string; remedy: string };
+  emotionalImprint?: { defensePattern: string; loveLanguage: string };
+  innerGrounding?: { coreNeed: string; whenDenied: string };
+  communicationGuardian?: string;
+  expansionDriving?: string;
 }
 
 // ------------------------------------

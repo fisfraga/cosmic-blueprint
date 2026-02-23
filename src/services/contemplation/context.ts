@@ -90,6 +90,15 @@ export type ContemplationType =
   // Life OS — Debra Silverman psychological astrology (Sprint AA)
   | 'observerActivation'
   | 'signMedicinePrescription'
+  // Isadora Synthesis — multi-system synthesis suite (Sprint BB)
+  | 'multiSystemActivationReading'
+  | 'embodimentPortalReading'
+  | 'ancestralIntegrationContemplation'
+  | 'innerLandscapeAwareness'
+  | 'incarnationCrossIntegration'
+  | 'fullBlueprintJourney'
+  // Sprint BB — Integrated Blueprint Reading generator
+  | 'integratedBlueprintReading'
   // Alchemy & Numbers
   | 'numerologyReading'
   | 'numerologyOverview'

@@ -5,6 +5,8 @@ import { useProfile } from '../context';
 import { geneKeys, gkLines, codonRings, signs } from '../data';
 import { LoadingSkeleton, ProfileRequiredState } from '../components';
 import { EntityStack, EntityLink } from '../components/entities';
+import { BlueprintJourneyView } from '../components/profile/BlueprintJourneyView';
+import { formatInnerLandscapeProtocol, copyToClipboard } from '../services/tanaSync';
 import type { EntityInfo } from '../services/entities';
 import type { GeneKeySphere } from '../types';
 
@@ -19,8 +21,9 @@ function parsePlanetarySource(source: string): { isDesign: boolean; planetId: st
 }
 
 export function ProfileGeneKeys() {
-  const { profile, isLoading, hasProfile } = useProfile();
+  const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+  const [innerLandscapeExported, setInnerLandscapeExported] = useState(false);
 
   const handleEntityClick = useCallback((entity: EntityInfo) => {
     setSelectedEntities(prev => {
@@ -395,13 +398,27 @@ export function ProfileGeneKeys() {
           {renderSphereCard('sq', gkProfile.sq, 'text-rose-400')}
           {renderSphereCard('core', gkProfile.core, 'text-rose-400')}
         </div>
-        <div className="mt-4 pt-4 border-t border-theme-border-subtle">
+        <div className="mt-4 pt-4 border-t border-theme-border-subtle flex items-center justify-between gap-4 flex-wrap">
           <Link
             to="/contemplate?sequence=venus"
             className="text-rose-400 hover:text-rose-300 text-sm"
           >
             Contemplate Venus Sequence →
           </Link>
+          <button
+            onClick={async () => {
+              if (!cosmicProfile) return;
+              const tanaContent = formatInnerLandscapeProtocol(cosmicProfile);
+              const ok = await copyToClipboard(tanaContent);
+              if (ok) {
+                setInnerLandscapeExported(true);
+                setTimeout(() => setInnerLandscapeExported(false), 3000);
+              }
+            }}
+            className="text-xs px-3 py-1.5 bg-rose-500/10 text-rose-300 hover:bg-rose-500/20 rounded-lg border border-rose-500/20 transition-colors"
+          >
+            {innerLandscapeExported ? '✓ Copied to Clipboard' : 'Export Inner Landscape to Tana'}
+          </button>
         </div>
       </div>
 
@@ -601,6 +618,24 @@ export function ProfileGeneKeys() {
             })}
           </div>
         </div>
+      )}
+
+      {/* Blueprint Journey Arc */}
+      {cosmicProfile && (
+        <section>
+          <h2 className="font-serif text-xl text-theme-text-primary mb-2 flex items-center gap-2">
+            <span className="text-genekey-400">◈</span>
+            Blueprint Journey Arc
+          </h2>
+          <p className="text-theme-text-secondary text-sm mb-5">
+            Your three developmental layers seen as a progressive arc — from core identity through relational opening to genius and legacy expression.
+          </p>
+          <BlueprintJourneyView
+            profile={cosmicProfile}
+            gkProfile={gkProfile}
+            onEntityClick={handleEntityClick}
+          />
+        </section>
       )}
 
       {/* Quick Links */}

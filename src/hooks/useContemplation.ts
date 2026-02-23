@@ -238,6 +238,13 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'elementalSystemBridge',   name: 'Elemental System Bridge',   description: 'How your dominant element expresses across all three systems simultaneously',               level: 'advanced' },
     { id: 'holisticReading',         name: 'Holistic Reading',          description: 'All three systems woven together',                                                         level: 'master' },
     { id: 'lifePathSynthesis',       name: 'Life Path Synthesis',       description: 'Numerology Life Path + Gene Keys purpose + Astrology purpose indicators as one life reading', level: 'master' },
+    // Sprint BB — Isadora Synthesis multi-system synthesis suite
+    { id: 'multiSystemActivationReading',     name: 'Multi-System Activation',       description: 'The four core activations (Personality + Design Sun/Earth) read as an integrated identity arc across all three systems', level: 'advanced' },
+    { id: 'embodimentPortalReading',          name: 'Embodiment Portal',             description: 'Enter any gate through its line\'s chakra, element, and evolutionary process — a somatic doorway into activation',        level: 'advanced' },
+    { id: 'ancestralIntegrationContemplation', name: 'Ancestral Integration',        description: 'Design Mars sphere — the evolutionary responsibility your soul chose and the integration path your blueprint offers',      level: 'advanced' },
+    { id: 'innerLandscapeAwareness',          name: 'Inner Landscape Awareness',     description: 'Walk through the four developmental imprinting layers (IQ/EQ/SQ/Core) as a self-inquiry practice',                        level: 'advanced' },
+    { id: 'incarnationCrossIntegration',      name: 'Incarnation Cross Integration', description: 'The solar cluster as developmental arc — tension, anchoring, and what the cross is cultivating together',                  level: 'advanced' },
+    { id: 'fullBlueprintJourney',             name: 'Full Blueprint Journey',        description: 'All three sequences as developmental narrative — identity, relational, and expansion arcs as one integrated reading',       level: 'master' },
   ],
   lifeOS: [
     { id: 'lifeAreaAlignment',    name: 'Life Area Alignment',    description: 'Explore how cosmic design aligns with intentional living in a specific life area',                              level: 'master' },

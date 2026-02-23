@@ -21,6 +21,8 @@
 
 import type { SavedInsight } from './insights';
 import type { SavedSession } from './sessions';
+import type { CosmicProfile } from '../types';
+import { geneKeys, lines } from '../data';
 
 // ─── Tana IDs ─────────────────────────────────────────────────────────────────
 
@@ -209,6 +211,120 @@ export function formatVperPhaseInsight(
     vperData.activeKeyAreas.forEach(area => lines.push(`    - ${area}`));
   }
   return lines.join('\n');
+}
+
+// ─── Inner Landscape Protocol Export (Sprint BB) ─────────────────────────────
+
+/**
+ * Format a developmental imprinting protocol as Tana Paste for QUANTUM workspace.
+ * Maps the four Venus Sequence spheres to developmental imprinting layers.
+ *
+ * Layer map:
+ *   Mental Gift Pattern → IQ sphere (Personality Venus, ages 14-21)
+ *   Emotional Imprint   → EQ sphere (Personality Mars, ages 7-14)
+ *   Inner Grounding     → SQ sphere (Design Saturn, ages 0-7)
+ *   Ancestral Integration → Core sphere (Design Mars, pre-birth)
+ */
+export function formatInnerLandscapeProtocol(profile: CosmicProfile): string {
+  const gkProfile = profile.geneKeysProfile;
+  const name = profile.meta?.name ?? 'My Blueprint';
+
+  if (!gkProfile) {
+    return `- Inner Landscape Protocol — ${name}\n  - Status:: Gene Keys profile not available`;
+  }
+
+  type SphereLayer = {
+    label: string;
+    sphere: typeof gkProfile.iq;
+    devNote: string;
+    lineFieldExtras: (lineNum: number) => string[];
+  };
+
+  const layers: SphereLayer[] = [
+    {
+      label: 'Mental Gift Pattern (IQ — Personality Venus)',
+      sphere: gkProfile.iq,
+      devNote: 'Ages 14-21 · How the mind learned to be brilliant and to protect itself through brilliance',
+      lineFieldExtras: (lineNum) => {
+        const ld = lines.get(`line-${lineNum}`);
+        const extras: string[] = [];
+        if (ld?.communicationGuardian) {
+          extras.push(`Communication Style:: ${fieldValue(ld.communicationGuardian)}`);
+        }
+        extras.push(`Integration Invitation:: What would it feel like to trust this mind's gifts without needing to prove them?`);
+        return extras;
+      },
+    },
+    {
+      label: 'Emotional Imprint (EQ — Personality Mars)',
+      sphere: gkProfile.eq,
+      devNote: 'Ages 7-14 · The emotional defense pattern and the love language beneath it',
+      lineFieldExtras: (lineNum) => {
+        const ld = lines.get(`line-${lineNum}`);
+        const extras: string[] = [];
+        if (ld?.emotionalImprint) {
+          extras.push(`Defense Pattern:: ${fieldValue(ld.emotionalImprint.defensePattern)}`);
+          extras.push(`Love Language:: ${fieldValue(ld.emotionalImprint.loveLanguage)}`);
+        }
+        return extras;
+      },
+    },
+    {
+      label: 'Inner Grounding (SQ — Design Saturn)',
+      sphere: gkProfile.sq,
+      devNote: 'Ages 0-7 · The earliest developmental need — safety, consistency, and the ground beneath',
+      lineFieldExtras: (lineNum) => {
+        const ld = lines.get(`line-${lineNum}`);
+        const extras: string[] = [];
+        if (ld?.innerGrounding) {
+          extras.push(`Core Need:: ${fieldValue(ld.innerGrounding.coreNeed)}`);
+          extras.push(`When Denied:: ${fieldValue(ld.innerGrounding.whenDenied)}`);
+        }
+        return extras;
+      },
+    },
+    {
+      label: 'Ancestral Integration (Core — Design Mars)',
+      sphere: gkProfile.core,
+      devNote: 'Pre-birth · Inherited conditioning and the evolutionary responsibility the soul chose',
+      lineFieldExtras: (lineNum) => {
+        const ld = lines.get(`line-${lineNum}`);
+        const extras: string[] = [];
+        if (ld?.ancestralIntegration) {
+          extras.push(`Ancestral Wound:: ${fieldValue(ld.ancestralIntegration.wound)}`);
+          extras.push(`Integration Path:: ${fieldValue(ld.ancestralIntegration.remedy)}`);
+        }
+        return extras;
+      },
+    },
+  ];
+
+  const outputLines: string[] = [`- Inner Landscape Protocol — ${name}`];
+
+  for (const layer of layers) {
+    const { sphere } = layer;
+    const activation = `${sphere.geneKeyNumber}.${sphere.line}`;
+    const gk = geneKeys.get(sphere.geneKeyId);
+    const ld = lines.get(`line-${sphere.line}`);
+
+    outputLines.push(`  - ${layer.label}`);
+    outputLines.push(`    - Activation:: ${activation}${gk ? ` — ${gk.name}` : ''}`);
+    outputLines.push(`    - Developmental Window:: ${layer.devNote}`);
+
+    if (gk) {
+      outputLines.push(`    - Shadow:: ${fieldValue(gk.shadow.name)}`);
+      outputLines.push(`    - Gift:: ${fieldValue(gk.gift.name)}`);
+    }
+
+    if (ld?.chakraResonance && ld?.elementalExpression) {
+      outputLines.push(`    - Embodiment Portal:: ${ld.chakraResonance} Chakra · ${ld.elementalExpression} Element`);
+    }
+
+    const extras = layer.lineFieldExtras(sphere.line);
+    extras.forEach(e => outputLines.push(`    - ${e}`));
+  }
+
+  return outputLines.join('\n');
 }
 
 // ─── Clipboard Utility ────────────────────────────────────────────────────────
