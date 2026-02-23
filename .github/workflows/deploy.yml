@@ -88,7 +88,16 @@ jobs:
           ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
 
       - name: Deploy to VPS
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
         run: |
+          # Write .env.production from secrets (never logs the value)
+          echo "OPENROUTER_API_KEY=${OPENROUTER_API_KEY}" > /tmp/.env.production
+          scp -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
+            /tmp/.env.production \
+            ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/opt/cosmic-blueprint/.env.production
+          rm /tmp/.env.production
+
           scp -i ~/.ssh/deploy_key -o StrictHostKeyChecking=no \
             docker-compose.prod.yml \
             ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/opt/cosmic-blueprint/docker-compose.prod.yml
