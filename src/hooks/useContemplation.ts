@@ -332,6 +332,7 @@ export function useContemplation() {
   const [copySuccess, setCopySuccess] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
+  const abortControllerRef = useRef<AbortController | null>(null);
 
   // Handle entity click — supports up to 2 simultaneous entities
   const handleEntityClick = useCallback((entity: EntityInfo) => {
@@ -467,6 +468,13 @@ export function useContemplation() {
     }
   }, [messages.length]);
 
+  // Abort any in-flight stream request when the component unmounts
+  useEffect(() => {
+    return () => {
+      abortControllerRef.current?.abort();
+    };
+  }, []);
+
   const selectedTypeOption: ContemplationTypeOption | null = (contemplationType && category
     ? CONTEMPLATION_TYPES[category]?.find(t => t.id === contemplationType)
     : null) ?? null;
@@ -549,6 +557,11 @@ ${context}`;
     // Initialize with empty assistant message that will be populated by streaming
     setMessages([{ role: 'assistant', content: '' }]);
 
+    // Create abort controller for this request; abort any previous in-flight request
+    const controller = new AbortController();
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = controller;
+
     // Create retry function
     const doRequest = async () => {
       setError(null);
@@ -597,6 +610,7 @@ ${context}`;
             setError(`Connection issue. Retrying (attempt ${attempt}/3)...`);
           },
           model: selectedModel ?? (contemplationType ? getModelId(getModelForType(contemplationType)) : undefined),
+          signal: controller.signal,
         }
       );
     };
@@ -646,6 +660,11 @@ ${context}`;
 
     const systemPrompt = buildSystemPrompt();
     const messagesToSend = [...previousMessages, { role: 'user' as const, content: userMessage }];
+
+    // Create abort controller for this request; abort any previous in-flight request
+    const controller = new AbortController();
+    abortControllerRef.current?.abort();
+    abortControllerRef.current = controller;
 
     // Create retry function
     const doRequest = async () => {
@@ -700,6 +719,7 @@ ${context}`;
             setError(`Connection issue. Retrying (attempt ${attempt}/3)...`);
           },
           model: selectedModel ?? (contemplationType ? getModelId(getModelForType(contemplationType)) : undefined),
+          signal: controller.signal,
         }
       );
     };

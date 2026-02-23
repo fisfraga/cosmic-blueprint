@@ -1038,12 +1038,16 @@ class EntityRegistryService {
    * This enables bidirectional navigation between universal entities and personal data
    */
   registerProfile(profile: CosmicProfile): void {
+    const newProfileId = profile.meta?.id || 'default-profile';
+    // No-op if the same profile is already registered (prevents redundant re-registration)
+    if (this.currentProfileId === newProfileId) return;
+
     // Clear any existing profile entities
     if (this.currentProfileId) {
       this.unregisterProfile();
     }
 
-    this.currentProfileId = profile.meta?.id || 'default-profile';
+    this.currentProfileId = newProfileId;
 
     // Register all profile entity types
     this.registerAstrologyPlacements(profile);

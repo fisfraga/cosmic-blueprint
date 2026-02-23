@@ -15,6 +15,7 @@ export interface StreamOptions {
   maxRetries?: number;
   onRetry?: (attempt: number, error: string) => void;
   model?: string; // Model ID to use (e.g., 'claude-sonnet-4-20250514')
+  signal?: AbortSignal; // AbortController signal for cancellation on unmount
 }
 
 const API_URL = '/api/claude';
@@ -116,6 +117,7 @@ export async function sendContemplationStream(
           stream: true,
           model: options?.model,
         }),
+        signal: options?.signal,
       });
 
       if (!response.ok) {
@@ -134,6 +136,10 @@ export async function sendContemplationStream(
       let done = false;
 
       while (!done) {
+        if (options?.signal?.aborted) {
+          reader.cancel();
+          return;
+        }
         const result = await reader.read();
         done = result.done;
         if (done) break;
@@ -189,6 +195,10 @@ export async function sendContemplationStream(
       return; // Success - exit retry loop
 
     } catch (error) {
+      // Silently exit on intentional abort (component unmount)
+      if (error instanceof DOMException && error.name === 'AbortError') {
+        return;
+      }
       lastError = error instanceof Error ? error : new Error(String(error));
       console.error(`Claude API attempt ${attempt}/${maxRetries + 1} failed:`, lastError.message);
 

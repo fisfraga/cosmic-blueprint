@@ -40,7 +40,12 @@ function readFromStorage(): CosmicProfile[] {
 }
 
 function writeToStorage(profiles: CosmicProfile[]): void {
-  localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
+  try {
+    localStorage.setItem(PROFILES_KEY, JSON.stringify(profiles));
+  } catch (err) {
+    console.error('[profiles] Failed to persist profiles to localStorage:', err);
+    throw err;
+  }
 }
 
 function getStoredActiveId(): string | null {
