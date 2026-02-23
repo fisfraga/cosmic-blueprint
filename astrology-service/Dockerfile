@@ -16,7 +16,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 # This avoids a cold-start delay on first request in production.
 RUN python -c "\
 from kerykeion import AstrologicalSubject; \
-s = AstrologicalSubject('warmup', 2000, 1, 1, 12, 0, 51.5074, -0.1278, 'Europe/London', online=True); \
+s = AstrologicalSubject('warmup', 2000, 1, 1, 12, 0, 51.5074, -0.1278, 'Europe/London', online=False); \
 print('Ephemeris files cached:', s.sun.abs_pos) \
 "
 
