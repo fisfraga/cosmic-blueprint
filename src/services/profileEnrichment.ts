@@ -19,7 +19,7 @@ import { chakras } from '../data';
 /**
  * Reduce a number to a single digit, preserving master numbers 11, 22, 33.
  */
-function reduceToNumerology(n: number): number {
+export function reduceToNumerology(n: number): number {
   if (n === 11 || n === 22 || n === 33) return n;
   if (n <= 9) return n;
   const sum = String(n)
