@@ -31,6 +31,7 @@ const FILTER_OPTIONS: FilterOption[] = [
   { value: 'cosmicEmbodiment', label: 'Embodiment' },
   { value: 'fixedStars', label: 'Fixed Stars' },
   { value: 'galacticAstrology', label: 'Galactic' },
+  { value: 'yearAhead', label: 'Year Ahead' },
 ];
 
 const CATEGORY_STYLES: Record<
@@ -86,6 +87,11 @@ const CATEGORY_STYLES: Record<
     borderTop: 'border-t-violet-500',
     text: 'text-violet-400',
     label: 'Galactic',
+  },
+  yearAhead: {
+    borderTop: 'border-t-amber-500',
+    text: 'text-amber-400',
+    label: 'Year Ahead',
   },
 };
 

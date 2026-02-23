@@ -1,7 +1,7 @@
 // Context builder for Contemplation Chamber AI
 // Full Chart Context Architecture - Harmonic Resonance
 import type { AstroProfile, NatalPlacement, NatalAspect, NumerologyProfile, ChakraActivation, AlchemicalProfile, Element, PersonalContext } from '../../types';
-import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree, getProgrammingPartner } from '../../data';
+import { planets, signs, houses, aspects, elements, geneKeys, hdGates, hdCenters, hdChannels, hdProfiles, lines, chakras, codonRings, aminoAcids, numerologyNumbers, getGateByDegree, getProgrammingPartner, signPositionToAbsoluteDegree } from '../../data';
 import { getFixedStarConjunctions } from '../fixedStars';
 import { getGalacticConjunctions, getGalacticTransitActivations, type GalacticConjunction } from '../galacticAstrology';
 import { calculateTransitNatalAspects, type TransitNatalAspect } from '../transitAspects';
@@ -9,6 +9,7 @@ import { getPlanetaryPositions, longitudeToZodiac } from '../ephemeris';
 import { getCosmicWeather } from '../transits';
 import { formatILOSContextForCategory } from './ilos';
 import { getRelevantExcerpts, formatExcerptsForContext } from '../../data/knowledge';
+import { calculatePersonalYear, calculateUniversalYear, getChakraLifecyclePhase, calculateSolarReturnDate, getYearlySlowTransits } from '../yearAhead';
 
 export type ContemplationCategory =
   | 'astrology' | 'humanDesign' | 'geneKeys' | 'crossSystem' | 'lifeOS'
@@ -16,7 +17,8 @@ export type ContemplationCategory =
   | 'numerology'          // Split from alchemy: Life Path + Numerology Overview
   | 'cosmicEmbodiment'    // Promoted from crossSystem: any energy speaks directly
   | 'fixedStars'          // Exposed from service layer
-  | 'galacticAstrology';  // Sprint R: galactic center, great attractor, SGC, GAC
+  | 'galacticAstrology'   // Sprint R: galactic center, great attractor, SGC, GAC
+  | 'yearAhead';          // Sprint II: comprehensive annual forecast
 
 export type ContemplationType =
   // Astrology
@@ -98,7 +100,13 @@ export type ContemplationType =
   | 'galacticAlignment'
   // Cosmic Embodiment — Sprint R expansion
   | 'elementalEmbodiment'
-  | 'sequenceEmbodiment';
+  | 'sequenceEmbodiment'
+  // Year Ahead — Sprint II
+  | 'yearAheadOverview'
+  | 'personalYearReading'
+  | 'chakraLifeMap'
+  | 'solarReturnReading'
+  | 'annualTransitMap';
 
 export interface FocusEntity {
   type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment' | 'fixed-star' | 'galactic-point' | 'element';
@@ -158,6 +166,9 @@ function getIncludedSystems(category: ContemplationCategory): {
     case 'galacticAstrology':
       // Galactic points are an astrological layer; include astrology context only
       return { ...base, humanDesign: false, geneKeys: false, bridges: false };
+    case 'yearAhead':
+      // Year Ahead needs everything — astrology, HD, GK, bridges for comprehensive annual forecast
+      return { ...base, humanDesign: true, geneKeys: true, bridges: true };
     default:
       return { astrology: true, humanDesign: true, geneKeys: true, bridges: true };
   }
@@ -228,6 +239,11 @@ export function formatProfileContext(
     selection.type === 'galacticAlignment'
   ) {
     sections.push(formatGalacticContext(profile));
+  }
+
+  // Include Year Ahead context for yearAhead category
+  if (selection.category === 'yearAhead') {
+    sections.push(formatYearAheadContext(profile));
   }
 
   // Conditionally include Enrichment context (Numerology, Chakra, Alchemy)
@@ -1780,6 +1796,102 @@ function formatGalacticPointFocus(conj: GalacticConjunction): string {
 
 // Export for use in focus context building
 export { formatGalacticPointFocus };
+
+// ═══════════════════════════════════════════════════════════════════════════════
+// YEAR AHEAD CONTEXT
+// ═══════════════════════════════════════════════════════════════════════════════
+
+function formatYearAheadContext(profile: AstroProfile): string {
+  const lines: string[] = ['═══ YEAR AHEAD 2026 ═══'];
+  const now = new Date();
+  const year = now.getFullYear();
+
+  // Birth data for calculations
+  const dob = profile.dateOfBirth;
+  const [, monthStr, dayStr] = dob.split('-');
+  const birthMonth = parseInt(monthStr, 10);
+  const birthDay = parseInt(dayStr, 10);
+
+  // Personal Year + Universal Year
+  const personalYear = calculatePersonalYear(birthMonth, birthDay, year);
+  const universalYear = calculateUniversalYear(year);
+  lines.push(`\nNUMEROLOGY:`);
+  lines.push(`Personal Year: ${personalYear}`);
+  lines.push(`Universal Year: ${universalYear}`);
+  if (personalYear === universalYear) {
+    lines.push(`** Personal and Universal years align — amplified energy **`);
+  }
+
+  // Chakra 7-Year Lifecycle
+  const chakraPhase = getChakraLifecyclePhase(dob, now);
+  lines.push(`\nCHAKRA LIFECYCLE:`);
+  lines.push(`Active Chakra: ${chakraPhase.chakraName} (${chakraPhase.chakraNumber}/7)`);
+  lines.push(`Age Period: ${chakraPhase.periodStartAge}–${chakraPhase.periodEndAge} | Year ${chakraPhase.yearInPeriod} of 7 | Cycle ${chakraPhase.cycleNumber}`);
+  if (chakraPhase.isTransitionYear) {
+    lines.push(`** Transition year — preparing to shift to next chakra **`);
+  }
+
+  // Chakra entity data
+  const chakra = chakras.get(chakraPhase.chakraId);
+  if (chakra) {
+    lines.push(`Chakra Theme: ${chakra.lifeTheme}`);
+    lines.push(`Element: ${chakra.element} | Color: ${chakra.color} | Mantra: ${chakra.seed_mantra}`);
+    if (chakra.relatedHDCenters?.length) {
+      lines.push(`Related HD Centers: ${chakra.relatedHDCenters.join(', ')}`);
+    }
+  }
+
+  // Solar Return
+  try {
+    const sunPlacement = profile.placements?.find((p: NatalPlacement) => p.planetId === 'sun');
+    if (sunPlacement) {
+      const natalSunLon = signPositionToAbsoluteDegree(sunPlacement.signId, sunPlacement.degree, sunPlacement.minute);
+      if (natalSunLon > 0) {
+        const srDate = calculateSolarReturnDate(natalSunLon, year);
+        lines.push(`\nSOLAR RETURN:`);
+        lines.push(`Date: ${srDate.toISOString().split('T')[0]} (${srDate.toISOString().split('T')[1].substring(0, 5)} UTC)`);
+
+        // Compute planetary positions at solar return moment
+        const srPositions = getPlanetaryPositions(srDate);
+        const srPlanets = ['moon', 'mercury', 'venus', 'mars', 'jupiter', 'saturn'] as const;
+        const srLines: string[] = [];
+        for (const pid of srPlanets) {
+          const lon = srPositions[pid] as number;
+          const zodiac = longitudeToZodiac(lon);
+          const gateResult = getGateByDegree(lon);
+          const SIGN_NAMES: Record<string, string> = {
+            aries: 'Aries', taurus: 'Taurus', gemini: 'Gemini', cancer: 'Cancer',
+            leo: 'Leo', virgo: 'Virgo', libra: 'Libra', scorpio: 'Scorpio',
+            sagittarius: 'Sagittarius', capricorn: 'Capricorn', aquarius: 'Aquarius', pisces: 'Pisces',
+          };
+          srLines.push(`  ${pid}: ${SIGN_NAMES[zodiac.sign]} ${zodiac.degree}° → Gate ${gateResult?.gate.gateNumber ?? '?'}.${gateResult?.line ?? '?'}`);
+        }
+        lines.push('SR Planetary Positions:');
+        lines.push(...srLines);
+      }
+    }
+  } catch {
+    // Solar return calculation may fail for edge cases
+  }
+
+  // Yearly Slow-Planet Transits (quarterly summary)
+  const transits = getYearlySlowTransits(year);
+  lines.push(`\nSLOW-PLANET TRANSITS (monthly):`);
+
+  const MONTH_NAMES = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  // Group by planet for a compact view
+  const planetIds = ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
+  for (const pid of planetIds) {
+    const planetTransits = transits.filter(t => t.planetId === pid);
+    const summary = planetTransits.map(t => {
+      const retro = t.isRetrograde ? 'R' : '';
+      return `${MONTH_NAMES[t.month - 1]}:${t.signName.substring(0, 3)}${retro} G${t.gateNumber}.${t.line}`;
+    }).join(' | ');
+    lines.push(`${planetTransits[0]?.planet ?? pid}: ${summary}`);
+  }
+
+  return lines.join('\n');
+}
 
 // ═══════════════════════════════════════════════════════════════════════════════
 // ILOS CONTEXT INTEGRATION

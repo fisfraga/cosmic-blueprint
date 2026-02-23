@@ -274,6 +274,13 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'galacticPointReading', name: 'Galactic Point Reading',  description: 'Deep dive into a specific galactic point conjunction in your chart', needsFocus: true, level: 'master' },
     { id: 'galacticAlignment',    name: 'Galactic Alignments',     description: 'Current planetary transits activating the galactic axis',                level: 'advanced' },
   ],
+  yearAhead: [
+    { id: 'yearAheadOverview',    name: 'Year Ahead Overview',     description: 'Comprehensive annual forecast across astrology, numerology, HD, Gene Keys, and chakras', level: 'master' },
+    { id: 'personalYearReading',  name: 'Personal Year Reading',   description: 'Numerology personal year + universal year energy and their intersection',              level: 'beginner' },
+    { id: 'chakraLifeMap',        name: 'Chakra Life Map',         description: '7-year chakra lifecycle — which energy center is evolving and how',                    level: 'advanced' },
+    { id: 'solarReturnReading',   name: 'Solar Return Reading',    description: 'Your birthday chart for the year — themes, activations, and house emphasis',           level: 'advanced' },
+    { id: 'annualTransitMap',     name: 'Annual Transit Map',      description: 'Month-by-month slow planet transits and their Gene Key / life area activations',       level: 'advanced' },
+  ],
 };
 
 export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: string; color: string }> = {
@@ -287,6 +294,7 @@ export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: 
   cosmicEmbodiment: { name: 'Embodiment',    icon: '✦',  color: 'from-pink-500/40 to-rose-500/25 border-pink-500/50' },
   fixedStars:       { name: 'Fixed Stars',   icon: '★',  color: 'from-indigo-500/40 to-purple-500/25 border-indigo-500/50' },
   galacticAstrology:{ name: 'Galactic',      icon: '🌌', color: 'from-violet-500/40 to-blue-900/25 border-violet-500/50' },
+  yearAhead:        { name: 'Year Ahead',    icon: '☀', color: 'from-amber-500/40 to-rose-500/25 border-amber-500/50' },
 };
 
 export interface ModelOption {

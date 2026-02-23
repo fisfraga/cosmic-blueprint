@@ -1011,6 +1011,25 @@ Narrative approach:
 
 Link stars using [[star-id|Star Name]] format. These are not mere data points — they are living stellar intelligences.
 `,
+
+  yearAhead: `
+═══════════════════════════════════════════════════════════════════════════════
+                        YEAR AHEAD CONTEMPLATION MODE
+═══════════════════════════════════════════════════════════════════════════════
+
+Focus: A comprehensive annual forecast weaving astrology, numerology, Human Design, Gene Keys, and the 7-year chakra lifecycle.
+
+Key Framings:
+• Personal Year Number sets the numerological theme — where in the 9-year cycle?
+• Universal Year Number sets the collective backdrop
+• The 7-year chakra lifecycle reveals which energy center is developing
+• Solar return chart shows the year's planetary themes from the cosmic birthday
+• Slow planet transits (Jupiter, Saturn, Uranus, Neptune, Pluto) set the macro arc month by month
+• Gene Keys activated by slow transits reveal collective shadow/gift/siddhi themes
+
+This is a practical client service — deliver actionable guidance, not abstract prediction.
+Use entity links for all referenced planets, signs, gates, Gene Keys, and chakras.
+`,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -2366,6 +2385,155 @@ THE TRIPLE CONVERGENCE
 • Practical invitation: how does this triple-pointed purpose want to express in actual life choices, work, and contribution?
 
 Reference specific numbers, keys, and placements throughout. Use entity links: [[gk-X|Gene Key X]], [[sun|Sun]], [[midheaven|Midheaven]], [[north-node|North Node]].`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // YEAR AHEAD CONTEMPLATION TYPES (Sprint II)
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  yearAheadOverview: `You are delivering a comprehensive Year Ahead reading that weaves ALL available systems into one integrated annual forecast.
+
+STRUCTURE YOUR READING AS:
+
+1. YEAR ENERGY SIGNATURE
+• Personal Year Number + Universal Year Number — what is the overarching numerological energy? If they align, emphasize the amplified theme.
+• Name the year's archetype in one evocative phrase.
+
+2. CHAKRA LIFECYCLE CONTEXT
+• Which chakra is active in their 7-year lifecycle? What does this mean developmentally?
+• How does the chakra theme interact with the personal year energy?
+• Connect to their Human Design centers — is this chakra's HD center defined or undefined in their chart?
+
+3. SOLAR RETURN THEMES
+• When is the solar return? What planetary positions at the solar return moment hint at the year's flavor?
+• Key aspects and sign emphasis at the solar return chart.
+
+4. QUARTERLY ARC (Q1–Q4)
+Using the slow-planet transit data, sketch a narrative arc across the year:
+• Q1 (Jan–Mar): Opening energy — where are Jupiter, Saturn, and outer planets setting the stage?
+• Q2 (Apr–Jun): Building energy — any sign changes, retrogrades, or gate activations?
+• Q3 (Jul–Sep): Peak energy — solar return period, what ripens?
+• Q4 (Oct–Dec): Integration energy — what consolidates?
+
+5. KEY MONTHS & ACTIVATIONS
+• Identify 2–3 months where multiple transit shifts converge — flag these as "power windows"
+• Note which Gene Keys are activated by slow planet transits and what their shadow/gift/siddhi arc invites
+
+6. PRACTICE RECOMMENDATIONS
+• One practice for each quarter aligned with the active chakra, personal year, and transit energy
+• Tie back to their Gene Keys Life's Work or Human Design type/strategy
+
+Keep the reading warm, grounded, and actionable. This is a practical map for the year, not abstract prediction. Reference entity links throughout.`,
+
+  personalYearReading: `Guide a deep contemplation of their numerological year energy.
+
+EXPLORE:
+• Personal Year Number — what is its core theme? What phase of the 9-year cycle are they in?
+  - 1: New beginnings, planting seeds, independence
+  - 2: Partnership, patience, gestation
+  - 3: Expression, creativity, expansion
+  - 4: Foundation, discipline, building
+  - 5: Freedom, change, adventure
+  - 6: Responsibility, love, service
+  - 7: Introspection, spiritual growth, solitude
+  - 8: Power, manifestation, material mastery
+  - 9: Completion, release, wisdom harvest
+  - 11/22/33: Master number year — amplified spiritual lessons
+
+• Universal Year Number — what is the collective backdrop? How does it color the personal year?
+
+• ALIGNMENT: If personal and universal year numbers are the same (or harmonious), what does this double energy mean?
+
+• SHADOW & GIFT: What's the shadow expression of this personal year number? What's the gift expression?
+
+• GENE KEYS BRIDGE: Connect the personal year theme to their Life's Work Gene Key — how does the year energy support or challenge their core purpose path?
+
+• PRACTICAL INVITATIONS: Three specific practices or intentions aligned with this year's numerological energy.
+
+Use entity links for Gene Keys and numerology numbers: [[numerology-X|Number X]], [[gk-X|Gene Key X]].`,
+
+  chakraLifeMap: `Guide a contemplation of their 7-year chakra lifecycle phase.
+
+THE 7-YEAR CHAKRA CYCLE:
+Each 7-year period of life is governed by a chakra, ascending through the system:
+0–7: Root | 7–14: Sacral | 14–21: Solar Plexus | 21–28: Heart | 28–35: Throat | 35–42: Third Eye | 42–49: Crown
+Then the cycle repeats at a higher octave.
+
+EXPLORE:
+• Which chakra is currently active? What year within the 7-year period are they in?
+• Early years (1-2) of a chakra period = initiation into this energy
+• Middle years (3-5) = deepening, integration, sometimes crisis
+• Late years (6-7) = mastery, completion, preparing for transition
+
+• CHAKRA QUALITIES: What is this chakra's element, color, mantra, and life theme?
+• What does constriction look like in this chakra? What does flowing expression look like?
+
+• HUMAN DESIGN CONNECTION: Is the HD center related to this chakra defined or undefined in their chart?
+  - Defined center + active chakra = amplified natural expression
+  - Undefined center + active chakra = learning through openness and others' energy
+  - What conditioning patterns might surface during this period?
+
+• GENE KEYS ON THIS CHAKRA: Are any of their key Gene Key activations related to gates in this chakra's HD center?
+
+• DEVELOPMENTAL ARC: What was the previous chakra period teaching? What is the current one asking? What comes next?
+
+• SOMATIC PRACTICE: One embodied practice specifically for this chakra at this point in the cycle.
+
+Use entity links: [[chakra-X-name|Chakra Name]], [[hd-center-name|Center Name]], [[gk-X|Gene Key X]].`,
+
+  solarReturnReading: `Guide a contemplation of their solar return chart — the moment the Sun returns to its natal position each year.
+
+THE SOLAR RETURN:
+The solar return marks the true cosmic birthday — the moment the Sun exactly returns to the degree it occupied at birth. The planetary positions at this moment set the themes for the year ahead.
+
+INTERPRET:
+• SOLAR RETURN DATE: When exactly does the Sun return? The period around this date (±2 weeks) is especially potent.
+
+• MOON AT SOLAR RETURN: The Moon's sign and gate activation at the solar return shows the emotional tone of the year.
+  - What element is the SR Moon in? Fire (passion), Earth (groundedness), Air (communication), Water (depth)?
+  - What HD gate does the SR Moon activate? What Gene Key does this correspond to?
+
+• KEY PLANETS AT SR:
+  - Mercury: communication and thinking themes for the year
+  - Venus: relationship and value themes
+  - Mars: action and energy themes
+  - Jupiter: growth and expansion area
+  - Saturn: discipline and maturation area
+
+• NATAL CHART DIALOGUE: How do the solar return positions interact with their natal placements?
+  - Any SR planets conjunct natal planets? These natal themes get amplified.
+  - Any SR planets in key natal houses (1st, 7th, 10th)?
+
+• YEAR THEMES: Synthesize the solar return data into 3–5 core themes for the year.
+
+• BIRTHDAY PRACTICE: A ritual or intention-setting practice for the solar return window.
+
+Use entity links for all planets, signs, and Gene Keys referenced.`,
+
+  annualTransitMap: `Guide a month-by-month exploration of the slow planet transits for the year — a practical cosmic calendar.
+
+THE SLOW PLANETS:
+Jupiter (12-year cycle), Saturn (29-year), Uranus (84-year), Neptune (165-year), and Pluto (248-year) set the macro themes. Their monthly positions reveal the evolving backdrop.
+
+FOR EACH QUARTER, ANALYZE:
+• Which signs are the slow planets occupying? What energy themes do these signs carry?
+• Which HD gates are being activated by slow planet transits?
+• Which Gene Keys correspond to those gates — and what shadow/gift/siddhi spectrum is being collectively activated?
+• Are any slow planets retrograde? Retrograde periods = internalization, review, revisiting.
+
+HIGHLIGHT:
+• SIGN INGRESSES: When a slow planet changes signs, this is a major energy shift. Flag any sign changes during the year.
+• STATION POINTS: When planets station retrograde or direct, their energy is concentrated. Note these periods.
+• GATE CHANGES: When a slow planet moves into a new HD gate, it activates a new Gene Key for everyone. Note these transitions.
+
+• PERSONAL ACTIVATION: Where do these transiting gates fall relative to their natal chart?
+  - Transiting planet activating a natal gate = amplified personal theme
+  - Transiting planet completing a natal channel = temporary channel definition
+
+• POWER WINDOWS: Identify 2–3 months where multiple significant transits converge.
+
+• PRACTICAL MONTHLY GUIDANCE: For each quarter, offer one practice or awareness focus aligned with the dominant transit energy.
+
+Present this as a usable cosmic calendar — something they can reference month by month throughout the year. Use entity links for all gates, Gene Keys, signs, and planets.`,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -2746,6 +2914,13 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   shadowContemplate: 'deep',
   programmingPartnerDynamics: 'deep',
   goldenPathReading: 'deep',
+
+  // Year Ahead (Sprint II)
+  yearAheadOverview: 'deep',
+  personalYearReading: 'standard',
+  chakraLifeMap: 'deep',
+  solarReturnReading: 'deep',
+  annualTransitMap: 'deep',
 };
 
 export function getFormatGuidelines(contemplationType: string): string {
@@ -2852,6 +3027,13 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   shadowContemplate: 'sonnet',
   programmingPartnerDynamics: 'sonnet',
   goldenPathReading: 'opus',   // AC-6: flagship model for master-level full-arc synthesis
+
+  // Year Ahead (Sprint II)
+  yearAheadOverview: 'opus',   // Comprehensive master reading — all systems woven
+  personalYearReading: 'sonnet',
+  chakraLifeMap: 'sonnet',
+  solarReturnReading: 'sonnet',
+  annualTransitMap: 'sonnet',
 };
 
 export function getModelForType(contemplationType: string): ModelTier {
@@ -2971,6 +3153,13 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   if (contemplationType === 'shadowContemplate') return 'counselor';
   if (contemplationType === 'programmingPartnerDynamics') return 'guide';
   if (contemplationType === 'goldenPathReading') return 'teacher';
+
+  // Year Ahead types (Sprint II)
+  if (contemplationType === 'yearAheadOverview') return 'paracelsus'; // wisdom + practical integration
+  if (contemplationType === 'personalYearReading') return 'teacher';  // educational numerology
+  if (contemplationType === 'chakraLifeMap') return 'counselor';      // somatic/embodied
+  if (contemplationType === 'solarReturnReading') return 'guide';     // narrative truth
+  if (contemplationType === 'annualTransitMap') return 'analyzer';    // data-driven monthly breakdown
 
   // Gene Keys contemplation types stay with guide
   const guideTypes = ['shadowWork', 'giftActivation', 'siddhiContemplation', 'activationSequence', 'venusSequence', 'pearlSequence'];
