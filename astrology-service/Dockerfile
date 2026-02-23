@@ -5,6 +5,7 @@ WORKDIR /app
 # Build deps for pyswisseph (C extension)
 RUN apt-get update && apt-get install -y --no-install-recommends \
     gcc \
+    libc-dev \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt .
