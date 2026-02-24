@@ -197,6 +197,11 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'configurationReading', name: 'Configuration Reading',  description: 'Interpret aspect patterns',                 needsFocus: true,         level: 'advanced' },
     // Debra Silverman psychological astrology (Sprint AA)
     { id: 'gremlinWitnessing',    name: 'Gremlin Witnessing',     description: 'Name your per-sign inner critic scripts and meet them with the Observer reframe',                level: 'beginner' },
+    // Debra Silverman medium priority types (Sprint AC)
+    { id: 'highRoadPortal',          name: 'The High Road Portal',       description: 'See your current Low/High Road expression for a sign placement and activate the Observer shift toward your best self',    level: 'advanced' },
+    { id: 'northNodeCompass',        name: 'North Node Compass',         description: "Silverman's Shortcut to Enlightenment — activate your karmic growth direction with a shadow work arc and permission slip",    level: 'advanced' },
+    { id: 'saturnLessonIntegration', name: "Saturn's Lesson",            description: "Identify the life lesson encoded in your Saturn placement and house, with Return timing context — what you came to master", level: 'advanced' },
+    { id: 'signPsychologyMirror',    name: 'The Mirror',                 description: "Your sign's inner voice speaks — a deeply validating first-person reflection through the eyes of your Sun sign psychology",  level: 'advanced' },
   ],
   humanDesign: [
     { id: 'typeStrategy',       name: 'Type & Strategy',    description: 'Your energy type and decision-making',                           level: 'beginner' },

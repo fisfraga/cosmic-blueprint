@@ -33,6 +33,11 @@ export type ContemplationType =
   | 'transitReading'
   // Debra Silverman psychological astrology (Sprint AA)
   | 'gremlinWitnessing'
+  // Debra Silverman medium priority types (Sprint AC)
+  | 'highRoadPortal'
+  | 'northNodeCompass'
+  | 'saturnLessonIntegration'
+  | 'signPsychologyMirror'
   // Human Design
   | 'typeStrategy'
   | 'authorityCheckIn'
