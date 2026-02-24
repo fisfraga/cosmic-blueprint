@@ -40,6 +40,7 @@ const astrologyItems = [
   { path: '/houses', label: 'Houses', icon: '⌂' },
   { path: '/aspects', label: 'Aspects', icon: '△' },
   { path: '/elements', label: 'Elements', icon: '◇' },
+  { path: '/elements/survey', label: 'Elemental Survey', icon: '🜂' },
   { path: '/decans', label: 'Decans', icon: '◔' },
   { path: '/dignities', label: 'Dignities', icon: '⚖' },
   { path: '/configurations', label: 'Patterns', icon: '✡' },

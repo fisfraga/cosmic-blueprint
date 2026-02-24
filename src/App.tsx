@@ -25,6 +25,7 @@ const Houses = lazy(() => import('./pages/Houses'));
 const HouseDetail = lazy(() => import('./pages/HouseDetail'));
 const Elements = lazy(() => import('./pages/Elements'));
 const ElementDetail = lazy(() => import('./pages/ElementDetail'));
+const ElementalSurvey = lazy(() => import('./pages/ElementalSurvey'));
 const Aspects = lazy(() => import('./pages/Aspects'));
 const AspectDetail = lazy(() => import('./pages/AspectDetail'));
 const DignityMatrix = lazy(() => import('./pages/DignityMatrix'));
@@ -135,6 +136,7 @@ function App() {
                 <Route path="houses" element={<Houses />} />
                 <Route path="houses/:id" element={<HouseDetail />} />
                 <Route path="elements" element={<Elements />} />
+                <Route path="elements/survey" element={<ElementalSurvey />} />
                 <Route path="elements/:id" element={<ElementDetail />} />
                 <Route path="aspects" element={<Aspects />} />
                 <Route path="aspects/:id" element={<AspectDetail />} />

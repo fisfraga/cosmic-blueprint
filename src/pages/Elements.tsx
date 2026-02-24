@@ -45,6 +45,14 @@ export function Elements() {
           They describe not what you are made of, but <em className="text-theme-text-secondary">how you are becoming</em>.
           Understanding your elemental balance reveals your natural way of engaging with life.
         </p>
+        <Link
+          to="/elements/survey"
+          className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500/20 to-fire-500/10 border border-amber-500/30 text-amber-300 text-sm font-medium hover:from-amber-500/30 hover:to-fire-500/20 transition-all"
+        >
+          <span>🜂</span>
+          <span>Discover Your Elemental Profile</span>
+          <span>→</span>
+        </Link>
       </section>
 
       {/* Classical Elements */}
