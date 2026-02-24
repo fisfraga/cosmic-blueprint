@@ -770,19 +770,19 @@
         "gateId": "gate-7",
         "gateNumber": 7,
         "line": 6,
-        "centerName": "Spleen"
+        "centerName": "G-Center"
       },
       "moon": {
         "gateId": "gate-23",
         "gateNumber": 23,
         "line": 2,
-        "centerName": "Heart"
+        "centerName": "Throat"
       },
       "mercury": {
         "gateId": "gate-56",
         "gateNumber": 56,
         "line": 5,
-        "centerName": "Spleen"
+        "centerName": "Throat"
       },
       "ascendant": {
         "gateId": "gate-44",

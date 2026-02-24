@@ -89,13 +89,16 @@ export function LostOctaveDetail() {
     hertzFrequency?: number;
     alchemyStage?: string;
     tarotCardMajor?: string;
+    tarotCardMinor?: string;
     hermeticLaw?: string;
     mysticalPerfection?: string;
     egyptianAstrology?: string;
     divineName?: string;
     angel?: string;
+    starLoreDecans?: string[];
     superPartnerGateNumber?: number;
     isMasterGate?: boolean;
+    isLostGate?: boolean;
     decanNumber?: number;
   };
 
@@ -115,11 +118,18 @@ export function LostOctaveDetail() {
 
           {/* Header */}
           <header className="text-center py-8">
-            {isMasterGate && (
-              <div className="inline-block mb-3 px-3 py-1 rounded-full bg-humandesign-500/20 text-humandesign-300 text-xs font-medium tracking-wider uppercase">
-                Master Gate
-              </div>
-            )}
+            <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+              {isMasterGate && (
+                <div className="inline-block px-3 py-1 rounded-full bg-humandesign-500/20 text-humandesign-300 text-xs font-medium tracking-wider uppercase">
+                  Master Gate
+                </div>
+              )}
+              {extraFields.isLostGate && (
+                <div className="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-medium tracking-wider uppercase">
+                  Lost Gate ◆
+                </div>
+              )}
+            </div>
             <div className="text-6xl mb-4 font-serif text-humandesign-400">
               {gate.segmentNumber}
             </div>
@@ -345,6 +355,13 @@ export function LostOctaveDetail() {
                   </div>
                 )}
 
+                {extraFields.tarotCardMinor && (
+                  <div className="bg-surface-raised rounded-lg p-3">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Tarot Minor Arcana</p>
+                    <p className="text-theme-text-primary font-medium">{extraFields.tarotCardMinor}</p>
+                  </div>
+                )}
+
                 {/* Hermetic Law */}
                 {extraFields.hermeticLaw && (
                   <div className="bg-surface-raised rounded-lg p-3">
@@ -358,6 +375,23 @@ export function LostOctaveDetail() {
                   <div className="bg-surface-raised rounded-lg p-3 sm:col-span-2">
                     <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-1">Mystical Perfection</p>
                     <p className="text-theme-text-primary font-medium">{extraFields.mysticalPerfection}</p>
+                  </div>
+                )}
+
+                {/* Star Lore Decans */}
+                {extraFields.starLoreDecans && extraFields.starLoreDecans.length > 0 && (
+                  <div className="bg-surface-raised rounded-lg p-3 sm:col-span-2">
+                    <p className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Star Lore Decans</p>
+                    <div className="flex flex-wrap gap-2">
+                      {extraFields.starLoreDecans.map((decan, i) => (
+                        <span
+                          key={i}
+                          className="px-2.5 py-1 rounded-full text-xs bg-humandesign-500/10 text-humandesign-300 border border-humandesign-500/20"
+                        >
+                          {decan}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 )}
 
