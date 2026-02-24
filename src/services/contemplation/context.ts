@@ -397,6 +397,22 @@ function formatCompactAstrology(profile: AstroProfile): string {
     outputLines.push(`\nConfigs: ${profile.configurations.map(c => c.fullName).join(', ')}`);
   }
 
+  // Silverman gremlin themes for Big4 (compact — Sprint AD)
+  const compactDebraLines: string[] = [];
+  ['sun', 'moon', 'ascendant', 'mercury'].forEach(id => {
+    const p = profile.placements.find(pl => pl.planetId === id);
+    if (!p) return;
+    const planet = planets.get(p.planetId);
+    const sign = signs.get(p.signId);
+    if (sign?.debraGremlinTheme) {
+      compactDebraLines.push(`${planet?.symbol}${sign.name}: "${sign.debraGremlinTheme}"`);
+    }
+  });
+  if (compactDebraLines.length > 0) {
+    outputLines.push('\nSilverman Gremlins:');
+    outputLines.push(...compactDebraLines);
+  }
+
   return outputLines.join('\n');
 }
 
@@ -1048,6 +1064,28 @@ function formatFullAstrologyContext(profile: AstroProfile): string {
     });
   }
 
+  // Debra Silverman Psychological Layer — Big Four signs (Sprint AD)
+  const bigFourDebra = ['sun', 'moon', 'ascendant', 'mercury'];
+  const debraLines: string[] = [];
+  bigFourDebra.forEach(id => {
+    const p = profile.placements.find(pl => pl.planetId === id);
+    if (!p) return;
+    const planet = planets.get(p.planetId);
+    const sign = signs.get(p.signId);
+    if (!sign?.debraSignMedicine && !sign?.debraGremlinTheme) return;
+    debraLines.push(`\n${planet?.symbol} ${planet?.name} in ${sign?.name}:`);
+    if (planet?.debraRoleMetaphor) debraLines.push(`  Role: ${planet.debraRoleMetaphor}`);
+    if (sign?.debraGremlinTheme) debraLines.push(`  Gremlin: "${sign.debraGremlinTheme}"`);
+    if (sign?.debraSignMedicine) debraLines.push(`  Medicine: ${sign.debraSignMedicine}`);
+    if (sign?.debraBodyPart) debraLines.push(`  Body: ${sign.debraBodyPart}`);
+  });
+  if (debraLines.length > 0) {
+    outputLines.push('\n┌─────────────────────────────────────┐');
+    outputLines.push('│  SILVERMAN PSYCHOLOGICAL LAYER      │');
+    outputLines.push('└─────────────────────────────────────┘');
+    outputLines.push(...debraLines);
+  }
+
   return outputLines.join('\n');
 }
 
@@ -1334,6 +1372,16 @@ function formatPlacementFocus(placement: NatalPlacement, profile: AstroProfile):
   if (placement.retrograde) outputLines.push('Status: Retrograde ℞');
   if (placement.dignityId) outputLines.push(`Dignity: ${placement.dignityId}`);
   if (placement.isChartRuler) outputLines.push(`Chart Ruler: ${placement.isChartRuler}`);
+
+  // Debra Silverman psychological layer (Sprint AD)
+  const hasDebraData = planet?.debraRoleMetaphor || sign?.debraSignMedicine || sign?.debraGremlinTheme || sign?.debraBodyPart;
+  if (hasDebraData) {
+    outputLines.push('\n── Silverman Psychological Layer ──');
+    if (planet?.debraRoleMetaphor) outputLines.push(`Planet Role: ${planet.debraRoleMetaphor}`);
+    if (sign?.debraSignMedicine) outputLines.push(`Sign Medicine: ${sign.debraSignMedicine}`);
+    if (sign?.debraGremlinTheme) outputLines.push(`Gremlin Pattern: "${sign.debraGremlinTheme}"`);
+    if (sign?.debraBodyPart) outputLines.push(`Body Correspondence: ${sign.debraBodyPart}`);
+  }
 
   // Related aspects
   const relatedAspects = profile.aspects?.planetary?.filter(
