@@ -225,6 +225,36 @@ export function SignDetail() {
             </section>
           )}
 
+          {/* Silverman Psychological Layer (Sprint AE) */}
+          {(sign.debraSignMedicine || sign.debraGremlinTheme || sign.debraBodyPart) && (
+            <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
+              <h2 className="font-serif text-xl mb-1">Silverman Psychology</h2>
+              <p className="text-theme-text-tertiary text-sm mb-4">
+                Debra Silverman's psychological astrology layer — the inner gremlin voice, the medicine, and where this sign's unresolved patterns show up in the body.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                {sign.debraGremlinTheme && (
+                  <div className="p-4 rounded-lg bg-amber-500/5 border border-amber-500/20">
+                    <div className="text-xs uppercase tracking-wider text-amber-400 mb-2">The Gremlin</div>
+                    <p className="text-theme-text-secondary italic leading-relaxed">"{sign.debraGremlinTheme}"</p>
+                  </div>
+                )}
+                {sign.debraSignMedicine && (
+                  <div className="p-4 rounded-lg bg-emerald-500/5 border border-emerald-500/20">
+                    <div className="text-xs uppercase tracking-wider text-emerald-400 mb-2">The Medicine</div>
+                    <p className="text-theme-text-secondary leading-relaxed">{sign.debraSignMedicine}</p>
+                  </div>
+                )}
+              </div>
+              {sign.debraBodyPart && (
+                <div className="mt-4 p-4 rounded-lg bg-surface-overlay border border-theme-border-subtle">
+                  <div className="text-xs uppercase tracking-wider text-theme-text-tertiary mb-2">Body Correspondence</div>
+                  <p className="text-theme-text-secondary leading-relaxed">{sign.debraBodyPart}</p>
+                </div>
+              )}
+            </section>
+          )}
+
           {/* Three Decans */}
           {signDecans.length > 0 && (
             <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">

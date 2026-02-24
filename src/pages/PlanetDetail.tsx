@@ -208,6 +208,12 @@ export function PlanetDetail() {
           <section className="bg-surface-base/50 rounded-xl p-6 border border-theme-border-subtle">
             <h2 className="font-serif text-xl mb-4">Function & Meaning</h2>
             <p className="text-theme-text-secondary leading-relaxed">{planet.functionAndMeaning}</p>
+            {planetData?.debraRoleMetaphor && (
+              <div className="mt-4 p-3 rounded-lg bg-amber-500/5 border border-amber-500/20">
+                <div className="text-xs uppercase tracking-wider text-amber-400/80 mb-1">Silverman: Role Archetype</div>
+                <p className="text-sm text-theme-text-secondary italic">{planetData.debraRoleMetaphor}</p>
+              </div>
+            )}
           </section>
 
           {/* Gift & Shadow */}
