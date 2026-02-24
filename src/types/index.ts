@@ -113,9 +113,10 @@ export interface ZodiacSign extends AstroEntity {
   lightExpression?: string;
   managementGuidance?: string;
   vperPhase?: VperPhase;
-  // Debra Silverman psychological astrology (Sprint AA)
+  // Debra Silverman psychological astrology (Sprint AA / DS-12)
   debraSignMedicine?: string;
   debraGremlinTheme?: string;
+  debraBodyPart?: string;
 }
 
 // ------------------------------------

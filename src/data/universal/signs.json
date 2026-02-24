@@ -30,7 +30,8 @@
     "managementGuidance": "Embrace courage; practice patience and consideration of others",
     "vperPhase": "vision",
     "debraSignMedicine": "Physical movement, loud singing, expressing anger, exercise",
-    "debraGremlinTheme": "I keep making things about me; people get mad at me without warning"
+    "debraGremlinTheme": "I keep making things about me; people get mad at me without warning",
+    "debraBodyPart": "Head and adrenals — headaches and jaw tension signal blocked will and unexpressed initiative"
   },
   {
     "id": "taurus",
@@ -63,7 +64,8 @@
     "managementGuidance": "Value stability; practice flexibility and openness",
     "vperPhase": "execute",
     "debraSignMedicine": "Stay home guilt-free, baking and cooking, nature and gardening, home refresh",
-    "debraGremlinTheme": "I'm not good enough; I'm boring; I'm falling behind; why can't I motivate?"
+    "debraGremlinTheme": "I'm not good enough; I'm boring; I'm falling behind; why can't I motivate?",
+    "debraBodyPart": "Throat and neck — stiffness signals suppressed desires; singing, touch, and savoring beauty are the medicine"
   },
   {
     "id": "gemini",
@@ -95,7 +97,8 @@
     "managementGuidance": "Enjoy curiosity; cultivate focus and deeper connections",
     "vperPhase": "plan",
     "debraSignMedicine": "Talk and journal, moving meditation (yoga or dance), grounding (barefoot walking), structured friendship",
-    "debraGremlinTheme": "I can't focus; I'm faking it; nobody really knows me; I keep abandoning things"
+    "debraGremlinTheme": "I can't focus; I'm faking it; nobody really knows me; I keep abandoning things",
+    "debraBodyPart": "Lungs, arms, and hands — shallow breathing and nervous hands signal mental overload without grounding"
   },
   {
     "id": "cancer",
@@ -127,7 +130,8 @@
     "managementGuidance": "Nurture others; set healthy emotional boundaries",
     "vperPhase": "review",
     "debraSignMedicine": "Alone time to reboot, therapy, physical touch, limiting emotional absorption",
-    "debraGremlinTheme": "Everything bad keeps happening to me; nobody cares; life is too hard"
+    "debraGremlinTheme": "Everything bad keeps happening to me; nobody cares; life is too hard",
+    "debraBodyPart": "Stomach and breasts — digestive upset signals swallowed emotions and violated boundaries"
   },
   {
     "id": "leo",
@@ -160,7 +164,8 @@
     "managementGuidance": "Practice humility; shine light on others",
     "vperPhase": "vision",
     "debraSignMedicine": "Creative expression, perform and shine without needing applause, give love freely",
-    "debraGremlinTheme": "Nobody appreciates me; I need more attention; I'm only lovable when performing"
+    "debraGremlinTheme": "Nobody appreciates me; I need more attention; I'm only lovable when performing",
+    "debraBodyPart": "Heart and spine — back tension and chest constriction signal unexpressed gifts waiting for permission to shine"
   },
   {
     "id": "virgo",
@@ -192,7 +197,8 @@
     "managementGuidance": "Use analytical skills; practice self-compassion",
     "vperPhase": "execute",
     "debraSignMedicine": "Selfless service, accept imperfection, forgive self, measure life by feeling not results",
-    "debraGremlinTheme": "Nothing is ever good enough; I'm failing; I should be doing better"
+    "debraGremlinTheme": "Nothing is ever good enough; I'm failing; I should be doing better",
+    "debraBodyPart": "Intestines — digestive dysfunction and food sensitivities signal self-criticism and perfectionism turned inward"
   },
   {
     "id": "libra",
@@ -225,7 +231,8 @@
     "managementGuidance": "Foster harmony; practice decisive assertiveness",
     "vperPhase": "plan",
     "debraSignMedicine": "Identity independent of relationship, find peace within, self-completion practice",
-    "debraGremlinTheme": "I need a relationship to feel whole; I'm too dependent on others' approval"
+    "debraGremlinTheme": "I need a relationship to feel whole; I'm too dependent on others' approval",
+    "debraBodyPart": "Bladder and kidneys — tension signals accumulated relational resentment and decision paralysis"
   },
   {
     "id": "scorpio",
@@ -259,7 +266,8 @@
     "managementGuidance": "Channel intensity; practice forgiveness and openness",
     "vperPhase": "review",
     "debraSignMedicine": "Face shadow directly, transform pain into power, release control, trust practice",
-    "debraGremlinTheme": "I can't trust anyone; if I let go I lose control; the dark side is always pulling"
+    "debraGremlinTheme": "I can't trust anyone; if I let go I lose control; the dark side is always pulling",
+    "debraBodyPart": "Genitals and reproductive organs — power struggles and intimacy wounds concentrate here; truth and depth are the medicine"
   },
   {
     "id": "sagittarius",
@@ -291,7 +299,8 @@
     "managementGuidance": "Embrace optimism; be mindful of bluntness; commit to detail",
     "vperPhase": "vision",
     "debraSignMedicine": "Tell uncomfortable truths with compassion, purposeful travel, finish something",
-    "debraGremlinTheme": "I can't commit to anything; I just escape when things get hard"
+    "debraGremlinTheme": "I can't commit to anything; I just escape when things get hard",
+    "debraBodyPart": "Hips and thighs — tightness signals constrained freedom and unexpressed truth; purposeful movement releases it"
   },
   {
     "id": "capricorn",
@@ -324,7 +333,8 @@
     "managementGuidance": "Use ambition; avoid rigidity; find joy beyond achievement",
     "vperPhase": "execute",
     "debraSignMedicine": "Service beyond personal gain, compassion for those without your drive, humility",
-    "debraGremlinTheme": "I'm only valuable through my achievements; I can never rest; others are lazy"
+    "debraGremlinTheme": "I'm only valuable through my achievements; I can never rest; others are lazy",
+    "debraBodyPart": "Knees and bones — knee pain signals fear of failure and the weight of over-responsibility on the structure"
   },
   {
     "id": "aquarius",
@@ -357,7 +367,8 @@
     "managementGuidance": "Embrace innovation; practice emotional connection",
     "vperPhase": "plan",
     "debraSignMedicine": "Study the emotional body, feel feelings rather than think them",
-    "debraGremlinTheme": "I don't belong anywhere; nobody understands me; emotions are a waste of time"
+    "debraGremlinTheme": "I don't belong anywhere; nobody understands me; emotions are a waste of time",
+    "debraBodyPart": "Ankles, calves, and nervous system — instability signals emotional detachment and the longing for genuine belonging"
   },
   {
     "id": "pisces",
@@ -391,6 +402,7 @@
     "managementGuidance": "Cultivate compassion; avoid escapism; set boundaries",
     "vperPhase": "review",
     "debraSignMedicine": "Grounding practices, follow through on commitments, find faith in reality rather than escaping it",
-    "debraGremlinTheme": "Reality is too harsh; I want to disappear; nothing ever works out"
+    "debraGremlinTheme": "Reality is too harsh; I want to disappear; nothing ever works out",
+    "debraBodyPart": "Feet and lymphatic system — foot sensitivity and immune vulnerability signal psychic overwhelm and dissolved boundaries"
   }
 ]
