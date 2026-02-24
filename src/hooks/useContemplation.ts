@@ -298,6 +298,13 @@ export const CONTEMPLATION_TYPES: Record<ContemplationCategory, ContemplationTyp
     { id: 'solarReturnReading',   name: 'Solar Return Reading',    description: 'Your birthday chart for the year — themes, activations, and house emphasis',           level: 'advanced' },
     { id: 'annualTransitMap',     name: 'Annual Transit Map',      description: 'Month-by-month slow planet transits and their Gene Key / life area activations',       level: 'advanced' },
   ],
+  // Sprint AG — Vocational Astrology
+  vocation: [
+    { id: 'northNodeVocationalCalling',  name: 'North Node Calling',     description: 'Your NN sign, house, and Gene Key Vocation sphere as the soul\'s unique contribution — what you came to offer',     level: 'advanced' },
+    { id: 'clarksVocationalTriptych',    name: 'Vocational Triptych',    description: 'MC + North Node + Rising as one integrated calling arc — the three-part vocational signature (Brian Clark)',        level: 'master' },
+    { id: 'mcRulerVocationalNavigator',  name: 'MC Ruler Navigator',     description: 'Your Midheaven ruler\'s sign and house placement reveals HOW to pursue your calling — the path of least resistance', level: 'advanced' },
+    { id: 'elementalHungerVocation',     name: 'Elemental Hunger',       description: 'Your missing element as the soul\'s hunger — the vocational gap that becomes your deepest gift and contribution',    level: 'advanced' },
+  ],
 };
 
 export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: string; color: string }> = {
@@ -312,6 +319,7 @@ export const CATEGORY_INFO: Record<ContemplationCategory, { name: string; icon: 
   fixedStars:       { name: 'Fixed Stars',   icon: '★',  color: 'from-indigo-500/40 to-purple-500/25 border-indigo-500/50' },
   galacticAstrology:{ name: 'Galactic',      icon: '🌌', color: 'from-violet-500/40 to-blue-900/25 border-violet-500/50' },
   yearAhead:        { name: 'Year Ahead',    icon: '☀', color: 'from-amber-500/40 to-rose-500/25 border-amber-500/50' },
+  vocation:         { name: 'Vocation',      icon: '⛰', color: 'from-teal-500/40 to-emerald-600/25 border-teal-500/50' },
 };
 
 export interface ModelOption {

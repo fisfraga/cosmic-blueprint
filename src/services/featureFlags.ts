@@ -14,6 +14,7 @@ export type FeatureFlagId =
   | 'contemplation.alchemy'
   | 'contemplation.numerology'
   | 'contemplation.cosmicEmbodiment'
+  | 'contemplation.vocation'
   // Domain B — KB-person types (spread across core categories)
   | 'kb.debraSilverman'
   | 'kb.isadoraSynthesis'
@@ -64,6 +65,11 @@ export const FLAG_METADATA: Record<FeatureFlagId, FlagMeta> = {
   'contemplation.cosmicEmbodiment': {
     label: 'Cosmic Embodiment',
     description: 'Let cosmic energies speak in their own voice — first-person entity contemplations',
+    domain: 'contemplation',
+  },
+  'contemplation.vocation': {
+    label: 'Vocational Astrology',
+    description: 'MC, North Node, MC Ruler, and elemental hunger as vocational calling (4 types)',
     domain: 'contemplation',
   },
   // KB persons
@@ -158,6 +164,7 @@ export const CATEGORY_FLAG_MAP: Partial<Record<ContemplationCategory, FeatureFla
   alchemy: 'contemplation.alchemy',
   numerology: 'contemplation.numerology',
   cosmicEmbodiment: 'contemplation.cosmicEmbodiment',
+  vocation: 'contemplation.vocation',
 };
 
 // ─── Storage ─────────────────────────────────────────────────────────────────

@@ -33,6 +33,7 @@ const FILTER_OPTIONS: FilterOption[] = [
   { value: 'fixedStars', label: 'Fixed Stars' },
   { value: 'galacticAstrology', label: 'Galactic' },
   { value: 'yearAhead', label: 'Year Ahead' },
+  { value: 'vocation', label: 'Vocation' },
 ];
 
 const CATEGORY_STYLES: Record<
@@ -104,6 +105,12 @@ const CATEGORY_STYLES: Record<
     text: 'text-amber-400',
     label: 'Year Ahead',
     icon: '☀',
+  },
+  vocation: {
+    borderTop: 'border-t-teal-500',
+    text: 'text-teal-400',
+    label: 'Vocation',
+    icon: '⛰',
   },
 };
 

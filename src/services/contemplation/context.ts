@@ -18,7 +18,8 @@ export type ContemplationCategory =
   | 'cosmicEmbodiment'    // Promoted from crossSystem: any energy speaks directly
   | 'fixedStars'          // Exposed from service layer
   | 'galacticAstrology'   // Sprint R: galactic center, great attractor, SGC, GAC
-  | 'yearAhead';          // Sprint II: comprehensive annual forecast
+  | 'yearAhead'           // Sprint II: comprehensive annual forecast
+  | 'vocation';           // Sprint AG: vocational astrology (MC, NN, ASC, elemental hunger)
 
 export type ContemplationType =
   // Astrology
@@ -125,7 +126,12 @@ export type ContemplationType =
   | 'personalYearReading'
   | 'chakraLifeMap'
   | 'solarReturnReading'
-  | 'annualTransitMap';
+  | 'annualTransitMap'
+  // Vocational Astrology — Sprint AG
+  | 'northNodeVocationalCalling'
+  | 'clarksVocationalTriptych'
+  | 'mcRulerVocationalNavigator'
+  | 'elementalHungerVocation';
 
 export interface FocusEntity {
   type: 'placement' | 'aspect' | 'configuration' | 'gate' | 'channel' | 'center' | 'sphere' | 'geneKey' | 'transitAspect' | 'embodiment' | 'fixed-star' | 'galactic-point' | 'element';
@@ -188,6 +194,9 @@ function getIncludedSystems(category: ContemplationCategory): {
     case 'yearAhead':
       // Year Ahead needs everything — astrology, HD, GK, bridges for comprehensive annual forecast
       return { ...base, humanDesign: true, geneKeys: true, bridges: true };
+    case 'vocation':
+      // Vocational astrology: MC, NN, ASC + GK Pearl Sequence vocation sphere
+      return { ...base, humanDesign: false, geneKeys: true, bridges: false };
     default:
       return { astrology: true, humanDesign: true, geneKeys: true, bridges: true };
   }

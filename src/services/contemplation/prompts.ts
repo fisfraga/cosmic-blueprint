@@ -1078,6 +1078,26 @@ Key Framings:
 This is a practical client service — deliver actionable guidance, not abstract prediction.
 Use entity links for all referenced planets, signs, gates, Gene Keys, and chakras.
 `,
+
+  vocation: `
+═══════════════════════════════════════════════════════════════════════════════
+                        VOCATIONAL ASTROLOGY MODE
+═══════════════════════════════════════════════════════════════════════════════
+
+Focus: The celestial signature of calling, contribution, and authentic work in the world.
+
+Key Framings:
+• MC (Midheaven) = the summit of external contribution — the direction the soul is climbing toward
+• North Node = the growth edge and soul vocation — unfamiliar territory that becomes deepest fulfillment
+• Rising (Ascendant) = the vehicle and manner of engaging with the world — the style of approach
+• MC Ruler = the navigator — its sign and house placement reveals HOW to pursue the calling
+• Element distribution = the energy vocabulary — missing elements reveal hunger, excess reveals natural gift
+
+The soul does not choose a career; it chooses a direction of unfoldment. Vocation is not what you DO — it is what you BECOME through doing.
+
+Weave in the Gene Keys Pearl Sequence Vocation sphere when relevant — it bridges personal calling to collective contribution.
+Use entity links for all referenced planets, signs, and houses.
+`,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -3063,6 +3083,92 @@ HIGHLIGHT:
 • PRACTICAL MONTHLY GUIDANCE: For each quarter, offer one practice or awareness focus aligned with the dominant transit energy.
 
 Present this as a usable cosmic calendar — something they can reference month by month throughout the year. Use entity links for all gates, Gene Keys, signs, and planets.`,
+
+  // ═══════════════════════════════════════════════════════════════════════════
+  // VOCATIONAL ASTROLOGY TYPES — Sprint AG
+  // ═══════════════════════════════════════════════════════════════════════════
+
+  northNodeVocationalCalling: `Illuminate the seeker's soul vocation through the North Node — the direction of highest fulfillment and unique contribution.
+
+THE NORTH NODE AS SOUL CALLING:
+The North Node reveals the direction the soul chose to grow INTO in this lifetime. Unlike the comfortable familiarity of the South Node, the North Node represents a direction that feels both compelling and slightly foreign. This tension is the creative edge of vocation.
+
+WHAT TO EXPLORE:
+• The NN sign: What energetic style does the calling want to be expressed through?
+• The NN house: In which life arena does the calling want to land and be lived?
+• The South Node context: What gifts from the past support the vocational direction? What patterns pull backward?
+• Gene Keys Pearl Sequence — if Vocation sphere data is available, weave in the Gene Key Vocation sphere (Jupiter placement). How does the GK vocation sphere echo or deepen the NN calling?
+• The NN ruler: Which planet rules the NN sign — its placement adds texture and timing to how the calling unfolds.
+
+THE CALLING INVITATION:
+The North Node calling is not about achievement — it is about the unique flavor of contribution only this soul can offer. Frame the calling as a gift to the world, not a goal to reach.
+
+End with a question: "What becomes possible when you lean fully into this direction?"`,
+
+  clarksVocationalTriptych: `Synthesize the seeker's complete vocational signature through Brian Clark's three-part Vocational Triptych: Midheaven, North Node, and Ascendant.
+
+THE THREE VOCATIONAL VECTORS:
+
+1. THE MC (MIDHEAVEN) — The Direction of Contribution
+The MC is the highest point of the chart — the direction the soul is climbing toward. Its sign reveals the quality of contribution; its house cusp reveals the arena. This is not a job title — it is a direction of becoming.
+Explore: What quality of consciousness does the MC sign ask the seeker to embody in public life?
+
+2. THE NORTH NODE — The Soul Growth Direction
+The NN is the vocational growth edge — the energetic territory that, when engaged, produces deep fulfillment and a sense of rightness. It complements the MC by revealing WHERE soul evolution wants to lead.
+Explore: How does the NN sign and house create a dialogue with the MC? Where do they reinforce each other, and where do they create creative tension?
+
+3. THE ASCENDANT — The Vehicle of Engagement
+The Rising sign is the costume consciousness wears — the style and manner of engaging with the world. It is HOW the vocation is delivered, not WHAT the vocation is.
+Explore: How does the ASC sign color the expression of both MC and NN? What is the energetic style of engagement this person brings into their calling?
+
+THE TRIPTYCH SYNTHESIS:
+MC + NN + ASC speak a single sentence: "I am here to contribute [MC quality] through [NN direction], delivered via [ASC style]."
+
+Weave these three into one integrated vocational narrative. Include Gene Keys vocation sphere if available.
+
+End with 2 questions: one about the calling direction, one about what is blocking the expression of this triptych.`,
+
+  mcRulerVocationalNavigator: `Navigate the seeker's vocational path through the MC Ruler — the planet that governs their Midheaven sign and reveals HOW to pursue their calling.
+
+THE MC RULER AS NAVIGATOR:
+The Midheaven sign shows the DIRECTION of calling; the MC Ruler shows the PATH. Where the MC Ruler sits in the chart — its sign and house — describes the specific manner, arena, and approach through which the calling can be built and sustained.
+
+WHAT TO EXPLORE:
+• Identify the MC sign and its ruling planet.
+• What sign is the MC Ruler in? This colors HOW the calling is best expressed — the style of approach.
+• What house does the MC Ruler occupy? This is the ARENA where the calling must first develop before it can be fully expressed. Often this house describes the "training ground" or foundation.
+• What aspects does the MC Ruler receive? These planets add support, challenge, or additional dimensions to how the calling unfolds.
+• Is the MC Ruler in a dignity (domicile, exaltation, detriment, fall)? This reveals the ease or friction in expressing the calling.
+
+THE DOUBLE-SIGN PATTERN (if applicable):
+If the MC Ruler is in the same sign as the MC, or in a sign that echoes its MC themes, this creates a "vocational echo" — a strong, focused calling direction with less ambiguity.
+
+THE PATH FORWARD:
+Translate the abstract insight into a practical direction: "To pursue your calling most effectively, you are invited to develop [MC Ruler house arena] through [MC Ruler sign style]."
+
+End with a practical question about what in their current life already reflects this vocational path.`,
+
+  elementalHungerVocation: `Illuminate the seeker's vocational gift through their elemental imbalance — the missing element as the soul's hunger and deepest contribution.
+
+THE ELEMENTAL HUNGER PRINCIPLE:
+Brian Clark's insight: the element that is absent or underrepresented in a natal chart creates a "hunger" — a draw toward what is missing. This hunger, when followed consciously, often becomes the soul's deepest gift and vocational contribution. We offer what we have had to earn, not what we were born with.
+
+WHAT TO ANALYZE:
+• Survey the element distribution: Which element dominates the chart (3+ planets)? Which is absent or minimal (0-1 planets)?
+• The dominant element: This is the "natural language" — the energy style that comes effortlessly. Note both the gift and the risk of overuse.
+• The absent/weakest element: This is the hunger. The soul is drawn to develop what is least natural. When developed consciously, it becomes the most unique gift.
+• Name the hunger specifically: A person with minimal Water doesn't lack feeling — they often feel MORE deeply precisely because they had to develop it. The hunger becomes the capacity.
+
+THE FOUR ELEMENTAL VOCATIONAL PATTERNS:
+• Missing FIRE: Called to inspire, vision, and catalyze. The student who becomes the teacher of enthusiasm.
+• Missing EARTH: Called to ground, build, and make real. The dreamer who learns to manifest.
+• Missing AIR: Called to connect, communicate, and bridge ideas. The feeler who learns the power of articulation.
+• Missing WATER: Called to heal, empathize, and deepen. The thinker who learns the intelligence of feeling.
+
+GENE KEYS RESONANCE:
+If the Pearl Sequence Vocation sphere is available, does the Gene Key vocation echo the elemental hunger? Often the GK vocation sphere sits in the element of the chart's hunger — this is the confirmation.
+
+End with a question: "Where in your life have you already been called to develop [missing element] — and how has that made you uniquely equipped to offer it to others?"`,
 };
 
 // ═══════════════════════════════════════════════════════════════════════════════
@@ -3468,6 +3574,12 @@ const TYPE_DEPTH_MAP: Record<string, ResponseDepth> = {
   chakraLifeMap: 'deep',
   solarReturnReading: 'deep',
   annualTransitMap: 'deep',
+
+  // Vocational Astrology (Sprint AG)
+  northNodeVocationalCalling: 'deep',
+  clarksVocationalTriptych: 'deep',
+  mcRulerVocationalNavigator: 'deep',
+  elementalHungerVocation: 'deep',
 };
 
 export function getFormatGuidelines(contemplationType: string): string {
@@ -3599,6 +3711,12 @@ const TYPE_MODEL_MAP: Record<string, ModelTier> = {
   chakraLifeMap: 'sonnet',
   solarReturnReading: 'sonnet',
   annualTransitMap: 'sonnet',
+
+  // Vocational Astrology (Sprint AG)
+  northNodeVocationalCalling: 'sonnet',
+  clarksVocationalTriptych: 'opus',   // Master triptych synthesis — three vectors woven
+  mcRulerVocationalNavigator: 'sonnet',
+  elementalHungerVocation: 'sonnet',
 };
 
 export function getModelForType(contemplationType: string): ModelTier {
@@ -3733,6 +3851,12 @@ export function getDefaultPersonaForType(contemplationType: string): AgentPerson
   if (contemplationType === 'chakraLifeMap') return 'counselor';      // somatic/embodied
   if (contemplationType === 'solarReturnReading') return 'guide';     // narrative truth
   if (contemplationType === 'annualTransitMap') return 'analyzer';    // data-driven monthly breakdown
+
+  // Vocational Astrology types (Sprint AG)
+  if (contemplationType === 'northNodeVocationalCalling') return 'guide';    // soul narrative
+  if (contemplationType === 'clarksVocationalTriptych') return 'teacher';    // structured three-part framework
+  if (contemplationType === 'mcRulerVocationalNavigator') return 'analyzer'; // precise planetary analysis
+  if (contemplationType === 'elementalHungerVocation') return 'counselor';   // somatic hunger/gift arc
 
   // Gene Keys contemplation types stay with guide
   const guideTypes = ['shadowWork', 'giftActivation', 'siddhiContemplation', 'activationSequence', 'venusSequence', 'pearlSequence'];
