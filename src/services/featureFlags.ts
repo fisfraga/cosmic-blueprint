@@ -14,7 +14,7 @@ export type FeatureFlagId =
   | 'contemplation.alchemy'
   | 'contemplation.numerology'
   | 'contemplation.cosmicEmbodiment'
-  | 'contemplation.vocation'
+  | 'contemplation.vocation'    // Sprint AG
   // Domain B — KB-person types (spread across core categories)
   | 'kb.debraSilverman'
   | 'kb.isadoraSynthesis'
