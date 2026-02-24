@@ -33,7 +33,8 @@
     "degreeEnd": 228.875,
     "url": "https://genekeys.com/gene-key-1/",
     "description": "Gene Key 1: Entropy → Freshness → Beauty. This key invites contemplation on the transformation from Entropy to Beauty through the gift of Freshness.",
-    "keyTitle": "From Entropy To Syntropy"
+    "keyTitle": "From Entropy To Syntropy",
+    "codonGroupTheme": "This ring transforms the shadow of wasted creative force into the gift of divine beauty and bounteousness when consciousness learns to channel rather than exhaust its inner fire."
   },
   {
     "id": "gk-2",
@@ -69,7 +70,8 @@
     "degreeEnd": 48.875,
     "url": "https://genekeys.com/gene-key-2/",
     "description": "Gene Key 2: Dislocation → Orientation → Unity. This key invites contemplation on the transformation from Dislocation to Unity through the gift of Orientation.",
-    "keyTitle": "Returning To The One"
+    "keyTitle": "Returning To The One",
+    "codonGroupTheme": "This ring transforms the shadow of emotional chaos into the gift of depth and receptivity when consciousness surrenders to the great feminine current rather than resisting the flow toward self-realization."
   },
   {
     "id": "gk-3",
@@ -102,10 +104,11 @@
     "iChingHexagram": 3,
     "tropicalSignId": "aries/taurus",
     "degreeStart": 26.375,
-    "degreeEnd": 32.0,
+    "degreeEnd": 32,
     "url": "https://genekeys.com/gene-key-3/",
     "description": "Gene Key 3: Chaos → Innovation → Innocence. This key invites contemplation on the transformation from Chaos to Innocence through the gift of Innovation.",
-    "keyTitle": "Through The Eyes Of A Child"
+    "keyTitle": "Through The Eyes Of A Child",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-4",
@@ -141,7 +144,8 @@
     "degreeEnd": 144.5,
     "url": "https://genekeys.com/gene-key-4/",
     "description": "Gene Key 4: Intolerance → Understanding → Forgiveness. This key invites contemplation on the transformation from Intolerance to Forgiveness through the gift of Understanding.",
-    "keyTitle": "A Universal Panacea"
+    "keyTitle": "A Universal Panacea",
+    "codonGroupTheme": "This ring transforms the shadow of relational dysfunction and manipulation into the gift of purified union when consciousness meets others through virtue, transparency, and the sacred power of devotion."
   },
   {
     "id": "gk-5",
@@ -174,10 +178,11 @@
     "iChingHexagram": 5,
     "tropicalSignId": "sagittarius",
     "degreeStart": 251.375,
-    "degreeEnd": 257.0,
+    "degreeEnd": 257,
     "url": "https://genekeys.com/gene-key-5/",
     "description": "Gene Key 5: Impatience → Patience → Timelessness. This key invites contemplation on the transformation from Impatience to Timelessness through the gift of Patience.",
-    "keyTitle": "The Ending Of Time"
+    "keyTitle": "The Ending Of Time",
+    "codonGroupTheme": "This ring transforms the shadow of magnetic contraction into the gift of luminous transmission when consciousness opens its heart and consciously raises the frequency drawn into the cells."
   },
   {
     "id": "gk-6",
@@ -213,7 +218,8 @@
     "degreeEnd": 178.25,
     "url": "https://genekeys.com/gene-key-6/",
     "description": "Gene Key 6: Conflict → Diplomacy → Peace. This key invites contemplation on the transformation from Conflict to Peace through the gift of Diplomacy.",
-    "keyTitle": "The Path To Peace"
+    "keyTitle": "The Path To Peace",
+    "codonGroupTheme": "This ring transforms the shadow of interference and karmic accumulation into the gift of transmuted DNA when consciousness releases what binds it and allows peace to reorganize matter from within."
   },
   {
     "id": "gk-7",
@@ -249,7 +255,8 @@
     "degreeEnd": 138.875,
     "url": "https://genekeys.com/gene-key-7/",
     "description": "Gene Key 7: Division → Guidance → Virtue. This key invites contemplation on the transformation from Division to Virtue through the gift of Guidance.",
-    "keyTitle": "Virtue Is Its Own Reward"
+    "keyTitle": "Virtue Is Its Own Reward",
+    "codonGroupTheme": "This ring transforms the shadow of relational dysfunction and manipulation into the gift of purified union when consciousness meets others through virtue, transparency, and the sacred power of devotion."
   },
   {
     "id": "gk-8",
@@ -285,7 +292,8 @@
     "degreeEnd": 60.125,
     "url": "https://genekeys.com/gene-key-8/",
     "description": "Gene Key 8: Mediocrity → Style → Exquisiteness. This key invites contemplation on the transformation from Mediocrity to Exquisiteness through the gift of Style.",
-    "keyTitle": "Diamond Of The Self"
+    "keyTitle": "Diamond Of The Self",
+    "codonGroupTheme": "This ring transforms the shadow of emotional chaos into the gift of depth and receptivity when consciousness surrenders to the great feminine current rather than resisting the flow toward self-realization."
   },
   {
     "id": "gk-9",
@@ -321,7 +329,8 @@
     "degreeEnd": 251.375,
     "url": "https://genekeys.com/gene-key-9/",
     "description": "Gene Key 9: Inertia → Determination → Invincibility. This key invites contemplation on the transformation from Inertia to Invincibility through the gift of Determination.",
-    "keyTitle": "The Power Of The Infinitesimal"
+    "keyTitle": "The Power Of The Infinitesimal",
+    "codonGroupTheme": "This ring transforms the shadow of magnetic contraction into the gift of luminous transmission when consciousness opens its heart and consciously raises the frequency drawn into the cells."
   },
   {
     "id": "gk-10",
@@ -357,7 +366,8 @@
     "degreeEnd": 273.875,
     "url": "https://genekeys.com/gene-key-10/",
     "description": "Gene Key 10: Self-Obsession → Naturalness → Being. This key invites contemplation on the transformation from Self-Obsession to Being through the gift of Naturalness.",
-    "keyTitle": "Being At Ease"
+    "keyTitle": "Being At Ease",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-11",
@@ -393,7 +403,8 @@
     "degreeEnd": 268.25,
     "url": "https://genekeys.com/gene-key-11/",
     "description": "Gene Key 11: Obscurity → Idealism → Light. This key invites contemplation on the transformation from Obscurity to Light through the gift of Idealism.",
-    "keyTitle": "The Light Of Eden"
+    "keyTitle": "The Light Of Eden",
+    "codonGroupTheme": "This ring transforms the shadow of magnetic contraction into the gift of luminous transmission when consciousness opens its heart and consciously raises the frequency drawn into the cells."
   },
   {
     "id": "gk-12",
@@ -419,7 +430,7 @@
       "description": "The siddhi of Purity is the recognition that our essential nature has never been stained by any experience or action. At this frequency, one becomes transparent - there is nothing to hide because there is nothing impure. Purity is not about being morally perfect but about having a heart so open that nothing sticks to it. Like water, which remains itself regardless of what passes through, pure awareness is unstained by all phenomena."
     },
     "programmingPartnerId": "gk-11",
-    "codonRingId": "the-ring-of-secrets-(the-ring-of-trials)",
+    "codonRingId": "ring-of-trials",
     "aminoAcidId": "none-(terminator-codon)",
     "physiology": "Thyroid",
     "hdGateId": "gate-12",
@@ -429,7 +440,8 @@
     "degreeEnd": 88.25,
     "url": "https://genekeys.com/gene-key-12/",
     "description": "Gene Key 12: Vanity → Discrimination → Purity. This key invites contemplation on the transformation from Vanity to Purity through the gift of Discrimination.",
-    "keyTitle": "A Pure Heart"
+    "keyTitle": "A Pure Heart",
+    "codonGroupTheme": "This ring transforms the shadow of endless striving and attachment to outcome into the gift of sacred completion when the hero within learns to release, seal, and step beyond the illusion of the outer world."
   },
   {
     "id": "gk-13",
@@ -465,7 +477,8 @@
     "degreeEnd": 318.875,
     "url": "https://genekeys.com/gene-key-13/",
     "description": "Gene Key 13: Discord → Discernment → Empathy. This key invites contemplation on the transformation from Discord to Empathy through the gift of Discernment.",
-    "keyTitle": "Listening Through Love"
+    "keyTitle": "Listening Through Love",
+    "codonGroupTheme": "This ring transforms the shadow of desire and accumulated emotional residue into the gift of clarity and lightness when consciousness embraces purification as renewal rather than punishment."
   },
   {
     "id": "gk-14",
@@ -501,7 +514,8 @@
     "degreeEnd": 240.125,
     "url": "https://genekeys.com/gene-key-14/",
     "description": "Gene Key 14: Compromise → Competence → Bounteousness. This key invites contemplation on the transformation from Compromise to Bounteousness through the gift of Competence.",
-    "keyTitle": "Radiating Prosperity"
+    "keyTitle": "Radiating Prosperity",
+    "codonGroupTheme": "This ring transforms the shadow of wasted creative force into the gift of divine beauty and bounteousness when consciousness learns to channel rather than exhaust its inner fire."
   },
   {
     "id": "gk-15",
@@ -537,7 +551,8 @@
     "degreeEnd": 93.875,
     "url": "https://genekeys.com/gene-key-15/",
     "description": "Gene Key 15: Dullness → Magnetism → Florescence. This key invites contemplation on the transformation from Dullness to Florescence through the gift of Magnetism.",
-    "keyTitle": "An Eternally Flowering Spring"
+    "keyTitle": "An Eternally Flowering Spring",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-16",
@@ -573,7 +588,8 @@
     "degreeEnd": 71.375,
     "url": "https://genekeys.com/gene-key-16/",
     "description": "Gene Key 16: Indifference → Versatility → Mastery. This key invites contemplation on the transformation from Indifference to Mastery through the gift of Versatility.",
-    "keyTitle": "Magical Genius"
+    "keyTitle": "Magical Genius",
+    "codonGroupTheme": "This ring transforms the shadow of hoarding and competition into the gift of synergistic abundance when consciousness unites diverse talents into the collective genius of the Guild."
   },
   {
     "id": "gk-17",
@@ -609,7 +625,8 @@
     "degreeEnd": 9.5,
     "url": "https://genekeys.com/gene-key-17/",
     "description": "Gene Key 17: Opinion →  → Omniscience. This key invites contemplation on the transformation from Opinion to Omniscience through the gift of .",
-    "keyTitle": "The Eye"
+    "keyTitle": "The Eye",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-18",
@@ -645,7 +662,8 @@
     "degreeEnd": 189.5,
     "url": "https://genekeys.com/gene-key-18/",
     "description": "Gene Key 18: Judgement → Integrity → Perfection. This key invites contemplation on the transformation from Judgement to Perfection through the gift of Integrity.",
-    "keyTitle": "The Healing Power Of Mind"
+    "keyTitle": "The Healing Power Of Mind",
+    "codonGroupTheme": "This ring transforms the shadow of developmental wounding and physical disconnection into the gift of full incarnation when consciousness allows spirit to penetrate and illuminate every layer of matter."
   },
   {
     "id": "gk-19",
@@ -681,7 +699,8 @@
     "degreeEnd": 313.25,
     "url": "https://genekeys.com/gene-key-19/",
     "description": "Gene Key 19:  → Sensitivity → Sacrifice. This key invites contemplation on the transformation from  to Sacrifice through the gift of Sensitivity.",
-    "keyTitle": "The Future Human Being"
+    "keyTitle": "The Future Human Being",
+    "codonGroupTheme": "This ring transforms the shadow of separation and ecological disconnection into the gift of planetary consciousness when awareness recognizes all life forms as expressions of one shared evolutionary destiny."
   },
   {
     "id": "gk-20",
@@ -717,7 +736,8 @@
     "degreeEnd": 65.75,
     "url": "https://genekeys.com/gene-key-20/",
     "description": "Gene Key 20: Superficiality → Self → Presence. This key invites contemplation on the transformation from Superficiality to Presence through the gift of Self.",
-    "keyTitle": "The Sacred Om"
+    "keyTitle": "The Sacred Om",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-21",
@@ -753,7 +773,8 @@
     "degreeEnd": 15.125,
     "url": "https://genekeys.com/gene-key-21/",
     "description": "Gene Key 21: Control → Authority → Valour. This key invites contemplation on the transformation from Control to Valour through the gift of Authority.",
-    "keyTitle": "A Noble Life"
+    "keyTitle": "A Noble Life",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-22",
@@ -785,11 +806,12 @@
     "hdGateId": "gate-22",
     "iChingHexagram": 22,
     "tropicalSignId": "pisces",
-    "degreeStart": 347.0,
+    "degreeStart": 347,
     "degreeEnd": 352.625,
     "url": "https://genekeys.com/gene-key-22/",
     "description": "Gene Key 22: Dishonour → Graciousness → Grace. This key invites contemplation on the transformation from Dishonour to Grace through the gift of Graciousness.",
-    "keyTitle": "Grace Under Pressure"
+    "keyTitle": "Grace Under Pressure",
+    "codonGroupTheme": "This ring transforms the shadow of doubt and suffering into the gift of grace and redemption when consciousness recognizes that the wound is the very portal through which divinity enters the world."
   },
   {
     "id": "gk-23",
@@ -825,7 +847,8 @@
     "degreeEnd": 54.5,
     "url": "https://genekeys.com/gene-key-23/",
     "description": "Gene Key 23: Complexity → Simplicity → Quintessence. This key invites contemplation on the transformation from Complexity to Quintessence through the gift of Simplicity.",
-    "keyTitle": "The Alchemy Of Simplicity"
+    "keyTitle": "The Alchemy Of Simplicity",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-24",
@@ -861,7 +884,8 @@
     "degreeEnd": 43.25,
     "url": "https://genekeys.com/gene-key-24/",
     "description": "Gene Key 24: Addiction → Invention → Silence. This key invites contemplation on the transformation from Addiction to Silence through the gift of Invention.",
-    "keyTitle": "Silence – The Ultimate Addiction"
+    "keyTitle": "Silence – The Ultimate Addiction",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-25",
@@ -897,7 +921,8 @@
     "degreeEnd": 3.875,
     "url": "https://genekeys.com/gene-key-25/",
     "description": "Gene Key 25: Constriction → Acceptance → . This key invites contemplation on the transformation from Constriction to  through the gift of Acceptance.",
-    "keyTitle": "The Myth Of The Sacred Wound"
+    "keyTitle": "The Myth Of The Sacred Wound",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-26",
@@ -929,11 +954,12 @@
     "hdGateId": "gate-26",
     "iChingHexagram": 26,
     "tropicalSignId": "sagittarius",
-    "degreeStart": 257.0,
+    "degreeStart": 257,
     "degreeEnd": 262.625,
     "url": "https://genekeys.com/gene-key-26/",
     "description": "Gene Key 26: Pride → Artfulness → Invisibility. This key invites contemplation on the transformation from Pride to Invisibility through the gift of Artfulness.",
-    "keyTitle": "Sacred Tricksters"
+    "keyTitle": "Sacred Tricksters",
+    "codonGroupTheme": "This ring transforms the shadow of magnetic contraction into the gift of luminous transmission when consciousness opens its heart and consciously raises the frequency drawn into the cells."
   },
   {
     "id": "gk-27",
@@ -965,11 +991,12 @@
     "hdGateId": "gate-27",
     "iChingHexagram": 27,
     "tropicalSignId": "taurus",
-    "degreeStart": 32.0,
+    "degreeStart": 32,
     "degreeEnd": 37.625,
     "url": "https://genekeys.com/gene-key-27/",
     "description": "Gene Key 27: Selfishness → Altruism → Selflessness. This key invites contemplation on the transformation from Selfishness to Selflessness through the gift of Altruism.",
-    "keyTitle": "Food Of The Gods"
+    "keyTitle": "Food Of The Gods",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-28",
@@ -1001,11 +1028,12 @@
     "hdGateId": "gate-28",
     "iChingHexagram": 28,
     "tropicalSignId": "scorpio",
-    "degreeStart": 212.0,
+    "degreeStart": 212,
     "degreeEnd": 217.625,
     "url": "https://genekeys.com/gene-key-28/",
     "description": "Gene Key 28: Purposelessness → Totality → Immortality. This key invites contemplation on the transformation from Purposelessness to Immortality through the gift of Totality.",
-    "keyTitle": "Embracing The Dark Side"
+    "keyTitle": "Embracing The Dark Side",
+    "codonGroupTheme": "This ring transforms the shadow of postponed living and fear of mortality into the gift of total presence when consciousness sees through the veil that separates it from this moment."
   },
   {
     "id": "gk-29",
@@ -1041,7 +1069,8 @@
     "degreeEnd": 150.125,
     "url": "https://genekeys.com/gene-key-29/",
     "description": "Gene Key 29:  → Commitment → Devotion. This key invites contemplation on the transformation from  to Devotion through the gift of Commitment.",
-    "keyTitle": "Leaping Into The Void"
+    "keyTitle": "Leaping Into The Void",
+    "codonGroupTheme": "This ring transforms the shadow of relational dysfunction and manipulation into the gift of purified union when consciousness meets others through virtue, transparency, and the sacred power of devotion."
   },
   {
     "id": "gk-30",
@@ -1077,7 +1106,8 @@
     "degreeEnd": 330.125,
     "url": "https://genekeys.com/gene-key-30/",
     "description": "Gene Key 30: Desire → Lightness → Rapture. This key invites contemplation on the transformation from Desire to Rapture through the gift of Lightness.",
-    "keyTitle": "Celestial Fire"
+    "keyTitle": "Celestial Fire",
+    "codonGroupTheme": "This ring transforms the shadow of desire and accumulated emotional residue into the gift of clarity and lightness when consciousness embraces purification as renewal rather than punishment."
   },
   {
     "id": "gk-31",
@@ -1109,11 +1139,12 @@
     "hdGateId": "gate-31",
     "iChingHexagram": 31,
     "tropicalSignId": "leo",
-    "degreeStart": 122.0,
+    "degreeStart": 122,
     "degreeEnd": 127.625,
     "url": "https://genekeys.com/gene-key-31/",
     "description": "Gene Key 31: Arrogance → Leadership → Humility. This key invites contemplation on the transformation from Arrogance to Humility through the gift of Leadership.",
-    "keyTitle": "Sounding Your Truth"
+    "keyTitle": "Sounding Your Truth",
+    "codonGroupTheme": "This ring transforms the shadow of spiritual timidity into the gift of authentic expression when consciousness crosses the threshold of speaking its truth and finds there is no return to lesser frequencies."
   },
   {
     "id": "gk-32",
@@ -1149,7 +1180,8 @@
     "degreeEnd": 206.375,
     "url": "https://genekeys.com/gene-key-32/",
     "description": "Gene Key 32: Failure → Preservation → Veneration. This key invites contemplation on the transformation from Failure to Veneration through the gift of Preservation.",
-    "keyTitle": "Ancestral Reverence"
+    "keyTitle": "Ancestral Reverence",
+    "codonGroupTheme": "This ring transforms the shadow of postponed living and fear of mortality into the gift of total presence when consciousness sees through the veil that separates it from this moment."
   },
   {
     "id": "gk-33",
@@ -1175,7 +1207,7 @@
       "description": "The siddhi of Revelation is the final remembering - the apocalypse (unveiling) of consciousness where we remember who we truly are. At this frequency, the forgetting is complete - not in the sense of being lost, but in the sense that there is no longer anyone to forget or remember. This is the ultimate revelation: that what we sought was always present, hidden only by the seeker."
     },
     "programmingPartnerId": "gk-19",
-    "codonRingId": "the-ring-of-trials-(ring-of-secrets)",
+    "codonRingId": "ring-of-trials",
     "aminoAcidId": "none-(terminator-codon)",
     "physiology": "Throat/Thyroid",
     "hdGateId": "gate-33",
@@ -1185,7 +1217,8 @@
     "degreeEnd": 133.25,
     "url": "https://genekeys.com/gene-key-33/",
     "description": "Gene Key 33: Forgetting → Mindfulness → Revelation. This key invites contemplation on the transformation from Forgetting to Revelation through the gift of Mindfulness.",
-    "keyTitle": "The Final Revelation"
+    "keyTitle": "The Final Revelation",
+    "codonGroupTheme": "This ring transforms the shadow of endless striving and attachment to outcome into the gift of sacred completion when the hero within learns to release, seal, and step beyond the illusion of the outer world."
   },
   {
     "id": "gk-34",
@@ -1221,7 +1254,8 @@
     "degreeEnd": 245.75,
     "url": "https://genekeys.com/gene-key-34/",
     "description": "Gene Key 34: Force → Strength → Majesty. This key invites contemplation on the transformation from Force to Majesty through the gift of Strength.",
-    "keyTitle": "The Beauty Of The Beast"
+    "keyTitle": "The Beauty Of The Beast",
+    "codonGroupTheme": "This ring transforms the shadow of missed timing and unfulfilled potential into the gift of destiny's recognition when consciousness learns to read the moment where evolution and involution dance as one."
   },
   {
     "id": "gk-35",
@@ -1254,10 +1288,11 @@
     "iChingHexagram": 35,
     "tropicalSignId": "gemini",
     "degreeStart": 71.375,
-    "degreeEnd": 77.0,
+    "degreeEnd": 77,
     "url": "https://genekeys.com/gene-key-35/",
     "description": "Gene Key 35: Hunger → Adventure → Boundlessness. This key invites contemplation on the transformation from Hunger to Boundlessness through the gift of Adventure.",
-    "keyTitle": "Wormholes And Miracles"
+    "keyTitle": "Wormholes And Miracles",
+    "codonGroupTheme": "This ring transforms the shadow of limiting belief and mundane expectation into the gift of boundless possibility when consciousness opens like a child to the miraculous encoded in every moment."
   },
   {
     "id": "gk-36",
@@ -1293,7 +1328,8 @@
     "degreeEnd": 358.25,
     "url": "https://genekeys.com/gene-key-36/",
     "description": "Gene Key 36: Turbulence → Humanity → Compassion. This key invites contemplation on the transformation from Turbulence to Compassion through the gift of Humanity.",
-    "keyTitle": "Becoming Human"
+    "keyTitle": "Becoming Human",
+    "codonGroupTheme": "This ring transforms the shadow of doubt and suffering into the gift of grace and redemption when consciousness recognizes that the wound is the very portal through which divinity enters the world."
   },
   {
     "id": "gk-37",
@@ -1329,7 +1365,8 @@
     "degreeEnd": 341.375,
     "url": "https://genekeys.com/gene-key-37/",
     "description": "Gene Key 37: Weakness → Equality → Tenderness. This key invites contemplation on the transformation from Weakness to Tenderness through the gift of Equality.",
-    "keyTitle": "Family Alchemy"
+    "keyTitle": "Family Alchemy",
+    "codonGroupTheme": "This ring transforms the shadow of doubt and suffering into the gift of grace and redemption when consciousness recognizes that the wound is the very portal through which divinity enters the world."
   },
   {
     "id": "gk-38",
@@ -1365,7 +1402,8 @@
     "degreeEnd": 285.125,
     "url": "https://genekeys.com/gene-key-38/",
     "description": "Gene Key 38: Struggle → Perseverance → Honour. This key invites contemplation on the transformation from Struggle to Honour through the gift of Perseverance.",
-    "keyTitle": "The Warrior Of Light"
+    "keyTitle": "The Warrior Of Light",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-39",
@@ -1401,7 +1439,8 @@
     "degreeEnd": 105.125,
     "url": "https://genekeys.com/gene-key-39/",
     "description": "Gene Key 39: Provocation → Dynamism → Liberation. This key invites contemplation on the transformation from Provocation to Liberation through the gift of Dynamism.",
-    "keyTitle": "The Tension Of Transcendence"
+    "keyTitle": "The Tension Of Transcendence",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-40",
@@ -1437,7 +1476,8 @@
     "degreeEnd": 161.375,
     "url": "https://genekeys.com/gene-key-40/",
     "description": "Gene Key 40: Exhaustion → Resolve → . This key invites contemplation on the transformation from Exhaustion to  through the gift of Resolve.",
-    "keyTitle": "The Will To Surrender"
+    "keyTitle": "The Will To Surrender",
+    "codonGroupTheme": "This ring transforms the shadow of interference and karmic accumulation into the gift of transmuted DNA when consciousness releases what binds it and allows peace to reorganize matter from within."
   },
   {
     "id": "gk-41",
@@ -1469,11 +1509,12 @@
     "hdGateId": "gate-41",
     "iChingHexagram": 41,
     "tropicalSignId": "aquarius",
-    "degreeStart": 302.0,
+    "degreeStart": 302,
     "degreeEnd": 307.625,
     "url": "https://genekeys.com/gene-key-41/",
     "description": "Gene Key 41: Fantasy → Anticipation → Emanation. This key invites contemplation on the transformation from Fantasy to Emanation through the gift of Anticipation.",
-    "keyTitle": "The Prime Emanation"
+    "keyTitle": "The Prime Emanation",
+    "codonGroupTheme": "This ring transforms the shadow of fantasy disconnected from reality into the gift of visionary initiation when consciousness returns to the source of all being and plants the seed of the next great cycle."
   },
   {
     "id": "gk-42",
@@ -1509,7 +1550,8 @@
     "degreeEnd": 26.375,
     "url": "https://genekeys.com/gene-key-42/",
     "description": "Gene Key 42: Expectation → Detachment → Celebration. This key invites contemplation on the transformation from Expectation to Celebration through the gift of Detachment.",
-    "keyTitle": "Letting Go Of Living And Dying"
+    "keyTitle": "Letting Go Of Living And Dying",
+    "codonGroupTheme": "This ring transforms the shadow of immaturity and resistance to endings into the gift of cyclical wisdom when consciousness learns to die and be reborn with full presence at each threshold of change."
   },
   {
     "id": "gk-43",
@@ -1545,7 +1587,8 @@
     "degreeEnd": 234.5,
     "url": "https://genekeys.com/gene-key-43/",
     "description": "Gene Key 43: Deafness → Insight → Epiphany. This key invites contemplation on the transformation from Deafness to Epiphany through the gift of Insight.",
-    "keyTitle": "Breakthrough"
+    "keyTitle": "Breakthrough",
+    "codonGroupTheme": "This ring transforms the shadow of missed timing and unfulfilled potential into the gift of destiny's recognition when consciousness learns to read the moment where evolution and involution dance as one."
   },
   {
     "id": "gk-44",
@@ -1571,7 +1614,7 @@
       "description": "The siddhi of Synarchy is the recognition of divine order underlying all relationships and organizations. At this frequency, one perceives the sacred hierarchy that governs reality - not hierarchy of domination but of function, where each being serves according to their nature and gift. Synarchy is enlightened governance, the coordination of many into one purpose through love rather than control."
     },
     "programmingPartnerId": "gk-24",
-    "codonRingId": "the-ring-of-the-illuminati",
+    "codonRingId": "ring-of-the-illuminati",
     "aminoAcidId": "glutamic-acid",
     "physiology": "Immune System",
     "hdGateId": "gate-44",
@@ -1581,7 +1624,8 @@
     "degreeEnd": 223.25,
     "url": "https://genekeys.com/gene-key-44/",
     "description": "Gene Key 44: Interference → Teamwork → Synarchy. This key invites contemplation on the transformation from Interference to Synarchy through the gift of Teamwork.",
-    "keyTitle": "Karmic Relationships"
+    "keyTitle": "Karmic Relationships",
+    "codonGroupTheme": "This ring transforms the shadow of hidden knowledge and ancestral karmic patterns into the gift of collective illumination when consciousness brings the buried records of humanity into the light of awareness."
   },
   {
     "id": "gk-45",
@@ -1613,11 +1657,12 @@
     "hdGateId": "gate-45",
     "iChingHexagram": 45,
     "tropicalSignId": "gemini",
-    "degreeStart": 77.0,
+    "degreeStart": 77,
     "degreeEnd": 82.625,
     "url": "https://genekeys.com/gene-key-45/",
     "description": "Gene Key 45: Dominance → Synergy → Communion. This key invites contemplation on the transformation from Dominance to Communion through the gift of Synergy.",
-    "keyTitle": "Cosmic Communion"
+    "keyTitle": "Cosmic Communion",
+    "codonGroupTheme": "This ring transforms the shadow of hoarding and competition into the gift of synergistic abundance when consciousness unites diverse talents into the collective genius of the Guild."
   },
   {
     "id": "gk-46",
@@ -1643,7 +1688,7 @@
       "description": "The siddhi of Ecstasy is the complete liberation of the body into the play of existence. At this frequency, the body becomes a vessel for rapture, experiencing life as an ongoing orgasm of awareness. Ecstasy is not a peak experience but a continuous state, the natural condition of a body free from the weight of seriousness, swooping upon life with uncontainable delight."
     },
     "programmingPartnerId": "gk-25",
-    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "codonRingId": "ring-of-matter",
     "aminoAcidId": "alanine",
     "physiology": "Blood",
     "hdGateId": "gate-46",
@@ -1653,7 +1698,8 @@
     "degreeEnd": 183.875,
     "url": "https://genekeys.com/gene-key-46/",
     "description": "Gene Key 46: Seriousness → Delight → Ecstasy. This key invites contemplation on the transformation from Seriousness to Ecstasy through the gift of Delight.",
-    "keyTitle": "A Science Of Luck"
+    "keyTitle": "A Science Of Luck",
+    "codonGroupTheme": "This ring transforms the shadow of developmental wounding and physical disconnection into the gift of full incarnation when consciousness allows spirit to penetrate and illuminate every layer of matter."
   },
   {
     "id": "gk-47",
@@ -1679,17 +1725,18 @@
       "description": "The siddhi of Transfiguration is the complete transformation of human consciousness into its original luminous nature. At this frequency, the crucifixion of the ego becomes resurrection of the soul. The body itself becomes transparent to light, manifesting what Tibetan traditions call the Rainbow Body. Transfiguration is turning back into a star, returning to the light from which we came."
     },
     "programmingPartnerId": "gk-22",
-    "codonRingId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "codonRingId": "ring-of-alchemy",
     "aminoAcidId": "glycine",
     "physiology": "Neocortex",
     "hdGateId": "gate-47",
     "iChingHexagram": 47,
     "tropicalSignId": "virgo",
-    "degreeStart": 167.0,
+    "degreeStart": 167,
     "degreeEnd": 172.625,
     "url": "https://genekeys.com/gene-key-47/",
     "description": "Gene Key 47: Oppression → Transmutation → Transfiguration. This key invites contemplation on the transformation from Oppression to Transfiguration through the gift of Transmutation.",
-    "keyTitle": "Transmuting The Past"
+    "keyTitle": "Transmuting The Past",
+    "codonGroupTheme": "This ring transforms the shadow of interference and karmic accumulation into the gift of transmuted DNA when consciousness releases what binds it and allows peace to reorganize matter from within."
   },
   {
     "id": "gk-48",
@@ -1715,7 +1762,7 @@
       "description": "The siddhi of Wisdom is the most elusive of all siddhis - you are wise because you do not know you are wise. At this frequency, knowledge dissolves into direct knowing, the mind surrenders to the mystery it can never comprehend. Wisdom is the beyondness of being and not being, the recognition that true knowledge is unknowing, and that the deepest well contains the purest light."
     },
     "programmingPartnerId": "gk-21",
-    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "codonRingId": "ring-of-matter",
     "aminoAcidId": "alanine",
     "physiology": "Lymphatic System (Spleen)",
     "hdGateId": "gate-48",
@@ -1725,7 +1772,8 @@
     "degreeEnd": 195.125,
     "url": "https://genekeys.com/gene-key-48/",
     "description": "Gene Key 48: Inadequacy → Resourcefulness → Wisdom. This key invites contemplation on the transformation from Inadequacy to Wisdom through the gift of Resourcefulness.",
-    "keyTitle": "The Wonder Of Uncertainty"
+    "keyTitle": "The Wonder Of Uncertainty",
+    "codonGroupTheme": "This ring transforms the shadow of developmental wounding and physical disconnection into the gift of full incarnation when consciousness allows spirit to penetrate and illuminate every layer of matter."
   },
   {
     "id": "gk-49",
@@ -1751,7 +1799,7 @@
       "description": "The siddhi of Rebirth is the complete transformation of the emotional body into its highest expression. At this frequency, one becomes the Phoenix rising from the ashes of the old self, demonstrating that death and rebirth are continuous processes. Rebirth is the mystical divorce from all that no longer serves, creating space for entirely new forms to emerge."
     },
     "programmingPartnerId": "gk-4",
-    "codonRingId": "the-ring-of-the-whirlwind-(49,-55)",
+    "codonRingId": "ring-of-the-whirlwind",
     "aminoAcidId": "histidine",
     "physiology": "Solar Plexus",
     "hdGateId": "gate-49",
@@ -1761,7 +1809,8 @@
     "degreeEnd": 324.5,
     "url": "https://genekeys.com/gene-key-49/",
     "description": "Gene Key 49: Reaction → Revolution → Rebirth. This key invites contemplation on the transformation from Reaction to Rebirth through the gift of Revolution.",
-    "keyTitle": "Changing The World From The Inside"
+    "keyTitle": "Changing The World From The Inside",
+    "codonGroupTheme": "This ring transforms the shadow of revolutionary chaos and emotional overwhelm into the gift of collective mutation when consciousness rides the whirlwind as a vehicle for the highest evolutionary leap."
   },
   {
     "id": "gk-50",
@@ -1787,17 +1836,18 @@
       "description": "The siddhi of Harmony is the perception of the cosmic order that underlies all apparent chaos. At this frequency, one hears the music of the spheres - the divine orchestration that coordinates all of existence in perfect harmony. This is not imposed order but organic balance, the way the universe naturally tends toward beauty when interference is removed."
     },
     "programmingPartnerId": "gk-3",
-    "codonRingId": "the-ring-of-the-illuminati-(44,-50)",
+    "codonRingId": "ring-of-the-illuminati",
     "aminoAcidId": "glutamic-acid",
     "physiology": "Immune System",
     "hdGateId": "gate-50",
     "iChingHexagram": 50,
     "tropicalSignId": "libra/scorpio",
     "degreeStart": 206.375,
-    "degreeEnd": 212.0,
+    "degreeEnd": 212,
     "url": "https://genekeys.com/gene-key-50/",
     "description": "Gene Key 50: Corruption → Equilibrium → Harmony. This key invites contemplation on the transformation from Corruption to Harmony through the gift of Equilibrium.",
-    "keyTitle": "Cosmic Order"
+    "keyTitle": "Cosmic Order",
+    "codonGroupTheme": "This ring transforms the shadow of hidden knowledge and ancestral karmic patterns into the gift of collective illumination when consciousness brings the buried records of humanity into the light of awareness."
   },
   {
     "id": "gk-51",
@@ -1833,7 +1883,8 @@
     "degreeEnd": 20.75,
     "url": "https://genekeys.com/gene-key-51/",
     "description": "Gene Key 51: Agitation → Initiative → Awakening. This key invites contemplation on the transformation from Agitation to Awakening through the gift of Initiative.",
-    "keyTitle": "Initiative To Initiation"
+    "keyTitle": "Initiative To Initiation",
+    "codonGroupTheme": "This ring transforms the shadow of the sacred wound into the gift of heart-centered trust when consciousness chooses love over suffering as its primary authority."
   },
   {
     "id": "gk-52",
@@ -1869,7 +1920,8 @@
     "degreeEnd": 99.5,
     "url": "https://genekeys.com/gene-key-52/",
     "description": "Gene Key 52: Stress → Restraint → Stillness. This key invites contemplation on the transformation from Stress to Stillness through the gift of Restraint.",
-    "keyTitle": "The Stillpoint"
+    "keyTitle": "The Stillpoint",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-53",
@@ -1905,7 +1957,8 @@
     "degreeEnd": 110.75,
     "url": "https://genekeys.com/gene-key-53/",
     "description": "Gene Key 53: Immaturity → Expansion → Superabundance. This key invites contemplation on the transformation from Immaturity to Superabundance through the gift of Expansion.",
-    "keyTitle": "Evolving Beyond Evolution"
+    "keyTitle": "Evolving Beyond Evolution",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-54",
@@ -1931,7 +1984,7 @@
       "description": "The siddhi of Ascension is the complete rising of the serpent power through all the energy centers. At this frequency, the physical body becomes transmuted, vaporizing into its spiritual essence. Ascension is not escape from matter but the fulfillment of matter's purpose - the alchemical wedding of heaven and earth in human form."
     },
     "programmingPartnerId": "gk-53",
-    "codonRingId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "codonRingId": "ring-of-seeking",
     "aminoAcidId": "serine",
     "physiology": "Tailbone",
     "hdGateId": "gate-54",
@@ -1941,7 +1994,8 @@
     "degreeEnd": 290.75,
     "url": "https://genekeys.com/gene-key-54/",
     "description": "Gene Key 54: Greed → Aspiration → Ascension. This key invites contemplation on the transformation from Greed to Ascension through the gift of Aspiration.",
-    "keyTitle": "The Serpent Path"
+    "keyTitle": "The Serpent Path",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-55",
@@ -1967,7 +2021,7 @@
       "description": "The siddhi of Freedom is total liberation - not freedom from something but the freedom that is our essential nature. At this frequency, victim consciousness completely vaporizes, revealing the boundless awareness that was always present. This Freedom is not individual but collective, part of the Great Change that is awakening humanity to its true nature."
     },
     "programmingPartnerId": "gk-59",
-    "codonRingId": "the-ring-of-the-whirlwind-(49,-55)",
+    "codonRingId": "ring-of-the-whirlwind",
     "aminoAcidId": "histidine",
     "physiology": "Solar Plexus (Dorsal Ganglia)",
     "hdGateId": "gate-55",
@@ -1977,7 +2031,8 @@
     "degreeEnd": 335.75,
     "url": "https://genekeys.com/gene-key-55/",
     "description": "Gene Key 55: Victimization → Freedom → Freedom. This key invites contemplation on the transformation from Victimization to Freedom through the gift of Freedom.",
-    "keyTitle": "The Dragonfly's Dream"
+    "keyTitle": "The Dragonfly's Dream",
+    "codonGroupTheme": "This ring transforms the shadow of revolutionary chaos and emotional overwhelm into the gift of collective mutation when consciousness rides the whirlwind as a vehicle for the highest evolutionary leap."
   },
   {
     "id": "gk-56",
@@ -2003,17 +2058,18 @@
       "description": "The siddhi of Intoxication is the ultimate enrichment - divine ecstasy that needs no external stimulus. At this frequency, one becomes drunk on existence itself, intoxicated by the sheer miracle of being. This is not escapism but the direct experience of the sacred in every moment, spiritual ecstasy that transcends and includes all sensory pleasure."
     },
     "programmingPartnerId": "gk-60",
-    "codonRingId": "the-ring-of-trials-(12,-33,-56)",
+    "codonRingId": "ring-of-trials",
     "aminoAcidId": "none-(terminator-codon)",
     "physiology": "Thyroid/Parathyroid",
     "hdGateId": "gate-56",
     "iChingHexagram": 56,
     "tropicalSignId": "cancer/leo",
     "degreeStart": 116.375,
-    "degreeEnd": 122.0,
+    "degreeEnd": 122,
     "url": "https://genekeys.com/gene-key-56/",
     "description": "Gene Key 56: Distraction → Enrichment → Intoxication. This key invites contemplation on the transformation from Distraction to Intoxication through the gift of Enrichment.",
-    "keyTitle": "Divine Indulgence"
+    "keyTitle": "Divine Indulgence",
+    "codonGroupTheme": "This ring transforms the shadow of endless striving and attachment to outcome into the gift of sacred completion when the hero within learns to release, seal, and step beyond the illusion of the outer world."
   },
   {
     "id": "gk-57",
@@ -2039,7 +2095,7 @@
       "description": "The siddhi of Clarity is the complete dissolution of unease into transparent awareness. At this frequency, one becomes like the gentle wind - soft, penetrating, and utterly clear. Clarity is not knowing through force but through receptivity, the art of softness that perceives truth by becoming transparent to it. This is attunement to the Divine Presence that pervades all things."
     },
     "programmingPartnerId": "gk-51",
-    "codonRingId": "the-ring-of-matter-(18,-46,-48,-57)",
+    "codonRingId": "ring-of-matter",
     "aminoAcidId": "alanine",
     "physiology": "Cranial Ganglia (Belly)",
     "hdGateId": "gate-57",
@@ -2049,7 +2105,8 @@
     "degreeEnd": 200.75,
     "url": "https://genekeys.com/gene-key-57/",
     "description": "Gene Key 57: Unease → Intuition → Clarity. This key invites contemplation on the transformation from Unease to Clarity through the gift of Intuition.",
-    "keyTitle": "A Gentle Wind"
+    "keyTitle": "A Gentle Wind",
+    "codonGroupTheme": "This ring transforms the shadow of developmental wounding and physical disconnection into the gift of full incarnation when consciousness allows spirit to penetrate and illuminate every layer of matter."
   },
   {
     "id": "gk-58",
@@ -2075,7 +2132,7 @@
       "description": "The siddhi of Bliss is the end of dissatisfaction - not through finding what we sought but through the dissolution of the seeker. At this frequency, life becomes continuous waves of love, an unfocused awareness that rests in the bliss of simply being. Bliss is not a peak experience but our natural state, revealed when the search for satisfaction finally ends."
     },
     "programmingPartnerId": "gk-52",
-    "codonRingId": "the-ring-of-seeking-(15,-39,-52,-53,-54,-58)",
+    "codonRingId": "ring-of-seeking",
     "aminoAcidId": "serine",
     "physiology": "Perineum",
     "hdGateId": "gate-58",
@@ -2085,7 +2142,8 @@
     "degreeEnd": 279.5,
     "url": "https://genekeys.com/gene-key-58/",
     "description": "Gene Key 58: Dissatisfaction → Vitality → Bliss. This key invites contemplation on the transformation from Dissatisfaction to Bliss through the gift of Vitality.",
-    "keyTitle": "From Stress To Bliss"
+    "keyTitle": "From Stress To Bliss",
+    "codonGroupTheme": "This ring transforms the shadow of restless discontent into the gift of inspired aspiration when consciousness turns the evolutionary pressure inward and discovers that seeking itself leads to the source."
   },
   {
     "id": "gk-59",
@@ -2111,7 +2169,7 @@
       "description": "The siddhi of Transparency is the complete dissolution of all barriers between self and other—a state where one becomes so open there is nothing left to hide. At this frequency, the individual becomes invisible in the sense that there is no separate self creating resistance. This is the awakening of what Richard Rudd calls 'the dragon in your genome'—the kundalini force that burns away all pretense. In Transparency, one's presence becomes a field of truth that invites others into their own authenticity."
     },
     "programmingPartnerId": "gk-55",
-    "codonRingId": "the-ring-of-union-(4,-7,-29,-59)",
+    "codonRingId": "ring-of-union",
     "aminoAcidId": "valine",
     "physiology": "Sacral Plexus (Sexual Organs)",
     "hdGateId": "gate-59",
@@ -2121,7 +2179,8 @@
     "degreeEnd": 155.75,
     "url": "https://genekeys.com/gene-key-59/",
     "description": "Gene Key 59: Dishonesty → Intimacy → Transparency. This key invites contemplation on the transformation from Dishonesty to Transparency through the gift of Intimacy.",
-    "keyTitle": "The Dragon In Your Genome"
+    "keyTitle": "The Dragon In Your Genome",
+    "codonGroupTheme": "This ring transforms the shadow of relational dysfunction and manipulation into the gift of purified union when consciousness meets others through virtue, transparency, and the sacred power of devotion."
   },
   {
     "id": "gk-60",
@@ -2147,17 +2206,18 @@
       "description": "The siddhi of Justice is the realization that all limitation serves cosmic order—that the laws governing form are expressions of Divine wisdom. At this frequency, one sees how justice operates perfectly throughout existence, how every constraint ultimately serves evolution. The 'cracking of the vessel' refers to the mutation that occurs when limitation is fully accepted—the quantum leap that transcends previous boundaries. Justice here is not punishment but the perfect calibration of growth through form."
     },
     "programmingPartnerId": "gk-56",
-    "codonRingId": "the-ring-of-gaia-(19,-60,-61)",
+    "codonRingId": "ring-of-gaia",
     "aminoAcidId": "isoleucine",
     "physiology": "Colon",
     "hdGateId": "gate-60",
     "iChingHexagram": 60,
     "tropicalSignId": "capricorn/aquarius",
     "degreeStart": 296.375,
-    "degreeEnd": 302.0,
+    "degreeEnd": 302,
     "url": "https://genekeys.com/gene-key-60/",
     "description": "Gene Key 60: Limitation → Realism → Justice. This key invites contemplation on the transformation from Limitation to Justice through the gift of Realism.",
-    "keyTitle": "The Cracking Of The Vessel"
+    "keyTitle": "The Cracking Of The Vessel",
+    "codonGroupTheme": "This ring transforms the shadow of separation and ecological disconnection into the gift of planetary consciousness when awareness recognizes all life forms as expressions of one shared evolutionary destiny."
   },
   {
     "id": "gk-61",
@@ -2193,7 +2253,8 @@
     "degreeEnd": 296.375,
     "url": "https://genekeys.com/gene-key-61/",
     "description": "Gene Key 61: Psychosis → Inspiration → Sanctity. This key invites contemplation on the transformation from Psychosis to Sanctity through the gift of Inspiration.",
-    "keyTitle": "The Holy Of Holies"
+    "keyTitle": "The Holy Of Holies",
+    "codonGroupTheme": "This ring transforms the shadow of separation and ecological disconnection into the gift of planetary consciousness when awareness recognizes all life forms as expressions of one shared evolutionary destiny."
   },
   {
     "id": "gk-62",
@@ -2229,7 +2290,8 @@
     "degreeEnd": 116.375,
     "url": "https://genekeys.com/gene-key-62/",
     "description": "Gene Key 62: Intellect → Precision → Impeccability. This key invites contemplation on the transformation from Intellect to Impeccability through the gift of Precision.",
-    "keyTitle": "The Language Of Light"
+    "keyTitle": "The Language Of Light",
+    "codonGroupTheme": "This ring transforms the shadow of spiritual timidity into the gift of authentic expression when consciousness crosses the threshold of speaking its truth and finds there is no return to lesser frequencies."
   },
   {
     "id": "gk-63",
@@ -2262,10 +2324,11 @@
     "iChingHexagram": 63,
     "tropicalSignId": "pisces",
     "degreeStart": 341.375,
-    "degreeEnd": 347.0,
+    "degreeEnd": 347,
     "url": "https://genekeys.com/gene-key-63/",
     "description": "Gene Key 63: Doubt → Inquiry → Truth. This key invites contemplation on the transformation from Doubt to Truth through the gift of Inquiry.",
-    "keyTitle": "Reaching The Source"
+    "keyTitle": "Reaching The Source",
+    "codonGroupTheme": "This ring transforms the shadow of doubt and suffering into the gift of grace and redemption when consciousness recognizes that the wound is the very portal through which divinity enters the world."
   },
   {
     "id": "gk-64",
@@ -2291,16 +2354,17 @@
       "description": "The siddhi of Illumination is the complete awakening of consciousness to its own infinite creative potential—the Aurora, the light that illuminates all possibility. At this frequency, one becomes a conduit for Divine Mind, where imagination is no longer personal but cosmic. Illumination reveals that consciousness itself is the light in which all images appear and dissolve. One who embodies Illumination lives in continuous creative revelation, where every moment is fresh and luminous with meaning."
     },
     "programmingPartnerId": "gk-63",
-    "codonRingId": "the-ring-of-alchemy-(6,-40,-47,-64)",
+    "codonRingId": "ring-of-alchemy",
     "aminoAcidId": "glycine",
     "physiology": "Pineal Gland",
     "hdGateId": "gate-64",
     "iChingHexagram": 64,
     "tropicalSignId": "virgo",
     "degreeStart": 161.375,
-    "degreeEnd": 167.0,
+    "degreeEnd": 167,
     "url": "https://genekeys.com/gene-key-64/",
     "description": "Gene Key 64: Confusion → Imagination → Illumination. This key invites contemplation on the transformation from Confusion to Illumination through the gift of Imagination.",
-    "keyTitle": "The Aurora"
+    "keyTitle": "The Aurora",
+    "codonGroupTheme": "This ring transforms the shadow of interference and karmic accumulation into the gift of transmuted DNA when consciousness releases what binds it and allows peace to reorganize matter from within."
   }
 ]

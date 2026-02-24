@@ -21,8 +21,10 @@
 
 import type { SavedInsight } from './insights';
 import type { SavedSession } from './sessions';
-import type { CosmicProfile } from '../types';
-import { geneKeys, lines } from '../data';
+import type { AstroProfile, CosmicProfile } from '../types';
+import type { TransitPosition } from './transits';
+import { geneKeys, lines, signs, houses } from '../data';
+import { getKeyArea } from './ilos';
 
 // ─── Tana IDs ─────────────────────────────────────────────────────────────────
 
@@ -387,6 +389,122 @@ export function formatElementalSurveyAsTanaPaste(
   }
 
   return tanaPasteLines.join('\n');
+}
+
+// ─── ILOS Bridge Exports (Sprint AK) ────────────────────────────────────────
+
+/**
+ * Format an Ideal Self document from the Big-Six placements + MC.
+ * Surfaces each placement's sign lightExpression as a strength map.
+ */
+export function formatIdealSelfDocument(profile: AstroProfile): string {
+  const LIGHT_PLANETS = ['sun', 'moon', 'ascendant', 'mercury', 'venus', 'mars', 'midheaven'];
+  const out: string[] = [`- Ideal Self Document — ${profile.name}`];
+
+  for (const pid of LIGHT_PLANETS) {
+    const pl = profile.placements.find(p => p.planetId === pid);
+    if (!pl) continue;
+    const sign = signs.get(pl.signId);
+    if (!sign) continue;
+    const light = sign.lightExpression ?? sign.characteristicsAndQualities;
+    out.push(`  - ${pl.fullName}`);
+    out.push(`    - Light Expression:: ${fieldValue(light)}`);
+  }
+
+  return out.join('\n');
+}
+
+/**
+ * Format a Shadow Inventory from Saturn/Chiron/South Node/Pluto placements.
+ * Surfaces each placement's sign shadowExpression + house ILOS Key Area.
+ */
+export function formatShadowInventory(profile: AstroProfile): string {
+  const SHADOW_PLANETS = ['saturn', 'chiron', 'south-node', 'pluto'];
+  const out: string[] = [`- Shadow Inventory — ${profile.name}`];
+
+  for (const pid of SHADOW_PLANETS) {
+    const pl = profile.placements.find(p => p.planetId === pid);
+    if (!pl) continue;
+    const sign = signs.get(pl.signId);
+    const house = houses.get(pl.houseId);
+    if (!sign) continue;
+    const shadow = sign.shadowExpression ?? sign.traits;
+    out.push(`  - ${pl.fullName}`);
+    out.push(`    - Shadow Expression:: ${fieldValue(shadow)}`);
+    if (house?.ilosKeyArea) {
+      out.push(`    - Life Area:: ${house.ilosKeyArea}`);
+    }
+  }
+
+  return out.join('\n');
+}
+
+/**
+ * Format a Career Path Vision from MC, North Node, and planets in houses 2/6/10.
+ * Surfaces careerRelevance + purposeRole from house data.
+ */
+export function formatCareerPathVision(profile: AstroProfile): string {
+  const out: string[] = [`- Career Path Vision — ${profile.name}`];
+
+  // MC + North Node
+  const KEY_PLANETS = ['midheaven', 'north-node'];
+  for (const pid of KEY_PLANETS) {
+    const pl = profile.placements.find(p => p.planetId === pid);
+    if (!pl) continue;
+    const house = houses.get(pl.houseId);
+    const sign = signs.get(pl.signId);
+    out.push(`  - ${pl.fullName}`);
+    if (sign?.lightExpression) {
+      out.push(`    - Expression:: ${fieldValue(sign.lightExpression)}`);
+    }
+    if (house?.careerRelevance) {
+      out.push(`    - Career Relevance:: ${fieldValue(house.careerRelevance)}`);
+    }
+    if (house?.purposeRole) {
+      out.push(`    - Purpose Role:: ${fieldValue(house.purposeRole)}`);
+    }
+  }
+
+  // Planets in vocational houses (2, 6, 10)
+  const VOCATIONAL_HOUSES = ['house-2', 'house-6', 'house-10'];
+  const vocPlacements = profile.placements.filter(
+    p => VOCATIONAL_HOUSES.includes(p.houseId) && !KEY_PLANETS.includes(p.planetId),
+  );
+  if (vocPlacements.length > 0) {
+    out.push(`  - Vocational House Placements::`);
+    for (const pl of vocPlacements) {
+      const house = houses.get(pl.houseId);
+      out.push(`    - ${pl.fullName}`);
+      if (house?.careerRelevance) {
+        out.push(`      - Career Relevance:: ${fieldValue(house.careerRelevance)}`);
+      }
+    }
+  }
+
+  return out.join('\n');
+}
+
+/**
+ * Format a Transit Planning Map from slow-planet transits.
+ * Surfaces sign/house/ILOS Key Area/VPER phase for Jupiter through Pluto.
+ */
+export function formatTransitPlanningMap(transits: TransitPosition[]): string {
+  const SLOW_PLANETS = ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
+  const slow = transits.filter(t => SLOW_PLANETS.includes(t.planetId));
+  const out: string[] = [`- Transit Planning Map — ${new Date().toISOString().slice(0, 10)}`];
+
+  for (const t of slow) {
+    const sign = signs.get(t.signId);
+    const { houseNum, areaName } = getKeyArea(t.signId, t.housePosition);
+    out.push(`  - ${t.planetName} in ${t.signName}${t.isRetrograde ? ' ℞' : ''}`);
+    out.push(`    - House:: ${houseNum}`);
+    out.push(`    - ILOS Key Area:: ${areaName}`);
+    if (sign?.vperPhase) {
+      out.push(`    - VPER Phase:: ${sign.vperPhase}`);
+    }
+  }
+
+  return out.join('\n');
 }
 
 // ─── Clipboard Utility ────────────────────────────────────────────────────────

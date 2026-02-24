@@ -130,6 +130,10 @@ export const TYPE_FLAG_MAP: Partial<Record<ContemplationType, FeatureFlagId>> = 
   gremlinWitnessing: 'kb.debraSilverman',
   observerActivation: 'kb.debraSilverman',
   signMedicinePrescription: 'kb.debraSilverman',
+  highRoadPortal: 'kb.debraSilverman',
+  northNodeCompass: 'kb.debraSilverman',
+  saturnLessonIntegration: 'kb.debraSilverman',
+  signPsychologyMirror: 'kb.debraSilverman',
   // Isadora Synthesis
   multiSystemActivationReading: 'kb.isadoraSynthesis',
   embodimentPortalReading: 'kb.isadoraSynthesis',

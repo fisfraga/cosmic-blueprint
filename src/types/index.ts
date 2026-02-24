@@ -538,6 +538,7 @@ export interface GeneKey extends AstroEntity {
   siddhi: FrequencyExpression;
   programmingPartnerId: string;
   codonRingId: string;
+  codonGroupTheme?: string;
   aminoAcidId?: string;
   physiology: string;
   hdGateId: string;
