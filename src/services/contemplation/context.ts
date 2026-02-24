@@ -286,7 +286,7 @@ export function formatProfileContext(
     elementalSurveyCategories.includes(selection.category) ||
     elementalSurveyTypes.includes(selection.type)
   ) {
-    const surveyCtx = formatElementalSurveyContext();
+    const surveyCtx = formatElementalSurveyContext(profile);
     if (surveyCtx) sections.push(surveyCtx);
   }
 
@@ -353,32 +353,46 @@ function interpretElementScore(score: number): string {
   return 'Hunger (soul calling)';
 }
 
-function formatElementalSurveyContext(): string {
+function formatElementalSurveyContext(profile: AstroProfile): string {
   try {
-    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(ELEMENTAL_SURVEY_KEY) : null;
-    if (!raw) return '';
-    const data = JSON.parse(raw) as StoredElementalProfile;
-    if (!data?.scores) return '';
-    const { fire, air, earth, water } = data.scores;
-    const hunger = Object.entries(data.scores)
+    // Read from profile personalContext first (per-profile, portable)
+    const cosmicProfile = profile as unknown as { personalContext?: { elementalSurveyScores?: ElementalSurveyScores & { savedAt: string } } };
+    let scores: ElementalSurveyScores | null = null;
+
+    if (cosmicProfile.personalContext?.elementalSurveyScores) {
+      const s = cosmicProfile.personalContext.elementalSurveyScores;
+      if (typeof s.fire === 'number') scores = s;
+    }
+
+    // Fall back to global localStorage
+    if (!scores) {
+      const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(ELEMENTAL_SURVEY_KEY) : null;
+      if (!raw) return '';
+      const data = JSON.parse(raw) as StoredElementalProfile;
+      if (!data?.scores) return '';
+      scores = data.scores;
+    }
+
+    const { fire, air, earth, water } = scores;
+    const hunger = Object.entries(scores)
       .filter(([, v]) => v === 0)
       .map(([k]) => k)
       .join(', ');
-    const dominant = Object.entries(data.scores)
+    const dominant = Object.entries(scores)
       .filter(([, v]) => v >= 5)
       .map(([k]) => k)
       .join(', ');
-    const lines: string[] = [
+    const outputLines: string[] = [
       '[ELEMENTAL SURVEY] Self-assessed (Debra Silverman methodology)',
       `  Fire (Vision/V):    ${fire}/6 — ${interpretElementScore(fire)}`,
       `  Air  (Plan/P):      ${air}/6 — ${interpretElementScore(air)}`,
       `  Earth (Execute/E):  ${earth}/6 — ${interpretElementScore(earth)}`,
       `  Water (Review/R):   ${water}/6 — ${interpretElementScore(water)}`,
     ];
-    if (dominant) lines.push(`  Dominant: ${dominant}`);
-    if (hunger)   lines.push(`  Hunger (deepest calling): ${hunger}`);
-    lines.push('  Note: behaviorally self-assessed; compare with natal element distribution.');
-    return lines.join('\n');
+    if (dominant) outputLines.push(`  Dominant: ${dominant}`);
+    if (hunger)   outputLines.push(`  Hunger (deepest calling): ${hunger}`);
+    outputLines.push('  Note: behaviorally self-assessed; compare with natal element distribution.');
+    return outputLines.join('\n');
   } catch {
     return '';
   }

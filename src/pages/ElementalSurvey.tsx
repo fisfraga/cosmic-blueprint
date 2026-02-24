@@ -1,6 +1,7 @@
 import { useState, useCallback } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useProfile } from '../context';
 
 // ─── Survey Questions ─────────────────────────────────────────────────────────
 // 3 questions per element (12 total), distilled from Debra Silverman's methodology.
@@ -160,6 +161,7 @@ function interpretScore(score: number): { label: string; description: string; co
 
 export default function ElementalSurvey() {
   const navigate = useNavigate();
+  const { cosmicProfile, saveCosmicProfile } = useProfile();
   const [answers, setAnswers] = useState<Record<number, Answer>>({});
   const [phase, setPhase] = useState<'intro' | 'survey' | 'results'>(() => {
     return loadProfile() ? 'results' : 'intro';
@@ -189,17 +191,41 @@ export default function ElementalSurvey() {
 
   const handleSubmit = useCallback(() => {
     const scores = computeScores();
+    // Persist to localStorage (backward compat + fast reads)
     saveProfile(scores);
+    // Persist to active CosmicProfile.personalContext (per-profile, portable)
+    if (cosmicProfile) {
+      const updated = {
+        ...cosmicProfile,
+        personalContext: {
+          ...cosmicProfile.personalContext,
+          elementalSurveyScores: {
+            ...scores,
+            savedAt: new Date().toISOString(),
+          },
+        },
+      };
+      saveCosmicProfile(updated as typeof cosmicProfile);
+    }
     setSavedScores(scores);
     setPhase('results');
-  }, [computeScores]);
+  }, [computeScores, cosmicProfile, saveCosmicProfile]);
 
   const handleRetake = useCallback(() => {
     setAnswers({});
     setSavedScores(null);
     localStorage.removeItem(STORAGE_KEY);
+    // Clear from profile too
+    if (cosmicProfile?.personalContext?.elementalSurveyScores) {
+      const { elementalSurveyScores: _, ...restCtx } = cosmicProfile.personalContext;
+      void _;
+      saveCosmicProfile({
+        ...cosmicProfile,
+        personalContext: restCtx as typeof cosmicProfile.personalContext,
+      });
+    }
     setPhase('survey');
-  }, []);
+  }, [cosmicProfile, saveCosmicProfile]);
 
   if (phase === 'intro') {
     return (

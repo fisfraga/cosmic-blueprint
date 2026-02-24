@@ -1,5 +1,7 @@
+import { useMemo } from 'react';
 import { getClassicalElements, getAlchemicalElements, getSignsByElement } from '../data';
 import { Link } from 'react-router-dom';
+import { useProfile } from '../context';
 
 const elementColors = {
   fire: {
@@ -28,9 +30,22 @@ const elementColors = {
   },
 };
 
+const ELEMENT_SYMBOLS: Record<string, string> = { fire: '🜂', earth: '🜃', air: '🜁', water: '🜄' };
+const ELEMENT_ACCENT: Record<string, string> = { fire: 'text-fire-400', earth: 'text-earth-400', air: 'text-air-400', water: 'text-water-400' };
+
 export function Elements() {
   const classicalElements = getClassicalElements();
   const alchemicalElements = getAlchemicalElements();
+  const { cosmicProfile } = useProfile();
+
+  const surveyScores = cosmicProfile?.personalContext?.elementalSurveyScores ?? null;
+
+  const surveyHighlight = useMemo(() => {
+    if (!surveyScores) return null;
+    const elements = ['fire', 'air', 'earth', 'water'] as const;
+    const sorted = [...elements].sort((a, b) => surveyScores[b] - surveyScores[a]);
+    return { dominant: sorted[0], hunger: sorted[sorted.length - 1] };
+  }, [surveyScores]);
 
   return (
     <div className="space-y-8">
@@ -45,14 +60,49 @@ export function Elements() {
           They describe not what you are made of, but <em className="text-theme-text-secondary">how you are becoming</em>.
           Understanding your elemental balance reveals your natural way of engaging with life.
         </p>
-        <Link
-          to="/elements/survey"
-          className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500/20 to-fire-500/10 border border-amber-500/30 text-amber-300 text-sm font-medium hover:from-amber-500/30 hover:to-fire-500/20 transition-all"
-        >
-          <span>🜂</span>
-          <span>Discover Your Elemental Profile</span>
-          <span>→</span>
-        </Link>
+
+        {/* Survey profile badge OR discovery CTA */}
+        {surveyScores && surveyHighlight ? (
+          <div className="mt-4 p-4 rounded-xl bg-gradient-to-r from-amber-500/10 to-fire-500/5 border border-amber-500/20">
+            <div className="flex items-center justify-between flex-wrap gap-3">
+              <div>
+                <div className="text-xs font-medium text-amber-400/80 uppercase tracking-wider mb-1">
+                  Your Felt Elemental Profile
+                </div>
+                <div className="flex items-center gap-3">
+                  {(['fire', 'air', 'earth', 'water'] as const).map(el => (
+                    <span key={el} className={`flex items-center gap-1 text-sm ${ELEMENT_ACCENT[el]}`}>
+                      <span>{ELEMENT_SYMBOLS[el]}</span>
+                      <span className="font-medium">{surveyScores[el]}</span>
+                      <span className="text-theme-text-tertiary text-xs">/ 6</span>
+                    </span>
+                  ))}
+                </div>
+                <div className="text-xs text-theme-text-tertiary mt-1">
+                  Dominant: <span className={ELEMENT_ACCENT[surveyHighlight.dominant]}>{surveyHighlight.dominant}</span>
+                  {surveyScores[surveyHighlight.hunger] === 0 && (
+                    <> · Soul Calling: <span className={ELEMENT_ACCENT[surveyHighlight.hunger]}>{surveyHighlight.hunger}</span></>
+                  )}
+                </div>
+              </div>
+              <Link
+                to="/elements/survey"
+                className="text-xs text-amber-300/70 hover:text-amber-300 transition-colors"
+              >
+                Retake Survey →
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <Link
+            to="/elements/survey"
+            className="inline-flex items-center gap-2 mt-4 px-4 py-2 rounded-lg bg-gradient-to-r from-amber-500/20 to-fire-500/10 border border-amber-500/30 text-amber-300 text-sm font-medium hover:from-amber-500/30 hover:to-fire-500/20 transition-all"
+          >
+            <span>🜂</span>
+            <span>Discover Your Elemental Profile</span>
+            <span>→</span>
+          </Link>
+        )}
       </section>
 
       {/* Classical Elements */}

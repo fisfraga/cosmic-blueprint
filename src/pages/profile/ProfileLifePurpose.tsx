@@ -39,7 +39,7 @@ function VperBadge({ phase }: { phase: VperPhase }) {
 // ─── Main Component ───────────────────────────────────────────────────────────────
 
 export function ProfileLifePurpose() {
-  const { profile, isLoading, hasProfile } = useProfile();
+  const { profile, cosmicProfile, isLoading, hasProfile } = useProfile();
 
   const cosmicWeather = useMemo(() => getCosmicWeather(), []);
   const temporalPositions = useMemo(
@@ -60,6 +60,8 @@ export function ProfileLifePurpose() {
       midheaveSignId: mcSignId,
     });
   }, [profile]);
+
+  const surveyScores = cosmicProfile?.personalContext?.elementalSurveyScores ?? null;
 
   if (isLoading) return <LoadingSkeleton variant="profile" />;
 
@@ -506,6 +508,86 @@ export function ProfileLifePurpose() {
             <span>✦</span> Deepen this reading in the Contemplation Chamber
           </Link>
         </motion.section>
+      )}
+
+      {/* Section 5b: Felt Elemental Survey (if completed) */}
+      {surveyScores && elementalBalance && (
+        <motion.section
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="bg-surface-base/50 rounded-xl p-6 border border-amber-500/20"
+        >
+          <h2 className="text-xl font-semibold mb-2 flex items-center gap-2">
+            <span className="text-amber-400">🜂</span>
+            Felt vs. Natal — Elemental Comparison
+          </h2>
+          <p className="text-sm text-theme-text-tertiary mb-5">
+            Your chart shows your celestial blueprint. The survey captures how you <em>experience</em> yourself.
+            Gaps between the two reveal where cosmic potential is still waiting to be integrated.
+          </p>
+
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-5">
+            {(['fire', 'air', 'earth', 'water'] as const).map(el => {
+              const cfg = VPER_CONFIG[ELEMENT_VPER[el]];
+              const natal = elementalBalance[el];
+              const survey = surveyScores[el];
+              const gap = survey - natal;
+              return (
+                <div key={el} className={`rounded-lg p-3 border text-center ${cfg.color} ${cfg.borderColor}`}>
+                  <div className={`text-xs font-medium capitalize mb-2 ${cfg.textColor}`}>{el}</div>
+                  <div className="flex items-center justify-center gap-3">
+                    <div className="text-center">
+                      <div className={`text-lg font-bold ${cfg.textColor}`}>{natal}</div>
+                      <div className="text-xs text-theme-text-tertiary">natal</div>
+                    </div>
+                    <div className="text-theme-text-tertiary text-xs">vs</div>
+                    <div className="text-center">
+                      <div className={`text-lg font-bold ${cfg.textColor}`}>{survey}</div>
+                      <div className="text-xs text-theme-text-tertiary">felt</div>
+                    </div>
+                  </div>
+                  {gap !== 0 && (
+                    <div className={`text-xs mt-1 ${gap > 0 ? 'text-emerald-400' : 'text-rose-400'}`}>
+                      {gap > 0 ? `+${gap} over-identified` : `${gap} untapped`}
+                    </div>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+
+          <p className="text-xs text-theme-text-muted">
+            Natal = planet counts in your birth chart. Felt = your self-assessment from the Elemental Survey.
+            When felt {"<"} natal, you have cosmic capacity you haven't yet claimed.
+          </p>
+          <Link
+            to="/elements/survey"
+            className="inline-flex items-center gap-1.5 text-sm text-amber-400 hover:text-amber-300 transition-colors mt-3"
+          >
+            <span>🜂</span> Retake Elemental Survey
+          </Link>
+        </motion.section>
+      )}
+
+      {/* Survey CTA if not taken yet */}
+      {!surveyScores && elementalBalance && (
+        <Link
+          to="/elements/survey"
+          className="block bg-surface-base/50 rounded-xl p-5 border border-dashed border-amber-500/30 hover:border-amber-400/50 transition-colors group"
+        >
+          <div className="flex items-center gap-3">
+            <span className="text-2xl text-amber-400/60 group-hover:text-amber-400 transition-colors">🜂</span>
+            <div>
+              <p className="text-sm font-medium text-theme-text-primary group-hover:text-amber-300 transition-colors">
+                Discover Your Felt Elemental Profile
+              </p>
+              <p className="text-xs text-theme-text-tertiary">
+                12 questions to compare your lived experience with your natal elemental blueprint
+              </p>
+            </div>
+            <span className="ml-auto text-theme-text-tertiary group-hover:text-amber-400 transition-colors">→</span>
+          </div>
+        </Link>
       )}
 
       {/* Footer note */}

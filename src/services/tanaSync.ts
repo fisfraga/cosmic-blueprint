@@ -327,6 +327,68 @@ export function formatInnerLandscapeProtocol(profile: CosmicProfile): string {
   return outputLines.join('\n');
 }
 
+// ─── Elemental Survey Export ──────────────────────────────────────────────────
+
+interface ElementalSurveyScores {
+  fire: number;
+  air: number;
+  earth: number;
+  water: number;
+  savedAt: string;
+}
+
+function interpretElementTier(score: number): string {
+  if (score >= 5) return 'Dominant';
+  if (score >= 3) return 'Strong';
+  if (score >= 1) return 'Developing';
+  return 'Hunger';
+}
+
+const ELEMENT_VPER_LABEL: Record<string, string> = {
+  fire: 'Vision (V)', air: 'Plan (P)', earth: 'Execute (E)', water: 'Review (R)',
+};
+
+/**
+ * Format an elemental survey result as Tana Paste.
+ * Can be called with data from CosmicProfile.personalContext.elementalSurveyScores
+ * or from localStorage directly.
+ */
+export function formatElementalSurveyAsTanaPaste(
+  scores: ElementalSurveyScores,
+  profileName?: string,
+): string {
+  const date = scores.savedAt.slice(0, 10);
+  const elements = ['fire', 'air', 'earth', 'water'] as const;
+
+  const dominant = elements.filter(e => scores[e] >= 5);
+  const hunger = elements.filter(e => scores[e] === 0);
+
+  const header = profileName
+    ? `Elemental Profile — ${profileName}`
+    : 'Elemental Profile Survey';
+
+  const tanaPasteLines = [
+    `- ${header}`,
+    `  - Type:: Elemental Survey (Debra Silverman)`,
+    `  - [[date:${date}]]`,
+  ];
+
+  for (const el of elements) {
+    const score = scores[el];
+    const tier = interpretElementTier(score);
+    tanaPasteLines.push(`  - ${el.charAt(0).toUpperCase() + el.slice(1)} (${ELEMENT_VPER_LABEL[el]}):: ${score}/6 — ${tier}`);
+  }
+
+  if (dominant.length > 0) {
+    tanaPasteLines.push(`  - Dominant:: ${dominant.join(', ')}`);
+  }
+  if (hunger.length > 0) {
+    tanaPasteLines.push(`  - Hunger (Soul Calling):: ${hunger.join(', ')}`);
+  }
+
+  return tanaPasteLines.join('\n');
+}
+
 // ─── Clipboard Utility ────────────────────────────────────────────────────────
 
 /**

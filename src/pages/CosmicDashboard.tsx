@@ -11,6 +11,7 @@ import {
 import type { VperPhase } from '../types';
 import { EntityStack, EntityLink } from '../components/entities';
 import type { EntityInfo } from '../services/entities';
+import { useProfile } from '../context';
 
 // Slow planets that define the collective cycle
 const SLOW_PLANET_IDS = ['jupiter', 'saturn', 'uranus', 'neptune', 'pluto'];
@@ -55,9 +56,13 @@ function VperPhaseBadge({ phase }: { phase: VperPhase }) {
 
 // ─── Main Component ───────────────────────────────────────────────────────────────
 
+const ELEMENT_SYMBOLS: Record<string, string> = { fire: '🜂', earth: '🜃', air: '🜁', water: '🜄' };
+
 export function CosmicDashboard() {
   const cosmicWeather = useMemo(() => getCosmicWeather(), []);
   const [selectedEntities, setSelectedEntities] = useState<EntityInfo[]>([]);
+  const { cosmicProfile } = useProfile();
+  const surveyScores = cosmicProfile?.personalContext?.elementalSurveyScores ?? null;
 
   const handleEntityClick = useCallback((entity: EntityInfo) => {
     setSelectedEntities(prev => {
@@ -276,6 +281,50 @@ export function CosmicDashboard() {
             Full Cosmic Weather →
           </Link>
         </div>
+      </motion.section>
+
+      {/* Elemental Profile — survey CTA or mini badge */}
+      <motion.section
+        initial={{ opacity: 0, y: 12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.2 }}
+        className="bg-surface-base/50 rounded-xl p-5 border border-theme-border-subtle"
+      >
+        {surveyScores ? (
+          <div className="flex items-center justify-between flex-wrap gap-3">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl text-amber-400">🜂</span>
+              <div>
+                <div className="font-medium text-theme-text-primary text-sm">Elemental Profile</div>
+                <div className="flex items-center gap-2 mt-0.5">
+                  {(['fire', 'air', 'earth', 'water'] as const).map(el => (
+                    <span key={el} className="text-xs text-theme-text-secondary">
+                      {ELEMENT_SYMBOLS[el]} {surveyScores[el]}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            </div>
+            <Link
+              to="/elements/survey"
+              className="text-xs text-theme-text-muted hover:text-theme-text-secondary transition-colors"
+            >
+              View Full Profile →
+            </Link>
+          </div>
+        ) : (
+          <Link to="/elements/survey" className="flex items-center gap-3 group">
+            <span className="text-2xl text-amber-400/60 group-hover:text-amber-400 transition-colors">🜂</span>
+            <div>
+              <div className="font-medium text-theme-text-primary text-sm group-hover:text-amber-300 transition-colors">
+                Discover Your Elemental Profile
+              </div>
+              <div className="text-xs text-theme-text-tertiary">
+                A 12-question self-assessment of your Fire, Air, Earth & Water balance
+              </div>
+            </div>
+          </Link>
+        )}
       </motion.section>
 
     </div>

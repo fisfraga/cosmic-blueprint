@@ -862,6 +862,15 @@ export interface PersonalContext {
   recoveryNeeds?: string[];
   keyRelationships: PersonalContextRelationship[];
   spiritualPractices?: string[];
+
+  // Self-Assessed Elemental Profile (from /elements/survey)
+  elementalSurveyScores?: {
+    fire: number;   // 0–6
+    air: number;    // 0–6
+    earth: number;  // 0–6
+    water: number;  // 0–6
+    savedAt: string; // ISO date
+  };
 }
 
 // ------------------------------------
