@@ -274,6 +274,22 @@ export function formatProfileContext(
     sections.push(formatYearAheadContext(profile));
   }
 
+  // Include Elemental Survey context for vocation, lifeOS, astrology categories
+  // and specifically for elemental contemplation types across all categories
+  const elementalSurveyCategories: ContemplationCategory[] = ['vocation', 'lifeOS', 'astrology'];
+  const elementalSurveyTypes: ContemplationType[] = [
+    'elementalHungerVocation', 'elementalProfileReading', 'elementalBalance',
+    'elementalSystemBridge', 'elementalEmbodiment', 'gremlinWitnessing',
+    'signMedicinePrescription', 'observerActivation',
+  ];
+  if (
+    elementalSurveyCategories.includes(selection.category) ||
+    elementalSurveyTypes.includes(selection.type)
+  ) {
+    const surveyCtx = formatElementalSurveyContext();
+    if (surveyCtx) sections.push(surveyCtx);
+  }
+
   // Conditionally include Enrichment context (Numerology, Chakra, Alchemy)
   // These are compact (~5-8 lines) so include for all categories when data is available
   const enrichment = getEnrichmentData(profile);
@@ -310,6 +326,62 @@ Examples with this profile:
 `);
 
   return sections.filter(Boolean).join('\n\n');
+}
+
+// ─── Elemental Survey Context ─────────────────────────────────────────────────
+// Reads the self-assessed elemental profile from localStorage (set via /elements/survey)
+// and formats it as compact context for the AI.
+
+const ELEMENTAL_SURVEY_KEY = 'cosmic-elemental-profile';
+
+interface ElementalSurveyScores {
+  fire: number;
+  air: number;
+  earth: number;
+  water: number;
+}
+
+interface StoredElementalProfile {
+  scores: ElementalSurveyScores;
+  savedAt: string;
+}
+
+function interpretElementScore(score: number): string {
+  if (score >= 5) return 'Dominant';
+  if (score >= 3) return 'Strong';
+  if (score >= 1) return 'Developing';
+  return 'Hunger (soul calling)';
+}
+
+function formatElementalSurveyContext(): string {
+  try {
+    const raw = typeof localStorage !== 'undefined' ? localStorage.getItem(ELEMENTAL_SURVEY_KEY) : null;
+    if (!raw) return '';
+    const data = JSON.parse(raw) as StoredElementalProfile;
+    if (!data?.scores) return '';
+    const { fire, air, earth, water } = data.scores;
+    const hunger = Object.entries(data.scores)
+      .filter(([, v]) => v === 0)
+      .map(([k]) => k)
+      .join(', ');
+    const dominant = Object.entries(data.scores)
+      .filter(([, v]) => v >= 5)
+      .map(([k]) => k)
+      .join(', ');
+    const lines: string[] = [
+      '[ELEMENTAL SURVEY] Self-assessed (Debra Silverman methodology)',
+      `  Fire (Vision/V):    ${fire}/6 — ${interpretElementScore(fire)}`,
+      `  Air  (Plan/P):      ${air}/6 — ${interpretElementScore(air)}`,
+      `  Earth (Execute/E):  ${earth}/6 — ${interpretElementScore(earth)}`,
+      `  Water (Review/R):   ${water}/6 — ${interpretElementScore(water)}`,
+    ];
+    if (dominant) lines.push(`  Dominant: ${dominant}`);
+    if (hunger)   lines.push(`  Hunger (deepest calling): ${hunger}`);
+    lines.push('  Note: behaviorally self-assessed; compare with natal element distribution.');
+    return lines.join('\n');
+  } catch {
+    return '';
+  }
 }
 
 function formatProfileHeader(profile: AstroProfile): string {
